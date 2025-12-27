@@ -92,7 +92,7 @@ export function useHeroVideo({ scenes, defaultSceneId = 'main' }: UseHeroVideoOp
     const playVideo = async () => {
       try {
         await video.play();
-      } catch (err) {
+      } catch {
         // Autoplay blocked - will show poster instead
         console.log('Autoplay blocked, showing poster');
       }

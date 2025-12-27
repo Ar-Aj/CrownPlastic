@@ -105,7 +105,7 @@ export default function HeroSection({
   }, [activeSceneId]);
 
   // Animation classes based on motion preference
-  const getAnimClass = (delay: number) => 
+  const getAnimClass = () => 
     prefersReducedMotion 
       ? '' 
       : `opacity-0 animate-slide-up`;
@@ -176,7 +176,7 @@ export default function HeroSection({
 
           {/* Main heading - Staggered fade-up */}
           <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white ${getAnimClass(0.15)}`}
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white ${getAnimClass()}`}
             style={getAnimStyle(0.15)}
           >
             {title}
@@ -184,7 +184,7 @@ export default function HeroSection({
 
           {/* Subtitle - Staggered fade-up (40-80ms after H1) */}
           <p 
-            className={`text-lg md:text-xl text-white/90 mb-8 max-w-2xl ${getAnimClass(0.22)}`}
+            className={`text-lg md:text-xl text-white/90 mb-8 max-w-2xl ${getAnimClass()}`}
             style={getAnimStyle(0.22)}
           >
             {subtitle}
@@ -192,7 +192,7 @@ export default function HeroSection({
 
           {/* CTAs - with enhanced hover (150ms ease-out) */}
           <div 
-            className={`flex flex-wrap items-center gap-4 mb-8 ${getAnimClass(0.30)}`}
+            className={`flex flex-wrap items-center gap-4 mb-8 ${getAnimClass()}`}
             style={getAnimStyle(0.30)}
           >
             <Link
@@ -225,7 +225,7 @@ export default function HeroSection({
 
           {/* Scene Switcher Pills - with sliding indicator */}
           <div 
-            className={`mb-8 ${getAnimClass(0.38)}`}
+            className={`mb-8 ${getAnimClass()}`}
             style={getAnimStyle(0.38)}
           >
             <div className="flex flex-wrap items-center gap-2">
