@@ -1,0 +1,56 @@
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface PageHeaderProps {
+  title: string;
+  subtitle?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  backgroundClass?: string;
+}
+
+export default function PageHeader({
+  title,
+  subtitle,
+  breadcrumbs,
+  backgroundClass = 'bg-gradient-to-r from-primary to-primary-dark',
+}: PageHeaderProps) {
+  return (
+    <section className={`${backgroundClass} text-white`}>
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        {breadcrumbs && (
+          <div className="mb-4">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex flex-wrap items-center gap-2 text-sm">
+                <li>
+                  <a href="/" className="text-white/70 hover:text-white transition-colors">
+                    Home
+                  </a>
+                </li>
+                {breadcrumbs.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    {item.href ? (
+                      <a href={item.href} className="text-white/70 hover:text-white transition-colors">
+                        {item.label}
+                      </a>
+                    ) : (
+                      <span className="text-white font-medium">{item.label}</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </div>
+        )}
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{title}</h1>
+        {subtitle && (
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl">{subtitle}</p>
+        )}
+      </div>
+    </section>
+  );
+}

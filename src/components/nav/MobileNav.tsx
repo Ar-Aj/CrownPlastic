@@ -1,0 +1,158 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import { NavItem } from '@/config/routes';
+import { brand } from '@/config/brand';
+
+interface MobileNavProps {
+  items: NavItem[];
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+
+  const toggleExpand = (label: string) => {
+    setExpandedItems((prev) =>
+      prev.includes(label)
+        ? prev.filter((item) => item !== label)
+        : [...prev, label]
+    );
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        onClick={onClose}
+      />
+
+      {/* Slide-in menu */}
+      <div className="fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b">
+          <Link href="/" onClick={onClose} className="flex items-center gap-2">
+            <div className="relative w-12 h-12">
+              <Image
+                src="/images/logo.png"
+                alt="Crown Plastic Pipes Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className="font-bold text-primary">Crown Plastic Pipes</span>
+          </Link>
+          <button
+            onClick={onClose}
+            className="p-2 text-gray-600 hover:text-primary transition-colors"
+            aria-label="Close menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Navigation items */}
+        <nav className="p-4">
+          {items.map((item) => (
+            <div key={item.href} className="border-b border-gray-100 last:border-0">
+              {item.children ? (
+                <>
+                  <button
+                    onClick={() => toggleExpand(item.label)}
+                    className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-primary transition-colors"
+                  >
+                    <span className="font-medium">{item.label}</span>
+                    <svg
+                      className={`w-5 h-5 transition-transform ${
+                        expandedItems.includes(item.label) ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedItems.includes(item.label) && (
+                    <div className="pl-4 pb-2">
+                      <Link
+                        href={item.href}
+                        onClick={onClose}
+                        className="block py-2 text-sm text-primary font-medium"
+                      >
+                        View All {item.label}
+                      </Link>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={onClose}
+                          className="block py-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  className="block py-3 font-medium text-gray-700 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* CTA */}
+        <div className="p-4 mt-4 border-t">
+          <Link
+            href="/contact-us"
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors"
+          >
+            Get a Quote
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Contact info */}
+        <div className="p-4 bg-gray-50 mt-auto">
+          <p className="text-sm text-gray-500 mb-2">Contact us:</p>
+          <a
+            href={`tel:${brand.contact.phone}`}
+            className="flex items-center gap-2 text-sm text-gray-700 hover:text-primary mb-1"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            {brand.contact.phone}
+          </a>
+          <a
+            href={`mailto:${brand.contact.email}`}
+            className="flex items-center gap-2 text-sm text-gray-700 hover:text-primary"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            {brand.contact.email}
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
