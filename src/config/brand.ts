@@ -40,13 +40,16 @@ export const brand = {
   logoSrc: '/images/logo.png',
   logoAlt: 'Crown Plastic Pipes Logo',
   
-  // Contact info (placeholder)
+  // Contact info (brochure-accurate)
   contact: {
-    phone: '+971 6 534 1234',
+    phone: '+971 6 543 6781',
+    fax: '+971 6 543 6798',
     tollFree: '800-CROWN',
-    email: 'info@crownplasticpipes.ae',
-    address: 'Industrial Area, Sharjah, UAE',
-    mapLink: 'https://maps.google.com',
+    email: 'info@crownplasticuae.com',
+    address: 'Industrial Area No. 6, Sharjah, UAE',
+    poBox: 'P.O. Box 63576, Sharjah, UAE',
+    website: 'www.crownplasticuae.com',
+    mapLink: 'https://maps.google.com/?q=Industrial+Area+No.+6,+Sharjah,+UAE',
   },
   
   // Social media (placeholder)

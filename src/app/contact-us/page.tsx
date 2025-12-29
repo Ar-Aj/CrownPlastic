@@ -4,8 +4,8 @@ import { brand } from '@/config/brand';
 import { isComingSoon } from '@/config/maintenance';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Crown Plastic Pipes for inquiries, quotes, and technical support.',
+  title: 'Contact Crown Plastic Pipes Sharjah | UPVC PPR HDPE UAE | +971 6 543 6781',
+  description: 'Sharjah Industrial Area No. 6. ISO 9001:2015 certified UPVC/PPR/HDPE pipes. Tel: +971 6 543 6781 | Fax: +971 6 543 6798 | info@crownplasticuae.com',
 };
 
 // Route slug for Coming Soon check
@@ -17,7 +17,7 @@ export default function ContactPage() {
     return (
       <ComingSoon
         title="Contact Us"
-        subtitle="Our contact form is coming soon. In the meantime, reach us at info@crownplasticpipes.ae"
+        subtitle="Our contact form is coming soon. In the meantime, reach us at info@crownplasticuae.com"
       />
     );
   }
@@ -26,8 +26,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact Us"
-        subtitle="Get in touch with our team for inquiries, quotes, and technical support."
-        breadcrumbs={[{ label: 'Contact Us' }]}
+        subtitle="Sharjah's trusted pipe manufacturer since 1995. 5,000+ products for GCC projects."
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]}
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -46,8 +46,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">Factory Address</h3>
+                    <p className="text-gray-900 font-medium">Crown Plastic Pipes Factory L.L.C.</p>
                     <p className="text-gray-600">{brand.contact.address}</p>
+                    <p className="text-gray-600">{brand.contact.poBox}</p>
                   </div>
                 </div>
 
@@ -59,10 +61,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href={`tel:${brand.contact.phone}`} className="text-gray-600 hover:text-primary transition-colors">
+                    <a href={`tel:${brand.contact.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-primary transition-colors block">
                       {brand.contact.phone}
                     </a>
-                    <p className="text-sm text-gray-500 mt-1">Toll Free: {brand.contact.tollFree}</p>
+                    <p className="text-sm text-gray-500 mt-1">Fax: {brand.contact.fax}</p>
                   </div>
                 </div>
 
@@ -74,9 +76,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href={`mailto:${brand.contact.email}`} className="text-gray-600 hover:text-primary transition-colors">
+                    <a href={`mailto:${brand.contact.email}`} className="text-gray-600 hover:text-primary transition-colors block">
                       {brand.contact.email}
                     </a>
+                    <p className="text-sm text-gray-500 mt-1">Website: {brand.contact.website}</p>
                   </div>
                 </div>
 
@@ -88,15 +91,41 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Working Hours</h3>
-                    <p className="text-gray-600">Sunday - Thursday: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Friday - Saturday: Closed</p>
+                    <p className="text-gray-600">Sunday-Thursday: 8:00 AM - 6:00 PM GST</p>
+                    <p className="text-gray-600">Friday-Saturday: Closed</p>
                   </div>
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-8 h-48 bg-gray-100 rounded-xl flex items-center justify-center">
-                <span className="text-gray-400">Map Location</span>
+              {/* Map with WhatsApp */}
+              <div className="mt-8 space-y-4">
+                <a
+                  href={brand.contact.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-48 bg-gray-100 rounded-xl overflow-hidden hover:opacity-90 transition-opacity relative group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 flex flex-col items-center justify-center">
+                    <svg className="w-12 h-12 text-primary mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-primary font-medium">View on Google Maps</span>
+                    <span className="text-xs text-gray-600 mt-1">Get Directions</span>
+                  </div>
+                </a>
+                
+                <a
+                  href={`https://wa.me/${brand.contact.phone.replace(/[^0-9]/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp Us
+                </a>
               </div>
             </div>
 
@@ -120,9 +149,9 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Department Contacts</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { dept: 'Sales & Enquiries', email: 'sales@crownplasticpipes.ae', icon: '📞' },
-              { dept: 'Technical Support', email: 'technical@crownplasticpipes.ae', icon: '🔧' },
-              { dept: 'Careers', email: 'careers@crownplasticpipes.ae', icon: '💼' },
+              { dept: 'Sales & Enquiries', email: 'sales@crownplasticuae.com', icon: '📞' },
+              { dept: 'Technical Support', email: 'technical@crownplasticuae.com', icon: '🔧' },
+              { dept: 'Careers', email: 'careers@crownplasticuae.com', icon: '💼' },
             ].map((item, i) => (
               <div key={i} className="bg-white p-6 rounded-xl text-center shadow-sm">
                 <span className="text-4xl mb-3 block">{item.icon}</span>

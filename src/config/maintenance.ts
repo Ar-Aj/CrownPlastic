@@ -16,7 +16,7 @@
  */
 
 // Master toggle - set to false to restore all pages
-export const COMING_SOON_MODE = true;
+export const COMING_SOON_MODE = false;
 
 // Route slugs that should show "Coming Soon" when mode is enabled
 export const COMING_SOON_SLUGS = [
