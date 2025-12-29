@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { HeroSection, CardGrid, StatsStrip } from '@/components/common';
 import { productCategories } from '@/config/products';
-import { brand } from '@/config/brand';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

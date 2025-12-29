@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { PageHeader, Timeline, AwardsList, StatsStrip } from '@/components/common';
-import { brand } from '@/config/brand';
 
 export const metadata: Metadata = {
   title: 'About Us | Crown Plastic Pipes Factory L.L.C. | UPVC PPR HDPE Pipes UAE',
@@ -113,7 +112,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                Become GCC's premier pipe manufacturer, expanding globally while upholding integrity, 
+                Become GCC&apos;s premier pipe manufacturer, expanding globally while upholding integrity, 
                 reliability, and excellence in every pipe.
               </p>
             </div>
