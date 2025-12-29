@@ -23,7 +23,7 @@ export default function ProductsPage() {
       <PageHeader
         title="Our Products"
         subtitle="Complete range of 5,000+ UPVC, PPR, HDPE pipes & fittings since 1995"
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products' }]}
+        breadcrumbs={[{ label: 'Products' }]}
       />
 
       {/* Stats Strip */}

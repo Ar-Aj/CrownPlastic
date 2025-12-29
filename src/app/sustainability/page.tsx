@@ -12,7 +12,7 @@ export default function SustainabilityPage() {
       <PageHeader
         title="Sustainability"
         subtitle="ISO 14001:2015 certified since 1995. 100% virgin materials. Zero-discharge manufacturing for GCC green building projects."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Sustainability' }]}
+        breadcrumbs={[{ label: 'Sustainability' }]}
       />
 
       {/* Stats Strip */}

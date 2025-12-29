@@ -26,7 +26,7 @@ export default function InnovationPage() {
       <PageHeader
         title="Innovation"
         subtitle="In-house R&D, European Battenfeld extrusion lines, and Gulf climate testing labs driving advanced UPVC, PPR, HDPE pipe innovation for GCC infrastructure projects."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Innovation' }]}
+        breadcrumbs={[{ label: 'Innovation' }]}
       />
 
       <section className="py-16 md:py-24 bg-white">

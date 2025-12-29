@@ -65,7 +65,7 @@ export default function AboutPage() {
       <PageHeader
         title="About Crown Plastic Pipes Factory L.L.C."
         subtitle="Pioneering plastic piping solutions since 1995 – Sharjah's trusted manufacturer for GCC infrastructure."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
+        breadcrumbs={[{ label: 'About Us' }]}
       />
 
       {/* Company Overview */}

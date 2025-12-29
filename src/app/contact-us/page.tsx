@@ -27,7 +27,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         subtitle="Sharjah's trusted pipe manufacturer since 1995. 5,000+ products for GCC projects."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]}
+        breadcrumbs={[{ label: 'Contact Us' }]}
       />
 
       <section className="py-16 md:py-24 bg-white">
