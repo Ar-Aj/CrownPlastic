@@ -21,7 +21,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: 'upvc-pressure',
     name: 'UPVC Pressure Pipes & Fittings',
-    shortDescription: 'High-quality pressure piping systems for water supply and distribution applications.',
+    shortDescription: 'Metric & Inch series | PN6-16 | BS EN 1452, DIN 8061/62, BS 3505/6',
     icon: '💧',
     image: '/images/products/upvc-pressure.jpg',
     subProducts: [
@@ -51,7 +51,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: 'upvc-drainage',
     name: 'UPVC Drainage Pipes & Fittings',
-    shortDescription: 'Complete drainage solutions for above-ground and underground applications.',
+    shortDescription: 'BS EN 1329/1401 | Above/underground | BS 5255/4514/4660',
     icon: '🔧',
     image: '/images/products/upvc-drainage.jpg',
     subProducts: [
@@ -88,7 +88,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: 'upvc-duct',
     name: 'UPVC Duct Pipes & Accessories',
-    shortDescription: 'Cable ducting systems for electrical and telecommunications infrastructure.',
+    shortDescription: 'DIN 8062, NEMA TC-2, Etisalat/DU specs | D54/D56/D57',
     icon: '⚡',
     image: '/images/products/upvc-duct.jpg',
     subProducts: [
@@ -139,7 +139,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: 'pvc-conduit',
     name: 'PVC Conduit Pipes',
-    shortDescription: 'Electrical conduit solutions for wiring protection in buildings and infrastructure.',
+    shortDescription: 'Schedule 40/80 | 320N/750N/1250N crush resistance',
     icon: '🔌',
     image: '/images/products/pvc-conduit.jpg',
     subProducts: [
@@ -183,7 +183,7 @@ export const productCategories: ProductCategory[] = [
   {
     slug: 'ppr',
     name: 'PPR Pipes',
-    shortDescription: 'Polypropylene Random pipes for hot and cold water plumbing systems.',
+    shortDescription: 'PN10/16/20 | DIN 8077/78 | Hot & cold water 50yr life',
     icon: '🚿',
     image: '/images/products/ppr-pipes.jpg',
     subProducts: [
@@ -212,8 +212,8 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: 'polyethylene',
-    name: 'Polyethylene Pipe Systems',
-    shortDescription: 'HDPE and LDPE pipe solutions for water, gas, and irrigation applications.',
+    name: 'HDPE Pipe Systems',
+    shortDescription: 'PE63/80/100 | ISO 4427 | Irrigation & water distribution',
     icon: '🌊',
     image: '/images/products/pe-systems.jpg',
     subProducts: [

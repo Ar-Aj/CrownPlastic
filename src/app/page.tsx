@@ -2,6 +2,12 @@ import Link from 'next/link';
 import { HeroSection, CardGrid, StatsStrip } from '@/components/common';
 import { productCategories } from '@/config/products';
 import { brand } from '@/config/brand';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Crown Plastic Pipes | UPVC PPR HDPE Pipes UAE | Water Drainage Ducting',
+  description: 'Crown Plastic Pipes Factory L.L.C. - Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings since 1995. ISO certified for water supply, drainage, electrical conduits, irrigation systems.',
+};
 
 export default function HomePage() {
   // Transform product categories for CardGrid
@@ -15,16 +21,19 @@ export default function HomePage() {
   }));
 
   const stats = [
-    { value: brand.stats.yearsExperience, label: 'Years of Experience', icon: '📅' },
-    { value: brand.stats.manufacturingUnits, label: 'Manufacturing Units', icon: '🏭' },
-    { value: brand.stats.productsRange, label: 'Products Range', icon: '📦' },
-    { value: brand.stats.countriesExport, label: 'Countries Export', icon: '🌍' },
+    { value: '30+', label: 'Years Expertise Since 1995', icon: '📅' },
+    { value: 'State-of-the-art', label: 'Manufacturing Facilities', icon: '🏭' },
+    { value: '5,000+', label: 'Product Variants', icon: '📦' },
+    { value: 'Multiple Countries', label: 'Across GCC & Sub-continent', icon: '🌍' },
+    { value: '10,000+', label: 'Trusted Customers', icon: '👥' },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection 
+        subtitle="Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical ducting, irrigation, construction & infrastructure projects across GCC."
+      />
 
       {/* Product Categories Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -66,14 +75,11 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Building Tomorrow&apos;s Infrastructure Today
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Crown Plastic Pipes Factory L.L.C. is a leading manufacturer of high-quality plastic piping 
-                systems in the UAE. With over two decades of expertise since 1995, we deliver innovative 
-                piping solutions for construction, irrigation, plumbing, and infrastructure projects.
-              </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Our state-of-the-art manufacturing facilities and commitment to quality have made us 
-                a trusted partner for contractors, developers, and industries across the region.
+                Crown Plastic Pipes Factory L.L.C., established 1995 in Sharjah, UAE. ISO 9001:2015, 14001:2015, 
+                OHSAS 18001:2007 certified. Pioneering UPVC, PPRC, HDPE pipes for sewerage, drainage, pressure 
+                water systems, electrical conduits & telecom ducts. Serving irrigation, construction, plumbing 
+                & landscaping across GCC with in-house quality control and international lab testing.
               </p>
               <Link
                 href="/about-us"
@@ -119,10 +125,10 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: '🏆', title: 'Premium Quality', description: 'International standards and rigorous quality control' },
-              { icon: '🔬', title: 'Innovation', description: 'Continuous R&D for advanced piping solutions' },
-              { icon: '🚚', title: 'Fast Delivery', description: 'Efficient logistics across UAE and exports' },
-              { icon: '🤝', title: 'Expert Support', description: 'Technical assistance and after-sales service' },
+              { icon: '🏆', title: 'Premium Quality', description: '100% virgin uPVC materials, ISO-certified, Gulf climate tested' },
+              { icon: '🔬', title: 'Innovation', description: 'Modern extrusion technology, continuous R&D' },
+              { icon: '🚚', title: 'Fast Delivery', description: 'GCC-wide logistics, custom lengths available (4m, 6m+)' },
+              { icon: '🤝', title: 'Expert Support', description: 'Technical specs, standards compliance, project assistance' },
             ].map((item, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary/5 transition-colors">
                 <span className="text-5xl mb-4 block">{item.icon}</span>

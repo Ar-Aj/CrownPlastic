@@ -3,68 +3,69 @@ import { PageHeader, Timeline, AwardsList, StatsStrip } from '@/components/commo
 import { brand } from '@/config/brand';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Crown Plastic Pipes Factory L.L.C. - Leading manufacturer of plastic pipes in the UAE.',
+  title: 'About Us | Crown Plastic Pipes Factory L.L.C. | UPVC PPR HDPE Pipes UAE',
+  description: 'Established 1995 in Sharjah, UAE. ISO 9001:2015 certified manufacturer of 5,000+ UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical conduits, irrigation across GCC.',
 };
 
 const timelineItems = [
   {
-    year: '1998',
-    title: 'Company Founded',
+    year: '1995',
+    title: 'Founded in Sharjah, UAE',
     description: 'Crown Plastic Pipes Factory L.L.C. was established in Sharjah, UAE, with a vision to provide high-quality plastic piping solutions.',
   },
   {
     year: '2005',
-    title: 'Expansion & ISO Certification',
+    title: 'ISO 9001 Certification + Expansion',
     description: 'Expanded manufacturing capacity and achieved ISO 9001 certification for quality management systems.',
   },
   {
     year: '2010',
-    title: 'Product Range Growth',
+    title: 'PPR/HDPE Launch',
     description: 'Introduced PPR and HDPE pipe systems, expanding our product portfolio to serve diverse industries.',
   },
   {
     year: '2015',
-    title: 'Export Markets',
-    description: 'Began exporting to GCC countries and established distribution networks across the Middle East.',
+    title: 'GCC Export Networks',
+    description: 'Established distribution networks across GCC countries and expanded into Middle East markets.',
   },
   {
     year: '2020',
-    title: 'Technology Upgrade',
-    description: 'Invested in state-of-the-art extrusion technology and automated quality control systems.',
+    title: 'Extrusion Tech Upgrade',
+    description: 'Invested in state-of-the-art European extrusion technology and automated quality control systems.',
   },
   {
-    year: '2024',
-    title: 'Continued Growth',
-    description: 'Celebrating over 25 years of excellence with expanded facilities and new product innovations.',
+    year: '2025',
+    title: '5,000+ Variants, 30+ Years Excellence',
+    description: 'Celebrating over 30 years of excellence with 5,000+ product variants and expanded facilities.',
   },
 ];
 
 const certifications = [
   { title: 'ISO 9001:2015', organization: 'Quality Management', icon: '✓' },
-  { title: 'ISO 14001:2015', organization: 'Environmental Management', icon: '🌿' },
+  { title: 'ISO 14001:2015', organization: 'Environmental', icon: '🌿' },
   { title: 'GSO Certified', organization: 'Gulf Standards', icon: '🏅' },
   { title: 'SASO Approved', organization: 'Saudi Standards', icon: '📋' },
   { title: 'QCC Certified', organization: 'Qatar Civil Defense', icon: '🛡️' },
-  { title: 'UAE Civil Defense', organization: 'Safety Approved', icon: '🚒' },
+  { title: 'UAE Civil Defense Approved', organization: '', icon: '🚒' },
   { title: 'Kitemark', organization: 'BSI Standards', icon: '✅' },
   { title: 'NSF Certified', organization: 'Public Health', icon: '💧' },
 ];
 
 const stats = [
-  { value: brand.stats.yearsExperience, label: 'Years Experience' },
-  { value: brand.stats.manufacturingUnits, label: 'Manufacturing Units' },
-  { value: brand.stats.productsRange, label: 'Products Range' },
-  { value: brand.stats.happyCustomers, label: 'Happy Customers' },
+  { value: '30+', label: 'Years Since 1995' },
+  { value: 'State-of-the-Art', label: 'Sharjah Facilities' },
+  { value: '5,000+', label: 'Product Variants (UPVC/PPR/HDPE)' },
+  { value: 'GCC + Sub-continent', label: 'Exports' },
+  { value: '10,000+', label: 'Trusted Customers' },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About Crown Plastic Pipes"
-        subtitle="Building tomorrow's infrastructure with innovative plastic piping solutions since 1998."
-        breadcrumbs={[{ label: 'About Us' }]}
+        title="About Crown Plastic Pipes Factory L.L.C."
+        subtitle="Pioneering plastic piping solutions since 1995 – Sharjah's trusted manufacturer for GCC infrastructure."
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
       />
 
       {/* Company Overview */}
@@ -76,18 +77,10 @@ export default function AboutPage() {
                 Leading the Way in Plastic Piping Solutions
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Crown Plastic Pipes Factory L.L.C. is one of the premier manufacturers of plastic pipes 
-                and fittings in the United Arab Emirates. Established in 1998, we have grown to become 
-                a trusted name in the construction and infrastructure industry.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Our comprehensive range includes UPVC pressure and drainage systems, PPR hot and cold 
-                water pipes, HDPE pipes, and electrical conduit systems. We serve diverse sectors 
-                including construction, agriculture, telecommunications, and industrial applications.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                With our commitment to quality, innovation, and customer satisfaction, we continue to 
-                expand our reach across the Middle East and beyond.
+                Crown Plastic Pipes Factory L.L.C., established 1995 in Sharjah, UAE, leads UPVC, PPRC, 
+                HDPE pipe manufacturing. ISO 9001:2015, 14001:2015, OHSAS 18001:2007 certified. Specializing 
+                in pressure pipes, drainage systems, electrical conduits, telecom ducts using 100% virgin 
+                uPVC with European extrusion technology. Gulf climate tested via in-house QC + international labs.
               </p>
             </div>
             <div className="relative">
@@ -109,9 +102,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To provide superior quality plastic piping solutions that meet international standards, 
-                while ensuring customer satisfaction through innovative products, competitive pricing, 
-                and exceptional service. We are committed to sustainable practices and continuous improvement.
+                Deliver premium piping exceeding international standards (BS EN, DIN, ISO, ASTM) with 
+                competitive pricing, rapid GCC delivery, and unmatched technical support. Committed to 
+                sustainability, innovation, and total customer satisfaction.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm">
@@ -120,9 +113,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                To be the leading plastic pipe manufacturer in the region, recognized for excellence 
-                in quality, innovation, and sustainability. We aim to expand our global footprint 
-                while maintaining our core values of integrity, reliability, and customer focus.
+                Become GCC's premier pipe manufacturer, expanding globally while upholding integrity, 
+                reliability, and excellence in every pipe.
               </p>
             </div>
           </div>
