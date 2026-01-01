@@ -7,3 +7,5 @@ export { default as Timeline } from './Timeline';
 export { default as AwardsList } from './AwardsList';
 export { default as ContactForm } from './ContactForm';
 export { default as ComingSoon } from './ComingSoon';
+export { default as AnimateOnScroll, useAnimateOnScroll } from './AnimateOnScroll';
+export { useCountUp, usePrefersReducedMotion, useInView } from './useAnimations';

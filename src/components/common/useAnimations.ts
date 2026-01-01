@@ -82,6 +82,7 @@ export function usePrefersReducedMotion(): boolean {
 /**
  * Hook for parallax scroll effect on an element
  * Respects prefers-reduced-motion
+ * Optimized with passive listener and throttling
  */
 export function useParallaxScroll(factor: number = 0.1) {
   const [offset, setOffset] = useState(0);
@@ -91,14 +92,16 @@ export function useParallaxScroll(factor: number = 0.1) {
     if (prefersReducedMotion) return;
 
     let ticking = false;
+    let lastScrollY = 0;
     
     const handleScroll = () => {
+      lastScrollY = window.scrollY;
+      
       if (!ticking) {
         requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
           // Limit parallax to hero section height
           const maxScroll = window.innerHeight;
-          const clampedScroll = Math.min(scrollY, maxScroll);
+          const clampedScroll = Math.min(lastScrollY, maxScroll);
           setOffset(clampedScroll * factor);
           ticking = false;
         });
@@ -106,6 +109,7 @@ export function useParallaxScroll(factor: number = 0.1) {
       }
     };
 
+    // Passive listener for better scroll performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [factor, prefersReducedMotion]);

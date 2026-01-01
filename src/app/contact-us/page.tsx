@@ -1,11 +1,96 @@
 import { Metadata } from 'next';
-import { PageHeader, ContactForm, ComingSoon } from '@/components/common';
+import Script from 'next/script';
+import { PageHeader, ContactForm, ComingSoon, AnimateOnScroll } from '@/components/common';
 import { brand } from '@/config/brand';
 import { isComingSoon } from '@/config/maintenance';
+import Icon, { IconName } from '@/components/ui/Icon';
+
+const baseUrl = 'https://crownplasticuae.com';
 
 export const metadata: Metadata = {
-  title: 'Contact Crown Plastic Pipes Sharjah | UPVC PPR HDPE UAE | +971 6 543 6781',
-  description: 'Sharjah Industrial Area No. 6. ISO 9001:2015 certified UPVC/PPR/HDPE pipes. Tel: +971 6 543 6781 | Fax: +971 6 543 6798 | info@crownplasticuae.com',
+  title: 'Contact Crown Plastic Pipes | UPVC PPR HDPE Manufacturer Sharjah Dubai UAE',
+  description: 'Contact Crown Plastic Pipes Factory L.L.C. Industrial Area No. 6, Sharjah. ISO 9001:2015 certified UPVC/PPR/HDPE pipes. Tel: +971 6 543 6781 | info@crownplasticuae.com. Dubai, UAE & GCC.',
+  keywords: [
+    'Crown Plastic Pipes contact',
+    'pipe manufacturer Sharjah',
+    'UPVC pipes supplier Dubai',
+    'PPR pipes UAE contact',
+    'HDPE pipes GCC',
+    'plastic pipes quote',
+  ],
+  alternates: {
+    canonical: '/contact-us',
+  },
+  openGraph: {
+    title: 'Contact Crown Plastic Pipes | Sharjah UAE',
+    description: 'Get in touch with Crown Plastic Pipes Factory L.L.C. for UPVC, PPR, HDPE pipes & fittings. Serving Dubai, Sharjah, UAE & GCC since 1995.',
+    url: `${baseUrl}/contact-us`,
+    images: ['/images/og-contact.jpg'],
+  },
+};
+
+// LocalBusiness JSON-LD structured data
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${baseUrl}/#localbusiness`,
+  name: brand.name,
+  alternateName: brand.shortName,
+  description: "Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical conduits, and irrigation since 1995.",
+  url: baseUrl,
+  telephone: brand.contact.phone,
+  faxNumber: brand.contact.fax,
+  email: brand.contact.email,
+  image: `${baseUrl}/images/logo.png`,
+  logo: `${baseUrl}/images/logo.png`,
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Industrial Area No. 6",
+    addressLocality: "Sharjah",
+    addressRegion: "Sharjah",
+    postalCode: "63576",
+    addressCountry: "AE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 25.2867,
+    longitude: 55.4508,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+  areaServed: [
+    { "@type": "City", name: "Dubai" },
+    { "@type": "City", name: "Sharjah" },
+    { "@type": "City", name: "Abu Dhabi" },
+    { "@type": "Country", name: "United Arab Emirates" },
+    { "@type": "Country", name: "Saudi Arabia" },
+    { "@type": "Country", name: "Oman" },
+    { "@type": "Country", name: "Qatar" },
+  ],
+  sameAs: [
+    brand.social.linkedin,
+    brand.social.facebook,
+    brand.social.youtube,
+    brand.social.instagram,
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Plastic Pipes & Fittings",
+    itemListElement: [
+      "UPVC Pressure Pipes & Fittings",
+      "UPVC Drainage Pipes & Fittings",
+      "PPR Pipes",
+      "HDPE Pipe Systems",
+      "PVC Conduit Pipes",
+    ],
+  },
 };
 
 // Route slug for Coming Soon check
@@ -24,6 +109,11 @@ export default function ContactPage() {
 
   return (
     <>
+      <Script
+        id="localbusiness-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <PageHeader
         title="Contact Us"
         subtitle="Sharjah's trusted pipe manufacturer since 1995. 5,000+ products for GCC projects."
@@ -146,20 +236,26 @@ export default function ContactPage() {
       {/* Departments */}
       <section id="careers" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Department Contacts</h2>
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Department Contacts</h2>
+          </AnimateOnScroll>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { dept: 'Sales & Enquiries', email: 'sales@crownplasticuae.com', icon: '📞' },
-              { dept: 'Technical Support', email: 'technical@crownplasticuae.com', icon: '🔧' },
-              { dept: 'Careers', email: 'careers@crownplasticuae.com', icon: '💼' },
+              { dept: 'Sales & Enquiries', email: 'sales@crownplasticuae.com', iconName: 'phone' as IconName },
+              { dept: 'Technical Support', email: 'technical@crownplasticuae.com', iconName: 'wrench' as IconName },
+              { dept: 'Careers', email: 'careers@crownplasticuae.com', iconName: 'users' as IconName },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl text-center shadow-sm">
-                <span className="text-4xl mb-3 block">{item.icon}</span>
-                <h3 className="font-bold text-gray-900 mb-2">{item.dept}</h3>
-                <a href={`mailto:${item.email}`} className="text-primary hover:underline">
-                  {item.email}
-                </a>
-              </div>
+              <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>
+                <div className="bg-white p-6 rounded-xl text-center shadow-sm card-hover h-full">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Icon name={item.iconName} size={28} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">{item.dept}</h3>
+                  <a href={`mailto:${item.email}`} className="text-primary hover:underline">
+                    {item.email}
+                  </a>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

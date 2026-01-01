@@ -2,8 +2,12 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PageHeader, CardGrid } from '@/components/common';
+import Script from 'next/script';
+import { PageHeader, CardGrid, AnimateOnScroll } from '@/components/common';
 import { productCategories, getCategoryBySlug } from '@/config/products';
+import Icon from '@/components/ui/Icon';
+
+const baseUrl = 'https://crownplasticuae.com';
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
@@ -21,8 +25,24 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   if (!cat) return { title: 'Category Not Found' };
   
   return {
-    title: cat.name,
-    description: cat.shortDescription,
+    title: `${cat.name} Dubai UAE | Crown Plastic Pipes`,
+    description: `${cat.shortDescription} ISO 9001:2015 certified. Leading manufacturer serving Dubai, Sharjah, UAE & GCC since 1995.`,
+    keywords: [
+      cat.name.toLowerCase(),
+      `${cat.name.toLowerCase()} Dubai`,
+      `${cat.name.toLowerCase()} UAE`,
+      'Crown Plastic Pipes',
+      'ISO certified pipes',
+    ],
+    alternates: {
+      canonical: `/products/${category}`,
+    },
+    openGraph: {
+      title: `${cat.name} | Crown Plastic Pipes UAE`,
+      description: cat.shortDescription,
+      url: `${baseUrl}/products/${category}`,
+      images: cat.image ? [cat.image] : ['/images/og-products.jpg'],
+    },
   };
 }
 
@@ -41,8 +61,39 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     tags: product.standards,
   }));
 
+  // BreadcrumbList JSON-LD
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${baseUrl}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: cat.name,
+        item: `${baseUrl}/products/${cat.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHeader
         title={cat.name}
         subtitle={cat.shortDescription}
@@ -61,6 +112,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               alt={`${cat.name} - Crown Plastic Pipes product range`}
               width={1400}
               height={700}
+              sizes="100vw"
+              quality={85}
               className="w-full h-full object-cover opacity-80"
               priority
             />
@@ -89,14 +142,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Products in {cat.name}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our complete range of products in this category.
-            </p>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Products in {cat.name}
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our complete range of products in this category.
+              </p>
+            </div>
+          </AnimateOnScroll>
           <CardGrid items={productCards} columns={3} />
         </div>
       </section>
@@ -105,21 +160,33 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <span className="text-4xl mb-3 block">✓</span>
-              <h3 className="font-bold text-gray-900 mb-2">Quality Certified</h3>
-              <p className="text-sm text-gray-600">All products meet international standards</p>
-            </div>
-            <div className="text-center p-6">
-              <span className="text-4xl mb-3 block">🏗️</span>
-              <h3 className="font-bold text-gray-900 mb-2">Built to Last</h3>
-              <p className="text-sm text-gray-600">50+ years of service life</p>
-            </div>
-            <div className="text-center p-6">
-              <span className="text-4xl mb-3 block">🚚</span>
-              <h3 className="font-bold text-gray-900 mb-2">Fast Delivery</h3>
-              <p className="text-sm text-gray-600">Nationwide delivery available</p>
-            </div>
+            <AnimateOnScroll animation="fade-up" delay={0}>
+              <div className="text-center p-6 card-hover h-full">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon name="certified" size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Quality Certified</h3>
+                <p className="text-sm text-gray-600">All products meet international standards</p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={100}>
+              <div className="text-center p-6 card-hover h-full">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon name="building" size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Built to Last</h3>
+                <p className="text-sm text-gray-600">50+ years of service life</p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={200}>
+              <div className="text-center p-6 card-hover h-full">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon name="truck" size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Fast Delivery</h3>
+                <p className="text-sm text-gray-600">Nationwide delivery available</p>
+              </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </section>

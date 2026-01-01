@@ -1,11 +1,32 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { PageHeader, CardGrid } from '@/components/common';
+import { PageHeader, CardGrid, StatsStrip, AnimateOnScroll } from '@/components/common';
 import { productCategories } from '@/config/products';
+import Icon, { IconName } from '@/components/ui/Icon';
 
 export const metadata: Metadata = {
-  title: 'UPVC PPR HDPE Pipes UAE | Crown Plastic Pipes Sharjah',
-  description: '5,000+ UPVC pressure pipes, PPR hot/cold water, HDPE irrigation, PVC conduits. ISO 9001:2015 certified. BS EN DIN ASTM standards.',
+  title: 'UPVC PPR HDPE Pipes & Fittings | Crown Plastic Pipes Dubai UAE',
+  description: '5,000+ UPVC pressure pipes, PPR hot/cold water pipes, HDPE irrigation pipes, PVC conduits & drainage systems. ISO 9001:2015 certified. BS EN, DIN, ASTM standards. Dubai, Sharjah, UAE & GCC.',
+  keywords: [
+    'UPVC pressure pipes Dubai',
+    'PPR pipes UAE',
+    'HDPE irrigation pipes',
+    'PVC conduit pipes',
+    'drainage pipes Sharjah',
+    'pipe fittings GCC',
+    'water supply pipes',
+    'BS EN 1452 pipes',
+    'DIN 8061 pipes',
+  ],
+  alternates: {
+    canonical: '/products',
+  },
+  openGraph: {
+    title: 'UPVC PPR HDPE Pipes & Fittings | Crown Plastic Pipes UAE',
+    description: '5,000+ UPVC, PPR, HDPE pipes & fittings. ISO certified manufacturer serving Dubai, UAE & GCC since 1995.',
+    url: 'https://crownplasticuae.com/products',
+    images: ['/images/og-products.jpg'],
+  },
 };
 
 export default function ProductsPage() {
@@ -27,43 +48,29 @@ export default function ProductsPage() {
       />
 
       {/* Stats Strip */}
-      <section className="py-12 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">5,000+</p>
-              <p className="text-white/80 text-sm mt-1">Product Variants</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-accent">UPVC PPRC HDPE</p>
-              <p className="text-white/80 text-sm mt-1">Pipes</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-accent">GCC Standards</p>
-              <p className="text-white/80 text-sm mt-1">Compliant</p>
-            </div>
-            <div>
-              <p className="text-xl md:text-2xl font-bold text-accent">DIN 8061/62</p>
-              <p className="text-white/80 text-sm mt-1">BS EN 1452</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-accent">20mm - 400mm</p>
-              <p className="text-white/80 text-sm mt-1">Diameters</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StatsStrip
+        stats={[
+          { value: '5,000+', label: 'Product Variants', iconName: 'package' },
+          { value: 'UPVC PPRC HDPE', label: 'Pipes', iconName: 'water' },
+          { value: 'GCC Standards', label: 'Compliant', iconName: 'certified' },
+          { value: 'DIN 8061/62', label: 'BS EN 1452', iconName: 'document' },
+          { value: '20mm - 400mm', label: 'Diameters', iconName: 'gauge' },
+        ]}
+        variant="primary"
+      />
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Product Categories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Select a category to explore our comprehensive range of pipes and fittings.
-            </p>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Product Categories
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Select a category to explore our comprehensive range of pipes and fittings.
+              </p>
+            </div>
+          </AnimateOnScroll>
           <CardGrid items={productCards} columns={3} />
         </div>
       </section>
@@ -71,23 +78,29 @@ export default function ProductsPage() {
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Our Products?
-            </h2>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Why Choose Our Products?
+              </h2>
+            </div>
+          </AnimateOnScroll>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: '✓', title: 'ISO 9001:2015 Certified', desc: 'Quality management system certified' },
-              { icon: '🏗️', title: '50+ Years Service Life', desc: 'Long-lasting durability' },
-              { icon: '🌿', title: '100% Virgin Materials', desc: 'Premium quality raw materials' },
-              { icon: '🔧', title: 'Gulf Climate Tested', desc: 'Proven performance in extreme conditions' },
+              { iconName: 'certified' as IconName, title: 'ISO 9001:2015 Certified', desc: 'Quality management system certified' },
+              { iconName: 'building' as IconName, title: '50+ Years Service Life', desc: 'Long-lasting durability' },
+              { iconName: 'leaf' as IconName, title: '100% Virgin Materials', desc: 'Premium quality raw materials' },
+              { iconName: 'climate' as IconName, title: 'Gulf Climate Tested', desc: 'Proven performance in extreme conditions' },
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <span className="text-4xl mb-3 block">{item.icon}</span>
-                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
+              <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm card-hover h-full">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Icon name={item.iconName} size={28} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { brand } from '@/config/brand';
 import { useHeroVideo, heroScenes } from './useHeroVideo';
 import { useParallaxScroll, usePrefersReducedMotion, useCountUp } from './useAnimations';
@@ -120,8 +121,21 @@ export default function HeroSection({
       ref={containerRef}
       className="relative min-h-[90vh] md:min-h-screen overflow-hidden"
     >
-      {/* Video Background - Lazy loaded via IntersectionObserver */}
+      {/* Optimized LCP Poster Image */}
       <div className="absolute inset-0 z-0">
+        <Image
+          src={activeScene.poster || '/images/hero-poster-main.jpg'}
+          alt="Crown Plastic Pipes Manufacturing"
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+          className={`object-cover transition-opacity duration-700 ${
+            isVideoLoaded ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
+        
+        {/* Video Background - Lazy loaded after poster renders */}
         {isInView && (
           <video
             ref={videoRef}
@@ -132,22 +146,12 @@ export default function HeroSection({
             muted
             loop
             playsInline
-            poster={activeScene.poster}
+            preload="none"
             aria-hidden="true"
           >
             <source src={activeScene.src} type="video/mp4" />
           </video>
         )}
-
-        {/* Poster fallback while video loads or if autoplay blocked */}
-        <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${
-            isVideoLoaded ? 'opacity-0' : 'opacity-100'
-          }`}
-          style={{
-            backgroundImage: `url(${activeScene.poster || '/images/hero-poster-main.jpg'})`,
-          }}
-        />
 
         {/* Parallax gradient overlay - moves slightly on scroll */}
         <div 

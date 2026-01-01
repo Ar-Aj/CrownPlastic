@@ -87,23 +87,27 @@ export function useHeroVideo({ scenes, defaultSceneId = 'main' }: UseHeroVideoOp
     const video = videoRef.current;
     if (!video || !isInView) return;
 
-    video.load();
-    
-    const playVideo = async () => {
-      try {
-        await video.play();
-      } catch {
-        // Autoplay blocked - will show poster instead
-        console.log('Autoplay blocked, showing poster');
-      }
-    };
+    // Delay video loading to ensure poster LCP completes first
+    const loadTimer = setTimeout(() => {
+      video.load();
+      
+      const playVideo = async () => {
+        try {
+          await video.play();
+        } catch {
+          // Autoplay blocked - will show poster instead
+          console.log('Autoplay blocked, showing poster');
+        }
+      };
 
-    video.addEventListener('loadeddata', () => {
-      setIsVideoLoaded(true);
-      playVideo();
-    });
+      video.addEventListener('loadeddata', () => {
+        setIsVideoLoaded(true);
+        playVideo();
+      });
+    }, 100); // Small delay to prioritize poster rendering
 
     return () => {
+      clearTimeout(loadTimer);
       video.pause();
     };
   }, [activeSceneId, isInView]);

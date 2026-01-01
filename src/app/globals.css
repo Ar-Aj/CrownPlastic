@@ -119,6 +119,26 @@ html {
     }
   }
 
+  /* Card hover lift effect - only on devices that support hover */
+  @media (hover: hover) {
+    .card-hover {
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  /* Icon hover accent transition */
+  .icon-hover-accent {
+    transition: color 200ms ease-out;
+  }
+  @media (hover: hover) {
+    .icon-hover-accent:hover {
+      color: #F4A300; /* accent color */
+    }
+  }
+
   /* Respect reduced motion preference */
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-in,
@@ -126,10 +146,12 @@ html {
     .animate-float,
     .animate-glow-pulse,
     .animate-bounce,
-    .animate-pulse {
+    .animate-pulse,
+    .card-hover {
       animation: none !important;
       opacity: 1 !important;
       transform: none !important;
+      transition: none !important;
     }
   }
 }

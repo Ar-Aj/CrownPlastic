@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import { PageHeader } from '@/components/common';
 import { productCategories, getCategoryBySlug, getSubProductBySlugs } from '@/config/products';
+
+const baseUrl = 'https://crownplasticuae.com';
 
 interface ProductPageProps {
   params: Promise<{ category: string; product: string }>;
@@ -31,9 +34,30 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   
   if (!category_data || !product) return { title: 'Product Not Found' };
   
+  // Determine material type for keywords
+  const materialType = category_data.name.includes('UPVC') ? 'UPVC' : 
+                       category_data.name.includes('PPR') ? 'PPR' : 
+                       category_data.name.includes('HDPE') ? 'HDPE' : 'PVC';
+  
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: `${product.name} Dubai UAE | ${category_data.name} | Crown Plastic Pipes`,
+    description: `${product.shortDescription} Standards: ${product.standards.join(', ')}. ISO 9001:2015 certified. Dubai, Sharjah, UAE & GCC.`,
+    keywords: [
+      product.name.toLowerCase(),
+      `${materialType} pipes Dubai`,
+      `${materialType} pipes UAE`,
+      ...product.standards.map(s => s.toLowerCase()),
+      'Crown Plastic Pipes',
+    ],
+    alternates: {
+      canonical: `/products/${category}/${productSlug}`,
+    },
+    openGraph: {
+      title: `${product.name} | Crown Plastic Pipes UAE`,
+      description: product.shortDescription,
+      url: `${baseUrl}/products/${category}/${productSlug}`,
+      images: category_data.image ? [category_data.image] : ['/images/og-products.jpg'],
+    },
   };
 }
 
@@ -46,8 +70,97 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  // Determine material type
+  const materialType = category_data.name.includes('UPVC') ? 'UPVC' : 
+                       category_data.name.includes('PPR') ? 'PPR' : 
+                       category_data.name.includes('HDPE') ? 'HDPE' : 'PVC';
+
+  // BreadcrumbList JSON-LD
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${baseUrl}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: category_data.name,
+        item: `${baseUrl}/products/${category_data.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.name,
+        item: `${baseUrl}/products/${category_data.slug}/${product.slug}`,
+      },
+    ],
+  };
+
+  // Product JSON-LD structured data
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.shortDescription,
+    image: category_data.image ? `${baseUrl}${category_data.image}` : `${baseUrl}/images/og-products.jpg`,
+    brand: {
+      "@type": "Brand",
+      name: "Crown Plastic Pipes Factory L.L.C.",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "Crown Plastic Pipes Factory L.L.C.",
+      url: baseUrl,
+    },
+    material: materialType,
+    category: category_data.name,
+    additionalProperty: product.standards.map((standard) => ({
+      "@type": "PropertyValue",
+      name: "Standard",
+      value: standard,
+    })),
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "AED",
+      seller: {
+        "@type": "Organization",
+        name: "Crown Plastic Pipes Factory L.L.C.",
+      },
+      areaServed: [
+        { "@type": "Country", name: "United Arab Emirates" },
+        { "@type": "Country", name: "Saudi Arabia" },
+        { "@type": "Country", name: "Oman" },
+        { "@type": "Country", name: "Qatar" },
+        { "@type": "Country", name: "Kuwait" },
+        { "@type": "Country", name: "Bahrain" },
+      ],
+    },
+  };
+
   return (
     <>
+      <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="product-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       <PageHeader
         title={product.name}
         subtitle={product.shortDescription}
@@ -70,6 +183,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     alt={`${product.name} - ${category_data.name} from Crown Plastic Pipes`}
                     width={800}
                     height={800}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={85}
                     className="w-full h-full object-cover"
                     priority
                   />

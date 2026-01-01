@@ -2,9 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavItem } from '@/config/routes';
 import { brand } from '@/config/brand';
+import { usePrefersReducedMotion } from '@/components/common/useAnimations';
 
 interface MobileNavProps {
   items: NavItem[];
@@ -14,6 +15,19 @@ interface MobileNavProps {
 
 export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  // Handle animation timing
+  useEffect(() => {
+    if (isOpen) {
+      setIsAnimating(true);
+    } else {
+      // Delay hiding to allow close animation
+      const timer = setTimeout(() => setIsAnimating(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   const toggleExpand = (label: string) => {
     setExpandedItems((prev) =>
@@ -23,18 +37,28 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
     );
   };
 
-  if (!isOpen) return null;
+  if (!isOpen && !isAnimating) return null;
 
   return (
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300"
+        style={{ 
+          opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? 'auto' : 'none',
+        }}
         onClick={onClose}
       />
 
       {/* Slide-in menu */}
-      <div className="fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto">
+      <div 
+        className="fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto"
+        style={{
+          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: prefersReducedMotion ? 'none' : 'transform 300ms ease-out',
+        }}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b">
           <Link href="/" onClick={onClose} className="flex items-center gap-2">
