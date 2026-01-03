@@ -1,32 +1,11 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import { PageHeader, Timeline, AwardsList, StatsStrip, AnimateOnScroll } from '@/components/common';
 import Icon from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
-const baseUrl = 'https://crownplasticuae.com';
 
-export const metadata: Metadata = {
-  title: 'About Crown Plastic Pipes | UPVC PPR HDPE Manufacturer Sharjah UAE Since 1995',
-  description: 'Crown Plastic Pipes Factory L.L.C. - Established 1995 in Sharjah, UAE. ISO 9001:2015 certified manufacturer of 5,000+ UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical conduits, irrigation across Dubai, UAE & GCC.',
-  keywords: [
-    'Crown Plastic Pipes history',
-    'pipe manufacturer Sharjah',
-    'UPVC factory UAE',
-    'PPR manufacturer Dubai',
-    'HDPE pipes GCC',
-    'ISO certified pipe factory',
-    'plastic pipes since 1995',
-  ],
-  alternates: {
-    canonical: '/about-us',
-  },
-  openGraph: {
-    title: 'About Crown Plastic Pipes | Sharjah UAE Since 1995',
-    description: 'ISO 9001:2015 certified manufacturer of 5,000+ UPVC, PPR, HDPE pipes & fittings. Serving Dubai, Sharjah, UAE & GCC since 1995.',
-    url: `${baseUrl}/about-us`,
-    images: ['/images/og-about.jpg'],
-  },
-};
 
 const timelineItems = [
   {
@@ -81,12 +60,14 @@ const stats = [
 ];
 
 export default function AboutPage() {
+  const t = useT();
+
   return (
     <>
       <PageHeader
-        title="About Crown Plastic Pipes Factory L.L.C."
-        subtitle="Pioneering plastic piping solutions since 1995 – Sharjah's trusted manufacturer for GCC infrastructure."
-        breadcrumbs={[{ label: 'About Us' }]}
+        title={t('about.title')}
+        subtitle={t('about.subtitle')}
+        breadcrumbs={[{ label: t('nav.about') }]}
       />
 
       {/* Company Overview */}
@@ -95,13 +76,10 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimateOnScroll animation="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Leading the Way in Plastic Piping Solutions
+                {t('about.overview_title')}
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Crown Plastic Pipes Factory L.L.C., established 1995 in Sharjah, UAE, leads UPVC, PPRC, 
-                HDPE pipe manufacturing. ISO 9001:2015, 14001:2015, OHSAS 18001:2007 certified. Specializing 
-                in pressure pipes, drainage systems, electrical conduits, telecom ducts using 100% virgin 
-                uPVC with European extrusion technology. Gulf climate tested via in-house QC + international labs.
+                {t('about.overview_text')}
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={100}>
@@ -130,11 +108,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <Icon name="target" size={32} className="text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.mission_title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Deliver premium piping exceeding international standards (BS EN, DIN, ISO, ASTM) with 
-                  competitive pricing, rapid GCC delivery, and unmatched technical support. Committed to 
-                  sustainability, innovation, and total customer satisfaction.
+                  {t('about.mission_text')}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -143,10 +119,9 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                   <Icon name="vision" size={32} className="text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.vision_title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Become GCC&apos;s premier pipe manufacturer, expanding globally while upholding integrity, 
-                  reliability, and excellence in every pipe.
+                  {t('about.vision_text')}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -163,10 +138,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                State-of-the-Art Manufacturing
+                {t('about.manufacturing_title')}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our modern facilities equipped with advanced technology ensure consistent quality and efficiency.
+                {t('about.manufacturing_subtitle')}
               </p>
             </div>
           </AnimateOnScroll>
@@ -207,10 +182,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Quality & Certifications
+              {t('about.quality_title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our products meet international standards and are certified by leading global organizations.
+              {t('about.quality_subtitle')}
             </p>
           </div>
           <AwardsList awards={certifications} title="" />
@@ -222,10 +197,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
+              {t('about.journey_title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Milestones that mark our growth and commitment to excellence over the years.
+              {t('about.journey_subtitle')}
             </p>
           </div>
           <Timeline items={timelineItems} />

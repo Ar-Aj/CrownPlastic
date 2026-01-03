@@ -1,4 +1,19 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+
+// ─────────────────────────────────────────────────────────────
+// RTL Plugin - Enables rtl: and ltr: variants
+// ─────────────────────────────────────────────────────────────
+// Usage: Apply rtl: or ltr: prefix to any utility class
+// Examples:
+//   - rtl:mr-4 ltr:ml-4  (margin on logical start)
+//   - rtl:text-right ltr:text-left
+//   - rtl:flex-row-reverse (flip flex direction in RTL)
+// ─────────────────────────────────────────────────────────────
+const rtlPlugin = plugin(({ addVariant }) => {
+  addVariant('rtl', '[dir="rtl"] &');
+  addVariant('ltr', '[dir="ltr"] &');
+});
 
 const config: Config = {
   content: [
@@ -52,6 +67,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [rtlPlugin],
 };
 export default config;

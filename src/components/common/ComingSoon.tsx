@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useT } from '@/i18n';
 
 interface ComingSoonProps {
   title?: string;
@@ -11,10 +14,13 @@ interface ComingSoonProps {
  * Used when COMING_SOON_MODE is enabled for specific routes
  */
 export default function ComingSoon({
-  title = 'Coming Soon',
-  subtitle = 'This section will be available shortly.',
+  title,
+  subtitle,
   showBackLink = true,
 }: ComingSoonProps) {
+  const t = useT();
+  const displayTitle = title ?? t('common.coming_soon');
+  const displaySubtitle = subtitle ?? t('common.coming_soon_subtitle');
   return (
     <section className="min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
@@ -38,12 +44,12 @@ export default function ComingSoon({
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {title}
+            {displayTitle}
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg text-gray-600 mb-8">
-            {subtitle}
+            {displaySubtitle}
           </p>
 
           {/* Decorative dots */}
@@ -57,12 +63,12 @@ export default function ComingSoon({
           {showBackLink && (
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium transition-colors rtl:flex-row-reverse"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              Back to Home
+              {t('common.back_to_home')}
             </Link>
           )}
         </div>

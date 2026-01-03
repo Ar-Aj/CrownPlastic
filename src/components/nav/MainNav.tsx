@@ -3,13 +3,36 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { NavItem } from '@/config/routes';
+import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
+import type { TranslationPath } from '@/i18n/en';
 
 interface MainNavProps {
   items: NavItem[];
 }
 
+// Map nav labels to translation paths (for main nav items)
+const navLabelToPath: Record<string, TranslationPath> = {
+  'About': 'nav.about',
+  'Products': 'nav.products',
+  'Sustainability': 'nav.sustainability',
+  'Innovation': 'nav.innovation',
+  'Investor Relations': 'nav.investor_relations',
+  'News & Media': 'nav.news_media',
+  'Resources': 'nav.resources',
+  'Contact': 'nav.contact',
+};
+
 export default function MainNav({ items }: MainNavProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const { isRTL } = useLanguage();
+  const t = useT();
+
+  // Translate a label if it has a mapping, otherwise return as-is
+  const translateLabel = (label: string): string => {
+    const path = navLabelToPath[label];
+    return path ? t(path) : label;
+  };
 
   return (
     <nav className="flex items-center gap-1">
@@ -26,7 +49,7 @@ export default function MainNav({ items }: MainNavProps) {
               openDropdown === item.label ? 'text-primary bg-gray-50' : ''
             }`}
           >
-            {item.label}
+            {translateLabel(item.label)}
             {item.children && (
               <svg
                 className={`w-4 h-4 transition-transform ${
@@ -43,7 +66,9 @@ export default function MainNav({ items }: MainNavProps) {
 
           {/* Dropdown menu */}
           {item.children && openDropdown === item.label && (
-            <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+            <div className={`absolute top-full mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 ${
+              isRTL ? 'right-0' : 'left-0'
+            }`}>
               {item.children.map((child) => (
                 <Link
                   key={child.href}

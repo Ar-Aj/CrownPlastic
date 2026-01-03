@@ -1,38 +1,18 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import { PageHeader, ComingSoon, AnimateOnScroll } from '@/components/common';
 import { isComingSoon } from '@/config/maintenance';
 import Icon, { IconName } from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
-const baseUrl = 'https://crownplasticuae.com';
-
-export const metadata: Metadata = {
-  title: 'Innovation & R&D | Advanced UPVC PPR HDPE Pipes | Crown Plastic Pipes UAE',
-  description: 'In-house R&D, European Battenfeld extrusion technology, Gulf climate tested pipes. Advanced UPVC, PPR, HDPE piping systems from Crown Plastic Pipes Factory, Sharjah. Dubai, UAE & GCC.',
-  keywords: [
-    'pipe innovation UAE',
-    'R&D plastic pipes',
-    'European extrusion technology',
-    'Gulf climate tested pipes',
-    'advanced UPVC technology',
-    'pipe manufacturing innovation',
-    'Crown Plastic Pipes R&D',
-  ],
-  alternates: {
-    canonical: '/innovation',
-  },
-  openGraph: {
-    title: 'Innovation & R&D | Crown Plastic Pipes UAE',
-    description: 'In-house R&D, European Battenfeld extrusion technology, Gulf climate tested pipes. Advanced UPVC, PPR, HDPE piping systems.',
-    url: `${baseUrl}/innovation`,
-    images: ['/images/og-innovation.jpg'],
-  },
-};
 
 // Route slug for Coming Soon check
 const ROUTE_SLUG = 'innovation';
 
 export default function InnovationPage() {
+  const t = useT();
+
   // Check if this page should show Coming Soon
   if (isComingSoon(ROUTE_SLUG)) {
     return (
@@ -46,9 +26,9 @@ export default function InnovationPage() {
   return (
     <>
       <PageHeader
-        title="Innovation"
-        subtitle="In-house R&D, European Battenfeld extrusion lines, and Gulf climate testing labs driving advanced UPVC, PPR, HDPE pipe innovation for GCC infrastructure projects."
-        breadcrumbs={[{ label: 'Innovation' }]}
+        title={t('innovation.title')}
+        subtitle={t('innovation.subtitle')}
+        breadcrumbs={[{ label: t('nav.innovation') }]}
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -57,13 +37,10 @@ export default function InnovationPage() {
             <AnimateOnScroll animation="fade-right">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Innovation at Our Core
+                  {t('innovation.core_title')}
                 </h2>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  At Crown Plastic Pipes Factory L.L.C., innovation starts on the factory floor. Our in-house 
-                  R&D team, European Battenfeld extrusion lines, and Gulf-climate testing laboratories continuously 
-                  improve UPVC pressure, drainage, duct, PVC conduit, PPR, and HDPE systems for real project 
-                  conditions in the UAE and GCC.
+                  {t('innovation.core_text')}
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   From 100% virgin material formulations to precision jointing systems, every innovation is 
@@ -96,7 +73,7 @@ export default function InnovationPage() {
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Key Innovation Areas
+              {t('innovation.areas_title')}
             </h2>
           </AnimateOnScroll>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,11 +118,10 @@ export default function InnovationPage() {
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-              Innovative Product Solutions
+              {t('innovation.products_title')}
             </h2>
             <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-              From municipal water networks to high-rise buildings and telecom infrastructure, our R&D-driven 
-              product innovations deliver proven performance across the GCC.
+              {t('innovation.products_subtitle')}
             </p>
           </AnimateOnScroll>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -197,7 +173,7 @@ export default function InnovationPage() {
               href="/products" 
               className="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-semibold transition-colors"
             >
-              Explore Full Product Range
+              {t('innovation.explore')}
             </a>
           </div>
         </div>
@@ -207,11 +183,9 @@ export default function InnovationPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="bg-primary rounded-3xl p-8 md:p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">In-House R&D Laboratory</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('innovation.lab_title')}</h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-              Our fully-equipped testing facility validates every batch against international standards. 
-              Certified under ISO 9001:2015 (Quality), ISO 14001:2015 (Environment), and OHSAS 18001:2007 
-              (Safety), our innovation is structured, traceable, and project-approved across the GCC.
+              {t('innovation.lab_text')}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[

@@ -1,39 +1,19 @@
-import { Metadata } from 'next';
+'use client';
+
 import { PageHeader, AnimateOnScroll, StatsStrip } from '@/components/common';
 import Icon, { IconName } from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
-const baseUrl = 'https://crownplasticuae.com';
-
-export const metadata: Metadata = {
-  title: 'Sustainable Pipes UAE | ISO 14001 Certified | Crown Plastic Pipes Sharjah',
-  description: 'ISO 14001:2015 certified sustainable UPVC/PPR/HDPE pipes. 100% virgin materials, zero-discharge manufacturing, 50+ year service life. Green building pipes for Dubai, Sharjah, UAE & GCC.',
-  keywords: [
-    'sustainable pipes UAE',
-    'ISO 14001 pipes',
-    'green building pipes Dubai',
-    'eco-friendly UPVC',
-    'recyclable plastic pipes',
-    'zero discharge manufacturing',
-    'long life pipes GCC',
-  ],
-  alternates: {
-    canonical: '/sustainability',
-  },
-  openGraph: {
-    title: 'Sustainable Pipes | ISO 14001 Certified | Crown Plastic Pipes UAE',
-    description: 'ISO 14001:2015 certified. 100% virgin materials, zero-discharge factory, 50+ year service life. Green building pipes for Dubai & GCC.',
-    url: `${baseUrl}/sustainability`,
-    images: ['/images/og-sustainability.jpg'],
-  },
-};
 
 export default function SustainabilityPage() {
+  const t = useT();
+
   return (
     <>
       <PageHeader
-        title="Sustainability"
-        subtitle="ISO 14001:2015 certified since 1995. 100% virgin materials. Zero-discharge manufacturing for GCC green building projects."
-        breadcrumbs={[{ label: 'Sustainability' }]}
+        title={t('sustainability.title')}
+        subtitle={t('sustainability.subtitle')}
+        breadcrumbs={[{ label: t('nav.sustainability') }]}
       />
 
       {/* Stats Strip */}
@@ -58,10 +38,10 @@ export default function SustainabilityPage() {
                   <Icon name="globe" size={40} className="text-primary" />
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Building a Sustainable Future
+                  {t('sustainability.future_title')}
                 </h2>
                 <p className="text-lg text-gray-600">
-                  At Crown Plastic Pipes, sustainability is not just a goal – it&apos;s embedded in everything we do.
+                  {t('sustainability.future_text')}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -69,10 +49,7 @@ export default function SustainabilityPage() {
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p>
-                  We are committed to minimizing our environmental footprint while delivering high-quality 
-                  products that contribute to sustainable infrastructure development. Our approach encompasses 
-                  responsible manufacturing, efficient resource utilization, and continuous improvement in 
-                  environmental performance.
+                  {t('sustainability.commitment')}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -85,7 +62,7 @@ export default function SustainabilityPage() {
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Our Sustainability Pillars
+              {t('sustainability.pillars_title')}
             </h2>
           </AnimateOnScroll>
           <div className="grid md:grid-cols-3 gap-8">
@@ -138,10 +115,9 @@ export default function SustainabilityPage() {
       {/* Long Service Life */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">50+ Years Service Life</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('sustainability.service_title')}</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            50+ years durability = 80% less replacements vs metal pipes. Reduced lifecycle emissions 
-            and environmental impact over the product lifecycle.
+            {t('sustainability.service_text')}
           </p>
         </div>
       </section>

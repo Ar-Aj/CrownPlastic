@@ -1,38 +1,18 @@
-import { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import { PageHeader, ComingSoon, AnimateOnScroll } from '@/components/common';
 import { isComingSoon } from '@/config/maintenance';
 import Icon, { IconName } from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
-const baseUrl = 'https://crownplasticuae.com';
-
-export const metadata: Metadata = {
-  title: 'Downloads & Resources | UPVC PPR HDPE Catalogues | Crown Plastic Pipes UAE',
-  description: 'Free technical catalogues, submittals, installation guides for 5,000+ UPVC/PPR/HDPE pipes & fittings. ISO 9001:2015 certified specifications. BS EN, DIN, ASTM standards. Dubai, UAE & GCC.',
-  keywords: [
-    'pipe catalogue download',
-    'UPVC technical specs',
-    'PPR installation guide',
-    'HDPE specifications',
-    'pipe standards PDF',
-    'ISO certified pipes specs',
-    'Crown Plastic Pipes catalogue',
-  ],
-  alternates: {
-    canonical: '/resources',
-  },
-  openGraph: {
-    title: 'Downloads & Resources | Crown Plastic Pipes UAE',
-    description: 'Free technical catalogues, submittals, installation guides for UPVC/PPR/HDPE pipes. ISO certified specifications.',
-    url: `${baseUrl}/resources`,
-    images: ['/images/og-resources.jpg'],
-  },
-};
 
 // Route slug for Coming Soon check
 const ROUTE_SLUG = 'resources';
 
 export default function ResourcesPage() {
+  const t = useT();
+
   // Check if this page should show Coming Soon
   if (isComingSoon(ROUTE_SLUG)) {
     return (
@@ -107,9 +87,9 @@ export default function ResourcesPage() {
   return (
     <>
       <PageHeader
-        title="Downloads & Resources"
-        subtitle="Technical catalogues, specifications, and installation guides for Crown Plastic Pipes products."
-        breadcrumbs={[{ label: 'Downloads & Resources' }]}
+        title={t('resources.title')}
+        subtitle={t('resources.subtitle')}
+        breadcrumbs={[{ label: t('nav.resources') }]}
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -148,19 +128,18 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-4">Need Technical Support or Custom Specifications?</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('resources.cta_title')}</h2>
           <p className="text-white/90 mb-8 max-w-xl mx-auto">
-            Our technical team is ready to assist with project-specific requirements, custom quotes, and product selections for your infrastructure projects.
+            {t('resources.cta_subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact-us"
               className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
             >
-              Request Custom Quote
+              {t('common.request_quote')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -169,7 +148,7 @@ export default function ResourcesPage() {
               href="/products"
               className="inline-flex items-center justify-center gap-2 bg-primary border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-primary transition-colors"
             >
-              View All Products
+              {t('common.view_all_products')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

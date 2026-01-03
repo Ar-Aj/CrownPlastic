@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePrefersReducedMotion } from './useAnimations';
+import { useT } from '@/i18n';
 
 interface BreadcrumbItem {
   label: string;
@@ -24,6 +25,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
   const [isVisible, setIsVisible] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const t = useT();
 
   useEffect(() => {
     // Trigger animation after mount
@@ -49,7 +51,7 @@ export default function PageHeader({
               <ol className="flex flex-wrap items-center gap-2 text-sm">
                 <li>
                   <Link href="/" className="text-white/70 hover:text-white transition-colors">
-                    Home
+                    {t('common.breadcrumb_home')}
                   </Link>
                 </li>
                 {breadcrumbs.map((item, index) => (

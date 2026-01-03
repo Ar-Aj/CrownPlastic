@@ -1,36 +1,15 @@
-import { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import { PageHeader, CardGrid, StatsStrip, AnimateOnScroll, PdfViewer } from '@/components/common';
 import { productCategories } from '@/config/products';
 import { topLevelDocs } from '@/config/docs';
 import Icon, { IconName } from '@/components/ui/Icon';
-
-export const metadata: Metadata = {
-  title: 'UPVC PPR HDPE Pipes & Fittings | Crown Plastic Pipes Dubai UAE',
-  description: '5,000+ UPVC pressure pipes, PPR hot/cold water pipes, HDPE irrigation pipes, PVC conduits & drainage systems. ISO 9001:2015 certified. BS EN, DIN, ASTM standards. Dubai, Sharjah, UAE & GCC.',
-  keywords: [
-    'UPVC pressure pipes Dubai',
-    'PPR pipes UAE',
-    'HDPE irrigation pipes',
-    'PVC conduit pipes',
-    'drainage pipes Sharjah',
-    'pipe fittings GCC',
-    'water supply pipes',
-    'BS EN 1452 pipes',
-    'DIN 8061 pipes',
-  ],
-  alternates: {
-    canonical: '/products',
-  },
-  openGraph: {
-    title: 'UPVC PPR HDPE Pipes & Fittings | Crown Plastic Pipes UAE',
-    description: '5,000+ UPVC, PPR, HDPE pipes & fittings. ISO certified manufacturer serving Dubai, UAE & GCC since 1995.',
-    url: 'https://crownplasticuae.com/products',
-    images: ['/images/og-products.jpg'],
-  },
-};
+import { useT } from '@/i18n';
 
 export default function ProductsPage() {
+  const t = useT();
+
   const productCards = productCategories.map((cat) => ({
     title: cat.name,
     description: cat.shortDescription,
@@ -43,9 +22,9 @@ export default function ProductsPage() {
   return (
     <>
       <PageHeader
-        title="Our Products"
-        subtitle="Complete range of 5,000+ UPVC, PPR, HDPE pipes & fittings since 1995"
-        breadcrumbs={[{ label: 'Products' }]}
+        title={t('products.title')}
+        subtitle={t('products.subtitle')}
+        breadcrumbs={[{ label: t('nav.products') }]}
       />
 
       {/* Stats Strip */}
@@ -65,10 +44,10 @@ export default function ProductsPage() {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Product Categories
+                {t('products.categories_title')}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Select a category to explore our comprehensive range of pipes and fittings.
+                {t('products.categories_subtitle')}
               </p>
             </div>
           </AnimateOnScroll>
@@ -82,16 +61,16 @@ export default function ProductsPage() {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Choose Our Products?
+                {t('products.why_title')}
               </h2>
             </div>
           </AnimateOnScroll>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { iconName: 'certified' as IconName, title: 'ISO 9001:2015 Certified', desc: 'Quality management system certified' },
-              { iconName: 'building' as IconName, title: '50+ Years Service Life', desc: 'Long-lasting durability' },
-              { iconName: 'leaf' as IconName, title: '100% Virgin Materials', desc: 'Premium quality raw materials' },
-              { iconName: 'climate' as IconName, title: 'Gulf Climate Tested', desc: 'Proven performance in extreme conditions' },
+              { iconName: 'certified' as IconName, title: t('products.why_iso'), desc: t('products.why_iso_desc') },
+              { iconName: 'building' as IconName, title: t('products.why_life'), desc: t('products.why_life_desc') },
+              { iconName: 'leaf' as IconName, title: t('products.why_virgin'), desc: t('products.why_virgin_desc') },
+              { iconName: 'climate' as IconName, title: t('products.why_climate'), desc: t('products.why_climate_desc') },
             ].map((item, i) => (
               <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm card-hover h-full">
@@ -113,10 +92,10 @@ export default function ProductsPage() {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Technical Documentation
+                {t('products.tech_docs_title')}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Browse our comprehensive technical catalogues and specifications by product category
+                {t('products.tech_docs_subtitle')}
               </p>
             </div>
           </AnimateOnScroll>
@@ -139,16 +118,16 @@ export default function ProductsPage() {
       <section className="py-12 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Need Detailed Product Specifications?
+            {t('products.cta_title')}
           </h2>
           <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-            Download our complete catalogue with technical specifications, dimensions, and standards.
+            {t('products.cta_subtitle')}
           </p>
           <Link
             href="/resources"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg font-semibold transition-colors rtl:flex-row-reverse"
           >
-            Download Full Catalogue
+            {t('products.download_catalogue')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>

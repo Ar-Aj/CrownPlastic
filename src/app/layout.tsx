@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import "./globals.css";
 import { MainLayout } from "@/components/layout";
 import { brand } from "@/config/brand";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -164,7 +166,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    // Default to 'en' and 'ltr' for SSR hydration consistency.
+    // LanguageProvider will update these on client mount based on URL/localStorage.
+    <html lang="en" dir="ltr" className={inter.variable}>
       <head>
         <Script
           id="organization-jsonld"
@@ -173,7 +177,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        <MainLayout>{children}</MainLayout>
+        <Suspense fallback={null}>
+          <LanguageProvider>
+            <MainLayout>{children}</MainLayout>
+          </LanguageProvider>
+        </Suspense>
       </body>
     </html>
   );

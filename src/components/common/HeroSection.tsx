@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { brand } from '@/config/brand';
 import { useHeroVideo, heroScenes } from './useHeroVideo';
 import { useParallaxScroll, usePrefersReducedMotion, useCountUp } from './useAnimations';
+import { useT } from '@/i18n';
 
 /**
  * HERO VIDEO SYSTEM
@@ -56,13 +57,20 @@ function StatCounter({ value, label, isInView, index }: {
 }
 
 export default function HeroSection({
-  title = 'Excellence in Every Pipe',
-  subtitle = 'Leading manufacturer of high‑quality UPVC, PPR and HDPE piping systems for water supply, drainage, electrical ducting and infrastructure applications across the UAE and GCC.',
-  ctaText = 'Explore Products',
+  title,
+  subtitle,
+  ctaText,
   ctaLink = '/products',
-  secondaryCtaText = 'Contact Us',
+  secondaryCtaText,
   secondaryCtaLink = '/contact-us',
 }: HeroSectionProps) {
+  const t = useT();
+  
+  // Use translations as defaults
+  const displayTitle = title ?? t('home.hero_title');
+  const displaySubtitle = subtitle ?? t('home.hero_subtitle');
+  const displayCtaText = ctaText ?? t('home.hero_explore_products');
+  const displaySecondaryCtaText = secondaryCtaText ?? t('home.hero_contact_us');
   const {
     activeScene,
     activeSceneId,
@@ -78,12 +86,12 @@ export default function HeroSection({
   const parallaxOffset = useParallaxScroll(0.08);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  // Stats data
+  // Stats data with translated labels
   const stats = [
-    { value: brand.stats.yearsExperience, label: 'Years Experience' },
-    { value: brand.stats.productsRange, label: 'Products Range' },
-    { value: brand.stats.countriesExport, label: 'Countries Export' },
-    { value: brand.stats.happyCustomers, label: 'Happy Customers' },
+    { value: brand.stats.yearsExperience, label: t('home.hero_stat_years') },
+    { value: brand.stats.productsRange, label: t('home.hero_stat_products') },
+    { value: brand.stats.countriesExport, label: t('home.hero_stat_countries') },
+    { value: brand.stats.happyCustomers, label: t('home.hero_stat_customers') },
   ];
 
   // Scene pill indicator position
@@ -175,7 +183,7 @@ export default function HeroSection({
             style={getAnimStyle(0.1)}
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-white">Trusted by 10,000+ customers</span>
+            <span className="text-sm font-medium text-white">{t('home.hero_trust_badge')}</span>
           </div>
 
           {/* Main heading - Staggered fade-up */}
@@ -183,7 +191,7 @@ export default function HeroSection({
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white ${getAnimClass()}`}
             style={getAnimStyle(0.15)}
           >
-            {title}
+            {displayTitle}
           </h1>
 
           {/* Subtitle - Staggered fade-up (40-80ms after H1) */}
@@ -191,7 +199,7 @@ export default function HeroSection({
             className={`text-lg md:text-xl text-white/90 mb-8 max-w-2xl ${getAnimClass()}`}
             style={getAnimStyle(0.22)}
           >
-            {subtitle}
+            {displaySubtitle}
           </p>
 
           {/* CTAs - with enhanced hover (150ms ease-out) */}
@@ -204,11 +212,11 @@ export default function HeroSection({
               className="group inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold 
                 transition-all duration-150 ease-out
                 hover:bg-accent-dark hover:scale-[1.03] hover:shadow-xl hover:shadow-accent/30
-                active:scale-[0.98]"
+                active:scale-[0.98] rtl:flex-row-reverse"
             >
-              {ctaText}
+              {displayCtaText}
               <svg 
-                className="w-5 h-5 transition-transform duration-150 group-hover:translate-x-0.5" 
+                className="w-5 h-5 transition-transform duration-150 group-hover:translate-x-0.5 rtl:rotate-180" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -223,7 +231,7 @@ export default function HeroSection({
                 hover:bg-white/20 hover:border-white/40 hover:shadow-lg
                 active:scale-[0.98]"
             >
-              {secondaryCtaText}
+              {displaySecondaryCtaText}
             </Link>
           </div>
 
@@ -233,7 +241,7 @@ export default function HeroSection({
             style={getAnimStyle(0.38)}
           >
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-white/60 text-sm mr-2 hidden sm:inline">View:</span>
+              <span className="text-white/60 text-sm mr-2 hidden sm:inline">{t('home.hero_view')}</span>
               <div ref={pillContainerRef} className="relative flex gap-2">
                 {/* Sliding indicator */}
                 <div 

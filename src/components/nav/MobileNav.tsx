@@ -6,6 +6,10 @@ import { useState, useEffect } from 'react';
 import { NavItem } from '@/config/routes';
 import { brand } from '@/config/brand';
 import { usePrefersReducedMotion } from '@/components/common/useAnimations';
+import { LanguageToggle } from '@/components/common';
+import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
+import type { TranslationPath } from '@/i18n/en';
 
 interface MobileNavProps {
   items: NavItem[];
@@ -13,10 +17,30 @@ interface MobileNavProps {
   onClose: () => void;
 }
 
+// Map nav labels to translation paths (for main nav items)
+const navLabelToPath: Record<string, TranslationPath> = {
+  'About': 'nav.about',
+  'Products': 'nav.products',
+  'Sustainability': 'nav.sustainability',
+  'Innovation': 'nav.innovation',
+  'Investor Relations': 'nav.investor_relations',
+  'News & Media': 'nav.news_media',
+  'Resources': 'nav.resources',
+  'Contact': 'nav.contact',
+};
+
 export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { isRTL } = useLanguage();
+  const t = useT();
+
+  // Translate a label if it has a mapping, otherwise return as-is
+  const translateLabel = (label: string): string => {
+    const path = navLabelToPath[label];
+    return path ? t(path) : label;
+  };
 
   // Handle animation timing
   useEffect(() => {
@@ -53,9 +77,15 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
 
       {/* Slide-in menu */}
       <div 
-        className="fixed top-0 right-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto"
+        className={`fixed top-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto ${
+          isRTL ? 'left-0' : 'right-0'
+        }`}
         style={{
-          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+          transform: isOpen 
+            ? 'translateX(0)' 
+            : isRTL 
+              ? 'translateX(-100%)' 
+              : 'translateX(100%)',
           transition: prefersReducedMotion ? 'none' : 'transform 300ms ease-out',
         }}
       >
@@ -93,7 +123,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                     onClick={() => toggleExpand(item.label)}
                     className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-primary transition-colors"
                   >
-                    <span className="font-medium">{item.label}</span>
+                    <span className="font-medium">{translateLabel(item.label)}</span>
                     <svg
                       className={`w-5 h-5 transition-transform ${
                         expandedItems.includes(item.label) ? 'rotate-180' : ''
@@ -112,7 +142,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                         onClick={onClose}
                         className="block py-2 text-sm text-primary font-medium"
                       >
-                        View All {item.label}
+                        {t('nav.view_all')} {translateLabel(item.label)}
                       </Link>
                       {item.children.map((child) => (
                         <Link
@@ -133,7 +163,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                   onClick={onClose}
                   className="block py-3 font-medium text-gray-700 hover:text-primary transition-colors"
                 >
-                  {item.label}
+                  {translateLabel(item.label)}
                 </Link>
               )}
             </div>
@@ -145,18 +175,23 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
           <Link
             href="/contact-us"
             onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors"
+            className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors rtl:flex-row-reverse"
           >
-            Get a Quote
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {t('common.get_a_quote')}
+            <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
         </div>
 
+        {/* Language Toggle */}
+        <div className="p-4 border-t">
+          <LanguageToggle variant="mobile" />
+        </div>
+
         {/* Contact info */}
         <div className="p-4 bg-gray-50 mt-auto">
-          <p className="text-sm text-gray-500 mb-2">Contact us:</p>
+          <p className="text-sm text-gray-500 mb-2">{t('common.contact_us')}</p>
           <a
             href={`tel:${brand.contact.phone}`}
             className="flex items-center gap-2 text-sm text-gray-700 hover:text-primary mb-1"

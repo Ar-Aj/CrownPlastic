@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useT } from '@/i18n';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,12 +13,14 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const t = useT();
+
   return (
     <nav aria-label="Breadcrumb" className="py-3">
       <ol className="flex flex-wrap items-center gap-2 text-sm">
         <li>
           <Link href="/" className="text-gray-500 hover:text-primary transition-colors">
-            Home
+            {t('common.breadcrumb_home')}
           </Link>
         </li>
         {items.map((item, index) => (

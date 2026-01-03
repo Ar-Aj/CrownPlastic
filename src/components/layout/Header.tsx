@@ -7,9 +7,12 @@ import { brand } from '@/config/brand';
 import { mainNavItems } from '@/config/routes';
 import MainNav from '@/components/nav/MainNav';
 import MobileNav from '@/components/nav/MobileNav';
+import { LanguageToggle } from '@/components/common';
+import { useT } from '@/i18n';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useT();
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -31,6 +34,8 @@ export default function Header() {
             </a>
           </div>
           <div className="flex items-center gap-3">
+            {/* Language Toggle */}
+            <LanguageToggle variant="header" />
             <span className="text-xs hidden lg:inline">UAE</span>
             <div className="flex items-center gap-2">
               {/* Social icons */}
@@ -98,10 +103,10 @@ export default function Header() {
             {/* CTA Button - Desktop */}
             <Link
               href="/contact-us"
-              className="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
+              className="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm rtl:flex-row-reverse"
             >
-              Get Quote
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {t('nav.get_quote')}
+              <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>

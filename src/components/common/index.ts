@@ -1,4 +1,5 @@
 export { default as Breadcrumbs } from './Breadcrumbs';
+export { default as LanguageToggle } from './LanguageToggle';
 export { default as PageHeader } from './PageHeader';
 export { default as HeroSection } from './HeroSection';
 export { default as CardGrid } from './CardGrid';
