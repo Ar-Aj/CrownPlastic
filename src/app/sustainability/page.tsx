@@ -19,12 +19,12 @@ export default function SustainabilityPage() {
       {/* Stats Strip */}
       <StatsStrip
         stats={[
-          { value: 'ISO 14001:2015', label: 'Certified', iconName: 'leaf' },
-          { value: '100% Virgin', label: 'Recyclable Materials', iconName: 'recycle' },
-          { value: 'Zero-Discharge', label: 'Manufacturing', iconName: 'water' },
-          { value: '50+ Years', label: 'Service Life', iconName: 'heat' },
-          { value: 'Gulf Climate', label: 'Tested', iconName: 'globe' },
-          { value: 'OHSAS 18001:2007', label: 'Safety', iconName: 'factory' },
+          { value: 'ISO 14001:2015', label: t('sustainability_extended.stat_certified'), iconName: 'leaf' },
+          { value: '100% Virgin', label: t('sustainability_extended.stat_recyclable'), iconName: 'recycle' },
+          { value: 'Zero-Discharge', label: t('sustainability_extended.stat_manufacturing'), iconName: 'water' },
+          { value: '50+ Years', label: t('sustainability_extended.stat_service_life'), iconName: 'heat' },
+          { value: 'Gulf Climate', label: t('sustainability_extended.stat_tested'), iconName: 'globe' },
+          { value: 'OHSAS 18001:2007', label: t('sustainability_extended.stat_safety'), iconName: 'factory' },
         ]}
         variant="primary"
       />
@@ -69,33 +69,33 @@ export default function SustainabilityPage() {
             {[
               {
                 iconName: 'document' as IconName,
-                title: 'ISO 14001:2015 Certified',
-                description: 'Environmental Management System certified by QAOC. Continuous improvement in environmental performance.',
+                title: t('sustainability_extended.pillar_iso_title'),
+                description: t('sustainability_extended.pillar_iso_desc'),
               },
               {
                 iconName: 'recycle' as IconName,
-                title: '100% Virgin Materials',
-                description: 'uPVC, PPR, HDPE from 100% virgin materials. Fully recyclable at end-of-life. Zero recycled content contamination.',
+                title: t('sustainability_extended.pillar_virgin_title'),
+                description: t('sustainability_extended.pillar_virgin_desc'),
               },
               {
                 iconName: 'factory' as IconName,
-                title: 'Zero-Discharge Manufacturing',
-                description: 'Closed-loop water systems. Zero liquid discharge to environment. Waste heat recovery.',
+                title: t('sustainability_extended.pillar_zero_title'),
+                description: t('sustainability_extended.pillar_zero_desc'),
               },
               {
                 iconName: 'climate' as IconName,
-                title: 'Gulf Climate Tested',
-                description: 'Products tested for UAE extreme heat (50°C+), UV exposure, thermal cycling. 50+ year service life guaranteed.',
+                title: t('sustainability_extended.pillar_climate_title'),
+                description: t('sustainability_extended.pillar_climate_desc'),
               },
               {
                 iconName: 'electric' as IconName,
-                title: 'Energy Efficient Production',
-                description: 'European Battenfeld extruders. Energy monitoring per ISO 50001 standards. Reduced carbon footprint.',
+                title: t('sustainability_extended.pillar_energy_title'),
+                description: t('sustainability_extended.pillar_energy_desc'),
               },
               {
                 iconName: 'water' as IconName,
-                title: 'Leak-Free Systems',
-                description: 'BS EN 1452, DIN 8061 precision joints eliminate water loss. Supports GCC water conservation goals.',
+                title: t('sustainability_extended.pillar_leak_title'),
+                description: t('sustainability_extended.pillar_leak_desc'),
               },
             ].map((item, i) => (
               <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>

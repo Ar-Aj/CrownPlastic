@@ -5,62 +5,82 @@ import { PageHeader, Timeline, AwardsList, StatsStrip, AnimateOnScroll } from '@
 import Icon from '@/components/ui/Icon';
 import { useT } from '@/i18n';
 
-
-
-const timelineItems = [
-  {
-    year: '1995',
-    title: 'Founded in Sharjah, UAE',
-    description: 'Crown Plastic Pipes Factory L.L.C. was established in Sharjah, UAE, with a vision to provide high-quality plastic piping solutions.',
-  },
-  {
-    year: '2005',
-    title: 'ISO 9001 Certification + Expansion',
-    description: 'Expanded manufacturing capacity and achieved ISO 9001 certification for quality management systems.',
-  },
-  {
-    year: '2010',
-    title: 'PPR/HDPE Launch',
-    description: 'Introduced PPR and HDPE pipe systems, expanding our product portfolio to serve diverse industries.',
-  },
-  {
-    year: '2015',
-    title: 'GCC Export Networks',
-    description: 'Established distribution networks across GCC countries and expanded into Middle East markets.',
-  },
-  {
-    year: '2020',
-    title: 'Extrusion Tech Upgrade',
-    description: 'Invested in state-of-the-art European extrusion technology and automated quality control systems.',
-  },
-  {
-    year: '2025',
-    title: '5,000+ Variants, 30+ Years Excellence',
-    description: 'Celebrating over 30 years of excellence with 5,000+ product variants and expanded facilities.',
-  },
-];
-
-const certifications = [
-  { title: 'ISO 9001:2015', organization: 'Quality Management', iconName: 'certified' as const },
-  { title: 'ISO 14001:2015', organization: 'Environmental', iconName: 'eco' as const },
-  { title: 'GSO Certified', organization: 'Gulf Standards', iconName: 'award' as const },
-  { title: 'SASO Approved', organization: 'Saudi Standards', iconName: 'document' as const },
-  { title: 'QCC Certified', organization: 'Qatar Civil Defense', iconName: 'shield' as const },
-  { title: 'UAE Civil Defense Approved', organization: '', iconName: 'shield' as const },
-  { title: 'Kitemark', organization: 'BSI Standards', iconName: 'check' as const },
-  { title: 'NSF Certified', organization: 'Public Health', iconName: 'water' as const },
-];
-
-const stats = [
-  { value: '30+', label: 'Years Since 1995', iconName: 'calendar' as const },
-  { value: 'State-of-the-Art', label: 'Sharjah Facilities', iconName: 'factory' as const },
-  { value: '5,000+', label: 'Product Variants (UPVC/PPR/HDPE)', iconName: 'package' as const },
-  { value: 'GCC + Sub-continent', label: 'Exports', iconName: 'globe' as const },
-  { value: '10,000+', label: 'Trusted Customers', iconName: 'users' as const },
-];
-
 export default function AboutPage() {
   const t = useT();
+
+  // Timeline items with translations
+  const timelineItems = [
+    {
+      year: '1995',
+      title: t('about_extended.timeline_1995_title'),
+      description: t('about_extended.timeline_1995_desc'),
+    },
+    {
+      year: '2005',
+      title: t('about_extended.timeline_2005_title'),
+      description: t('about_extended.timeline_2005_desc'),
+    },
+    {
+      year: '2010',
+      title: t('about_extended.timeline_2010_title'),
+      description: t('about_extended.timeline_2010_desc'),
+    },
+    {
+      year: '2015',
+      title: t('about_extended.timeline_2015_title'),
+      description: t('about_extended.timeline_2015_desc'),
+    },
+    {
+      year: '2020',
+      title: t('about_extended.timeline_2020_title'),
+      description: t('about_extended.timeline_2020_desc'),
+    },
+    {
+      year: '2025',
+      title: t('about_extended.timeline_2025_title'),
+      description: t('about_extended.timeline_2025_desc'),
+    },
+  ];
+
+  // Certifications with translations (keeping certification codes in English)
+  const certifications = [
+    { title: t('about_extended.cert_iso9001'), organization: t('about_extended.cert_iso9001_org'), iconName: 'certified' as const },
+    { title: t('about_extended.cert_iso14001'), organization: t('about_extended.cert_iso14001_org'), iconName: 'eco' as const },
+    { title: t('about_extended.cert_gso'), organization: t('about_extended.cert_gso_org'), iconName: 'award' as const },
+    { title: t('about_extended.cert_saso'), organization: t('about_extended.cert_saso_org'), iconName: 'document' as const },
+    { title: t('about_extended.cert_qcc'), organization: t('about_extended.cert_qcc_org'), iconName: 'shield' as const },
+    { title: t('about_extended.cert_uae_civil'), organization: '', iconName: 'shield' as const },
+    { title: t('about_extended.cert_kitemark'), organization: t('about_extended.cert_kitemark_org'), iconName: 'check' as const },
+    { title: t('about_extended.cert_nsf'), organization: t('about_extended.cert_nsf_org'), iconName: 'water' as const },
+  ];
+
+  // Stats with translations
+  const stats = [
+    { value: t('about_extended.stat_years_value'), label: t('about_extended.stat_years_label'), iconName: 'calendar' as const },
+    { value: t('about_extended.stat_facilities_value'), label: t('about_extended.stat_facilities_label'), iconName: 'factory' as const },
+    { value: t('about_extended.stat_products_value'), label: t('about_extended.stat_products_label'), iconName: 'package' as const },
+    { value: t('about_extended.stat_exports_value'), label: t('about_extended.stat_exports_label'), iconName: 'globe' as const },
+    { value: t('about_extended.stat_customers_value'), label: t('about_extended.stat_customers_label'), iconName: 'users' as const },
+  ];
+
+  // Manufacturing features with translations
+  const manufacturingFeatures = [
+    {
+      title: t('about_extended.mfg_extrusion_title'),
+      description: t('about_extended.mfg_extrusion_desc'),
+      iconName: 'cog' as const,
+    },
+    {
+      title: t('about_extended.mfg_lab_title'),
+      description: t('about_extended.mfg_lab_desc'),
+      iconName: 'microscope' as const,
+    },
+    {
+      title: t('about_extended.mfg_auto_title'),
+      description: t('about_extended.mfg_auto_desc'),
+      iconName: 'automation' as const,
+    },
+  ];
 
   return (
     <>
@@ -146,23 +166,7 @@ export default function AboutPage() {
             </div>
           </AnimateOnScroll>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Advanced Extrusion Lines',
-                description: 'High-speed extrusion machines from leading European manufacturers for precise pipe production.',
-                iconName: 'cog' as const,
-              },
-              {
-                title: 'Quality Testing Lab',
-                description: 'In-house testing laboratory for comprehensive quality assurance and compliance verification.',
-                iconName: 'microscope' as const,
-              },
-              {
-                title: 'Automated Systems',
-                description: 'Computer-controlled production processes for consistent quality and minimal waste.',
-                iconName: 'automation' as const,
-              },
-            ].map((item, index) => (
+            {manufacturingFeatures.map((item, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 80}>
                 <div className="text-center p-8 bg-gray-50 rounded-2xl card-hover hover:shadow-lg transition-all duration-200">
                   <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">

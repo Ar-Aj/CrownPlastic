@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useT } from '@/i18n';
 
 interface ContactFormProps {
   onSubmit?: (data: FormData) => void;
@@ -15,6 +16,7 @@ interface FormData {
 }
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
+  const t = useT();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -61,7 +63,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Full Name *
+            {t('contact_form.label_name')} {t('contact_form.required')}
           </label>
           <input
             type="text"
@@ -71,12 +73,12 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-            placeholder="Your full name"
+            placeholder={t('contact_form.placeholder_name')}
           />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Email Address *
+            {t('contact_form.label_email')} {t('contact_form.required')}
           </label>
           <input
             type="email"
@@ -86,7 +88,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-            placeholder="your@email.com"
+            placeholder={t('contact_form.placeholder_email')}
           />
         </div>
       </div>
@@ -94,7 +96,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-            Phone Number *
+            {t('contact_form.label_phone')} {t('contact_form.required')}
           </label>
           <input
             type="tel"
@@ -104,12 +106,12 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-            placeholder="+971 XX XXX XXXX"
+            placeholder={t('contact_form.placeholder_phone')}
           />
         </div>
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-            Company Name
+            {t('contact_form.label_company')}
           </label>
           <input
             type="text"
@@ -118,14 +120,14 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             value={formData.company}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-            placeholder="Your company (optional)"
+            placeholder={t('contact_form.placeholder_company')}
           />
         </div>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Message *
+          {t('contact_form.label_message')} {t('contact_form.required')}
         </label>
         <textarea
           id="message"
@@ -135,19 +137,19 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           required
           rows={5}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
-          placeholder="How can we help you?"
+          placeholder={t('contact_form.placeholder_message')}
         />
       </div>
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-50 text-green-700 rounded-lg">
-          Thank you for your message! We will get back to you soon.
+          {t('contact_form.success_message')}
         </div>
       )}
 
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-50 text-red-700 rounded-lg">
-          Something went wrong. Please try again or contact us directly.
+          {t('contact_form.error_message')}
         </div>
       )}
 
@@ -162,11 +164,11 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
             </svg>
-            Sending...
+            {t('contact_form.btn_sending')}
           </>
         ) : (
           <>
-            Send Message
+            {t('contact_form.btn_send')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

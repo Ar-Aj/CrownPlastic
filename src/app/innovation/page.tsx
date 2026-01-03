@@ -43,9 +43,7 @@ export default function InnovationPage() {
                   {t('innovation.core_text')}
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  From 100% virgin material formulations to precision jointing systems, every innovation is 
-                  tested to BS EN, DIN, ISO, and ASTM standards—ensuring 50+ year service life under extreme 
-                  Gulf temperatures. Explore our <a href="/products" className="text-primary hover:underline font-medium">full product range</a> or learn <a href="/sustainability" className="text-primary hover:underline font-medium">how we design for sustainability</a>.
+                  {t('innovation_extended.intro_text')} Explore our <a href="/products" className="text-primary hover:underline font-medium">{t('innovation_extended.explore_products')}</a> or learn <a href="/sustainability" className="text-primary hover:underline font-medium">{t('innovation_extended.sustainability_link')}</a>.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -80,23 +78,23 @@ export default function InnovationPage() {
             {[
               { 
                 iconName: 'flask' as IconName, 
-                title: 'Material & Design Innovation', 
-                desc: '100% virgin uPVC, PPR, HDPE engineered to BS EN 1452, DIN 8061/62, ISO 4427, ASTM D2241. Optimized wall thickness, SDR, and PN classes for 50+ year durability and full recyclability.' 
+                title: t('innovation_extended.area_material_title'), 
+                desc: t('innovation_extended.area_material_desc') 
               },
               { 
                 iconName: 'cog' as IconName, 
-                title: 'European Manufacturing Technology', 
-                desc: 'Battenfeld extrusion lines with computer-controlled processes, online dimensional checks, zero-discharge production, and in-house lab verification. Energy-efficient ISO 50001 compliant operations.' 
+                title: t('innovation_extended.area_manufacturing_title'), 
+                desc: t('innovation_extended.area_manufacturing_desc') 
               },
               { 
                 iconName: 'cable' as IconName, 
-                title: 'Jointing & System Innovation', 
-                desc: 'Leak-proof systems: solvent cemented (BS 4346, ASTM D2466/D2467), ring-seal drainage (BS EN 1329/1401), fusion welded HDPE (ISO 4427, DIN 8074). Engineered pipes + fittings + accessories.' 
+                title: t('innovation_extended.area_jointing_title'), 
+                desc: t('innovation_extended.area_jointing_desc') 
               },
               { 
                 iconName: 'gauge' as IconName, 
-                title: 'Gulf Climate Testing & QAQC', 
-                desc: 'In-house testing: impact, tensile, Vicat, hydrostatic, chemical resistance per ISO/BS/DIN. UV, high temp (50°C+), pressure, long-term creep validation. Third-party approvals for Presidential Court projects.' 
+                title: t('innovation_extended.area_testing_title'), 
+                desc: t('innovation_extended.area_testing_desc') 
               },
             ].map((item, i) => (
               <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>
@@ -128,33 +126,33 @@ export default function InnovationPage() {
             {[
               {
                 iconName: 'water' as IconName,
-                title: 'High-Pressure UPVC Systems',
-                desc: 'Pressure pipes up to 400 mm diameter, PN 6-16 bar, SDR 13.6-41 for municipal water distribution networks. ISO 4422, BS EN 1452, DIN 8061/62 compliant.'
+                title: t('innovation_extended.prod_upvc_title'),
+                desc: t('innovation_extended.prod_upvc_desc')
               },
               {
                 iconName: 'heat' as IconName,
-                title: 'PPR Hot Water Systems',
-                desc: 'PN 20 (SDR 6) and PN 16 (SDR 7.4) systems for high-rise hot/cold water. DIN 8077/78 certified, 95°C continuous operation, 50+ year service life.'
+                title: t('innovation_extended.prod_ppr_title'),
+                desc: t('innovation_extended.prod_ppr_desc')
               },
               {
                 iconName: 'waves' as IconName,
-                title: 'HDPE PE100 Irrigation',
-                desc: 'PE100, PE80, PE63 pipelines for water distribution and drip irrigation. ISO 4427, DIN 8074 standards. Long coil lengths reduce joints and installation time.'
+                title: t('innovation_extended.prod_hdpe_title'),
+                desc: t('innovation_extended.prod_hdpe_desc')
               },
               {
                 iconName: 'cable' as IconName,
-                title: 'Telecom Duct Systems',
-                desc: 'Etisalat & DU approved duct pipes with special D54/D56/D57 series. NEMA TC-2, BS 3505/3506, DIN 8062 compliant. Fabricated accessories for smooth cable installation.'
+                title: t('innovation_extended.prod_telecom_title'),
+                desc: t('innovation_extended.prod_telecom_desc')
               },
               {
                 iconName: 'building' as IconName,
-                title: 'Drainage & Soil Systems',
-                desc: 'Above/underground drainage pipes per BS EN 1329/1401, BS 4660. Ring-seal joints, non-standard sizes, complete fittings range for building and infrastructure projects.'
+                title: t('innovation_extended.prod_drainage_title'),
+                desc: t('innovation_extended.prod_drainage_desc')
               },
               {
                 iconName: 'electric' as IconName,
-                title: 'Electrical Conduit Solutions',
-                desc: 'Heavy (1250N), Medium (750N), Light (320N) duty conduits. Schedule 40/80 systems. BS EN 50086, IEC 61386 compliant for electrical and cable protection.'
+                title: t('innovation_extended.prod_conduit_title'),
+                desc: t('innovation_extended.prod_conduit_desc')
               },
             ].map((item, i) => (
               <AnimateOnScroll key={i} animation="fade-up" delay={i * 80}>
@@ -189,10 +187,10 @@ export default function InnovationPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                'Hydrostatic Pressure',
-                'Impact & Tensile',
-                'Vicat Softening',
-                'UV & Thermal Cycling',
+                t('innovation_extended.lab_test_hydrostatic'),
+                t('innovation_extended.lab_test_impact'),
+                t('innovation_extended.lab_test_vicat'),
+                t('innovation_extended.lab_test_uv'),
               ].map((item, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <p className="font-medium">{item}</p>

@@ -30,11 +30,11 @@ export default function ProductsPage() {
       {/* Stats Strip */}
       <StatsStrip
         stats={[
-          { value: '5,000+', label: 'Product Variants', iconName: 'package' },
-          { value: 'UPVC PPRC HDPE', label: 'Pipes', iconName: 'water' },
-          { value: 'GCC Standards', label: 'Compliant', iconName: 'certified' },
+          { value: '5,000+', label: t('products_extended.stat_variants'), iconName: 'package' },
+          { value: 'UPVC PPRC HDPE', label: t('products_extended.stat_pipes'), iconName: 'water' },
+          { value: 'GCC Standards', label: t('products_extended.stat_compliant'), iconName: 'certified' },
           { value: 'DIN 8061/62', label: 'BS EN 1452', iconName: 'document' },
-          { value: '20mm - 400mm', label: 'Diameters', iconName: 'gauge' },
+          { value: '20mm - 400mm', label: t('products_extended.stat_diameters'), iconName: 'gauge' },
         ]}
         variant="primary"
       />
