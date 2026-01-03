@@ -1,54 +1,23 @@
-import { Metadata } from 'next';
+'use client';
+
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import { PageHeader, CardGrid, AnimateOnScroll, PdfViewer } from '@/components/common';
-import { productCategories, getCategoryBySlug } from '@/config/products';
+import { getCategoryBySlug } from '@/config/products';
 import { getDocsByCategory } from '@/config/docs';
 import Icon from '@/components/ui/Icon';
-
-const baseUrl = 'https://crownplasticuae.com';
+import { useLanguage } from '@/context/LanguageContext';
+import { useT } from '@/i18n';
 
 interface CategoryPageProps {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }
 
-export async function generateStaticParams() {
-  return productCategories.map((cat) => ({
-    category: cat.slug,
-  }));
-}
-
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const { category } = await params;
-  const cat = getCategoryBySlug(category);
-  if (!cat) return { title: 'Category Not Found' };
-  
-  return {
-    title: `${cat.name} Dubai UAE | Crown Plastic Pipes`,
-    description: `${cat.shortDescription} ISO 9001:2015 certified. Leading manufacturer serving Dubai, Sharjah, UAE & GCC since 1995.`,
-    keywords: [
-      cat.name.toLowerCase(),
-      `${cat.name.toLowerCase()} Dubai`,
-      `${cat.name.toLowerCase()} UAE`,
-      'Crown Plastic Pipes',
-      'ISO certified pipes',
-    ],
-    alternates: {
-      canonical: `/products/${category}`,
-    },
-    openGraph: {
-      title: `${cat.name} | Crown Plastic Pipes UAE`,
-      description: cat.shortDescription,
-      url: `${baseUrl}/products/${category}`,
-      images: cat.image ? [cat.image] : ['/images/og-products.jpg'],
-    },
-  };
-}
-
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category } = await params;
+export default function CategoryPage({ params }: CategoryPageProps) {
+  const { category } = params;
+  const { language } = useLanguage();
+  const t = useT();
   const cat = getCategoryBySlug(category);
   
   if (!cat) {
@@ -56,8 +25,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   const productCards = cat.subProducts.map((product) => ({
-    title: product.name,
-    description: product.shortDescription,
+    title: language === 'ar' ? (product.nameAr || product.name) : product.name,
+    description: language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription,
     href: `/products/${cat.slug}/${product.slug}`,
     tags: product.standards,
   }));
@@ -65,45 +34,17 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // Get technical documents for this category
   const categoryDocuments = getDocsByCategory(cat.slug);
 
-  // BreadcrumbList JSON-LD
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: baseUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Products",
-        item: `${baseUrl}/products`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: cat.name,
-        item: `${baseUrl}/products/${cat.slug}`,
-      },
-    ],
-  };
+  const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
+  const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
 
   return (
     <>
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
       <PageHeader
-        title={cat.name}
-        subtitle={cat.shortDescription}
+        title={catName}
+        subtitle={catDesc}
         breadcrumbs={[
-          { label: 'Products', href: '/products' },
-          { label: cat.name },
+          { label: t('common.breadcrumb_products'), href: '/products' },
+          { label: catName },
         ]}
       />
 
@@ -113,7 +54,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
             <Image
               src={cat.image}
-              alt={`${cat.name} - Crown Plastic Pipes product range`}
+              alt={`${catName} - Crown Plastic Pipes product range`}
               width={1400}
               height={700}
               sizes="100vw"
@@ -131,10 +72,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   <span className="text-5xl md:text-6xl">{cat.icon}</span>
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                      {cat.name}
+                      {catName}
                     </h2>
                     <p className="text-white/80 max-w-xl hidden md:block">
-                      {cat.shortDescription}
+                      {catDesc}
                     </p>
                   </div>
                 </div>
@@ -149,10 +90,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Products in {cat.name}
+                {t('products_extended.products_in_category')} {catName}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our complete range of products in this category.
+                {t('products_extended.explore_range')}
               </p>
             </div>
           </AnimateOnScroll>
@@ -167,10 +108,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Technical Documents
+                  {t('products_extended.tech_documents')}
                 </h2>
                 <p className="text-gray-600">
-                  View detailed specifications, standards, and installation guides
+                  {t('products_extended.tech_documents_desc')}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -199,8 +140,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon name="certified" size={28} className="text-primary" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Quality Certified</h3>
-                <p className="text-sm text-gray-600">All products meet international standards</p>
+                <h3 className="font-bold text-gray-900 mb-2">{t('products_extended.quality_certified')}</h3>
+                <p className="text-sm text-gray-600">{t('products_extended.quality_certified_desc')}</p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={100}>
@@ -208,8 +149,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon name="building" size={28} className="text-primary" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Built to Last</h3>
-                <p className="text-sm text-gray-600">50+ years of service life</p>
+                <h3 className="font-bold text-gray-900 mb-2">{t('products_extended.built_to_last')}</h3>
+                <p className="text-sm text-gray-600">{t('products_extended.built_to_last_desc')}</p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={200}>
@@ -217,8 +158,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon name="truck" size={28} className="text-primary" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Fast Delivery</h3>
-                <p className="text-sm text-gray-600">Nationwide delivery available</p>
+                <h3 className="font-bold text-gray-900 mb-2">{t('products_extended.fast_delivery')}</h3>
+                <p className="text-sm text-gray-600">{t('products_extended.fast_delivery_desc')}</p>
               </div>
             </AnimateOnScroll>
           </div>
@@ -228,13 +169,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       {/* CTA */}
       <section className="py-12 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-4">Need Technical Assistance?</h2>
-          <p className="text-white/90 mb-6">Our team is ready to help with product selection and specifications.</p>
+          <h2 className="text-2xl font-bold mb-4">{t('products_extended.need_assistance')}</h2>
+          <p className="text-white/90 mb-6">{t('products_extended.assistance_desc')}</p>
           <Link
             href="/contact-us"
             className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Contact Us
+            {t('common.contact_us')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

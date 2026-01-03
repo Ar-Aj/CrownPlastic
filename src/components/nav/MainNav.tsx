@@ -13,11 +13,11 @@ interface MainNavProps {
 
 // Map nav labels to translation paths (for main nav items)
 const navLabelToPath: Record<string, TranslationPath> = {
+  'Home': 'nav.home',
   'About': 'nav.about',
   'Products': 'nav.products',
   'Sustainability': 'nav.sustainability',
   'Innovation': 'nav.innovation',
-  'Investor Relations': 'nav.investor_relations',
   'News & Media': 'nav.news_media',
   'Resources': 'nav.resources',
   'Contact': 'nav.contact',
@@ -25,7 +25,7 @@ const navLabelToPath: Record<string, TranslationPath> = {
 
 export default function MainNav({ items }: MainNavProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const { isRTL } = useLanguage();
+  const { isRTL, language } = useLanguage();
   const t = useT();
 
   // Translate a label if it has a mapping, otherwise return as-is
@@ -69,20 +69,24 @@ export default function MainNav({ items }: MainNavProps) {
             <div className={`absolute top-full mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 ${
               isRTL ? 'right-0' : 'left-0'
             }`}>
-              {item.children.map((child) => (
-                <Link
-                  key={child.href}
-                  href={child.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors"
-                >
-                  <span className="font-medium">{child.label}</span>
-                  {child.description && (
-                    <span className="block text-xs text-gray-500 mt-0.5">
-                      {child.description}
-                    </span>
-                  )}
-                </Link>
-              ))}
+              {item.children.map((child) => {
+                const childLabel = language === 'ar' ? (child.labelAr || child.label) : child.label;
+                const childDesc = language === 'ar' ? (child.descriptionAr || child.description) : child.description;
+                return (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors"
+                  >
+                    <span className="font-medium">{childLabel}</span>
+                    {childDesc && (
+                      <span className="block text-xs text-gray-500 mt-0.5">
+                        {childDesc}
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>

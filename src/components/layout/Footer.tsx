@@ -5,10 +5,12 @@ import Image from 'next/image';
 import { brand } from '@/config/brand';
 import { footerColumns } from '@/config/routes';
 import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useT();
+  const { language } = useLanguage();
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -58,23 +60,29 @@ export default function Footer() {
           </div>
 
           {/* Footer columns */}
-          {footerColumns.map((column) => (
-            <div key={column.title}>
-              <h4 className="font-semibold text-white mb-4">{column.title}</h4>
-              <ul className="space-y-2">
-                {column.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 hover:text-primary transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {footerColumns.map((column) => {
+            const colTitle = language === 'ar' ? (column.titleAr || column.title) : column.title;
+            return (
+              <div key={column.title}>
+                <h4 className="font-semibold text-white mb-4">{colTitle}</h4>
+                <ul className="space-y-2">
+                  {column.links.map((link) => {
+                    const linkLabel = language === 'ar' ? (link.labelAr || link.label) : link.label;
+                    return (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-400 hover:text-primary transition-colors text-sm"
+                        >
+                          {linkLabel}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         {/* Social links */}

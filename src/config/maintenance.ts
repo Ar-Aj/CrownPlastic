@@ -21,7 +21,6 @@ export const COMING_SOON_MODE = false;
 // Route slugs that should show "Coming Soon" when mode is enabled
 export const COMING_SOON_SLUGS = [
   'innovation',
-  'investor-relations', 
   'news-media',
   'resources',
   'contact-us',

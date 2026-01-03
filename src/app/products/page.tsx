@@ -6,17 +6,19 @@ import { productCategories } from '@/config/products';
 import { topLevelDocs } from '@/config/docs';
 import Icon, { IconName } from '@/components/ui/Icon';
 import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function ProductsPage() {
   const t = useT();
+  const { language } = useLanguage();
 
   const productCards = productCategories.map((cat) => ({
-    title: cat.name,
-    description: cat.shortDescription,
+    title: language === 'ar' ? (cat.nameAr || cat.name) : cat.name,
+    description: language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription,
     href: `/products/${cat.slug}`,
     icon: cat.icon,
     image: cat.image,
-    alt: `${cat.name} product shot`,
+    alt: `${language === 'ar' ? (cat.nameAr || cat.name) : cat.name} product shot`,
   }));
 
   return (

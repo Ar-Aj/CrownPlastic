@@ -105,7 +105,7 @@ export default function AboutPage() {
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="relative">
                 <Image
-                  src="/images/about/factory-hero.jpg"
+                  src="/images/about/factory-hero.jpeg"
                   alt="Crown Plastic Pipes factory extrusion lines in UAE"
                   width={1200}
                   height={800}

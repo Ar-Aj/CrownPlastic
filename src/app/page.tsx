@@ -6,18 +6,20 @@ import { HeroSection, CardGrid, StatsStrip, AnimateOnScroll } from '@/components
 import Icon from '@/components/ui/Icon';
 import { productCategories } from '@/config/products';
 import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function HomePage() {
   const t = useT();
+  const { language } = useLanguage();
 
-  // Transform product categories for CardGrid
+  // Transform product categories for CardGrid with bilingual support
   const productCards = productCategories.map((cat) => ({
-    title: cat.name,
-    description: cat.shortDescription,
+    title: language === 'ar' ? (cat.nameAr || cat.name) : cat.name,
+    description: language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription,
     href: `/products/${cat.slug}`,
     icon: cat.icon,
     image: cat.image,
-    alt: `${cat.name} product shot`,
+    alt: `${language === 'ar' ? (cat.nameAr || cat.name) : cat.name} product shot`,
   }));
 
   const stats = [
@@ -91,7 +93,7 @@ export default function HomePage() {
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="relative">
                 <Image
-                  src="/images/about/factory-hero.jpg"
+                  src="/images/about/factory-hero.jpeg"
                   alt="Crown Plastic Pipes factory extrusion lines in UAE"
                   width={1200}
                   height={800}

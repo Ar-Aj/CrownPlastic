@@ -11,7 +11,6 @@ export const en = {
     about: 'About Us',
     sustainability: 'Sustainability',
     innovation: 'Innovation',
-    investor_relations: 'Investor Relations',
     news_media: 'News & Media',
     resources: 'Resources',
     contact: 'Contact',
@@ -367,6 +366,7 @@ export const en = {
     contact_for_specs: 'Contact for specifications',
     other_products_in: 'Other Products in',
     view_details: 'View Details',
+    learn_more: 'Learn More',
     tech_docs_for: 'View detailed specifications, standards, and installation guides for',
   },
 

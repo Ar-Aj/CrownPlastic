@@ -19,11 +19,11 @@ interface MobileNavProps {
 
 // Map nav labels to translation paths (for main nav items)
 const navLabelToPath: Record<string, TranslationPath> = {
+  'Home': 'nav.home',
   'About': 'nav.about',
   'Products': 'nav.products',
   'Sustainability': 'nav.sustainability',
   'Innovation': 'nav.innovation',
-  'Investor Relations': 'nav.investor_relations',
   'News & Media': 'nav.news_media',
   'Resources': 'nav.resources',
   'Contact': 'nav.contact',
@@ -33,7 +33,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
-  const { isRTL } = useLanguage();
+  const { isRTL, language } = useLanguage();
   const t = useT();
 
   // Translate a label if it has a mapping, otherwise return as-is
@@ -105,7 +105,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
           <button
             onClick={onClose}
             className="p-2 text-gray-600 hover:text-primary transition-colors"
-            aria-label="Close menu"
+            aria-label={t('nav.close_menu')}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -144,16 +144,19 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                       >
                         {t('nav.view_all')} {translateLabel(item.label)}
                       </Link>
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={onClose}
-                          className="block py-2 text-sm text-gray-600 hover:text-primary transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.children.map((child) => {
+                        const childLabel = language === 'ar' ? (child.labelAr || child.label) : child.label;
+                        return (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={onClose}
+                            className="block py-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                          >
+                            {childLabel}
+                          </Link>
+                        );
+                      })}
                     </div>
                   )}
                 </>

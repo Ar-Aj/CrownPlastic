@@ -19,6 +19,11 @@ export interface FooterColumn {
 // Main navigation items
 export const mainNavItems: NavItem[] = [
   {
+    label: 'Home',
+    labelAr: 'الرئيسية',
+    href: '/',
+  },
+  {
     label: 'About',
     labelAr: 'من نحن',
     href: '/about-us',
@@ -52,11 +57,6 @@ export const mainNavItems: NavItem[] = [
     label: 'Innovation',
     labelAr: 'الابتكار',
     href: '/innovation',
-  },
-  {
-    label: 'Investor Relations',
-    labelAr: 'علاقات المستثمرين',
-    href: '/investor-relations',
   },
   {
     label: 'News & Media',
@@ -103,7 +103,6 @@ export const footerColumns: FooterColumn[] = [
     title: 'Corporate',
     titleAr: 'الشركة',
     links: [
-      { label: 'Investor Relations', labelAr: 'علاقات المستثمرين', href: '/investor-relations' },
       { label: 'News & Media', labelAr: 'الأخبار والإعلام', href: '/news-media' },
       { label: 'Resources', labelAr: 'الموارد', href: '/resources' },
       { label: 'Careers', labelAr: 'الوظائف', href: '/contact-us#careers' },
@@ -126,7 +125,6 @@ export const allRoutes = [
   { path: '/about-us', label: 'About Us', description: 'Learn about Crown Plastic Pipes' },
   { path: '/sustainability', label: 'Sustainability', description: 'Our commitment to sustainable practices' },
   { path: '/innovation', label: 'Innovation', description: 'Innovation and R&D at Crown' },
-  { path: '/investor-relations', label: 'Investor Relations', description: 'Financial information and reports' },
   { path: '/news-media', label: 'News & Media', description: 'Latest news, press releases, and media' },
   { path: '/resources', label: 'Resources', description: 'Catalogues, technical documents, and guides' },
   { path: '/contact-us', label: 'Contact Us', description: 'Get in touch with Crown Plastic Pipes' },

@@ -51,7 +51,7 @@ export default function InnovationPage() {
               <div className="relative">
                 <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/innovation/lab-hero.jpg"
+                    src="/images/innovation/lab-hero.jpeg"
                     alt="Crown Plastic Pipes R&D laboratory and testing facility in UAE"
                     width={800}
                     height={800}

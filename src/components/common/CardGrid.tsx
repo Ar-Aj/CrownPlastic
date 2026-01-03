@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useAnimateOnScroll } from './AnimateOnScroll';
 import Icon, { IconName } from '../ui/Icon';
+import { useT } from '@/i18n';
 
 // Map old emoji to icon names
 const emojiToIconMap: Record<string, IconName> = {
@@ -36,6 +37,7 @@ interface CardGridProps {
 
 export default function CardGrid({ items, columns = 3 }: CardGridProps) {
   const { ref, isVisible, prefersReducedMotion } = useAnimateOnScroll({ threshold: 0.05 });
+  const t = useT();
   
   const gridCols = {
     2: 'md:grid-cols-2',
@@ -119,7 +121,7 @@ export default function CardGrid({ items, columns = 3 }: CardGridProps) {
                 </div>
               )}
               <div className="mt-4 flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
-                Learn More
+                {t('products_extended.learn_more')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

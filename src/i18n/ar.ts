@@ -11,7 +11,6 @@ export const ar = {
     about: 'من نحن',
     sustainability: 'الاستدامة',
     innovation: 'الابتكار',
-    investor_relations: 'علاقات المستثمرين',
     news_media: 'الأخبار والإعلام',
     resources: 'الموارد',
     contact: 'اتصل بنا',
@@ -367,6 +366,7 @@ export const ar = {
     contact_for_specs: 'تواصل للمواصفات',
     other_products_in: 'منتجات أخرى في',
     view_details: 'عرض التفاصيل',
+    learn_more: 'اعرف أكثر',
     tech_docs_for: 'عرض المواصفات التفصيلية والمعايير وأدلة التركيب لـ',
   },
 
