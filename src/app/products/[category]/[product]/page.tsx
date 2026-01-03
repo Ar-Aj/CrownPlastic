@@ -32,6 +32,9 @@ export default function ProductPage({ params }: ProductPageProps) {
   const prodDesc = language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription;
   const prodFeatures = language === 'ar' ? (product.featuresAr || product.features || []) : (product.features || []);
 
+  // Image fallback logic: product.image → category_data.image → null (show icon)
+  const productImage = product.image || category_data.image;
+
   return (
     <>
       <PageHeader
@@ -50,9 +53,9 @@ export default function ProductPage({ params }: ProductPageProps) {
             {/* Product Image */}
             <div>
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100">
-                {category_data.image ? (
+                {productImage ? (
                   <Image
-                    src={category_data.image}
+                    src={productImage}
                     alt={`${prodName} - ${catName} from Crown Plastic Pipes`}
                     width={800}
                     height={800}

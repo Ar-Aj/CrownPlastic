@@ -10,6 +10,7 @@ export interface SubProduct {
   shortDescriptionAr?: string;
   features?: string[];
   featuresAr?: string[];
+  image?: string;  // Sub-product specific image, falls back to category image
 }
 
 export interface ProductCategory {
@@ -42,6 +43,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'سلسلة متري PN6-16 | ISO 4422 حل محله BS EN 1452 | أنظمة إمداد المياه الصالحة للشرب.',
         features: ['Lead-free', 'Corrosion resistant', 'Long service life', 'Easy installation'],
         featuresAr: ['خالي من الرصاص', 'مقاوم للتآكل', 'عمر خدمة طويل', 'تركيب سهل'],
+        image: '/images/products/upvc-pressure-pipes-metric.jpg',  // Fallback to category image until generated
       },
       {
         slug: 'pipes-inch',
@@ -52,6 +54,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'سلسلة إنش BS 3505/3506 | Schedule 40 | شبكات توزيع المياه.',
         features: ['High pressure rating', 'UV stabilized', 'Leak-proof joints'],
         featuresAr: ['تصنيف ضغط عالي', 'مستقر ضد الأشعة فوق البنفسجية', 'وصلات مانعة للتسرب'],
+        image: '/images/products/upvc-pressure-pipes-inch.jpg',  // Fallback to category image until generated
       },
       {
         slug: 'fittings',
@@ -62,6 +65,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'DIN 8063 | BS EN 1452 PN15 | ASTM D2466 SCH40 | أكواع، تيهات، وصلات، محولات.',
         features: ['Precision molded', 'Perfect fit', 'High pressure tolerance'],
         featuresAr: ['قولبة دقيقة', 'تركيب مثالي', 'تحمل ضغط عالي'],
+        image: '/images/products/upvc-pressure-fittings.jpg',  // Fallback to category image until generated
       },
     ],
   },
