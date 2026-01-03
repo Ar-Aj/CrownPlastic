@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Icon from '@/components/ui/Icon';
 
 interface PdfViewerProps {
@@ -92,19 +93,22 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
         </div>
       </button>
 
-      {/* Full-Screen Overlay - Always covers entire viewport and sits above all content */}
-      {isOpen && (
+      {/* Full-Screen Overlay - Rendered via Portal to document.body to escape all stacking contexts */}
+      {isOpen && typeof document !== 'undefined' && createPortal(
         <div
           className="fixed inset-0 z-[9999] flex flex-col bg-black/80"
           onClick={handleClose}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="pdf-viewer-title"
         >
           {/* Compact Header Bar */}
           <div
-            className="flex items-center justify-between px-4 py-2 bg-white flex-shrink-0"
+            className="flex items-center justify-between px-4 py-3 bg-white flex-shrink-0 shadow-sm"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex-1 min-w-0 pr-4">
-              <h3 className="text-sm sm:text-base font-semibold text-gray-900 line-clamp-1">
+              <h3 id="pdf-viewer-title" className="text-sm sm:text-base font-semibold text-gray-900 line-clamp-1">
                 {title}
               </h3>
               {description && (
@@ -113,18 +117,18 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
             </div>
             <button
               onClick={handleClose}
-              className="w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center flex-shrink-0 transition-colors"
-              aria-label="Close"
+              className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center flex-shrink-0 transition-colors"
+              aria-label="Close document viewer"
             >
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
-          {/* PDF Container - ONLY scrollable element, fills remaining screen */}
+          {/* PDF Container - fills remaining viewport, only scrollable element */}
           <div
-            className="flex-1 bg-gray-100 relative"
+            className="flex-1 bg-gray-100 relative min-h-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Loading Spinner */}
@@ -135,7 +139,7 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
               </div>
             )}
 
-            {/* PDF iframe - fills entire container */}
+            {/* PDF iframe - fills entire remaining space */}
             <iframe
               src={pdfUrl}
               className="w-full h-full border-0"
@@ -144,7 +148,8 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
               allow="fullscreen"
             />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
