@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { PageHeader, CardGrid, AnimateOnScroll } from '@/components/common';
+import { PageHeader, CardGrid, AnimateOnScroll, PdfViewer } from '@/components/common';
 import { productCategories, getCategoryBySlug } from '@/config/products';
+import { getDocsByCategory } from '@/config/docs';
 import Icon from '@/components/ui/Icon';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -60,6 +61,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     href: `/products/${cat.slug}/${product.slug}`,
     tags: product.standards,
   }));
+
+  // Get technical documents for this category
+  const categoryDocuments = getDocsByCategory(cat.slug);
 
   // BreadcrumbList JSON-LD
   const breadcrumbJsonLd = {
@@ -155,6 +159,36 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <CardGrid items={productCards} columns={3} />
         </div>
       </section>
+
+      {/* Technical Documents Section */}
+      {categoryDocuments.length > 0 && (
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4">
+            <AnimateOnScroll animation="fade-up">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Technical Documents
+                </h2>
+                <p className="text-gray-600">
+                  View detailed specifications, standards, and installation guides
+                </p>
+              </div>
+            </AnimateOnScroll>
+            
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+              {categoryDocuments.map((doc, index) => (
+                <AnimateOnScroll key={doc.src} animation="fade-up" delay={index * 80}>
+                  <PdfViewer
+                    src={doc.src}
+                    title={doc.title}
+                    description={doc.description}
+                  />
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features */}
       <section className="py-16 bg-gray-50">

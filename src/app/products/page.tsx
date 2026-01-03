@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { PageHeader, CardGrid, StatsStrip, AnimateOnScroll } from '@/components/common';
+import { PageHeader, CardGrid, StatsStrip, AnimateOnScroll, PdfViewer } from '@/components/common';
 import { productCategories } from '@/config/products';
+import { topLevelDocs } from '@/config/docs';
 import Icon, { IconName } from '@/components/ui/Icon';
 
 export const metadata: Metadata = {
@@ -100,6 +101,34 @@ export default function ProductsPage() {
                   <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
                   <p className="text-sm text-gray-600">{item.desc}</p>
                 </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Documentation Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Technical Documentation
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Browse our comprehensive technical catalogues and specifications by product category
+              </p>
+            </div>
+          </AnimateOnScroll>
+          
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {topLevelDocs.map((doc, index) => (
+              <AnimateOnScroll key={doc.src} animation="fade-up" delay={index * 80}>
+                <PdfViewer
+                  src={doc.src}
+                  title={doc.title}
+                  description={doc.description}
+                />
               </AnimateOnScroll>
             ))}
           </div>

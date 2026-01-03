@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { PageHeader } from '@/components/common';
+import { PageHeader, AnimateOnScroll, PdfViewer } from '@/components/common';
 import { productCategories, getCategoryBySlug, getSubProductBySlugs } from '@/config/products';
+import { getDocsByProduct } from '@/config/docs';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -74,6 +75,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const materialType = category_data.name.includes('UPVC') ? 'UPVC' : 
                        category_data.name.includes('PPR') ? 'PPR' : 
                        category_data.name.includes('HDPE') ? 'HDPE' : 'PVC';
+
+  // Get technical documents for this specific product
+  const productDocuments = getDocsByProduct(category, productSlug);
 
   // BreadcrumbList JSON-LD
   const breadcrumbJsonLd = {
@@ -302,6 +306,36 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Product Technical Documents Section */}
+      {productDocuments.length > 0 && (
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4">
+            <AnimateOnScroll animation="fade-up">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Technical Documents
+                </h2>
+                <p className="text-gray-600">
+                  View detailed specifications, standards, and installation guides for {product.name}
+                </p>
+              </div>
+            </AnimateOnScroll>
+            
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
+              {productDocuments.map((doc, index) => (
+                <AnimateOnScroll key={doc.src} animation="fade-up" delay={index * 80}>
+                  <PdfViewer
+                    src={doc.src}
+                    title={doc.title}
+                    description={doc.description}
+                  />
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related Products */}
       <section className="py-16 bg-white">
