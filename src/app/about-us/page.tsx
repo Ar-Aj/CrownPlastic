@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { PageHeader, Timeline, AwardsList, StatsStrip, AnimateOnScroll } from '@/components/common';
 import Icon from '@/components/ui/Icon';
 import { useT } from '@/i18n';
+import { AboutBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 
 export default function AboutPage() {
   const t = useT();
@@ -84,6 +85,9 @@ export default function AboutPage() {
 
   return (
     <>
+      {/* Breadcrumb Schema for About Us */}
+      <AboutBreadcrumb />
+      
       <PageHeader
         title={t('about.title')}
         subtitle={t('about.subtitle')}

@@ -7,6 +7,7 @@ import { topLevelDocs } from '@/config/docs';
 import Icon, { IconName } from '@/components/ui/Icon';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { ProductsBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 
 export default function ProductsPage() {
   const t = useT();
@@ -23,6 +24,9 @@ export default function ProductsPage() {
 
   return (
     <>
+      {/* Products Breadcrumb Schema */}
+      <ProductsBreadcrumb />
+      
       <PageHeader
         title={t('products.title')}
         subtitle={t('products.subtitle')}

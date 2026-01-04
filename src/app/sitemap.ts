@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { productCategories } from '@/config/products';
+import { serviceAreas } from '@/config/schemas';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://crownplasticuae.com';
@@ -87,5 +88,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  // Service area pages (LocalBusiness schema pages for AEO)
+  const serviceAreaPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
+    url: `${baseUrl}/${area.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75, // High priority for local SEO
+  }));
+
+  return [...staticPages, ...categoryPages, ...productPages, ...serviceAreaPages];
 }

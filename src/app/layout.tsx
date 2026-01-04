@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
 import { MainLayout } from "@/components/layout";
 import { brand } from "@/config/brand";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { OrganizationSchema } from "@/components/schemas";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -82,83 +82,8 @@ export const metadata: Metadata = {
   category: "Industrial Manufacturing",
 };
 
-// Organization JSON-LD structured data
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${baseUrl}/#organization`,
-  name: brand.name,
-  alternateName: brand.shortName,
-  url: baseUrl,
-  logo: {
-    "@type": "ImageObject",
-    url: `${baseUrl}/images/logo.png`,
-    width: 200,
-    height: 200,
-  },
-  image: `${baseUrl}/images/og-image.jpg`,
-  description: "Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical conduits, and irrigation since 1995.",
-  foundingDate: "1995",
-  foundingLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Sharjah",
-      addressRegion: "Sharjah",
-      addressCountry: "AE",
-    },
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Industrial Area No. 6",
-    addressLocality: "Sharjah",
-    addressRegion: "Sharjah",
-    postalCode: "63576",
-    addressCountry: "AE",
-  },
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: brand.contact.phone,
-      contactType: "sales",
-      areaServed: ["AE", "SA", "OM", "QA", "KW", "BH"],
-      availableLanguage: ["English", "Arabic"],
-    },
-    {
-      "@type": "ContactPoint",
-      telephone: brand.contact.phone,
-      contactType: "customer service",
-      areaServed: ["AE", "SA", "OM", "QA", "KW", "BH"],
-      availableLanguage: ["English", "Arabic"],
-    },
-  ],
-  sameAs: [
-    brand.social.linkedin,
-    brand.social.facebook,
-    brand.social.youtube,
-    brand.social.instagram,
-  ],
-  areaServed: [
-    { "@type": "Country", name: "United Arab Emirates" },
-    { "@type": "Country", name: "Saudi Arabia" },
-    { "@type": "Country", name: "Oman" },
-    { "@type": "Country", name: "Qatar" },
-    { "@type": "Country", name: "Kuwait" },
-    { "@type": "Country", name: "Bahrain" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Plastic Pipes & Fittings",
-    itemListElement: [
-      { "@type": "OfferCatalog", name: "UPVC Pressure Pipes & Fittings" },
-      { "@type": "OfferCatalog", name: "UPVC Drainage Pipes & Fittings" },
-      { "@type": "OfferCatalog", name: "PPR Pipes" },
-      { "@type": "OfferCatalog", name: "HDPE Pipe Systems" },
-      { "@type": "OfferCatalog", name: "PVC Conduit Pipes" },
-      { "@type": "OfferCatalog", name: "UPVC Duct Pipes" },
-    ],
-  },
-};
+// Organization JSON-LD is now handled by OrganizationSchema component
+// See src/components/schemas/OrganizationSchema.tsx for full implementation
 
 export default function RootLayout({
   children,
@@ -170,11 +95,8 @@ export default function RootLayout({
     // LanguageProvider will update these on client mount based on URL/localStorage.
     <html lang="en" dir="ltr" className={inter.variable}>
       <head>
-        <Script
-          id="organization-jsonld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
+        {/* Enhanced Organization Schema with certifications, ratings, and full company data */}
+        <OrganizationSchema />
       </head>
       <body className="font-sans antialiased">
         <Suspense fallback={null}>

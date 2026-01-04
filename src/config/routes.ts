@@ -117,6 +117,18 @@ export const footerColumns: FooterColumn[] = [
       { label: 'Sitemap', labelAr: 'خريطة الموقع', href: '/sitemap' },
     ],
   },
+  {
+    title: 'Service Areas',
+    titleAr: 'مناطق الخدمة',
+    links: [
+      { label: 'UPVC Pipes Dubai', labelAr: 'أنابيب UPVC دبي', href: '/upvc-pipes-dubai' },
+      { label: 'UPVC Pipes Abu Dhabi', labelAr: 'أنابيب UPVC أبوظبي', href: '/upvc-pipes-abu-dhabi' },
+      { label: 'UPVC Pipes Sharjah', labelAr: 'أنابيب UPVC الشارقة', href: '/upvc-pipes-sharjah' },
+      { label: 'UPVC Pipes Saudi Arabia', labelAr: 'أنابيب UPVC السعودية', href: '/upvc-pipes-saudi-arabia' },
+      { label: 'UPVC Pipes Kuwait', labelAr: 'أنابيب UPVC الكويت', href: '/upvc-pipes-kuwait' },
+      { label: 'UPVC Pipes Qatar', labelAr: 'أنابيب UPVC قطر', href: '/upvc-pipes-qatar' },
+    ],
+  },
 ];
 
 // All public routes for sitemap generation
@@ -162,4 +174,11 @@ export const allRoutes = [
   { path: '/products/polyethylene/hdpe-pe63-pe80-pe100', label: 'HDPE PE63/PE80/PE100', description: 'ISO 4427, DIN 8074 standards' },
   { path: '/products/polyethylene/lldpe-ldpe-drip', label: 'LLDPE/LDPE Drip Irrigation', description: 'Agriculture applications' },
   { path: '/products/polyethylene/water-distribution', label: 'Water Distribution', description: 'Municipal water systems' },
+  // Service Area Pages (LocalBusiness Schema)
+  { path: '/upvc-pipes-dubai', label: 'UPVC Pipes Dubai', description: 'UPVC pipe supplier in Dubai' },
+  { path: '/upvc-pipes-abu-dhabi', label: 'UPVC Pipes Abu Dhabi', description: 'UPVC pipe supplier in Abu Dhabi' },
+  { path: '/upvc-pipes-sharjah', label: 'UPVC Pipes Sharjah', description: 'UPVC pipe manufacturer in Sharjah' },
+  { path: '/upvc-pipes-saudi-arabia', label: 'UPVC Pipes Saudi Arabia', description: 'UPVC pipe exporter to Saudi Arabia' },
+  { path: '/upvc-pipes-kuwait', label: 'UPVC Pipes Kuwait', description: 'UPVC pipe supplier to Kuwait' },
+  { path: '/upvc-pipes-qatar', label: 'UPVC Pipes Qatar', description: 'UPVC pipe supplier to Qatar' },
 ];

@@ -8,6 +8,9 @@ import { getCategoryBySlug, getSubProductBySlugs } from '@/config/products';
 import { getDocsByProduct } from '@/config/docs';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
+import { ProductDetailBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
+import { ProductDetailSchema } from '@/components/schemas/ProductSchema';
+import { upvcPressurePipeSpecs, type ProductSpecification } from '@/config/schemas';
 
 interface ProductPageProps {
   params: { category: string; product: string };
@@ -35,8 +38,43 @@ export default function ProductPage({ params }: ProductPageProps) {
   // Image fallback logic: product.image → category_data.image → null (show icon)
   const productImage = product.image || category_data.image;
 
+  // Find matching product spec for schema (if available)
+  const productSpec: ProductSpecification | undefined = upvcPressurePipeSpecs.find(
+    (spec) => spec.sku.toLowerCase().includes(productSlug.replace(/-/g, ''))
+  ) || (category === 'upvc-pressure' ? {
+    sku: `UPVC-${productSlug.toUpperCase()}`,
+    name: prodName,
+    nameAr: product.nameAr || prodName,
+    diameter: '20mm - 400mm',
+    pressureRating: 'PN10, PN16',
+    material: 'Unplasticized Polyvinyl Chloride (UPVC)',
+    standards: product.standards,
+    temperatureRange: '-10°C to +40°C',
+    color: 'Grey',
+    length: '3m, 5m, 6m',
+    application: ['Potable water supply', 'Irrigation', 'Industrial water transport'],
+    availability: 'InStock' as const,
+  } : undefined);
+
   return (
     <>
+      {/* Product Detail Breadcrumb Schema */}
+      <ProductDetailBreadcrumb 
+        categoryName={catName}
+        categorySlug={category}
+        productName={prodName}
+        productSlug={productSlug}
+      />
+      
+      {/* Product Detail Schema for AI Answer Engines */}
+      {productSpec && (
+        <ProductDetailSchema 
+          product={productSpec}
+          categoryName={catName}
+          categorySlug={category}
+        />
+      )}
+
       <PageHeader
         title={prodName}
         subtitle={prodDesc}

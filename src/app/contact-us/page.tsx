@@ -1,77 +1,15 @@
 'use client';
 
-import Script from 'next/script';
 import { PageHeader, ContactForm, ComingSoon, AnimateOnScroll } from '@/components/common';
 import { brand } from '@/config/brand';
 import { isComingSoon } from '@/config/maintenance';
 import Icon, { IconName } from '@/components/ui/Icon';
 import { useT } from '@/i18n';
+import { LocalBusinessDetailSchema } from '@/components/schemas/LocalBusinessSchema';
+import { ContactBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 
-const baseUrl = 'https://crownplasticuae.com';
-
-// LocalBusiness JSON-LD structured data
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${baseUrl}/#localbusiness`,
-  name: brand.name,
-  alternateName: brand.shortName,
-  description: "Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical conduits, and irrigation since 1995.",
-  url: baseUrl,
-  telephone: brand.contact.phone,
-  faxNumber: brand.contact.fax,
-  email: brand.contact.email,
-  image: `${baseUrl}/images/logo.png`,
-  logo: `${baseUrl}/images/logo.png`,
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Industrial Area No. 6",
-    addressLocality: "Sharjah",
-    addressRegion: "Sharjah",
-    postalCode: "63576",
-    addressCountry: "AE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 25.2867,
-    longitude: 55.4508,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "08:00",
-      closes: "18:00",
-    },
-  ],
-  areaServed: [
-    { "@type": "City", name: "Dubai" },
-    { "@type": "City", name: "Sharjah" },
-    { "@type": "City", name: "Abu Dhabi" },
-    { "@type": "Country", name: "United Arab Emirates" },
-    { "@type": "Country", name: "Saudi Arabia" },
-    { "@type": "Country", name: "Oman" },
-    { "@type": "Country", name: "Qatar" },
-  ],
-  sameAs: [
-    brand.social.linkedin,
-    brand.social.facebook,
-    brand.social.youtube,
-    brand.social.instagram,
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Plastic Pipes & Fittings",
-    itemListElement: [
-      "UPVC Pressure Pipes & Fittings",
-      "UPVC Drainage Pipes & Fittings",
-      "PPR Pipes",
-      "HDPE Pipe Systems",
-      "PVC Conduit Pipes",
-    ],
-  },
-};
+// LocalBusiness schema is now handled by LocalBusinessDetailSchema component
+// See src/components/schemas/LocalBusinessSchema.tsx for full implementation
 
 // Route slug for Coming Soon check
 const ROUTE_SLUG = 'contact-us';
@@ -91,11 +29,9 @@ export default function ContactPage() {
 
   return (
     <>
-      <Script
-        id="localbusiness-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
+      {/* Enhanced LocalBusiness Schema with reviews, ratings, and service details */}
+      <LocalBusinessDetailSchema />
+      <ContactBreadcrumb />
       <PageHeader
         title={t('contact.title')}
         subtitle={t('contact.subtitle')}

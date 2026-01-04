@@ -9,6 +9,9 @@ import { getDocsByCategory } from '@/config/docs';
 import Icon from '@/components/ui/Icon';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
+import { ProductCategoryBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
+import { ProductListSchema } from '@/components/schemas/ProductSchema';
+import { upvcPressurePipeSpecs } from '@/config/schemas';
 
 interface CategoryPageProps {
   params: { category: string };
@@ -37,8 +40,23 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
   const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
 
+  // Get relevant product specs for this category (for Schema)
+  const categoryProductSpecs = category === 'upvc-pressure' ? upvcPressurePipeSpecs : [];
+
   return (
     <>
+      {/* Product Category Breadcrumb Schema */}
+      <ProductCategoryBreadcrumb categoryName={catName} categorySlug={category} />
+      
+      {/* Product List Schema for AI Answer Engines */}
+      {categoryProductSpecs.length > 0 && (
+        <ProductListSchema 
+          products={categoryProductSpecs}
+          categoryName={catName}
+          categoryUrl={`https://crownplasticuae.com/products/${category}`}
+        />
+      )}
+
       <PageHeader
         title={catName}
         subtitle={catDesc}
