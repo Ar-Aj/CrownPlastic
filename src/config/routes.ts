@@ -67,6 +67,15 @@ export const mainNavItems: NavItem[] = [
     label: 'Resources',
     labelAr: 'الموارد',
     href: '/resources',
+    children: [
+      { label: 'Downloads & Catalogues', labelAr: 'التحميلات والكتيبات', href: '/resources' },
+      { label: 'Technical FAQs', labelAr: 'الأسئلة الشائعة التقنية', href: '/support/faqs' },
+      { label: 'BS EN 1452 Guide', labelAr: 'دليل BS EN 1452', href: '/technical/bs-en-1452-complete-guide' },
+      { label: 'Pipe Comparison Guide', labelAr: 'دليل مقارنة الأنابيب', href: '/technical/upvc-vs-pvc-vs-ppr-comparison' },
+      { label: 'Installation Guide', labelAr: 'دليل التركيب', href: '/technical/upvc-installation-best-practices' },
+      { label: 'GSO/SASO Compliance', labelAr: 'الامتثال GSO/SASO', href: '/technical/gso-saso-compliance-guide' },
+      { label: 'Pipe Sizing Calculator', labelAr: 'حاسبة حجم الأنابيب', href: '/technical/upvc-pipe-sizing-calculator-guide' },
+    ],
   },
   {
     label: 'Contact',
@@ -113,8 +122,20 @@ export const footerColumns: FooterColumn[] = [
     titleAr: 'الدعم',
     links: [
       { label: 'Contact Us', labelAr: 'اتصل بنا', href: '/contact-us' },
+      { label: 'Technical FAQs', labelAr: 'الأسئلة الشائعة', href: '/support/faqs' },
       { label: 'Privacy Policy', labelAr: 'سياسة الخصوصية', href: '/privacy-policy' },
       { label: 'Sitemap', labelAr: 'خريطة الموقع', href: '/sitemap' },
+    ],
+  },
+  {
+    title: 'Technical Guides',
+    titleAr: 'الأدلة التقنية',
+    links: [
+      { label: 'BS EN 1452 Guide', labelAr: 'دليل BS EN 1452', href: '/technical/bs-en-1452-complete-guide' },
+      { label: 'Pipe Comparison', labelAr: 'مقارنة الأنابيب', href: '/technical/upvc-vs-pvc-vs-ppr-comparison' },
+      { label: 'Installation Guide', labelAr: 'دليل التركيب', href: '/technical/upvc-installation-best-practices' },
+      { label: 'GSO/SASO Compliance', labelAr: 'امتثال GSO/SASO', href: '/technical/gso-saso-compliance-guide' },
+      { label: 'Pipe Sizing Guide', labelAr: 'دليل حجم الأنابيب', href: '/technical/upvc-pipe-sizing-calculator-guide' },
     ],
   },
   {
@@ -181,4 +202,12 @@ export const allRoutes = [
   { path: '/upvc-pipes-saudi-arabia', label: 'UPVC Pipes Saudi Arabia', description: 'UPVC pipe exporter to Saudi Arabia' },
   { path: '/upvc-pipes-kuwait', label: 'UPVC Pipes Kuwait', description: 'UPVC pipe supplier to Kuwait' },
   { path: '/upvc-pipes-qatar', label: 'UPVC Pipes Qatar', description: 'UPVC pipe supplier to Qatar' },
+  // Phase 2 AEO: Support & FAQ Pages
+  { path: '/support/faqs', label: 'FAQs', description: 'Frequently Asked Questions about UPVC, PVC, PPR pipes' },
+  // Phase 2 AEO: Technical Guide Pages (Featured Snippet Optimization)
+  { path: '/technical/bs-en-1452-complete-guide', label: 'BS EN 1452 Guide', description: 'Complete guide to BS EN 1452 UPVC pipe standard' },
+  { path: '/technical/upvc-vs-pvc-vs-ppr-comparison', label: 'UPVC vs PVC vs PPR', description: 'Comprehensive comparison of plastic pipe materials' },
+  { path: '/technical/upvc-installation-best-practices', label: 'Installation Guide', description: 'Step-by-step UPVC pipe installation best practices' },
+  { path: '/technical/gso-saso-compliance-guide', label: 'GSO SASO Guide', description: 'Gulf and Saudi standards compliance guide' },
+  { path: '/technical/upvc-pipe-sizing-calculator-guide', label: 'Pipe Sizing Guide', description: 'UPVC pipe sizing formulas and calculator' },
 ];

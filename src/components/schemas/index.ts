@@ -6,3 +6,8 @@ export { ProductSchema } from './ProductSchema';
 export { LocalBusinessSchema } from './LocalBusinessSchema';
 export { BreadcrumbSchema } from './BreadcrumbSchema';
 export { ProductListSchema } from './ProductListSchema';
+
+// Phase 2 AEO Schemas
+export { FAQPageSchema, ClusterFAQSchema, SingleFAQSchema } from './FAQPageSchema';
+export { ArticleSchema, TechnicalGuideSchema } from './ArticleSchema';
+export { HowToSchema, SimpleHowToSchema, InstallationGuideSchema } from './HowToSchema';

@@ -96,5 +96,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75, // High priority for local SEO
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages, ...serviceAreaPages];
+  // Phase 2 AEO: FAQ and Technical Guide pages (Featured Snippet Optimization)
+  const supportPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/support/faqs`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9, // High priority for featured snippet targeting
+    },
+  ];
+
+  const technicalPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/technical/bs-en-1452-complete-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/technical/upvc-vs-pvc-vs-ppr-comparison`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/technical/upvc-installation-best-practices`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/technical/gso-saso-compliance-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/technical/upvc-pipe-sizing-calculator-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+  ];
+
+  return [...staticPages, ...categoryPages, ...productPages, ...serviceAreaPages, ...supportPages, ...technicalPages];
 }

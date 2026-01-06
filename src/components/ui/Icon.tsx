@@ -43,6 +43,13 @@ import {
   Waves,
   Plug,
   CircuitBoard,
+  Search,
+  ChevronRight,
+  ChevronDown,
+  Plus,
+  Minus,
+  ArrowRight,
+  GitCompare,
   type LucideProps,
 } from 'lucide-react';
 import { forwardRef } from 'react';
@@ -148,6 +155,17 @@ const iconMap = {
   automation: Bot,
   cpu: Cpu,
   technology: Cpu,
+  
+  // UI & Navigation (Phase 2 additions)
+  search: Search,
+  chevronRight: ChevronRight,
+  chevronDown: ChevronDown,
+  plus: Plus,
+  minus: Minus,
+  arrow: ArrowRight,
+  arrowRight: ArrowRight,
+  compare: GitCompare,
+  tool: Wrench,
 } as const;
 
 export type IconName = keyof typeof iconMap;
