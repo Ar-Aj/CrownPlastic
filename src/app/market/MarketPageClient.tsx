@@ -112,7 +112,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold mb-1">35+</div>
+                  <div className="text-3xl font-bold mb-1">30+</div>
                   <div className="text-blue-200 text-sm">Years Experience</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-lg p-6 text-center">

@@ -76,7 +76,7 @@ export default function MarketsPage() {
                 <div className="text-gray-600 text-sm">Market Locations</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-900">35+</div>
+                <div className="text-3xl font-bold text-blue-900">30+</div>
                 <div className="text-gray-600 text-sm">Years Experience</div>
               </div>
               <div>
