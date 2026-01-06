@@ -111,43 +111,10 @@ export function LocalBusinessDetailSchema() {
       companyInfo.social.youtube,
       companyInfo.social.instagram,
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '156',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Ahmed M.',
-        },
-        reviewBody: 'Excellent quality UPVC pipes for our construction project. Fast delivery to Dubai.',
-        datePublished: '2024-06-15',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Organization',
-          name: 'ABC Construction LLC',
-        },
-        reviewBody: 'Reliable supplier with ISO certified products. Using Crown pipes for 5+ years.',
-        datePublished: '2024-03-20',
-      },
-    ],
+    // NOTE: Aggregate rating intentionally removed until real customer reviews are collected
+    // Google requires authentic reviews - do not use fabricated ratings
+    // Re-enable after collecting minimum 5-10 genuine customer reviews
+    // aggregateRating: { '@type': 'AggregateRating', ratingValue: 0, ratingCount: 0, bestRating: 5 },
     makesOffer: [
       {
         '@type': 'Offer',

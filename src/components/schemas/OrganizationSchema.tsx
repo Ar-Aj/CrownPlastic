@@ -132,41 +132,10 @@ export function OrganizationSchema() {
       'DIN 8062',
       'ISO 9001 Quality Management',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '245',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Organization',
-          name: 'ISO Certification Body',
-        },
-        reviewBody: 'Certified ISO 9001:2015 Quality Management System',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Organization',
-          name: 'BSI',
-        },
-        reviewBody: 'Kitemark certified for BS EN 1452 compliance',
-      },
-    ],
+    // NOTE: Aggregate rating intentionally removed until real customer reviews are collected
+    // Google requires authentic reviews - using certifications as reviews violates guidelines
+    // Re-enable after collecting minimum 5-10 genuine customer reviews
+    // aggregateRating: { '@type': 'AggregateRating', ratingValue: 0, ratingCount: 0, bestRating: 5 },
   };
 
   return (

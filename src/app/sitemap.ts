@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { productCategories } from '@/config/products';
 import { serviceAreas } from '@/config/schemas';
+import { allRegionalMarkets } from '@/config/markets';
+import { regionalProductCatalogs } from '@/config/regional-products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://crownplasticuae.com';
@@ -139,5 +141,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticPages, ...categoryPages, ...productPages, ...serviceAreaPages, ...supportPages, ...technicalPages];
+  // Phase 3 AEO: Regional Market Pages (Conversion Optimization)
+  const marketPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/market`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    ...allRegionalMarkets.map((market) => ({
+      url: `${baseUrl}/market/${market.slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8, // High priority for regional SEO
+    })),
+  ];
+
+  // Phase 3 FIX: Regional Product Catalog Pages (Single-currency pricing)
+  const regionalProductPages: MetadataRoute.Sitemap = regionalProductCatalogs.map((catalog) => ({
+    url: `${baseUrl}/market/${catalog.regionSlug}/products/upvc-pipes`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85, // High priority for conversion optimization
+  }));
+
+  return [...staticPages, ...categoryPages, ...productPages, ...serviceAreaPages, ...supportPages, ...technicalPages, ...marketPages, ...regionalProductPages];
 }

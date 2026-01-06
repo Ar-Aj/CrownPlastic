@@ -64,6 +64,21 @@ export const mainNavItems: NavItem[] = [
     href: '/news-media',
   },
   {
+    label: 'Markets',
+    labelAr: 'الأسواق',
+    href: '/market',
+    children: [
+      { label: 'All Markets', labelAr: 'جميع الأسواق', href: '/market' },
+      { label: 'Saudi Arabia - SASO Certified', labelAr: 'السعودية - معتمد ساسو', href: '/market/saudi-arabia/upvc-pipes-saso-certified' },
+      { label: 'Riyadh Distributor', labelAr: 'موزع الرياض', href: '/market/saudi-arabia/riyadh-upvc-distributor' },
+      { label: 'Jeddah Wholesale', labelAr: 'جملة جدة', href: '/market/saudi-arabia/jeddah-upvc-wholesale' },
+      { label: 'Dubai Commercial', labelAr: 'دبي التجارية', href: '/market/uae/upvc-pipes-dubai-commercial' },
+      { label: 'Abu Dhabi Government', labelAr: 'حكومة أبوظبي', href: '/market/uae/upvc-pipes-abu-dhabi-government' },
+      { label: 'Kuwait', labelAr: 'الكويت', href: '/market/kuwait/upvc-pipes-supplier' },
+      { label: 'Qatar', labelAr: 'قطر', href: '/market/qatar/upvc-pipes-doha' },
+    ],
+  },
+  {
     label: 'Resources',
     labelAr: 'الموارد',
     href: '/resources',
