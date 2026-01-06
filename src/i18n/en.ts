@@ -73,7 +73,7 @@ export const en = {
     hero_view: 'View:',
     hero_stat_years: 'Years Experience',
     hero_stat_products: 'Products Range',
-    hero_stat_countries: 'Countries Export',
+    hero_stat_countries: 'Service Coverage',
     hero_stat_customers: 'Happy Customers',
     // Products section
     products_title: 'Our Product Range',

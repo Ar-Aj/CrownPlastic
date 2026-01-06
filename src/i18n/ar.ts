@@ -73,7 +73,7 @@ export const ar = {
     hero_view: 'عرض:',
     hero_stat_years: 'سنوات الخبرة',
     hero_stat_products: 'تشكيلة المنتجات',
-    hero_stat_countries: 'دول التصدير',
+    hero_stat_countries: 'تغطية الخدمة',
     hero_stat_customers: 'العملاء السعداء',
     // Products section
     products_title: 'مجموعة منتجاتنا',

@@ -20,6 +20,11 @@ export function useCountUp(
     ? parseInt(target.replace(/[^0-9]/g, ''), 10) || 0
     : target;
   
+  // Check if original value contains any numbers
+  const hasNumbers = typeof target === 'string' 
+    ? /[0-9]/.test(target)
+    : true;
+  
   // Get suffix (e.g., "+", "K", etc.)
   const suffix = typeof target === 'string' 
     ? target.replace(/[0-9]/g, '').trim()
@@ -54,6 +59,11 @@ export function useCountUp(
     
     requestAnimationFrame(animate);
   }, [isInView, numericTarget, duration, hasAnimated, prefersReducedMotion]);
+
+  // If the value contains no numbers, return it as-is without count prefix
+  if (!hasNumbers) {
+    return { count, suffix, displayValue: typeof target === 'string' ? target : String(target) };
+  }
 
   return { count, suffix, displayValue: `${count}${suffix}` };
 }

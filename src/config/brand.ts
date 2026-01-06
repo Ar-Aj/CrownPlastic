@@ -63,10 +63,10 @@ export const brand = {
   
   // Company stats (placeholder)
   stats: {
-    yearsExperience: '25+',
+    yearsExperience: '30+',
     manufacturingUnits: '3',
-    productsRange: '500+',
-    countriesExport: '20+',
+    productsRange: '5,000+',
+    countriesExport: 'GCC Wide',
     happyCustomers: '10,000+',
   }
 } as const;

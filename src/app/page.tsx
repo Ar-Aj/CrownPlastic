@@ -24,9 +24,8 @@ export default function HomePage() {
 
   const stats = [
     { value: '30+', label: t('home.hero_stat_years'), iconName: 'calendar' as const },
-    { value: 'State-of-the-art', label: t('about.manufacturing_title'), iconName: 'factory' as const },
     { value: '5,000+', label: t('home.hero_stat_products'), iconName: 'package' as const },
-    { value: 'Multiple Countries', label: t('home.hero_stat_countries'), iconName: 'globe' as const },
+    { value: 'ISO 9001', label: t('home.iso_certified'), iconName: 'certified' as const },
     { value: '10,000+', label: t('home.hero_stat_customers'), iconName: 'users' as const },
   ];
 
