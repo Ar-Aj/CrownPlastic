@@ -1,6 +1,6 @@
 // Regional Product Catalog Page - Phase 3 AEO Fix
 // Separate regional pages with single-currency pricing
-// Using dynamic route: /market/[region]/products/upvc-pipes
+// Using dynamic route: /market/[country]/products/upvc-pipes
 
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -10,20 +10,20 @@ import RegionalProductCatalogClient from './RegionalProductCatalogClient';
 const baseUrl = 'https://crownplasticuae.com';
 
 interface PageProps {
-  params: Promise<{ region: string }>;
+  params: Promise<{ country: string }>;
 }
 
 // Generate static params for all regions
 export async function generateStaticParams() {
   return getAllRegionSlugs().map((regionSlug) => ({
-    region: regionSlug,
+    country: regionSlug,
   }));
 }
 
 // Generate metadata with canonical tag
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { region } = await params;
-  const catalog = getRegionalCatalog(region);
+  const { country } = await params;
+  const catalog = getRegionalCatalog(country);
 
   if (!catalog) {
     return {
@@ -45,14 +45,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       // Canonical points to main product page to prevent duplication concerns
       canonical: catalog.canonicalBase,
       languages: {
-        'en': `/market/${region}/products/upvc-pipes`,
-        'ar': `/market/${region}/products/upvc-pipes`,
+        'en': `/market/${country}/products/upvc-pipes`,
+        'ar': `/market/${country}/products/upvc-pipes`,
       },
     },
     openGraph: {
       title: catalog.title,
       description: catalog.description,
-      url: `${baseUrl}/market/${region}/products/upvc-pipes`,
+      url: `${baseUrl}/market/${country}/products/upvc-pipes`,
       type: 'website',
       locale: 'en_AE',
     },
@@ -60,9 +60,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function RegionalProductCatalogPage({ params }: PageProps) {
-  const { region } = await params;
-  const catalog = getRegionalCatalog(region);
-  const products = getRegionalPricing(region);
+  const { country } = await params;
+  const catalog = getRegionalCatalog(country);
+  const products = getRegionalPricing(country);
 
   if (!catalog) {
     notFound();

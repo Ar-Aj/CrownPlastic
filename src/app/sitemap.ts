@@ -159,7 +159,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Phase 3 FIX: Regional Product Catalog Pages (Single-currency pricing)
   const regionalProductPages: MetadataRoute.Sitemap = regionalProductCatalogs.map((catalog) => ({
-    url: `${baseUrl}/market/${catalog.regionSlug}/products/upvc-pipes`,
+    url: `${baseUrl}/products/regional/${catalog.regionSlug}/upvc-pipes`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.85, // High priority for conversion optimization
