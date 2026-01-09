@@ -9,8 +9,8 @@ import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring, useInView, useMotionValue, Variants } from 'framer-motion';
 import { 
-  Award, Truck, BadgeDollarSign, Wrench, Phone, Mail, MapPin, 
-  ArrowRight, ChevronUp, Clock, Shield, CheckCircle2, Star,
+  Award, Truck, BadgeDollarSign, Wrench, Phone, Mail, 
+  ArrowRight, ChevronUp, Shield, CheckCircle2, Star,
   Building2, FileCheck, Zap, Package, ExternalLink
 } from 'lucide-react';
 import { RegionalMarket } from '@/config/markets';
@@ -61,23 +61,9 @@ const scaleInVariant: Variants = {
   },
 };
 
-const slideFromLeft: Variants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 0.6 }
-  },
-};
-
-const slideFromRight: Variants = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 0.6 }
-  },
-};
+// Slide variants available for future use:
+// const slideFromLeft: Variants = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
+// const slideFromRight: Variants = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } };
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // ANIMATED COUNTER COMPONENT
