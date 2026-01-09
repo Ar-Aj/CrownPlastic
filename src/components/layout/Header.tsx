@@ -55,7 +55,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Crown Plastic Pipes Logo"
@@ -65,10 +65,10 @@ export default function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-xl font-bold text-primary leading-tight">
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary leading-tight">
                 Crown Plastic Pipes
               </h1>
-              <p className="text-xs text-gray-500">Factory L.L.C.</p>
+              <p className="text-xs lg:text-sm text-gray-500">Factory L.L.C.</p>
             </div>
           </Link>
 

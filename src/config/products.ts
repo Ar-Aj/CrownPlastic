@@ -65,7 +65,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'DIN 8063 | BS EN 1452 PN15 | ASTM D2466 SCH40 | أكواع، تيهات، وصلات، محولات.',
         features: ['Precision molded', 'Perfect fit', 'High pressure tolerance'],
         featuresAr: ['قولبة دقيقة', 'تركيب مثالي', 'تحمل ضغط عالي'],
-        image: '/images/products/upvc-pressure-fittings.jpg',  // Fallback to category image until generated
+        image: '/images/UPVC Pressure Fittings Multi-Standard.jpg',
       },
     ],
   },
@@ -87,6 +87,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'أنابيب تصريف التربة والنفايات الأرضية لأنظمة الصرف الداخلية والخارجية.',
         features: ['Ring-seal joints', 'Sound dampening', 'Quick assembly'],
         featuresAr: ['وصلات بالحلقة المانعة', 'عزل صوتي', 'تجميع سريع'],
+        image: '/images/UPVC Soil Pipes BS 5255 .jpg',
       },
       {
         slug: 'pipes-underground',
@@ -97,6 +98,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'أنابيب صرف تحت أرضية للخدمة الشاقة لتطبيقات الصرف الصحي ومياه الأمطار.',
         features: ['High impact resistance', 'Root resistant', 'Long-term durability'],
         featuresAr: ['مقاومة صدم عالية', 'مقاوم للجذور', 'متانة طويلة المدى'],
+        image: '/images/UPVC Underground Pipes BS EN 1401.jpg',
       },
       {
         slug: 'pipes-non-standard',
@@ -107,6 +109,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'أنابيب صرف مصنعة حسب الطلب لمتطلبات المشاريع المتخصصة.',
         features: ['Made to order', 'Custom dimensions', 'Special colors available'],
         featuresAr: ['مصنوع حسب الطلب', 'أبعاد مخصصة', 'ألوان خاصة متاحة'],
+        image: '/images/UPVC Custom Drainage Pipes .jpg',
       },
       {
         slug: 'fittings',
@@ -117,6 +120,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'مجموعة شاملة تشمل أكواع، تيهات، مقابس، مخفضات، أغطية فحص، ومصارف أرضية.',
         features: ['Complete system compatibility', 'Easy maintenance access'],
         featuresAr: ['توافق تام مع النظام', 'سهولة الوصول للصيانة'],
+        image: '/images/UPVC Drainage Fittings BS EN 1329.jpg',
       },
     ],
   },
@@ -178,6 +182,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'أنابيب قنوات الاتصالات المعتمدة للبنية التحتية للاتصالات في الإمارات.',
         features: ['Telecom approved', 'Fiber-optic ready', 'Multiple duct options'],
         featuresAr: ['معتمد للاتصالات', 'جاهز للألياف الضوئية', 'خيارات قنوات متعددة'],
+        image: '/images/UPVC Duct Pipes.jpg',
       },
       {
         slug: 'accessories',

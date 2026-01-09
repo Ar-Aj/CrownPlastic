@@ -32,6 +32,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     description: language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription,
     href: `/products/${cat.slug}/${product.slug}`,
     tags: product.standards,
+    image: product.image,
+    alt: `${language === 'ar' ? (product.nameAr || product.name) : product.name} - ${catName}`,
   }));
 
   // Get technical documents for this category
