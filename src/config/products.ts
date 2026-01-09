@@ -43,7 +43,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'سلسلة متري PN6-16 | ISO 4422 حل محله BS EN 1452 | أنظمة إمداد المياه الصالحة للشرب.',
         features: ['Lead-free', 'Corrosion resistant', 'Long service life', 'Easy installation'],
         featuresAr: ['خالي من الرصاص', 'مقاوم للتآكل', 'عمر خدمة طويل', 'تركيب سهل'],
-        image: '/images/products/upvc-pressure-pipes-metric.jpg',  // Fallback to category image until generated
+        image: '/images/UPVC Pressure Pipes BS EN 1452.jpg',  // Add this image to public/images/
       },
       {
         slug: 'pipes-inch',
@@ -54,7 +54,7 @@ export const productCategories: ProductCategory[] = [
         shortDescriptionAr: 'سلسلة إنش BS 3505/3506 | Schedule 40 | شبكات توزيع المياه.',
         features: ['High pressure rating', 'UV stabilized', 'Leak-proof joints'],
         featuresAr: ['تصنيف ضغط عالي', 'مستقر ضد الأشعة فوق البنفسجية', 'وصلات مانعة للتسرب'],
-        image: '/images/products/upvc-pressure-pipes-inch.jpg',  // Fallback to category image until generated
+        image: '/images/UPVC Pressure Pipes ASTM D1785.jpg',  // Add this image to public/images/
       },
       {
         slug: 'fittings',

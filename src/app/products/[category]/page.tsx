@@ -27,6 +27,9 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
+  const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
+  const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
+
   const productCards = cat.subProducts.map((product) => ({
     title: language === 'ar' ? (product.nameAr || product.name) : product.name,
     description: language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription,
@@ -38,9 +41,6 @@ export default function CategoryPage({ params }: CategoryPageProps) {
 
   // Get technical documents for this category
   const categoryDocuments = getDocsByCategory(cat.slug);
-
-  const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
-  const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
 
   // Get relevant product specs for this category (for Schema)
   const categoryProductSpecs = category === 'upvc-pressure' ? upvcPressurePipeSpecs : [];
