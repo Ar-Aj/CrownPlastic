@@ -1,101 +1,120 @@
 import { Metadata } from 'next';
-import { PageHeader, ComingSoon } from '@/components/common';
-import { isComingSoon } from '@/config/maintenance';
+import Link from 'next/link';
+import { PageHeader } from '@/components/common';
+import { 
+  MediaVideosSection, 
+  MediaBlogsSection, 
+  MediaContactSection,
+  type VideoItem,
+  type BlogPost
+} from '@/components/media';
+import { blogArticles } from '@/content/blogs';
 
 export const metadata: Metadata = {
-  title: 'News & Media',
-  description: 'Latest news, press releases, and media coverage of Crown Plastic Pipes.',
+  title: 'Media & Blogs | UPVC, PPR, HDPE Piping Insights | Crown Plastic Pipes',
+  description: 'Explore videos and expert insights on UPVC, PPR, and HDPE piping systems for Gulf construction and infrastructure projects. Technical guides from Crown Plastic Pipes.',
+  keywords: [
+    'UPVC pipes videos',
+    'piping solutions blog UAE',
+    'plastic pipe guides GCC',
+    'Crown Plastic media',
+  ],
 };
 
-// Route slug for Coming Soon check
-const ROUTE_SLUG = 'news-media';
+// ─────────────────────────────────────────────────────────────
+// Centralized Page Copy (EN) - Easy to migrate to i18n later
+// ─────────────────────────────────────────────────────────────
+const MEDIA_BLOGS_COPY_EN = {
+  // Page Header
+  pageTitle: 'Media & Blogs',
+  pageSubtitle: 'Explore videos and expert insights on UPVC, PPR, and HDPE piping systems for Gulf projects.',
+  breadcrumb: 'Media & Blogs',
 
-export default function NewsMediaPage() {
-  // Check if this page should show Coming Soon
-  if (isComingSoon(ROUTE_SLUG)) {
-    return (
-      <ComingSoon
-        title="News & Media"
-        subtitle="Our news and media section is coming soon. Check back for latest updates and press releases."
-      />
-    );
-  }
+  // Videos Section
+  videosTitle: 'Featured Videos',
+  videosSubtitle: 'See Crown Plastic Pipes in action — from factory tours to expert product showcases.',
 
-  const newsItems = [
-    {
-      date: 'December 2024',
-      title: 'Crown Plastic Pipes Expands Export Operations',
-      excerpt: 'We are pleased to announce the expansion of our export operations to additional markets in Africa and Asia.',
-      category: 'Press Release',
-    },
-    {
-      date: 'November 2024',
-      title: 'New PPR Product Line Launch',
-      excerpt: 'Introducing our enhanced PPR piping system with improved heat resistance and longer service life.',
-      category: 'Product News',
-    },
-    {
-      date: 'October 2024',
-      title: 'ISO 14001 Recertification Achieved',
-      excerpt: 'Crown Plastic Pipes successfully recertified for ISO 14001:2015 Environmental Management System.',
-      category: 'Corporate',
-    },
-    {
-      date: 'September 2024',
-      title: 'Participation in Big 5 Exhibition',
-      excerpt: 'Visit us at The Big 5 Dubai - the largest construction event in the Middle East.',
-      category: 'Events',
-    },
-  ];
+  // Blogs Section
+  blogsTitle: 'Expert Insights & Guides',
+  blogsSubtitle: 'Technical articles, compliance guides, and project insights from our engineering team.',
+  viewAllArticles: 'View All Articles',
 
+  // Media Contact
+  mediaContactTitle: 'Media Contact',
+  mediaContactSubtitle: 'For press inquiries, interviews, and media requests:',
+  mediaContactEmail: 'media@crownplasticuae.com',
+};
+
+// ─────────────────────────────────────────────────────────────
+// Videos Data (Enhanced with SEO metadata)
+// ─────────────────────────────────────────────────────────────
+const VIDEOS_DATA: VideoItem[] = [
+  {
+    id: 'video-choose-us',
+    title: '5 Reasons Why You Should Choose Crown Plastic Pipes',
+    description: 'Built on precision, proven by quality, and trusted for over 30 years — Crown Plastic delivers advanced UPVC, PPR, and HDPE piping solutions designed for generations of Gulf infrastructure projects.',
+    thumbnailSrc: '', // Will be replaced with actual thumbnail
+    videoSrc: '', // Will be replaced with actual MP4/stream URL
+    orientation: '9:16',
+  },
+  {
+    id: 'video-factory-story',
+    title: 'Inside Crown Plastic: Our Sharjah Factory Story',
+    description: 'A behind-the-scenes look at how Crown Plastic manufactures GSO and SASO compliant UPVC, PPR, and HDPE piping systems in our Sharjah facility for demanding GCC construction projects.',
+    thumbnailSrc: '', // Will be replaced with actual thumbnail
+    videoSrc: '', // Will be replaced with actual MP4/stream URL
+    orientation: '9:16',
+  },
+];
+
+// ─────────────────────────────────────────────────────────────
+// Blog Posts Data - Mapped from blogs.ts to BlogPost interface
+// ─────────────────────────────────────────────────────────────
+const BLOG_POSTS_DATA: BlogPost[] = blogArticles.slice(0, 6).map((article) => ({
+  id: article.slug,
+  title: article.title,
+  shortExcerpt: article.shortExcerpt,
+  estimatedReadTime: article.estimatedReadTime,
+  tag: article.tag,
+  slug: `/blogs/${article.slug}`,
+  publishedDate: article.publishedDate,
+}));
+
+// ─────────────────────────────────────────────────────────────
+// Page Component
+// ─────────────────────────────────────────────────────────────
+export default function MediaBlogsPage() {
   return (
     <>
+      {/* Page Header */}
       <PageHeader
-        title="News & Media"
-        subtitle="Stay updated with the latest news, press releases, and events from Crown Plastic Pipes."
-        breadcrumbs={[{ label: 'News & Media' }]}
+        title={MEDIA_BLOGS_COPY_EN.pageTitle}
+        subtitle={MEDIA_BLOGS_COPY_EN.pageSubtitle}
+        breadcrumbs={[{ label: MEDIA_BLOGS_COPY_EN.breadcrumb }]}
       />
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            {newsItems.map((item, i) => (
-              <article key={i} className="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <span className="text-6xl">📰</span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-sm text-gray-500">{item.date}</span>
-                    <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      {item.category}
-                    </span>
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h2>
-                  <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                  <a href="#" className="text-primary font-medium hover:underline inline-flex items-center gap-2">
-                    Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Videos Section */}
+      <MediaVideosSection
+        title={MEDIA_BLOGS_COPY_EN.videosTitle}
+        subtitle={MEDIA_BLOGS_COPY_EN.videosSubtitle}
+        videos={VIDEOS_DATA}
+      />
 
-      {/* Media Contact */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Media Contact</h2>
-          <p className="text-gray-600 mb-4">For press inquiries and media requests:</p>
-          <a href="mailto:media@crownplasticpipes.ae" className="text-primary font-semibold hover:underline">
-            media@crownplasticpipes.ae
-          </a>
-        </div>
-      </section>
+      {/* Blogs Section */}
+      <MediaBlogsSection
+        title={MEDIA_BLOGS_COPY_EN.blogsTitle}
+        subtitle={MEDIA_BLOGS_COPY_EN.blogsSubtitle}
+        posts={BLOG_POSTS_DATA}
+        viewAllLink="/blogs"
+        viewAllLabel={MEDIA_BLOGS_COPY_EN.viewAllArticles}
+      />
+
+      {/* Media Contact Section */}
+      <MediaContactSection
+        title={MEDIA_BLOGS_COPY_EN.mediaContactTitle}
+        subtitle={MEDIA_BLOGS_COPY_EN.mediaContactSubtitle}
+        email={MEDIA_BLOGS_COPY_EN.mediaContactEmail}
+      />
     </>
   );
 }

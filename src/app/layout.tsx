@@ -6,6 +6,7 @@ import { MainLayout } from "@/components/layout";
 import { brand } from "@/config/brand";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { OrganizationSchema } from "@/components/schemas";
+import { QuoteModalProvider, WhatsAppButton } from "@/components/common";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -101,7 +102,15 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Suspense fallback={null}>
           <LanguageProvider>
-            <MainLayout>{children}</MainLayout>
+            <QuoteModalProvider>
+              <MainLayout>{children}</MainLayout>
+              {/* Global WhatsApp floating button */}
+              <WhatsAppButton 
+                showAfterScroll={300}
+                showPulse={true}
+                tooltipText="Chat with us on WhatsApp"
+              />
+            </QuoteModalProvider>
           </LanguageProvider>
         </Suspense>
       </body>

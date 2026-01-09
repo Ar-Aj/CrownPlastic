@@ -2,9 +2,18 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { HeroSection, CardGrid, StatsStrip, AnimateOnScroll } from '@/components/common';
+import { 
+  HeroSection, 
+  CardGrid, 
+  StatsStrip, 
+  AnimateOnScroll,
+  ClientLogoWall,
+  TestimonialsSection,
+  QuoteButton,
+} from '@/components/common';
 import Icon from '@/components/ui/Icon';
 import { productCategories } from '@/config/products';
+import { clientLogos, testimonials } from '@/config/clients';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -34,6 +43,13 @@ export default function HomePage() {
       {/* Hero Section */}
       <HeroSection 
         subtitle="Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, drainage, electrical ducting, irrigation, construction & infrastructure projects across GCC."
+      />
+
+      {/* Client Logo Wall - Trust Signal */}
+      <ClientLogoWall 
+        logos={clientLogos.slice(0, 12)}
+        variant="compact"
+        title="Trusted by Leading Developers & Contractors"
       />
 
       {/* Product Categories Section */}
@@ -79,15 +95,20 @@ export default function HomePage() {
               <p className="text-gray-600 mb-8 leading-relaxed">
                 {t('home.about_text')}
               </p>
-              <Link
-                href="/about-us"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all rtl:flex-row-reverse"
-              >
-                {t('home.about_link')}
-                <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/about-us"
+                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all rtl:flex-row-reverse"
+                >
+                  {t('home.about_link')}
+                  <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <QuoteButton variant="primary" size="md">
+                  Get a Quote
+                </QuoteButton>
+              </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="relative">
@@ -116,6 +137,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection 
+        testimonials={testimonials}
+        title="What Our Clients Say"
+        subtitle="Trusted by leading contractors and developers across the GCC"
+        variant="default"
+        columns={3}
+      />
 
       {/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-white">
@@ -161,15 +191,9 @@ export default function HomePage() {
             {t('home.cta_subtitle')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg font-semibold transition-colors rtl:flex-row-reverse"
-            >
-              {t('common.get_a_quote')}
-              <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <QuoteButton variant="outline" size="lg" className="!bg-accent !border-accent hover:!bg-accent-dark text-white">
+              Get a Quote Now
+            </QuoteButton>
             <Link
               href="/resources"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold transition-colors border border-white/20"
