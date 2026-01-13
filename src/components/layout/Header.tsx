@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* Top utility bar */}
       <div className="bg-primary text-white text-sm">
-        <div className="container mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+        <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4 text-xs sm:text-sm">
             <a href={`tel:${brand.contact.phone}`} className="flex items-center gap-1 hover:text-accent transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,16 +46,26 @@ export default function Header() {
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
               </a>
             </div>
+            {/* Join Us Button */}
+            <Link
+              href="/join-us"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-accent hover:bg-accent-dark text-white px-3 py-1 rounded font-medium transition-colors text-xs"
+            >
+              Join Us!
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Main header */}
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-10 xl:px-16">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20">
+          <Link href="/" className="flex items-center gap-2 xl:gap-3 shrink-0">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Crown Plastic Pipes Logo"
@@ -65,10 +75,10 @@ export default function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary leading-tight">
+              <h1 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-primary leading-tight">
                 Crown Plastic Pipes
               </h1>
-              <p className="text-xs lg:text-sm text-gray-500">Factory L.L.C.</p>
+              <p className="text-xs lg:text-xs xl:text-sm text-gray-500">Factory L.L.C.</p>
             </div>
           </Link>
 
@@ -77,18 +87,8 @@ export default function Header() {
             <MainNav items={mainNavItems} />
           </div>
 
-          {/* Search & Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2">
-            {/* Search button */}
-            <button 
-              className="p-2 text-gray-600 hover:text-primary transition-colors"
-              aria-label={t('nav.search')}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-
             {/* Mobile menu toggle */}
             <button
               className="lg:hidden p-2 text-gray-600 hover:text-primary transition-colors"
@@ -99,17 +99,6 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-
-            {/* CTA Button - Desktop */}
-            <Link
-              href="/contact-us"
-              className="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm rtl:flex-row-reverse"
-            >
-              {t('nav.get_quote')}
-              <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
         </div>
       </div>

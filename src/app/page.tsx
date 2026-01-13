@@ -9,7 +9,7 @@
 import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { 
   ArrowRight, Phone, Shield, Zap, Award, Truck, 
   Wrench, CheckCircle2, Users, Package,
@@ -19,7 +19,6 @@ import {
 // Components
 import { 
   ClientLogoWall, 
-  TestimonialsSection, 
   QuoteButton,
 } from '@/components/common';
 import {
@@ -34,7 +33,7 @@ import {
 
 // Config & Data
 import { productCategories } from '@/config/products';
-import { clientLogos, testimonials } from '@/config/clients';
+import { clientLogos } from '@/config/clients';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -55,17 +54,8 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function PremiumHero() {
-  const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ 
-    target: heroRef, 
-    offset: ['start start', 'end start'] 
-  });
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
-
   return (
-    <header ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+    <header className="relative min-h-screen flex items-center overflow-hidden">
       <GradientMesh variant="dark" />
       <FloatingParticles count={20} />
       
@@ -81,9 +71,8 @@ function PremiumHero() {
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
       
-      <motion.div 
+      <div 
         className="container mx-auto px-4 max-w-7xl relative z-10 py-24"
-        style={{ opacity: heroOpacity, y: heroY, scale: heroScale }}
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -186,37 +175,22 @@ function PremiumHero() {
               icon={<Package className="w-5 h-5 text-blue-400" />}
             />
             <GlassStatCard 
-              value={10000} 
+              value={52} 
               suffix="+" 
-              label="Happy Customers" 
+              label="Countries Reach" 
               delay={0.5}
-              icon={<Users className="w-5 h-5 text-emerald-400" />}
+              icon={<Globe className="w-5 h-5 text-emerald-400" />}
             />
             <GlassStatCard 
-              value={6} 
-              suffix="" 
-              label="GCC Markets" 
+              value={24} 
+              suffix="/7" 
+              label="Fast Delivery & Custom Lengths" 
               delay={0.6}
-              icon={<Globe className="w-5 h-5 text-cyan-400" />}
+              icon={<Truck className="w-5 h-5 text-cyan-400" />}
             />
           </motion.div>
         </div>
-      </motion.div>
-      
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-          <motion.div 
-            className="w-1.5 h-3 bg-white/50 rounded-full"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
+      </div>
     </header>
   );
 }
@@ -262,14 +236,14 @@ function ProductCategoriesSection() {
             <motion.div key={cat.href} variants={radialItem}>
               <Link href={cat.href} className="group block h-full">
                 <TiltCard intensity={5}>
-                  <div className="relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 overflow-hidden h-full">
-                    {/* Animated gradient border */}
-                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute inset-[1px] rounded-2xl bg-white" />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-gradient-x" />
-                    </div>
+                  <div className="relative rounded-2xl overflow-hidden h-full shadow-sm group-hover:shadow-2xl group-hover:shadow-slate-900/20 transition-all duration-500 ease-out">
+                    {/* Background - transitions from white to dark navy */}
+                    <div className="absolute inset-0 bg-white group-hover:bg-gradient-to-br group-hover:from-slate-800 group-hover:via-slate-900 group-hover:to-blue-950 transition-all duration-500" />
                     
-                    <div className="relative">
+                    {/* Subtle border */}
+                    <div className="absolute inset-0 rounded-2xl border border-gray-100 group-hover:border-slate-700/50 transition-colors duration-500" />
+                    
+                    <div className="relative p-6">
                       {/* Image */}
                       {cat.image && (
                         <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden bg-gray-100">
@@ -277,23 +251,26 @@ function ProductCategoriesSection() {
                             src={cat.image}
                             alt={cat.title}
                             fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                             sizes="(max-width: 768px) 100vw, 33vw"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                          {/* Refined overlay on hover */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-30 group-hover:opacity-70 transition-opacity duration-500" />
                         </div>
                       )}
                       
                       {/* Content */}
-                      <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-white transition-colors duration-400">
                         {cat.title}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">{cat.description}</p>
+                      <p className="text-sm mb-4 line-clamp-2 text-gray-600 group-hover:text-slate-300 transition-colors duration-400">
+                        {cat.description}
+                      </p>
                       
                       {/* View details link */}
-                      <div className="flex items-center gap-1 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
-                        View Products
-                        <ArrowRight className="w-4 h-4" />
+                      <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:text-amber-400 transition-all duration-400">
+                        <span className="group-hover:tracking-wide transition-all duration-400">View Products</span>
+                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-400" />
                       </div>
                     </div>
                   </div>
@@ -692,15 +669,6 @@ export default function HomePage() {
 
       {/* About Preview - Split Screen */}
       <AboutPreviewSection />
-
-      {/* Testimonials Section */}
-      <TestimonialsSection 
-        testimonials={testimonials}
-        title="What Our Clients Say"
-        subtitle="Trusted by leading contractors and developers across the GCC"
-        variant="default"
-        columns={3}
-      />
 
       {/* Why Choose Us */}
       <WhyChooseUsSection />
