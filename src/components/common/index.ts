@@ -21,6 +21,7 @@ export { useCountUp, usePrefersReducedMotion, useInView } from './useAnimations'
 
 // Tier 1 Quick Wins - Social Proof & Conversion
 export { default as ClientLogoWall } from './ClientLogoWall';
+export { default as LogoCarousel3D } from './LogoCarousel3D';
 export { default as WhatsAppButton, WhatsAppInlineButton } from './WhatsAppButton';
 export { default as TestimonialsSection, TestimonialCard } from './TestimonialsSection';
 export { QuoteModalProvider, useQuoteModal, QuoteButton } from './QuickQuoteModal';

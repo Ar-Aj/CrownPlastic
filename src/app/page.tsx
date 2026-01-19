@@ -1,9 +1,8 @@
 'use client';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// CROWN PLASTIC PIPES - WORLD-CLASS PREMIUM B2B HOMEPAGE
-// Dubai Commercial Grade UI/UX - Rivaling Emaar/Damac quality
-// GPU-accelerated animations, 60fps, CLS<0.05, LCP<1.5s
+// CROWN PLASTIC PIPES - B2B HOMEPAGE
+// Crown Design System: Blue/White/Black Palette, Mobile-First, Static UI
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef } from 'react';
@@ -11,25 +10,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { 
-  ArrowRight, Phone, Shield, Zap, Award, Truck, 
+  ArrowRight, Phone, Shield, Award, Truck, 
   Wrench, CheckCircle2, Users, Package,
-  Globe, Clock
+  Globe, Clock, Zap
 } from 'lucide-react';
 
 // Components
 import { 
-  ClientLogoWall, 
+  LogoCarousel3D,
   QuoteButton,
 } from '@/components/common';
 import {
-  GradientMesh,
-  FloatingParticles,
   TiltCard,
   AnimatedCounter,
-  GlassStatCard,
-  MagneticButton,
   SectionHeader,
+  GradientMesh,
+  MagneticButton,
 } from '@/components/ui/premium';
+import { CrownButton, CrownPill, CrownMetricCard } from '@/components/ui/crown';
 
 // Config & Data
 import { productCategories } from '@/config/products';
@@ -40,7 +38,6 @@ import { useLanguage } from '@/context/LanguageContext';
 // Design System
 import { 
   staggerContainer, 
-  staggerContainerFast,
   fadeUp, 
   fadeIn,
   scaleIn,
@@ -49,149 +46,167 @@ import {
 } from '@/lib/design-system';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// HERO SECTION
-// Full viewport with parallax depth and floating 3D elements
+// HERO SECTION - Crown Design System
+// Mobile-first, blue/white/black palette only, static UI
+// Space reserved for future VideoCarousel3D component
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function PremiumHero() {
+function CrownHero() {
   return (
-    <header className="relative min-h-screen flex items-center overflow-hidden">
-      <GradientMesh variant="dark" />
-      <FloatingParticles count={20} />
+    <>
+      {/* ═══════════════════════════════════════════════════════════════════════
+          PLACEHOLDER: Future VideoCarousel3D Component
+          
+          This section will contain a 3D-style 6-video carousel showcasing:
+          - Product manufacturing process
+          - Installation demonstrations  
+          - Factory tour highlights
+          - Quality testing procedures
+          
+          Component will be integrated here or partially overlap hero below.
+          Mobile: Single video with swipe navigation
+          Desktop: Grid/carousel layout with 3D perspective
+      ═══════════════════════════════════════════════════════════════════════ */}
       
-      {/* Floating decorative elements */}
-      <motion.div
-        className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-500/10 blur-2xl"
-        animate={{ y: [0, 20, 0], scale: [1, 1.1, 1] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      <motion.div
-        className="absolute bottom-40 left-[5%] w-40 h-40 rounded-full bg-gradient-to-tr from-blue-500/20 to-cyan-500/10 blur-2xl"
-        animate={{ y: [0, -30, 0], scale: [1, 1.15, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      />
-      
-      <div 
-        className="container mx-auto px-4 max-w-7xl relative z-10 py-24"
-      >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            {/* Badges */}
-            <motion.div 
-              className="flex flex-wrap items-center gap-3 mb-6"
-              variants={fadeUp}
-            >
-              <span className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm text-emerald-300 text-sm font-medium px-4 py-2 rounded-full border border-emerald-500/30">
-                <Shield className="w-4 h-4" />
-                ISO 9001:2015 Certified
-              </span>
-              <span className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-300 text-sm px-4 py-2 rounded-full border border-amber-500/30">
-                <Zap className="w-4 h-4" />
-                30+ Years Excellence
-              </span>
-            </motion.div>
+      <header className="relative min-h-[90vh] md:min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Subtle static blue accent (no animation) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
+        
+        <div className="container mx-auto px-4 max-w-7xl relative z-10 py-16 md:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Main Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Premium UPVC Piping Solutions for the GCC
+              </h1>
 
-            {/* Title with gradient */}
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              variants={fadeUp}
-            >
-              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                Premium UPVC Piping
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">
-                Solutions for GCC
-              </span>
-            </motion.h1>
+              {/* Supporting Line */}
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+                Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, 
+                drainage, and infrastructure projects across the Gulf.
+              </p>
 
-            <motion.p 
-              className="text-xl text-blue-100/80 mb-8 max-w-xl leading-relaxed"
-              variants={fadeUp}
-            >
-              Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, 
-              drainage, electrical ducting, and infrastructure projects across the Gulf.
-            </motion.p>
-
-            {/* CTAs */}
-            <motion.div 
-              className="flex flex-wrap gap-4"
-              variants={fadeUp}
-            >
-              <QuoteButton variant="primary" size="lg" className="!shadow-lg !shadow-emerald-500/30">
-                Get a Free Quote
-                <ArrowRight className="w-5 h-5" />
-              </QuoteButton>
-              <MagneticButton href="tel:+97142675678" variant="secondary">
-                <Phone className="w-5 h-5" />
-                Call Now
-              </MagneticButton>
-            </motion.div>
-
-            {/* Trust indicators */}
-            <motion.div 
-              className="flex items-center gap-6 mt-10 pt-8 border-t border-white/10"
-              variants={fadeIn}
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                <span className="text-sm text-white/70">GCC Certified</span>
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4">
+                <CrownButton variant="primary" size="lg">
+                  Request a Quote
+                  <ArrowRight className="w-5 h-5" />
+                </CrownButton>
+                <CrownButton variant="secondary" size="lg" href="/products">
+                  View Products
+                  <Package className="w-5 h-5" />
+                </CrownButton>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                <span className="text-sm text-white/70">Same-Day Delivery</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                <span className="text-sm text-white/70">Bulk Discounts</span>
-              </div>
-            </motion.div>
-          </motion.div>
 
-          {/* Right Column - Stats Grid */}
-          <motion.div 
-            className="grid grid-cols-2 gap-4"
-            variants={staggerContainerFast}
-            initial="hidden"
-            animate="visible"
-          >
-            <GlassStatCard 
-              value={30} 
-              suffix="+" 
-              label="Years Experience" 
-              delay={0.3}
-              icon={<Clock className="w-5 h-5 text-amber-400" />}
-            />
-            <GlassStatCard 
-              value={5000} 
-              suffix="+" 
-              label="Products Available" 
-              delay={0.4}
-              icon={<Package className="w-5 h-5 text-blue-400" />}
-            />
-            <GlassStatCard 
-              value={52} 
-              suffix="+" 
-              label="Countries Reach" 
-              delay={0.5}
-              icon={<Globe className="w-5 h-5 text-emerald-400" />}
-            />
-            <GlassStatCard 
-              value={24} 
-              suffix="/7" 
-              label="Fast Delivery & Custom Lengths" 
-              delay={0.6}
-              icon={<Truck className="w-5 h-5 text-cyan-400" />}
-            />
-          </motion.div>
+              {/* Trust Indicators (Pills) */}
+              <div className="flex flex-wrap gap-3 pt-4">
+                <CrownPill icon={<Shield className="w-4 h-4" />}>
+                  ISO 9001:2015 Certified
+                </CrownPill>
+                <CrownPill icon={<Award className="w-4 h-4" />}>
+                  30+ Years Excellence
+                </CrownPill>
+                <CrownPill icon={<Globe className="w-4 h-4" />}>
+                  Exporting to GCC
+                </CrownPill>
+              </div>
+            </div>
+
+            {/* Right Column - Factory Image + Floating Glass Tags */}
+            <div className="relative">
+              {/* Factory/Outlet Background Image - Fully Visible */}
+              <div className="relative rounded-2xl overflow-visible shadow-2xl aspect-[4/3] bg-slate-800">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  {/* TODO: Replace with actual factory image */}
+                  <Image
+                    src="/images/about/factory-hero.jpeg"
+                    alt="Crown Plastic Pipes manufacturing facility in UAE"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                  {/* Subtle vignette - doesn't obstruct center */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-900/20" />
+                </div>
+                
+                {/* Innovative Floating Glass Tags - Corner Anchored */}
+                {/* Top-Left: Floating Glass Tag with Connecting Line */}
+                <div className="absolute -top-3 -left-3 group">
+                  {/* Connecting line to image */}
+                  <div className="absolute top-1/2 left-1/2 w-8 h-8 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
+                  
+                  {/* Floating compact stat */}
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">30+</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Years</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Top-Right: Floating Glass Tag */}
+                <div className="absolute -top-3 -right-3 group">
+                  <div className="absolute top-1/2 right-1/2 w-8 h-8 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
+                  
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Package className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">5000+</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Products</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom-Left: Floating Glass Tag */}
+                <div className="absolute -bottom-3 -left-3 group">
+                  <div className="absolute bottom-1/2 left-1/2 w-8 h-8 border-l-2 border-b-2 border-primary/30 rounded-bl-lg" />
+                  
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">52+</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Countries</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom-Right: Floating Glass Tag */}
+                <div className="absolute -bottom-3 -right-3 group">
+                  <div className="absolute bottom-1/2 right-1/2 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
+                  
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Truck className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">24/7</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Delivery</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
 
@@ -650,13 +665,12 @@ function FinalCTASection() {
 export default function HomePage() {
   return (
     <>
-      {/* Premium Hero with Parallax */}
-      <PremiumHero />
+      {/* Crown Hero - Blue/White/Black Palette */}
+      <CrownHero />
 
-      {/* Client Logo Wall - Trust Signal */}
-      <ClientLogoWall 
+      {/* 3D Logo Carousel - Trusted by Industry Leaders */}
+      <LogoCarousel3D
         logos={clientLogos.slice(0, 12)}
-        variant="grid"
         title="Trusted by Industry Leaders"
         subtitle="Partnering with the most prestigious developers and contractors across the Gulf region"
       />

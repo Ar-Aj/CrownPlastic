@@ -65,7 +65,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 xl:gap-3 shrink-0">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20">
+            <div className="relative w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Crown Plastic Pipes Logo"
