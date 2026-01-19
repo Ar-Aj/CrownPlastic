@@ -2,13 +2,12 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ClientLogo } from '@/config/clients';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 3D LOGO CAROUSEL COMPONENT
 // Center-focused carousel with 3D perspective transforms
-// Mobile: Swipe support, Desktop: Arrow navigation
+// Touch/swipe navigation with subtle scroll hints
 // ═══════════════════════════════════════════════════════════════════════════════
 
 interface LogoCarousel3DProps {
@@ -22,9 +21,21 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
+  const [showScrollHint, setShowScrollHint] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalLogos = logos.length;
+
+  // Hide scroll hint after first interaction or timeout
+  useEffect(() => {
+    const timer = setTimeout(() => setShowScrollHint(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Hide hint on first interaction
+  const hideScrollHint = () => {
+    if (showScrollHint) setShowScrollHint(false);
+  };
 
   // Navigate to next slide
   const goToNext = () => {
@@ -41,6 +52,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
     setIsDragging(true);
     setStartX(clientX);
     setDragOffset(0);
+    hideScrollHint();
   };
 
   const handleDragMove = (clientX: number) => {
@@ -154,28 +166,54 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
           </div>
         )}
 
-        {/* 3D Carousel Container with Arrows */}
+        {/* 3D Carousel Container */}
         <div className="relative">
-          {/* Navigation Arrows - Positioned relative to this container */}
-          <button
-            onClick={goToPrev}
-            className="absolute left-2 sm:left-4 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-colors shadow-lg"
-            aria-label="Previous logo"
+          {/* Subtle gradient edge fades - hint at scrollable content */}
+          <div className="absolute inset-y-0 left-0 w-12 sm:w-16 md:w-20 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-12 sm:w-16 md:w-20 bg-gradient-to-l from-slate-900 via-slate-900/60 to-transparent z-20 pointer-events-none" />
+
+          {/* Animated scroll hint - fades away after interaction */}
+          <div 
+            className={`absolute inset-0 z-30 pointer-events-none flex items-center justify-center transition-opacity duration-1000 ${
+              showScrollHint ? 'opacity-100' : 'opacity-0'
+            }`}
           >
-            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-2 sm:right-4 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-colors shadow-lg"
-            aria-label="Next logo"
-          >
-            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-          </button>
+            {/* Left hint */}
+            <div className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2">
+              <div className="flex items-center gap-1 animate-pulse">
+                <div className="w-6 h-[2px] bg-gradient-to-l from-white/40 to-transparent rounded-full" />
+              </div>
+            </div>
+            
+            {/* Right hint with animated chevrons */}
+            <div className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2">
+              <div className="flex items-center gap-0.5">
+                <div className="w-6 h-[2px] bg-gradient-to-r from-white/40 to-transparent rounded-full" />
+                <svg 
+                  className="w-3 h-3 text-white/50 animate-[scroll-hint_1.5s_ease-in-out_infinite]"
+                  viewBox="0 0 24 24" 
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Bottom swipe indicator */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
+              <div className="flex items-center gap-2 text-white/40 text-xs">
+                <div className="w-8 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_ease-in-out_infinite]" />
+                <span className="text-[10px] tracking-wider uppercase">Swipe</span>
+                <div className="w-8 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_ease-in-out_infinite]" />
+              </div>
+            </div>
+          </div>
 
           {/* Carousel viewport with perspective */}
           <div
             ref={carouselRef}
-            className="relative h-[280px] sm:h-[300px] md:h-[340px] lg:h-[380px] mx-12 sm:mx-16 md:mx-20 lg:mx-24 cursor-grab active:cursor-grabbing select-none"
+            className="relative h-[280px] sm:h-[300px] md:h-[340px] lg:h-[380px] cursor-grab active:cursor-grabbing select-none"
             style={{ perspective: '1200px' }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}

@@ -27,7 +27,7 @@ import {
   GradientMesh,
   MagneticButton,
 } from '@/components/ui/premium';
-import { CrownButton, CrownPill, CrownMetricCard } from '@/components/ui/crown';
+import { CrownButton, CrownPill } from '@/components/ui/crown';
 
 // Config & Data
 import { productCategories } from '@/config/products';
@@ -39,7 +39,6 @@ import { useLanguage } from '@/context/LanguageContext';
 import { 
   staggerContainer, 
   fadeUp, 
-  fadeIn,
   scaleIn,
   radialStagger,
   radialItem,
