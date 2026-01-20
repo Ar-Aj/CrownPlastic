@@ -145,7 +145,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   };
 
   return (
-    <section className="relative py-12 md:py-16 pb-20 md:pb-24 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative py-8 md:py-12 pb-16 md:pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background texture */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wMyIvPjwvc3ZnPg==')] opacity-50" />
 
@@ -168,10 +168,6 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
 
         {/* 3D Carousel Container */}
         <div className="relative">
-          {/* Subtle gradient edge fades - hint at scrollable content */}
-          <div className="absolute inset-y-0 left-0 w-12 sm:w-16 md:w-20 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-12 sm:w-16 md:w-20 bg-gradient-to-l from-slate-900 via-slate-900/60 to-transparent z-20 pointer-events-none" />
-
           {/* Animated scroll hint - fades away after interaction */}
           <div 
             className={`absolute inset-0 z-30 pointer-events-none flex items-center justify-center transition-opacity duration-1000 ${
@@ -213,8 +209,8 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
           {/* Carousel viewport with perspective */}
           <div
             ref={carouselRef}
-            className="relative h-[280px] sm:h-[300px] md:h-[340px] lg:h-[380px] cursor-grab active:cursor-grabbing select-none"
-            style={{ perspective: '1200px' }}
+            className="relative h-[220px] sm:h-[240px] md:h-[280px] lg:h-[320px] cursor-grab active:cursor-grabbing select-none"
+            style={{ perspective: '2000px' }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -231,34 +227,31 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
               return (
                 <div
                   key={`${logo.name}-${index}`}
-                  className="absolute left-1/2 top-1/2 -translate-y-1/2 w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out"
-                  style={style}
+                  className="absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out"
+                  style={{
+                    ...style,
+                    transformStyle: 'preserve-3d',
+                    backfaceVisibility: 'hidden',
+                  }}
                 >
                   {/* 3:4 Aspect ratio card */}
-                  <div className="aspect-[3/4] w-full rounded-xl bg-white shadow-2xl flex items-center justify-center p-4 sm:p-5 md:p-6 border border-gray-100">
-                    {/* Logo image - object-contain */}
+                  <div className="aspect-[3/4] w-full rounded-xl bg-white overflow-hidden shadow-lg" style={{ backfaceVisibility: 'hidden' }}>
+                    {/* Logo image - fills card edge-to-edge */}
                     <div className="relative w-full h-full">
                       <Image
                         src={logo.image}
                         alt={`${logo.name} logo`}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 208px, 224px"
                         draggable={false}
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = 'none';
-                        }}
                       />
-                      {/* Fallback text */}
-                      <span className="absolute inset-0 flex items-center justify-center text-sm font-medium text-gray-600 text-center px-4">
-                        {logo.name}
-                      </span>
                     </div>
                   </div>
                   
                   {/* Logo name label (visible on center card only) */}
                   {isCenter && (
-                    <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full px-2">
+                    <div className="absolute -bottom-12 sm:-bottom-14 md:-bottom-16 left-1/2 -translate-x-1/2 text-center w-full px-2">
                       <p className="text-xs sm:text-sm md:text-base font-medium text-white truncate">
                         {logo.name}
                       </p>
@@ -275,7 +268,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
           </div>
 
           {/* Dot indicators */}
-          <div className="flex justify-center gap-2 mt-12 sm:mt-14 md:mt-16">
+          <div className="relative z-50 flex justify-center gap-2 mt-16 sm:mt-18 md:mt-20">
             {logos.map((_, index) => (
               <button
                 key={index}

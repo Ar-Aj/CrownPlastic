@@ -16,105 +16,78 @@ export interface ClientLogo {
 // Recommended: SVG format, 200x80px, grayscale-ready
 
 export const clientLogos: ClientLogo[] = [
-  // Government & Municipal
-  {
-    name: 'Dubai Municipality',
-    nameAr: 'بلدية دبي',
-    image: '/images/clients/dubai-municipality.svg',
-    category: 'government',
-  },
-  {
-    name: 'Abu Dhabi Municipality',
-    nameAr: 'بلدية أبوظبي',
-    image: '/images/clients/abudhabi-municipality.svg',
-    category: 'government',
-  },
-  {
-    name: 'Sharjah Municipality',
-    nameAr: 'بلدية الشارقة',
-    image: '/images/clients/sharjah-municipality.svg',
-    category: 'government',
-  },
-  
-  // Major Developers
+  // Major Developers & Partners - Priority Order
   {
     name: 'Emaar Properties',
     nameAr: 'إعمار العقارية',
-    image: '/images/clients/emaar.svg',
+    image: '/images/clients/EMAAR.jpg',
     url: 'https://www.emaar.com',
     category: 'developer',
   },
   {
-    name: 'DAMAC Properties',
-    nameAr: 'داماك العقارية',
-    image: '/images/clients/damac.svg',
-    url: 'https://www.damacproperties.com',
+    name: 'Etihad Rail',
+    nameAr: 'الاتحاد للقطارات',
+    image: '/images/clients/ETIHAD_RAIL.jpg',
+    category: 'government',
+  },
+  {
+    name: 'Nesto',
+    nameAr: 'نستو',
+    image: '/images/clients/NESTO.jpg',
+    category: 'distributor',
+  },
+  {
+    name: 'Gulf Foundation FZE',
+    nameAr: 'جلف فاونديشن',
+    image: '/images/clients/GULF_FOUNDATION_FZE.jpg',
+    category: 'contractor',
+  },
+  {
+    name: 'National Consulting',
+    nameAr: 'الاستشارات الوطنية',
+    image: '/images/clients/NATIONAL_CONSULTING.jpg',
+    category: 'contractor',
+  },
+  {
+    name: 'MAG',
+    nameAr: 'ماج',
+    image: '/images/clients/MAG.jpg',
     category: 'developer',
   },
   {
-    name: 'Nakheel',
-    nameAr: 'نخيل',
-    image: '/images/clients/nakheel.svg',
-    url: 'https://www.nakheel.com',
+    name: 'Sharjah Asset Management',
+    nameAr: 'إدارة الأصول الشارقة',
+    image: '/images/clients/SHARJAH_ASSET_MANAGEMENT (2).jpg',
+    category: 'government',
+  },
+  {
+    name: 'Asas Real Estate',
+    nameAr: 'أساس العقارية',
+    image: '/images/clients/ASAS_RealEstate.jpg',
     category: 'developer',
   },
   {
-    name: 'Aldar Properties',
-    nameAr: 'الدار العقارية',
-    image: '/images/clients/aldar.svg',
-    url: 'https://www.aldar.com',
-    category: 'developer',
-  },
-  {
-    name: 'Meraas',
-    nameAr: 'مراس',
-    image: '/images/clients/meraas.svg',
-    category: 'developer',
-  },
-  
-  // Construction & Contractors
-  {
-    name: 'Al Futtaim Group',
-    nameAr: 'مجموعة الفطيم',
-    image: '/images/clients/alfuttaim.svg',
+    name: 'Altorath International Engineering Consultants',
+    nameAr: 'التراث الدولية للاستشارات الهندسية',
+    image: '/images/clients/ALTORATH_INTERNATION_ENGINEERING_CONSULTANTS.jpg',
     category: 'contractor',
   },
   {
-    name: 'Arabtec Construction',
-    nameAr: 'أرابتك للإنشاءات',
-    image: '/images/clients/arabtec.svg',
+    name: 'Makan Consulting Engineers LLC',
+    nameAr: 'مكان للاستشارات الهندسية',
+    image: '/images/clients/MAKAN_CONSULTING_ENGINEERS_LLC.jpg',
     category: 'contractor',
   },
   {
-    name: 'Drake & Scull',
-    nameAr: 'دريك آند سكل',
-    image: '/images/clients/drake-scull.svg',
+    name: 'Masri Engineering and Consulting',
+    nameAr: 'المصري للهندسة والاستشارات',
+    image: '/images/clients/MASRI_ENGINEERINGANDCONSULTING.jpg',
     category: 'contractor',
   },
   {
-    name: 'Al Naboodah',
-    nameAr: 'النابوده',
-    image: '/images/clients/alnaboodah.svg',
-    category: 'contractor',
-  },
-  
-  // Regional Partners
-  {
-    name: 'Saudi Binladin Group',
-    nameAr: 'مجموعة بن لادن السعودية',
-    image: '/images/clients/binladin.svg',
-    category: 'contractor',
-  },
-  {
-    name: 'Qatar Building Company',
-    nameAr: 'شركة قطر للبناء',
-    image: '/images/clients/qatar-building.svg',
-    category: 'contractor',
-  },
-  {
-    name: 'Kuwait Projects Company',
-    nameAr: 'شركة كيبكو',
-    image: '/images/clients/kipco.svg',
+    name: 'Turuq Engineering LLC',
+    nameAr: 'طروق للهندسة',
+    image: '/images/clients/TURUQ_ENGINEERING_LLC.jpg',
     category: 'contractor',
   },
 ];
