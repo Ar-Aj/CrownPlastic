@@ -11,13 +11,14 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { 
   ArrowRight, Phone, Shield, Award, Truck, 
-  Wrench, CheckCircle2, Users, Package,
-  Globe, Clock, Zap
+  Wrench, CheckCircle2, Package,
+  Globe, Clock, Zap, Earth, Recycle
 } from 'lucide-react';
 
 // Components
 import { 
   LogoCarousel3D,
+  AnimatedStatsStrip,
   QuoteButton,
 } from '@/components/common';
 import {
@@ -27,7 +28,7 @@ import {
   GradientMesh,
   MagneticButton,
 } from '@/components/ui/premium';
-import { CrownButton, CrownPill } from '@/components/ui/crown';
+import { CrownButton } from '@/components/ui/crown';
 
 // Config & Data
 import { productCategories } from '@/config/products';
@@ -39,7 +40,6 @@ import { useLanguage } from '@/context/LanguageContext';
 import { 
   staggerContainer, 
   fadeUp, 
-  scaleIn,
   radialStagger,
   radialItem,
 } from '@/lib/design-system';
@@ -67,21 +67,21 @@ function CrownHero() {
           Desktop: Grid/carousel layout with 3D perspective
       ═══════════════════════════════════════════════════════════════════════ */}
       
-      <header className="relative min-h-[90vh] md:min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Subtle static blue accent (no animation) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
+      <header className="relative min-h-[90vh] md:min-h-screen flex items-center bg-white">
+        {/* Subtle static accent (no animation) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-transparent to-gray-50" />
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <div className="space-y-8">
               {/* Main Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Premium UPVC Piping Solutions for the GCC
               </h1>
 
               {/* Supporting Line */}
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
                 Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, 
                 drainage, and infrastructure projects across the Gulf.
               </p>
@@ -92,23 +92,10 @@ function CrownHero() {
                   Request a Quote
                   <ArrowRight className="w-5 h-5" />
                 </CrownButton>
-                <CrownButton variant="secondary" size="lg" href="/products">
+                <CrownButton variant="secondary" size="lg" href="/products" className="!bg-gray-100 !text-gray-800 !border-gray-200 hover:!bg-gray-200">
                   View Products
                   <Package className="w-5 h-5" />
                 </CrownButton>
-              </div>
-
-              {/* Trust Indicators (Pills) */}
-              <div className="flex flex-wrap gap-3 pt-4">
-                <CrownPill icon={<Shield className="w-4 h-4" />}>
-                  ISO 9001:2015 Certified
-                </CrownPill>
-                <CrownPill icon={<Award className="w-4 h-4" />}>
-                  30+ Years Excellence
-                </CrownPill>
-                <CrownPill icon={<Globe className="w-4 h-4" />}>
-                  Exporting to GCC
-                </CrownPill>
               </div>
             </div>
 
@@ -312,50 +299,28 @@ function ProductCategoriesSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// STATS STRIP - Animated Counter Section
+// STATS STRIP - Animated Horizontal Ticker
+// Slow, constant-speed marquee with 8 stats (certifications + key numbers)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function StatsStripSection() {
-  const stats = [
-    { value: 30, suffix: '+', label: 'Years of Excellence', icon: Award },
-    { value: 5000, suffix: '+', label: 'Products Available', icon: Package },
-    { value: 10000, suffix: '+', label: 'Happy Customers', icon: Users },
-    { value: 6, suffix: '', label: 'GCC Countries', icon: Globe },
+function NewStatsStripSection() {
+  // 8 stats as specified: mix of numbers, certifications, and quality metrics
+  const statsData = [
+    { icon: Award, value: '30+', label: 'Years of Excellence' },
+    { icon: Package, value: '5000+', label: 'Products Available' },
+    { icon: Globe, value: '6', label: 'GCC Countries' },
+    { icon: Earth, value: '52+', label: 'Countries Served' },
+    { icon: Shield, value: 'ISO 9001:2015', label: 'Quality Certified' },
+    { icon: Shield, value: 'ISO 14001:2015', label: 'Environmental Certified' },
+    { icon: Shield, value: 'ISO 45001:2018', label: 'Safety Certified' },
+    { icon: Recycle, value: '100%', label: 'Virgin uPVC Raw Material' },
   ];
 
   return (
-    <section className="relative py-16 overflow-hidden">
-      <GradientMesh variant="dark" />
-      
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {stats.map((stat) => (
-            <motion.div
-              key={stat.label}
-              variants={scaleIn}
-              className="text-center"
-            >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm mb-4">
-                <stat.icon className="w-7 h-7 text-amber-400" />
-              </div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              </div>
-              <div className="text-blue-200/70 text-sm font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-      
-      {/* Animated connecting line */}
-      <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-    </section>
+    <AnimatedStatsStrip 
+      stats={statsData}
+      loopDurationMs={9000} // 35 seconds for one full loop - calm B2B feel
+    />
   );
 }
 
@@ -677,8 +642,8 @@ export default function HomePage() {
       {/* Product Categories - Glass Grid */}
       <ProductCategoriesSection />
 
-      {/* Stats Strip - Animated Counters */}
-      <StatsStripSection />
+      {/* Stats Strip - Slow Horizontal Ticker with 8 Stats */}
+      <NewStatsStripSection />
 
       {/* About Preview - Split Screen */}
       <AboutPreviewSection />

@@ -7,6 +7,7 @@ export { default as PageHeader } from './PageHeader';
 export { default as HeroSection } from './HeroSection';
 export { default as CardGrid } from './CardGrid';
 export { default as StatsStrip } from './StatsStrip';
+export { default as AnimatedStatsStrip } from './AnimatedStatsStrip';
 export { default as Timeline } from './Timeline';
 export { default as AwardsList } from './AwardsList';
 
