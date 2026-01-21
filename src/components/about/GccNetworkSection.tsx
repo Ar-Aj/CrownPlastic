@@ -23,7 +23,7 @@ export default function GccNetworkSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 bg-white"
+      className="py-12 md:py-16 bg-white"
     >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -39,7 +39,7 @@ export default function GccNetworkSection() {
             </span>
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               Serving GCC &<br />
               <span className="text-primary">Sub-continent</span>
             </h2>

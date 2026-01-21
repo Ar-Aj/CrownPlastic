@@ -19,7 +19,7 @@ export default function CompanyProfileStrip() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden"
+      className="py-12 md:py-14 bg-gray-900 text-white relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -42,7 +42,7 @@ export default function CompanyProfileStrip() {
             <span className="inline-block px-4 py-1 bg-white/10 text-white/90 text-sm font-medium rounded-full mb-4 border border-white/20">
               Company Profile
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Crown Plastic Pipes Factory L.L.C.
             </h2>
           </motion.div>

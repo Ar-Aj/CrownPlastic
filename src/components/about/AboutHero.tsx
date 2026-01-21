@@ -51,9 +51,9 @@ export default function AboutHero() {
       {/* Main Hero Content */}
       <div className="relative">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 min-h-[600px] lg:min-h-[700px]">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 min-h-[500px] lg:min-h-[600px]">
             {/* Left: Content Column */}
-            <div className="flex flex-col justify-center py-12 lg:py-20 lg:pr-12">
+            <div className="flex flex-col justify-center py-10 lg:py-14 lg:pr-12">
               {/* Breadcrumb */}
               <motion.div
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: -10 }}
@@ -71,7 +71,7 @@ export default function AboutHero() {
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight"
               >
                 Crown Plastic Pipes
                 <span className="block text-primary">Factory L.L.C.</span>
@@ -102,7 +102,7 @@ export default function AboutHero() {
                     transition={{ duration: 0.3 }}
                     className="min-h-[120px]"
                   >
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                    <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
                       {currentFact.subtitle}
                     </h2>
                     <p className="text-gray-600 leading-relaxed max-w-xl">

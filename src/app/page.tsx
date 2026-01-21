@@ -67,21 +67,21 @@ function CrownHero() {
           Desktop: Grid/carousel layout with 3D perspective
       ═══════════════════════════════════════════════════════════════════════ */}
       
-      <header className="relative min-h-[90vh] md:min-h-screen flex items-center bg-white">
+      <header className="relative min-h-[70vh] md:min-h-[80vh] flex items-center bg-white">
         {/* Subtle static accent (no animation) */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-transparent to-gray-50" />
         
-        <div className="container mx-auto px-4 max-w-7xl relative z-10 py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10 py-12 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <div className="space-y-8">
               {/* Main Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Premium UPVC Piping Solutions for the GCC
               </h1>
 
               {/* Supporting Line */}
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
                 Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, 
                 drainage, and infrastructure projects across the Gulf.
               </p>
@@ -214,7 +214,7 @@ function ProductCategoriesSection() {
   }));
 
   return (
-    <section ref={ref} className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-12 md:py-16 bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-50" />
       
@@ -341,7 +341,7 @@ function AboutPreviewSection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-28 bg-gray-50 overflow-hidden">
+    <section ref={ref} className="py-12 md:py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Content */}
@@ -353,7 +353,7 @@ function AboutPreviewSection() {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
               {t('home.about_badge')}
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
               Trusted by UAE&apos;s{' '}
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                 Leading Contractors
@@ -495,7 +495,7 @@ function WhyChooseUsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-28 bg-white">
+    <section ref={ref} className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <SectionHeader
           label="Why Choose Us"
@@ -543,7 +543,7 @@ function FinalCTASection() {
   const t = useT();
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 md:py-14 overflow-hidden">
       <GradientMesh variant="emerald" />
       
       {/* Animated gradient overlay */}
@@ -576,7 +576,7 @@ function FinalCTASection() {
             Ready to Start?
           </motion.span>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             {t('home.cta_title')}
           </h2>
           
