@@ -2,7 +2,7 @@
 
 import { AboutBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import {
-  AboutHero,
+  AboutHeroCinematic,
   CompanyGlanceSection,
   PipingJourney,
   GccNetworkSection,
@@ -22,8 +22,8 @@ export default function AboutPage() {
       {/* SEO: Breadcrumb Schema */}
       <AboutBreadcrumb />
 
-      {/* 1. Hero Section with Interactive Story Header */}
-      <AboutHero />
+      {/* 1. Hero Section - Cinematic Side-Swapping Vision/Mission */}
+      <AboutHeroCinematic />
 
       {/* 2. Company at a Glance - Data-driven Grid */}
       <CompanyGlanceSection />

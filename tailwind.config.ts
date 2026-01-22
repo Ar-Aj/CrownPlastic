@@ -23,6 +23,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       animation: {
         'gradient-x': 'gradient-x 3s ease infinite',
         'gradient-y': 'gradient-y 3s ease infinite',

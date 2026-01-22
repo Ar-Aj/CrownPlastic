@@ -153,3 +153,73 @@ export function useInView(threshold: number = 0.1) {
 
   return { ref, isInView };
 }
+
+/**
+ * Hook to detect scroll direction ("up" | "down" | null)
+ * Returns null when at the very top of the page (scrollY < threshold)
+ * Optimized with RAF throttling and respects prefers-reduced-motion
+ * 
+ * @param threshold - Minimum scroll distance to trigger direction change (default: 10px)
+ */
+export function useScrollDirection(threshold: number = 10) {
+  const [scrollDirection, setScrollDirection] = useState<'up' | 'down' | null>(null);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    const updateScrollDirection = () => {
+      const scrollY = window.scrollY;
+
+      // If we're at the very top, set direction to null (navbar always visible)
+      if (scrollY < threshold) {
+        if (scrollDirection !== null) {
+          setScrollDirection(null);
+        }
+        lastScrollY.current = scrollY;
+        ticking.current = false;
+        return;
+      }
+
+      // Detect direction change
+      const diff = scrollY - lastScrollY.current;
+      
+      // Only update if scroll distance exceeds threshold
+      if (Math.abs(diff) < threshold) {
+        ticking.current = false;
+        return;
+      }
+
+      const direction = diff > 0 ? 'down' : 'up';
+      
+      if (direction !== scrollDirection) {
+        setScrollDirection(direction);
+      }
+
+      lastScrollY.current = scrollY;
+      ticking.current = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking.current) {
+        requestAnimationFrame(updateScrollDirection);
+        ticking.current = true;
+      }
+    };
+
+    // Passive listener for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initialize on mount
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollDirection, threshold]);
+
+  // If reduced motion is preferred, always return null (navbar always visible)
+  if (prefersReducedMotion) {
+    return null;
+  }
+
+  return scrollDirection;
+}

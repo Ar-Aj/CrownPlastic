@@ -18,7 +18,7 @@ export { default as PdfViewer } from './PdfViewer';
 
 // Animation Utilities
 export { default as AnimateOnScroll, useAnimateOnScroll } from './AnimateOnScroll';
-export { useCountUp, usePrefersReducedMotion, useInView } from './useAnimations';
+export { useCountUp, usePrefersReducedMotion, useInView, useScrollDirection } from './useAnimations';
 
 // Tier 1 Quick Wins - Social Proof & Conversion
 export { default as ClientLogoWall } from './ClientLogoWall';
