@@ -101,7 +101,10 @@ export default function PipingJourney() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = useState(false);
 
+  // SSR-safe: guards window access
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener('resize', checkMobile);

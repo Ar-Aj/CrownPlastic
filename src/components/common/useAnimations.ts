@@ -70,11 +70,15 @@ export function useCountUp(
 
 /**
  * Hook to detect prefers-reduced-motion
+ * SSR-safe: returns false during SSR, checks after mount
  */
 export function usePrefersReducedMotion(): boolean {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    // SSR guard: window is only available client-side
+    if (typeof window === 'undefined') return;
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
 
@@ -93,13 +97,15 @@ export function usePrefersReducedMotion(): boolean {
  * Hook for parallax scroll effect on an element
  * Respects prefers-reduced-motion
  * Optimized with passive listener and throttling
+ * SSR-safe: guards all window access
  */
 export function useParallaxScroll(factor: number = 0.1) {
   const [offset, setOffset] = useState(0);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    // SSR guard + reduced motion check
+    if (typeof window === 'undefined' || prefersReducedMotion) return;
 
     let ticking = false;
     let lastScrollY = 0;
@@ -158,6 +164,7 @@ export function useInView(threshold: number = 0.1) {
  * Hook to detect scroll direction ("up" | "down" | null)
  * Returns null when at the very top of the page (scrollY < threshold)
  * Optimized with RAF throttling and respects prefers-reduced-motion
+ * SSR-safe: guards all window access
  * 
  * @param threshold - Minimum scroll distance to trigger direction change (default: 10px)
  */
@@ -168,6 +175,9 @@ export function useScrollDirection(threshold: number = 10) {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
+    // SSR guard: window is only available client-side
+    if (typeof window === 'undefined') return;
+
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
 

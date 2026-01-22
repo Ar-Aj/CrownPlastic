@@ -87,7 +87,10 @@ export default function AboutHeroCinematic() {
   const [isMobile, setIsMobile] = useState(true); // Default to mobile for SSR
 
   // Detect breakpoint: mobile/tablet (< 1024px) vs desktop (>= 1024px)
+  // SSR-safe: guards window access
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener('resize', checkMobile);
