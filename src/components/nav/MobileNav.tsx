@@ -65,9 +65,9 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
 
   return (
     <>
-      {/* Backdrop */}
+      {/* Backdrop - z-[60] ensures it sits above header (z-50) and all page content */}
       <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300"
+        className="fixed inset-0 bg-black/50 z-[60] lg:hidden transition-opacity duration-300"
         style={{ 
           opacity: isOpen ? 1 : 0,
           pointerEvents: isOpen ? 'auto' : 'none',
@@ -75,9 +75,9 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
         onClick={onClose}
       />
 
-      {/* Slide-in menu */}
+      {/* Mobile menu panel - z-[70] ensures it's the absolute top layer */}
       <div 
-        className={`fixed top-0 h-full w-80 max-w-full bg-white z-50 lg:hidden shadow-xl overflow-y-auto ${
+        className={`fixed top-0 h-full w-80 max-w-full bg-white z-[70] lg:hidden shadow-xl overflow-y-auto ${
           isRTL ? 'left-0' : 'right-0'
         }`}
         style={{

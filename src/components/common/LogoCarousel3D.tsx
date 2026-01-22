@@ -22,9 +22,20 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalLogos = logos.length;
+
+  // Detect desktop breakpoint (lg: 1024px) - SSR safe
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
 
   // Hide scroll hint after first interaction or timeout
   useEffect(() => {
@@ -112,7 +123,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
     const position = (index - currentIndex + totalLogos) % totalLogos;
     const normalizedPos = position > totalLogos / 2 ? position - totalLogos : position;
 
-    // Center card (position 0)
+    // Center card (position 0) - same for all breakpoints
     if (normalizedPos === 0) {
       return {
         transform: `translateX(calc(-50% + ${dragOffset}px)) scale(1) rotateY(0deg)`,
@@ -120,15 +131,72 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         zIndex: 30,
       };
     }
-    // Left card -1 (always visible)
-    else if (normalizedPos === -1) {
+
+    // ═══════════════════════════════════════════════════════════════════════════════
+    // MOBILE/TABLET (<1024px): 3 cards visible, smooth slide behavior
+    // Card widths: w-40 (160px) / sm:w-48 (192px) / md:w-52 (208px)
+    // With scale(0.75), effective widths are ~120-156px
+    //
+    // SMOOTH SLIDE FIX:
+    // Position +2 (next hidden card) placed at 160% instead of 250% to create
+    // gradual spacing steps: hidden(160%) → visible-right(75%) → center(-50%)
+    // This prevents the "rush in" effect when the 4th card becomes visible.
+    // ═══════════════════════════════════════════════════════════════════════════════
+    if (!isDesktop) {
+      // Left card -1: positioned far enough left to never overlap center
+      if (normalizedPos === -1) {
+        return {
+          transform: `translateX(calc(-175% + ${dragOffset}px)) scale(0.75) rotateY(25deg)`,
+          opacity: 0.5,
+          zIndex: 20,
+        };
+      }
+      // Right card +1: positioned far enough right to never overlap center
+      else if (normalizedPos === 1) {
+        return {
+          transform: `translateX(calc(75% + ${dragOffset}px)) scale(0.75) rotateY(-25deg)`,
+          opacity: 0.5,
+          zIndex: 20,
+        };
+      }
+      // Next incoming card +2 (right): closer position for smooth slide transition
+      else if (normalizedPos === 2) {
+        return {
+          transform: `translateX(calc(160% + ${dragOffset}px)) scale(0.65) rotateY(-35deg)`,
+          opacity: 0.3,
+          zIndex: 15,
+        };
+      }
+      // Previous outgoing card -2 (left): symmetric positioning
+      else if (normalizedPos === -2) {
+        return {
+          transform: `translateX(calc(-260% + ${dragOffset}px)) scale(0.65) rotateY(35deg)`,
+          opacity: 0.3,
+          zIndex: 15,
+        };
+      }
+      // Far hidden cards on mobile - pushed way off-screen
+      else {
+        return {
+          transform: `translateX(${normalizedPos > 0 ? '300%' : '-300%'}) scale(0.5)`,
+          opacity: 0,
+          zIndex: 10,
+        };
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════════
+    // DESKTOP (lg+): 5 cards visible with tighter spacing
+    // ═══════════════════════════════════════════════════════════════════════════════
+    // Left card -1
+    if (normalizedPos === -1) {
       return {
         transform: `translateX(calc(-150% + ${dragOffset}px)) scale(0.85) rotateY(18deg)`,
         opacity: 0.6,
         zIndex: 20,
       };
     }
-    // Right card +1 (always visible)
+    // Right card +1
     else if (normalizedPos === 1) {
       return {
         transform: `translateX(calc(50% + ${dragOffset}px)) scale(0.85) rotateY(-18deg)`,
@@ -136,7 +204,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         zIndex: 20,
       };
     }
-    // Left card -2 (visible on lg+ screens only)
+    // Left card -2 (desktop only)
     else if (normalizedPos === -2) {
       return {
         transform: `translateX(calc(-250% + ${dragOffset}px)) scale(0.7) rotateY(35deg)`,
@@ -144,7 +212,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         zIndex: 15,
       };
     }
-    // Right card +2 (visible on lg+ screens only)
+    // Right card +2 (desktop only)
     else if (normalizedPos === 2) {
       return {
         transform: `translateX(calc(150% + ${dragOffset}px)) scale(0.7) rotateY(-35deg)`,
@@ -243,16 +311,16 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
               const isCenter = (index - currentIndex + totalLogos) % totalLogos === 0;
               
               // Calculate normalized position for conditional rendering
+              // Both desktop and mobile now show ±2 cards for smooth transitions
+              // Desktop: 5 cards visible (±2, ±1, 0) with tighter spacing
+              // Mobile: 3 cards prominent (±1, 0), ±2 cards dimmed for smooth slide-in
               const position = (index - currentIndex + totalLogos) % totalLogos;
               const normalizedPos = position > totalLogos / 2 ? position - totalLogos : position;
-              const isOuterCard = normalizedPos === -2 || normalizedPos === 2;
               
               return (
                 <div
                   key={`${logo.name}-${index}`}
-                  className={`absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out ${
-                    isOuterCard ? 'hidden lg:block' : ''
-                  }`}
+                  className="absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out"
                   style={{
                     ...style,
                     transformStyle: 'preserve-3d',

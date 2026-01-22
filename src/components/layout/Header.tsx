@@ -20,25 +20,27 @@ export default function Header() {
   // Determine navbar visibility state
   // On mobile (< lg breakpoint): always visible
   // On desktop/tablet: hide when scrolling down, show when scrolling up or at top
-  const isHidden = scrollDirection === 'down';
+  // CRITICAL: Keep navbar visible when mobile menu is open to prevent disorientation
+  const isHidden = isMobileMenuOpen ? false : scrollDirection === 'down';
 
   return (
-    <header
-      className={
-        `sticky top-0 z-50 transition-all duration-300 ease-in-out ${
-          isHidden
-            ? prefersReducedMotion
-              ? 'opacity-20 md:opacity-20 lg:opacity-20' // Reduced motion: only opacity fade
-              : 'md:-translate-y-4 md:opacity-0 lg:-translate-y-4 lg:opacity-0' // Full animation on desktop/tablet
-            : 'translate-y-0 opacity-100'
-        } ${
-          // Translucent background when visible and not at very top
-          scrollDirection !== null
-            ? 'bg-white/80 backdrop-blur-md shadow-md'
-            : 'bg-white shadow-sm'
-        }`
-      }
-    >
+    <>
+      <header
+        className={
+          `sticky top-0 z-50 transition-all duration-300 ease-in-out ${
+            isHidden
+              ? prefersReducedMotion
+                ? 'opacity-20 md:opacity-20 lg:opacity-20' // Reduced motion: only opacity fade
+                : 'md:-translate-y-4 md:opacity-0 lg:-translate-y-4 lg:opacity-0' // Full animation on desktop/tablet
+              : 'translate-y-0 opacity-100'
+          } ${
+            // Translucent background when visible and not at very top
+            scrollDirection !== null
+              ? 'bg-white/80 backdrop-blur-md shadow-md'
+              : 'bg-white shadow-sm'
+          }`
+        }
+      >
       {/* Top utility bar */}
       <div className="bg-primary text-white text-sm">
         <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 py-2 flex flex-wrap items-center justify-between gap-2">
@@ -125,13 +127,14 @@ export default function Header() {
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      <MobileNav
-        items={mainNavItems}
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
     </header>
+
+    {/* Mobile Navigation - MUST be outside header to break stacking context */}
+    <MobileNav
+      items={mainNavItems}
+      isOpen={isMobileMenuOpen}
+      onClose={() => setIsMobileMenuOpen(false)}
+    />
+    </>
   );
 }
