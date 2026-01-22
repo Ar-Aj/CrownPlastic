@@ -106,6 +106,8 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   };
 
   // Calculate position and transforms for each logo
+  // Desktop (lg+): Shows 5 cards (center + 2 left + 2 right)
+  // Mobile/Tablet: Shows 3 cards (center + 1 left + 1 right)
   const getLogoStyle = (index: number) => {
     const position = (index - currentIndex + totalLogos) % totalLogos;
     const normalizedPos = position > totalLogos / 2 ? position - totalLogos : position;
@@ -118,26 +120,42 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         zIndex: 30,
       };
     }
-    // Left card (position -1)
+    // Left card -1 (always visible)
     else if (normalizedPos === -1) {
       return {
-        transform: `translateX(calc(-150% + ${dragOffset}px)) scale(0.8) rotateY(20deg)`,
-        opacity: 0.5,
+        transform: `translateX(calc(-150% + ${dragOffset}px)) scale(0.85) rotateY(18deg)`,
+        opacity: 0.6,
         zIndex: 20,
       };
     }
-    // Right card (position 1)
+    // Right card +1 (always visible)
     else if (normalizedPos === 1) {
       return {
-        transform: `translateX(calc(50% + ${dragOffset}px)) scale(0.8) rotateY(-20deg)`,
-        opacity: 0.5,
+        transform: `translateX(calc(50% + ${dragOffset}px)) scale(0.85) rotateY(-18deg)`,
+        opacity: 0.6,
         zIndex: 20,
       };
     }
-    // Hidden cards
+    // Left card -2 (visible on lg+ screens only)
+    else if (normalizedPos === -2) {
+      return {
+        transform: `translateX(calc(-250% + ${dragOffset}px)) scale(0.7) rotateY(35deg)`,
+        opacity: 0.35,
+        zIndex: 15,
+      };
+    }
+    // Right card +2 (visible on lg+ screens only)
+    else if (normalizedPos === 2) {
+      return {
+        transform: `translateX(calc(150% + ${dragOffset}px)) scale(0.7) rotateY(-35deg)`,
+        opacity: 0.35,
+        zIndex: 15,
+      };
+    }
+    // Hidden cards (beyond 5-card range)
     else {
       return {
-        transform: `translateX(${normalizedPos > 0 ? '200%' : '-200%'}) scale(0.5)`,
+        transform: `translateX(${normalizedPos > 0 ? '300%' : '-300%'}) scale(0.5)`,
         opacity: 0,
         zIndex: 10,
       };
@@ -224,10 +242,17 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
               const style = getLogoStyle(index);
               const isCenter = (index - currentIndex + totalLogos) % totalLogos === 0;
               
+              // Calculate normalized position for conditional rendering
+              const position = (index - currentIndex + totalLogos) % totalLogos;
+              const normalizedPos = position > totalLogos / 2 ? position - totalLogos : position;
+              const isOuterCard = normalizedPos === -2 || normalizedPos === 2;
+              
               return (
                 <div
                   key={`${logo.name}-${index}`}
-                  className="absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out"
+                  className={`absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out ${
+                    isOuterCard ? 'hidden lg:block' : ''
+                  }`}
                   style={{
                     ...style,
                     transformStyle: 'preserve-3d',
