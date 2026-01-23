@@ -3,7 +3,8 @@
 import { AboutBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import {
   AboutHeroCinematic,
-  CompanyGlanceSection,
+  AboutStatsStrip,
+  AboutProductRangeMap,
   PipingJourney,
   GccNetworkSection,
   CertificationsAndStandards,
@@ -25,11 +26,11 @@ export default function AboutPage() {
       {/* 1. Hero Section - Cinematic Side-Swapping Vision/Mission */}
       <AboutHeroCinematic />
 
-      {/* 2. Company at a Glance - Data-driven Grid */}
-      <CompanyGlanceSection />
-
-      {/* 3. Piping Journey - Horizontal scroll-reactive timeline */}
+      {/* 2. Piping Journey - Horizontal scroll-reactive timeline */}
       <PipingJourney />
+
+      {/* 3. Stats Strip - Animated horizontal ticker with company highlights */}
+      <AboutStatsStrip />
 
       {/* 4. Interactive GCC Network Map */}
       <GccNetworkSection />
@@ -40,7 +41,10 @@ export default function AboutPage() {
       {/* 6. Innovation Lab / R&D Section */}
       <InnovationLabSection />
 
-      {/* 7. Closing Company Profile Strip with CTAs */}
+      {/* 7. Product Range Map - Interactive product taxonomy */}
+      <AboutProductRangeMap />
+
+      {/* 8. Closing Company Profile Strip with CTAs */}
       <CompanyProfileStrip />
     </>
   );

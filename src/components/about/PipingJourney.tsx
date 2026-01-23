@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } fr
 import { journeyEvents, type JourneyEvent } from './about.types';
 import Icon, { type IconName } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
+import { PvcPipeProgress } from './PvcPipeProgress';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -38,8 +39,8 @@ import { cn } from '@/lib/utils';
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // CONFIGURATION
-const HEADER_OFFSET = 120;     // px - Total header height (utility bar + main nav)
-const SCROLL_PER_STORY = 60;   // vh - Scroll distance to advance one story (60-80 typical)
+const HEADER_OFFSET = 0;       // px - No offset since navbar is transparent (content sits behind navbar)
+const SCROLL_PER_STORY = 70;   // vh - Scroll distance to advance one story (60-80 typical)
 
 // ─────────────────────────────────────────────────────────────────────────────
 // STORY DATA
@@ -113,29 +114,50 @@ export default function PipingJourney() {
 
   return (
     <section className="bg-white">
-      {/* Section Header - Scrolls normally, outside pinned area */}
-      <div className="py-8 md:py-10">
-        <div className="container mx-auto px-4 text-center">
-          <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
-            Our Journey
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            30 Years of Excellence
-          </h2>
-          <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
-          </p>
-        </div>
-      </div>
-
-      {/* Desktop: Pinned story strip */}
+      {/* Desktop: Pinned story strip with header inside sticky area */}
       {!isMobile && !prefersReducedMotion && <DesktopPinnedStrip />}
 
       {/* Mobile: Story carousel (no pinning) */}
-      {isMobile && <MobileStoryCarousel prefersReducedMotion={prefersReducedMotion} />}
+      {isMobile && (
+        <>
+          {/* Section Header - Mobile only (outside scroll lock) */}
+          <div className="py-8 md:py-10">
+            <div className="container mx-auto px-4 text-center">
+              <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
+                Our Journey
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                30 Years of Excellence
+              </h2>
+              <p className="text-base text-gray-600 max-w-2xl mx-auto">
+                From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+              </p>
+            </div>
+          </div>
+          <MobileStoryCarousel prefersReducedMotion={prefersReducedMotion} />
+        </>
+      )}
 
       {/* Desktop with reduced motion: Accordion fallback */}
-      {!isMobile && prefersReducedMotion && <ReducedMotionFallback />}
+      {!isMobile && prefersReducedMotion && (
+        <>
+          {/* Section Header - Reduced motion fallback */}
+          <div className="py-8 md:py-10">
+            <div className="container mx-auto px-4 text-center">
+              <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
+                Our Journey
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                30 Years of Excellence
+              </h2>
+              <p className="text-base text-gray-600 max-w-2xl mx-auto">
+                From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+              </p>
+            </div>
+          </div>
+          <ReducedMotionFallback />
+        </>
+      )}
     </section>
   );
 }
@@ -159,8 +181,8 @@ function DesktopPinnedStrip() {
     offset: ['start start', 'end end'],
   });
 
-  // Map scroll progress to pipe fill percentage
-  const pipeFill = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  // Map scroll progress to pipe fill (0 to 1 for PvcPipeProgress)
+  const pipeFillProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   // Update active story index based on scroll progress
   useEffect(() => {
@@ -213,9 +235,10 @@ function DesktopPinnedStrip() {
           STICKY VIEWPORT: Pins below header while user scrolls
           - position: sticky keeps it fixed at top: HEADER_OFFSET
           - height: calc(100vh - HEADER_OFFSET) fills exactly one viewport
+          - Now includes section header that stays visible during scroll lock
           ─────────────────────────────────────────────────────────────────────── */}
       <div
-        className="sticky overflow-hidden"
+        className="sticky overflow-hidden bg-white"
         style={{
           top: `${HEADER_OFFSET}px`,
           height: `calc(100vh - ${HEADER_OFFSET}px)`,
@@ -225,113 +248,127 @@ function DesktopPinnedStrip() {
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-40 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
         {/* ─────────────────────────────────────────────────────────────────────
-            CONTENT: Vertically centered within the sticky viewport
+            CONTENT: Section header + story content within sticky viewport
             ───────────────────────────────────────────────────────────────────── */}
-        <div className="h-full flex flex-col justify-center container mx-auto px-4 relative z-10 py-4">
-          {/* Story Title */}
-          <div className="text-center mb-3">
-            <AnimatePresence mode="wait">
-              <motion.h3
-                key={activeIndex}
-                initial={{ opacity: 0, y: -6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="text-xl font-bold text-gray-900"
-              >
-                {activeStory.title}
-              </motion.h3>
-            </AnimatePresence>
-            <p className="text-primary font-medium text-sm">{activeStory.yearRange}</p>
+        <div className="h-full flex flex-col container mx-auto px-4 relative z-10">
+          {/* Section Header - Stays visible during scroll lock */}
+          <div className="pt-8 pb-4 text-center flex-shrink-0">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
+              Our Journey
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+              30 Years of Excellence
+            </h2>
+            <p className="text-sm lg:text-base text-gray-600 max-w-2xl mx-auto">
+              From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+            </p>
           </div>
 
-          {/* Horizontal Pipe with Story Nodes */}
-          <div className="relative py-3 mb-4">
-            {/* Pipe Background */}
-            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-gray-200 rounded-full" />
-
-            {/* Pipe Fill - animated */}
-            <motion.div
-              className="absolute left-0 top-1/2 -translate-y-1/2 h-1 rounded-full origin-left"
-              style={{
-                width: useTransform(pipeFill, (v) => `${v}%`),
-                background: 'linear-gradient(90deg, #0072BC 0%, #0072BC 85%, rgba(0,114,188,0.3) 100%)',
-              }}
-            />
-
-            {/* Story Nodes */}
-            <div className="relative flex justify-between items-center px-4 lg:px-8">
-              {journeyStories.map((story, index) => (
-                <StoryNode
-                  key={story.id}
-                  story={story}
-                  isPast={index <= activeIndex}
-                  isActive={index === activeIndex}
-                />
-              ))}
+          {/* Story Content - Vertically centered in remaining space */}
+          <div className="flex-1 flex flex-col justify-center pb-8">
+            {/* Story Title */}
+            <div className="text-center mb-3">
+              <AnimatePresence mode="wait">
+                <motion.h3
+                  key={activeIndex}
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-lg lg:text-xl font-bold text-gray-900"
+                >
+                  {activeStory.title}
+                </motion.h3>
+              </AnimatePresence>
+              <p className="text-primary font-medium text-sm">{activeStory.yearRange}</p>
             </div>
-          </div>
 
-          {/* Active Story Card */}
-          <div className="flex justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, y: 8, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -8, scale: 0.98 }}
-                transition={{ duration: 0.2 }}
-                className="w-full max-w-2xl"
-              >
-                <div className="p-4 rounded-2xl bg-white border-2 border-primary shadow-lg">
-                  {/* Header */}
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Icon name={activeStory.icon} size={18} className="text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="text-base font-bold text-gray-900">{activeStory.title}</h4>
-                      <p className="text-primary text-sm font-medium">{activeStory.yearRange}</p>
-                    </div>
-                  </div>
+            {/* Horizontal 3D PVC Pipe with Story Nodes */}
+            <div className="relative py-6 mb-3 lg:mb-4">
+              {/* ─────────────────────────────────────────────────────────────────
+                  3D PVC PIPE PROGRESS BAR
+                  - Dark grey cylindrical pipe with Crown blue fill
+                  - Progress (0-1) mapped from scrollYProgress
+                  - Sits below the story nodes
+                  ───────────────────────────────────────────────────────────────── */}
+              <div className="absolute inset-x-4 lg:inset-x-12 top-1/2 -translate-y-1/2">
+                <PvcPipeProgress progress={pipeFillProgress} />
+              </div>
 
-                  {/* Tagline */}
-                  <p className="text-gray-600 text-sm mb-2">{activeStory.tagline}</p>
+              {/* Story Nodes - positioned above the pipe */}
+              <div className="relative flex justify-between items-center px-2 lg:px-8 z-20">
+                {journeyStories.map((story, index) => (
+                  <StoryNode
+                    key={story.id}
+                    story={story}
+                    isPast={index <= activeIndex}
+                    isActive={index === activeIndex}
+                  />
+                ))}
+              </div>
+            </div>
 
-                  {/* Milestones as inline chips */}
-                  <div className="flex flex-wrap gap-2">
-                    {activeEvents.map((event) => (
-                      <div
-                        key={event.year}
-                        className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-gray-50"
-                      >
-                        <span className="px-2 py-0.5 bg-primary text-white text-xs font-bold rounded">
-                          {event.year}
-                        </span>
-                        <span className="text-sm text-gray-700">{event.title}</span>
-                        {event.highlight && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        )}
+            {/* Active Story Card */}
+            <div className="flex justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full max-w-2xl"
+                >
+                  <div className="p-3 lg:p-4 rounded-2xl bg-white border-2 border-primary shadow-lg">
+                    {/* Header */}
+                    <div className="flex items-center gap-2.5 lg:gap-3 mb-2">
+                      <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon name={activeStory.icon} size={18} className="text-primary" />
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+                      <div>
+                        <h4 className="text-sm lg:text-base font-bold text-gray-900">{activeStory.title}</h4>
+                        <p className="text-primary text-xs lg:text-sm font-medium">{activeStory.yearRange}</p>
+                      </div>
+                    </div>
 
-          {/* Scroll Hint */}
-          <motion.div
-            className="text-center mt-3 text-xs text-gray-400"
-            animate={{ opacity: activeIndex === journeyStories.length - 1 ? 0 : 1 }}
-          >
+                    {/* Tagline */}
+                    <p className="text-gray-600 text-xs lg:text-sm mb-2">{activeStory.tagline}</p>
+
+                    {/* Milestones as inline chips */}
+                    <div className="flex flex-wrap gap-1.5 lg:gap-2">
+                      {activeEvents.map((event) => (
+                        <div
+                          key={event.year}
+                          className="inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-2.5 py-1 rounded-lg bg-gray-50"
+                        >
+                          <span className="px-1.5 lg:px-2 py-0.5 bg-primary text-white text-[10px] lg:text-xs font-bold rounded">
+                            {event.year}
+                          </span>
+                          <span className="text-xs lg:text-sm text-gray-700">{event.title}</span>
+                          {event.highlight && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Scroll Hint */}
             <motion.div
-              animate={{ y: [0, 3, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              className="text-center mt-2 lg:mt-3 text-xs text-gray-400"
+              animate={{ opacity: activeIndex === journeyStories.length - 1 ? 0 : 1 }}
             >
-              ↓ Scroll to explore
+              <motion.div
+                animate={{ y: [0, 3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                ↓ Scroll to explore
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
@@ -386,16 +423,15 @@ function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps)
 
   return (
     <div className="pb-10">
-      {/* Pipe Rail */}
+      {/* 3D PVC Pipe Rail */}
       <div className="container mx-auto px-4 mb-4">
-        <div className="relative py-4">
-          <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 h-1 bg-gray-200 rounded-full" />
-          <div
-            className="absolute left-4 top-1/2 -translate-y-1/2 h-1 bg-primary rounded-full transition-all duration-300"
-            style={{ width: `calc(${fillPercentage}% - 16px)` }}
-          />
+        <div className="relative py-6">
+          {/* 3D PVC Pipe for mobile - uses static progress calculation */}
+          <div className="absolute inset-x-4 top-1/2 -translate-y-1/2">
+            <PvcPipeProgress progress={fillPercentage / 100} />
+          </div>
 
-          <div className="relative flex justify-between items-center">
+          <div className="relative flex justify-between items-center z-20">
             {journeyStories.map((story, index) => (
               <button
                 key={story.id}
@@ -596,10 +632,12 @@ function ReducedMotionFallback() {
 
   return (
     <div className="container mx-auto px-4 pb-10">
-      {/* Pipe */}
-      <div className="relative py-4 mb-4">
-        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-primary rounded-full" />
-        <div className="relative flex justify-between items-center px-4">
+      {/* 3D PVC Pipe - fully filled for reduced motion */}
+      <div className="relative py-6 mb-4">
+        <div className="absolute inset-x-4 top-1/2 -translate-y-1/2">
+          <PvcPipeProgress progress={1} />
+        </div>
+        <div className="relative flex justify-between items-center px-4 z-20">
           {journeyStories.map((story) => (
             <div key={story.id} className="flex flex-col items-center">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow">

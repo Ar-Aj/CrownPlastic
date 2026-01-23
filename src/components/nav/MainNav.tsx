@@ -18,7 +18,7 @@ const navLabelToPath: Record<string, TranslationPath> = {
   'Products': 'nav.products',
   'Sustainability': 'nav.sustainability',
   'Innovation': 'nav.innovation',
-  'News & Media': 'nav.news_media',
+  'Media & Blogs': 'nav.news_media',
   'Resources': 'nav.resources',
   'Contact': 'nav.contact',
 };
@@ -56,7 +56,7 @@ export default function MainNav({ items }: MainNavProps) {
   }, []);
 
   return (
-    <nav className="flex items-center gap-0.5 xl:gap-1">
+    <nav className="flex items-center gap-0.5 xl:gap-2 2xl:gap-3">
       {items.map((item) => (
         <div
           key={item.href}
@@ -66,14 +66,14 @@ export default function MainNav({ items }: MainNavProps) {
         >
           <Link
             href={item.href}
-            className={`px-2 xl:px-3 py-2 text-[13px] xl:text-sm font-medium text-gray-700 hover:text-primary transition-colors rounded-lg hover:bg-gray-50 flex items-center gap-0.5 whitespace-nowrap ${
+            className={`px-2 xl:px-3 2xl:px-4 py-2 text-[13px] xl:text-sm 2xl:text-base font-medium text-gray-700 hover:text-primary transition-colors rounded-lg hover:bg-gray-50 flex items-center gap-0.5 xl:gap-1 2xl:gap-1 whitespace-nowrap ${
               openDropdown === item.label ? 'text-primary bg-gray-50' : ''
             }`}
           >
             {translateLabel(item.label)}
             {item.children && (
               <svg
-                className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-transform duration-200 ${
+                className={`w-3.5 h-3.5 xl:w-4 xl:h-4 2xl:w-4.5 2xl:h-4.5 transition-transform duration-200 ${
                   openDropdown === item.label ? 'rotate-180' : ''
                 }`}
                 fill="none"
@@ -94,7 +94,7 @@ export default function MainNav({ items }: MainNavProps) {
             >
               {/* Invisible bridge to prevent hover gap */}
               <div className="absolute -top-1 left-0 right-0 h-2" />
-              <div className="w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="w-64 xl:w-72 2xl:w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
                 {item.children.map((child) => {
                   const childLabel = language === 'ar' ? (child.labelAr || child.label) : child.label;
                   const childDesc = language === 'ar' ? (child.descriptionAr || child.description) : child.description;

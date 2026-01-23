@@ -59,8 +59,8 @@ export const mainNavItems: NavItem[] = [
     href: '/innovation',
   },
   {
-    label: 'News & Media',
-    labelAr: 'الأخبار والإعلام',
+    label: 'Media & Blogs',
+    labelAr: 'الإعلام والمدونات',
     href: '/news-media',
   },
   {
