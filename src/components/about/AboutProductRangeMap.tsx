@@ -468,7 +468,7 @@ export default function AboutProductRangeMap() {
   return (
     <section
       id="crown-product-range"
-      className="relative w-full bg-gradient-to-b from-slate-50 via-white to-slate-100 py-10 sm:py-12 md:pb-16 lg:pb-20"
+      className="relative w-full max-w-full overflow-x-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 py-10 sm:py-12 md:pb-16 lg:pb-20"
       aria-labelledby="product-range-heading"
     >
       {/* Background pattern */}
@@ -528,11 +528,11 @@ export default function AboutProductRangeMap() {
         ═══════════════════════════════════════════════════════════════ */}
         
         {/* Mobile/Tablet Layout (< lg): Vertical stack */}
-        <div className="lg:hidden flex flex-col items-center">
+        <div className="lg:hidden flex flex-col items-center w-full max-w-full overflow-x-hidden">
           {/* Compact wheel for mobile/tablet */}
-          <div className="w-full mb-4 sm:mb-6">
-            <div className="relative mx-auto aspect-square max-w-[260px] sm:max-w-[320px] md:max-w-[360px]">
-              <CenteredGlow size={360} reducedMotion={reducedMotion} />
+          <div className="w-full max-w-full mb-4 sm:mb-6 overflow-hidden">
+            <div className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] overflow-hidden">
+              <CenteredGlow size={240} reducedMotion={reducedMotion} />
               <OrbitRing orbitRadius={wheelConfig.mobile.orbitRadius} reducedMotion={reducedMotion} />
               <CentralHub
                 hubSize={wheelConfig.mobile.hubSize}
@@ -566,7 +566,7 @@ export default function AboutProductRangeMap() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: 0.15 }}
-            className="w-full rounded-2xl bg-white shadow-lg border border-slate-100 px-4 py-5 sm:px-6 sm:py-6 max-w-[95%] sm:max-w-[400px] md:max-w-[480px] mx-auto"
+            className="w-full max-w-full rounded-2xl bg-white shadow-lg border border-slate-100 px-4 py-5 sm:px-6 sm:py-6 sm:max-w-[400px] md:max-w-[480px] mx-auto"
           >
             <AnimatePresence mode="wait">
               {activeCategory && (
