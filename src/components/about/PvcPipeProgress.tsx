@@ -72,9 +72,20 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
   const prefersReducedMotion = useReducedMotion();
   
   // Transform progress (0-1) to percentage width for the water fill
-  const fillWidth = typeof progress === 'number' 
+  // IMPORTANT: Always call useTransform (React Hooks must be called unconditionally)
+  // Create a static motion value for number inputs to satisfy React Hooks rules
+  const staticProgress: MotionValue<number> = typeof progress === 'number'
+    ? ({ get: () => progress } as MotionValue<number>)
+    : progress;
+    
+  const fillWidthMotion = useTransform(
+    staticProgress,
+    (v: number) => `${Math.max(0, Math.min(100, v * 100))}%`
+  );
+  
+  const fillWidth = typeof progress === 'number'
     ? `${Math.max(0, Math.min(100, progress * 100))}%`
-    : useTransform(progress, (v) => `${Math.max(0, Math.min(100, v * 100))}%`);
+    : fillWidthMotion;
 
   return (
     <div className={`relative h-6 md:h-7 ${className}`}>

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { PRODUCT_MAP, type ProductCategory, type ProductItem } from '@/data/productMap';
 import { PRODUCT_WHEEL_IMAGE_MAP, getCategoryAcronym } from '@/data/productWheelMap';
-import { ChevronRight } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT RANGE WHEEL SELECTOR - Perfectly Centered Circular Layout
@@ -83,12 +82,10 @@ function getNodePosition(
  */
 function CentralHub({
   hubSize,
-  hubImageSize,
   activeCategoryId,
   reducedMotion,
 }: {
   hubSize: number;
-  hubImageSize: number;
   activeCategoryId: string;
   reducedMotion: boolean;
 }) {
@@ -240,7 +237,6 @@ function WheelNode({
   position,
   index,
   nodeSize,
-  nodeImageSize,
   isActive,
   isHovered,
   onClick,
@@ -252,7 +248,6 @@ function WheelNode({
   position: { x: number; y: number };
   index: number;
   nodeSize: number;
-  nodeImageSize: number;
   isActive: boolean;
   isHovered: boolean;
   onClick: () => void;
@@ -541,7 +536,6 @@ export default function AboutProductRangeMap() {
               <OrbitRing orbitRadius={wheelConfig.mobile.orbitRadius} reducedMotion={reducedMotion} />
               <CentralHub
                 hubSize={wheelConfig.mobile.hubSize}
-                hubImageSize={wheelConfig.mobile.hubImageSize}
                 activeCategoryId={activeCategoryId}
                 reducedMotion={reducedMotion}
               />
@@ -554,7 +548,6 @@ export default function AboutProductRangeMap() {
                     position={position}
                     index={index}
                     nodeSize={wheelConfig.mobile.nodeSize}
-                    nodeImageSize={wheelConfig.mobile.nodeImageSize}
                     isActive={activeCategoryId === category.id}
                     isHovered={hoveredCategoryId === category.id}
                     onClick={() => handleCategoryClick(category.id)}
@@ -596,7 +589,6 @@ export default function AboutProductRangeMap() {
               <OrbitRing orbitRadius={wheelConfig.lg.orbitRadius} reducedMotion={reducedMotion} />
               <CentralHub
                 hubSize={wheelConfig.lg.hubSize}
-                hubImageSize={wheelConfig.lg.hubImageSize}
                 activeCategoryId={activeCategoryId}
                 reducedMotion={reducedMotion}
               />
@@ -609,7 +601,6 @@ export default function AboutProductRangeMap() {
                     position={position}
                     index={index}
                     nodeSize={wheelConfig.lg.nodeSize}
-                    nodeImageSize={wheelConfig.lg.nodeImageSize}
                     isActive={activeCategoryId === category.id}
                     isHovered={hoveredCategoryId === category.id}
                     onClick={() => handleCategoryClick(category.id)}

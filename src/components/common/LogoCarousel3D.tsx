@@ -310,13 +310,6 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
               const style = getLogoStyle(index);
               const isCenter = (index - currentIndex + totalLogos) % totalLogos === 0;
               
-              // Calculate normalized position for conditional rendering
-              // Both desktop and mobile now show ±2 cards for smooth transitions
-              // Desktop: 5 cards visible (±2, ±1, 0) with tighter spacing
-              // Mobile: 3 cards prominent (±1, 0), ±2 cards dimmed for smooth slide-in
-              const position = (index - currentIndex + totalLogos) % totalLogos;
-              const normalizedPos = position > totalLogos / 2 ? position - totalLogos : position;
-              
               return (
                 <div
                   key={`${logo.name}-${index}`}
