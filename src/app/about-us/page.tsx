@@ -41,7 +41,7 @@ export default function AboutPage() {
       {/* 6. Innovation Lab / R&D Section */}
       <InnovationLabSection />
 
-      {/* 7. Product Range Map - Interactive product taxonomy */}
+      {/* 7. Product Range Wheel - Rotating wheel selector for categories */}
       <AboutProductRangeMap />
 
       {/* 8. Closing Company Profile Strip with CTAs */}

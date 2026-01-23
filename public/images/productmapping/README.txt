@@ -1,21 +1,18 @@
-Product Category Images
-=======================
+Product Wheel Category Images
+=============================
 
-Place production category images here with these exact filenames:
+Place category artwork images here with these filenames:
 
-- upvc-pressure.jpg  (UPVC Pressure Pipes & Fittings)
-- upvc-drainage.jpg  (UPVC Drainage Pipes & Fittings)
-- upvc-duct.jpg      (UPVC Duct Pipes & Accessories)
-- pvc-conduit.jpg    (PVC Conduit Pipes)
-- ppr.jpg            (PPR Pipes)
-- hdpe.jpg           (HDPE Pipe Systems)
+- upvc-pressure-wheel.png  (UPVC Pressure Pipes & Fittings)
+- upvc-drainage-wheel.png  (UPVC Drainage Pipes & Fittings)
+- upvc-duct-wheel.png      (UPVC Duct Pipes & Accessories)
+- pvc-conduit-wheel.png    (PVC Conduit Pipes)
+- ppr-wheel.png            (PPR Pipes)
+- hdpe-wheel.png           (HDPE Pipe Systems)
 
 Recommended specifications:
-- Dimensions: 80x80px minimum, 200x200px ideal (square)
-- Format: JPG or PNG
-- Style: Clean product shots or category illustrations
+- Dimensions: 64x64px or 128x128px (square, centered artwork)
+- Format: PNG with transparency for best results
+- Style: Clean icons or product illustrations suitable for circular display
 
-The component will fall back to a colored gradient with initials
-if any image is missing or fails to load.
-
-Mapping configuration: src/data/productImageMap.ts
+The component will fall back to text acronyms (UPP, UPD, etc.) if images are missing.
