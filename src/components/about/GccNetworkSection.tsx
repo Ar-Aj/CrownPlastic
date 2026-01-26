@@ -25,7 +25,7 @@ export default function GccNetworkSection() {
       ref={sectionRef}
       className="py-12 md:py-16 bg-white"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 2xl:px-[10vw]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
