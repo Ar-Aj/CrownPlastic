@@ -218,7 +218,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
           {/* Main content area - relative container for absolute children */}
           {/* pt-28 lg:pt-32 adds space below navbar so content isn't hidden */}
           <div className="relative z-10 h-full pt-28 lg:pt-32">
-            <div className="container mx-auto px-4 lg:px-8 xl:px-16 max-w-7xl h-full">
+            <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 2xl:px-[10vw] h-full">
               {/* Positioning container for columns */}
               <div className="relative h-full">
                 
@@ -376,7 +376,7 @@ function MobileHero({ prefersReducedMotion }: MobileHeroProps) {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900" />
 
-      <div className="relative z-10 container mx-auto px-4 py-10 md:py-12">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 2xl:px-[10vw] py-10 md:py-12">
         {/* Breadcrumb */}
         <div className="mb-4 md:mb-6">
           <span className="text-sm text-slate-400">
