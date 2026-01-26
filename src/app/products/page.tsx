@@ -106,7 +106,7 @@ export default function ProductsPage() {
             </div>
           </AnimateOnScroll>
           
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {topLevelDocs.map((doc, index) => (
               <AnimateOnScroll key={doc.src} animation="fade-up" delay={index * 80}>
                 <PdfViewer

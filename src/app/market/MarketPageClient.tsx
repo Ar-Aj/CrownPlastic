@@ -624,7 +624,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
           <FloatingParticles />
           
           <motion.div 
-            className="container mx-auto px-4 max-w-7xl relative z-10 py-24"
+            className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-24"
             style={{ opacity: heroOpacity, y: heroY }}
           >
             {/* Breadcrumb */}
@@ -723,7 +723,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
             CERTIFICATIONS BAR
         ═══════════════════════════════════════════════════════════════════════════════ */}
         <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-8 border-y border-white/10">
-          <div className="container mx-auto px-4 max-w-7xl">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
             <motion.div 
               className="flex flex-wrap justify-center items-center gap-4 md:gap-6"
               variants={staggerContainer}
@@ -741,7 +741,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
         {/* ═══════════════════════════════════════════════════════════════════════════════
             MAIN CONTENT GRID
         ═══════════════════════════════════════════════════════════════════════════════ */}
-        <div className="container mx-auto px-4 py-20 max-w-7xl">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none py-20">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content - 2/3 */}
             <div className="lg:col-span-2 space-y-20">

@@ -481,7 +481,7 @@ export default function AboutProductRangeMap() {
       />
 
       {/* Main container */}
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         
         {/* HEADER - full width on all breakpoints */}
         <div className="text-center mb-6 lg:mb-10">

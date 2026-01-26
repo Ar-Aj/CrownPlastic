@@ -567,7 +567,7 @@ export default function ProductGalaxyMap() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none py-16 lg:py-20">
         {/* ───────────────────────────────────────────────────────────────────
             HEADER
         ─────────────────────────────────────────────────────────────────── */}

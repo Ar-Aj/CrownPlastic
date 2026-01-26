@@ -122,7 +122,7 @@ export default function PipingJourney() {
         <>
           {/* Section Header - Mobile only (outside scroll lock) */}
           <div className="py-8 md:py-10">
-            <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 text-center">
+            <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
                 Our Journey
               </span>
@@ -143,7 +143,7 @@ export default function PipingJourney() {
         <>
           {/* Section Header - Reduced motion fallback */}
           <div className="py-8 md:py-10">
-            <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 text-center">
+            <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
                 Our Journey
               </span>
@@ -250,7 +250,7 @@ function DesktopPinnedStrip() {
         {/* ─────────────────────────────────────────────────────────────────────
             CONTENT: Section header + story content within sticky viewport
             ───────────────────────────────────────────────────────────────────── */}
-        <div className="h-full flex flex-col mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+        <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
           {/* Section Header - Stays visible during scroll lock */}
           <div className="pt-8 pb-4 text-center flex-shrink-0">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
@@ -424,7 +424,7 @@ function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps)
   return (
     <div className="pb-10">
       {/* 3D PVC Pipe Rail */}
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 mb-4">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none mb-4">
         <div className="relative py-6">
           {/* 3D PVC Pipe for mobile - uses static progress calculation */}
           <div className="absolute inset-x-4 top-1/2 -translate-y-1/2">
@@ -631,7 +631,7 @@ function ReducedMotionFallback() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
-    <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 pb-10">
+    <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none pb-10">
       {/* 3D PVC Pipe - fully filled for reduced motion */}
       <div className="relative py-6 mb-4">
         <div className="absolute inset-x-4 top-1/2 -translate-y-1/2">

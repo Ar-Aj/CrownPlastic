@@ -71,7 +71,7 @@ function CrownHero() {
         {/* Subtle static accent (no animation) */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-transparent to-gray-50" />
         
-        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10 py-12 md:py-16">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-12 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <div className="space-y-8">
@@ -218,7 +218,7 @@ function ProductCategoriesSection() {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-50" />
       
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
           label="Our Products"
           title="Premium Piping"
@@ -342,7 +342,7 @@ function AboutPreviewSection() {
 
   return (
     <section ref={ref} className="py-12 md:py-16 bg-gray-50 overflow-hidden">
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Content */}
           <motion.div
@@ -496,7 +496,7 @@ function WhyChooseUsSection() {
 
   return (
     <section ref={ref} className="py-12 md:py-16 bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         <SectionHeader
           label="Why Choose Us"
           title="The Crown"
@@ -559,7 +559,7 @@ function FinalCTASection() {
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
       
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 30 }}

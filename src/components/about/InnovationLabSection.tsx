@@ -22,7 +22,7 @@ export default function InnovationLabSection() {
       ref={sectionRef}
       className="py-12 md:py-16 bg-white"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         {/* Section Header */}
         <motion.div
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}

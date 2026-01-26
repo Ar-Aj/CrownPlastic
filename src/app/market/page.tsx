@@ -44,7 +44,7 @@ export default function MarketsPage() {
       <main className="min-h-screen bg-white">
         {/* Hero */}
         <header className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
             <nav className="text-sm mb-6 text-blue-200">
               <ol className="flex items-center gap-2">
                 <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -65,7 +65,7 @@ export default function MarketsPage() {
 
         {/* Stats */}
         <section className="bg-gray-100 py-8">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-blue-900">6+</div>
@@ -89,7 +89,7 @@ export default function MarketsPage() {
 
         {/* Market Groups */}
         <section className="py-16">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
             {marketGroups.map((group, groupIndex) => (
               <div key={groupIndex} className="mb-16 last:mb-0">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -131,7 +131,7 @@ export default function MarketsPage() {
 
         {/* CTA */}
         <section className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4 max-w-6xl text-center">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
             <h2 className="text-3xl font-bold mb-4">Don&apos;t See Your Market?</h2>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
               We export to additional markets across the Middle East, Africa, and Asia. 

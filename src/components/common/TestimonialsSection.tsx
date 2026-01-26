@@ -183,7 +183,7 @@ export default function TestimonialsSection({
 
   return (
     <section ref={ref} className={`py-16 md:py-24 ${bgStyles[variant]}`}>
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
