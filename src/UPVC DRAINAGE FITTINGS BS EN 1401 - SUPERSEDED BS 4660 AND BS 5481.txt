@@ -1,0 +1,549 @@
+<START_PDF_JSON>
+
+{
+
+"standard": "UPVC DRAINAGE FITTINGS BS EN 1401/SUPERSEDED BS 4660 & BS 5481",
+
+"tables": [
+
+{
+
+"title": "ELBOW 90°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UE 903CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0"
+
+},
+
+{
+
+"PART": "UE 904CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0"
+
+},
+
+{
+
+"PART": "UE 906CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0"
+
+},
+
+{
+
+"PART": "UE 908CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "ELBOW 45°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UE45 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0"
+
+},
+
+{
+
+"PART": "UE45 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0"
+
+},
+
+{
+
+"PART": "UE45 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0"
+
+},
+
+{
+
+"PART": "UE45 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "SOCKET/COUPLER",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "US 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40"
+
+},
+
+{
+
+"PART": "US 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48"
+
+},
+
+{
+
+"PART": "US 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58"
+
+},
+
+{
+
+"PART": "US 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70"
+
+}
+
+]
+
+},
+
+{
+
+"title": "REDUCER BUSH/SOCKET",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "URB 4X3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4x3"",
+
+"D": "110.0",
+
+"d": "82.6",
+
+"L": "40.0",
+
+"H": "50.0"
+
+},
+
+{
+
+"PART": "URB 6X3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6x3"",
+
+"D": "160.0",
+
+"d": "110.0",
+
+"L": "48.0",
+
+"H": "60.0"
+
+},
+
+{
+
+"PART": "URB8X6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8x6"",
+
+"D": "200.0",
+
+"d": "160.0",
+
+"L": "58.0",
+
+"H": "73.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "ΤΕΕ 87.5°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UT 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0",
+
+"H": "170.0"
+
+},
+
+{
+
+"PART": "UT 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0",
+
+"H": "219.0"
+
+},
+
+{
+
+"PART": "UT 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0",
+
+"H": "296.0"
+
+},
+
+{
+
+"PART": "UT 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70.0",
+
+"H": "355.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "Y - 45°/SKEW TEE",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UY 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "91.2",
+
+"d L": "82.6 40.0",
+
+"H": "195.0"
+
+},
+
+{
+
+"PART": "UY 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"d L": "110.0 48.0",
+
+"H": "259.0"
+
+},
+
+{
+
+"PART": "UY 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "173.6",
+
+"d L": "160.0 58.0",
+
+"H": "257.0"
+
+},
+
+{
+
+"PART": "UY 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "",
+
+"d L": "",
+
+"H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "ACCESS CAP/CLEAN OUT",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UAC 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"d": "82.6",
+
+"H": "70"
+
+},
+
+{
+
+"PART": "UAC 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"d": "110.0",
+
+"H": "76"
+
+},
+
+{
+
+"PART": "UAC 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"d": "160.0",
+
+"H": "100"
+
+},
+
+{
+
+"PART": "UAC 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"d": "200.0",
+
+"H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "ACCESS/DOOR ELBOW 90°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UDE 3CR TC",
+
+"NOMINAL SIZE\n(Inch)": "3"",
+
+"D": "92.5",
+
+"D": "82.6",
+
+"D1 H L Tr": "43.0 Tr76X4 66.5 96.0"
+
+},
+
+{
+
+"PART": "UDE 4CR TC",
+
+"NOMINAL SIZE\n(Inch)": "4"",
+
+"D": "120.6",
+
+"D": "110.0",
+
+"D1 H L Tr": "51.3 Tr104X4 90.4 119.3"
+
+},
+
+{
+
+"PART": "UDE 6CR TC",
+
+"NOMINAL SIZE\n(Inch)": "6"",
+
+"D": "",
+
+"D": "",
+
+"D1 H L Tr": ""
+
+},
+
+{
+
+"PART": "UDE 8CR TC",
+
+"NOMINAL SIZE\n(Inch)": "8"",
+
+"D": "",
+
+"D": "",
+
+"D1 H L Tr": ""
+
+}
+
+]
+
+}
+
+]
+
+}
+
+<END_PDF_JSON>

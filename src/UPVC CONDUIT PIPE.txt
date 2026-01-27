@@ -1,0 +1,589 @@
+<START_PDF_JSON>
+
+{
+
+"standard": "UPVC CONDUIT PIPES – SCH 40 & SCH 80",
+
+"series": [
+
+{
+
+"id": "sch40",
+
+"label": "UPVC Conduit Pipes SCH 40",
+
+"tables": [
+
+{
+
+"title": "SCHEDULE 40 CONDUIT - US",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Part No\#": "CPUS 01240",
+
+"Trade Dimension": "1½" (16 mm)",
+
+"Wall Thickness (mm)": "2.77",
+
+"Mtrs/Pack": "20",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 03440",
+
+"Trade Dimension": "3½" (21 mm)",
+
+"Wall Thickness (mm)": "2.87",
+
+"Mtrs/Pack": "10",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00140",
+
+"Trade Dimension": "1" (27 mm)",
+
+"Wall Thickness (mm)": "3.38",
+
+"Mtrs/Pack": "10",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 11440",
+
+"Trade Dimension": "1¼" (35 mm)",
+
+"Wall Thickness (mm)": "3.56",
+
+"Mtrs/Pack": "5",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 11240",
+
+"Trade Dimension": "1½" (41 mm)",
+
+"Wall Thickness (mm)": "3.68",
+
+"Mtrs/Pack": "5",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00240",
+
+"Trade Dimension": "2" (53 mm)",
+
+"Wall Thickness (mm)": "3.91",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00340",
+
+"Trade Dimension": "3" (78 mm)",
+
+"Wall Thickness (mm)": "5.49",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00440",
+
+"Trade Dimension": "4" (103 mm)",
+
+"Wall Thickness (mm)": "6.02",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00640",
+
+"Trade Dimension": "6" (155 mm)",
+
+"Wall Thickness (mm)": "7.11",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+}
+
+]
+
+},
+
+{
+
+"title": "HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Part No\#": "CPHD20",
+
+"Dimension": "20 mm",
+
+"Min. ID": "16.0 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPHD25",
+
+"Dimension": "25 mm",
+
+"Min. ID": "20.7 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPHD32",
+
+"Dimension": "32 mm",
+
+"Min. ID": "26.5 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPHD38",
+
+"Dimension": "38 mm",
+
+"Min. ID": "32.5 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPHD50",
+
+"Dimension": "50 mm",
+
+"Min. ID": "43.0 mm",
+
+"Psc/Pack": "5",
+
+"Mtrs/Pack": "14.5",
+
+"Length/Pc": "2.9 Mtr"
+
+}
+
+]
+
+},
+
+{
+
+"title": "MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Part No\#": "CPMD20",
+
+"Dimension": "20 mm",
+
+"Min. ID": "16.5 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPMD25",
+
+"Dimension": "25 mm",
+
+"Min. ID": "20.9 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPMD32",
+
+"Dimension": "32 mm",
+
+"Min. ID": "27.3 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPMD38",
+
+"Dimension": "38 mm",
+
+"Min. ID": "33.1 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPMD50",
+
+"Dimension": "50 mm",
+
+"Min. ID": "44.4 mm",
+
+"Psc/Pack": "5",
+
+"Mtrs/Pack": "14.5",
+
+"Length/Pc": "2.9 Mtr"
+
+}
+
+]
+
+},
+
+{
+
+"title": "LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Part No\#": "CPLD20",
+
+"Dimension": "20 mm",
+
+"Min. ID": "16.5 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPLD25",
+
+"Dimension": "25 mm",
+
+"Min. ID": "20.9 mm",
+
+"Psc/Pack": "20",
+
+"Mtrs/Pack": "58",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPLD32",
+
+"Dimension": "32 mm",
+
+"Min. ID": "27.3 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPLD38",
+
+"Dimension": "38 mm",
+
+"Min. ID": "33.1 mm",
+
+"Psc/Pack": "10",
+
+"Mtrs/Pack": "29",
+
+"Length/Pc": "2.9 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPLD50",
+
+"Dimension": "50 mm",
+
+"Min. ID": "44.4 mm",
+
+"Psc/Pack": "5",
+
+"Mtrs/Pack": "14.5",
+
+"Length/Pc": "2.9 Mtr"
+
+}
+
+]
+
+}
+
+]
+
+},
+
+{
+
+"id": "sch80",
+
+"label": "UPVC Conduit Pipes SCH 80",
+
+"tables": [
+
+{
+
+"title": "SCHEDULE 80 CONDUIT - US",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Part No\#": "CPUS 01280",
+
+"Trade Dimension": "1½" (16 mm)",
+
+"Wall Thickness (mm)": "3.73",
+
+"Mtrs/Pack": "20",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 03480",
+
+"Trade Dimension": "½" (21 mm)",
+
+"Wall Thickness (mm)": "3.91",
+
+"Mtrs/Pack": "10",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00180",
+
+"Trade Dimension": "1" (27 mm)",
+
+"Wall Thickness (mm)": "4.55",
+
+"Mtrs/Pack": "10",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 11480",
+
+"Trade Dimension": "1¼" (35 mm)",
+
+"Wall Thickness (mm)": "4.85",
+
+"Mtrs/Pack": "5",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 11280",
+
+"Trade Dimension": "1½" (41 mm)",
+
+"Wall Thickness (mm)": "5.08",
+
+"Mtrs/Pack": "5",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00280",
+
+"Trade Dimension": "2" (53 mm)",
+
+"Wall Thickness (mm)": "5.54",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00380",
+
+"Trade Dimension": "3" (78 mm)",
+
+"Wall Thickness (mm)": "7.62",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00480",
+
+"Trade Dimension": "4" (103 mm)",
+
+"Wall Thickness (mm)": "8.56",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+},
+
+{
+
+"Part No\#": "CPUS 00680",
+
+"Trade Dimension": "6" (155 mm)",
+
+"Wall Thickness (mm)": "10.97",
+
+"Mtrs/Pack": "1",
+
+"Length/Pc": "3 Mtr"
+
+}
+
+]
+
+}
+
+]
+
+}
+
+]
+
+}
+
+<END_PDF_JSON>

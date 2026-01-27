@@ -33,6 +33,7 @@ const categoryImageMap: Record<string, string> = {
   'upvc-duct': '/images/products/galaxy/upvc-duct.png',
   'pvc-conduit': '/images/products/galaxy/pvc-conduit.png',
   'ppr': '/images/products/galaxy/ppr.png',
+  'upvc-fabrications': '/images/products/galaxy/upvc-fabrications.png',
   'polyethylene': '/images/products/galaxy/hdpe.png',
 };
 
@@ -43,6 +44,7 @@ const fallbackImageMap: Record<string, string> = {
   'upvc-duct': '/images/products/upvc-duct.jpg',
   'pvc-conduit': '/images/products/pvc-conduit.jpg',
   'ppr': '/images/products/ppr-pipes.jpg',
+  'upvc-fabrications': '/images/products/upvc-fabrications.jpg',
   'polyethylene': '/images/products/pe-systems.jpg',
 };
 

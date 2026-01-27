@@ -28,6 +28,7 @@ export const PRODUCT_WHEEL_IMAGE_MAP: Record<string, string> = {
   'upvc-duct': '/images/productmapping/upvc-duct-wheel.jpg',
   'pvc-conduit': '/images/productmapping/pvc-conduit-wheel.jpg',
   'ppr': '/images/productmapping/ppr-wheel.jpg',
+  'upvc-fabrications': '/images/productmapping/upvc-fabrications-wheel.jpg',
   'polyethylene': '/images/productmapping/hdpe-wheel.jpg', // Note: category ID is 'polyethylene', image is 'hdpe'
 };
 
@@ -35,12 +36,13 @@ export const PRODUCT_WHEEL_IMAGE_MAP: Record<string, string> = {
  * Category acronyms for fallback display when images are missing
  */
 export const CATEGORY_ACRONYMS: Record<string, string> = {
-  'upvc-pressure': 'UPP',
-  'upvc-drainage': 'UPD',
-  'upvc-duct': 'UDT',
-  'pvc-conduit': 'PVC',
+  'upvc-pressure': 'PVC PRESSURE',
+  'upvc-drainage': 'UPVC DRAINAGE',
+  'upvc-duct': 'UPVC DUCT',
+  'pvc-conduit': 'CONDUIT',
   'ppr': 'PPR',
-  'polyethylene': 'PE',
+  'upvc-fabrications': 'FABRICATIONS',
+  'polyethylene': 'HDPE',
 };
 
 /**

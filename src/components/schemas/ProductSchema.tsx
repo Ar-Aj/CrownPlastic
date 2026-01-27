@@ -135,7 +135,7 @@ export function ProductDetailSchema({ product, categoryName, categorySlug }: Pro
     ],
     image: [
       `${baseUrl}/images/products/upvc-pressure.jpg`,
-      `${baseUrl}/images/products/upvc-pressure-pipes-metric.jpg`,
+      `${baseUrl}/images/products/upvc-pressure-pipes.jpg`,
     ],
     offers: {
       '@type': 'Offer',
@@ -226,8 +226,8 @@ export function ProductDetailSchema({ product, categoryName, categorySlug }: Pro
     isRelatedTo: [
       {
         '@type': 'Product',
-        name: 'UPVC Pressure Fittings',
-        url: `${baseUrl}/products/upvc-pressure/fittings`,
+        name: 'PVC Pressure Fittings BS EN 1452',
+        url: `${baseUrl}/products/upvc-pressure/pvc-pressure-bs-en-1452`,
       },
     ],
   };

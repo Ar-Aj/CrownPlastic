@@ -18,7 +18,7 @@ const navLabelToPath: Record<string, TranslationPath> = {
   'Products': 'nav.products',
   'Sustainability': 'nav.sustainability',
   'Innovation': 'nav.innovation',
-  'Media & Blogs': 'nav.news_media',
+  'Media & Blogs': 'nav.media_blogs',
   'Resources': 'nav.resources',
   'Contact': 'nav.contact',
 };

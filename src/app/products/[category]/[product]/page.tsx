@@ -11,6 +11,8 @@ import { useT } from '@/i18n';
 import { ProductDetailBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import { ProductDetailSchema } from '@/components/schemas/ProductSchema';
 import { upvcPressurePipeSpecs, type ProductSpecification } from '@/config/schemas';
+import { hasProductDetail, getProductDetail } from '@/config/productDetails';
+import { ProductDetailLayout } from '@/components/products';
 
 interface ProductPageProps {
   params: { category: string; product: string };
@@ -25,6 +27,17 @@ export default function ProductPage({ params }: ProductPageProps) {
   
   if (!category_data || !product) {
     notFound();
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Check if this product has an enhanced detail page configuration
+  // If so, render the new ProductDetailLayout instead of the basic layout
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (hasProductDetail(productSlug)) {
+    const detailConfig = getProductDetail(productSlug);
+    if (detailConfig) {
+      return <ProductDetailLayout product={detailConfig} />;
+    }
   }
 
   // Get technical documents for this specific product

@@ -1,0 +1,1643 @@
+<START_PDF_JSON>
+
+{
+
+"standard": "UPVC DRAINAGE FITTING BS EN 1329-1:2014/SUPERSEDED BS 5255 & BS 4514",
+
+"tables": [
+
+{
+
+"title": "ELBOW 90°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UE90 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1}/{2}^{\prime\prime}",
+
+"D": "52.0",
+
+"d": "42.9",
+
+"L": "23.0"
+
+},
+
+{
+
+"PART": "UE90 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "62.0",
+
+"d": "55.9",
+
+"L": "29.0"
+
+},
+
+{
+
+"PART": "UE90 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0"
+
+},
+
+{
+
+"PART": "UE90 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0"
+
+},
+
+{
+
+"PART": "UE90 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0"
+
+},
+
+{
+
+"PART": "UE90 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "ELBOW 45°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UE45 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/2}^{\prime\prime}",
+
+"D": "52.0",
+
+"d": "42.9",
+
+"L": "23.0"
+
+},
+
+{
+
+"PART": "UE45 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "62.0",
+
+"d": "55.9",
+
+"L": "29.0"
+
+},
+
+{
+
+"PART": "UE45 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0"
+
+},
+
+{
+
+"PART": "UE45 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0"
+
+},
+
+{
+
+"PART": "UE45 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0"
+
+},
+
+{
+
+"PART": "UE45 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "SOCKET/COUPLER",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "US 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/}{2}^{\prime\prime}",
+
+"D": "52.0",
+
+"d": "42.9",
+
+"L": "23"
+
+},
+
+{
+
+"PART": "US 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2"",
+
+"D": "62.0",
+
+"d": "55.9",
+
+"L": "29"
+
+},
+
+{
+
+"PART": "US 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40"
+
+},
+
+{
+
+"PART": "US4 CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48"
+
+},
+
+{
+
+"PART": "US 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58"
+
+},
+
+{
+
+"PART": "US 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "216.0",
+
+"d": "200.0",
+
+"L": "70"
+
+}
+
+]
+
+},
+
+{
+
+"title": "REDUCER BUSH/SOCKET",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "URB 2X1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "2\times1^{1/2}^{\prime\prime}",
+
+"D": "55.9",
+
+"d": "42.9",
+
+"L": "22.5",
+
+"H": "31.0"
+
+},
+
+{
+
+"PART": "URB 3X2CR LG",
+
+"NOMINAL SIZE (Inch)": "3\times2^{\prime\prime}",
+
+"D": "82.6",
+
+"d": "55.9",
+
+"L": "29.0",
+
+"H": "42.0"
+
+},
+
+{
+
+"PART": "URB 4X2CR LG",
+
+"NOMINAL SIZE (Inch)": "4\times2"",
+
+"D": "110.0",
+
+"d": "55.9",
+
+"L": "29.0",
+
+"H": "50.0"
+
+},
+
+{
+
+"PART": "URB 4X3CR LG",
+
+"NOMINAL SIZE (Inch)": "4\times3"",
+
+"D": "110.0",
+
+"d": "82.6",
+
+"L": "40.0",
+
+"H": "50.0"
+
+},
+
+{
+
+"PART": "URB 6X4CR LG",
+
+"NOMINAL SIZE (Inch)": "6\times4^{\prime\prime}",
+
+"D": "160.0",
+
+"d": "110.0",
+
+"L": "48.0",
+
+"H": "60.0"
+
+},
+
+{
+
+"PART": "URB 8X6CR LG",
+
+"NOMINAL SIZE (Inch)": "8\times6^{\prime\prime}",
+
+"D": "200.0",
+
+"d": "160.0",
+
+"L": "58.0",
+
+"H": "73.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "TEE 87.5°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UT 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1}/{2}^{\prime\prime}",
+
+"D": "52.0",
+
+"DIMENSIONS (mm) d L H": "42.9 23.0 100.5"
+
+},
+
+{
+
+"PART": "UT 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "62.0",
+
+"DIMENSIONS (mm) d L H": "55.9 29.0 133.0"
+
+},
+
+{
+
+"PART": "UT 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"DIMENSIONS (mm) d L H": "82.6 40.0 170.0"
+
+},
+
+{
+
+"PART": "UT 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"DIMENSIONS (mm) d L H": "110.0 48.0 219.0"
+
+},
+
+{
+
+"PART": "UT 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"DIMENSIONS (mm) d L H": "160.0 58.0 296.0"
+
+},
+
+{
+
+"PART": "UT 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "216.0",
+
+"DIMENSIONS (mm) d L H": "200.0 70.0 355.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "Y - 45°/SKEW TEE",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UY 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/2}^{\prime\prime}",
+
+"D": "52.0",
+
+"d": "42.9",
+
+"L": "23.0",
+
+"H": "121.1"
+
+},
+
+{
+
+"PART": "UY 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "62.0",
+
+"d": "55.9",
+
+"L": "29.0",
+
+"H": "152.1"
+
+},
+
+{
+
+"PART": "UY 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"d": "82.6",
+
+"L": "40.0",
+
+"H": "195.0"
+
+},
+
+{
+
+"PART": "UY 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"d": "110.0",
+
+"L": "48.0",
+
+"H": "259.0"
+
+},
+
+{
+
+"PART": "UY 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"d": "160.0",
+
+"L": "58.0",
+
+"H": "257.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "ELBOW 90° MALE/FEMALE",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UE90MF 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1}/2^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UE90MF 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UE90MF 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UE90MF 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "110",
+
+"d": "110",
+
+"L": "49",
+
+"L1": "130"
+
+},
+
+{
+
+"PART": "UE90MF 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UE90MF 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "TEE 87.5° MALE/FEMALE",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UTMF 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1}/{2}^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UTMF 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UTMF 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UTMF 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "110",
+
+"d": "110",
+
+"L": "112",
+
+"L1": "49"
+
+},
+
+{
+
+"PART": "UTMF 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+},
+
+{
+
+"PART": "UTMF 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L": "",
+
+"L1": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "ACCESS CAP/CLEAN OUT",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UAC 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1\frac{1}{2}^{\prime\prime}",
+
+"d H": "42.9 48.50"
+
+},
+
+{
+
+"PART": "UAC 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"d H": "55.9 61.00"
+
+},
+
+{
+
+"PART": "UAC 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"d H": "82.6 82.00"
+
+},
+
+{
+
+"PART": "UAC 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"d H": "110.0 99.00"
+
+},
+
+{
+
+"PART": "UAC 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"d H": "160.0 125.00"
+
+},
+
+{
+
+"PART": "UAC 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"d H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "ACCESS/DOOR ELBOW 90°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UDE 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "92.5",
+
+"d": "82.6",
+
+"L Tr": "43 Tr76X4",
+
+"d1": "66.5",
+
+"H": "96.0"
+
+},
+
+{
+
+"PART": "UDE 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.0",
+
+"d": "110.0",
+
+"L Tr": "51.3 Tr104X4",
+
+"d1": "90.4",
+
+"H": "119.3"
+
+},
+
+{
+
+"PART": "UDE 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "",
+
+"d": "",
+
+"L Tr": "",
+
+"d1": "",
+
+"H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "ACCESS/DOOR TEE 87.5°",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UDT 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/2}^{\prime\prime}",
+
+"d": "",
+
+"L": "",
+
+"L1": "",
+
+"H": ""
+
+},
+
+{
+
+"PART": "UDT 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"d": "",
+
+"L": "",
+
+"L1": "",
+
+"H": ""
+
+},
+
+{
+
+"PART": "UDT 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"d": "",
+
+"L": "",
+
+"L1": "",
+
+"H": ""
+
+},
+
+{
+
+"PART": "UDT 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"d": "110.0",
+
+"L": "130.2",
+
+"L1": "142.1",
+
+"H": "250.3"
+
+},
+
+{
+
+"PART": "UDT 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"d": "160.0",
+
+"L": "144.1",
+
+"L1": "144.1",
+
+"H": "288.2"
+
+},
+
+{
+
+"PART": "UDT 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"d": "",
+
+"L": "",
+
+"L1": "",
+
+"H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "FEMALE THREADED ELBOW",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFE 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/2}^{\prime\prime}",
+
+"G": "1^{1/2}^{\prime\prime}",
+
+"d": "42.9",
+
+"L": "54.75"
+
+},
+
+{
+
+"PART": "UFE 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"G": "",
+
+"d": "",
+
+"L": ""
+
+},
+
+{
+
+"PART": "UFE 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"G": "",
+
+"d": "",
+
+"L": ""
+
+},
+
+{
+
+"PART": "UFE 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"G": "",
+
+"d": "",
+
+"L": ""
+
+},
+
+{
+
+"PART": "UFE 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"G": "",
+
+"d": "",
+
+"L": ""
+
+},
+
+{
+
+"PART": "UFE 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"G": "",
+
+"d": "",
+
+"L": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "INSPECTION PORT/ DOOR SOOKET",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UDS 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1}/_{2}^{\prime\prime}",
+
+"D": "",
+
+"d L": "",
+
+"H": ""
+
+},
+
+{
+
+"PART": "UDS 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"D": "62.0",
+
+"d L": "55.9 29",
+
+"H": "111.0"
+
+},
+
+{
+
+"PART": "UDS 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"D": "91.2",
+
+"d L": "82.6 40",
+
+"H": "168.8"
+
+},
+
+{
+
+"PART": "UDS 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"D": "120.6",
+
+"d L": "110.0 48",
+
+"H": "230.0"
+
+},
+
+{
+
+"PART": "UDS 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"D": "173.6",
+
+"d L": "160.0 58",
+
+"H": "275.0"
+
+},
+
+{
+
+"PART": "UDS 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"D": "216.0",
+
+"d L": "200.0 70",
+
+"H": "335.0"
+
+}
+
+]
+
+},
+
+{
+
+"title": "VENT COWL",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UVC 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1\frac{1}{2}^{\prime\prime}",
+
+"d L": ""
+
+},
+
+{
+
+"PART": "UVC 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{\prime\prime}",
+
+"d L": "55.9 49"
+
+},
+
+{
+
+"PART": "UVC 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3^{\prime\prime}",
+
+"d L": "82.6 82"
+
+},
+
+{
+
+"PART": "UVC 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4^{\prime\prime}",
+
+"d L": "110.0 99.9"
+
+},
+
+{
+
+"PART": "UVC 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"d L": "160.0 143"
+
+},
+
+{
+
+"PART": "UVC 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"d L": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "FEMALE THREADED SOCKET",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFS 1.5CR LG",
+
+"NOMINAL SIZE (Inch)": "1^{1/2}^{\prime\prime}",
+
+"d": "42.9",
+
+"G H": "A" 54"
+
+},
+
+{
+
+"PART": "UFS 2CR LG",
+
+"NOMINAL SIZE (Inch)": "2^{n}",
+
+"d": "",
+
+"G H": ""
+
+},
+
+{
+
+"PART": "UFS 3CR LG",
+
+"NOMINAL SIZE (Inch)": "3"",
+
+"d": "",
+
+"G H": ""
+
+},
+
+{
+
+"PART": "UFS 4CR LG",
+
+"NOMINAL SIZE (Inch)": "4"",
+
+"d": "",
+
+"G H": ""
+
+},
+
+{
+
+"PART": "UFS 6CR LG",
+
+"NOMINAL SIZE (Inch)": "6^{\prime\prime}",
+
+"d": "",
+
+"G H": ""
+
+},
+
+{
+
+"PART": "UFS 8CR LG",
+
+"NOMINAL SIZE (Inch)": "8^{\prime\prime}",
+
+"d": "",
+
+"G H": ""
+
+}
+
+]
+
+},
+
+{
+
+"title": "PARAPET ROOF DRAIN",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UPRD110CR LG",
+
+"NOMINAL SIZE (Inch)": "4"",
+
+"H1": "117.0",
+
+"D": "110.0",
+
+"d": "99.5",
+
+"L": "4.5",
+
+"B H": "167.5 40.5",
+
+"H2": "211.5"
+
+}
+
+]
+
+},
+
+{
+
+"title": "ROOF DRAIN",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "URD110CR LG",
+
+"NOMINAL SIZE (Inch)": "4"",
+
+"d1 d2": "63 110.0",
+
+"D1": "122.1",
+
+"D2 L1": "164.9 45",
+
+"L2": "60",
+
+"H1": "179.2",
+
+"H2": "111.6"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP TYPE - A",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFDA 4X3X2X1.5 CR LG",
+
+"NOMINAL SIZE (Inch)": "4"X3"X2"X12"",
+
+"D": "116.8",
+
+"d": "110.0",
+
+"d1 d2": "82.6 55.9",
+
+"D3X3 Η": "42.9 149",
+
+"L": "80.5"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP TYPE - B",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART NOMINAL SIZE": "UFDB 110X63X50CRG 110X63X50",
+
+"d": "110",
+
+"d1 d2 H": "50 63 76",
+
+"L": "43.7"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP TYPE - C",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFDC 4X3X2CRLG",
+
+"NOMINAL SIZE (mm)": "4X3X2",
+
+"D": "110",
+
+"d d1x3": "82.6 55.9",
+
+"H": "118",
+
+"L": "51.5"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP COVER TYPE - A I",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFDCAI 15X15CR W",
+
+"NOMINAL SIZE (mm) LXW": "150 X 150",
+
+"d": "110",
+
+"d1": "99.5",
+
+"H": "31.8"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP COVER TYPE - A II",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFDCAII 15X15CR W",
+
+"NOMINAL SIZE (mm) LXW": "150 X 150",
+
+"d": "110",
+
+"D1": "86",
+
+"H": "31.8"
+
+}
+
+]
+
+},
+
+{
+
+"title": "FLOOR DRAIN/TRAP COVER TYPE - B",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UFDCB 15X15CR G",
+
+"NOMINAL SIZE (mm) LXW": "150X150",
+
+"d": "110",
+
+"d1": "105",
+
+"H": "9"
+
+}
+
+]
+
+},
+
+{
+
+"title": "BALCONY TRAP",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"PART": "UBT 3X3CR W",
+
+"NOMINAL SIZE (mm) LXW": "3"X3"",
+
+"DIMENSIONS (mm) d d1": "42.9 55.9",
+
+"H": "22"
+
+}
+
+]
+
+}
+
+]
+
+}
+
+<END_PDF_JSON>

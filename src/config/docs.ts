@@ -168,6 +168,11 @@ export const categoryDocs: Record<string, PdfDocument[]> = {
   'ppr': [
     DOCS.pprPipes,
   ],
+  'upvc-fabrications': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
   'polyethylene': [
     DOCS.peSystem,
   ],
@@ -179,142 +184,107 @@ export const categoryDocs: Record<string, PdfDocument[]> = {
 // ============================================================================
 export const productDocs: Record<string, PdfDocument[]> = {
   // -------------------------------------------------------------------------
-  // UPVC PRESSURE PRODUCTS
+  // PVC PRESSURE PRODUCTS (new standardized slugs)
   // -------------------------------------------------------------------------
-  'upvc-pressure/pipes-metric': [
+  'upvc-pressure/pvc-pressure-din-8063': [
     DOCS.upvcPressurePipes,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-pressure/pipes-inch': [
-    DOCS.upvcPressurePipes,
-    DOCS.upvcPressureFittingsAstm, // ASTM standards for inch series
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-pressure/fittings': [
-    DOCS.upvcPressureFittingsBsEn,
     DOCS.upvcPressureFittingsDin,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-pressure/pvc-pressure-bs-en-1452': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-pressure/pvc-pressure-astm-d2466': [
+    DOCS.upvcPressurePipes,
     DOCS.upvcPressureFittingsAstm,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
   
   // -------------------------------------------------------------------------
-  // UPVC DRAINAGE PRODUCTS
+  // UPVC DRAINAGE PRODUCTS (new standardized slugs)
   // -------------------------------------------------------------------------
-  'upvc-drainage/pipes-above-ground': [
+  'upvc-drainage/upvc-drainage-bs-en-1329': [
     DOCS.upvcDrainagePipes,
-    DOCS.upvcDrainageFittings1329, // BS EN 1329 for above ground
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-drainage/pipes-underground': [
-    DOCS.upvcDrainagePipes,
-    DOCS.upvcDrainageFittings1401, // BS EN 1401 for underground
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-drainage/pipes-non-standard': [
-    DOCS.upvcDrainagePipes,
-    DOCS.upvcFabrication, // Custom fabrication for non-standard
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-drainage/fittings': [
     DOCS.upvcDrainageFittings1329,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-drainage/upvc-drainage-bs-en-1401': [
+    DOCS.upvcDrainagePipes,
     DOCS.upvcDrainageFittings1401,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
   
   // -------------------------------------------------------------------------
-  // UPVC DUCT PRODUCTS
+  // UPVC DUCT PRODUCTS (single family)
   // -------------------------------------------------------------------------
-  'upvc-duct/pipes-din': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-duct/pipes-bs': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-duct/pipes-nema': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-duct/pipes-special-d54-d56-d57': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcFabrication,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-duct/pipes-telecom': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-duct/accessories': [
+  'upvc-duct/upvc-duct-black': [
     DOCS.upvcDuctPipes,
     DOCS.upvcFabrication,
     DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
   ],
   
   // -------------------------------------------------------------------------
-  // PVC CONDUIT PRODUCTS
+  // PVC CONDUIT PRODUCTS (new standardized slugs)
   // -------------------------------------------------------------------------
-  'pvc-conduit/round-heavy': [
+  'pvc-conduit/upvc-conduit-sch-40': [
     DOCS.pvcConduit,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  'pvc-conduit/round-medium': [
-    DOCS.pvcConduit,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'pvc-conduit/round-light': [
-    DOCS.pvcConduit,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'pvc-conduit/schedule-40': [
-    DOCS.pvcConduit,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'pvc-conduit/schedule-80': [
+  'pvc-conduit/upvc-conduit-sch-80': [
     DOCS.pvcConduit,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
   
   // -------------------------------------------------------------------------
-  // PPR PRODUCTS
+  // PPR PRODUCTS (existing slugs maintained)
   // -------------------------------------------------------------------------
-  'ppr/sdr11-pn10': [
+  'ppr/ppr-sdr11-pn10': [
     DOCS.pprPipes,
   ],
-  'ppr/sdr7-4-pn16': [
+  'ppr/ppr-sdr7-4-pn16': [
     DOCS.pprPipes,
   ],
-  'ppr/sdr6-pn20': [
+  'ppr/ppr-sdr6-pn20': [
     DOCS.pprPipes,
   ],
   
   // -------------------------------------------------------------------------
-  // POLYETHYLENE PRODUCTS
+  // UPVC FABRICATIONS PRODUCTS (new category)
   // -------------------------------------------------------------------------
-  'polyethylene/hdpe-pe63-pe80-pe100': [
-    DOCS.peSystem,
+  'upvc-fabrications/upvc-fabrications-type-a': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
   ],
-  'polyethylene/lldpe-ldpe-drip': [
-    DOCS.peSystem,
+  'upvc-fabrications/upvc-fabrications-type-b': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
   ],
-  'polyethylene/water-distribution': [
-    DOCS.peSystem,
+  'upvc-fabrications/upvc-fabrications-type-c': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
   ],
+  'upvc-fabrications/upvc-fabrications-type-d': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  
+  // -------------------------------------------------------------------------
+  // POLYETHYLENE (HDPE) - No subProducts exposed, category-level only
+  // -------------------------------------------------------------------------
 };
 
 // ============================================================================
@@ -369,7 +339,7 @@ export function getDocsByCategory(categorySlug: string): PdfDocument[] {
 /**
  * Get documents for a specific product
  * @param categorySlug - e.g. 'upvc-pressure'
- * @param productSlug - e.g. 'pipes-metric'
+ * @param productSlug - e.g. 'pvc-pressure-din-8063'
  * @returns Product-specific docs, or falls back to category docs if no product mapping exists
  */
 export function getDocsByProduct(categorySlug: string, productSlug: string): PdfDocument[] {

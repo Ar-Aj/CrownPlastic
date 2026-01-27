@@ -2,19 +2,22 @@
  * Crown Plastic Pipes - Product Range Map
  * 
  * Normalized product data structure for visualization on the About Us page.
- * Extracted from src/config/products.ts
+ * Synchronized with src/config/products.ts
+ * 
+ * STANDARDISED CATALOG - Updated to match real product range
  * 
  * Summary:
- * - 6 top-level categories
- * - 24 total sub-items (product families/series)
+ * - 7 top-level categories
+ * - 16 total sub-items (product families/series)
  * 
  * Category breakdown:
- * 1. UPVC Pressure Pipes & Fittings: 3 items
- * 2. UPVC Drainage Pipes & Fittings: 4 items
- * 3. UPVC Duct Pipes & Accessories: 6 items
- * 4. PVC Conduit Pipes: 5 items
- * 5. PPR Pipes: 3 items
- * 6. HDPE Pipe Systems: 3 items
+ * 1. PVC Pressure Pipes & Fittings: 3 items (DIN 8063, BS EN 1452, ASTM D2466)
+ * 2. UPVC Drainage Pipes & Fittings: 2 items (BS EN 1329, BS EN 1401)
+ * 3. UPVC Conduit Pipes: 2 items (SCH 40, SCH 80)
+ * 4. PPR Pipes: 3 items (SDR11/PN10, SDR7.4/PN16, SDR6/PN20)
+ * 5. UPVC Duct Pipes & Accessories: 1 item (Black Pipes/Fittings)
+ * 6. UPVC Fabrications & Accessories: 4 items (Type A-D)
+ * 7. HDPE Pipe Systems: 0 items (category only, no subfamilies)
  */
 
 export type ProductItem = {
@@ -33,145 +36,78 @@ export type ProductCategory = {
 
 export const PRODUCT_MAP: ProductCategory[] = [
   // ─────────────────────────────────────────────────────────────────────────────
-  // 1. UPVC PRESSURE PIPES & FITTINGS
+  // A) PVC PRESSURE PIPES & FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'upvc-pressure',
-    name: 'UPVC Pressure Pipes & Fittings',
-    description: 'Pressure pipes for potable water supply systems. Metric & Inch series rated PN6–16 bar, certified to BS EN 1452, DIN 8061/62, and ASTM standards.',
+    name: 'PVC Pressure Pipes & Fittings',
+    description: 'Pressure pipes and fittings for potable water supply systems. Available in DIN 8063, BS EN 1452:23/BS 4346 (PN 15), and ASTM D 2466 SCH-40 standards.',
     icon: '💧',
     items: [
       {
-        id: 'pipes-metric',
-        name: 'UPVC Pressure Pipes BS EN 1452',
-        shortInfo: 'Metric series PN6-16 | Potable water supply',
+        id: 'pvc-pressure-din-8063',
+        name: 'PVC Pressure Pipes & Fittings DIN 8063',
+        shortInfo: 'DIN 8063 | German standard | Potable water',
       },
       {
-        id: 'pipes-inch',
-        name: 'UPVC Pressure Pipes ASTM D1785',
-        shortInfo: 'Inch series Schedule 40 | Water distribution',
+        id: 'pvc-pressure-bs-en-1452',
+        name: 'PVC Pressure Pipes & Fittings BS EN 1452:23 / BS 4346 (PN 15)',
+        shortInfo: 'BS EN 1452:23 / BS 4346 | British standard | PN 15',
       },
       {
-        id: 'fittings',
-        name: 'UPVC Pressure Fittings',
-        shortInfo: 'DIN 8063, BS EN 1452, ASTM D2466 | Elbows, tees, couplers',
+        id: 'pvc-pressure-astm-d2466',
+        name: 'PVC Pressure Pipes & Fittings ASTM D 2466 SCH-40',
+        shortInfo: 'ASTM D 2466 | Schedule 40 | American standard',
       },
     ],
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // 2. UPVC DRAINAGE PIPES & FITTINGS
+  // B) UPVC DRAINAGE PIPES AND FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'upvc-drainage',
     name: 'UPVC Drainage Pipes & Fittings',
-    description: 'Above-ground and underground drainage systems for sewerage and stormwater. Certified to BS EN 1329/1401 and BS 4660/5255.',
+    description: 'Above-ground and underground drainage systems for sewerage and stormwater. Certified to BS EN 1329-1:2014 and BS EN 1401.',
     icon: '🔧',
     items: [
       {
-        id: 'pipes-above-ground',
-        name: 'UPVC Soil Pipes BS 5255',
-        shortInfo: 'Above-ground soil & waste discharge',
+        id: 'upvc-drainage-bs-en-1329',
+        name: 'UPVC Drainage Pipes and Fittings BS EN 1329-1:2014',
+        shortInfo: 'BS EN 1329-1:2014 | Above-ground drainage',
       },
       {
-        id: 'pipes-underground',
-        name: 'UPVC Underground Pipes BS EN 1401',
-        shortInfo: 'Heavy-duty sewerage & stormwater',
-      },
-      {
-        id: 'pipes-non-standard',
-        name: 'UPVC Custom Drainage Pipes',
-        shortInfo: 'Made-to-order for specialized projects',
-      },
-      {
-        id: 'fittings',
-        name: 'UPVC Drainage Fittings',
-        shortInfo: 'BS EN 1329 | Elbows, tees, reducers, floor drains',
+        id: 'upvc-drainage-bs-en-1401',
+        name: 'UPVC Drainage Pipes and Fittings BS EN 1401',
+        shortInfo: 'BS EN 1401 | Underground drainage',
       },
     ],
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // 3. UPVC DUCT PIPES & ACCESSORIES
-  // ─────────────────────────────────────────────────────────────────────────────
-  {
-    id: 'upvc-duct',
-    name: 'UPVC Duct Pipes & Accessories',
-    description: 'Underground cable protection for telecom and electrical infrastructure. Meets DIN 8062, NEMA TC-2, and UAE telecom specifications (Etisalat/DU).',
-    icon: '⚡',
-    items: [
-      {
-        id: 'pipes-din',
-        name: 'UPVC Duct Pipes DIN 8062',
-        shortInfo: 'German standard | Underground cable protection',
-      },
-      {
-        id: 'pipes-bs',
-        name: 'UPVC Duct Pipes BS 3505/3506',
-        shortInfo: 'British standard | Electrical & communication cables',
-      },
-      {
-        id: 'pipes-nema',
-        name: 'UPVC Duct Pipes NEMA TC-2',
-        shortInfo: 'American standard | UL listed, flame retardant',
-      },
-      {
-        id: 'pipes-special-d54-d56-d57',
-        name: 'UPVC Telecom Duct D54/D56/D57',
-        shortInfo: 'UAE telecom spec | Etisalat/DU infrastructure',
-      },
-      {
-        id: 'pipes-telecom',
-        name: 'UPVC Telecom Duct Pipes',
-        shortInfo: 'Fiber-optic ready | Multiple duct options',
-      },
-      {
-        id: 'accessories',
-        name: 'UPVC Duct Accessories',
-        shortInfo: 'End caps, sockets, bellmouths, bends',
-      },
-    ],
-  },
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // 4. PVC CONDUIT PIPES
+  // C) UPVC CONDUIT PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'pvc-conduit',
-    name: 'PVC Conduit Pipes',
-    description: 'Rigid electrical conduit for building wiring systems. Available in Schedule 40/80 and crush ratings 320N–1250N for residential to industrial use.',
+    name: 'UPVC Conduit Pipes',
+    description: 'Rigid UPVC electrical conduit for building wiring systems. Available in Schedule 40 and Schedule 80 for standard to heavy-duty applications.',
     icon: '🔌',
     items: [
       {
-        id: 'round-heavy',
-        name: 'PVC Conduit 1250N Heavy Duty',
-        shortInfo: 'Max crush resistance | Industrial & concrete embedment',
+        id: 'upvc-conduit-sch-40',
+        name: 'UPVC Conduit Pipes SCH 40',
+        shortInfo: 'SCH 40 | Standard wall | UL listed',
       },
       {
-        id: 'round-medium',
-        name: 'PVC Conduit 750N Medium Duty',
-        shortInfo: 'Commercial grade | Versatile applications',
-      },
-      {
-        id: 'round-light',
-        name: 'PVC Conduit 320N Light Duty',
-        shortInfo: 'Residential & light commercial | Cost-effective',
-      },
-      {
-        id: 'schedule-40',
-        name: 'PVC Conduit Schedule 40',
-        shortInfo: 'US standard | UL listed | Standard wall',
-      },
-      {
-        id: 'schedule-80',
-        name: 'PVC Conduit Schedule 80',
-        shortInfo: 'Extra heavy wall | Extreme conditions',
+        id: 'upvc-conduit-sch-80',
+        name: 'UPVC Conduit Pipes SCH 80',
+        shortInfo: 'SCH 80 | Heavy wall | Industrial use',
       },
     ],
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // 5. PPR PIPES
+  // D) PPR PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'ppr',
@@ -180,48 +116,82 @@ export const PRODUCT_MAP: ProductCategory[] = [
     icon: '🚿',
     items: [
       {
-        id: 'sdr11-pn10',
-        name: 'PPR SDR11 PN10',
-        shortInfo: '10 bar | Cold water systems',
+        id: 'ppr-sdr11-pn10',
+        name: 'PPR Pipes SDR11 / PN 10',
+        shortInfo: 'SDR11 / PN 10 | Cold water | 10 bar',
       },
       {
-        id: 'sdr7-4-pn16',
-        name: 'PPR SDR7.4 PN16',
-        shortInfo: '16 bar | Hot & cold water | Building installations',
+        id: 'ppr-sdr7-4-pn16',
+        name: 'PPR Pipes SDR7.4 / PN 16',
+        shortInfo: 'SDR7.4 / PN 16 | Hot & cold | 16 bar',
       },
       {
-        id: 'sdr6-pn20',
-        name: 'PPR SDR6 PN20',
-        shortInfo: '20 bar | High temperature | Industrial',
+        id: 'ppr-sdr6-pn20',
+        name: 'PPR Pipes SDR6 / PN 20',
+        shortInfo: 'SDR6 / PN 20 | High pressure | 20 bar',
       },
     ],
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // 6. HDPE PIPE SYSTEMS
+  // E) UPVC DUCT PIPES & ACCESSORIES
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    id: 'upvc-duct',
+    name: 'UPVC Duct Pipes & Accessories',
+    description: 'Underground cable protection systems. Black UPVC duct pipes and accessories for telecom and electrical infrastructure.',
+    icon: '⚡',
+    items: [
+      {
+        id: 'upvc-duct-black',
+        name: 'UPVC Duct Pipes & Accessories Black Pipes / Fittings',
+        shortInfo: 'Black Pipes / Fittings | Cable protection',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // F) UPVC FABRICATIONS AND ACCESSORIES - NEW CATEGORY
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    id: 'upvc-fabrications',
+    name: 'UPVC Fabrications & Accessories',
+    description: 'Custom UPVC fabrications and accessories for specialized project requirements. Available in Type A, B, C, and D configurations.',
+    icon: '🔩',
+    items: [
+      {
+        id: 'upvc-fabrications-type-a',
+        name: 'UPVC Fabrications and Accessories Type A',
+        shortInfo: 'Type A | Custom fabrications',
+      },
+      {
+        id: 'upvc-fabrications-type-b',
+        name: 'UPVC Fabrications and Accessories Type B',
+        shortInfo: 'Type B | Custom fabrications',
+      },
+      {
+        id: 'upvc-fabrications-type-c',
+        name: 'UPVC Fabrications and Accessories Type C',
+        shortInfo: 'Type C | Custom fabrications',
+      },
+      {
+        id: 'upvc-fabrications-type-d',
+        name: 'UPVC Fabrications and Accessories Type D',
+        shortInfo: 'Type D | Custom fabrications',
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // G) HDPE PIPE SYSTEMS
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'polyethylene',
     name: 'HDPE Pipe Systems',
     description: 'High-density polyethylene pipes for irrigation, water distribution, and agricultural applications. PE63/80/100 grades certified to ISO 4427.',
     icon: '🌊',
-    items: [
-      {
-        id: 'hdpe-pe63-pe80-pe100',
-        name: 'HDPE Pipes PE63/PE80/PE100',
-        shortInfo: 'Water & gas distribution | 50+ year life',
-      },
-      {
-        id: 'lldpe-ldpe-drip',
-        name: 'LLDPE/LDPE Drip Irrigation Pipes',
-        shortInfo: 'Agricultural drip systems | UV stabilized',
-      },
-      {
-        id: 'water-distribution',
-        name: 'HDPE Water Distribution PN10-16',
-        shortInfo: 'Municipal networks | Fusion welded joints',
-      },
-    ],
+    // No sub-families exposed in UI until real data is available
+    items: [],
   },
 ];
 

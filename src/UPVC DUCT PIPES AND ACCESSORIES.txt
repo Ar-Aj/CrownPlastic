@@ -1,0 +1,1683 @@
+UPVC DUCT PIPES AND ACCESSORIES.txt
+
+<START_PDF_JSON>
+
+{
+
+"standard": "UPVC DUCT PIPES & ACCESSORIES",
+
+"pipesTables": [
+
+{
+
+"title": "NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS:",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Nominal Size (Inch)": "\frac{1}{2}"",
+
+"Mean Outside Dia. (mm) Min": "21.2",
+
+"Mean Outside Dia. (mm) Max": "21.5",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "2.77",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "3.25",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "3.73",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "4.15"
+
+},
+
+{
+
+"Nominal Size (Inch)": "\frac{3}{4}"",
+
+"Mean Outside Dia. (mm) Min": "26.6",
+
+"Mean Outside Dia. (mm) Max": "26.9",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "2.87",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "3.25",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "3.91",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "4.42"
+
+},
+
+{
+
+"Nominal Size (Inch)": "1"",
+
+"Mean Outside Dia. (mm) Min": "33.4",
+
+"Mean Outside Dia. (mm) Max": "33.7",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "3.38",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "3.62",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "4.55",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "4.82"
+
+},
+
+{
+
+"Nominal Size (Inch)": "1\frac{1}{4}"",
+
+"Mean Outside Dia. (mm) Min": "42.1",
+
+"Mean Outside Dia. (mm) Max": "42.4",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "3.56",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "3.80",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "4.85",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "5.10"
+
+},
+
+{
+
+"Nominal Size (Inch)": "1^{1}/{2}"",
+
+"Mean Outside Dia. (mm) Min": "48.1",
+
+"Mean Outside Dia. (mm) Max": "48.4",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "3.68",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "4.05",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "5.08",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "5.35"
+
+},
+
+{
+
+"Nominal Size (Inch)": "2"",
+
+"Mean Outside Dia. (mm) Min": "60.2",
+
+"Mean Outside Dia. (mm) Max": "60.5",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "3.91",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "4.25",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "5.54",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "6.02"
+
+},
+
+{
+
+"Nominal Size (Inch)": "3"",
+
+"Mean Outside Dia. (mm) Min": "88.7",
+
+"Mean Outside Dia. (mm) Max": "89.1",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "5.49",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "6.01",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "7.62",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "7.95"
+
+},
+
+{
+
+"Nominal Size (Inch)": "4"",
+
+"Mean Outside Dia. (mm) Min": "114.1",
+
+"Mean Outside Dia. (mm) Max": "114.5",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "6.02",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "7.05",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "8.56",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "9.25"
+
+},
+
+{
+
+"Nominal Size (Inch)": "6"",
+
+"Mean Outside Dia. (mm) Min": "168.2",
+
+"Mean Outside Dia. (mm) Max": "168.5",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "7.11",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "8.10",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "10.97",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "11.23"
+
+},
+
+{
+
+"Nominal Size (Inch)": "8"",
+
+"Mean Outside Dia. (mm) Min": "218.8",
+
+"Mean Outside Dia. (mm) Max": "219.4",
+
+"Minimum Wall Thickness (mm) EPC 40 Min": "8.18",
+
+"Minimum Wall Thickness (mm) EPC 40 Max": "9.56",
+
+"Minimum Wall Thickness (mm) EPC 80 Min": "12.70",
+
+"Minimum Wall Thickness (mm) EPC 80 Max": "13.15"
+
+}
+
+]
+
+},
+
+{
+
+"title": "NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Nominal Size (Inch)": "1"",
+
+"Mean Outside Dia. (mm) Min": "33.4",
+
+"Mean Outside Dia. (mm) Max": "33.7",
+
+"Minimum Wall Thickness (mm) EB-20": "",
+
+"Minimum Wall Thickness (mm) EB-35": "",
+
+"Minimum Wall Thickness (mm) DB-60": "",
+
+"Minimum Wall Thickness (mm) DB-100": "",
+
+"Minimum Wall Thickness (mm) DB-120": "1.52"
+
+},
+
+{
+
+"Nominal Size (Inch)": "1^{1}/{2}"",
+
+"Mean Outside Dia. (mm) Min": "48.1",
+
+"Mean Outside Dia. (mm) Max": "48.4",
+
+"Minimum Wall Thickness (mm) EB-20": "",
+
+"Minimum Wall Thickness (mm) EB-35": "",
+
+"Minimum Wall Thickness (mm) DB-60": "1.52",
+
+"Minimum Wall Thickness (mm) DB-100": "",
+
+"Minimum Wall Thickness (mm) DB-120": "1.65"
+
+},
+
+{
+
+"Nominal Size (Inch)": "2"",
+
+"Mean Outside Dia. (mm) Min": "60.2",
+
+"Mean Outside Dia. (mm) Max": "60.5",
+
+"Minimum Wall Thickness (mm) EB-20": "",
+
+"Minimum Wall Thickness (mm) EB-35": "1.52",
+
+"Minimum Wall Thickness (mm) DB-60": "1.65",
+
+"Minimum Wall Thickness (mm) DB-100": "",
+
+"Minimum Wall Thickness (mm) DB-120": "2.11"
+
+},
+
+{
+
+"Nominal Size (Inch)": "3"",
+
+"Mean Outside Dia. (mm) Min": "88.7",
+
+"Mean Outside Dia. (mm) Max": "89.1",
+
+"Minimum Wall Thickness (mm) EB-20": "1.70",
+
+"Minimum Wall Thickness (mm) EB-35": "2.08",
+
+"Minimum Wall Thickness (mm) DB-60": "2.54",
+
+"Minimum Wall Thickness (mm) DB-100": "3.07",
+
+"Minimum Wall Thickness (mm) DB-120": "3.23"
+
+},
+
+{
+
+"Nominal Size (Inch)": "4"",
+
+"Mean Outside Dia. (mm) Min": "114.1",
+
+"Mean Outside Dia. (mm) Max": "114.5",
+
+"Minimum Wall Thickness (mm) EB-20": "2.26",
+
+"Minimum Wall Thickness (mm) EB-35": "2.77",
+
+"Minimum Wall Thickness (mm) DB-60": "3.33",
+
+"Minimum Wall Thickness (mm) DB-100": "3.94",
+
+"Minimum Wall Thickness (mm) DB-120": "4.22"
+
+},
+
+{
+
+"Nominal Size (Inch)": "6"",
+
+"Mean Outside Dia. (mm) Min": "168.2",
+
+"Mean Outside Dia. (mm) Max": "168.5",
+
+"Minimum Wall Thickness (mm) EB-20": "3.43",
+
+"Minimum Wall Thickness (mm) EB-35": "4.17",
+
+"Minimum Wall Thickness (mm) DB-60": "4.98",
+
+"Minimum Wall Thickness (mm) DB-100": "5.82",
+
+"Minimum Wall Thickness (mm) DB-120": "6.20"
+
+}
+
+]
+
+},
+
+{
+
+"title": "Metric size Pressure Pipes: DIN 8062",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Nominal Size mm": "20 mm",
+
+"Mean Outside Dia. Min": "20.0",
+
+"Mean Outside Dia. Max": "20.2",
+
+"PN-16 ( CLASS-16) Min": "1.5",
+
+"PN-16 ( CLASS-16) Max": "1.9",
+
+"PN-10 (CLASS-10) Min": "",
+
+"PN-10 (CLASS-10) Max": "",
+
+"PN-6 (CLASS-6) Min": "",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "25 mm",
+
+"Mean Outside Dia. Min": "25.0",
+
+"Mean Outside Dia. Max": "25.2",
+
+"PN-16 ( CLASS-16) Min": "1.9",
+
+"PN-16 ( CLASS-16) Max": "2.3",
+
+"PN-10 (CLASS-10) Min": "1.5",
+
+"PN-10 (CLASS-10) Max": "1.8",
+
+"PN-6 (CLASS-6) Min": "",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "32 mm",
+
+"Mean Outside Dia. Min": "32.0",
+
+"Mean Outside Dia. Max": "32.2",
+
+"PN-16 ( CLASS-16) Min": "2.4",
+
+"PN-16 ( CLASS-16) Max": "2.9",
+
+"PN-10 (CLASS-10) Min": "1.8",
+
+"PN-10 (CLASS-10) Max": "1.9",
+
+"PN-6 (CLASS-6) Min": "",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "40 mm 2.1",
+
+"Mean Outside Dia. Min": "40.0",
+
+"Mean Outside Dia. Max": "40.2",
+
+"PN-16 ( CLASS-16) Min": "3.0",
+
+"PN-16 ( CLASS-16) Max": "3.5",
+
+"PN-10 (CLASS-10) Min": "1.9",
+
+"PN-10 (CLASS-10) Max": "2.3",
+
+"PN-6 (CLASS-6) Min": "1.8",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "50 mm 2.2",
+
+"Mean Outside Dia. Min": "50.0",
+
+"Mean Outside Dia. Max": "50.2",
+
+"PN-16 ( CLASS-16) Min": "3.7",
+
+"PN-16 ( CLASS-16) Max": "4.3",
+
+"PN-10 (CLASS-10) Min": "2.4",
+
+"PN-10 (CLASS-10) Max": "2.9",
+
+"PN-6 (CLASS-6) Min": "1.8",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "63 mm 2.3",
+
+"Mean Outside Dia. Min": "63.0",
+
+"Mean Outside Dia. Max": "63.2",
+
+"PN-16 ( CLASS-16) Min": "4.7",
+
+"PN-16 ( CLASS-16) Max": "5.4",
+
+"PN-10 (CLASS-10) Min": "3.0",
+
+"PN-10 (CLASS-10) Max": "3.4",
+
+"PN-6 (CLASS-6) Min": "1.9",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "",
+
+"PN-4 (CLASS-4) Max": ""
+
+},
+
+{
+
+"Nominal Size mm": "75 mm 2.6",
+
+"Mean Outside Dia. Min": "75.0",
+
+"Mean Outside Dia. Max": "75.3",
+
+"PN-16 ( CLASS-16) Min": "5.6",
+
+"PN-16 ( CLASS-16) Max": "6.4",
+
+"PN-10 (CLASS-10) Min": "3.6",
+
+"PN-10 (CLASS-10) Max": "4.2",
+
+"PN-6 (CLASS-6) Min": "2.2",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "1.8",
+
+"PN-4 (CLASS-4) Max": "2.2"
+
+},
+
+{
+
+"Nominal Size mm": "90 mm 3.2",
+
+"Mean Outside Dia. Min": "90.0",
+
+"Mean Outside Dia. Max": "90.3",
+
+"PN-16 ( CLASS-16) Min": "6.7",
+
+"PN-16 ( CLASS-16) Max": "7.6",
+
+"PN-10 (CLASS-10) Min": "4.3",
+
+"PN-10 (CLASS-10) Max": "5.1",
+
+"PN-6 (CLASS-6) Min": "2.7",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "1.8",
+
+"PN-4 (CLASS-4) Max": "2.3"
+
+},
+
+{
+
+"Nominal Size mm": "110 mm 3.8",
+
+"Mean Outside Dia. Min": "110.0",
+
+"Mean Outside Dia. Max": "110.3",
+
+"PN-16 ( CLASS-16) Min": "8.2",
+
+"PN-16 ( CLASS-16) Max": "9.3",
+
+"PN-10 (CLASS-10) Min": "5.3",
+
+"PN-10 (CLASS-10) Max": "5.9",
+
+"PN-6 (CLASS-6) Min": "3.2",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "2.2",
+
+"PN-4 (CLASS-4) Max": "2.6"
+
+},
+
+{
+
+"Nominal Size mm": "125 mm 4.0",
+
+"Mean Outside Dia. Min": "125.0",
+
+"Mean Outside Dia. Max": "125.3",
+
+"PN-16 ( CLASS-16) Min": "9.3",
+
+"PN-16 ( CLASS-16) Max": "10.3",
+
+"PN-10 (CLASS-10) Min": "6.0",
+
+"PN-10 (CLASS-10) Max": "6.8",
+
+"PN-6 (CLASS-6) Min": "3.7",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "2.5",
+
+"PN-4 (CLASS-4) Max": "2.9"
+
+},
+
+{
+
+"Nominal Size mm": "140 mm 4.5",
+
+"Mean Outside Dia. Min": "140.0",
+
+"Mean Outside Dia. Max": "140.4",
+
+"PN-16 ( CLASS-16) Min": "10.4",
+
+"PN-16 ( CLASS-16) Max": "11.8",
+
+"PN-10 (CLASS-10) Min": "6.7",
+
+"PN-10 (CLASS-10) Max": "7.5",
+
+"PN-6 (CLASS-6) Min": "4.1",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "2.8",
+
+"PN-4 (CLASS-4) Max": "3.3"
+
+},
+
+{
+
+"Nominal Size mm": "160 mm 5.2",
+
+"Mean Outside Dia. Min": "160.0",
+
+"Mean Outside Dia. Max": "160.4",
+
+"PN-16 ( CLASS-16) Min": "11.9",
+
+"PN-16 ( CLASS-16) Max": "11.3",
+
+"PN-10 (CLASS-10) Min": "7.7",
+
+"PN-10 (CLASS-10) Max": "8.5",
+
+"PN-6 (CLASS-6) Min": "4.7",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "3.2",
+
+"PN-4 (CLASS-4) Max": "3.8"
+
+},
+
+{
+
+"Nominal Size mm": "180 mm 5.7",
+
+"Mean Outside Dia. Min": "180.0",
+
+"Mean Outside Dia. Max": "180.4",
+
+"PN-16 ( CLASS-16) Min": "13.4",
+
+"PN-16 ( CLASS-16) Max": "15.0",
+
+"PN-10 (CLASS-10) Min": "8.6",
+
+"PN-10 (CLASS-10) Max": "9.4",
+
+"PN-6 (CLASS-6) Min": "5.3",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "3.6",
+
+"PN-4 (CLASS-4) Max": "4.2"
+
+},
+
+{
+
+"Nominal Size mm": "200 mm 6.7",
+
+"Mean Outside Dia. Min": "200.0",
+
+"Mean Outside Dia. Max": "200.4",
+
+"PN-16 ( CLASS-16) Min": "14.9",
+
+"PN-16 ( CLASS-16) Max": "16.6",
+
+"PN-10 (CLASS-10) Min": "9.6",
+
+"PN-10 (CLASS-10) Max": "10.7",
+
+"PN-6 (CLASS-6) Min": "5.9",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "4.0",
+
+"PN-4 (CLASS-4) Max": "4.4"
+
+},
+
+{
+
+"Nominal Size mm": "225 mm 7.2",
+
+"Mean Outside Dia. Min": "225.0",
+
+"Mean Outside Dia. Max": "225.5",
+
+"PN-16 ( CLASS-16) Min": "16.7",
+
+"PN-16 ( CLASS-16) Max": "18.6",
+
+"PN-10 (CLASS-10) Min": "10.8",
+
+"PN-10 (CLASS-10) Max": "11.6",
+
+"PN-6 (CLASS-6) Min": "6.6",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "4.5",
+
+"PN-4 (CLASS-4) Max": "4.9"
+
+},
+
+{
+
+"Nominal Size mm": "250 mm 8.0",
+
+"Mean Outside Dia. Min": "250.0",
+
+"Mean Outside Dia. Max": "250.5",
+
+"PN-16 ( CLASS-16) Min": "18.6",
+
+"PN-16 ( CLASS-16) Max": "20.7",
+
+"PN-10 (CLASS-10) Min": "11.9",
+
+"PN-10 (CLASS-10) Max": "13.3",
+
+"PN-6 (CLASS-6) Min": "7.3",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "4.9",
+
+"PN-4 (CLASS-4) Max": "5.7"
+
+},
+
+{
+
+"Nominal Size mm": "280 mm 9.0",
+
+"Mean Outside Dia. Min": "280.0",
+
+"Mean Outside Dia. Max": "280.5",
+
+"PN-16 ( CLASS-16) Min": "20.8",
+
+"PN-16 ( CLASS-16) Max": "23.1",
+
+"PN-10 (CLASS-10) Min": "13.4",
+
+"PN-10 (CLASS-10) Max": "14.9",
+
+"PN-6 (CLASS-6) Min": "8.2",
+
+"PN-6 (CLASS-6) Max": "",
+
+"PN-4 (CLASS-4) Min": "5.5",
+
+"PN-4 (CLASS-4) Max": "6.3"
+
+},
+
+{
+
+"Nominal Size mm": "315 mm",
+
+"Mean Outside Dia. Min": "315.0",
+
+"Mean Outside Dia. Max": "315.6",
+
+"PN-16 ( CLASS-16) Min": "23.4",
+
+"PN-16 ( CLASS-16) Max": "26.0",
+
+"PN-10 (CLASS-10) Min": "15.0",
+
+"PN-10 (CLASS-10) Max": "16.7",
+
+"PN-6 (CLASS-6) Min": "9.2",
+
+"PN-6 (CLASS-6) Max": "10.4",
+
+"PN-4 (CLASS-4) Min": "6.2",
+
+"PN-4 (CLASS-4) Max": "7.1"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT PIPE FOR ELECTRICAL AND TELEPHONE CABLE Dimensions as per Etisalat & DU specifications",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Product": "D54 DUCT PIPE",
+
+"Outside Diameter Min": "96.30",
+
+"Outside Diameter Max": "96.70",
+
+"Wall Thickness Min": "3.25",
+
+"Wall Thickness Max": "3.65"
+
+},
+
+{
+
+"Product": "D56 DUCT PIPE",
+
+"Outside Diameter Min": "53.80",
+
+"Outside Diameter Max": "54.00",
+
+"Wall Thickness Min": "1.55",
+
+"Wall Thickness Max": "1.70"
+
+},
+
+{
+
+"Product": "D57 DUCT PIPE",
+
+"Outside Diameter Min": "114.30",
+
+"Outside Diameter Max": "114.50",
+
+"Wall Thickness Min": "3.40",
+
+"Wall Thickness Max": "3.65"
+
+}
+
+]
+
+},
+
+{
+
+"title": "Imperial size Pressure Pipes: BS 3505/06",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Nominal Size inch": "\frac{1}{2}"",
+
+"Mean Outside Dia Min Max": "21.2 21.5",
+
+"PN-15(Class-E) Min Max": "1.7 2.1",
+
+"PN-12 (Class-D) Min": "",
+
+"PN-12 (Class-D) Max": "",
+
+"PN-9 (Class-C) Min Max": "",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": ""
+
+},
+
+{
+
+"Nominal Size inch": "\frac{3}{4}"",
+
+"Mean Outside Dia Min Max": "26.6 26.9",
+
+"PN-15(Class-E) Min Max": "1.9 2.5",
+
+"PN-12 (Class-D) Min": "",
+
+"PN-12 (Class-D) Max": "",
+
+"PN-9 (Class-C) Min Max": "",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": ""
+
+},
+
+{
+
+"Nominal Size inch": "1"",
+
+"Mean Outside Dia Min Max": "33.4 33.7",
+
+"PN-15(Class-E) Min Max": "2.2 2.8",
+
+"PN-12 (Class-D) Min": "",
+
+"PN-12 (Class-D) Max": "",
+
+"PN-9 (Class-C) Min Max": "",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": ""
+
+},
+
+{
+
+"Nominal Size inch": "1\frac{1}{4}"",
+
+"Mean Outside Dia Min Max": "42.1 42.4",
+
+"PN-15(Class-E) Min Max": "2.7 3.3",
+
+"PN-12 (Class-D) Min": "2.2",
+
+"PN-12 (Class-D) Max": "2.7",
+
+"PN-9 (Class-C) Min Max": "",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": "1.8 2.2"
+
+},
+
+{
+
+"Nominal Size inch": "1^{1}/_{2}"",
+
+"Mean Outside Dia Min Max": "48.1 48.4",
+
+"PN-15(Class-E) Min Max": "3.1 3.7",
+
+"PN-12 (Class-D) Min": "2.5",
+
+"PN-12 (Class-D) Max": "3.0",
+
+"PN-9 (Class-C) Min Max": "",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": "1.8 2.2"
+
+},
+
+{
+
+"Nominal Size inch": "2"",
+
+"Mean Outside Dia Min Max": "60.2 60.5",
+
+"PN-15(Class-E) Min Max": "3.9 4.5",
+
+"PN-12 (Class-D) Min": "3.1",
+
+"PN-12 (Class-D) Max": "3.7",
+
+"PN-9 (Class-C) Min Max": "2.5 3.0",
+
+"PN-6 (Class-B) Min": "",
+
+"PN-6 (Class-B) Max": "",
+
+"Non Pressure (Class-O) Min Max": "1.8 2.2"
+
+},
+
+{
+
+"Nominal Size inch": "3"",
+
+"Mean Outside Dia Min Max": "88.7 89.1",
+
+"PN-15(Class-E) Min Max": "5.7 6.6",
+
+"PN-12 (Class-D) Min": "4.6",
+
+"PN-12 (Class-D) Max": "5.3",
+
+"PN-9 (Class-C) Min Max": "3.5 4.1",
+
+"PN-6 (Class-B) Min": "2.9",
+
+"PN-6 (Class-B) Max": "3.4",
+
+"Non Pressure (Class-O) Min Max": "1.8 2.2"
+
+},
+
+{
+
+"Nominal Size inch": "4"",
+
+"Mean Outside Dia Min Max": "114.1 114.5",
+
+"PN-15(Class-E) Min Max": "7.3 8.4",
+
+"PN-12 (Class-D) Min": "6.0",
+
+"PN-12 (Class-D) Max": "6.9",
+
+"PN-9 (Class-C) Min Max": "4.5 5.2",
+
+"PN-6 (Class-B) Min": "3.4",
+
+"PN-6 (Class-B) Max": "4.0",
+
+"Non Pressure (Class-O) Min Max": "2.3 3.1"
+
+},
+
+{
+
+"Nominal Size inch": "6"",
+
+"Mean Outside Dia Min Max": "168 168.5",
+
+"PN-15(Class-E) Min Max": "10.8 12.5",
+
+"PN-12 (Class-D) Min": "8.8",
+
+"PN-12 (Class-D) Max": "10.2",
+
+"PN-9 (Class-C) Min Max": "6.6 7.6",
+
+"PN-6 (Class-B) Min": "4.5",
+
+"PN-6 (Class-B) Max": "5.2",
+
+"Non Pressure (Class-O) Min Max": "3.1 3.7"
+
+},
+
+{
+
+"Nominal Size inch": "8"",
+
+"Mean Outside Dia Min Max": "218.8 219.4",
+
+"PN-15(Class-E) Min Max": "12.6 14.5",
+
+"PN-12 (Class-D) Min": "10.3",
+
+"PN-12 (Class-D) Max": "11.9",
+
+"PN-9 (Class-C) Min Max": "7.8 9.0",
+
+"PN-6 (Class-B) Min": "5.3",
+
+"PN-6 (Class-B) Max": "6.1",
+
+"Non Pressure (Class-O) Min Max": "3.1 3.7"
+
+},
+
+{
+
+"Nominal Size inch": "10"",
+
+"Mean Outside Dia Min Max": "272.6 273.4",
+
+"PN-15(Class-E) Min Max": "15.7 18.1",
+
+"PN-12 (Class-D) Min": "12.8",
+
+"PN-12 (Class-D) Max": "14.8",
+
+"PN-9 (Class-C) Min Max": "9.7 11.2",
+
+"PN-6 (Class-B) Min": "6.6",
+
+"PN-6 (Class-B) Max": "7.6",
+
+"Non Pressure (Class-O) Min Max": "3.1 3.7"
+
+},
+
+{
+
+"Nominal Size inch": "12"",
+
+"Mean Outside Dia Min Max": "323.4 324.3",
+
+"PN-15(Class-E) Min Max": "18.7 21.6",
+
+"PN-12 (Class-D) Min": "15.2",
+
+"PN-12 (Class-D) Max": "17.5",
+
+"PN-9 (Class-C) Min Max": "11.5 13.3",
+
+"PN-6 (Class-B) Min": "7.8",
+
+"PN-6 (Class-B) Max": "9.0",
+
+"Non Pressure (Class-O) Min Max": "3.1 3.7"
+
+}
+
+]
+
+},
+
+{
+
+"title": "NON-STANDARD DUCT PIPE",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"Product": "75 DUCT PIPE",
+
+"Outside Min": "75.00",
+
+"Diameter Max": "75.30",
+
+"Min Wall Thickness Max": "1.70 2.00"
+
+},
+
+{
+
+"Product": "90 DUCT PIPE",
+
+"Outside Min": "90.00",
+
+"Diameter Max": "90.30",
+
+"Min Wall Thickness Max": "1.70 2.00"
+
+},
+
+{
+
+"Product": "110 DUCT PIPE",
+
+"Outside Min": "110.00",
+
+"Diameter Max": "110.40",
+
+"Min Wall Thickness Max": "2.40 2.80"
+
+},
+
+{
+
+"Product": "160 DUCT PIPE",
+
+"Outside Min": "160.00",
+
+"Diameter Max": "160.40",
+
+"Min Wall Thickness Max": "3.60 4.00"
+
+}
+
+]
+
+}
+
+],
+
+"fittingsTables": [
+
+{
+
+"title": "DUCT END CAPS",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "2" C/56",
+
+"ID": "60.5/54",
+
+"H": "30"
+
+},
+
+{
+
+"Ø/SIZE": "3" C/54D",
+
+"ID": "89.5/96.7",
+
+"H": "30"
+
+},
+
+{
+
+"Ø/SIZE": "4" C/110 mm",
+
+"ID": "114.5/110",
+
+"H": "30"
+
+},
+
+{
+
+"Ø/SIZE": "6" C / 160 mm",
+
+"ID": "168.5/160",
+
+"H": "40"
+
+},
+
+{
+
+"Ø/SIZE": "8" C/200 mm",
+
+"ID": "219.4/200",
+
+"H": "45"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT SOCKETS",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "2" C/56",
+
+"ID": "60.5/54",
+
+"L": "116.5"
+
+},
+
+{
+
+"Ø/SIZE": "3" C/54D",
+
+"ID": "89.5/96.7",
+
+"L": "162"
+
+},
+
+{
+
+"Ø/SIZE": "4" C/110 mm",
+
+"ID": "114.5/110",
+
+"L": "172"
+
+},
+
+{
+
+"Ø/SIZE": "6" C/160 mm",
+
+"ID": "168.5/160",
+
+"L": "258"
+
+},
+
+{
+
+"Ø/SIZE": "8" C/200 mm",
+
+"ID": "219.4/200",
+
+"L": "294"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT BELLMOUTHS",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "2" C/56",
+
+"ID": "110",
+
+"OD": "117",
+
+"WT": "3.5/1.63"
+
+},
+
+{
+
+"Ø/SIZE": "3" C/54D",
+
+"ID": "161.5",
+
+"OD": "168",
+
+"WT": "3.5/1.63"
+
+},
+
+{
+
+"Ø/SIZE": "4" C/110 mm",
+
+"ID": "201",
+
+"OD": "212",
+
+"WT": "4/340"
+
+},
+
+{
+
+"Ø/SIZE": "6" C/160 mm",
+
+"ID": "250.5",
+
+"OD": "265",
+
+"WT": "5.00"
+
+},
+
+{
+
+"Ø/SIZE": "8" C/200 mm",
+
+"ID": "315",
+
+"OD": "332",
+
+"WT": "6.25"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT 90/45° LR BENDS",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "1"",
+
+"L1": "220",
+
+"L2": "220",
+
+"L3": "280",
+
+"L4": "280",
+
+"R": "200"
+
+},
+
+{
+
+"Ø/SIZE": "1½"",
+
+"L1": "310",
+
+"L2": "310",
+
+"L3": "400",
+
+"L4": "400",
+
+"R": "300"
+
+},
+
+{
+
+"Ø/SIZE": "2" C/56",
+
+"L1": "481",
+
+"L2": "481",
+
+"L3": "567",
+
+"L4": "567",
+
+"R": "300"
+
+},
+
+{
+
+"Ø/SIZE": "3" C/54D",
+
+"L1": "638",
+
+"L2": "638",
+
+"L3": "755",
+
+"L4": "755",
+
+"R": "400"
+
+},
+
+{
+
+"Ø/SIZE": "4" C/110 mm",
+
+"L1": "626",
+
+"L2": "626",
+
+"L3": "683",
+
+"L4": "683",
+
+"R": "400"
+
+},
+
+{
+
+"Ø/SIZE": "6" C/160 mm",
+
+"L1": "699",
+
+"L2": "699",
+
+"L3": "717",
+
+"L4": "717",
+
+"R": "400"
+
+},
+
+{
+
+"Ø/SIZE": "8" C/200 mm",
+
+"L1": "914",
+
+"L2": "914",
+
+"L3": "1090",
+
+"L4": "1090",
+
+"R": "600"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT 90° LIGHTING LR BENDS 4"",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "4" CLASS C",
+
+"POLES": "12 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "4" CLASS C",
+
+"POLES": "14 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "4" CLASS C",
+
+"POLES": "16/18 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1070",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "4" CLASS C",
+
+"POLES": "25 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "1150"
+
+}
+
+]
+
+},
+
+{
+
+"title": "DUCT 90° STREET LIGHTING L R BENDS 3"",
+
+"type": "fitting",
+
+"data": [
+
+{
+
+"Ø/SIZE": "3" CLASS C",
+
+"POLES": "3.5 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "700",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "3" CLASS C",
+
+"POLES": "5 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "700",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "3" CLASS C",
+
+"POLES": "6 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "3" CLASS C",
+
+"POLES": "8 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "600"
+
+},
+
+{
+
+"Ø/SIZE": "3" CLASS C",
+
+"POLES": "10 Mtr.",
+
+"RADIUS (mm)": "600",
+
+"H(mm)": "1050",
+
+"W(mm)": "600"
+
+}
+
+]
+
+}
+
+]
+
+}
+
+<END_PDF_JSON>

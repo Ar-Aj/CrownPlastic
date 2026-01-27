@@ -1,0 +1,501 @@
+<START_PDF_JSON>
+
+{
+
+"standard": "CROWN PPR PIPES",
+
+"series": [
+
+{
+
+"id": "sdr11-pn10",
+
+"label": "PPR PIPES SDR11 / PN 10",
+
+"tables": [
+
+{
+
+"title": "Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"PART": "CPPR1020",
+
+"DIMENSIONS": "20",
+
+"WALL THICKNESS": "1.9",
+
+"INNER DIAMETER": "16.0",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.107"
+
+},
+
+{
+
+"PART": "CPPR1025",
+
+"DIMENSIONS": "25",
+
+"WALL THICKNESS": "2.3",
+
+"INNER DIAMETER": "20.4",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.164"
+
+},
+
+{
+
+"PART": "CPPR1032",
+
+"DIMENSIONS": "32",
+
+"WALL THICKNESS": "2.9",
+
+"INNER DIAMETER": "26.2",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.261"
+
+},
+
+{
+
+"PART": "CPPR1040",
+
+"DIMENSIONS": "40",
+
+"WALL THICKNESS": "3.7",
+
+"INNER DIAMETER": "32.6",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.412"
+
+},
+
+{
+
+"PART": "CPPR1050",
+
+"DIMENSIONS": "50",
+
+"WALL THICKNESS": "4.6",
+
+"INNER DIAMETER": "40.8",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "0.638"
+
+},
+
+{
+
+"PART": "CPPR1063",
+
+"DIMENSIONS": "63",
+
+"WALL THICKNESS": "5.8",
+
+"INNER DIAMETER": "51.4",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "1.010"
+
+},
+
+{
+
+"PART": "CPPR1075",
+
+"DIMENSIONS": "75",
+
+"WALL THICKNESS": "6.8",
+
+"INNER DIAMETER": "61.4",
+
+"PACKING UNIT": "16 Mtrs",
+
+"Kg/Mtr.": "1.410"
+
+},
+
+{
+
+"PART": "CPPR1090",
+
+"DIMENSIONS": "90",
+
+"WALL THICKNESS": "8.2",
+
+"INNER DIAMETER": "73.6",
+
+"PACKING UNIT": "12 Mtrs",
+
+"Kg/Mtr.": "2.030"
+
+},
+
+{
+
+"PART": "CPPR10110",
+
+"DIMENSIONS": "110",
+
+"WALL THICKNESS": "10.0",
+
+"INNER DIAMETER": "90.0",
+
+"PACKING UNIT": "8 Mtrs",
+
+"Kg/Mtr.": "3.010"
+
+}
+
+]
+
+}
+
+]
+
+},
+
+{
+
+"id": "sdr7_4-pn16",
+
+"label": "PPR PIPES SDR7.4 / PN 16",
+
+"tables": [
+
+{
+
+"title": "Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"PART": "CPPR1620",
+
+"DIMENSIONS": "20",
+
+"WALL THICKNESS": "2.8",
+
+"INNER DIAMETER": "14.4",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.147"
+
+},
+
+{
+
+"PART": "CPPR1625",
+
+"DIMENSIONS": "25",
+
+"WALL THICKNESS": "3.5",
+
+"INNER DIAMETER": "18",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.229"
+
+},
+
+{
+
+"PART": "CPPR1632",
+
+"DIMENSIONS": "32",
+
+"WALL THICKNESS": "4.4",
+
+"INNER DIAMETER": "23.2",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.370"
+
+},
+
+{
+
+"PART": "CPPR1640",
+
+"DIMENSIONS": "40",
+
+"WALL THICKNESS": "5.5",
+
+"INNER DIAMETER": "29",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.578"
+
+},
+
+{
+
+"PART": "CPPR1650",
+
+"DIMENSIONS": "50",
+
+"WALL THICKNESS": "6.9",
+
+"INNER DIAMETER": "36.2",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "0.906"
+
+},
+
+{
+
+"PART": "CPPR1663",
+
+"DIMENSIONS": "63",
+
+"WALL THICKNESS": "8.6",
+
+"INNER DIAMETER": "45.8",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "1.426"
+
+},
+
+{
+
+"PART": "CPPR1675",
+
+"DIMENSIONS": "75",
+
+"WALL THICKNESS": "10.3",
+
+"INNER DIAMETER": "54.4",
+
+"PACKING UNIT": "16 Mtrs",
+
+"Kg/Mtr.": "2.031"
+
+},
+
+{
+
+"PART": "CPPR1690",
+
+"DIMENSIONS": "90",
+
+"WALL THICKNESS": "12.3",
+
+"INNER DIAMETER": "65.4",
+
+"PACKING UNIT": "12 Mtrs",
+
+"Kg/Mtr.": "2.880"
+
+},
+
+{
+
+"PART": "CPPR16110",
+
+"DIMENSIONS": "110",
+
+"WALL THICKNESS": "15.1",
+
+"INNER DIAMETER": "79.8",
+
+"PACKING UNIT": "8 Mtrs",
+
+"Kg/Mtr.": "4.295"
+
+}
+
+]
+
+}
+
+]
+
+},
+
+{
+
+"id": "sdr6-pn20",
+
+"label": "PPR PIPES SDR6 / PN 20",
+
+"tables": [
+
+{
+
+"title": "Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78",
+
+"type": "pipe",
+
+"data": [
+
+{
+
+"PART": "CPPR1620",
+
+"DIMENSIONS": "20",
+
+"WALL THICKNESS": "3.4",
+
+"INNER DIAMETER": "13.2",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.172"
+
+},
+
+{
+
+"PART": "CPPR1625",
+
+"DIMENSIONS": "25",
+
+"WALL THICKNESS": "4.2",
+
+"INNER DIAMETER": "16.6",
+
+"PACKING UNIT": "100 Mtrs",
+
+"Kg/Mtr.": "0.266"
+
+},
+
+{
+
+"PART": "CPPR1632",
+
+"DIMENSIONS": "32",
+
+"WALL THICKNESS": "5.4",
+
+"INNER DIAMETER": "21.2",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.432"
+
+},
+
+{
+
+"PART": "CPPR1640",
+
+"DIMENSIONS": "40",
+
+"WALL THICKNESS": "6.7",
+
+"INNER DIAMETER": "26.6",
+
+"PACKING UNIT": "40 Mtrs",
+
+"Kg/Mtr.": "0.670"
+
+},
+
+{
+
+"PART": "CPPR1650",
+
+"DIMENSIONS": "50",
+
+"WALL THICKNESS": "8.3",
+
+"INNER DIAMETER": "33.4",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "1.040"
+
+},
+
+{
+
+"PART": "CPPR1663",
+
+"DIMENSIONS": "63",
+
+"WALL THICKNESS": "10.5",
+
+"INNER DIAMETER": "42.0",
+
+"PACKING UNIT": "20 Mtrs",
+
+"Kg/Mtr.": "1.645"
+
+},
+
+{
+
+"PART": "CPPR1675 CPPR1690",
+
+"DIMENSIONS": "75 90",
+
+"WALL THICKNESS": "12.5 15.0",
+
+"INNER DIAMETER": "50.0 60.0",
+
+"PACKING UNIT": "16 Mtrs 12 Mtrs",
+
+"Kg/Mtr.": "2.340 3.360"
+
+},
+
+{
+
+"PART": "CPPR16110",
+
+"DIMENSIONS": "110",
+
+"WALL THICKNESS": "18.3",
+
+"INNER DIAMETER": "73.4",
+
+"PACKING UNIT": "8 Mtrs",
+
+"Kg/Mtr.": "5.008"
+
+}
+
+]
+
+}
+
+]
+
+}
+
+]
+
+}
+
+<END_PDF_JSON>

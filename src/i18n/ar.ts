@@ -11,7 +11,7 @@ export const ar = {
     about: 'من نحن',
     sustainability: 'الاستدامة',
     innovation: 'الابتكار',
-    news_media: 'الأخبار والإعلام',
+    media_blogs: 'الإعلام والمدونات',
     resources: 'الموارد',
     contact: 'اتصل بنا',
     view_all: 'عرض الكل',

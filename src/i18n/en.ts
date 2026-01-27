@@ -11,7 +11,7 @@ export const en = {
     about: 'About Us',
     sustainability: 'Sustainability',
     innovation: 'Innovation',
-    news_media: 'News & Media',
+    media_blogs: 'Media & Blogs',
     resources: 'Resources',
     contact: 'Contact',
     view_all: 'View All',
