@@ -168,11 +168,6 @@ export const categoryDocs: Record<string, PdfDocument[]> = {
   'ppr': [
     DOCS.pprPipes,
   ],
-  'upvc-fabrications': [
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
   'polyethylene': [
     DOCS.peSystem,
   ],
@@ -256,30 +251,6 @@ export const productDocs: Record<string, PdfDocument[]> = {
   ],
   'ppr/ppr-sdr6-pn20': [
     DOCS.pprPipes,
-  ],
-  
-  // -------------------------------------------------------------------------
-  // UPVC FABRICATIONS PRODUCTS (new category)
-  // -------------------------------------------------------------------------
-  'upvc-fabrications/upvc-fabrications-type-a': [
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-fabrications/upvc-fabrications-type-b': [
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-fabrications/upvc-fabrications-type-c': [
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'upvc-fabrications/upvc-fabrications-type-d': [
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
   ],
   
   // -------------------------------------------------------------------------

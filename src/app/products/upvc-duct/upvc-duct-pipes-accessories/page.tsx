@@ -1,24 +1,28 @@
-'use client';
-
-import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { ProductDetailLayout } from '@/components/products';
 import { upvcDuctPipesAndAccessories } from '@/config/productDetails/ductData';
 
-/**
- * UPVC Duct Pipes & Accessories Product Detail Page
- * 
- * Route: /products/upvc-duct/upvc-duct-pipes-accessories
- * 
- * Renders the combined duct pipes and accessories detail page using
- * the shared ProductDetailLayout component.
- */
-export default function UpvcDuctPipesAccessoriesPage() {
-  // The config is always available since this is a dedicated page
-  const config = upvcDuctPipesAndAccessories;
-  
-  if (!config) {
-    notFound();
-  }
-  
-  return <ProductDetailLayout product={config} />;
+export const metadata: Metadata = {
+  title: 'UPVC Duct Pipes & Accessories | Crown Plastic',
+  description: 'Premium UPVC duct pipes and accessories for electrical and telecommunications cable protection. Manufactured to international standards including NEMA, DIN, and BS specifications.',
+  keywords: [
+    'upvc duct pipes',
+    'duct accessories',
+    'electrical cable protection',
+    'telecommunications ducting',
+    'nema compliant duct',
+    'duct fittings',
+    'underground duct installation',
+    'cable protection systems',
+    'Crown Plastic duct',
+  ],
+  openGraph: {
+    title: 'UPVC Duct Pipes & Accessories | Crown Plastic',
+    description: 'Premium UPVC duct pipes and accessories for electrical and telecommunications cable protection.',
+    type: 'website',
+  },
+};
+
+export default function UPVCDuctPipesAndAccessoriesPage() {
+  return <ProductDetailLayout product={upvcDuctPipesAndAccessories} />;
 }

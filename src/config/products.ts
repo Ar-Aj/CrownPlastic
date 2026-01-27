@@ -252,74 +252,7 @@ export const productCategories: ProductCategory[] = [
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
-  // F) UPVC FABRICATIONS AND ACCESSORIES - NEW CATEGORY
-  // ─────────────────────────────────────────────────────────────────────────────
-  {
-    slug: 'upvc-fabrications',
-    name: 'UPVC Fabrications & Accessories',
-    nameAr: 'تصنيعات وملحقات UPVC',
-    shortDescription: 'Type A | Type B | Type C | Type D | Custom fabrications',
-    shortDescriptionAr: 'النوع A | النوع B | النوع C | النوع D | تصنيعات مخصصة',
-    icon: '🔩',
-    image: '/images/products/upvc-fabrications.jpg',
-    subProducts: [
-      {
-        slug: 'upvc-fabrications-type-a',
-        name: 'UPVC Fabrications and Accessories Type A',
-        nameAr: 'تصنيعات وملحقات UPVC النوع A',
-        shortLabel: 'Type A',
-        shortLabelAr: 'النوع A',
-        standards: ['Crown Specification'],
-        shortDescription: 'Custom UPVC fabrications Type A for specialized project requirements.',
-        shortDescriptionAr: 'تصنيعات UPVC مخصصة النوع A لمتطلبات المشاريع المتخصصة.',
-        features: ['Made to order', 'Custom dimensions', 'Project-specific design'],
-        featuresAr: ['مصنوع حسب الطلب', 'أبعاد مخصصة', 'تصميم خاص بالمشروع'],
-        image: '/images/products/upvc-fabrications-type-a.jpg',
-      },
-      {
-        slug: 'upvc-fabrications-type-b',
-        name: 'UPVC Fabrications and Accessories Type B',
-        nameAr: 'تصنيعات وملحقات UPVC النوع B',
-        shortLabel: 'Type B',
-        shortLabelAr: 'النوع B',
-        standards: ['Crown Specification'],
-        shortDescription: 'Custom UPVC fabrications Type B for specialized project requirements.',
-        shortDescriptionAr: 'تصنيعات UPVC مخصصة النوع B لمتطلبات المشاريع المتخصصة.',
-        features: ['Made to order', 'Custom dimensions', 'Project-specific design'],
-        featuresAr: ['مصنوع حسب الطلب', 'أبعاد مخصصة', 'تصميم خاص بالمشروع'],
-        image: '/images/products/upvc-fabrications-type-b.jpg',
-      },
-      {
-        slug: 'upvc-fabrications-type-c',
-        name: 'UPVC Fabrications and Accessories Type C',
-        nameAr: 'تصنيعات وملحقات UPVC النوع C',
-        shortLabel: 'Type C',
-        shortLabelAr: 'النوع C',
-        standards: ['Crown Specification'],
-        shortDescription: 'Custom UPVC fabrications Type C for specialized project requirements.',
-        shortDescriptionAr: 'تصنيعات UPVC مخصصة النوع C لمتطلبات المشاريع المتخصصة.',
-        features: ['Made to order', 'Custom dimensions', 'Project-specific design'],
-        featuresAr: ['مصنوع حسب الطلب', 'أبعاد مخصصة', 'تصميم خاص بالمشروع'],
-        image: '/images/products/upvc-fabrications-type-c.jpg',
-      },
-      {
-        slug: 'upvc-fabrications-type-d',
-        name: 'UPVC Fabrications and Accessories Type D',
-        nameAr: 'تصنيعات وملحقات UPVC النوع D',
-        shortLabel: 'Type D',
-        shortLabelAr: 'النوع D',
-        standards: ['Crown Specification'],
-        shortDescription: 'Custom UPVC fabrications Type D for specialized project requirements.',
-        shortDescriptionAr: 'تصنيعات UPVC مخصصة النوع D لمتطلبات المشاريع المتخصصة.',
-        features: ['Made to order', 'Custom dimensions', 'Project-specific design'],
-        featuresAr: ['مصنوع حسب الطلب', 'أبعاد مخصصة', 'تصميم خاص بالمشروع'],
-        image: '/images/products/upvc-fabrications-type-d.jpg',
-      },
-    ],
-  },
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // G) HDPE PIPE SYSTEMS
+  // F) HDPE PIPE SYSTEMS
   // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: 'polyethylene',

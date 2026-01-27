@@ -45,7 +45,6 @@ export const mainNavItems: NavItem[] = [
       { label: 'UPVC Conduit Pipes', labelAr: 'أنابيب القنوات UPVC', href: '/products/pvc-conduit', description: 'SCH 40 & SCH 80', descriptionAr: 'حلول القنوات الكهربائية' },
       { label: 'PPR Pipes', labelAr: 'أنابيب PPR', href: '/products/ppr', description: 'PN10, PN16, PN20', descriptionAr: 'أنظمة المياه الساخنة والباردة' },
       { label: 'UPVC Duct Pipes & Accessories', labelAr: 'أنابيب وملحقات قنوات UPVC', href: '/products/upvc-duct', description: 'Black Pipes / Fittings', descriptionAr: 'أنظمة قنوات الكابلات' },
-      { label: 'UPVC Fabrications & Accessories', labelAr: 'مصنوعات وإكسسوارات UPVC', href: '/products/upvc-fabrications', description: 'Type A, B, C, D', descriptionAr: 'مصنوعات وإكسسوارات مخصصة' },
       { label: 'HDPE Pipe Systems', labelAr: 'أنظمة أنابيب HDPE', href: '/products/polyethylene', description: 'Polyethylene solutions', descriptionAr: 'حلول البولي إيثيلين' },
     ],
   },
@@ -121,7 +120,6 @@ export const footerColumns: FooterColumn[] = [
       { label: 'UPVC Conduit', labelAr: 'قنوات UPVC', href: '/products/pvc-conduit' },
       { label: 'PPR Pipes', labelAr: 'أنابيب PPR', href: '/products/ppr' },
       { label: 'UPVC Duct', labelAr: 'قنوات UPVC', href: '/products/upvc-duct' },
-      { label: 'UPVC Fabrications', labelAr: 'مصنوعات UPVC', href: '/products/upvc-fabrications' },
       { label: 'HDPE Systems', labelAr: 'أنظمة HDPE', href: '/products/polyethylene' },
     ],
   },
@@ -203,12 +201,6 @@ export const allRoutes = [
   // UPVC Duct Pipes & Accessories
   { path: '/products/upvc-duct', label: 'UPVC Duct Pipes & Accessories', description: 'Cable ducting systems' },
   { path: '/products/upvc-duct/upvc-duct-black', label: 'UPVC Duct Black Pipes', description: 'Black Pipes / Fittings' },
-  // UPVC Fabrications & Accessories (NEW)
-  { path: '/products/upvc-fabrications', label: 'UPVC Fabrications & Accessories', description: 'Custom fabrication solutions' },
-  { path: '/products/upvc-fabrications/upvc-fabrications-type-a', label: 'UPVC Fabrications Type A', description: 'Type A fabrications & accessories' },
-  { path: '/products/upvc-fabrications/upvc-fabrications-type-b', label: 'UPVC Fabrications Type B', description: 'Type B fabrications & accessories' },
-  { path: '/products/upvc-fabrications/upvc-fabrications-type-c', label: 'UPVC Fabrications Type C', description: 'Type C fabrications & accessories' },
-  { path: '/products/upvc-fabrications/upvc-fabrications-type-d', label: 'UPVC Fabrications Type D', description: 'Type D fabrications & accessories' },
   // HDPE Pipe Systems (category only - no subProducts)
   { path: '/products/polyethylene', label: 'HDPE Pipe Systems', description: 'Polyethylene pipe solutions' },
   // Service Area Pages (LocalBusiness Schema)
