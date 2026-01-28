@@ -13,7 +13,9 @@ import { type ProductDetailConfig } from '@/types/productDetail';
 // SHARED DATA (from pprSeriesData.globalNotes)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const sharedStandards = [
+// Reference standards (kept for documentation)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _sharedStandards = [
   'ISO 9001 - 2015',
   'ISO 1183',
   'ISO 1133',
@@ -49,7 +51,8 @@ const sharedFeatures = [
   'Hygienic and non-toxic compared to metal or other plastic products',
 ];
 
-const sharedBenefits = [
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _sharedBenefits = [
   'Very long life time with a guaranteed service life of 50 years',
   'Cost effective pipeline networks',
   'Low labour cost of installations',

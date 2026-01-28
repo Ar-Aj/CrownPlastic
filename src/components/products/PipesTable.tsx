@@ -1,7 +1,7 @@
 'use client';
 
 import { type PipeTable } from '@/types/productDetail';
-import { PDSection, PDSectionHeader, PDTableShell, pdTypography } from '@/components/productDetail';
+import { PDSection, PDSectionHeader, PDTableShell } from '@/components/productDetail';
 
 interface PipesTableProps {
   table: PipeTable;

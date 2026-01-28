@@ -14,10 +14,8 @@ import { type ProductDetailConfig, type PipeTable } from '@/types/productDetail'
 // SHARED DATA (from upvcConduitData.globalNotes)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const sharedStandards = [
-  'ISO 9001:2015',
-  'ISO 18001',
-];
+// Standards reference (kept for documentation)
+// const sharedStandards = ['ISO 9001:2015', 'ISO 18001'];
 
 const sharedApplications = [
   'Protection of electrical wiring in commercial and residential projects',
@@ -26,13 +24,14 @@ const sharedApplications = [
   'Communication cable protection systems',
 ];
 
-const sharedFeatures = [
-  'Designed for electrical conduit applications in US trade sizes',
-  'Consistent dimensional control for reliable installations',
-  'Excellent electrical insulation properties',
-  'Corrosion-resistant and maintenance-free',
-  'Lightweight for easy handling and installation',
-];
+// Features reference (kept for documentation)
+// const sharedFeatures = [
+//   'Designed for electrical conduit applications in US trade sizes',
+//   'Consistent dimensional control for reliable installations',
+//   'Excellent electrical insulation properties',
+//   'Corrosion-resistant and maintenance-free',
+//   'Lightweight for easy handling and installation',
+// ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPE TABLES - Extracted from src/UPVC CONDUIT PIPE.txt JSON

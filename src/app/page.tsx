@@ -11,8 +11,8 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { 
   ArrowRight, Phone, Shield, Award, Truck, 
-  Wrench, CheckCircle2, Package,
-  Globe, Clock, Zap, Earth, Recycle
+  CheckCircle2, Package,
+  Globe, Clock, Earth, Recycle
 } from 'lucide-react';
 
 // Components
@@ -21,6 +21,7 @@ import {
   AnimatedStatsStrip,
   QuoteButton,
 } from '@/components/common';
+import { CrownAdvantageSection } from '@/components/home';
 import {
   TiltCard,
   AnimatedCounter,
@@ -38,8 +39,6 @@ import { useLanguage } from '@/context/LanguageContext';
 
 // Design System
 import { 
-  staggerContainer, 
-  fadeUp, 
   radialStagger,
   radialItem,
 } from '@/lib/design-system';
@@ -455,85 +454,11 @@ function AboutPreviewSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// WHY CHOOSE US - Feature Cards with Icons
+// WHY CHOOSE US - Now using CrownAdvantageSection from components/home
+// Dark blue bento grid with hero card + 6 support cards
+// See: src/components/home/CrownAdvantageSection.tsx
+// Config: src/config/homepageAdvantage.ts
 // ═══════════════════════════════════════════════════════════════════════════════
-
-function WhyChooseUsSection() {
-  const t = useT();
-  const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const features = [
-    { 
-      icon: Award, 
-      title: t('home.why_quality'), 
-      description: t('home.why_quality_desc'),
-      color: 'from-amber-500 to-orange-500',
-      shadowColor: 'shadow-amber-500/30',
-    },
-    { 
-      icon: Zap, 
-      title: t('home.why_innovation'), 
-      description: t('home.why_innovation_desc'),
-      color: 'from-blue-500 to-cyan-500',
-      shadowColor: 'shadow-blue-500/30',
-    },
-    { 
-      icon: Truck, 
-      title: t('home.why_delivery'), 
-      description: t('home.why_delivery_desc'),
-      color: 'from-emerald-500 to-teal-500',
-      shadowColor: 'shadow-emerald-500/30',
-    },
-    { 
-      icon: Wrench, 
-      title: t('home.why_support'), 
-      description: t('home.why_support_desc'),
-      color: 'from-purple-500 to-pink-500',
-      shadowColor: 'shadow-purple-500/30',
-    },
-  ];
-
-  return (
-    <section ref={ref} className="py-12 md:py-16 bg-white">
-      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
-        <SectionHeader
-          label="Why Choose Us"
-          title="The Crown"
-          titleHighlight="Advantage"
-          subtitle="What sets us apart as the leading piping solutions provider in the Gulf"
-        />
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {features.map((feature) => (
-            <motion.div key={feature.title} variants={fadeUp}>
-              <TiltCard intensity={5}>
-                <div className="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 h-full">
-                  {/* Icon */}
-                  <motion.div 
-                    className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4 shadow-lg ${feature.shadowColor}`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: 'spring', stiffness: 400 }}
-                  >
-                    <feature.icon className="w-7 h-7 text-white" />
-                  </motion.div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-                </div>
-              </TiltCard>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // FINAL CTA SECTION - Full Width with Gradient Background
@@ -648,8 +573,8 @@ export default function HomePage() {
       {/* About Preview - Split Screen */}
       <AboutPreviewSection />
 
-      {/* Why Choose Us */}
-      <WhyChooseUsSection />
+      {/* Why Choose Us - Crown Advantage Section */}
+      <CrownAdvantageSection />
 
       {/* Final CTA */}
       <FinalCTASection />

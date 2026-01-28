@@ -23,20 +23,22 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-import { type ProductDetailConfig, type Fitting, type FittingSpecTable } from '@/types/productDetail';
+import { type ProductDetailConfig, type Fitting } from '@/types/productDetail';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // HELPER: Normalise header keys
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function normaliseKey(header: string): string {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function _normaliseKey(header: string): string {
   return header
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '_')
     .replace(/^_|_$/g, '');
 }
 
-function slugify(title: string): string {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function _slugify(title: string): string {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')

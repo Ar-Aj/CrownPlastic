@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronRight, Download, CheckCircle2, XCircle } from 'lucide-react';
-import { type ProductDetailConfig, type ProductVariant, PRODUCT_DETAIL_SECTIONS } from '@/types/productDetail';
+import { type ProductDetailConfig, PRODUCT_DETAIL_SECTIONS } from '@/types/productDetail';
 import { PipesSection } from './PipesTable';
 import { FittingsSection } from './FittingsGallery';
 import { useLanguage } from '@/context/LanguageContext';
@@ -17,7 +17,6 @@ import {
   PDApplicationCard,
   PDEyebrow,
   PDHeroBadgeRow,
-  pdColors,
   pdTypography,
   pdSpacing,
 } from '@/components/productDetail';

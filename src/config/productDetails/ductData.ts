@@ -8,7 +8,7 @@
  * - UPVC Duct Accessories/Fittings (End Caps, Sockets, Bellmouths, Bends)
  */
 
-import { type ProductDetailConfig, type PipeTable, type Fitting, type FittingSpecTable } from '@/types/productDetail';
+import { type ProductDetailConfig, type PipeTable, type Fitting } from '@/types/productDetail';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPE TABLES - Extracted from UPVC DUCT PIPES AND ACCESSORIES.txt JSON

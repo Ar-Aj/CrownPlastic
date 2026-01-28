@@ -265,6 +265,73 @@ export const productCategories: ProductCategory[] = [
     // No sub-families exposed in UI until real data is available
     subProducts: [],
   },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // G) PVC/UPVC FABRICATIONS & ACCESSORIES
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'fabrications',
+    name: 'PVC/UPVC Fabrications & Accessories',
+    nameAr: 'تصنيعات وملحقات PVC/UPVC',
+    shortDescription: 'Grease Traps Types A–D | Dubai Municipality Approved | Custom Fabrications',
+    shortDescriptionAr: 'مصائد الشحوم أنواع A–D | معتمدة من بلدية دبي | تصنيعات مخصصة',
+    icon: '🏭',
+    image: '/images/products/fabrications.jpg',
+    subProducts: [
+      {
+        slug: 'pvc-upvc-grease-trap-type-a',
+        name: 'PVC/UPVC Grease Trap – Type A',
+        nameAr: 'مصيدة الشحوم PVC/UPVC – النوع A',
+        shortLabel: 'Type A',
+        shortLabelAr: 'النوع A',
+        standards: ['Dubai Municipality Approved', 'ISO 9001:2015'],
+        shortDescription: 'Single bucket grease trap (450mm deep) with GRP sealed cover.',
+        shortDescriptionAr: 'مصيدة شحوم بدلو واحد بعمق 450 مم مع غطاء GRP محكم.',
+        features: ['Single removable bucket', 'GRP cover', 'Brass hardware', 'Neoprene gasket'],
+        featuresAr: ['دلو واحد قابل للإزالة', 'غطاء GRP', 'أجهزة نحاسية', 'حشية نيوبرين'],
+        image: '/images/products/grease-trap-type-a.jpg',
+      },
+      {
+        slug: 'pvc-upvc-grease-trap-type-b',
+        name: 'PVC/UPVC Grease Trap – Type B',
+        nameAr: 'مصيدة الشحوم PVC/UPVC – النوع B',
+        shortLabel: 'Type B',
+        shortLabelAr: 'النوع B',
+        standards: ['Dubai Municipality Approved', 'ISO 9001:2015'],
+        shortDescription: 'Dual bucket grease trap (260mm deep each) with lifting handles.',
+        shortDescriptionAr: 'مصيدة شحوم بدلوين بعمق 260 مم لكل منهما مع مقابض رفع.',
+        features: ['Two removable buckets', 'Lifting handles', 'GRP cover', '5mm gasket'],
+        featuresAr: ['دلوين قابلين للإزالة', 'مقابض رفع', 'غطاء GRP', 'حشية 5 مم'],
+        image: '/images/products/grease-trap-type-b.jpg',
+      },
+      {
+        slug: 'pvc-upvc-grease-trap-type-c',
+        name: 'PVC/UPVC Grease Trap – Type C',
+        nameAr: 'مصيدة الشحوم PVC/UPVC – النوع C',
+        shortLabel: 'Type C',
+        shortLabelAr: 'النوع C',
+        standards: ['Dubai Municipality Approved', 'ISO 9001:2015'],
+        shortDescription: 'Large baffle grease trap (1980mm length) for high-capacity applications.',
+        shortDescriptionAr: 'مصيدة شحوم كبيرة بحاجز بطول 1980 مم للتطبيقات عالية السعة.',
+        features: ['Internal baffle wall', '1980mm length', 'High capacity', 'Neoprene gasket'],
+        featuresAr: ['جدار حاجز داخلي', 'طول 1980 مم', 'سعة عالية', 'حشية نيوبرين'],
+        image: '/images/products/grease-trap-type-c.jpg',
+      },
+      {
+        slug: 'pvc-upvc-grease-trap-type-d',
+        name: 'PVC/UPVC Grease Trap – Type D',
+        nameAr: 'مصيدة الشحوم PVC/UPVC – النوع D',
+        shortLabel: 'Type D',
+        shortLabelAr: 'النوع D',
+        standards: ['Dubai Municipality Approved', 'ISO 9001:2015'],
+        shortDescription: 'Compact grease trap with GRP cover secured by 24 wing nuts.',
+        shortDescriptionAr: 'مصيدة شحوم مدمجة بغطاء GRP مثبت بـ 24 صامولة جناحية.',
+        features: ['Compact design', '24 wing nuts', '2" air vent', 'Space-efficient'],
+        featuresAr: ['تصميم مدمج', '24 صامولة جناحية', 'فتحة تهوية 2 بوصة', 'موفر للمساحة'],
+        image: '/images/products/grease-trap-type-d.jpg',
+      },
+    ],
+  },
 ];
 
 // Helper function to get category by slug
