@@ -397,42 +397,61 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
       {/* Floating glow behind */}
       <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/10 via-cyan-500/5 to-transparent rounded-3xl blur-2xl" />
       
-      <div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 lg:p-10">
+      {/* Hero card - full 3:4 card with image covering entire background */}
+      <div className="relative bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl p-6 md:p-8 lg:p-10 overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
         {/* Source badge */}
-        <div className={`absolute top-4 right-4 px-2.5 py-1 text-xs font-medium rounded-full border ${tagColors[item.sourceTag]}`}>
+        <div className={`absolute top-4 right-4 z-20 px-2.5 py-1 text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
           {item.sourceTag}
         </div>
         
-        {/* CardMedia - Locked 1:1 aspect for hero icon */}
-        <div className="mb-6">
-          <CardMedia
-            aspect={item.imageAspect}
-            imageSrc={item.imageSrc}
-            alt={item.title}
-            FallbackIcon={Icon}
-            size="hero"
-          />
-        </div>
+        {/* Full-cover background image */}
+        {item.imageSrc && (
+          <div className="absolute inset-0 opacity-30">
+            <Image
+              src={item.imageSrc}
+              alt={item.title}
+              fill
+              className="object-cover object-center"
+              sizes="(min-width: 1024px) 400px, 300px"
+            />
+          </div>
+        )}
         
-        {/* Big animated number */}
-        <div className="mb-4">
-          <span className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-br from-white via-sky-100 to-cyan-200 bg-clip-text text-transparent leading-none">
-            {animatedValue}
-          </span>
+        {/* Text content on top of image */}
+        <div className="relative z-10 flex flex-col h-full justify-between text-white">
+          {/* Big animated number */}
+          {item.highlightStat && (
+            <motion.div
+              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-2 bg-gradient-to-br from-white via-sky-100 to-cyan-200 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              {animatedValue}
+            </motion.div>
+          )}
+          
+          {/* Stat label */}
           {item.statLabel && (
-            <span className="block text-xl md:text-2xl text-sky-300/80 font-medium mt-2">{item.statLabel}</span>
+            <div className="text-xl md:text-2xl font-semibold mb-4 text-sky-300/90">
+              {item.statLabel}
+            </div>
+          )}
+          
+          {/* Title */}
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+          
+          {/* Description */}
+          {item.description && (
+            <p className="text-sm md:text-base text-slate-200 leading-relaxed">
+              {item.description}
+            </p>
           )}
         </div>
         
-        {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
-        
-        {/* Description */}
-        <p className="text-sm md:text-base text-slate-300/80 leading-relaxed">{item.description}</p>
-        
         {/* Animated border glow */}
         <motion.div
-          className="absolute inset-0 rounded-2xl border-2 border-transparent"
+          className="absolute inset-0 rounded-3xl border-2 border-transparent pointer-events-none"
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(14,165,233,0.3), transparent)',
             backgroundSize: '200% 100%',
@@ -598,7 +617,7 @@ export default function CrownAdvantageSection() {
           {/* Secondary cards */}
           <div className="grid grid-cols-2 gap-3">
             {secondaryItems.map((item, idx) => (
-              <DataTile key={item.id} item={item} size="sm" delay={idx * 0.1} />
+              <DataTile key={item.id} item={item} size="sm" showDescription delay={idx * 0.1} />
             ))}
           </div>
         </div>
@@ -633,7 +652,7 @@ export default function CrownAdvantageSection() {
           {/* Bottom row: remaining cards */}
           <div className="grid grid-cols-4 gap-4 mt-5">
             {[...primaryItems.slice(2), ...secondaryItems].map((item, idx) => (
-              <DataTile key={item.id} item={item} size="sm" delay={idx * 0.1} />
+              <DataTile key={item.id} item={item} size="sm" showDescription delay={idx * 0.1} />
             ))}
           </div>
         </div>
@@ -655,7 +674,7 @@ export default function CrownAdvantageSection() {
             {/* Mini stats below hero */}
             <div className="grid grid-cols-2 gap-3">
               {secondaryItems.slice(0, 2).map((item, idx) => (
-                <DataTile key={item.id} item={item} size="sm" delay={0.4 + idx * 0.1} />
+                <DataTile key={item.id} item={item} size="sm" showDescription delay={0.4 + idx * 0.1} />
               ))}
             </div>
           </div>
@@ -678,7 +697,7 @@ export default function CrownAdvantageSection() {
               {/* Secondary tile stack */}
               <div className="flex flex-col gap-4">
                 {secondaryItems.slice(2).map((item, idx) => (
-                  <DataTile key={item.id} item={item} size="md" delay={0.5 + idx * 0.1} />
+                  <DataTile key={item.id} item={item} size="md" showDescription delay={0.5 + idx * 0.1} />
                 ))}
               </div>
               
