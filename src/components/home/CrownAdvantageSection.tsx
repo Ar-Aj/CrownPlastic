@@ -384,7 +384,6 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const animatedValue = useCountUp(item.highlightStat || '0', isInView, 2500);
-  const Icon = iconMap[item.iconKey];
 
   return (
     <motion.div
