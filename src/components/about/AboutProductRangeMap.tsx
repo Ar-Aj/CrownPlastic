@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PRODUCT_MAP, type ProductCategory, type ProductItem } from '@/data/productMap';
 import { PRODUCT_WHEEL_IMAGE_MAP, getCategoryAcronym } from '@/data/productWheelMap';
 
@@ -315,6 +316,22 @@ function WheelNode({
         )}
       </div>
 
+      {/* Product name permanently displayed ON TOP */}
+      <div
+        className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none"
+      >
+        <div 
+          className={`px-2 py-1 rounded-md text-[9px] sm:text-[10px] font-semibold whitespace-nowrap shadow-md transition-all duration-200 ${
+            isActive 
+              ? 'bg-slate-900 text-white' 
+              : 'bg-white text-slate-700 border border-slate-200'
+          }`}
+        >
+          {category.name.length > 20 ? category.name.slice(0, 18) + '...' : category.name}
+        </div>
+      </div>
+
+      {/* Item count below */}
       <div
         className={`absolute -bottom-4 sm:-bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] sm:text-xs font-medium transition-colors ${
           isActive ? 'text-primary' : 'text-slate-500'
@@ -322,22 +339,6 @@ function WheelNode({
       >
         {category.items.length} items
       </div>
-
-      <AnimatePresence>
-        {isHovered && !isActive && (
-          <motion.div
-            initial={{ opacity: 0, y: 2 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 2 }}
-            transition={{ duration: 0.1 }}
-            className="absolute -top-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none"
-          >
-            <div className="px-2.5 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-medium whitespace-nowrap shadow-xl">
-              {category.name}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.button>
   );
 }
@@ -369,7 +370,7 @@ function DetailPanelMobile({
       
       <div className="mt-4 grid gap-3 sm:grid-cols-2 max-w-xl mx-auto">
         {category.items.map((item) => (
-          <ItemChip key={item.id} item={item} reducedMotion={reducedMotion} />
+          <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} />
         ))}
       </div>
     </motion.div>
@@ -408,7 +409,7 @@ function DetailPanelDesktop({
       <div className="mt-4 flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar">
         <div className="grid gap-3 grid-cols-2 xl:grid-cols-3">
           {category.items.map((item) => (
-            <ItemChip key={item.id} item={item} reducedMotion={reducedMotion} />
+            <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} />
           ))}
         </div>
       </div>
@@ -416,24 +417,62 @@ function DetailPanelDesktop({
   );
 }
 
-/** Item chip */
-function ItemChip({ item, reducedMotion }: { item: ProductItem; reducedMotion: boolean }) {
+/** Item chip with Know More button */
+function ItemChip({ 
+  item, 
+  categoryId,
+  reducedMotion 
+}: { 
+  item: ProductItem; 
+  categoryId: string;
+  reducedMotion: boolean;
+}) {
+  // Map category IDs to their product page slugs
+  const categorySlugMap: Record<string, string> = {
+    'upvc-pressure': 'upvc-pressure',
+    'upvc-drainage': 'upvc-drainage',
+    'pvc-conduit': 'pvc-conduit',
+    'ppr': 'ppr',
+    'upvc-duct': 'upvc-duct',
+    'upvc-fabrications': 'upvc-fabrications',
+    'polyethylene': 'polyethylene',
+  };
+  
+  const categorySlug = categorySlugMap[categoryId] || categoryId;
+  
   return (
     <motion.div
       whileHover={reducedMotion ? {} : { scale: 1.02 }}
       className="rounded-xl border border-slate-200 bg-slate-50 hover:bg-white shadow-sm px-3 py-3 sm:px-4 sm:py-3 transition-all duration-200"
     >
-      <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug mb-1">
-        {item.name}
-      </h4>
-      {item.shortInfo && (
-        <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
-          {item.shortInfo}
-        </p>
-      )}
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex-1">
+          <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug mb-1">
+            {item.name}
+          </h4>
+          {item.shortInfo && (
+            <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+              {item.shortInfo}
+            </p>
+          )}
+        </div>
+        
+        {/* Know More button */}
+        <Link 
+          href={`/products/${categorySlug}`}
+          className="flex-shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition-all duration-200 border
+            bg-gradient-to-r from-[#0072BC] to-[#003B73] text-white border-[#003B73]
+            hover:from-[#003B73] hover:to-[#001d3a] hover:shadow-md
+            active:scale-95"
+        >
+          Know More
+        </Link>
+      </div>
     </motion.div>
   );
 }
+
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // MAIN COMPONENT
@@ -580,11 +619,11 @@ export default function AboutProductRangeMap() {
           </motion.div>
         </div>
 
-        {/* Desktop Layout (lg+): Horizontal grid with controlled height */}
-        <div className="hidden lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-10 items-center lg:h-[65vh] lg:min-h-[480px] lg:max-h-[600px]">
+        {/* Desktop Layout (lg+): Two-column grid - Wheel | Detail */}
+        <div className="hidden lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-6 xl:gap-10 items-center lg:min-h-[520px]">
           {/* Left column: Wheel */}
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="relative aspect-square max-w-[360px] xl:max-w-[420px]">
+          <div className="w-full flex items-center justify-center">
+            <div className="relative aspect-square max-w-[400px] xl:max-w-[480px]">
               <CenteredGlow size={420} reducedMotion={reducedMotion} />
               <OrbitRing orbitRadius={wheelConfig.lg.orbitRadius} reducedMotion={reducedMotion} />
               <CentralHub
@@ -619,7 +658,7 @@ export default function AboutProductRangeMap() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: 0.15 }}
-            className="w-full h-full max-h-full rounded-2xl bg-white shadow-lg border border-slate-100 px-6 py-6 overflow-hidden"
+            className="w-full h-[520px] rounded-2xl bg-white shadow-lg border border-slate-100 px-6 py-6 overflow-hidden"
           >
             <AnimatePresence mode="wait">
               {activeCategory && (

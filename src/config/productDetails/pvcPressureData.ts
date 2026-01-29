@@ -58,7 +58,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'ELBOW 90°',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/elbow-90.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/elbow-90.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
@@ -102,7 +102,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'ELBOW 45°',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/elbow-45.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/elbow-45.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
@@ -145,7 +145,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'FEMALE ELBOW 90°',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/female-elbow-90.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-elbow-90.jpg',
     sizes: [
       { sizeMm: '20 × 1/2"' },
       { sizeMm: '25 × 3/4"' },
@@ -179,7 +179,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'SOCKET/COUPLER',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/socket-coupler.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/socket-coupler.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
@@ -223,7 +223,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/reducer-bush-socket.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/reducer-bush-socket.jpg',
     sizes: [
       { sizeMm: '25 X 20' },
       { sizeMm: '32 X 20' },
@@ -292,7 +292,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/male-threaded-adaptor-socket-nipple-socket.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/male-threaded-adaptor-socket-nipple-socket.jpg',
     sizes: [
       { sizeMm: '20 × 1/2"' },
       { sizeMm: '25 × 3/4"' },
@@ -333,7 +333,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'FEMALE THREADED ADAPTOR/SOCKET G',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/female-threaded-adaptor-socket-g.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-threaded-adaptor-socket-g.jpg',
     sizes: [
       { sizeMm: '20 × 1/2"' },
       { sizeMm: '25 × 3/4"' },
@@ -374,7 +374,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'EQUAL TEE',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/equal-tee.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/equal-tee.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
@@ -416,7 +416,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'FEMALE THREADED TEE',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/female-threaded-tee.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-threaded-tee.jpg',
     sizes: [
       { sizeMm: '20 X 2 X 20' },
       { sizeMm: '25 × 1/2 × 25' },
@@ -460,7 +460,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'REDUCING TEE',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/reducing-tee.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/reducing-tee.jpg',
     sizes: [
       { sizeMm: '25 X 20 X 25' },
       { sizeMm: '32 X 20 X 32' },
@@ -523,7 +523,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'FEMALE REDUCER BUSH',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/female-reducer-bush.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-reducer-bush.jpg',
     sizes: [
       { sizeMm: '25 × 1/2"' },
       { sizeMm: '32 × 1/2"' },
@@ -555,7 +555,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'UNION',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/union.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/union.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
@@ -589,7 +589,7 @@ const din8063Fittings: Fitting[] = [
     code: undefined,
     name: 'END CAP',
     family: 'moulded',
-    image: '/images/fittings/pvc-pressure/din-8063/end-cap.jpg',
+    image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/end-cap.jpg',
     sizes: [
       { sizeMm: '20' },
       { sizeMm: '25' },
