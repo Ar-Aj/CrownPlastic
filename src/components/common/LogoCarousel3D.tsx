@@ -23,18 +23,25 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   const [dragOffset, setDragOffset] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isLargeDesktop, setIsLargeDesktop] = useState(false); // ≥1440px for 7-logo layout
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalLogos = logos.length;
 
-  // Detect desktop breakpoint (lg: 1024px) - SSR safe
+  // Detect desktop breakpoints - SSR safe
+  // lg (1024px): 5-card layout
+  // xl (1440px+): 7-card layout for large monitors
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
-    checkDesktop();
-    window.addEventListener('resize', checkDesktop);
-    return () => window.removeEventListener('resize', checkDesktop);
+    const checkBreakpoints = () => {
+      const width = window.innerWidth;
+      setIsDesktop(width >= 1024);
+      setIsLargeDesktop(width >= 1440); // 7 logos on large desktops
+    };
+    checkBreakpoints();
+    window.addEventListener('resize', checkBreakpoints);
+    return () => window.removeEventListener('resize', checkBreakpoints);
   }, []);
 
   // Hide scroll hint after first interaction or timeout
@@ -186,7 +193,65 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
     }
 
     // ═══════════════════════════════════════════════════════════════════════════════
-    // DESKTOP (lg+): 5 cards visible with tighter spacing
+    // LARGE DESKTOP (≥1440px): 7 cards visible
+    // Tighter spacing to fit 7 cards within viewport
+    // ═══════════════════════════════════════════════════════════════════════════════
+    if (isLargeDesktop) {
+      // Position ±1: First adjacent cards
+      if (normalizedPos === -1) {
+        return {
+          transform: `translateX(calc(-130% + ${dragOffset}px)) scale(0.85) rotateY(15deg)`,
+          opacity: 0.7,
+          zIndex: 25,
+        };
+      }
+      if (normalizedPos === 1) {
+        return {
+          transform: `translateX(calc(30% + ${dragOffset}px)) scale(0.85) rotateY(-15deg)`,
+          opacity: 0.7,
+          zIndex: 25,
+        };
+      }
+      // Position ±2: Second adjacent cards
+      if (normalizedPos === -2) {
+        return {
+          transform: `translateX(calc(-210% + ${dragOffset}px)) scale(0.72) rotateY(28deg)`,
+          opacity: 0.5,
+          zIndex: 20,
+        };
+      }
+      if (normalizedPos === 2) {
+        return {
+          transform: `translateX(calc(110% + ${dragOffset}px)) scale(0.72) rotateY(-28deg)`,
+          opacity: 0.5,
+          zIndex: 20,
+        };
+      }
+      // Position ±3: Third adjacent cards (edge cards for 7-card layout)
+      if (normalizedPos === -3) {
+        return {
+          transform: `translateX(calc(-285% + ${dragOffset}px)) scale(0.6) rotateY(40deg)`,
+          opacity: 0.3,
+          zIndex: 15,
+        };
+      }
+      if (normalizedPos === 3) {
+        return {
+          transform: `translateX(calc(185% + ${dragOffset}px)) scale(0.6) rotateY(-40deg)`,
+          opacity: 0.3,
+          zIndex: 15,
+        };
+      }
+      // Hidden cards (beyond 7-card range)
+      return {
+        transform: `translateX(${normalizedPos > 0 ? '350%' : '-350%'}) scale(0.5)`,
+        opacity: 0,
+        zIndex: 10,
+      };
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════════
+    // STANDARD DESKTOP (1024px-1439px): 5 cards visible with tighter spacing
     // ═══════════════════════════════════════════════════════════════════════════════
     // Left card -1
     if (normalizedPos === -1) {

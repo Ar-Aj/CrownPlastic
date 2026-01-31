@@ -85,13 +85,13 @@ export default function PipesTable({ table }: PipesTableProps) {
 
 /**
  * Renders multiple pipe tables in a section.
- * Uses PDSection for consistent spacing and background.
+ * Uses PDSection for consistent spacing and light background.
  */
 export function PipesSection({ tables }: { tables: PipeTable[] }) {
   if (!tables || tables.length === 0) return null;
   
   return (
-    <PDSection id="pipes" background="white" size="md">
+    <PDSection id="pipes" background="surface" size="md">
       <PDSectionHeader 
         title="Pipe Specifications" 
         subtitle="Technical dimensions and parameters for all pipe sizes"

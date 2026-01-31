@@ -586,9 +586,9 @@ export default function CrownAdvantageSection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          CONTENT CONTAINER
+          CONTENT CONTAINER - Matches hero section padding/width
       ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 max-w-6xl xl:max-w-7xl mx-auto px-[4vw] h-full">
+      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none h-full">
         
         {/* ═══════════════════════════════════════════════════════════════════
             MOBILE LAYOUT (< md): Vertical stack

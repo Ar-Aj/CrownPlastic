@@ -8,18 +8,20 @@ import { PipesSection } from './PipesTable';
 import { FittingsSection } from './FittingsGallery';
 import { useLanguage } from '@/context/LanguageContext';
 import { getCategoryBySlug } from '@/config/products';
+
+// Design System imports
 import {
-  PDSection,
-  PDSectionHeader,
-  PDStatBadge,
-  PDCardGrid,
-  PDIconFeatureCard,
-  PDApplicationCard,
-  PDEyebrow,
-  PDHeroBadgeRow,
-  pdTypography,
-  pdSpacing,
-} from '@/components/productDetail';
+  ProductBackgroundPattern,
+  ProductSection,
+  ProductSectionHeader,
+  ProductCardSurface,
+  ProductHeroBadge,
+  ProductBadgeRow,
+  ProductSpecsTable,
+  SectionDivider,
+  RadialGlowOverlay,
+  PipeBorderWrapper,
+} from '@/components/products/design-system';
 
 interface ProductDetailLayoutProps {
   product: ProductDetailConfig;
@@ -137,18 +139,26 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   }, [title]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <ProductBackgroundPattern pattern="fine" glow="subtle" patternOpacity={0.35} baseColor="blue" vignette>
       {/* ═══════════════════════════════════════════════════════════════════════════
-          HERO SECTION - Two-column layout
+          HERO SECTION - Mid blue band with light cards
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-white border-b border-gray-100">
-        <div className={`${pdSpacing.container} py-8 md:py-12 lg:py-16`}>
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
-            {/* Left column - Content */}
-            <div className="lg:col-span-3">
+      <ProductSection background="soft-blue" size="lg" showGlow showPattern patternType="fine">
+        {/* Section-level technical art: glow + diagonal band + hero nodes */}
+        <div className="pointer-events-none absolute inset-0">
+          <RadialGlowOverlay intensity="normal" position="center" />
+          <div className="absolute -top-24 -right-20 w-80 h-80 bg-gradient-to-bl from-primary/12 via-transparent to-transparent blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-2 h-2 rounded-full bg-primary/60 shadow-[0_0_0_6px_rgba(0,114,188,0.25)]" />
+          <div className="absolute top-12 right-32 w-1.5 h-1.5 rounded-full bg-primary/40 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
+        </div>
+        
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start relative">
+          {/* Left column - Content card */}
+          <div className="lg:col-span-3">
+            <ProductCardSurface variant="elevated" padding="lg" className="bg-white/95 backdrop-blur-sm">
               {/* Breadcrumb */}
-              <nav className="flex items-center gap-2 text-sm text-[#6B7280] mb-4" aria-label="Breadcrumb">
-                <Link href="/products" className="hover:text-[#0052CC] transition-colors">
+              <nav className="flex items-center gap-2 text-sm text-slate-500 mb-4" aria-label="Breadcrumb">
+                <Link href="/products" className="hover:text-primary transition-colors">
                   Products
                 </Link>
                 <ChevronRight className="w-4 h-4" />
@@ -156,45 +166,54 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                   <>
                     <Link 
                       href={`/products/${product.categorySlug}`}
-                      className="hover:text-[#0052CC] transition-colors"
+                      className="hover:text-primary transition-colors"
                     >
                       {categoryName}
                     </Link>
                     <ChevronRight className="w-4 h-4" />
                   </>
                 )}
-                <span className="text-[#374151] font-medium truncate max-w-[200px] md:max-w-none">
+                <span className="text-slate-700 font-medium truncate max-w-[200px] md:max-w-none">
                   {title}
                 </span>
               </nav>
 
-              {/* Eyebrow label */}
-              <PDEyebrow>{categoryName}</PDEyebrow>
+              {/* Category/Eyebrow */}
+              <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary rounded-full mb-3">
+                {categoryName}
+              </span>
 
               {/* Title */}
-              <h1 className={`${pdTypography.h1} text-[#111827] mb-4`}>
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
                 {title}
               </h1>
 
               {/* Short description */}
-              <p className={`${pdTypography.bodyLg} text-[#6B7280] max-w-2xl mb-6`}>
+              <p className="text-lg text-slate-600 max-w-2xl mb-6 leading-relaxed">
                 {shortDesc}
               </p>
 
-              {/* Badge row */}
+              {/* Badge row - Standards/Badges */}
               {heroBadges.length > 0 && (
-                <PDHeroBadgeRow className="mb-6">
-                  {heroBadges.map((badge) => (
-                    <PDStatBadge key={badge}>{badge}</PDStatBadge>
-                  ))}
-                </PDHeroBadgeRow>
+                <div className="mb-6">
+                  <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
+                    Standards & Certifications
+                  </h3>
+                  <ProductBadgeRow gap="sm">
+                    {heroBadges.map((badge) => (
+                      <ProductHeroBadge key={badge} variant="glass" size="md">
+                        {badge}
+                      </ProductHeroBadge>
+                    ))}
+                  </ProductBadgeRow>
+                </div>
               )}
 
               {/* Action buttons */}
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-[#0052CC] hover:bg-[#003d99] text-white px-5 py-2.5 rounded-lg font-medium transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg shadow-primary/20"
                 >
                   Request Quote
                   <ChevronRight className="w-4 h-4" />
@@ -204,24 +223,26 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                     href={product.downloads[0].href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#E5EEFF] hover:bg-[#d1e1ff] text-[#0052CC] px-5 py-2.5 rounded-lg font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl font-semibold transition-colors"
                   >
-                    <Download className="w-4 h-4" />
+                    <Download className="w-5 h-5" />
                     Download Catalogue
                   </a>
                 )}
               </div>
-            </div>
+            </ProductCardSurface>
+          </div>
 
-            {/* Right column - Decorative card */}
-            <div className="lg:col-span-2 hidden lg:block">
-              <div className="relative bg-gradient-to-br from-[#0052CC] to-[#003366] rounded-2xl p-6 text-white overflow-hidden">
+          {/* Right column - Product visual with PipeBorderWrapper */}
+          <div className="lg:col-span-2 hidden lg:block">
+            <PipeBorderWrapper thickness={3} radius="xl" glow>
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6">
                 {/* Background pattern */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-5">
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <defs>
                       <pattern id="heroPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <circle cx="10" cy="10" r="1" fill="white" />
+                        <circle cx="10" cy="10" r="1" fill="#0072BC" />
                       </pattern>
                     </defs>
                     <rect width="100" height="100" fill="url(#heroPattern)" />
@@ -230,52 +251,49 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-2">
+                  <div className="text-primary/60 text-xs font-semibold uppercase tracking-wider mb-2">
                     Crown Plastic Pipes
                   </div>
-                  <div className="text-2xl font-bold mb-4">
+                  <div className="text-2xl font-bold text-slate-800 mb-4">
                     Premium Quality
                   </div>
-                  <div className="space-y-2 text-sm text-white/80">
+                  <div className="space-y-3 text-sm text-slate-600">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-white/60" />
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
                       <span>ISO 9001:2015 Certified</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-white/60" />
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
                       <span>GCC Market Leader</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-white/60" />
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
                       <span>52+ Countries</span>
                     </div>
                   </div>
                   
                   {/* Pressure class badges if available */}
                   {heroBadges.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/20">
+                    <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200">
                       {heroBadges.slice(0, 3).map((badge) => (
-                        <span 
-                          key={badge}
-                          className="px-2 py-1 bg-white/10 rounded text-xs font-semibold"
-                        >
+                        <ProductHeroBadge key={badge} variant="solid" size="sm">
                           {badge}
-                        </span>
+                        </ProductHeroBadge>
                       ))}
                     </div>
                   )}
                 </div>
               </div>
-            </div>
+            </PipeBorderWrapper>
           </div>
         </div>
-      </section>
+      </ProductSection>
 
       {/* ═══════════════════════════════════════════════════════════════════════════
           STICKY SCROLL NAVIGATION
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
-        <div className={pdSpacing.container}>
+      <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
           <div className="overflow-x-auto -mx-4 px-4">
             <div className="flex gap-1 min-w-max py-3">
               {visibleSections.map((section) => {
@@ -288,8 +306,8 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                     onClick={() => scrollToSection(section.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                       isActive
-                        ? 'bg-[#0052CC] text-white shadow-sm'
-                        : 'text-[#6B7280] hover:text-[#374151] hover:bg-gray-100'
+                        ? 'bg-primary text-white shadow-sm'
+                        : 'text-slate-600 hover:text-primary hover:bg-slate-100'
                     }`}
                   >
                     {label}
@@ -302,57 +320,86 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       </nav>
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          OVERVIEW SECTION
+          OVERVIEW SECTION - Light section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {overview && (
-        <PDSection id="overview" background="white" size="md">
-          <PDSectionHeader title="Overview" />
-          <div className="prose prose-lg max-w-4xl">
-            <p className={`${pdTypography.bodyLg} text-[#374151]`}>{overview}</p>
-          </div>
-        </PDSection>
+        <ProductSection id="overview" background="white" size="md">
+          <ProductSectionHeader 
+            title="Overview" 
+            subtitle="Product introduction and key characteristics"
+          />
+          <ProductCardSurface variant="elevated" padding="lg">
+            <div className="prose prose-lg max-w-4xl">
+              <p className="text-lg text-slate-600 leading-relaxed">{overview}</p>
+            </div>
+          </ProductCardSurface>
+        </ProductSection>
       )}
 
+      <SectionDivider variant="light" className="my-2" />
+
       {/* ═══════════════════════════════════════════════════════════════════════════
-          FEATURES SECTION
+          FEATURES SECTION - Mid blue section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {uniqueFeatures.length > 0 && (
-        <PDSection id="features" background="surface" size="md">
-          <PDSectionHeader 
+        <ProductSection id="features" background="soft-blue" size="md" showPattern patternType="fine" showGlow>
+          <div className="pointer-events-none absolute inset-0">
+            <RadialGlowOverlay intensity="subtle" position="top" />
+            <div className="absolute bottom-8 right-16 w-1.5 h-1.5 rounded-full bg-primary/50 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
+          </div>
+          <ProductSectionHeader 
             title="Features" 
             subtitle="Technical advantages and key benefits of this product range"
           />
-          <PDCardGrid columns={4} gap="md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {uniqueFeatures.map((feature, index) => (
-              <PDIconFeatureCard key={index} title={feature} />
+              <ProductCardSurface key={index} variant="elevated" padding="md" hoverable>
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-700">{feature}</span>
+                </div>
+              </ProductCardSurface>
             ))}
-          </PDCardGrid>
-        </PDSection>
+          </div>
+        </ProductSection>
       )}
 
+      <SectionDivider variant="blue" className="my-2" />
+
       {/* ═══════════════════════════════════════════════════════════════════════════
-          APPLICATIONS SECTION
+          APPLICATIONS SECTION - Light section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {uniqueApplications.length > 0 && (
-        <PDSection id="applications" background="white" size="md">
-          <PDSectionHeader 
+        <ProductSection id="applications" background="white" size="md" showGlow>
+          <ProductSectionHeader 
             title="Applications" 
             subtitle="Ideal use cases and industries for this product"
           />
-          <PDCardGrid columns={3} gap="md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {uniqueApplications.map((app, index) => (
-              <PDApplicationCard key={index} title={app} />
+              <ProductCardSurface key={index} variant="accent" padding="md" hoverable accent="blue">
+                <span className="text-sm font-semibold text-slate-800">{app}</span>
+              </ProductCardSurface>
             ))}
-          </PDCardGrid>
-        </PDSection>
+          </div>
+        </ProductSection>
       )}
 
+      <SectionDivider variant="light" className="my-2" />
+
       {/* ═══════════════════════════════════════════════════════════════════════════
-          VARIANTS SECTION (for fabricated products with type configurations)
+          VARIANTS SECTION - Mid blue section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {product.variants && product.variants.length > 0 && (
-        <PDSection id="variants" background="surface" size="md">
-          <PDSectionHeader 
+        <ProductSection id="variants" background="soft-blue" size="md" showPattern patternType="dot" showGlow>
+          <div className="pointer-events-none absolute inset-0">
+            <RadialGlowOverlay intensity="subtle" position="center" />
+            <div className="absolute top-10 left-16 w-1.5 h-1.5 rounded-full bg-primary/45 shadow-[0_0_0_4px_rgba(0,114,188,0.18)]" />
+          </div>
+          <ProductSectionHeader 
             title={language === 'ar' 
               ? (product.variantsSectionTitleAr || product.variantsSectionTitle || 'التكوينات') 
               : (product.variantsSectionTitle || 'Product Configurations')} 
@@ -365,115 +412,129 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               const variantFeatures = language === 'ar' ? (variant.featuresAr || variant.features) : variant.features;
               
               return (
-                <div
-                  key={variant.id}
-                  className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_4px_16px_rgba(15,23,42,0.08)] transition-shadow"
-                >
-                  <h3 className="text-lg font-bold text-[#111827] mb-2">{variantTitle}</h3>
-                  <p className="text-[#6B7280] text-sm mb-4 line-clamp-2">{variantDesc}</p>
+                <ProductCardSurface key={variant.id} variant="elevated" padding="lg" hoverable>
+                  <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{variantTitle}</h3>
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-2">{variantDesc}</p>
                   {variantFeatures.length > 0 && (
                     <ul className="space-y-2">
                       {variantFeatures.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-[#374151]">
-                          <CheckCircle2 className="w-4 h-4 text-[#0052CC] flex-shrink-0 mt-0.5" />
+                        <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   )}
-                </div>
+                </ProductCardSurface>
               );
             })}
           </div>
-        </PDSection>
+        </ProductSection>
       )}
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          PIPES TABLES SECTION
+          PIPES TABLES SECTION - Light section
       ═══════════════════════════════════════════════════════════════════════════ */}
       <PipesSection tables={product.pipesTables} />
 
+      <SectionDivider variant="medium" className="my-2" />
+
       {/* ═══════════════════════════════════════════════════════════════════════════
-          FITTINGS GALLERY SECTION
+          FITTINGS GALLERY SECTION - Mid blue section
       ═══════════════════════════════════════════════════════════════════════════ */}
       <FittingsSection fittings={product.fittings} />
 
-      {/* ═══════════════════════════════════════════════════════════════════════════
-          VIDEO SECTION
-      ═══════════════════════════════════════════════════════════════════════════ */}
-      {product.videoUrl && (
-        <PDSection id="video" background="white" size="md">
-          <PDSectionHeader title="Product Video" align="center" />
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 shadow-xl">
-              <iframe
-                src={product.videoUrl}
-                title={`${title} Product Video`}
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </PDSection>
-      )}
+      <SectionDivider variant="light" className="my-2" />
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          DO'S & DON'TS SECTION
+          VIDEO SECTION - Light section
+      ═══════════════════════════════════════════════════════════════════════════ */}
+      {product.videoUrl && (
+        <ProductSection id="video" background="white" size="md">
+          <ProductSectionHeader title="Product Video" align="center" />
+          <div className="max-w-4xl mx-auto">
+            <ProductCardSurface variant="elevated" padding="none" className="overflow-hidden">
+              <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-xl">
+                <iframe
+                  src={product.videoUrl}
+                  title={`${title} Product Video`}
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </ProductCardSurface>
+          </div>
+        </ProductSection>
+      )}
+
+      <SectionDivider variant="blue" className="my-2" />
+
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          DO'S & DON'TS SECTION - Mid blue section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {dosDonts && (dosDonts.dos.length > 0 || dosDonts.donts.length > 0) && (
-        <PDSection id="dos-donts" background="surface" size="md">
-          <PDSectionHeader title="Installation Guidelines" subtitle="Best practices for optimal performance and longevity" />
+        <ProductSection id="dos-donts" background="soft-blue" size="md" showPattern patternType="cross" showGlow>
+          <div className="pointer-events-none absolute inset-0">
+            <RadialGlowOverlay intensity="subtle" position="bottom" />
+            <div className="absolute top-12 right-20 w-1.5 h-1.5 rounded-full bg-primary/45 shadow-[0_0_0_4px_rgba(0,114,188,0.18)]" />
+          </div>
+          <ProductSectionHeader title="Installation Guidelines" subtitle="Best practices for optimal performance and longevity" />
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
             {/* Do's */}
             {dosDonts.dos.length > 0 && (
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_2px_8px_rgba(15,23,42,0.04)]">
-                <h3 className="flex items-center gap-2 text-lg font-bold text-[#059669] mb-4">
+              <ProductCardSurface variant="elevated" padding="lg">
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-emerald-100 via-emerald-400/60 to-emerald-100" />
+                <h3 className="flex items-center gap-2 text-lg font-bold text-emerald-600 mb-4">
                   <CheckCircle2 className="w-6 h-6" />
                   Do&apos;s
                 </h3>
                 <ul className="space-y-3">
                   {dosDonts.dos.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-[#D1FAE5] text-[#059669] flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
                         ✓
                       </span>
-                      <span className="text-[#374151] text-[15px]">{item}</span>
+                      <span className="text-slate-700 text-[15px]">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ProductCardSurface>
             )}
 
             {/* Don'ts */}
             {dosDonts.donts.length > 0 && (
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_2px_8px_rgba(15,23,42,0.04)]">
-                <h3 className="flex items-center gap-2 text-lg font-bold text-[#DC2626] mb-4">
+              <ProductCardSurface variant="elevated" padding="lg">
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-red-100 via-red-400/60 to-red-100" />
+                <h3 className="flex items-center gap-2 text-lg font-bold text-red-600 mb-4">
                   <XCircle className="w-6 h-6" />
                   Don&apos;ts
                 </h3>
                 <ul className="space-y-3">
                   {dosDonts.donts.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-[#FEE2E2] text-[#DC2626] flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
                         ✗
                       </span>
-                      <span className="text-[#374151] text-[15px]">{item}</span>
+                      <span className="text-slate-700 text-[15px]">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </ProductCardSurface>
             )}
           </div>
-        </PDSection>
+        </ProductSection>
       )}
 
+      <SectionDivider variant="light" className="my-2" />
+
       {/* ═══════════════════════════════════════════════════════════════════════════
-          DOWNLOADS SECTION
+          DOWNLOADS SECTION - Light section
       ═══════════════════════════════════════════════════════════════════════════ */}
       {product.downloads && product.downloads.length > 0 && (
-        <PDSection background="white" size="sm" className="border-t border-gray-100">
-          <PDSectionHeader title="Downloads" />
+        <ProductSection background="white" size="md">
+          <ProductSectionHeader title="Downloads" />
           <div className="flex flex-wrap gap-3">
             {product.downloads.map((download, index) => (
               <a
@@ -481,44 +542,45 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                 href={download.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#F7F9FC] hover:bg-[#E5EEFF] text-[#374151] hover:text-[#0052CC] px-5 py-3 rounded-lg font-medium transition-all border border-gray-200 hover:border-[#0052CC]/20"
+                className="inline-flex items-center gap-2 bg-slate-50 hover:bg-primary/5 text-slate-700 hover:text-primary px-5 py-3 rounded-lg font-medium transition-all border border-slate-200 hover:border-primary/30"
               >
                 <Download className="w-5 h-5" />
                 {download.label}
               </a>
             ))}
           </div>
-        </PDSection>
+        </ProductSection>
       )}
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          CTA SECTION
+          CTA SECTION - Unchanged, dark gradient band
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="py-12 bg-gradient-to-r from-[#0052CC] to-[#003366] text-white">
-        <div className={`${pdSpacing.container} text-center`}>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+      {/* CTA is rendered directly without ProductSection wrapper to preserve exact styling */}
+      <div className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16 md:py-20">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Need assistance with {title}?
           </h2>
-          <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
             Our technical team is here to help you select the right products for your project.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-white text-[#0052CC] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:bg-slate-100 transition-colors shadow-lg"
             >
               Contact Us
               <ChevronRight className="w-5 h-5" />
             </Link>
             <Link
               href="/resources"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors border border-white/20"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-colors border border-white/20"
             >
               View All Resources
             </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </ProductBackgroundPattern>
   );
 }

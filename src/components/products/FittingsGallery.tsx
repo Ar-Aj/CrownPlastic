@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { type Fitting, type FittingFamily, FITTING_FAMILY_LABELS } from '@/types/productDetail';
 import FittingModal from './FittingModal';
-import { PDSection, PDSectionHeader } from '@/components/productDetail';
+import { ProductSection, ProductSectionHeader, ProductCardSurface, ProductHeroBadge, RadialGlowOverlay } from '@/components/products/design-system';
 
 interface FittingsGalleryProps {
   fittings: Fitting[];
@@ -48,12 +48,16 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
   if (!fittings || fittings.length === 0) return null;
 
   return (
-    <PDSection id="fittings" background="surface" size="md">
-      <PDSectionHeader 
+    <ProductSection id="fittings" background="soft-blue" size="md" showPattern patternType="cross" showGlow>
+      <div className="pointer-events-none absolute inset-0">
+        <RadialGlowOverlay intensity="subtle" position="center" />
+        <div className="absolute bottom-10 left-8 w-1.5 h-1.5 rounded-full bg-primary/50 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
+      </div>
+      <ProductSectionHeader 
         title="Fittings & Accessories"
         subtitle="Complete range of fittings for this product line"
       />
-
+  
       {/* Filter tabs - horizontally scrollable on mobile */}
       <div className="mb-8 -mx-4 px-4 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-2">
@@ -62,8 +66,8 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
             onClick={() => setActiveFamily('all')}
             className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               activeFamily === 'all'
-                ? 'bg-[#0052CC] text-white shadow-sm'
-                : 'bg-white text-[#6B7280] hover:text-[#374151] hover:bg-gray-100 border border-gray-200'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-white border border-slate-200 shadow-sm'
             }`}
           >
             All ({fittings.length})
@@ -78,8 +82,8 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
                 onClick={() => setActiveFamily(family)}
                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   activeFamily === family
-                    ? 'bg-[#0052CC] text-white shadow-sm'
-                    : 'bg-white text-[#6B7280] hover:text-[#374151] hover:bg-gray-100 border border-gray-200'
+                    ? 'bg-primary text-white shadow-sm'
+                    : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-white border border-slate-200 shadow-sm'
                 }`}
               >
                 {FITTING_FAMILY_LABELS[family]} ({count})
@@ -102,7 +106,7 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
 
       {/* Empty state */}
       {filteredFittings.length === 0 && (
-        <div className="py-12 text-center text-[#6B7280]">
+        <div className="py-12 text-center text-slate-400">
           No fittings found in this category.
         </div>
       )}
@@ -113,7 +117,7 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
       />
-    </PDSection>
+    </ProductSection>
   );
 }
 
@@ -138,6 +142,7 @@ function FittingCard({ fitting, onClick }: FittingCardProps) {
         border border-gray-100 hover:border-[#0052CC]/30
         transition-all duration-200 text-left w-full"
     >
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
       {/* Code badge (top-left) */}
       {fitting.code && (
         <span className="absolute top-2 left-2 z-10 px-2 py-0.5 text-xs font-bold bg-[#0052CC] text-white rounded">
