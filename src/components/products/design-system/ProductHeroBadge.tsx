@@ -12,7 +12,7 @@
 
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-import { productShadows, productColors } from './theme';
+import { productShadows } from './theme';
 import { LucideIcon } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════════════════════

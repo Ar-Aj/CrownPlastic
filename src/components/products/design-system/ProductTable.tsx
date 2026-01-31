@@ -16,13 +16,13 @@
 
 import { ReactNode, useMemo } from 'react';
 import { cn } from '@/lib/utils';
-import { productShadows, productTypography, productClasses } from './theme';
+import { productShadows, productTypography } from './theme';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export interface TableColumn<T = any> {
+export interface TableColumn<T = Record<string, unknown>> {
   /** Column key (maps to data property) */
   key: string;
   /** Column header label */
@@ -34,12 +34,12 @@ export interface TableColumn<T = any> {
   /** Is this a key/primary column (gets emphasis styling) */
   isKey?: boolean;
   /** Custom cell renderer */
-  render?: (value: any, row: T, index: number) => ReactNode;
+  render?: (value: unknown, row: T, index: number) => ReactNode;
   /** Hide on mobile */
   hideOnMobile?: boolean;
 }
 
-export interface ProductTableProps<T = any> {
+export interface ProductTableProps<T = Record<string, unknown>> {
   /** Table data rows */
   data: T[];
   /** Column definitions */
@@ -76,7 +76,7 @@ const alignClasses: Record<string, string> = {
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export default function ProductTable<T extends Record<string, any>>({
+export default function ProductTable<T extends Record<string, unknown>>({
   data,
   columns,
   caption,
@@ -155,7 +155,7 @@ export default function ProductTable<T extends Record<string, any>>({
                     const value = row[col.key];
                     const content = col.render 
                       ? col.render(value, row, rowIndex) 
-                      : value;
+                      : (value as ReactNode);
                     
                     return (
                       <td
