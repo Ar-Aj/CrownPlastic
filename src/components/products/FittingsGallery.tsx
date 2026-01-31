@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { type Fitting, type FittingFamily, FITTING_FAMILY_LABELS } from '@/types/productDetail';
 import FittingModal from './FittingModal';
-import { ProductSection, ProductSectionHeader, ProductCardSurface, ProductHeroBadge, RadialGlowOverlay } from '@/components/products/design-system';
+import { ProductSection, ProductSectionHeader, RadialGlowOverlay } from '@/components/products/design-system';
 
 interface FittingsGalleryProps {
   fittings: Fitting[];

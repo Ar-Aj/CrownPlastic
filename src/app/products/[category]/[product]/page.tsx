@@ -29,7 +29,6 @@ import {
   ProductBadgeRow,
   ProductSpecsTable,
   SectionDivider,
-  RadialGlowOverlay,
   PipeBorderWrapper,
 } from '@/components/products/design-system';
 
