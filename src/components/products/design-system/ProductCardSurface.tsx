@@ -14,8 +14,9 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { ReactNode, forwardRef } from 'react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { productShadows, productRadii, productColors, productGradients } from './theme';
+import { productShadows, productGradients } from './theme';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -127,6 +128,7 @@ const ProductCardSurface = forwardRef<HTMLDivElement, ProductCardSurfaceProps>(
 
     return (
       <Component
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ref={ref as any}
         onClick={onClick}
         className={cn(
@@ -245,10 +247,12 @@ export function ProductCardImage({
       aspectClasses[aspectRatio],
       className
     )}>
-      <img
+      <Image
         src={src}
         alt={alt}
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
       {overlay && (
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />

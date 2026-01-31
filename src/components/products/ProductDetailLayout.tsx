@@ -17,7 +17,6 @@ import {
   ProductCardSurface,
   ProductHeroBadge,
   ProductBadgeRow,
-  ProductSpecsTable,
   SectionDivider,
   RadialGlowOverlay,
   PipeBorderWrapper,
