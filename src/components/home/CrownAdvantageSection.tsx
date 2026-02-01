@@ -482,6 +482,7 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   // Inline mode: just the 2 video thumbnails side by side
+  // Desktop: constrain max-width per video for compact 9:16 cards
   if (inline) {
     return (
       <motion.div
@@ -489,14 +490,17 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="grid grid-cols-2 gap-3 lg:gap-4"
+        className="grid grid-cols-2 gap-3 lg:gap-4 h-full"
       >
         {videos.slice(0, 2).map((video) => (
-          <VideoThumbnail
-            key={video.id}
-            video={video}
-            onPlay={() => onPlayVideo(video)}
-          />
+          <div key={video.id} className="flex justify-center h-full">
+            <div className="w-full max-w-[140px] xl:max-w-[160px] h-full">
+              <VideoThumbnail
+                video={video}
+                onPlay={() => onPlayVideo(video)}
+              />
+            </div>
+          </div>
         ))}
       </motion.div>
     );
@@ -723,19 +727,22 @@ export default function CrownAdvantageSection() {
           </div>
           
           {/* ─────────────────────────────────────────────────────────────────
-              ROW 2: Technology + Videos (9:16 aspect-driven)
+              ROW 2: Technology + Videos (height-capped, compact 9:16)
+              Max height ~32vh to keep section within ~90vh total
           ───────────────────────────────────────────────────────────────── */}
-          <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[30%_1fr] gap-5 xl:gap-6 mt-5">
+          <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[28%_1fr] gap-5 xl:gap-6 mt-5 max-h-[32vh] xl:max-h-[30vh]">
             
-            {/* Technology card */}
+            {/* Technology card - fills row height */}
             {technologyCard && (
-              <DataTile key={technologyCard.id} item={technologyCard} size="lg" showDescription delay={0.3} />
+              <div className="h-full">
+                <DataTile key={technologyCard.id} item={technologyCard} size="md" showDescription delay={0.3} />
+              </div>
             )}
             
-            {/* Videos - inline 9:16 aspect containers */}
+            {/* Videos - compact 9:16 containers within capped row */}
             {mediaItems.length > 0 && (
-              <div className="flex flex-col">
-                <div className="flex items-center justify-between mb-3">
+              <div className="flex flex-col h-full overflow-hidden">
+                <div className="flex items-center justify-between mb-2 flex-shrink-0">
                   <h4 className="text-sm font-semibold text-slate-200">
                     {crownAdvantageConfig.mediaCardTitle}
                   </h4>
@@ -743,15 +750,17 @@ export default function CrownAdvantageSection() {
                     View All →
                   </Link>
                 </div>
-                <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
+                <div className="flex-1 min-h-0">
+                  <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
+                </div>
               </div>
             )}
           </div>
           
           {/* ─────────────────────────────────────────────────────────────────
-              ROW 3: Remaining Secondary Cards (compact)
+              ROW 3: Remaining Secondary Cards (clean 50/50 split, full width)
           ───────────────────────────────────────────────────────────────── */}
-          <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 xl:gap-5 mt-5 max-w-[60%]">
+          <div className="grid grid-cols-2 gap-5 xl:gap-6 mt-5">
             {bottomSecondaryCards.map((item, idx) => (
               <DataTile key={item.id} item={item} size="sm" showDescription delay={0.4 + idx * 0.1} />
             ))}

@@ -194,57 +194,57 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
 
     // ═══════════════════════════════════════════════════════════════════════════════
     // LARGE DESKTOP (≥1440px): 7 cards visible
-    // Tighter spacing to fill container width, edge cards pushed toward sides
+    // Aggressive spacing to fill container width, edge cards near sides
     // ═══════════════════════════════════════════════════════════════════════════════
     if (isLargeDesktop) {
-      // Position ±1: First adjacent cards - tighter to center
+      // Position ±1: First adjacent cards - tight to center
       if (normalizedPos === -1) {
         return {
-          transform: `translateX(calc(-118% + ${dragOffset}px)) scale(0.85) rotateY(15deg)`,
-          opacity: 0.75,
+          transform: `translateX(calc(-115% + ${dragOffset}px)) scale(0.88) rotateY(12deg)`,
+          opacity: 0.8,
           zIndex: 25,
         };
       }
       if (normalizedPos === 1) {
         return {
-          transform: `translateX(calc(18% + ${dragOffset}px)) scale(0.85) rotateY(-15deg)`,
-          opacity: 0.75,
+          transform: `translateX(calc(15% + ${dragOffset}px)) scale(0.88) rotateY(-12deg)`,
+          opacity: 0.8,
           zIndex: 25,
         };
       }
-      // Position ±2: Second adjacent cards - consistent gap
+      // Position ±2: Second adjacent cards - evenly spaced
       if (normalizedPos === -2) {
         return {
-          transform: `translateX(calc(-186% + ${dragOffset}px)) scale(0.72) rotateY(25deg)`,
-          opacity: 0.55,
+          transform: `translateX(calc(-230% + ${dragOffset}px)) scale(0.76) rotateY(20deg)`,
+          opacity: 0.65,
           zIndex: 20,
         };
       }
       if (normalizedPos === 2) {
         return {
-          transform: `translateX(calc(86% + ${dragOffset}px)) scale(0.72) rotateY(-25deg)`,
-          opacity: 0.55,
+          transform: `translateX(calc(130% + ${dragOffset}px)) scale(0.76) rotateY(-20deg)`,
+          opacity: 0.65,
           zIndex: 20,
         };
       }
-      // Position ±3: Edge cards - pushed further toward container edges
+      // Position ±3: Edge cards - pushed far toward container edges
       if (normalizedPos === -3) {
         return {
-          transform: `translateX(calc(-258% + ${dragOffset}px)) scale(0.6) rotateY(35deg)`,
-          opacity: 0.4,
+          transform: `translateX(calc(-345% + ${dragOffset}px)) scale(0.65) rotateY(28deg)`,
+          opacity: 0.5,
           zIndex: 15,
         };
       }
       if (normalizedPos === 3) {
         return {
-          transform: `translateX(calc(158% + ${dragOffset}px)) scale(0.6) rotateY(-35deg)`,
-          opacity: 0.4,
+          transform: `translateX(calc(245% + ${dragOffset}px)) scale(0.65) rotateY(-28deg)`,
+          opacity: 0.5,
           zIndex: 15,
         };
       }
       // Hidden cards (beyond 7-card range)
       return {
-        transform: `translateX(${normalizedPos > 0 ? '350%' : '-350%'}) scale(0.5)`,
+        transform: `translateX(${normalizedPos > 0 ? '400%' : '-400%'}) scale(0.5)`,
         opacity: 0,
         zIndex: 10,
       };
@@ -378,7 +378,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
               return (
                 <div
                   key={`${logo.name}-${index}`}
-                  className="absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 transition-all duration-500 ease-out"
+                  className="absolute left-1/2 top-[10px] sm:top-[15px] md:top-[20px] w-40 sm:w-48 md:w-52 lg:w-56 2xl:w-60 transition-all duration-500 ease-out"
                   style={{
                     ...style,
                     transformStyle: 'preserve-3d',
