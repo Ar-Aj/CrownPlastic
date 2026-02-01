@@ -761,7 +761,7 @@ export default function CrownAdvantageSection() {
               ROW 2: Technology + Videos (height-capped, compact 9:16)
               Max height ~32vh to keep section within ~90vh total
           ───────────────────────────────────────────────────────────────── */}
-          <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[28%_1fr] gap-5 xl:gap-6 mt-5 max-h-[32vh] xl:max-h-[30vh]">
+          <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[28%_1fr] gap-5 xl:gap-6 mt-5 mb-8 lg:mb-10 max-h-[32vh] xl:max-h-[30vh]">
             
             {/* Technology card - fills row height */}
             {technologyCard && (
@@ -791,7 +791,7 @@ export default function CrownAdvantageSection() {
           {/* ─────────────────────────────────────────────────────────────────
               ROW 3: Remaining Secondary Cards (clean 50/50 split, full width)
           ───────────────────────────────────────────────────────────────── */}
-          <div className="grid grid-cols-2 gap-5 xl:gap-6 mt-5">
+          <div className="grid grid-cols-2 gap-5 xl:gap-6 pt-4">
             {bottomSecondaryCards.map((item, idx) => (
               <DataTile key={item.id} item={item} size="sm" showDescription delay={0.4 + idx * 0.1} />
             ))}
