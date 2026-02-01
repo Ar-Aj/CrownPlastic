@@ -1,24 +1,24 @@
 'use client';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// CROWN ADVANTAGE SECTION - DATA DASHBOARD LAYOUT
-// "Why Choose Us" - Full viewport control room style
+// CROWN ADVANTAGE SECTION - COMPACT 1-SCREEN LAYOUT
+// "Why Choose Us" - Balanced grid fitting ~90vh on desktop
 // 
 // LAYOUT (Desktop lg+):
-// ┌────────────────────────┬─────────────────────────────────────────────────────┐
-// │                        │  ┌─────────┐ ┌─────────┐ ┌─────────┐              │
-// │      LEFT ZONE         │  │ 5,000+  │ │  3x ISO │ │   52+   │  PRIMARY     │
-// │       (40%)            │  │Products │ │  Certs  │ │Countries│  ROW         │
-// │                        │  └─────────┘ └─────────┘ └─────────┘              │
-// │   ┌─────────────────┐  │  ┌─────────┬───────────────────────┐              │
-// │   │     30+         │  │  │ 50+ Yr  │  ┌───────┐ ┌───────┐ │              │
-// │   │    YEARS        │  │  │ Virgin  │  │ VIDEO │ │ VIDEO │ │              │
-// │   │   ───────       │  │  │Materials│  │  9:16 │ │  9:16 │ │  BOTTOM      │
-// │   │  Excellence     │  │  ├─────────┤  │       │ │       │ │  ROW         │
-// │   │                 │  │  │ Int'l   │  │       │ │       │ │              │
-// │   │  + mini stats   │  │  │Standards│  └───────┘ └───────┘ │              │
-// │   └─────────────────┘  │  └─────────┴───────────────────────┘              │
-// └────────────────────────┴─────────────────────────────────────────────────────┘
+// ┌──────────────────────────┬──────────┬──────────┬──────────┐
+// │      30+ YEARS           │ Products │  Certs   │ Exports  │  TOP ROW
+// │      (Hero Card)         │  5000+   │  3x ISO  │   52+    │  (equal height)
+// │      aspect-[4/5]        │          │          │          │
+// └──────────────────────────┴──────────┴──────────┴──────────┘
+// ┌──────────────────────────┬─────────────────────────────────┐
+// │      Technology          │   ┌──────────┐ ┌──────────┐    │  MIDDLE ROW
+// │      (compact)           │   │  VIDEO   │ │  VIDEO   │    │  (9:16 videos)
+// │                          │   │   9:16   │ │   9:16   │    │
+// └──────────────────────────┴───┴──────────┴─┴──────────┴────┘
+// ┌──────────────┬──────────────┬──────────────┐
+// │  Materials   │  Standards   │  (reserved)  │  BOTTOM ROW
+// │              │              │              │  (compact)
+// └──────────────┴──────────────┴──────────────┘
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef, useState, useEffect, useCallback } from 'react';
@@ -140,58 +140,56 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
   return null;
 }
 
-/** Portrait video thumbnail with locked 9:16 aspect */
+/** Portrait video thumbnail with locked 9:16 aspect - width-driven, no vh hacks */
 function VideoThumbnail({ 
   video, 
   onPlay,
-  maxHeight = false,
 }: { 
   video: MediaVideoItem; 
   onPlay: () => void;
-  maxHeight?: boolean;
 }) {
   return (
     <button
       onClick={onPlay}
-      className="group/video relative w-full rounded-lg overflow-hidden bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+      className="group/video relative w-full rounded-xl overflow-hidden bg-slate-700/40 hover:bg-slate-600/50 transition-colors border border-white/10"
     >
-      {/* 9:16 aspect ratio container */}
-      <div className={`aspect-[9/16] w-full ${maxHeight ? 'max-h-[60vh]' : ''} relative`}>
-        {/* Background tint (stable layout even without image) */}
-        <div className="absolute inset-0 bg-white/5 rounded-lg" />
+      {/* 9:16 aspect ratio - height derived from width, no fixed vh */}
+      <div className="aspect-[9/16] w-full relative">
+        {/* Background tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-900/20 via-slate-800/40 to-slate-900/60" />
         
         {video.thumbnailSrc ? (
           <Image
             src={video.thumbnailSrc}
             alt={video.title}
             fill
-            className="object-cover object-center opacity-70 group-hover/video:opacity-90 transition-opacity"
-            sizes="(max-width: 768px) 50vw, 200px"
+            className="object-cover object-center opacity-80 group-hover/video:opacity-95 transition-opacity"
+            sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 180px"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-slate-900/60 to-slate-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-800/30 via-slate-800/50 to-slate-900/70" />
         )}
         
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 group-hover/video:bg-white/30 rounded-full flex items-center justify-center transition-all group-hover/video:scale-110">
+          <div className="w-9 h-9 md:w-11 md:h-11 bg-white/25 group-hover/video:bg-white/40 rounded-full flex items-center justify-center transition-all group-hover/video:scale-110 shadow-lg">
             <Play className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" />
           </div>
         </div>
         
         {/* Duration badge */}
         {video.duration && (
-          <div className="absolute top-2 right-2 px-1.5 py-0.5 bg-black/60 text-white text-[10px] rounded">
+          <div className="absolute top-2 right-2 px-1.5 py-0.5 bg-black/70 text-white text-[10px] rounded font-medium">
             {video.duration}
           </div>
         )}
         
         {/* Title at bottom */}
         <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
-          <p className="text-xs md:text-sm font-medium text-white leading-tight line-clamp-2">
+          <p className="text-xs md:text-sm font-medium text-white leading-tight line-clamp-2 drop-shadow-md">
             {video.shortTitle || video.title}
           </p>
         </div>
@@ -319,10 +317,10 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
       <div
         className={`
           relative h-full rounded-xl overflow-hidden
-          bg-white/[0.03] backdrop-blur-sm
-          border border-white/10
+          bg-white/[0.06] backdrop-blur-sm
+          border border-white/[0.12]
           transition-all duration-500 ease-out
-          hover:bg-white/[0.07] hover:border-sky-500/40
+          hover:bg-white/[0.10] hover:border-sky-500/40
           hover:shadow-[0_0_30px_rgba(14,165,233,0.15)]
           ${sizeClasses[size]}
         `}
@@ -380,7 +378,7 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
 // HERO STAT BLOCK (Left column main display)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function HeroStatBlock({ item }: { item: AdvantageItem }) {
+function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const animatedValue = useCountUp(item.highlightStat || '0', isInView, 2500);
@@ -391,27 +389,32 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="relative"
+      className="relative h-full"
     >
       {/* Floating glow behind */}
       <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/10 via-cyan-500/5 to-transparent rounded-3xl blur-2xl" />
       
-      {/* Hero card - full 3:4 card with image covering entire background */}
-      <div className="relative bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl p-6 md:p-8 lg:p-10 overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
+      {/* Hero card - compact aspect ratio for desktop, max-height constrained */}
+      <div className={`
+        relative bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl lg:rounded-3xl 
+        p-5 md:p-6 lg:p-8 overflow-hidden h-full
+        border border-white/15 shadow-2xl
+        ${compact ? 'aspect-[5/4]' : 'aspect-[4/5] lg:aspect-auto lg:min-h-0'}
+      `}>
         {/* Source badge */}
-        <div className={`absolute top-4 right-4 z-20 px-2.5 py-1 text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
+        <div className={`absolute top-3 right-3 lg:top-4 lg:right-4 z-20 px-2 py-0.5 lg:px-2.5 lg:py-1 text-[10px] lg:text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
           {item.sourceTag}
         </div>
         
         {/* Full-cover background image */}
         {item.imageSrc && (
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-25">
             <Image
               src={item.imageSrc}
               alt={item.title}
               fill
               className="object-cover object-center"
-              sizes="(min-width: 1024px) 400px, 300px"
+              sizes="(min-width: 1024px) 45vw, 300px"
             />
           </div>
         )}
@@ -421,7 +424,7 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
           {/* Big animated number */}
           {item.highlightStat && (
             <motion.div
-              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-2 bg-gradient-to-br from-white via-sky-100 to-cyan-200 bg-clip-text text-transparent"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-1 lg:mb-2 bg-gradient-to-br from-white via-sky-100 to-cyan-200 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -432,17 +435,17 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
           
           {/* Stat label */}
           {item.statLabel && (
-            <div className="text-xl md:text-2xl font-semibold mb-4 text-sky-300/90">
+            <div className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 lg:mb-3 text-sky-300/90">
               {item.statLabel}
             </div>
           )}
           
           {/* Title */}
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+          <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-2">{item.title}</h3>
           
-          {/* Description */}
+          {/* Description - hidden on compact mobile */}
           {item.description && (
-            <p className="text-sm md:text-base text-slate-200 leading-relaxed">
+            <p className={`text-sm text-slate-200 leading-relaxed ${compact ? 'hidden md:block' : ''} line-clamp-3 lg:line-clamp-none`}>
               {item.description}
             </p>
           )}
@@ -450,7 +453,7 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
         
         {/* Animated border glow */}
         <motion.div
-          className="absolute inset-0 rounded-3xl border-2 border-transparent pointer-events-none"
+          className="absolute inset-0 rounded-2xl lg:rounded-3xl border-2 border-transparent pointer-events-none"
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(14,165,233,0.3), transparent)',
             backgroundSize: '200% 100%',
@@ -464,27 +467,50 @@ function HeroStatBlock({ item }: { item: AdvantageItem }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// VIDEO PANEL (9:16 videos side by side)
+// VIDEO PANEL (9:16 videos side by side - aspect-driven, no vh hacks)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 interface VideoPanelProps {
   videos: MediaVideoItem[];
   onPlayVideo: (video: MediaVideoItem) => void;
+  /** Inline mode: no wrapper card, just videos */
+  inline?: boolean;
 }
 
-function VideoPanel({ videos, onPlayVideo }: VideoPanelProps) {
+function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
+  // Inline mode: just the 2 video thumbnails side by side
+  if (inline) {
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="grid grid-cols-2 gap-3 lg:gap-4"
+      >
+        {videos.slice(0, 2).map((video) => (
+          <VideoThumbnail
+            key={video.id}
+            video={video}
+            onPlay={() => onPlayVideo(video)}
+          />
+        ))}
+      </motion.div>
+    );
+  }
+
+  // Card mode: wrapped in a subtle card with header
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className="h-full"
     >
-      <div className="relative h-full bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-3 md:p-4">
+      <div className="relative bg-white/[0.04] backdrop-blur-sm border border-white/[0.12] rounded-xl p-3 md:p-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-3">
           <h4 className="text-sm font-semibold text-slate-200">
@@ -495,14 +521,13 @@ function VideoPanel({ videos, onPlayVideo }: VideoPanelProps) {
           </Link>
         </div>
         
-        {/* Videos grid - 2 columns with locked 9:16 aspect */}
-        <div className="grid grid-cols-2 gap-2 md:gap-3 h-[calc(100%-2rem)]">
+        {/* Videos grid - 2 columns, aspect-driven height */}
+        <div className="grid grid-cols-2 gap-2 md:gap-3">
           {videos.slice(0, 2).map((video) => (
             <VideoThumbnail
               key={video.id}
               video={video}
               onPlay={() => onPlayVideo(video)}
-              maxHeight
             />
           ))}
         </div>
@@ -551,6 +576,11 @@ export default function CrownAdvantageSection() {
   const primaryItems = getPrimaryAdvantages();
   const secondaryItems = getSecondaryAdvantages();
   const mediaItems = getMediaItems();
+  
+  // Technology card is the first secondary item (Manufacturing/Technology)
+  const technologyCard = secondaryItems.find(item => item.id === 'manufacturing') || secondaryItems[2];
+  // Remaining secondary cards (Materials, Standards)
+  const bottomSecondaryCards = secondaryItems.filter(item => item.id !== 'manufacturing');
 
   const handlePlayVideo = useCallback((video: MediaVideoItem) => {
     setActiveVideo(video);
@@ -560,22 +590,22 @@ export default function CrownAdvantageSection() {
   return (
     <section
       id={crownAdvantageConfig.sectionId}
-      className="relative min-h-[90vh] lg:min-h-screen py-[6vh] overflow-hidden"
+      className="relative py-12 md:py-16 lg:py-12 overflow-hidden"
     >
       {/* ═══════════════════════════════════════════════════════════════════════
           BACKGROUND
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#020c18] via-[#041225] to-[#020c18]" />
       
-      {/* Grid pattern */}
+      {/* Grid pattern - slightly more visible */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: `
             linear-gradient(rgba(56, 189, 248, 0.5) 1px, transparent 1px),
             linear-gradient(90deg, rgba(56, 189, 248, 0.5) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px',
+          backgroundSize: '50px 50px',
         }}
       />
       
@@ -588,123 +618,143 @@ export default function CrownAdvantageSection() {
       {/* ═══════════════════════════════════════════════════════════════════════
           CONTENT CONTAINER - Matches hero section padding/width
       ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none h-full">
+      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         
         {/* ═══════════════════════════════════════════════════════════════════
-            MOBILE LAYOUT (< md): Vertical stack
+            MOBILE LAYOUT (< md): Compact vertical stack
         ═══════════════════════════════════════════════════════════════════ */}
         <div className="md:hidden space-y-4">
           <SectionHeader />
           
-          {/* Hero stat */}
-          <HeroStatBlock item={heroItem} />
+          {/* Hero stat - compact aspect */}
+          <HeroStatBlock item={heroItem} compact />
           
-          {/* Video panel - full width, limited height */}
-          {mediaItems.length > 0 && (
-            <div className="h-[50vh]">
-              <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
-            </div>
-          )}
-          
-          {/* Primary cards */}
+          {/* Primary cards - 2x2 grid (3 items + 1 tech) */}
           <div className="grid grid-cols-2 gap-3">
-            {primaryItems.map((item, idx) => (
+            {primaryItems.slice(0, 2).map((item, idx) => (
               <DataTile key={item.id} item={item} size="sm" delay={idx * 0.1} />
             ))}
+            {primaryItems[2] && (
+              <DataTile key={primaryItems[2].id} item={primaryItems[2]} size="sm" delay={0.2} />
+            )}
+            {technologyCard && (
+              <DataTile key={technologyCard.id} item={technologyCard} size="sm" delay={0.3} />
+            )}
           </div>
           
-          {/* Secondary cards */}
+          {/* Video panel - aspect-driven, no fixed vh */}
+          {mediaItems.length > 0 && (
+            <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
+          )}
+          
+          {/* Remaining secondary cards */}
           <div className="grid grid-cols-2 gap-3">
-            {secondaryItems.map((item, idx) => (
+            {bottomSecondaryCards.map((item, idx) => (
               <DataTile key={item.id} item={item} size="sm" showDescription delay={idx * 0.1} />
             ))}
           </div>
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════
-            TABLET LAYOUT (md to < lg): 2-column
+            TABLET LAYOUT (md to < lg): Balanced 2-column
         ═══════════════════════════════════════════════════════════════════ */}
         <div className="hidden md:block lg:hidden">
           <SectionHeader />
           
-          <div className="grid grid-cols-2 gap-5 mt-6">
-            {/* Left column: Hero */}
-            <div className="row-span-2">
-              <HeroStatBlock item={heroItem} />
-            </div>
+          {/* Top row: Hero + Primary stats */}
+          <div className="grid grid-cols-[1fr_1fr] gap-4 mt-5">
+            {/* Left: Hero */}
+            <HeroStatBlock item={heroItem} />
             
-            {/* Right column: Video panel */}
-            <div className="h-[45vh]">
-              <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
-            </div>
-            
-            {/* Right column continues: Primary + Secondary */}
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-3">
-                {primaryItems.slice(0, 2).map((item, idx) => (
-                  <DataTile key={item.id} item={item} size="sm" delay={idx * 0.1} />
-                ))}
-              </div>
+            {/* Right: 3 primary stats stacked */}
+            <div className="grid grid-rows-3 gap-3">
+              {primaryItems.map((item, idx) => (
+                <DataTile key={item.id} item={item} size="sm" delay={idx * 0.1} />
+              ))}
             </div>
           </div>
           
-          {/* Bottom row: remaining cards */}
-          <div className="grid grid-cols-4 gap-4 mt-5">
-            {[...primaryItems.slice(2), ...secondaryItems].map((item, idx) => (
+          {/* Middle row: Technology + Videos */}
+          <div className="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+            {/* Technology card */}
+            {technologyCard && (
+              <DataTile key={technologyCard.id} item={technologyCard} size="md" showDescription delay={0.3} />
+            )}
+            
+            {/* Video panel - inline, aspect-driven */}
+            {mediaItems.length > 0 && (
+              <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
+            )}
+          </div>
+          
+          {/* Bottom row: remaining secondary cards */}
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            {bottomSecondaryCards.map((item, idx) => (
               <DataTile key={item.id} item={item} size="sm" showDescription delay={idx * 0.1} />
             ))}
           </div>
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════
-            DESKTOP LAYOUT (lg+): Two-zone dashboard
-            Left zone (40%): Header + Hero stat block
-            Right zone (60%): Data grid + Video panel
+            DESKTOP LAYOUT (lg+): Compact 3-row dashboard (~85-90vh)
+            Row 1: Hero (45%) + 3 Primary stats (55%)
+            Row 2: Technology (30%) + 2 Videos 9:16 (70%)
+            Row 3: 2 Secondary cards
         ═══════════════════════════════════════════════════════════════════ */}
-        <div className="hidden lg:grid lg:grid-cols-[40%_1fr] xl:grid-cols-[38%_1fr] gap-6 xl:gap-8 min-h-[80vh] items-center">
+        <div className="hidden lg:block">
+          
+          {/* Section header */}
+          <SectionHeader />
           
           {/* ─────────────────────────────────────────────────────────────────
-              LEFT ZONE: Header + Hero
+              ROW 1: Hero + Primary Stats (equal height)
           ───────────────────────────────────────────────────────────────── */}
-          <div className="space-y-6 xl:space-y-8">
-            <SectionHeader />
+          <div className="grid grid-cols-[45%_1fr] xl:grid-cols-[42%_1fr] gap-5 xl:gap-6 mt-6">
+            
+            {/* Hero card - height matches primary row */}
             <HeroStatBlock item={heroItem} />
             
-            {/* Mini stats below hero */}
-            <div className="grid grid-cols-2 gap-3">
-              {secondaryItems.slice(0, 2).map((item, idx) => (
-                <DataTile key={item.id} item={item} size="sm" showDescription delay={0.4 + idx * 0.1} />
+            {/* Primary stats - 3 columns, stretch to match hero height */}
+            <div className="grid grid-cols-3 gap-4 xl:gap-5">
+              {primaryItems.map((item, idx) => (
+                <DataTile key={item.id} item={item} size="md" showDescription delay={0.1 + idx * 0.1} />
               ))}
             </div>
           </div>
-
+          
           {/* ─────────────────────────────────────────────────────────────────
-              RIGHT ZONE: Data grid + Video panel
+              ROW 2: Technology + Videos (9:16 aspect-driven)
           ───────────────────────────────────────────────────────────────── */}
-          <div className="grid grid-rows-[auto_1fr] gap-4 xl:gap-5 h-full">
+          <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[30%_1fr] gap-5 xl:gap-6 mt-5">
             
-            {/* Top row: Primary data tiles */}
-            <div className="grid grid-cols-3 gap-4 xl:gap-5">
-              {primaryItems.map((item, idx) => (
-                <DataTile key={item.id} item={item} size="md" showDescription delay={0.2 + idx * 0.1} />
-              ))}
-            </div>
+            {/* Technology card */}
+            {technologyCard && (
+              <DataTile key={technologyCard.id} item={technologyCard} size="lg" showDescription delay={0.3} />
+            )}
             
-            {/* Bottom row: Secondary tile + Video panel */}
-            <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[1fr_1.8fr] gap-4 xl:gap-5">
-              
-              {/* Secondary tile stack */}
-              <div className="flex flex-col gap-4">
-                {secondaryItems.slice(2).map((item, idx) => (
-                  <DataTile key={item.id} item={item} size="md" showDescription delay={0.5 + idx * 0.1} />
-                ))}
+            {/* Videos - inline 9:16 aspect containers */}
+            {mediaItems.length > 0 && (
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-sm font-semibold text-slate-200">
+                    {crownAdvantageConfig.mediaCardTitle}
+                  </h4>
+                  <Link href="/media-blogs" className="text-xs text-sky-400 hover:text-sky-300 transition-colors">
+                    View All →
+                  </Link>
+                </div>
+                <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
               </div>
-              
-              {/* Video panel - 9:16 videos */}
-              {mediaItems.length > 0 && (
-                <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
-              )}
-            </div>
+            )}
+          </div>
+          
+          {/* ─────────────────────────────────────────────────────────────────
+              ROW 3: Remaining Secondary Cards (compact)
+          ───────────────────────────────────────────────────────────────── */}
+          <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 xl:gap-5 mt-5 max-w-[60%]">
+            {bottomSecondaryCards.map((item, idx) => (
+              <DataTile key={item.id} item={item} size="sm" showDescription delay={0.4 + idx * 0.1} />
+            ))}
           </div>
         </div>
       </div>
