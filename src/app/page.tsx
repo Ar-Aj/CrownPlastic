@@ -21,7 +21,7 @@ import {
   AnimatedStatsStrip,
   QuoteButton,
 } from '@/components/common';
-import { CrownAdvantageSection } from '@/components/home';
+import { CrownAdvantageSection, HomeVideoCarousel } from '@/components/home';
 import {
   TiltCard,
   AnimatedCounter,
@@ -554,6 +554,9 @@ function FinalCTASection() {
 export default function HomePage() {
   return (
     <>
+      {/* Video Carousel - Top Section */}
+      <HomeVideoCarousel />
+
       {/* Crown Hero - Blue/White/Black Palette */}
       <CrownHero />
 
