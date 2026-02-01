@@ -144,17 +144,20 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
 function VideoThumbnail({ 
   video, 
   onPlay,
+  hideOverlayTitle = false,
 }: { 
   video: MediaVideoItem; 
   onPlay: () => void;
+  /** Hide the overlay title (for desktop side-by-side layout) */
+  hideOverlayTitle?: boolean;
 }) {
   return (
     <button
       onClick={onPlay}
-      className="group/video relative w-full rounded-xl overflow-hidden bg-slate-700/40 hover:bg-slate-600/50 transition-colors border border-white/10"
+      className="group/video relative w-full h-full rounded-xl overflow-hidden bg-slate-700/40 hover:bg-slate-600/50 transition-colors border border-white/10"
     >
       {/* 9:16 aspect ratio - height derived from width, no fixed vh */}
-      <div className="aspect-[9/16] w-full relative">
+      <div className="aspect-[9/16] w-full h-full relative">
         {/* Background tint */}
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900/20 via-slate-800/40 to-slate-900/60" />
         
@@ -187,12 +190,14 @@ function VideoThumbnail({
           </div>
         )}
         
-        {/* Title at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
-          <p className="text-xs md:text-sm font-medium text-white leading-tight line-clamp-2 drop-shadow-md">
-            {video.shortTitle || video.title}
-          </p>
-        </div>
+        {/* Title at bottom - hidden on desktop when using side-by-side layout */}
+        {!hideOverlayTitle && (
+          <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
+            <p className="text-xs md:text-sm font-medium text-white leading-tight line-clamp-2 drop-shadow-md">
+              {video.shortTitle || video.title}
+            </p>
+          </div>
+        )}
       </div>
     </button>
   );
@@ -481,8 +486,8 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
-  // Inline mode: just the 2 video thumbnails side by side
-  // Desktop: constrain max-width per video for compact 9:16 cards
+  // Inline mode for desktop (lg+): horizontal cards with thumbnail + text side-by-side
+  // Mobile/tablet: thumbnail only, stacked
   if (inline) {
     return (
       <motion.div
@@ -490,15 +495,41 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="grid grid-cols-2 gap-3 lg:gap-4 h-full"
+        className="grid grid-cols-2 gap-3 lg:gap-5 h-full"
       >
         {videos.slice(0, 2).map((video) => (
-          <div key={video.id} className="flex justify-center h-full">
-            <div className="w-full max-w-[140px] xl:max-w-[160px] h-full">
-              <VideoThumbnail
-                video={video}
-                onPlay={() => onPlayVideo(video)}
-              />
+          <div key={video.id} className="h-full">
+            {/* Desktop (lg+): Horizontal card - thumbnail left, text right */}
+            <div className="hidden lg:flex lg:flex-row lg:items-stretch lg:gap-4 h-full bg-white/[0.04] rounded-xl border border-white/[0.08] overflow-hidden group/card hover:bg-white/[0.06] transition-colors">
+              {/* Thumbnail - fixed width, 9:16 aspect */}
+              <div className="flex-none w-[100px] xl:w-[120px] h-full">
+                <VideoThumbnail
+                  video={video}
+                  onPlay={() => onPlayVideo(video)}
+                  hideOverlayTitle
+                />
+              </div>
+              {/* Text content - fills remaining width, vertically centered */}
+              <div className="flex-1 flex flex-col justify-center py-3 pr-3 min-w-0">
+                <h5 className="text-sm font-semibold text-white leading-snug mb-1 line-clamp-2">
+                  {video.title}
+                </h5>
+                {video.duration && (
+                  <span className="text-xs text-slate-400">
+                    {video.duration}
+                  </span>
+                )}
+              </div>
+            </div>
+            
+            {/* Mobile/Tablet (< lg): Thumbnail only with overlay title */}
+            <div className="lg:hidden h-full">
+              <div className="w-full max-w-[140px] mx-auto h-full">
+                <VideoThumbnail
+                  video={video}
+                  onPlay={() => onPlayVideo(video)}
+                />
+              </div>
             </div>
           </div>
         ))}

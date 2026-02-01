@@ -194,40 +194,40 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
 
     // ═══════════════════════════════════════════════════════════════════════════════
     // LARGE DESKTOP (≥1440px): 7 cards visible
-    // Aggressive spacing to fill container width, edge cards near sides
+    // Even spacing: gaps between 0↔±1, ±1↔±2, ±2↔±3 are visually equal
     // ═══════════════════════════════════════════════════════════════════════════════
     if (isLargeDesktop) {
-      // Position ±1: First adjacent cards - tight to center
+      // Position ±1: Pushed outward from center for even gap
       if (normalizedPos === -1) {
         return {
-          transform: `translateX(calc(-115% + ${dragOffset}px)) scale(0.88) rotateY(12deg)`,
+          transform: `translateX(calc(-148% + ${dragOffset}px)) scale(0.86) rotateY(12deg)`,
           opacity: 0.8,
           zIndex: 25,
         };
       }
       if (normalizedPos === 1) {
         return {
-          transform: `translateX(calc(15% + ${dragOffset}px)) scale(0.88) rotateY(-12deg)`,
+          transform: `translateX(calc(48% + ${dragOffset}px)) scale(0.86) rotateY(-12deg)`,
           opacity: 0.8,
           zIndex: 25,
         };
       }
-      // Position ±2: Second adjacent cards - evenly spaced
+      // Position ±2: Balanced between ±1 and ±3
       if (normalizedPos === -2) {
         return {
-          transform: `translateX(calc(-230% + ${dragOffset}px)) scale(0.76) rotateY(20deg)`,
+          transform: `translateX(calc(-248% + ${dragOffset}px)) scale(0.74) rotateY(20deg)`,
           opacity: 0.65,
           zIndex: 20,
         };
       }
       if (normalizedPos === 2) {
         return {
-          transform: `translateX(calc(130% + ${dragOffset}px)) scale(0.76) rotateY(-20deg)`,
+          transform: `translateX(calc(148% + ${dragOffset}px)) scale(0.74) rotateY(-20deg)`,
           opacity: 0.65,
           zIndex: 20,
         };
       }
-      // Position ±3: Edge cards - pushed far toward container edges
+      // Position ±3: Edge cards - kept at current positions (near container edges)
       if (normalizedPos === -3) {
         return {
           transform: `translateX(calc(-345% + ${dragOffset}px)) scale(0.65) rotateY(28deg)`,
