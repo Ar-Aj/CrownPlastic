@@ -19,7 +19,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // 3D Lighting Constants (matching AboutHeroCinematic)
-const HIGHLIGHT_INTENSITY = 0.95;
 const RIM_LIGHT_INTENSITY = 0.35;
 const SPECULAR_WIDTH = 4.75; // Plastic has broader highlight
 
@@ -38,27 +37,7 @@ const PIPE_COLORS = {
   white: '#fffbeb',
 } as const;
 
-// Gradient for horizontal pipe segment (light from top)
-const HORIZONTAL_PIPE_GRADIENT = `linear-gradient(to bottom,
-  ${PIPE_COLORS.darkest} 0%,
-  ${PIPE_COLORS.dark} 3%,
-  ${PIPE_COLORS.mid} 8%,
-  ${PIPE_COLORS.midBright} 11%,
-  ${PIPE_COLORS.white} 14%,
-  ${PIPE_COLORS.specular} ${14 + SPECULAR_WIDTH * 0.3}%,
-  ${PIPE_COLORS.highlightBright} ${14 + SPECULAR_WIDTH * 0.6}%,
-  ${PIPE_COLORS.highlight} ${14 + SPECULAR_WIDTH}%,
-  rgba(251,191,36,0.5) 22%,
-  ${PIPE_COLORS.lightOrange} 28%,
-  ${PIPE_COLORS.orange} 40%,
-  ${PIPE_COLORS.bright} 52%,
-  #c2410c 70%,
-  ${PIPE_COLORS.mid} 82%,
-  ${PIPE_COLORS.dark} 90%,
-  ${PIPE_COLORS.darkest} 94%,
-  rgba(194,65,12,${RIM_LIGHT_INTENSITY * 0.4}) 97%,
-  rgba(251,146,60,${RIM_LIGHT_INTENSITY * 0.55}) 100%
-)`;
+
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // COMPONENT
