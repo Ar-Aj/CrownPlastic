@@ -194,51 +194,51 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
 
     // ═══════════════════════════════════════════════════════════════════════════════
     // LARGE DESKTOP (≥1440px): 7 cards visible
-    // Tighter spacing to fit 7 cards within viewport
+    // Tighter spacing to fill container width, edge cards pushed toward sides
     // ═══════════════════════════════════════════════════════════════════════════════
     if (isLargeDesktop) {
-      // Position ±1: First adjacent cards
+      // Position ±1: First adjacent cards - tighter to center
       if (normalizedPos === -1) {
         return {
-          transform: `translateX(calc(-130% + ${dragOffset}px)) scale(0.85) rotateY(15deg)`,
-          opacity: 0.7,
+          transform: `translateX(calc(-118% + ${dragOffset}px)) scale(0.85) rotateY(15deg)`,
+          opacity: 0.75,
           zIndex: 25,
         };
       }
       if (normalizedPos === 1) {
         return {
-          transform: `translateX(calc(30% + ${dragOffset}px)) scale(0.85) rotateY(-15deg)`,
-          opacity: 0.7,
+          transform: `translateX(calc(18% + ${dragOffset}px)) scale(0.85) rotateY(-15deg)`,
+          opacity: 0.75,
           zIndex: 25,
         };
       }
-      // Position ±2: Second adjacent cards
+      // Position ±2: Second adjacent cards - consistent gap
       if (normalizedPos === -2) {
         return {
-          transform: `translateX(calc(-210% + ${dragOffset}px)) scale(0.72) rotateY(28deg)`,
-          opacity: 0.5,
+          transform: `translateX(calc(-186% + ${dragOffset}px)) scale(0.72) rotateY(25deg)`,
+          opacity: 0.55,
           zIndex: 20,
         };
       }
       if (normalizedPos === 2) {
         return {
-          transform: `translateX(calc(110% + ${dragOffset}px)) scale(0.72) rotateY(-28deg)`,
-          opacity: 0.5,
+          transform: `translateX(calc(86% + ${dragOffset}px)) scale(0.72) rotateY(-25deg)`,
+          opacity: 0.55,
           zIndex: 20,
         };
       }
-      // Position ±3: Third adjacent cards (edge cards for 7-card layout)
+      // Position ±3: Edge cards - pushed further toward container edges
       if (normalizedPos === -3) {
         return {
-          transform: `translateX(calc(-285% + ${dragOffset}px)) scale(0.6) rotateY(40deg)`,
-          opacity: 0.3,
+          transform: `translateX(calc(-258% + ${dragOffset}px)) scale(0.6) rotateY(35deg)`,
+          opacity: 0.4,
           zIndex: 15,
         };
       }
       if (normalizedPos === 3) {
         return {
-          transform: `translateX(calc(185% + ${dragOffset}px)) scale(0.6) rotateY(-40deg)`,
-          opacity: 0.3,
+          transform: `translateX(calc(158% + ${dragOffset}px)) scale(0.6) rotateY(-35deg)`,
+          opacity: 0.4,
           zIndex: 15,
         };
       }
