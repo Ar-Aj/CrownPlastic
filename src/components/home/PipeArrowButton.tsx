@@ -18,10 +18,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 //
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// 3D Lighting Constants (matching AboutHeroCinematic)
-const RIM_LIGHT_INTENSITY = 0.35;
-const SPECULAR_WIDTH = 4.75; // Plastic has broader highlight
-
 // Orange UPVC pipe colors
 const PIPE_COLORS = {
   darkest: '#451a03',
