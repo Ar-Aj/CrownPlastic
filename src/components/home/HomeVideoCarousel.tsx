@@ -175,10 +175,10 @@ export function HomeVideoCarousel() {
       
       {/* Main carousel container */}
       <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10">
-        {/* Video container - 80-90vw on large screens */}
-        <div className="relative mx-auto w-full max-w-6xl lg:w-[85vw] lg:max-w-7xl">
-          {/* Aspect ratio container - 3:4 on desktop, 4:5 on mobile for less height */}
-          <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+        {/* Video container wrapper - height-clamped on desktop */}
+        <div className="relative mx-auto w-full max-w-6xl lg:w-[85vw] lg:max-w-7xl lg:h-[75vh] lg:max-h-[80vh] lg:flex lg:items-center lg:justify-center">
+          {/* Aspect ratio container - 3:4 portrait on mobile, height-driven on desktop */}
+          <div className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto lg:h-full lg:w-auto lg:max-w-full w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
             {/* Video slides */}
             <AnimatePresence mode="wait">
               {SLIDES.map((slide, index) => (
