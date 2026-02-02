@@ -27,16 +27,33 @@ interface VideoSlide {
   metadata?: string;
 }
 
-// Initial slides data - can be expanded with more videos
+// Initial slides data - 5 product showcase videos
 const SLIDES: VideoSlide[] = [
   {
     src: '/videos/home1st/hdpe_1sthome.mp4',
-    title: 'HDPE Pipe Solutions',
+    title: 'HDPE Systems',
     metadata: 'Premium HDPE piping for industrial applications',
   },
-  // Future videos can be added here:
-  // { src: '/videos/home1st/upvc_production.mp4', title: 'UPVC Manufacturing', ... },
-  // { src: '/videos/home1st/factory_tour.mp4', title: 'Factory Tour', ... },
+  {
+    src: '/videos/home1st/conduit_1sthome.mp4',
+    title: 'Conduit Systems',
+    metadata: 'Electrical conduit solutions for safe wiring',
+  },
+  {
+    src: '/videos/home1st/ppr_1sthome.mp4',
+    title: 'PPR Systems',
+    metadata: 'Hot & cold water supply piping',
+  },
+  {
+    src: '/videos/home1st/pvd_high_pressure_1sthome.mp4',
+    title: 'PVC High Pressure',
+    metadata: 'High-pressure rated PVC pipes',
+  },
+  {
+    src: '/videos/home1st/upvc_drainage__1sthome.mp4',
+    title: 'UPVC Drainage',
+    metadata: 'Efficient drainage & sewage systems',
+  },
 ];
 
 // Pause duration between slides (ms)
