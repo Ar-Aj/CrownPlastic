@@ -65,10 +65,8 @@ export function PipeArrowButton({
   // Mirror for left direction
   const isLeft = direction === 'left';
   
-  // Directional tilt to make arrows look more like pointing arrows
-  const rotationStyle = {
-    transform: isLeft ? 'rotate(-12deg)' : 'rotate(12deg)',
-  };
+  // REST STATE: No rotation - clean horizontal arrow
+  // HOVER STATE: Rotation is applied via Framer Motion whileHover
   
   return (
     <motion.button
@@ -82,8 +80,13 @@ export function PipeArrowButton({
         disabled:opacity-50 disabled:cursor-not-allowed
         ${className}
       `}
-      style={rotationStyle}
-      whileHover={prefersReducedMotion ? {} : { scale: 1.1, y: -3 }}
+      // REST: Horizontal (0°), HOVER: Tilted into "sleeping L" pose
+      initial={{ rotate: 0 }}
+      whileHover={prefersReducedMotion ? {} : { 
+        scale: 1.1, 
+        y: -3,
+        rotate: isLeft ? -20 : 20,  // Tilt into diagonal "sleeping L" pose
+      }}
       whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       aria-label={ariaLabel || (isLeft ? 'Previous slide' : 'Next slide')}
@@ -219,20 +222,20 @@ export function PipeArrowButton({
             fill={PIPE_COLORS.darkest}
           />
           
-          {/* Arrow end cap (down-pointing) */}
+          {/* Arrow tip end cap - full circle mouth (visible in both states) */}
           <circle
             cx={width - 8 - pipeThickness / 2}
-            cy={height - 6}
+            cy={height - 5}
             r={pipeThickness / 2 - 1}
             fill={`url(#elbow-${direction})`}
             stroke={PIPE_COLORS.dark}
             strokeWidth="0.5"
           />
           
-          {/* Inner hole on arrow end */}
+          {/* Inner hole on arrow tip - dark center for pipe hollow */}
           <circle
             cx={width - 8 - pipeThickness / 2}
-            cy={height - 6}
+            cy={height - 5}
             r={pipeThickness / 4}
             fill={PIPE_COLORS.darkest}
           />
