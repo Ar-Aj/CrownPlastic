@@ -43,7 +43,7 @@ export default function MarketsPage() {
 
       <main className="min-h-screen bg-white">
         {/* Hero */}
-        <header className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16">
+        <header className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16 pt-[160px]">
           <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
             <nav className="text-sm mb-6 text-blue-200">
               <ol className="flex items-center gap-2">

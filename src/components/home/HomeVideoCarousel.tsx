@@ -2,57 +2,71 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { PipeArrowButton } from './PipeArrowButton';
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// HOME VIDEO CAROUSEL - Hero Video Section
+// HOME VIDEO CAROUSEL - Card-Based Slide Layout
 // ═══════════════════════════════════════════════════════════════════════════════
 //
-// A full-width video carousel section that plays short 3:4 videos at the very
-// top of the Home page. Features:
+// Each slide is a two-column card:
+//   - Left: 3:4 video player (bounded width, not full-bleed)
+//   - Right: Marketing text box (title, description, CTA)
 //
-// - 3:4 aspect ratio videos centered at ~80-90vw width
-// - Auto-advances after video ends with 2-second pause
-// - Muted, autoplay, looping per slide
-// - Orange UPVC pipe-styled navigation arrows
-// - Respects prefers-reduced-motion (shows static poster, no auto-advance)
+// Desktop (lg+): Side-by-side card layout within 70-80vh section
+// Mobile (<lg): Stacked layout (video on top, text below)
+//
+// Carousel controls (arrows, dots) remain at section level.
 //
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// Video slide data
+// Video slide data with marketing content
 interface VideoSlide {
   src: string;
   title: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
   poster?: string;
-  metadata?: string;
 }
 
-// Initial slides data - 5 product showcase videos
+// Slides data - 5 product showcase videos
 const SLIDES: VideoSlide[] = [
   {
     src: '/videos/home1st/hdpe_1sthome.mp4',
     title: 'HDPE Systems',
-    metadata: 'Premium HDPE piping for industrial applications',
+    description: 'Premium High-Density Polyethylene piping for industrial applications, agriculture, and infrastructure projects. Exceptional durability and flexibility.',
+    ctaLabel: 'Explore HDPE Products',
+    ctaHref: '/products/hdpe-pipe-systems',
   },
   {
     src: '/videos/home1st/conduit_1sthome.mp4',
-    title: 'Conduit Systems',
-    metadata: 'Electrical conduit solutions for safe wiring',
+    title: 'Conduit Solutions',
+    description: 'Durable electrical conduit for safe, reliable cable protection in commercial and residential buildings. UV stabilized and impact resistant.',
+    ctaLabel: 'Explore Conduit Range',
+    ctaHref: '/products/upvc-conduit-pipes',
   },
   {
     src: '/videos/home1st/ppr_1sthome.mp4',
     title: 'PPR Systems',
-    metadata: 'Hot & cold water supply piping',
+    description: 'Polypropylene Random piping for hot and cold water supply with superior thermal resistance up to 95°C. Reliable weld-joint connections.',
+    ctaLabel: 'Explore PPR Range',
+    ctaHref: '/products/ppr-pipe-systems',
   },
   {
     src: '/videos/home1st/pvd_high_pressure_1sthome.mp4',
     title: 'PVC High Pressure',
-    metadata: 'High-pressure rated PVC pipes',
+    description: 'High-pressure rated PVC pipes engineered for demanding water transmission and irrigation systems. PN16 rated and BS EN 1452 certified.',
+    ctaLabel: 'Explore Pressure Pipes',
+    ctaHref: '/products/upvc-pressure-pipe-fittings',
   },
   {
     src: '/videos/home1st/upvc_drainage__1sthome.mp4',
     title: 'UPVC Drainage',
-    metadata: 'Efficient drainage & sewage systems',
+    description: 'Efficient unplasticized PVC drainage and sewage systems for residential and commercial applications. Self-extinguishing and chemical resistant.',
+    ctaLabel: 'Explore Drainage Systems',
+    ctaHref: '/products/upvc-drainage-pipe-fittings',
   },
 ];
 
@@ -167,88 +181,125 @@ export function HomeVideoCarousel() {
 
   return (
     <section 
-      className="relative w-full bg-slate-900 overflow-hidden py-8 md:py-12 lg:py-16"
+      className="relative w-full bg-slate-900 overflow-hidden pt-[130px]"
       aria-label="Featured video carousel"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950" />
       
-      {/* Main carousel container */}
-      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10">
-        {/* Video container wrapper - height-clamped on desktop */}
-        <div className="relative mx-auto w-full max-w-6xl lg:w-[85vw] lg:max-w-7xl lg:h-[75vh] lg:max-h-[80vh] lg:flex lg:items-center lg:justify-center">
-          {/* Aspect ratio container - 3:4 portrait on mobile, height-driven on desktop */}
-          <div className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto lg:h-full lg:w-auto lg:max-w-full w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-            {/* Video slides */}
-            <AnimatePresence mode="wait">
-              {SLIDES.map((slide, index) => (
-                index === activeIndex && (
-                  <motion.div
-                    key={slide.src}
-                    className="absolute inset-0"
-                    initial={prefersReducedMotion ? {} : { opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={prefersReducedMotion ? {} : { opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <video
-                      ref={(el) => { videoRefs.current[index] = el; }}
-                      src={slide.src}
-                      poster={slide.poster}
-                      className="w-full h-full object-cover"
-                      muted
-                      playsInline
-                      loop={totalSlides === 1} // Only loop if single video
-                      autoPlay={!prefersReducedMotion}
-                      onEnded={handleVideoEnded}
-                      aria-label={slide.title}
-                    />
-                    
-                    {/* Subtle vignette overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/20 pointer-events-none" />
-                  </motion.div>
-                )
-              ))}
-            </AnimatePresence>
+      {/* Main container - compact height on desktop */}
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
+        
+        {/* Carousel wrapper with navigation */}
+        <div className="relative w-full">
+          
+          {/* Slide content area */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={prefersReducedMotion ? {} : { opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={prefersReducedMotion ? {} : { opacity: 0, x: -30 }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              className="w-full"
+            >
+              {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
+              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] gap-6 lg:gap-10 xl:gap-14 items-center">
+                
+                {/* LEFT: Video Player */}
+                <div className="w-full flex justify-center lg:justify-end lg:self-center">
+                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px]">
+                    {/* Video container with 3:4 aspect */}
+                    <div className="relative w-full aspect-[3/4] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-950">
+                      <video
+                        ref={(el) => { videoRefs.current[activeIndex] = el; }}
+                        src={currentSlide.src}
+                        poster={currentSlide.poster}
+                        className="w-full h-full object-contain sm:object-cover"
+                        muted
+                        playsInline
+                        loop={totalSlides === 1}
+                        autoPlay={!prefersReducedMotion}
+                        onEnded={handleVideoEnded}
+                        aria-label={currentSlide.title}
+                      />
+                      
+                      {/* Subtle vignette overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/10 pointer-events-none" />
+                      
+                      {/* Reduced motion message */}
+                      {prefersReducedMotion && (
+                        <div className="absolute bottom-3 left-3 right-3 text-center">
+                          <p className="text-xs text-slate-300 bg-slate-900/80 backdrop-blur-sm px-3 py-1.5 rounded-lg inline-block">
+                            Video paused. Use arrows to browse.
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
 
-            {/* Reduced motion: Show static poster message */}
-            {prefersReducedMotion && (
-              <div className="absolute bottom-4 left-4 right-4 text-center">
-                <p className="text-sm text-slate-300 bg-slate-900/70 backdrop-blur-sm px-4 py-2 rounded-lg inline-block">
-                  Video paused for accessibility. Use arrows to browse.
-                </p>
+                {/* RIGHT: Text Box */}
+                <div className="w-full flex justify-center lg:justify-start lg:self-center">
+                  <div className="w-full max-w-md lg:max-w-none lg:pr-4 text-center lg:text-left">
+                    {/* Card surface - compact padding */}
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl">
+                      {/* Slide counter badge */}
+                      <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-semibold rounded-full border border-orange-500/30 mb-4">
+                        {activeIndex + 1} / {totalSlides}
+                      </span>
+                      
+                      {/* Title */}
+                      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
+                        {currentSlide.title}
+                      </h2>
+                      
+                      {/* Description */}
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+                        {currentSlide.description}
+                      </p>
+                      
+                      {/* CTA Button */}
+                      <Link
+                        href={currentSlide.ctaHref}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-colors duration-200 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
+                      >
+                        {currentSlide.ctaLabel}
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-            )}
-          </div>
+            </motion.div>
+          </AnimatePresence>
 
-          {/* Navigation arrows - only show if multiple slides */}
+          {/* Navigation arrows - positioned at section level */}
           {totalSlides > 1 && (
             <>
-              {/* Left arrow */}
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 md:-translate-x-4 lg:-translate-x-8 z-20">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 lg:-translate-x-12 xl:-translate-x-16 z-20">
                 <PipeArrowButton
                   direction="left"
                   onClick={goPrev}
-                  aria-label="Previous video"
+                  aria-label="Previous slide"
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
-
-              {/* Right arrow */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 md:translate-x-4 lg:translate-x-8 z-20">
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 lg:translate-x-12 xl:translate-x-16 z-20">
                 <PipeArrowButton
                   direction="right"
                   onClick={goNext}
-                  aria-label="Next video"
+                  aria-label="Next slide"
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
             </>
           )}
 
-          {/* Slide indicators - only show if multiple slides */}
+          {/* Slide indicator dots */}
           {totalSlides > 1 && (
-            <div className="absolute -bottom-8 md:-bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <div className="flex justify-center gap-2 mt-8 lg:mt-10">
               {SLIDES.map((_, index) => (
                 <button
                   key={index}
@@ -257,7 +308,7 @@ export function HomeVideoCarousel() {
                     w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300
                     focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900
                     ${index === activeIndex 
-                      ? 'bg-orange-500 scale-110' 
+                      ? 'bg-orange-500 scale-125' 
                       : 'bg-slate-600 hover:bg-slate-500'
                     }
                   `}
@@ -267,24 +318,8 @@ export function HomeVideoCarousel() {
               ))}
             </div>
           )}
-        </div>
 
-        {/* Optional title below video */}
-        <motion.div 
-          className="text-center mt-12 md:mt-14"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-2">
-            {currentSlide.title}
-          </h2>
-          {currentSlide.metadata && (
-            <p className="text-sm md:text-base text-slate-400">
-              {currentSlide.metadata}
-            </p>
-          )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -118,7 +118,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       {/* ═══════════════════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════════════════ */}
-      <ProductSection background="soft-blue" size="lg" showGlow>
+      <ProductSection background="soft-blue" size="lg" showGlow firstSection>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Product Image */}
           <div className="relative">

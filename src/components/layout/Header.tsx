@@ -27,16 +27,16 @@ export default function Header() {
     <>
       <header
         className={
-          `sticky top-0 z-50 transition-all duration-300 ease-in-out ${
+          `fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
             isHidden
               ? prefersReducedMotion
-                ? 'opacity-20 md:opacity-20 lg:opacity-20' // Reduced motion: only opacity fade
-                : 'md:-translate-y-4 md:opacity-0 lg:-translate-y-4 lg:opacity-0' // Full animation on desktop/tablet
-              : 'translate-y-0 opacity-100'
+                ? 'opacity-80' // Reduced motion: slight opacity fade only
+                : '-translate-y-full' // Full slide up to hide completely
+              : 'translate-y-0'
           } ${
             // Translucent background when visible and not at very top
             scrollDirection !== null
-              ? 'bg-white/80 backdrop-blur-md shadow-md'
+              ? 'bg-white/95 backdrop-blur-md shadow-md'
               : 'bg-white shadow-sm'
           }`
         }

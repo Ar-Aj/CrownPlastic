@@ -43,7 +43,7 @@ export default function PageHeader({
   });
 
   return (
-    <section className={`${backgroundClass} text-white`}>
+    <section className={`${backgroundClass} text-white pt-[130px]`}>
       <div className="container mx-auto px-4 py-12 md:py-16">
         {breadcrumbs && (
           <div className="mb-4" style={getAnimStyle(0)}>

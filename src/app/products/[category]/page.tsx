@@ -72,7 +72,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       {/* ═══════════════════════════════════════════════════════════════════════
           HERO SECTION - Category Header with Image
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden pt-[130px]">
         {/* Hero image background */}
         {cat.image && (
           <div className="absolute inset-0">

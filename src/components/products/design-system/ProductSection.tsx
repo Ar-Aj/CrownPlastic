@@ -44,6 +44,8 @@ export interface ProductSectionProps {
   id?: string;
   /** Max-width constraint */
   maxWidth?: 'prose' | 'content' | 'wide' | 'full' | 'none';
+  /** When true, adds top padding to account for fixed navbar (use for first section on page) */
+  firstSection?: boolean;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -171,6 +173,7 @@ export default function ProductSection({
   className,
   id,
   maxWidth = 'full',
+  firstSection = false,
 }: ProductSectionProps) {
   const isDark = isDarkBackground(background);
   
@@ -190,6 +193,7 @@ export default function ProductSection({
         'relative overflow-hidden',
         backgroundStyles[background],
         productSpacing.section[size],
+        firstSection && 'pt-[130px]',
         className
       )}
     >

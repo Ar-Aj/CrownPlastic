@@ -142,7 +142,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       {/* ═══════════════════════════════════════════════════════════════════════════
           HERO SECTION - Mid blue band with light cards
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <ProductSection background="soft-blue" size="lg" showGlow showPattern patternType="fine">
+      <ProductSection background="soft-blue" size="lg" showGlow showPattern patternType="fine" firstSection>
         {/* Section-level technical art: glow + diagonal band + hero nodes */}
         <div className="pointer-events-none absolute inset-0">
           <RadialGlowOverlay intensity="normal" position="center" />

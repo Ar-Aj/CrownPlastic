@@ -65,6 +65,11 @@ export function PipeArrowButton({
   // Mirror for left direction
   const isLeft = direction === 'left';
   
+  // Directional tilt to make arrows look more like pointing arrows
+  const rotationStyle = {
+    transform: isLeft ? 'rotate(-12deg)' : 'rotate(12deg)',
+  };
+  
   return (
     <motion.button
       type="button"
@@ -77,8 +82,9 @@ export function PipeArrowButton({
         disabled:opacity-50 disabled:cursor-not-allowed
         ${className}
       `}
-      whileHover={prefersReducedMotion ? {} : { scale: 1.05, y: -2 }}
-      whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+      style={rotationStyle}
+      whileHover={prefersReducedMotion ? {} : { scale: 1.1, y: -3 }}
+      whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       aria-label={ariaLabel || (isLeft ? 'Previous slide' : 'Next slide')}
     >
