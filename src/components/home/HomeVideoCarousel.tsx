@@ -181,14 +181,14 @@ export function HomeVideoCarousel() {
 
   return (
     <section 
-      className="relative w-full bg-slate-900 overflow-hidden pt-[130px]"
+      className="relative w-full bg-slate-900 overflow-hidden pt-[130px] pb-10 lg:pb-12"
       aria-label="Featured video carousel"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950" />
       
-      {/* Main container - compact height on desktop */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
+      {/* Main container - compact height on desktop, symmetric padding for centering */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
         
         {/* Carousel wrapper with navigation */}
         <div className="relative w-full">
@@ -203,6 +203,8 @@ export function HomeVideoCarousel() {
               transition={{ duration: 0.4, ease: 'easeOut' }}
               className="w-full"
             >
+              {/* Inner wrapper to constrain and center the grid between arrows */}
+              <div className="mx-auto lg:max-w-5xl xl:max-w-6xl">
               {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
               <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] gap-6 lg:gap-10 xl:gap-14 items-center">
                 
@@ -241,7 +243,7 @@ export function HomeVideoCarousel() {
 
                 {/* RIGHT: Text Box */}
                 <div className="w-full flex justify-center lg:justify-start lg:self-center">
-                  <div className="w-full max-w-md lg:max-w-none lg:pr-4 text-center lg:text-left">
+                  <div className="w-full max-w-md lg:max-w-none text-center lg:text-left">
                     {/* Card surface - compact padding */}
                     <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl">
                       {/* Slide counter badge */}
@@ -272,6 +274,7 @@ export function HomeVideoCarousel() {
                 </div>
 
               </div>
+              </div>
             </motion.div>
           </AnimatePresence>
 
@@ -299,7 +302,7 @@ export function HomeVideoCarousel() {
 
           {/* Slide indicator dots */}
           {totalSlides > 1 && (
-            <div className="flex justify-center gap-2 mt-8 lg:mt-10">
+            <div className="flex justify-center gap-2.5 mt-8 lg:mt-10 pb-2">
               {SLIDES.map((_, index) => (
                 <button
                   key={index}
