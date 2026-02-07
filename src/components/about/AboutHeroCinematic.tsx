@@ -1180,7 +1180,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                     Width: 45% of container to leave some breathing room.
                 ───────────────────────────────────────────────────────────── */}
                 <motion.div
-                  className="absolute top-0 bottom-0 w-[45%] flex items-center justify-center p-4 lg:p-6"
+                  className="absolute top-0 bottom-8 lg:bottom-10 w-[45%] flex items-center justify-center p-4 lg:p-6"
                   style={{ left: imageLeft }}
                 >
                   <motion.div
@@ -1220,7 +1220,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                     Width: 50% of container.
                 ───────────────────────────────────────────────────────────── */}
                 <motion.div
-                  className="absolute top-0 bottom-0 w-1/2 2xl:w-[55%] flex items-center p-4 lg:p-6"
+                  className="absolute top-0 bottom-8 lg:bottom-10 w-1/2 2xl:w-[55%] flex items-center p-4 lg:p-6"
                   style={{ left: textLeft }}
                 >
                   {/* Text frame with wire bundles at corners instead of grey elbows */}
