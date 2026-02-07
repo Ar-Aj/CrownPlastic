@@ -1220,16 +1220,17 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                     Width: 50% of container.
                 ───────────────────────────────────────────────────────────── */}
                 <motion.div
-                  className="absolute top-0 bottom-0 w-1/2 flex items-center p-4 lg:p-6"
+                  className="absolute top-0 bottom-0 w-1/2 2xl:w-[55%] flex items-center p-4 lg:p-6"
                   style={{ left: textLeft }}
                 >
                   {/* Text frame with wire bundles at corners instead of grey elbows */}
                   {/* text-frame variant = full rectangle with wire corners */}
                   <PipeFrame
                     variant="text-frame"
-                    className="max-w-lg"
+                    className="max-w-lg 2xl:max-w-2xl 2xl:w-full 2xl:min-h-[550px]"
                   >
-                    <div className="py-2 pr-4">
+                    {/* Inner card with frosted glass effect */}
+                    <div className="bg-slate-100/50 backdrop-blur-md rounded-3xl p-6 lg:p-8 2xl:p-12 shadow-xl">
                     {/* Breadcrumb */}
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
@@ -1237,8 +1238,8 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                       transition={{ duration: 0.4 }}
                       className="mb-4"
                     >
-                      <span className="text-sm text-slate-400">
-                        Home / <span className="text-sky-300 font-medium">About Us</span>
+                      <span className="text-sm text-slate-500">
+                        Home / <span className="text-primary font-medium">About Us</span>
                       </span>
                     </motion.div>
 
@@ -1247,10 +1248,10 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
-                      className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-3 leading-tight"
+                      className="text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 mb-3 leading-tight"
                     >
                       Crown Plastic Pipes
-                      <span className="block text-sky-400">Factory L.L.C.</span>
+                      <span className="block text-primary">Factory L.L.C.</span>
                     </motion.h1>
 
                     {/* Tagline */}
@@ -1258,7 +1259,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
-                      className="text-base lg:text-lg text-slate-300 mb-6 font-medium"
+                      className="text-base lg:text-lg text-slate-800 mb-6 font-extrabold tracking-wide uppercase"
                     >
                       European technology, Gulf standards.
                     </motion.p>
@@ -1298,8 +1299,8 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                           className={cn(
                             'w-2 h-2 rounded-full transition-all duration-300',
                             activeStatement === key
-                              ? 'bg-sky-400 w-6'
-                              : 'bg-slate-600'
+                              ? 'bg-primary w-6'
+                              : 'bg-slate-300'
                           )}
                         />
                       ))}
@@ -1433,20 +1434,20 @@ function StatementContent({ statement, variant = 'desktop' }: StatementContentPr
       <span className={cn(
         'inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-2',
         variant === 'desktop'
-          ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30'
+          ? 'bg-primary/15 text-primary border border-primary/30'
           : 'bg-sky-500/20 text-sky-300'
       )}>
         {statement.label}
       </span>
       <h2 className={cn(
         'font-bold mb-2',
-        variant === 'desktop' ? 'text-xl lg:text-2xl text-white' : 'text-lg text-white'
+        variant === 'desktop' ? 'text-xl lg:text-2xl text-slate-900' : 'text-lg text-white'
       )}>
         {statement.title}
       </h2>
       <p className={cn(
-        'leading-relaxed text-sm',
-        variant === 'desktop' ? 'text-slate-300 lg:text-base' : 'text-slate-400'
+        'leading-relaxed',
+        variant === 'desktop' ? 'text-slate-800 font-semibold text-base lg:text-lg 2xl:text-xl' : 'text-slate-400 text-sm'
       )}>
         {statement.text}
       </p>
