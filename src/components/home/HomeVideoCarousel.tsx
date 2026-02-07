@@ -36,37 +36,37 @@ const SLIDES: VideoSlide[] = [
   {
     src: '/videos/home1st/hdpe_1sthome.mp4',
     title: 'HDPE Systems',
-    description: 'Premium High-Density Polyethylene piping for industrial applications, agriculture, and infrastructure projects. Exceptional durability and flexibility.',
+    description: 'Engineered for extreme durability, our High-Density Polyethylene (HDPE) systems deliver superior resistance to corrosion and abrasion. Ideal for high-pressure industrial, agricultural, and municipal infrastructure projects where long-term reliability is non-negotiable.',
     ctaLabel: 'Explore HDPE Products',
     ctaHref: '/products/hdpe-pipe-systems',
   },
   {
-    src: '/videos/home1st/conduit_1sthome.mp4',
-    title: 'Conduit Solutions',
-    description: 'Durable electrical conduit for safe, reliable cable protection in commercial and residential buildings. UV stabilized and impact resistant.',
-    ctaLabel: 'Explore Conduit Range',
-    ctaHref: '/products/upvc-conduit-pipes',
+    src: '/videos/home1st/upvc_1sthome.mp4',
+    title: 'uPVC Pressure',
+    description: 'Our unplasticized Polyvinyl Chloride (uPVC) pressure pipes offer the perfect balance of rigidity and chemical resistance. Designed for potable water distribution and industrial process lines, they ensure leak-free performance and minimal maintenance over decades of use.',
+    ctaLabel: 'View uPVC Range',
+    ctaHref: '/products/upvc-pressure-pipes',
   },
   {
     src: '/videos/home1st/ppr_1sthome.mp4',
-    title: 'PPR Systems',
-    description: 'Polypropylene Random piping for hot and cold water supply with superior thermal resistance up to 95°C. Reliable weld-joint connections.',
-    ctaLabel: 'Explore PPR Range',
-    ctaHref: '/products/ppr-pipe-systems',
+    title: 'PPR Solutions',
+    description: 'Advanced Polypropylene Random Copolymer (PPR) technology designed specifically for hot and cold water plumbing. With exceptional thermal stability and hygienic properties, these systems define the modern standard for residential and commercial building services.',
+    ctaLabel: 'Discover PPR Systems',
+    ctaHref: '/products/ppr-pipes',
   },
   {
-    src: '/videos/home1st/pvd_high_pressure_1sthome.mp4',
-    title: 'PVC High Pressure',
-    description: 'High-pressure rated PVC pipes engineered for demanding water transmission and irrigation systems. PN16 rated and BS EN 1452 certified.',
-    ctaLabel: 'Explore Pressure Pipes',
-    ctaHref: '/products/upvc-pressure-pipe-fittings',
+    src: '/videos/home1st/drainage_1sthome.mp4',
+    title: 'Silent Drainage',
+    description: 'A sophisticated acoustic drainage solution that combines high-density materials with specialized fittings to minimize noise. Perfect for luxury hotels, hospitals, and high-rise residential towers where silence and sanitation are paramount.',
+    ctaLabel: 'See Drainage Systems',
+    ctaHref: '/products/silent-drainage',
   },
   {
-    src: '/videos/home1st/upvc_drainage__1sthome.mp4',
-    title: 'UPVC Drainage',
-    description: 'Efficient unplasticized PVC drainage and sewage systems for residential and commercial applications. Self-extinguishing and chemical resistant.',
-    ctaLabel: 'Explore Drainage Systems',
-    ctaHref: '/products/upvc-drainage-pipe-fittings',
+    src: '/videos/home1st/fittings_1sthome.mp4',
+    title: 'Custom Fittings',
+    description: 'Precision-engineered fittings fabricated to meet exact project specifications. From complex manifolds to specialized adaptors, our custom fabrication capabilities ensure seamless integration for even the most challenging piping layouts.',
+    ctaLabel: 'View Fabrication',
+    ctaHref: '/products/custom-fittings',
   },
 ];
 
@@ -188,7 +188,7 @@ export function HomeVideoCarousel() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950" />
       
       {/* Main container - compact height on desktop, symmetric padding for centering */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[90%] 2xl:w-full min-[1800px]:max-w-[1600px] px-6 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
         
         {/* Carousel wrapper with navigation */}
         <div className="relative w-full">
@@ -204,13 +204,13 @@ export function HomeVideoCarousel() {
               className="w-full"
             >
               {/* Inner wrapper to constrain and center the grid between arrows */}
-              <div className="mx-auto lg:max-w-5xl xl:max-w-6xl">
+              <div className="mx-auto lg:max-w-5xl xl:max-w-6xl 2xl:max-w-none 2xl:px-16">
               {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
-              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] gap-6 lg:gap-10 xl:gap-14 items-center">
+              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-24 items-center">
                 
                 {/* LEFT: Video Player */}
                 <div className="w-full flex justify-center lg:justify-end lg:self-center">
-                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px]">
+                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[480px] min-[1800px]:max-w-[550px]">
                     {/* Video container with 3:4 aspect */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-950">
                       <video
@@ -252,12 +252,12 @@ export function HomeVideoCarousel() {
                       </span>
                       
                       {/* Title */}
-                      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
+                      <h2 className="text-xl sm:text-2xl lg:text-3xl 2xl:text-5xl font-bold text-white mb-3 leading-tight">
                         {currentSlide.title}
                       </h2>
                       
                       {/* Description */}
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+                      <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg leading-relaxed 2xl:leading-relaxed mb-5">
                         {currentSlide.description}
                       </p>
                       
@@ -281,7 +281,7 @@ export function HomeVideoCarousel() {
           {/* Navigation arrows - positioned at section level */}
           {totalSlides > 1 && (
             <>
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 lg:-translate-x-12 xl:-translate-x-16 z-20">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 lg:-translate-x-12 xl:-translate-x-16 2xl:-translate-x-24 z-20">
                 <PipeArrowButton
                   direction="left"
                   onClick={goPrev}
@@ -289,7 +289,7 @@ export function HomeVideoCarousel() {
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 lg:translate-x-12 xl:translate-x-16 z-20">
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-24 z-20">
                 <PipeArrowButton
                   direction="right"
                   onClick={goNext}

@@ -265,7 +265,7 @@ function DesktopPinnedStrip() {
           </div>
 
           {/* Story Content - Vertically centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-center pb-8">
+          <div className="flex-1 flex flex-col justify-center 2xl:justify-start 2xl:pt-10 pb-8">
             {/* Story Title */}
             <div className="text-center mb-3">
               <AnimatePresence mode="wait">
@@ -284,7 +284,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
-            <div className="relative py-6 mb-3 lg:mb-4">
+            <div className="relative py-6 mb-3 lg:mb-4 2xl:py-8 2xl:mb-6">
               {/* ─────────────────────────────────────────────────────────────────
                   3D PVC PIPE PROGRESS BAR
                   - Dark grey cylindrical pipe with Crown blue fill
@@ -309,7 +309,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Active Story Card */}
-            <div className="flex justify-center">
+            <div className="flex justify-center 2xl:mt-2">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
