@@ -74,7 +74,7 @@ function InnovationHero() {
   ];
 
   return (
-    <header className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
+    <header className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden pt-24 lg:pt-40 2xl:pt-48">
       {/* Dark tech gradient background - inspired by About Us */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900" />
 

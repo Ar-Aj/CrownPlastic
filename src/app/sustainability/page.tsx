@@ -56,7 +56,7 @@ function SustainabilityHero() {
   ];
 
   return (
-    <header className="relative min-h-[75vh] md:min-h-[85vh] flex items-center bg-white overflow-hidden">
+    <header className="relative min-h-[75vh] md:min-h-[85vh] flex items-center bg-white overflow-hidden pt-24 lg:pt-40 2xl:pt-48">
       {/* Subtle emerald orb background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-l from-emerald-100/40 to-teal-50/20 blur-3xl" />
