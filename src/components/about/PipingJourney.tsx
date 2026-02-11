@@ -242,7 +242,7 @@ function DesktopPinnedStrip() {
     // ─────────────────────────────────────────────────────────────────────────
     <div
       ref={scrollContainerRef}
-      className="relative pb-64"
+      className="relative pb-20 2xl:pb-0"
       style={{ height: `${containerHeight}vh` }}
     >
       {/* ───────────────────────────────────────────────────────────────────────
@@ -252,10 +252,10 @@ function DesktopPinnedStrip() {
           - Now includes section header that stays visible during scroll lock
           ─────────────────────────────────────────────────────────────────────── */}
       <div
-        className="sticky bg-white"
+        className="sticky overflow-hidden bg-white"
         style={{
-          top: '80px',
-          height: 'min(calc(100vh - 80px), 850px)',
+          top: '100px',
+          height: 'min(calc(100vh - 100px), 850px)',
         }}
       >
         {/* Background gradient */}
@@ -264,9 +264,9 @@ function DesktopPinnedStrip() {
         {/* ─────────────────────────────────────────────────────────────────────
             CONTENT: Section header + story content within sticky viewport
             ───────────────────────────────────────────────────────────────────── */}
-        <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 min-[1800px]:w-[90vw] min-[1800px]:max-w-none relative z-10">
+        <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
           {/* Section Header - Stays visible during scroll lock */}
-          <div className="pt-4 lg:pt-6 pb-2 text-center flex-shrink-0">
+          <div className="pt-8 pb-4 text-center flex-shrink-0">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
               Our Journey
             </span>
@@ -279,9 +279,9 @@ function DesktopPinnedStrip() {
           </div>
 
           {/* Story Content - Vertically centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-start pt-2 lg:pt-4 pb-20">
+          <div className="flex-1 flex flex-col justify-center 2xl:justify-start 2xl:pt-10 pb-8">
             {/* Story Title */}
-            <div className="text-center mb-2">
+            <div className="text-center mb-3">
               <AnimatePresence mode="wait">
                 <motion.h3
                   key={activeIndex}
@@ -298,7 +298,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
-            <div className="relative py-4 my-2 lg:my-3 min-[1800px]:py-8 min-[1800px]:my-6">
+            <div className="relative py-6 mb-3 lg:mb-4 2xl:py-8 2xl:mb-6">
               {/* ─────────────────────────────────────────────────────────────────
                   3D PVC PIPE PROGRESS BAR
                   - Dark grey cylindrical pipe with Crown blue fill
@@ -323,7 +323,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Active Story Card */}
-            <div className="flex justify-center mt-2">
+            <div className="flex justify-center 2xl:mt-2">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
@@ -331,34 +331,34 @@ function DesktopPinnedStrip() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className="w-full max-w-2xl min-[1800px]:max-w-3xl min-[1800px]:w-full"
+                  className="w-full max-w-2xl 2xl:max-w-3xl 2xl:w-full"
                 >
-                  <div className="p-3 lg:p-4 min-[1800px]:p-12 rounded-2xl bg-white border-2 border-primary shadow-lg">
+                  <div className="p-3 lg:p-4 2xl:p-12 rounded-2xl bg-white border-2 border-primary shadow-lg">
                     {/* Header */}
                     <div className="flex items-center gap-2.5 lg:gap-3 mb-2">
                       <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-primary/10 flex items-center justify-center">
                         <Icon name={activeStory.icon} size={18} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="text-sm lg:text-base min-[1800px]:text-3xl font-bold text-gray-900">{activeStory.title}</h4>
-                        <p className="text-primary text-xs lg:text-sm min-[1800px]:text-xl font-medium">{activeStory.yearRange}</p>
+                        <h4 className="text-sm lg:text-base 2xl:text-3xl font-bold text-gray-900">{activeStory.title}</h4>
+                        <p className="text-primary text-xs lg:text-sm 2xl:text-xl font-medium">{activeStory.yearRange}</p>
                       </div>
                     </div>
 
                     {/* Tagline */}
-                    <p className="text-gray-600 text-xs lg:text-sm min-[1800px]:text-xl min-[1800px]:leading-relaxed mb-2">{activeStory.tagline}</p>
+                    <p className="text-gray-600 text-xs lg:text-sm 2xl:text-xl 2xl:leading-relaxed mb-2">{activeStory.tagline}</p>
 
                     {/* Milestones as inline chips */}
                     <div className="flex flex-wrap gap-1.5 lg:gap-2">
                       {activeEvents.map((event) => (
                         <div
                           key={event.year}
-                          className="inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-2.5 min-[1800px]:px-4 py-1 min-[1800px]:py-2 rounded-lg bg-gray-50"
+                          className="inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-2.5 2xl:px-4 py-1 2xl:py-2 rounded-lg bg-gray-50"
                         >
-                          <span className="px-1.5 lg:px-2 min-[1800px]:px-3 py-0.5 min-[1800px]:py-1 bg-primary text-white text-[10px] lg:text-xs min-[1800px]:text-lg font-bold rounded">
+                          <span className="px-1.5 lg:px-2 2xl:px-3 py-0.5 2xl:py-1 bg-primary text-white text-[10px] lg:text-xs 2xl:text-lg font-bold rounded">
                             {event.year}
                           </span>
-                          <span className="text-xs lg:text-sm min-[1800px]:text-lg text-gray-700">{event.title}</span>
+                          <span className="text-xs lg:text-sm 2xl:text-lg text-gray-700">{event.title}</span>
                           {event.highlight && (
                             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                           )}
