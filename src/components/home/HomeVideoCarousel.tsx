@@ -206,11 +206,11 @@ export function HomeVideoCarousel() {
               {/* Inner wrapper to constrain and center the grid between arrows */}
               <div className="mx-auto lg:max-w-5xl xl:max-w-6xl 2xl:max-w-none 2xl:px-16">
               {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
-              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-16 items-center">
+              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-10 min-[1800px]:gap-20 items-center">
                 
                 {/* LEFT: Video Player */}
                 <div className="w-full flex justify-center lg:justify-end lg:self-center">
-                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[400px] min-[1800px]:max-w-[450px]">
+                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[360px] min-[1800px]:max-w-[480px]">
                     {/* Video container with 3:4 aspect */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-950">
                       <video
@@ -252,12 +252,12 @@ export function HomeVideoCarousel() {
                       </span>
                       
                       {/* Title */}
-                      <h2 className="text-xl sm:text-2xl lg:text-3xl 2xl:text-5xl font-bold text-white mb-3 leading-tight">
+                      <h2 className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl min-[1800px]:text-5xl font-bold text-white mb-3 leading-tight">
                         {currentSlide.title}
                       </h2>
                       
                       {/* Description */}
-                      <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg leading-relaxed 2xl:leading-relaxed mb-5">
+                      <p className="text-slate-300 text-sm sm:text-base min-[1800px]:text-lg leading-relaxed min-[1800px]:leading-relaxed mb-5">
                         {currentSlide.description}
                       </p>
                       
