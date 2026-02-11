@@ -242,7 +242,7 @@ function DesktopPinnedStrip() {
     // ─────────────────────────────────────────────────────────────────────────
     <div
       ref={scrollContainerRef}
-      className="relative pb-40"
+      className="relative pb-64"
       style={{ height: `${containerHeight}vh` }}
     >
       {/* ───────────────────────────────────────────────────────────────────────
@@ -279,7 +279,7 @@ function DesktopPinnedStrip() {
           </div>
 
           {/* Story Content - Vertically centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-start pt-4 pb-8">
+          <div className="flex-1 flex flex-col justify-start pt-10 lg:pt-16 pb-8">
             {/* Story Title */}
             <div className="text-center mb-3">
               <AnimatePresence mode="wait">
@@ -298,7 +298,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
-            <div className="relative py-6 mb-3 lg:mb-4 2xl:py-8 2xl:mb-6">
+            <div className="relative py-6 mb-3 lg:mb-4 min-[1800px]:py-8 min-[1800px]:mb-6">
               {/* ─────────────────────────────────────────────────────────────────
                   3D PVC PIPE PROGRESS BAR
                   - Dark grey cylindrical pipe with Crown blue fill
@@ -323,7 +323,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Active Story Card */}
-            <div className="flex justify-center 2xl:mt-2">
+            <div className="flex justify-center mt-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
@@ -331,9 +331,9 @@ function DesktopPinnedStrip() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className="w-full max-w-2xl 2xl:max-w-3xl 2xl:w-full"
+                  className="w-full max-w-2xl min-[1800px]:max-w-3xl min-[1800px]:w-full"
                 >
-                  <div className="p-3 lg:p-4 2xl:p-12 rounded-2xl bg-white border-2 border-primary shadow-lg">
+                  <div className="p-3 lg:p-4 min-[1800px]:p-12 rounded-2xl bg-white border-2 border-primary shadow-lg">
                     {/* Header */}
                     <div className="flex items-center gap-2.5 lg:gap-3 mb-2">
                       <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-primary/10 flex items-center justify-center">
