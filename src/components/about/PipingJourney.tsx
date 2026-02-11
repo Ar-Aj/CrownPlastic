@@ -266,7 +266,7 @@ function DesktopPinnedStrip() {
             ───────────────────────────────────────────────────────────────────── */}
         <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 min-[1800px]:w-[90vw] min-[1800px]:max-w-none relative z-10">
           {/* Section Header - Stays visible during scroll lock */}
-          <div className="pt-8 pb-4 text-center flex-shrink-0">
+          <div className="pt-4 lg:pt-6 pb-2 text-center flex-shrink-0">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
               Our Journey
             </span>
@@ -279,9 +279,9 @@ function DesktopPinnedStrip() {
           </div>
 
           {/* Story Content - Vertically centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-start pt-10 lg:pt-16 pb-8">
+          <div className="flex-1 flex flex-col justify-start pt-2 lg:pt-4 pb-20">
             {/* Story Title */}
-            <div className="text-center mb-3">
+            <div className="text-center mb-2">
               <AnimatePresence mode="wait">
                 <motion.h3
                   key={activeIndex}
@@ -298,7 +298,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
-            <div className="relative py-6 mb-3 lg:mb-4 min-[1800px]:py-8 min-[1800px]:mb-6">
+            <div className="relative py-4 my-2 lg:my-3 min-[1800px]:py-8 min-[1800px]:my-6">
               {/* ─────────────────────────────────────────────────────────────────
                   3D PVC PIPE PROGRESS BAR
                   - Dark grey cylindrical pipe with Crown blue fill
@@ -323,7 +323,7 @@ function DesktopPinnedStrip() {
             </div>
 
             {/* Active Story Card */}
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-2">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
