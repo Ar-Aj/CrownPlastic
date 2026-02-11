@@ -169,6 +169,20 @@ export default function PipingJourney() {
 function DesktopPinnedStrip() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [scrollPerStory, setScrollPerStory] = useState(SCROLL_PER_STORY);
+
+  // Viewport-aware scroll distance: reduce on large screens (1080p+)
+  // Prevents excessive empty scroll space on tall viewports
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateScrollDistance = () => {
+      setScrollPerStory(window.innerHeight > 900 ? 50 : 70);
+    };
+    updateScrollDistance();
+    window.addEventListener('resize', updateScrollDistance);
+    return () => window.removeEventListener('resize', updateScrollDistance);
+  }, []);
 
   // ─────────────────────────────────────────────────────────────────────────
   // SCROLL TRACKING
@@ -217,7 +231,7 @@ function DesktopPinnedStrip() {
   // - The scroll distance provides room for story transitions
   // - No extra blank space above or below
   // ─────────────────────────────────────────────────────────────────────────
-  const scrollDistance = (journeyStories.length - 1) * SCROLL_PER_STORY;
+  const scrollDistance = (journeyStories.length - 1) * scrollPerStory;
   const stickyHeightVh = 100 - (HEADER_OFFSET / 10); // Approximate vh conversion
   const containerHeight = stickyHeightVh + scrollDistance;
 
@@ -228,7 +242,7 @@ function DesktopPinnedStrip() {
     // ─────────────────────────────────────────────────────────────────────────
     <div
       ref={scrollContainerRef}
-      className="relative"
+      className="relative pb-20 2xl:pb-0"
       style={{ height: `${containerHeight}vh` }}
     >
       {/* ───────────────────────────────────────────────────────────────────────
@@ -241,7 +255,7 @@ function DesktopPinnedStrip() {
         className="sticky overflow-hidden bg-white"
         style={{
           top: `${HEADER_OFFSET}px`,
-          height: `calc(100vh - ${HEADER_OFFSET}px)`,
+          height: `min(calc(100vh - ${HEADER_OFFSET}px), 850px)`,
         }}
       >
         {/* Background gradient */}
