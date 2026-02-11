@@ -188,7 +188,7 @@ export function HomeVideoCarousel() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950" />
       
       {/* Main container - compact height on desktop, symmetric padding for centering */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[90%] 2xl:w-full min-[1800px]:max-w-[1600px] px-6 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl min-[1800px]:max-w-[1600px] min-[1800px]:w-full px-6 sm:px-8 lg:px-10 xl:px-12 py-10 md:py-12 lg:py-8 lg:h-[60vh] lg:max-h-[70vh] lg:min-h-[480px] lg:mt-6 flex items-center justify-center">
         
         {/* Carousel wrapper with navigation */}
         <div className="relative w-full">
@@ -204,13 +204,13 @@ export function HomeVideoCarousel() {
               className="w-full"
             >
               {/* Inner wrapper to constrain and center the grid between arrows */}
-              <div className="mx-auto lg:max-w-5xl xl:max-w-6xl 2xl:max-w-none 2xl:px-16">
+              <div className="mx-auto lg:max-w-5xl xl:max-w-6xl min-[1800px]:max-w-none min-[1800px]:px-16">
               {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
-              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-10 min-[1800px]:gap-20 items-center">
+              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] min-[1800px]:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 min-[1800px]:gap-24 items-center">
                 
                 {/* LEFT: Video Player */}
                 <div className="w-full flex justify-center lg:justify-end lg:self-center">
-                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[360px] min-[1800px]:max-w-[480px]">
+                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] min-[1800px]:max-w-[500px]">
                     {/* Video container with 3:4 aspect */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-950">
                       <video
@@ -245,14 +245,14 @@ export function HomeVideoCarousel() {
                 <div className="w-full flex justify-center lg:justify-start lg:self-center">
                   <div className="w-full max-w-md lg:max-w-none text-center lg:text-left">
                     {/* Card surface - compact padding */}
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl 2xl:max-w-2xl">
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl min-[1800px]:max-w-2xl">
                       {/* Slide counter badge */}
                       <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-semibold rounded-full border border-orange-500/30 mb-4">
                         {activeIndex + 1} / {totalSlides}
                       </span>
                       
                       {/* Title */}
-                      <h2 className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl min-[1800px]:text-5xl font-bold text-white mb-3 leading-tight">
+                      <h2 className="text-xl sm:text-2xl lg:text-3xl min-[1800px]:text-6xl font-bold text-white mb-3 leading-tight">
                         {currentSlide.title}
                       </h2>
                       
