@@ -242,7 +242,7 @@ function DesktopPinnedStrip() {
     // ─────────────────────────────────────────────────────────────────────────
     <div
       ref={scrollContainerRef}
-      className="relative pb-20 2xl:pb-0"
+      className="relative pb-40"
       style={{ height: `${containerHeight}vh` }}
     >
       {/* ───────────────────────────────────────────────────────────────────────
@@ -264,7 +264,7 @@ function DesktopPinnedStrip() {
         {/* ─────────────────────────────────────────────────────────────────────
             CONTENT: Section header + story content within sticky viewport
             ───────────────────────────────────────────────────────────────────── */}
-        <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
+        <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 min-[1800px]:w-[90vw] min-[1800px]:max-w-none relative z-10">
           {/* Section Header - Stays visible during scroll lock */}
           <div className="pt-8 pb-4 text-center flex-shrink-0">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
@@ -279,7 +279,7 @@ function DesktopPinnedStrip() {
           </div>
 
           {/* Story Content - Vertically centered in remaining space */}
-          <div className="flex-1 flex flex-col justify-center 2xl:justify-start 2xl:pt-10 pb-8">
+          <div className="flex-1 flex flex-col justify-start pt-4 pb-8">
             {/* Story Title */}
             <div className="text-center mb-3">
               <AnimatePresence mode="wait">
