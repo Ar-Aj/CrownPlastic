@@ -252,10 +252,10 @@ function DesktopPinnedStrip() {
           - Now includes section header that stays visible during scroll lock
           ─────────────────────────────────────────────────────────────────────── */}
       <div
-        className="sticky overflow-hidden bg-white"
+        className="sticky bg-white"
         style={{
-          top: '100px',
-          height: 'min(calc(100vh - 100px), 850px)',
+          top: '80px',
+          height: 'min(calc(100vh - 80px), 850px)',
         }}
       >
         {/* Background gradient */}
@@ -340,25 +340,25 @@ function DesktopPinnedStrip() {
                         <Icon name={activeStory.icon} size={18} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="text-sm lg:text-base 2xl:text-3xl font-bold text-gray-900">{activeStory.title}</h4>
-                        <p className="text-primary text-xs lg:text-sm 2xl:text-xl font-medium">{activeStory.yearRange}</p>
+                        <h4 className="text-sm lg:text-base min-[1800px]:text-3xl font-bold text-gray-900">{activeStory.title}</h4>
+                        <p className="text-primary text-xs lg:text-sm min-[1800px]:text-xl font-medium">{activeStory.yearRange}</p>
                       </div>
                     </div>
 
                     {/* Tagline */}
-                    <p className="text-gray-600 text-xs lg:text-sm 2xl:text-xl 2xl:leading-relaxed mb-2">{activeStory.tagline}</p>
+                    <p className="text-gray-600 text-xs lg:text-sm min-[1800px]:text-xl min-[1800px]:leading-relaxed mb-2">{activeStory.tagline}</p>
 
                     {/* Milestones as inline chips */}
                     <div className="flex flex-wrap gap-1.5 lg:gap-2">
                       {activeEvents.map((event) => (
                         <div
                           key={event.year}
-                          className="inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-2.5 2xl:px-4 py-1 2xl:py-2 rounded-lg bg-gray-50"
+                          className="inline-flex items-center gap-1.5 lg:gap-2 px-2 lg:px-2.5 min-[1800px]:px-4 py-1 min-[1800px]:py-2 rounded-lg bg-gray-50"
                         >
-                          <span className="px-1.5 lg:px-2 2xl:px-3 py-0.5 2xl:py-1 bg-primary text-white text-[10px] lg:text-xs 2xl:text-lg font-bold rounded">
+                          <span className="px-1.5 lg:px-2 min-[1800px]:px-3 py-0.5 min-[1800px]:py-1 bg-primary text-white text-[10px] lg:text-xs min-[1800px]:text-lg font-bold rounded">
                             {event.year}
                           </span>
-                          <span className="text-xs lg:text-sm 2xl:text-lg text-gray-700">{event.title}</span>
+                          <span className="text-xs lg:text-sm min-[1800px]:text-lg text-gray-700">{event.title}</span>
                           {event.highlight && (
                             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                           )}
