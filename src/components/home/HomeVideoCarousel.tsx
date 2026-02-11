@@ -206,11 +206,11 @@ export function HomeVideoCarousel() {
               {/* Inner wrapper to constrain and center the grid between arrows */}
               <div className="mx-auto lg:max-w-5xl xl:max-w-6xl 2xl:max-w-none 2xl:px-16">
               {/* ========== SLIDE CARD: Two-column on desktop, stacked on mobile ========== */}
-              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-24 items-center">
+              <div className="flex flex-col lg:grid lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-10 xl:gap-14 2xl:gap-16 items-center">
                 
                 {/* LEFT: Video Player */}
                 <div className="w-full flex justify-center lg:justify-end lg:self-center">
-                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[480px] min-[1800px]:max-w-[550px]">
+                  <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-[320px] xl:max-w-[360px] 2xl:max-w-[400px] min-[1800px]:max-w-[450px]">
                     {/* Video container with 3:4 aspect */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-950">
                       <video
@@ -245,7 +245,7 @@ export function HomeVideoCarousel() {
                 <div className="w-full flex justify-center lg:justify-start lg:self-center">
                   <div className="w-full max-w-md lg:max-w-none text-center lg:text-left">
                     {/* Card surface - compact padding */}
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl">
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/50 shadow-xl 2xl:max-w-2xl">
                       {/* Slide counter badge */}
                       <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-semibold rounded-full border border-orange-500/30 mb-4">
                         {activeIndex + 1} / {totalSlides}
