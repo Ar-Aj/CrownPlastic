@@ -309,7 +309,7 @@ function InnovationDefinitionSection() {
         >
           {approaches.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#001424] hover:border-transparent transition-all duration-300">
+              <div className="group h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#002B4A] hover:border-transparent transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
@@ -633,7 +633,7 @@ function InnovationShowcaseSection() {
           {productInnovations.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
               <Link href={item.href} className="group block h-full">
-                <div className="h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#001424] hover:border-transparent transition-all duration-300">
+                <div className="h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#002B4A] hover:border-transparent transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500 transition-colors duration-300">
                     <item.icon className="w-6 h-6 text-cyan-600 group-hover:text-white transition-colors duration-300" />
                   </div>
