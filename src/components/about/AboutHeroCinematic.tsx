@@ -1227,10 +1227,10 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                   {/* text-frame variant = full rectangle with wire corners */}
                   <PipeFrame
                     variant="text-frame"
-                    className="max-w-lg 2xl:max-w-2xl 2xl:w-full 2xl:min-h-[550px]"
+                    className="max-w-lg 2xl:max-w-2xl 2xl:w-full"
                   >
                     {/* Inner card with frosted glass effect */}
-                    <div className="bg-slate-100/50 backdrop-blur-md rounded-3xl p-6 lg:p-8 2xl:p-12 shadow-xl">
+                    <div className="h-full bg-slate-100/50 backdrop-blur-md rounded-3xl p-6 lg:p-8 2xl:p-10 shadow-xl">
                     {/* Breadcrumb */}
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
