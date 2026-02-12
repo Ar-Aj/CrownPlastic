@@ -229,7 +229,7 @@ function EnvironmentalCommitmentsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-emerald-50/80 via-teal-50/50 to-sky-50/60 relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-blue-50/30 border-y border-emerald-100/50 relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-30" />
       
@@ -357,7 +357,7 @@ function SustainabilityPillarsSection() {
                   <div className="absolute inset-0 bg-white group-hover:bg-gradient-to-br group-hover:from-emerald-50 group-hover:to-teal-50 transition-all duration-500" />
                   
                   {/* Border */}
-                  <div className="absolute inset-0 rounded-2xl border border-emerald-100 group-hover:border-emerald-200 transition-colors duration-500" />
+                  <div className="absolute inset-0 rounded-2xl border border-gray-100 group-hover:border-emerald-200 transition-colors duration-500" />
                   
                   <div className="relative p-6 md:p-8">
                     {/* Icon */}
@@ -393,7 +393,7 @@ function GreenManufacturingSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-50/80 via-teal-50/50 to-sky-50/60 overflow-hidden">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-blue-50/30 border-y border-emerald-100/50 overflow-hidden">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
         
         {/* Block A: Thoughtful Manufacturing - Image Left */}
