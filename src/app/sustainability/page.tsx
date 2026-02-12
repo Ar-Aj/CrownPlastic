@@ -23,7 +23,6 @@ import {
   Droplets,
   Thermometer,
   Scale,
-  Building2,
   Users,
   ClipboardCheck,
 } from 'lucide-react';

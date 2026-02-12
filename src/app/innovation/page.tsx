@@ -32,7 +32,6 @@ import {
   TrendingUp,
   ChevronRight,
   Database,
-  Cpu,
   Cable,
   Droplets,
   Thermometer,
