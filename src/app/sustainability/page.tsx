@@ -671,24 +671,16 @@ function WhySustainabilityMattersSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="py-16 md:py-24 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-blue-50 to-blue-100 relative overflow-hidden">
-      {/* Subtle decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-white/60 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl" />
-      </div>
+    <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden border-y border-emerald-100/50">
+      {/* Bio-Luminescent Light Theme */}
+      {/* Base gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF] to-white" />
       
-      {/* Subtle grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(0,114,188,0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,114,188,0.3) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px',
-        }}
-      />
+      {/* The Green Core - centered glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-300/20 blur-[120px] rounded-full pointer-events-none" />
+      
+      {/* The Blue Current - top-right orb */}
+      <div className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -696,7 +688,7 @@ function WhySustainabilityMattersSection() {
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-primary/20"
+            className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-emerald-200"
           >
             Thought Leadership
           </motion.span>
@@ -709,7 +701,7 @@ function WhySustainabilityMattersSection() {
             className="text-3xl md:text-4xl font-extrabold text-[#002B4A] mb-6 leading-tight tracking-tight"
           >
             Why Sustainable Piping Systems{' '}
-            <span className="text-emerald-600">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
               Matter for the Gulf
             </span>
           </motion.h2>
@@ -753,11 +745,11 @@ function WhySustainabilityMattersSection() {
               { icon: Award, title: 'Tested Materials', desc: 'Predictable performance under real conditions' },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white flex items-center justify-center shadow-md">
-                  <item.icon className="w-7 h-7 text-primary" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#0072BC] flex items-center justify-center shadow-lg shadow-primary/20">
+                  <item.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-[#002B4A] font-bold mb-1">{item.title}</h3>
-                <p className="text-slate-600 text-sm">{item.desc}</p>
+                <p className="text-slate-500 text-sm">{item.desc}</p>
               </div>
             ))}
           </motion.div>
