@@ -309,12 +309,12 @@ function InnovationDefinitionSection() {
         >
           {approaches.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-cyan-200 transition-all duration-300">
+              <div className="group h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#001424] hover:border-transparent transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-white transition-colors duration-300">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -633,15 +633,15 @@ function InnovationShowcaseSection() {
           {productInnovations.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
               <Link href={item.href} className="group block h-full">
-                <div className="h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+                <div className="h-full p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:bg-[#001424] hover:border-transparent transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500 transition-colors duration-300">
                     <item.icon className="w-6 h-6 text-cyan-600 group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-white transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{item.description}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4 group-hover:text-slate-200 transition-colors duration-300">{item.description}</p>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-accent group-hover:gap-2 transition-all duration-300">
                     Learn More <ChevronRight className="w-4 h-4" />
                   </span>
                 </div>
