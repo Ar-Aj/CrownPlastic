@@ -132,7 +132,7 @@ function SustainabilityHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <NextImage
                 src="/images/sustainability/sustainability-hero-green-manufacturing.jpg"
                 alt="Sustainable UPVC piping manufacturing - Crown Plastic Pipes"

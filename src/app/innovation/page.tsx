@@ -185,7 +185,7 @@ function InnovationHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <NextImage
                 src="/images/innovation/innovation-hero-hightech-lab.jpg"
                 alt="High-tech UPVC pipe manufacturing facility - Crown Plastic Pipes"
