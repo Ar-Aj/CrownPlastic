@@ -101,7 +101,7 @@ function SustainabilityHero() {
                 Talk to Our Team
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
-              <MagneticButton href="/resources" variant="outline" size="lg" className="!border-white/30 !text-white hover:!bg-white/10">
+              <MagneticButton href="/resources" variant="outline" size="lg" className="!bg-sky-100 !border-sky-200 !text-slate-900 hover:!bg-[#0072BC] hover:!text-white hover:!border-[#0072BC] transition-colors duration-300">
                 <FileText className="w-5 h-5" />
                 Download Sustainability Brief
               </MagneticButton>
@@ -671,20 +671,20 @@ function WhySustainabilityMattersSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      {/* Background elements */}
+    <section className="py-16 md:py-24 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-blue-50 to-blue-100 relative overflow-hidden">
+      {/* Subtle decorative elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/10 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-white/60 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl" />
       </div>
       
-      {/* Grid pattern */}
+      {/* Subtle grid pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
+            linear-gradient(rgba(0,114,188,0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,114,188,0.3) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px',
         }}
@@ -696,7 +696,7 @@ function WhySustainabilityMattersSection() {
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-300 text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-emerald-500/30"
+            className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-primary/20"
           >
             Thought Leadership
           </motion.span>
@@ -706,10 +706,10 @@ function WhySustainabilityMattersSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl md:text-4xl font-extrabold text-[#002B4A] mb-6 leading-tight tracking-tight"
           >
             Why Sustainable Piping Systems{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="text-emerald-600">
               Matter for the Gulf
             </span>
           </motion.h2>
@@ -719,7 +719,7 @@ function WhySustainabilityMattersSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-slate-300 leading-relaxed mb-8 space-y-4"
+            className="text-lg text-slate-600 leading-relaxed mb-8 space-y-4"
           >
             <p>
               In piping infrastructure, true sustainability isn&apos;t about marketing claims—it&apos;s about 
@@ -753,11 +753,11 @@ function WhySustainabilityMattersSection() {
               { icon: Award, title: 'Tested Materials', desc: 'Predictable performance under real conditions' },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
-                  <item.icon className="w-7 h-7 text-emerald-400" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white flex items-center justify-center shadow-md">
+                  <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                <p className="text-slate-400 text-sm">{item.desc}</p>
+                <h3 className="text-[#002B4A] font-bold mb-1">{item.title}</h3>
+                <p className="text-slate-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </motion.div>
