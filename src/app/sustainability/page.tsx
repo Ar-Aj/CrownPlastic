@@ -229,9 +229,12 @@ function EnvironmentalCommitmentsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-blue-50/30 border-y border-emerald-100/50 relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+      {/* Organic Mesh - Left Green Orb */}
+      <div className="absolute -left-20 top-0 w-[500px] h-[500px] bg-emerald-200/30 blur-[100px] rounded-full pointer-events-none" />
+      
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-30" />
+      <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
       
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
@@ -250,7 +253,7 @@ function EnvironmentalCommitmentsSection() {
         >
           {commitments.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300">
+              <div className="group h-full p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
                 </div>
@@ -333,7 +336,10 @@ function SustainabilityPillarsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+      {/* Organic Mesh - Right Blue Orb */}
+      <div className="absolute -right-20 top-0 w-[600px] h-[600px] bg-blue-200/30 blur-[100px] rounded-full pointer-events-none" />
+      
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
           label="Sustainability Pillars"
@@ -354,10 +360,10 @@ function SustainabilityPillarsSection() {
               <TiltCard intensity={5}>
                 <div className="group relative h-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
                   {/* Background gradient on hover */}
-                  <div className="absolute inset-0 bg-white group-hover:bg-gradient-to-br group-hover:from-emerald-50 group-hover:to-teal-50 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-white/80 backdrop-blur-md group-hover:bg-gradient-to-br group-hover:from-emerald-50/80 group-hover:to-teal-50/80 transition-all duration-500" />
                   
                   {/* Border */}
-                  <div className="absolute inset-0 rounded-2xl border border-gray-100 group-hover:border-emerald-200 transition-colors duration-500" />
+                  <div className="absolute inset-0 rounded-2xl border border-white/50 group-hover:border-emerald-200 transition-colors duration-500" />
                   
                   <div className="relative p-6 md:p-8">
                     {/* Icon */}
@@ -487,7 +493,7 @@ function GreenManufacturingSection() {
             transition={{ duration: 0.6 }}
             className="lg:order-1"
           >
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+            <span className="inline-block px-4 py-1.5 bg-teal-100 text-teal-700 text-sm font-semibold rounded-full mb-4">
               Long-Term Vision
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
@@ -518,7 +524,7 @@ function GreenManufacturingSection() {
                   transition={{ delay: 0.2 + i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0" />
                   <span className="text-gray-700">{item}</span>
                 </motion.li>
               ))}
@@ -526,7 +532,7 @@ function GreenManufacturingSection() {
 
             <Link
               href="/about-us"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:gap-3 transition-all"
             >
               Learn About Our Approach
               <ArrowRight className="w-5 h-5" />
@@ -610,9 +616,12 @@ function ComplianceSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+      {/* Organic Mesh - Bottom Teal Orb */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[700px] h-[500px] bg-teal-200/30 blur-[100px] rounded-full pointer-events-none" />
+      
       {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30" />
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
       
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
@@ -631,9 +640,9 @@ function ComplianceSection() {
         >
           {standards.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-100 hover:border-emerald-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+              <div className="group h-full p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 hover:border-emerald-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4 group-hover:bg-teal-600 transition-colors duration-300">
+                  <item.icon className="w-6 h-6 text-teal-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 
                 <div className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">
@@ -858,7 +867,7 @@ function SustainabilityCTA() {
 
 export default function SustainabilityPage() {
   return (
-    <>
+    <div className="bg-slate-50">
       {/* 1. Hero Section */}
       <SustainabilityHero />
 
@@ -882,6 +891,6 @@ export default function SustainabilityPage() {
 
       {/* 8. Final CTA */}
       <SustainabilityCTA />
-    </>
+    </div>
   );
 }
