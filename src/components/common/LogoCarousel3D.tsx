@@ -296,7 +296,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
   };
 
   return (
-    <section className="relative py-8 md:py-12 pb-16 md:pb-20 2xl:pb-10 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative py-8 md:py-12 pb-16 md:pb-20 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background texture */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wMyIvPjwvc3ZnPg==')] opacity-50" />
 
@@ -318,7 +318,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         )}
 
         {/* 3D Carousel Container */}
-        <div className="relative 2xl:mt-10">
+        <div className="relative">
           {/* Animated scroll hint - fades away after interaction */}
           <div 
             className={`absolute inset-0 z-30 pointer-events-none flex items-center justify-center transition-opacity duration-1000 ${
@@ -419,7 +419,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
           </div>
 
           {/* Dot indicators */}
-          <div className="relative z-50 flex justify-center gap-2 mt-16 sm:mt-18 md:mt-20">
+          <div className="relative z-50 flex justify-center gap-2 mt-16 sm:mt-18 md:mt-20 lg:mt-24 2xl:mt-28">
             {logos.map((_, index) => (
               <button
                 key={index}
