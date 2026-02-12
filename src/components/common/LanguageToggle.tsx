@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useLanguage, Language } from '@/context/LanguageContext';
 
 // ─────────────────────────────────────────────────────────────
@@ -18,7 +19,7 @@ interface LanguageToggleProps {
 /**
  * Language toggle component for switching between English and Arabic.
  * 
- * - `header` variant: Compact pills for the top utility bar
+ * - `header` variant: Pill-shaped toggle switch for the navbar
  * - `mobile` variant: Larger touch-friendly buttons for mobile menu
  */
 export default function LanguageToggle({ 
@@ -28,23 +29,30 @@ export default function LanguageToggle({
   const { language, setLanguage } = useLanguage();
 
   const languages: { code: Language; label: string }[] = [
-    { code: 'en', label: 'EN' },
-    { code: 'ar', label: 'AR' },
+    { code: 'en', label: 'English' },
+    { code: 'ar', label: 'العربية' },
   ];
 
   if (variant === 'mobile') {
     return (
       <div className={`flex items-center gap-2 ${className}`}>
         <span className="text-sm text-gray-500">Language:</span>
-        <div className="flex rounded-lg overflow-hidden border border-gray-200">
+        <div className="relative flex rounded-full overflow-hidden bg-slate-100 p-1">
+          {/* Sliding pill indicator */}
+          <motion.div
+            className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-primary rounded-full shadow-sm"
+            initial={false}
+            animate={{ x: language === 'en' ? 0 : 'calc(100% + 8px)' }}
+            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+          />
           {languages.map(({ code, label }) => (
             <button
               key={code}
               onClick={() => setLanguage(code)}
-              className={`px-4 py-2 text-sm font-medium transition-colors ${
+              className={`relative z-10 px-5 py-2 text-sm font-semibold transition-colors duration-200 ${
                 language === code
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  ? 'text-white'
+                  : 'text-slate-600 hover:text-slate-900'
               }`}
               aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
               aria-pressed={language === code}
@@ -57,17 +65,24 @@ export default function LanguageToggle({
     );
   }
 
-  // Header variant (compact)
+  // Header variant - Pill-shaped toggle switch
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
+    <div className={`relative flex items-center rounded-full bg-white/15 p-1 ${className}`}>
+      {/* Sliding white pill indicator */}
+      <motion.div
+        className="absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-full shadow-sm"
+        initial={false}
+        animate={{ x: language === 'en' ? 0 : 'calc(100% + 8px)' }}
+        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+      />
       {languages.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => setLanguage(code)}
-          className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
+          className={`relative z-10 px-4 py-1.5 text-sm font-semibold transition-colors duration-200 ${
             language === code
-              ? 'bg-white/20 text-white'
-              : 'text-white/70 hover:text-white hover:bg-white/10'
+              ? 'text-primary'
+              : 'text-blue-100 hover:text-white'
           }`}
           aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
           aria-pressed={language === code}
