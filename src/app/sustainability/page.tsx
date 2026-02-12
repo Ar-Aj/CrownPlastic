@@ -8,6 +8,7 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import {
   Leaf,
@@ -124,39 +125,22 @@ function SustainabilityHero() {
             </div>
           </motion.div>
 
-          {/* Right Column - Hero Image Placeholder */}
+          {/* Right Column - Hero Image */}
           <motion.div 
             className="relative"
             initial={prefersReducedMotion ? {} : { opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* 
-              TODO: Generate with Nano Banana Pro
-              PROMPT: Modern UPVC pipe manufacturing facility with green elements, 
-              sustainable manufacturing visualization, pipes with recycling symbols,
-              clean industrial setting with plants/greenery accents, 
-              professional B2B aesthetic, emerald/teal color accents
-            */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10">
-              {/* Placeholder gradient with icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Leaf className="w-20 h-20 text-emerald-400 mx-auto mb-4" />
-                  <p className="text-emerald-400/60 text-sm font-medium">Sustainability Hero Image</p>
-                </div>
-              </div>
-              
-              {/* When image is ready, use:
-              <Image
-                src="/images/sustainability/hero.jpg"
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <NextImage
+                src="/images/sustainability/sustainability-hero-green-manufacturing.jpg"
                 alt="Sustainable UPVC piping manufacturing - Crown Plastic Pipes"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              */}
               
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#001424]/50 via-transparent to-white/5" />
@@ -416,28 +400,14 @@ function GreenManufacturingSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            {/* 
-              TODO: Generate with Nano Banana Pro
-              PROMPT: Modern UPVC pipe extrusion line in clean factory setting,
-              quality control technician inspecting pipes, industrial precision machinery,
-              professional manufacturing environment, subtle green/sustainable accents
-            */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-slate-100 to-slate-200">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Factory className="w-16 h-16 text-slate-400 mx-auto mb-3" />
-                  <p className="text-slate-500 text-sm">Manufacturing Process Image</p>
-                </div>
-              </div>
-              {/* When image is ready:
-              <Image
-                src="/images/sustainability/manufacturing.jpg"
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <NextImage
+                src="/images/sustainability/sustainability-manufacturing-quality-control.jpg"
                 alt="UPVC pipe manufacturing quality control at Crown Plastic Pipes"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent" />
             </div>
           </motion.div>
@@ -551,29 +521,14 @@ function GreenManufacturingSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:order-2"
           >
-            {/* 
-              TODO: Generate with Nano Banana Pro
-              PROMPT: Modern GCC building/infrastructure project, 
-              construction site with visible piping systems installation,
-              professional architectural visualization, 
-              blue sky, modern Dubai/UAE urban development context
-            */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-blue-100 to-slate-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Building2 className="w-16 h-16 text-slate-400 mx-auto mb-3" />
-                  <p className="text-slate-500 text-sm">Infrastructure Project Image</p>
-                </div>
-              </div>
-              {/* When image is ready:
-              <Image
-                src="/images/sustainability/infrastructure.jpg"
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <NextImage
+                src="/images/sustainability/sustainability-infrastructure-gcc-project.jpg"
                 alt="Long-term infrastructure project with Crown Plastic Pipes"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent" />
             </div>
           </motion.div>

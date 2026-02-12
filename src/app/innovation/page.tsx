@@ -9,6 +9,7 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import {
   Zap,
@@ -177,39 +178,22 @@ function InnovationHero() {
             </div>
           </motion.div>
 
-          {/* Right Column - Hero Image Placeholder */}
+          {/* Right Column - Hero Image */}
           <motion.div
             className="relative"
             initial={prefersReducedMotion ? {} : { opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/*
-              TODO: Generate with Nano Banana Pro
-              PROMPT: High-tech UPVC piping factory with precision extrusion lines,
-              modern industrial metrology/testing lab, dark-tech aesthetic,
-              blue and cyan lighting accents, clean industrial environment,
-              3:4 aspect ratio, professional B2B manufacturing visualization
-            */}
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 to-blue-900 border border-white/10">
-              {/* Placeholder gradient with icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Cpu className="w-24 h-24 text-cyan-500/50 mx-auto mb-4" />
-                  <p className="text-cyan-400/60 text-sm font-medium">Innovation Hero Image</p>
-                </div>
-              </div>
-
-              {/* When image is ready:
-              <Image
-                src="/images/innovation/hero.jpg"
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+              <NextImage
+                src="/images/innovation/innovation-hero-hightech-lab.jpg"
                 alt="High-tech UPVC pipe manufacturing facility - Crown Plastic Pipes"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              */}
 
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/20" />
