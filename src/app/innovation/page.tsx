@@ -805,20 +805,20 @@ function InnovationSupportSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:bg-primary hover:from-primary hover:to-primary hover:border-transparent transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <partner.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                  <partner.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{partner.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300">{partner.title}</h3>
               </div>
 
               <ul className="space-y-3">
                 {partner.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{point}</span>
+                    <CheckCircle2 className="w-5 h-5 text-cyan-500 group-hover:text-accent flex-shrink-0 mt-0.5 transition-colors duration-300" />
+                    <span className="text-gray-700 text-sm group-hover:text-white transition-colors duration-300">{point}</span>
                   </li>
                 ))}
               </ul>
