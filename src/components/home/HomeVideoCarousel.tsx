@@ -181,7 +181,7 @@ export function HomeVideoCarousel() {
 
   return (
     <section 
-      className="relative w-full bg-slate-900 overflow-hidden pt-[140px] lg:pt-[200px] 2xl:pt-[220px] pb-10 lg:pb-12"
+      className="relative w-full bg-slate-900 overflow-hidden pt-[140px] lg:pt-[210px] 2xl:pt-[230px] pb-10 lg:pb-[53px] 2xl:pb-[58px]"
       aria-label="Featured video carousel"
     >
       {/* Background gradient */}
