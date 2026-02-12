@@ -56,15 +56,15 @@ function SustainabilityHero() {
   ];
 
   return (
-    <header className="relative min-h-[75vh] md:min-h-[85vh] flex items-center bg-white overflow-hidden pt-24 lg:pt-40 2xl:pt-48">
-      {/* Subtle emerald orb background */}
+    <header className="relative min-h-[75vh] md:min-h-[85vh] flex items-center bg-[#001424] overflow-hidden pt-24 lg:pt-40 2xl:pt-48">
+      {/* Industrial Tech - Central glow orb */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-l from-emerald-100/40 to-teal-50/20 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-50/30 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/20 blur-[120px]" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-emerald-500/10 blur-[100px]" />
       </div>
       
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-40" />
+      {/* Tech grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -77,37 +77,37 @@ function SustainabilityHero() {
             transition={{ duration: 0.6 }}
           >
             {/* Label */}
-            <span className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full uppercase tracking-wider">
+            <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-emerald-400 text-sm font-semibold rounded-full uppercase tracking-wider border border-white/10">
               Sustainability
             </span>
 
             {/* Main Headline - SEO optimized */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
               Sustainable Piping Systems,{' '}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
+              <span className="text-emerald-400">
                 Built for Decades
               </span>
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
               Long-life UPVC piping systems that reduce replacement waste, optimise material usage, 
               and meet GCC building standards. Designed for projects that think in decades, not years.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <QuoteButton variant="primary" size="lg" className="!bg-gradient-to-r !from-emerald-600 !to-emerald-700 hover:!from-emerald-700 hover:!to-emerald-800">
+              <QuoteButton variant="primary" size="lg" className="!bg-[#0072BC] hover:!bg-[#005a96] shadow-lg shadow-emerald-500/20">
                 Talk to Our Team
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
-              <MagneticButton href="/resources" variant="outline" size="lg">
+              <MagneticButton href="/resources" variant="outline" size="lg" className="!border-white/30 !text-white hover:!bg-white/10">
                 <FileText className="w-5 h-5" />
                 Download Sustainability Brief
               </MagneticButton>
             </div>
 
-            {/* Hero Highlights - Small pill cards */}
+            {/* Hero Highlights - Glass pills */}
             <div className="flex flex-wrap gap-3 pt-4">
               {heroHighlights.map((item, index) => (
                 <motion.div
@@ -115,10 +115,10 @@ function SustainabilityHero() {
                   initial={prefersReducedMotion ? {} : { opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-2 px-3 py-2 bg-white border border-emerald-200 rounded-full shadow-sm"
+                  className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full"
                 >
-                  <item.icon className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span className="text-xs md:text-sm text-gray-700">{item.text}</span>
+                  <item.icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span className="text-xs md:text-sm text-slate-200">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -138,12 +138,12 @@ function SustainabilityHero() {
               clean industrial setting with plants/greenery accents, 
               professional B2B aesthetic, emerald/teal color accents
             */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-emerald-100 to-teal-50">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10">
               {/* Placeholder gradient with icon */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <Leaf className="w-20 h-20 text-emerald-300 mx-auto mb-4" />
-                  <p className="text-emerald-400 text-sm font-medium">Sustainability Hero Image</p>
+                  <Leaf className="w-20 h-20 text-emerald-400 mx-auto mb-4" />
+                  <p className="text-emerald-400/60 text-sm font-medium">Sustainability Hero Image</p>
                 </div>
               </div>
               
@@ -159,23 +159,23 @@ function SustainabilityHero() {
               */}
               
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-white/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#001424]/50 via-transparent to-white/5" />
             </div>
 
-            {/* Floating stat card */}
+            {/* Floating stat card - Glass */}
             <motion.div 
-              className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-xl max-w-[200px] hidden md:block border border-emerald-100"
+              className="absolute -bottom-4 -left-4 bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-xl max-w-[200px] hidden md:block border border-white/20"
               initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                <div className="w-12 h-12 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
                   <Recycle className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900 text-lg">50+ Years</p>
-                  <p className="text-xs text-gray-500">Service Life Design</p>
+                  <p className="font-extrabold text-white text-lg">50+ Years</p>
+                  <p className="text-xs text-slate-300">Service Life Design</p>
                 </div>
               </div>
             </motion.div>
@@ -229,12 +229,9 @@ function EnvironmentalCommitmentsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
-      {/* Organic Mesh - Left Green Orb */}
-      <div className="absolute -left-20 top-0 w-[500px] h-[500px] bg-emerald-200/30 blur-[100px] rounded-full pointer-events-none" />
-      
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-20" />
+    <section ref={ref} className="py-16 md:py-24 bg-white relative overflow-hidden">
+      {/* Subtle tech grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30" />
       
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
@@ -253,12 +250,12 @@ function EnvironmentalCommitmentsSection() {
         >
           {commitments.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-colors duration-300">
+              <div className="group h-full p-6 bg-white rounded-2xl border-b-4 border-emerald-500 shadow-2xl hover:bg-emerald-50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:scale-110 transition-all duration-300">
                   <item.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-extrabold text-slate-900 mb-2 tracking-tight">{item.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -336,9 +333,12 @@ function SustainabilityPillarsSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
-      {/* Organic Mesh - Right Blue Orb */}
-      <div className="absolute -right-20 top-0 w-[600px] h-[600px] bg-blue-200/30 blur-[100px] rounded-full pointer-events-none" />
+    <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-[#002B4A] to-[#001424] relative overflow-hidden">
+      {/* Glowing orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
+      
+      {/* Tech grid */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
       
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
@@ -346,6 +346,7 @@ function SustainabilityPillarsSection() {
           title="Building Sustainable"
           titleHighlight="Infrastructure"
           subtitle="Four core principles guide our approach to sustainable piping solutions for the Gulf region."
+          dark
         />
 
         {/* Pillars Grid with TiltCard */}
@@ -358,27 +359,27 @@ function SustainabilityPillarsSection() {
           {pillars.map((pillar, index) => (
             <motion.div key={index} variants={radialItem}>
               <TiltCard intensity={5}>
-                <div className="group relative h-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-                  {/* Background gradient on hover */}
-                  <div className="absolute inset-0 bg-white/80 backdrop-blur-md group-hover:bg-gradient-to-br group-hover:from-emerald-50/80 group-hover:to-teal-50/80 transition-all duration-500" />
+                <div className="group relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500">
+                  {/* Glass background */}
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
                   
                   {/* Border */}
-                  <div className="absolute inset-0 rounded-2xl border border-white/50 group-hover:border-emerald-200 transition-colors duration-500" />
+                  <div className="absolute inset-0 rounded-2xl border border-white/20 group-hover:border-emerald-400/50 transition-colors duration-500" />
                   
                   <div className="relative p-6 md:p-8">
                     {/* Icon */}
-                    <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center mb-5 group-hover:bg-emerald-500 transition-colors duration-500">
-                      <pillar.icon className="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors duration-500" />
+                    <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-5 border border-emerald-400/30">
+                      <pillar.icon className="w-7 h-7 text-emerald-400" />
                     </div>
                     
                     {/* Highlight badge */}
-                    <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full mb-3">
+                    <span className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-3 border border-emerald-400/30">
                       {pillar.highlight}
                     </span>
                     
                     {/* Content */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{pillar.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{pillar.description}</p>
+                    <h3 className="text-xl font-extrabold text-white mb-3 tracking-tight">{pillar.title}</h3>
+                    <p className="text-slate-300 leading-relaxed">{pillar.description}</p>
                   </div>
                 </div>
               </TiltCard>
@@ -399,8 +400,11 @@ function GreenManufacturingSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-blue-50/30 border-y border-emerald-100/50 overflow-hidden">
-      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+      {/* Tech grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30" />
+      
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         
         {/* Block A: Thoughtful Manufacturing - Image Left */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 md:mb-28">
@@ -616,12 +620,9 @@ function ComplianceSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-transparent relative overflow-hidden">
-      {/* Organic Mesh - Bottom Teal Orb */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[700px] h-[500px] bg-teal-200/30 blur-[100px] rounded-full pointer-events-none" />
-      
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
+    <section ref={ref} className="py-16 md:py-24 bg-slate-900 relative overflow-hidden">
+      {/* Tech grid */}
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
@@ -629,6 +630,7 @@ function ComplianceSection() {
           title="Compliance That Supports"
           titleHighlight="Sustainability"
           subtitle="Our certifications and standards compliance ensure reliable, efficient systems that minimize waste and maximize performance."
+          dark
         />
 
         {/* Standards Grid */}
@@ -640,17 +642,17 @@ function ComplianceSection() {
         >
           {standards.map((item, index) => (
             <motion.div key={index} variants={radialItem}>
-              <div className="group h-full p-6 bg-white/80 backdrop-blur-md rounded-2xl border border-white/50 hover:border-emerald-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4 group-hover:bg-teal-600 transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-teal-600 group-hover:text-white transition-colors duration-300" />
+              <div className="group h-full p-6 bg-slate-800 rounded-2xl border border-emerald-500/20 hover:border-emerald-400/50 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4 border border-emerald-400/30">
+                  <item.icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 
-                <div className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">
+                <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
                   {item.code}
                 </div>
                 
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-extrabold text-white mb-2 tracking-tight">{item.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
