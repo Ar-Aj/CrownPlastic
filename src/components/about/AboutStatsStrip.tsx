@@ -12,7 +12,7 @@ import {
   Droplet,
   MapPin
 } from 'lucide-react';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // ABOUT STATS STRIP COMPONENT
@@ -54,8 +54,8 @@ export default function AboutStatsStrip({
   const aboutStatsData: AboutStatItem[] = useMemo(() =>
     STAT_KEYS.map((key, i) => ({
       icon: STAT_ICONS[i],
-      value: t(`about.stats.${key}.value` as any),
-      label: t(`about.stats.${key}.label` as any),
+      value: t(`about.stats.${key}.value` as TranslationPath),
+      label: t(`about.stats.${key}.label` as TranslationPath),
     })),
     [t]);
 

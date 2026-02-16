@@ -7,7 +7,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef } from 'react';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
@@ -52,9 +52,9 @@ function SustainabilityHero() {
   const t = useT();
 
   const heroHighlights = [
-    { icon: Timer, text: t('sustainability.hero.highlights.iso' as any) },
-    { icon: Shield, text: t('sustainability.hero.highlights.virgin' as any) },
-    { icon: Award, text: t('sustainability.hero.highlights.gcc' as any) },
+    { icon: Timer, text: t('sustainability.hero.highlights.iso' as TranslationPath) },
+    { icon: Shield, text: t('sustainability.hero.highlights.virgin' as TranslationPath) },
+    { icon: Award, text: t('sustainability.hero.highlights.gcc' as TranslationPath) },
   ];
 
   return (
@@ -80,28 +80,28 @@ function SustainabilityHero() {
           >
             {/* Label */}
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-emerald-400 text-sm font-semibold rounded-full uppercase tracking-wider border border-white/10">
-              {t('sustainability.hero.label' as any)}
+              {t('sustainability.hero.label' as TranslationPath)}
             </span>
 
             {/* Main Headline - SEO optimized */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-              {t('sustainability.hero.title' as any)}
+              {t('sustainability.hero.title' as TranslationPath)}
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
-              {t('sustainability.hero.subtitle' as any)}
+              {t('sustainability.hero.subtitle' as TranslationPath)}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-2">
               <QuoteButton variant="primary" size="lg" className="!bg-[#0072BC] hover:!bg-[#005a96] shadow-lg shadow-emerald-500/20">
-                {t('sustainability.hero.cta_primary' as any)}
+                {t('sustainability.hero.cta_primary' as TranslationPath)}
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
               <MagneticButton href="/resources" variant="outline" size="lg" className="!bg-sky-100 !border-sky-200 !text-slate-900 hover:!bg-[#0072BC] hover:!text-white hover:!border-[#0072BC] transition-colors duration-300">
                 <FileText className="w-5 h-5" />
-                {t('sustainability.hero.cta_secondary' as any)}
+                {t('sustainability.hero.cta_secondary' as TranslationPath)}
               </MagneticButton>
             </div>
 
@@ -155,8 +155,8 @@ function SustainabilityHero() {
                   <Recycle className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-extrabold text-white text-lg">{t('sustainability.hero.floating_stat_value' as any)}</p>
-                  <p className="text-xs text-slate-300">{t('sustainability.hero.floating_stat_label' as any)}</p>
+                  <p className="font-extrabold text-white text-lg">{t('sustainability.hero.floating_stat_value' as TranslationPath)}</p>
+                  <p className="text-xs text-slate-300">{t('sustainability.hero.floating_stat_label' as TranslationPath)}</p>
                 </div>
               </div>
             </motion.div>
@@ -180,33 +180,33 @@ function EnvironmentalCommitmentsSection() {
   const commitments = [
     {
       icon: Timer,
-      title: t('sustainability.commitments.items.service_life.title' as any),
-      description: t('sustainability.commitments.items.service_life.description' as any),
+      title: t('sustainability.commitments.items.service_life.title' as TranslationPath),
+      description: t('sustainability.commitments.items.service_life.description' as TranslationPath),
     },
     {
       icon: Droplets,
-      title: t('sustainability.commitments.items.water_tight.title' as any),
-      description: t('sustainability.commitments.items.water_tight.description' as any),
+      title: t('sustainability.commitments.items.water_tight.title' as TranslationPath),
+      description: t('sustainability.commitments.items.water_tight.description' as TranslationPath),
     },
     {
       icon: Factory,
-      title: t('sustainability.commitments.items.manufacturing.title' as any),
-      description: t('sustainability.commitments.items.manufacturing.description' as any),
+      title: t('sustainability.commitments.items.manufacturing.title' as TranslationPath),
+      description: t('sustainability.commitments.items.manufacturing.description' as TranslationPath),
     },
     {
       icon: Award,
-      title: t('sustainability.commitments.items.standards.title' as any),
-      description: t('sustainability.commitments.items.standards.description' as any),
+      title: t('sustainability.commitments.items.standards.title' as TranslationPath),
+      description: t('sustainability.commitments.items.standards.description' as TranslationPath),
     },
     {
       icon: Thermometer,
-      title: t('sustainability.commitments.items.gulf.title' as any),
-      description: t('sustainability.commitments.items.gulf.description' as any),
+      title: t('sustainability.commitments.items.gulf.title' as TranslationPath),
+      description: t('sustainability.commitments.items.gulf.description' as TranslationPath),
     },
     {
       icon: Recycle,
-      title: t('sustainability.commitments.items.recycling.title' as any),
-      description: t('sustainability.commitments.items.recycling.description' as any),
+      title: t('sustainability.commitments.items.recycling.title' as TranslationPath),
+      description: t('sustainability.commitments.items.recycling.description' as TranslationPath),
     },
   ];
 
@@ -217,10 +217,10 @@ function EnvironmentalCommitmentsSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('sustainability.commitments.label' as any)}
-          title={t('sustainability.commitments.title' as any)}
-          titleHighlight={t('sustainability.commitments.title_highlight' as any)}
-          subtitle={t('sustainability.commitments.subtitle' as any)}
+          label={t('sustainability.commitments.label' as TranslationPath)}
+          title={t('sustainability.commitments.title' as TranslationPath)}
+          titleHighlight={t('sustainability.commitments.title_highlight' as TranslationPath)}
+          subtitle={t('sustainability.commitments.subtitle' as TranslationPath)}
         />
 
         {/* Commitments Grid */}
@@ -256,14 +256,14 @@ function SustainabilityStatsStrip() {
   const t = useT();
 
   const statsData = [
-    { icon: Timer, value: t('sustainability.stats.service_life.value' as any), label: t('sustainability.stats.service_life.label' as any) },
-    { icon: Shield, value: t('sustainability.stats.virgin.value' as any), label: t('sustainability.stats.virgin.label' as any) },
-    { icon: Award, value: t('sustainability.stats.iso.value' as any), label: t('sustainability.stats.iso.label' as any) },
-    { icon: Recycle, value: t('sustainability.stats.recyclable.value' as any), label: t('sustainability.stats.recyclable.label' as any) },
-    { icon: Thermometer, value: t('sustainability.stats.gulf.value' as any), label: t('sustainability.stats.gulf.label' as any) },
-    { icon: Droplets, value: t('sustainability.stats.zero_leak.value' as any), label: t('sustainability.stats.zero_leak.label' as any) },
-    { icon: Factory, value: t('sustainability.stats.optimized.value' as any), label: t('sustainability.stats.optimized.label' as any) },
-    { icon: Scale, value: t('sustainability.stats.compliant.value' as any), label: t('sustainability.stats.compliant.label' as any) },
+    { icon: Timer, value: t('sustainability.stats.service_life.value' as TranslationPath), label: t('sustainability.stats.service_life.label' as TranslationPath) },
+    { icon: Shield, value: t('sustainability.stats.virgin.value' as TranslationPath), label: t('sustainability.stats.virgin.label' as TranslationPath) },
+    { icon: Award, value: t('sustainability.stats.iso.value' as TranslationPath), label: t('sustainability.stats.iso.label' as TranslationPath) },
+    { icon: Recycle, value: t('sustainability.stats.recyclable.value' as TranslationPath), label: t('sustainability.stats.recyclable.label' as TranslationPath) },
+    { icon: Thermometer, value: t('sustainability.stats.gulf.value' as TranslationPath), label: t('sustainability.stats.gulf.label' as TranslationPath) },
+    { icon: Droplets, value: t('sustainability.stats.zero_leak.value' as TranslationPath), label: t('sustainability.stats.zero_leak.label' as TranslationPath) },
+    { icon: Factory, value: t('sustainability.stats.optimized.value' as TranslationPath), label: t('sustainability.stats.optimized.label' as TranslationPath) },
+    { icon: Scale, value: t('sustainability.stats.compliant.value' as TranslationPath), label: t('sustainability.stats.compliant.label' as TranslationPath) },
   ];
 
   return (
@@ -293,27 +293,27 @@ function SustainabilityPillarsSection() {
   const pillars = [
     {
       icon: Timer,
-      title: t('sustainability.pillars.items.durability.title' as any),
-      description: t('sustainability.pillars.items.durability.description' as any),
-      highlight: t('sustainability.pillars.items.durability.highlight' as any),
+      title: t('sustainability.pillars.items.durability.title' as TranslationPath),
+      description: t('sustainability.pillars.items.durability.description' as TranslationPath),
+      highlight: t('sustainability.pillars.items.durability.highlight' as TranslationPath),
     },
     {
       icon: Factory,
-      title: t('sustainability.pillars.items.manufacturing.title' as any),
-      description: t('sustainability.pillars.items.manufacturing.description' as any),
-      highlight: t('sustainability.pillars.items.manufacturing.highlight' as any),
+      title: t('sustainability.pillars.items.manufacturing.title' as TranslationPath),
+      description: t('sustainability.pillars.items.manufacturing.description' as TranslationPath),
+      highlight: t('sustainability.pillars.items.manufacturing.highlight' as TranslationPath),
     },
     {
       icon: Award,
-      title: t('sustainability.pillars.items.compliance.title' as any),
-      description: t('sustainability.pillars.items.compliance.description' as any),
-      highlight: t('sustainability.pillars.items.compliance.highlight' as any),
+      title: t('sustainability.pillars.items.compliance.title' as TranslationPath),
+      description: t('sustainability.pillars.items.compliance.description' as TranslationPath),
+      highlight: t('sustainability.pillars.items.compliance.highlight' as TranslationPath),
     },
     {
       icon: Users,
-      title: t('sustainability.pillars.items.support.title' as any),
-      description: t('sustainability.pillars.items.support.description' as any),
-      highlight: t('sustainability.pillars.items.support.highlight' as any),
+      title: t('sustainability.pillars.items.support.title' as TranslationPath),
+      description: t('sustainability.pillars.items.support.description' as TranslationPath),
+      highlight: t('sustainability.pillars.items.support.highlight' as TranslationPath),
     },
   ];
 
@@ -327,10 +327,10 @@ function SustainabilityPillarsSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('sustainability.pillars.label' as any)}
-          title={t('sustainability.pillars.title' as any)}
-          titleHighlight={t('sustainability.pillars.title_highlight' as any)}
-          subtitle={t('sustainability.pillars.subtitle' as any)}
+          label={t('sustainability.pillars.label' as TranslationPath)}
+          title={t('sustainability.pillars.title' as TranslationPath)}
+          titleHighlight={t('sustainability.pillars.title_highlight' as TranslationPath)}
+          subtitle={t('sustainability.pillars.subtitle' as TranslationPath)}
           dark
         />
 
@@ -422,21 +422,21 @@ function GreenManufacturingSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <span className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-4">
-              {t('sustainability.manufacturing.block_a.label' as any)}
+              {t('sustainability.manufacturing.block_a.label' as TranslationPath)}
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-              {t('sustainability.manufacturing.block_a.title' as any)}
+              {t('sustainability.manufacturing.block_a.title' as TranslationPath)}
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              {t('sustainability.manufacturing.block_a.description' as any)}
+              {t('sustainability.manufacturing.block_a.description' as TranslationPath)}
             </p>
 
             <ul className="space-y-3">
               {[
-                t('sustainability.manufacturing.block_a.bullets.b1' as any),
-                t('sustainability.manufacturing.block_a.bullets.b2' as any),
-                t('sustainability.manufacturing.block_a.bullets.b3' as any),
-                t('sustainability.manufacturing.block_a.bullets.b4' as any),
+                t('sustainability.manufacturing.block_a.bullets.b1' as TranslationPath),
+                t('sustainability.manufacturing.block_a.bullets.b2' as TranslationPath),
+                t('sustainability.manufacturing.block_a.bullets.b3' as TranslationPath),
+                t('sustainability.manufacturing.block_a.bullets.b4' as TranslationPath),
               ].map((item, i) => (
                 <motion.li
                   key={i}
@@ -465,24 +465,24 @@ function GreenManufacturingSection() {
             className="lg:order-1"
           >
             <span className="inline-block px-4 py-1.5 bg-teal-100 text-teal-700 text-sm font-semibold rounded-full mb-4">
-              {t('sustainability.manufacturing.block_b.label' as any)}
+              {t('sustainability.manufacturing.block_b.label' as TranslationPath)}
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-              {t('sustainability.manufacturing.block_b.title_prefix' as any)}{' '}
+              {t('sustainability.manufacturing.block_b.title_prefix' as TranslationPath)}{' '}
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                {t('sustainability.manufacturing.block_b.title_highlight' as any)}
+                {t('sustainability.manufacturing.block_b.title_highlight' as TranslationPath)}
               </span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              {t('sustainability.manufacturing.block_b.description' as any)}
+              {t('sustainability.manufacturing.block_b.description' as TranslationPath)}
             </p>
 
             <ul className="space-y-3 mb-6">
               {[
-                t('sustainability.manufacturing.block_b.bullets.b1' as any),
-                t('sustainability.manufacturing.block_b.bullets.b2' as any),
-                t('sustainability.manufacturing.block_b.bullets.b3' as any),
-                t('sustainability.manufacturing.block_b.bullets.b4' as any),
+                t('sustainability.manufacturing.block_b.bullets.b1' as TranslationPath),
+                t('sustainability.manufacturing.block_b.bullets.b2' as TranslationPath),
+                t('sustainability.manufacturing.block_b.bullets.b3' as TranslationPath),
+                t('sustainability.manufacturing.block_b.bullets.b4' as TranslationPath),
               ].map((item, i) => (
                 <motion.li
                   key={i}
@@ -502,7 +502,7 @@ function GreenManufacturingSection() {
               href="/about-us"
               className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:gap-3 transition-all"
             >
-              {t('sustainability.manufacturing.block_b.link_text' as any)}
+              {t('sustainability.manufacturing.block_b.link_text' as TranslationPath)}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -545,27 +545,27 @@ function ComplianceSection() {
   const standards = [
     {
       icon: Shield,
-      title: t('sustainability.compliance.items.quality.title' as any),
-      code: t('sustainability.compliance.items.quality.code' as any),
-      description: t('sustainability.compliance.items.quality.description' as any),
+      title: t('sustainability.compliance.items.quality.title' as TranslationPath),
+      code: t('sustainability.compliance.items.quality.code' as TranslationPath),
+      description: t('sustainability.compliance.items.quality.description' as TranslationPath),
     },
     {
       icon: Leaf,
-      title: t('sustainability.compliance.items.environmental.title' as any),
-      code: t('sustainability.compliance.items.environmental.code' as any),
-      description: t('sustainability.compliance.items.environmental.description' as any),
+      title: t('sustainability.compliance.items.environmental.title' as TranslationPath),
+      code: t('sustainability.compliance.items.environmental.code' as TranslationPath),
+      description: t('sustainability.compliance.items.environmental.description' as TranslationPath),
     },
     {
       icon: ClipboardCheck,
-      title: t('sustainability.compliance.items.product_standards.title' as any),
-      code: t('sustainability.compliance.items.product_standards.code' as any),
-      description: t('sustainability.compliance.items.product_standards.description' as any),
+      title: t('sustainability.compliance.items.product_standards.title' as TranslationPath),
+      code: t('sustainability.compliance.items.product_standards.code' as TranslationPath),
+      description: t('sustainability.compliance.items.product_standards.description' as TranslationPath),
     },
     {
       icon: FileText,
-      title: t('sustainability.compliance.items.transparency.title' as any),
-      code: t('sustainability.compliance.items.transparency.code' as any),
-      description: t('sustainability.compliance.items.transparency.description' as any),
+      title: t('sustainability.compliance.items.transparency.title' as TranslationPath),
+      code: t('sustainability.compliance.items.transparency.code' as TranslationPath),
+      description: t('sustainability.compliance.items.transparency.description' as TranslationPath),
     },
   ];
 
@@ -576,10 +576,10 @@ function ComplianceSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('sustainability.compliance.label' as any)}
-          title={t('sustainability.compliance.title' as any)}
-          titleHighlight={t('sustainability.compliance.title_highlight' as any)}
-          subtitle={t('sustainability.compliance.subtitle' as any)}
+          label={t('sustainability.compliance.label' as TranslationPath)}
+          title={t('sustainability.compliance.title' as TranslationPath)}
+          titleHighlight={t('sustainability.compliance.title_highlight' as TranslationPath)}
+          subtitle={t('sustainability.compliance.subtitle' as TranslationPath)}
           dark
         />
 
@@ -641,7 +641,7 @@ function WhySustainabilityMattersSection() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-emerald-200"
           >
-            {t('sustainability.thought_leadership.label' as any)}
+            {t('sustainability.thought_leadership.label' as TranslationPath)}
           </motion.span>
 
           <motion.h2
@@ -651,9 +651,9 @@ function WhySustainabilityMattersSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-extrabold text-[#002B4A] mb-6 leading-tight tracking-tight"
           >
-            {t('sustainability.thought_leadership.title' as any)}
+            {t('sustainability.thought_leadership.title' as TranslationPath)}
             <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-              {t('sustainability.thought_leadership.title_highlight' as any)}
+              {t('sustainability.thought_leadership.title_highlight' as TranslationPath)}
             </span>
           </motion.h2>
 
@@ -665,13 +665,13 @@ function WhySustainabilityMattersSection() {
             className="text-lg text-slate-600 leading-relaxed mb-8 space-y-4"
           >
             <p>
-              {t('sustainability.thought_leadership.paragraphs.p1' as any)}
+              {t('sustainability.thought_leadership.paragraphs.p1' as TranslationPath)}
             </p>
             <p>
-              {t('sustainability.thought_leadership.paragraphs.p2' as any)}
+              {t('sustainability.thought_leadership.paragraphs.p2' as TranslationPath)}
             </p>
             <p>
-              {t('sustainability.thought_leadership.paragraphs.p3' as any)}
+              {t('sustainability.thought_leadership.paragraphs.p3' as TranslationPath)}
             </p>
           </motion.div>
 
@@ -684,9 +684,9 @@ function WhySustainabilityMattersSection() {
             className="grid md:grid-cols-3 gap-6 mt-12"
           >
             {[
-              { icon: Timer, title: t('sustainability.thought_leadership.takeaways.longevity.title' as any), desc: t('sustainability.thought_leadership.takeaways.longevity.desc' as any) },
-              { icon: Droplets, title: t('sustainability.thought_leadership.takeaways.failures.title' as any), desc: t('sustainability.thought_leadership.takeaways.failures.desc' as any) },
-              { icon: Award, title: t('sustainability.thought_leadership.takeaways.tested.title' as any), desc: t('sustainability.thought_leadership.takeaways.tested.desc' as any) },
+              { icon: Timer, title: t('sustainability.thought_leadership.takeaways.longevity.title' as TranslationPath), desc: t('sustainability.thought_leadership.takeaways.longevity.desc' as TranslationPath) },
+              { icon: Droplets, title: t('sustainability.thought_leadership.takeaways.failures.title' as TranslationPath), desc: t('sustainability.thought_leadership.takeaways.failures.desc' as TranslationPath) },
+              { icon: Award, title: t('sustainability.thought_leadership.takeaways.tested.title' as TranslationPath), desc: t('sustainability.thought_leadership.takeaways.tested.desc' as TranslationPath) },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#0072BC] flex items-center justify-center shadow-lg shadow-primary/20">
@@ -749,28 +749,28 @@ function SustainabilityCTA() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            {t('sustainability.cta.label' as any)}
+            {t('sustainability.cta.label' as TranslationPath)}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t('sustainability.cta.title' as any)}
+            {t('sustainability.cta.title' as TranslationPath)}
             <span className="bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
-              {t('sustainability.cta.title_highlight' as any)}
+              {t('sustainability.cta.title_highlight' as TranslationPath)}
             </span>
           </h2>
 
           <p className="text-emerald-100/90 text-lg mb-10 max-w-2xl mx-auto">
-            {t('sustainability.cta.subtitle' as any)}
+            {t('sustainability.cta.subtitle' as TranslationPath)}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <QuoteButton variant="outline" size="lg" className="!bg-white !text-emerald-700 hover:!bg-emerald-50">
-              {t('sustainability.cta.cta_primary' as any)}
+              {t('sustainability.cta.cta_primary' as TranslationPath)}
               <ArrowRight className="w-5 h-5" />
             </QuoteButton>
             <MagneticButton href="/resources" variant="secondary" size="lg">
               <FileText className="w-5 h-5" />
-              {t('sustainability.cta.cta_secondary' as any)}
+              {t('sustainability.cta.cta_secondary' as TranslationPath)}
             </MagneticButton>
           </div>
 
@@ -783,9 +783,9 @@ function SustainabilityCTA() {
             transition={{ delay: 0.4 }}
           >
             {[
-              { icon: Users, text: t('sustainability.cta.trust.consultant' as any) },
-              { icon: FileText, text: t('sustainability.cta.trust.documentation' as any) },
-              { icon: Timer, text: t('sustainability.cta.trust.performance' as any) },
+              { icon: Users, text: t('sustainability.cta.trust.consultant' as TranslationPath) },
+              { icon: FileText, text: t('sustainability.cta.trust.documentation' as TranslationPath) },
+              { icon: Timer, text: t('sustainability.cta.trust.performance' as TranslationPath) },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-emerald-100/80 text-sm">
                 <item.icon className="w-4 h-4 text-emerald-300" />

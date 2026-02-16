@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } fr
 import Icon, { type IconName } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
 import { PvcPipeProgress } from './PvcPipeProgress';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -83,8 +83,8 @@ export default function PipingJourney() {
   const journeyStories: JourneyStory[] = useMemo(() =>
     STORY_STRUCTURE.map((s) => ({
       ...s,
-      title: t(`about.journey.stories.${s.id}.title` as any),
-      tagline: t(`about.journey.stories.${s.id}.tagline` as any),
+      title: t(`about.journey.stories.${s.id}.title` as TranslationPath),
+      tagline: t(`about.journey.stories.${s.id}.tagline` as TranslationPath),
     })),
     [t]);
 
@@ -92,7 +92,7 @@ export default function PipingJourney() {
   const translatedEvents = useMemo(() =>
     EVENT_YEARS.map((year) => ({
       year,
-      title: t(`about.journey.events.${year}.title` as any),
+      title: t(`about.journey.events.${year}.title` as TranslationPath),
       highlight: ['1995', '2015', '2025'].includes(year),
     })),
     [t]);

@@ -5,7 +5,7 @@ import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { innovationPillars, type InnovationPillar } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // INNOVATION LAB SECTION - R&D Card Wall
@@ -37,14 +37,14 @@ export default function InnovationLabSection() {
       const pillarPath = `about.innovation.pillars.${key}`;
       return {
         ...p,
-        title: t(`${pillarPath}.title` as any),
-        description: t(`${pillarPath}.description` as any),
+        title: t(`${pillarPath}.title` as TranslationPath),
+        description: t(`${pillarPath}.description` as TranslationPath),
         specs: p.specs?.map((spec, i) => {
           // Specs in dictionary use specific property keys
           const specKeys = getSpecKeys(key, i);
           return {
-            property: t(`${pillarPath}.specs.${specKeys.prop}` as any),
-            value: t(`${pillarPath}.specs.${specKeys.val}` as any),
+            property: t(`${pillarPath}.specs.${specKeys.prop}` as TranslationPath),
+            value: t(`${pillarPath}.specs.${specKeys.val}` as TranslationPath),
           };
         }),
       };

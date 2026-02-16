@@ -195,6 +195,17 @@ export const ar = {
         },
       },
     },
+    // HeroSection component (standalone hero, used outside main homepage)
+    hero_title: 'حلول أنابيب UPVC المتميزة لدول الخليج',
+    hero_subtitle: 'تميّز تصنيعي حاصل على شهادة ISO منذ عام 1995، يخدم البنية التحتية الحيوية في منطقة الخليج.',
+    hero_explore_products: 'استكشف المنتجات',
+    hero_contact_us: 'تواصل معنا',
+    hero_trust_badge: 'مصنع حاصل على شهادة ISO 9001:2015',
+    hero_stat_years: 'سنوات خبرة',
+    hero_stat_products: 'منتج',
+    hero_stat_countries: 'دول',
+    hero_stat_customers: 'عملاء سعداء',
+    hero_view: 'عرض:',
     final_cta: {
       label: 'جاهز للبدء؟',
       title: 'هل أنت جاهز لبدء مشروعك؟',

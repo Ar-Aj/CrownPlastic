@@ -195,6 +195,17 @@ export const en = {
         },
       },
     },
+    // HeroSection component (standalone hero, used outside main homepage)
+    hero_title: 'Premium UPVC Piping Solutions for the GCC',
+    hero_subtitle: 'ISO-certified manufacturing excellence since 1995, serving critical infrastructure across the Gulf region.',
+    hero_explore_products: 'Explore Products',
+    hero_contact_us: 'Contact Us',
+    hero_trust_badge: 'ISO 9001:2015 Certified Manufacturer',
+    hero_stat_years: 'Years Experience',
+    hero_stat_products: 'Products',
+    hero_stat_countries: 'Countries',
+    hero_stat_customers: 'Happy Customers',
+    hero_view: 'View:',
     final_cta: {
       label: 'Ready to Start?',
       title: 'Ready to Start Your Project?',

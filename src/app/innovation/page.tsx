@@ -8,7 +8,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef } from 'react';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
@@ -69,10 +69,10 @@ function InnovationHero() {
   const t = useT();
 
   const heroTags = [
-    { icon: Microscope, text: t('innovation.hero.tags.extrusion' as any) },
-    { icon: TestTube2, text: t('innovation.hero.tags.testing' as any) },
-    { icon: Cog, text: t('innovation.hero.tags.process' as any) },
-    { icon: Target, text: t('innovation.hero.tags.standards' as any) },
+    { icon: Microscope, text: t('innovation.hero.tags.extrusion' as TranslationPath) },
+    { icon: TestTube2, text: t('innovation.hero.tags.testing' as TranslationPath) },
+    { icon: Cog, text: t('innovation.hero.tags.process' as TranslationPath) },
+    { icon: Target, text: t('innovation.hero.tags.standards' as TranslationPath) },
   ];
 
   return (
@@ -133,30 +133,30 @@ function InnovationHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              {t('innovation.hero.label' as any)}
+              {t('innovation.hero.label' as TranslationPath)}
             </motion.span>
 
             {/* Main Headline - SEO optimized */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-              {t('innovation.hero.title_prefix' as any)}
+              {t('innovation.hero.title_prefix' as TranslationPath)}
               <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
-                {t('innovation.hero.title_highlight' as any)}
+                {t('innovation.hero.title_highlight' as TranslationPath)}
               </span>
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
-              {t('innovation.hero.subtitle' as any)}
+              {t('innovation.hero.subtitle' as TranslationPath)}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-2">
               <QuoteButton variant="primary" size="lg">
-                {t('innovation.hero.cta_primary' as any)}
+                {t('innovation.hero.cta_primary' as TranslationPath)}
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
               <MagneticButton href="/products" variant="secondary" size="lg">
-                {t('innovation.hero.cta_secondary' as any)}
+                {t('innovation.hero.cta_secondary' as TranslationPath)}
               </MagneticButton>
             </div>
 
@@ -206,7 +206,7 @@ function InnovationHero() {
               >
                 <div className="flex items-center gap-2">
                   <Gauge className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white text-sm font-semibold">{t('innovation.hero.floating_badge_iso' as any)}</span>
+                  <span className="text-white text-sm font-semibold">{t('innovation.hero.floating_badge_iso' as TranslationPath)}</span>
                 </div>
               </motion.div>
 
@@ -221,8 +221,8 @@ function InnovationHero() {
                     <Zap className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-sm">{t('innovation.hero.floating_badge_value' as any)}</p>
-                    <p className="text-xs text-slate-400">{t('innovation.hero.floating_badge_label' as any)}</p>
+                    <p className="font-bold text-white text-sm">{t('innovation.hero.floating_badge_value' as TranslationPath)}</p>
+                    <p className="text-xs text-slate-400">{t('innovation.hero.floating_badge_label' as TranslationPath)}</p>
                   </div>
                 </div>
               </motion.div>
@@ -247,23 +247,23 @@ function InnovationDefinitionSection() {
   const approaches = [
     {
       icon: Microscope,
-      title: t('innovation.definition.items.material.title' as any),
-      description: t('innovation.definition.items.material.description' as any),
+      title: t('innovation.definition.items.material.title' as TranslationPath),
+      description: t('innovation.definition.items.material.description' as TranslationPath),
     },
     {
       icon: Cog,
-      title: t('innovation.definition.items.tooling.title' as any),
-      description: t('innovation.definition.items.tooling.description' as any),
+      title: t('innovation.definition.items.tooling.title' as TranslationPath),
+      description: t('innovation.definition.items.tooling.description' as TranslationPath),
     },
     {
       icon: TestTube2,
-      title: t('innovation.definition.items.testing.title' as any),
-      description: t('innovation.definition.items.testing.description' as any),
+      title: t('innovation.definition.items.testing.title' as TranslationPath),
+      description: t('innovation.definition.items.testing.description' as TranslationPath),
     },
     {
       icon: Target,
-      title: t('innovation.definition.items.application.title' as any),
-      description: t('innovation.definition.items.application.description' as any),
+      title: t('innovation.definition.items.application.title' as TranslationPath),
+      description: t('innovation.definition.items.application.description' as TranslationPath),
     },
   ];
 
@@ -274,10 +274,10 @@ function InnovationDefinitionSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.definition.label' as any)}
-          title={t('innovation.definition.title' as any)}
-          titleHighlight={t('innovation.definition.title_highlight' as any)}
-          subtitle={t('innovation.definition.subtitle' as any)}
+          label={t('innovation.definition.label' as TranslationPath)}
+          title={t('innovation.definition.title' as TranslationPath)}
+          titleHighlight={t('innovation.definition.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.definition.subtitle' as TranslationPath)}
         />
 
         {/* Approaches Grid */}
@@ -317,26 +317,26 @@ function InnovationPillarsSection() {
   const pillars = [
     {
       icon: Microscope,
-      title: t('innovation.pillars.items.material.title' as any),
-      description: t('innovation.pillars.items.material.description' as any),
+      title: t('innovation.pillars.items.material.title' as TranslationPath),
+      description: t('innovation.pillars.items.material.description' as TranslationPath),
       accent: 'from-cyan-500 to-blue-500',
     },
     {
       icon: Factory,
-      title: t('innovation.pillars.items.production.title' as any),
-      description: t('innovation.pillars.items.production.description' as any),
+      title: t('innovation.pillars.items.production.title' as TranslationPath),
+      description: t('innovation.pillars.items.production.description' as TranslationPath),
       accent: 'from-sky-500 to-cyan-500',
     },
     {
       icon: TestTube2,
-      title: t('innovation.pillars.items.testing.title' as any),
-      description: t('innovation.pillars.items.testing.description' as any),
+      title: t('innovation.pillars.items.testing.title' as TranslationPath),
+      description: t('innovation.pillars.items.testing.description' as TranslationPath),
       accent: 'from-blue-500 to-indigo-500',
     },
     {
       icon: Headphones,
-      title: t('innovation.pillars.items.support.title' as any),
-      description: t('innovation.pillars.items.support.description' as any),
+      title: t('innovation.pillars.items.support.title' as TranslationPath),
+      description: t('innovation.pillars.items.support.description' as TranslationPath),
       accent: 'from-indigo-500 to-purple-500',
     },
   ];
@@ -366,10 +366,10 @@ function InnovationPillarsSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.pillars.label' as any)}
-          title={t('innovation.pillars.title' as any)}
-          titleHighlight={t('innovation.pillars.title_highlight' as any)}
-          subtitle={t('innovation.pillars.subtitle' as any)}
+          label={t('innovation.pillars.label' as TranslationPath)}
+          title={t('innovation.pillars.title' as TranslationPath)}
+          titleHighlight={t('innovation.pillars.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.pillars.subtitle' as TranslationPath)}
           dark
         />
 
@@ -427,28 +427,28 @@ function InnovationTimelineSection() {
   const timelineSteps = [
     {
       icon: Building2,
-      title: t('innovation.timeline.steps.foundation.title' as any),
-      description: t('innovation.timeline.steps.foundation.description' as any),
+      title: t('innovation.timeline.steps.foundation.title' as TranslationPath),
+      description: t('innovation.timeline.steps.foundation.description' as TranslationPath),
     },
     {
       icon: TrendingUp,
-      title: t('innovation.timeline.steps.scaling.title' as any),
-      description: t('innovation.timeline.steps.scaling.description' as any),
+      title: t('innovation.timeline.steps.scaling.title' as TranslationPath),
+      description: t('innovation.timeline.steps.scaling.description' as TranslationPath),
     },
     {
       icon: TestTube2,
-      title: t('innovation.timeline.steps.qa.title' as any),
-      description: t('innovation.timeline.steps.qa.description' as any),
+      title: t('innovation.timeline.steps.qa.title' as TranslationPath),
+      description: t('innovation.timeline.steps.qa.description' as TranslationPath),
     },
     {
       icon: Database,
-      title: t('innovation.timeline.steps.data.title' as any),
-      description: t('innovation.timeline.steps.data.description' as any),
+      title: t('innovation.timeline.steps.data.title' as TranslationPath),
+      description: t('innovation.timeline.steps.data.description' as TranslationPath),
     },
     {
       icon: Lightbulb,
-      title: t('innovation.timeline.steps.future.title' as any),
-      description: t('innovation.timeline.steps.future.description' as any),
+      title: t('innovation.timeline.steps.future.title' as TranslationPath),
+      description: t('innovation.timeline.steps.future.description' as TranslationPath),
     },
   ];
 
@@ -459,10 +459,10 @@ function InnovationTimelineSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.timeline.label' as any)}
-          title={t('innovation.timeline.title' as any)}
-          titleHighlight={t('innovation.timeline.title_highlight' as any)}
-          subtitle={t('innovation.timeline.subtitle' as any)}
+          label={t('innovation.timeline.label' as TranslationPath)}
+          title={t('innovation.timeline.title' as TranslationPath)}
+          titleHighlight={t('innovation.timeline.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.timeline.subtitle' as TranslationPath)}
         />
 
         {/* Desktop: Horizontal Timeline */}
@@ -550,38 +550,38 @@ function InnovationShowcaseSection() {
   const productInnovations = [
     {
       icon: Gauge,
-      title: t('innovation.showcase.items.pressure.title' as any),
-      description: t('innovation.showcase.items.pressure.description' as any),
+      title: t('innovation.showcase.items.pressure.title' as TranslationPath),
+      description: t('innovation.showcase.items.pressure.description' as TranslationPath),
       href: '/products/upvc-pressure-pipe-fittings',
     },
     {
       icon: Droplets,
-      title: t('innovation.showcase.items.drainage.title' as any),
-      description: t('innovation.showcase.items.drainage.description' as any),
+      title: t('innovation.showcase.items.drainage.title' as TranslationPath),
+      description: t('innovation.showcase.items.drainage.description' as TranslationPath),
       href: '/products/upvc-drainage-pipe-fittings',
     },
     {
       icon: Cable,
-      title: t('innovation.showcase.items.conduit.title' as any),
-      description: t('innovation.showcase.items.conduit.description' as any),
+      title: t('innovation.showcase.items.conduit.title' as TranslationPath),
+      description: t('innovation.showcase.items.conduit.description' as TranslationPath),
       href: '/products/upvc-conduit-pipes',
     },
     {
       icon: Thermometer,
-      title: t('innovation.showcase.items.ppr.title' as any),
-      description: t('innovation.showcase.items.ppr.description' as any),
+      title: t('innovation.showcase.items.ppr.title' as TranslationPath),
+      description: t('innovation.showcase.items.ppr.description' as TranslationPath),
       href: '/products/ppr-pipe-systems',
     },
     {
       icon: Layers,
-      title: t('innovation.showcase.items.hdpe.title' as any),
-      description: t('innovation.showcase.items.hdpe.description' as any),
+      title: t('innovation.showcase.items.hdpe.title' as TranslationPath),
+      description: t('innovation.showcase.items.hdpe.description' as TranslationPath),
       href: '/products/hdpe-pipe-systems',
     },
     {
       icon: Wrench,
-      title: t('innovation.showcase.items.fabrications.title' as any),
-      description: t('innovation.showcase.items.fabrications.description' as any),
+      title: t('innovation.showcase.items.fabrications.title' as TranslationPath),
+      description: t('innovation.showcase.items.fabrications.description' as TranslationPath),
       href: '/fabrications',
     },
   ];
@@ -590,10 +590,10 @@ function InnovationShowcaseSection() {
     <section ref={ref} className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.showcase.label' as any)}
-          title={t('innovation.showcase.title' as any)}
-          titleHighlight={t('innovation.showcase.title_highlight' as any)}
-          subtitle={t('innovation.showcase.subtitle' as any)}
+          label={t('innovation.showcase.label' as TranslationPath)}
+          title={t('innovation.showcase.title' as TranslationPath)}
+          titleHighlight={t('innovation.showcase.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.showcase.subtitle' as TranslationPath)}
         />
 
         {/* Products Grid */}
@@ -615,7 +615,7 @@ function InnovationShowcaseSection() {
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 group-hover:text-slate-200 transition-colors duration-300">{item.description}</p>
                   <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-accent group-hover:gap-2 transition-all duration-300">
-                    {t('innovation.showcase.learn_more' as any)} <ChevronRight className="w-4 h-4" />
+                    {t('innovation.showcase.learn_more' as TranslationPath)} <ChevronRight className="w-4 h-4" />
                   </span>
                 </div>
               </Link>
@@ -640,23 +640,23 @@ function InnovationQualitySection() {
   const qualityAreas = [
     {
       icon: TestTube2,
-      title: t('innovation.quality.items.routine.title' as any),
-      description: t('innovation.quality.items.routine.description' as any),
+      title: t('innovation.quality.items.routine.title' as TranslationPath),
+      description: t('innovation.quality.items.routine.description' as TranslationPath),
     },
     {
       icon: Award,
-      title: t('innovation.quality.items.standards.title' as any),
-      description: t('innovation.quality.items.standards.description' as any),
+      title: t('innovation.quality.items.standards.title' as TranslationPath),
+      description: t('innovation.quality.items.standards.description' as TranslationPath),
     },
     {
       icon: ClipboardCheck,
-      title: t('innovation.quality.items.traceability.title' as any),
-      description: t('innovation.quality.items.traceability.description' as any),
+      title: t('innovation.quality.items.traceability.title' as TranslationPath),
+      description: t('innovation.quality.items.traceability.description' as TranslationPath),
     },
     {
       icon: Users,
-      title: t('innovation.quality.items.specifications.title' as any),
-      description: t('innovation.quality.items.specifications.description' as any),
+      title: t('innovation.quality.items.specifications.title' as TranslationPath),
+      description: t('innovation.quality.items.specifications.description' as TranslationPath),
     },
   ];
 
@@ -676,10 +676,10 @@ function InnovationQualitySection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.quality.label' as any)}
-          title={t('innovation.quality.title' as any)}
-          titleHighlight={t('innovation.quality.title_highlight' as any)}
-          subtitle={t('innovation.quality.subtitle' as any)}
+          label={t('innovation.quality.label' as TranslationPath)}
+          title={t('innovation.quality.title' as TranslationPath)}
+          titleHighlight={t('innovation.quality.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.quality.subtitle' as TranslationPath)}
           dark
         />
 
@@ -723,33 +723,33 @@ function InnovationSupportSection() {
 
   const partnerTypes = [
     {
-      title: t('innovation.support.partners.consultants.title' as any),
+      title: t('innovation.support.partners.consultants.title' as TranslationPath),
       icon: FileText,
       points: [
-        t('innovation.support.partners.consultants.points.p1' as any),
-        t('innovation.support.partners.consultants.points.p2' as any),
-        t('innovation.support.partners.consultants.points.p3' as any),
-        t('innovation.support.partners.consultants.points.p4' as any),
+        t('innovation.support.partners.consultants.points.p1' as TranslationPath),
+        t('innovation.support.partners.consultants.points.p2' as TranslationPath),
+        t('innovation.support.partners.consultants.points.p3' as TranslationPath),
+        t('innovation.support.partners.consultants.points.p4' as TranslationPath),
       ],
     },
     {
-      title: t('innovation.support.partners.contractors.title' as any),
+      title: t('innovation.support.partners.contractors.title' as TranslationPath),
       icon: Wrench,
       points: [
-        t('innovation.support.partners.contractors.points.p1' as any),
-        t('innovation.support.partners.contractors.points.p2' as any),
-        t('innovation.support.partners.contractors.points.p3' as any),
-        t('innovation.support.partners.contractors.points.p4' as any),
+        t('innovation.support.partners.contractors.points.p1' as TranslationPath),
+        t('innovation.support.partners.contractors.points.p2' as TranslationPath),
+        t('innovation.support.partners.contractors.points.p3' as TranslationPath),
+        t('innovation.support.partners.contractors.points.p4' as TranslationPath),
       ],
     },
     {
-      title: t('innovation.support.partners.developers.title' as any),
+      title: t('innovation.support.partners.developers.title' as TranslationPath),
       icon: Building2,
       points: [
-        t('innovation.support.partners.developers.points.p1' as any),
-        t('innovation.support.partners.developers.points.p2' as any),
-        t('innovation.support.partners.developers.points.p3' as any),
-        t('innovation.support.partners.developers.points.p4' as any),
+        t('innovation.support.partners.developers.points.p1' as TranslationPath),
+        t('innovation.support.partners.developers.points.p2' as TranslationPath),
+        t('innovation.support.partners.developers.points.p3' as TranslationPath),
+        t('innovation.support.partners.developers.points.p4' as TranslationPath),
       ],
     },
   ];
@@ -761,10 +761,10 @@ function InnovationSupportSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label={t('innovation.support.label' as any)}
-          title={t('innovation.support.title' as any)}
-          titleHighlight={t('innovation.support.title_highlight' as any)}
-          subtitle={t('innovation.support.subtitle' as any)}
+          label={t('innovation.support.label' as TranslationPath)}
+          title={t('innovation.support.title' as TranslationPath)}
+          titleHighlight={t('innovation.support.title_highlight' as TranslationPath)}
+          subtitle={t('innovation.support.subtitle' as TranslationPath)}
         />
 
         {/* Partner Grid */}
@@ -850,29 +850,29 @@ function InnovationCTA() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            {t('innovation.cta.label' as any)}
+            {t('innovation.cta.label' as TranslationPath)}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t('innovation.cta.title_prefix' as any)}
+            {t('innovation.cta.title_prefix' as TranslationPath)}
             <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-              {t('innovation.cta.title_highlight' as any)}
+              {t('innovation.cta.title_highlight' as TranslationPath)}
             </span>
           </h2>
 
           <p className="text-blue-100/90 text-lg mb-10 max-w-2xl mx-auto">
-            {t('innovation.cta.subtitle' as any)}
+            {t('innovation.cta.subtitle' as TranslationPath)}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <QuoteButton variant="outline" size="lg" className="!bg-white !text-primary hover:!bg-cyan-50">
-              {t('innovation.cta.cta_primary' as any)}
+              {t('innovation.cta.cta_primary' as TranslationPath)}
               <ArrowRight className="w-5 h-5" />
             </QuoteButton>
             <MagneticButton href="/resources" variant="secondary" size="lg">
               <BookOpen className="w-5 h-5" />
-              {t('innovation.cta.cta_secondary' as any)}
+              {t('innovation.cta.cta_secondary' as TranslationPath)}
             </MagneticButton>
           </div>
 
@@ -885,9 +885,9 @@ function InnovationCTA() {
             transition={{ delay: 0.4 }}
           >
             {[
-              { icon: Users, text: t('innovation.cta.trust.consultants' as any) },
-              { icon: FileText, text: t('innovation.cta.trust.data' as any) },
-              { icon: Shield, text: t('innovation.cta.trust.performance' as any) },
+              { icon: Users, text: t('innovation.cta.trust.consultants' as TranslationPath) },
+              { icon: FileText, text: t('innovation.cta.trust.data' as TranslationPath) },
+              { icon: Shield, text: t('innovation.cta.trust.performance' as TranslationPath) },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-blue-100/80 text-sm">
                 <item.icon className="w-4 h-4 text-cyan-300" />

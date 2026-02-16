@@ -10,7 +10,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import {
-  ArrowRight, Phone, Shield, Award, Truck, Factory,
+  ArrowRight, Phone, Shield, Award, Factory,
   CheckCircle2, Package,
   Globe, Clock, Earth, Recycle
 } from 'lucide-react';
@@ -24,7 +24,6 @@ import {
 import { CrownAdvantageSection, HomeVideoCarousel } from '@/components/home';
 import {
   TiltCard,
-  AnimatedCounter,
   SectionHeader,
   GradientMesh,
   MagneticButton,

@@ -644,7 +644,7 @@ export default function AboutProductRangeMap() {
                                     key={activeCategory.id}
                                     category={activeCategory}
                                     reducedMotion={reducedMotion}
-                                    t={t as any}
+                                    t={t as (key: string) => string}
                                 />
                             )}
                         </AnimatePresence>
@@ -698,7 +698,7 @@ export default function AboutProductRangeMap() {
                                     key={activeCategory.id}
                                     category={activeCategory}
                                     reducedMotion={reducedMotion}
-                                    t={t as any}
+                                    t={t as (key: string) => string}
                                 />
                             )}
                         </AnimatePresence>

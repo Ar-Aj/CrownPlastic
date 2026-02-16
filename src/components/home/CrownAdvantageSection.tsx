@@ -612,7 +612,7 @@ function SectionHeader({
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN SECTION COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 export default function CrownAdvantageSection() {
   const t = useT();
@@ -644,9 +644,9 @@ export default function CrownAdvantageSection() {
 
     return {
       ...item,
-      title: t(`home.advantage.items.${key}.title` as any),
-      description: t(`home.advantage.items.${key}.description` as any),
-      statLabel: item.statLabel ? t(`home.advantage.items.${key}.stat_label` as any) : item.statLabel,
+      title: t(`home.advantage.items.${key}.title` as TranslationPath),
+      description: t(`home.advantage.items.${key}.description` as TranslationPath),
+      statLabel: item.statLabel ? t(`home.advantage.items.${key}.stat_label` as TranslationPath) : item.statLabel,
     };
   };
 

@@ -5,7 +5,7 @@ import { motion, useInView, useReducedMotion, AnimatePresence } from 'framer-mot
 import { gccMarkets, type GccMarket } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // GCC NETWORK SECTION - Interactive Regional Map
@@ -24,8 +24,8 @@ export default function GccNetworkSection() {
   const translatedMarkets = useMemo(() =>
     gccMarkets.map((m) => ({
       ...m,
-      name: t(`about.network.markets.${m.id}.name` as any),
-      note: t(`about.network.markets.${m.id}.note` as any),
+      name: t(`about.network.markets.${m.id}.name` as TranslationPath),
+      note: t(`about.network.markets.${m.id}.note` as TranslationPath),
     })),
     [t]);
 
@@ -75,7 +75,7 @@ export default function GccNetworkSection() {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Icon name={sector.icon} size={20} className="text-primary" />
                   </div>
-                  <span className="font-medium text-gray-700">{t(`about.network.sectors.${sector.key}` as any)}</span>
+                  <span className="font-medium text-gray-700">{t(`about.network.sectors.${sector.key}` as TranslationPath)}</span>
                 </div>
               ))}
             </div>

@@ -5,7 +5,7 @@ import { motion, useInView, useReducedMotion, AnimatePresence } from 'framer-mot
 import { certifications, standards, type Certification, type Standard } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
-import { useT } from '@/i18n';
+import { useT, TranslationPath } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CERTIFICATIONS & STANDARDS - Interactive Drawer Section
@@ -24,10 +24,10 @@ export default function CertificationsAndStandards() {
   const translatedCerts = useMemo(() =>
     certifications.map((c) => ({
       ...c,
-      name: t(`about.certifications.items.${c.id}.name` as any),
-      scope: t(`about.certifications.items.${c.id}.scope` as any),
-      issuingBody: t(`about.certifications.items.${c.id}.issuing_body` as any),
-      benefit: t(`about.certifications.items.${c.id}.benefit` as any),
+      name: t(`about.certifications.items.${c.id}.name` as TranslationPath),
+      scope: t(`about.certifications.items.${c.id}.scope` as TranslationPath),
+      issuingBody: t(`about.certifications.items.${c.id}.issuing_body` as TranslationPath),
+      benefit: t(`about.certifications.items.${c.id}.benefit` as TranslationPath),
     })),
     [t]);
 
@@ -48,9 +48,9 @@ export default function CertificationsAndStandards() {
       if (!key) return s;
       return {
         ...s,
-        name: t(`about.certifications.standards_table.items.${key}.name` as any),
-        application: t(`about.certifications.standards_table.items.${key}.application` as any),
-        productTypes: t(`about.certifications.standards_table.items.${key}.product_types` as any),
+        name: t(`about.certifications.standards_table.items.${key}.name` as TranslationPath),
+        application: t(`about.certifications.standards_table.items.${key}.application` as TranslationPath),
+        productTypes: t(`about.certifications.standards_table.items.${key}.product_types` as TranslationPath),
       };
     }),
     [t]);
