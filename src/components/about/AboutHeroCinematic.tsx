@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PREMIUM PIPE FRAME SYSTEM - Hardware Module Aesthetic
@@ -141,7 +142,7 @@ const PIPE_MATERIAL = {
     rgba(100,116,139,${RIM_LIGHT_INTENSITY * 0.5}) ${100 - RIM_WIDTH + 3}%,
     rgba(148,163,184,${RIM_LIGHT_INTENSITY * 0.7}) 100%
   )`,
-  
+
   // VERTICAL PIPE - Light from left, we see left surface
   // Highlight band positioned 10-16% (left quadrant, slightly earlier)
   vertical: `linear-gradient(to right,
@@ -164,16 +165,16 @@ const PIPE_MATERIAL = {
     rgba(100,116,139,${RIM_LIGHT_INTENSITY * 0.5}) ${100 - RIM_WIDTH + 3}%,
     rgba(148,163,184,${RIM_LIGHT_INTENSITY * 0.7}) 100%
   )`,
-  
+
   // Inner wall (looking into hollow pipe)
   innerRim: `0 0 0 1.5px rgba(15,23,42,0.75) inset, 0 0 3px 1px rgba(0,0,0,0.25) inset`,
-  
+
   // Contact shadow + ambient occlusion inside frame
   contactShadow: `inset 0 0 ${8 + AO_STRENGTH * 8}px ${4 + AO_STRENGTH * 4}px rgba(15,23,42,${AO_STRENGTH * 0.35})`,
-  
+
   // Outer lift shadow (frame floats above background)
   outerGlow: `0 4px 16px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.15), 0 0 20px rgba(56,189,248,0.08)`,
-  
+
   // Elbow fitting colors (radial gradient stops)
   elbow: {
     innerWall: '#0f172a',
@@ -185,7 +186,7 @@ const PIPE_MATERIAL = {
     outerRim: '#0f172a',
     rimLight: `rgba(148,163,184,${RIM_LIGHT_INTENSITY})`,
   },
-  
+
   // Bevel ring at elbow joints
   bevelRing: 'rgba(51,65,85,0.6)',
 } as const;
@@ -220,7 +221,7 @@ const ORANGE_PIPE_MATERIAL = {
     rgba(194,65,12,${RIM_LIGHT_INTENSITY * 0.4}) ${100 - RIM_WIDTH + 3}%,
     rgba(251,146,60,${RIM_LIGHT_INTENSITY * 0.55}) 100%
   )`,
-  
+
   // VERTICAL PIPE - Light from left, plastic character
   // Highlight band 12-20%
   vertical: `linear-gradient(to right,
@@ -243,16 +244,16 @@ const ORANGE_PIPE_MATERIAL = {
     rgba(194,65,12,${RIM_LIGHT_INTENSITY * 0.4}) ${100 - RIM_WIDTH + 3}%,
     rgba(251,146,60,${RIM_LIGHT_INTENSITY * 0.55}) 100%
   )`,
-  
+
   // Inner wall with warm tone
   innerRim: `0 0 0 1.5px rgba(69,26,3,0.75) inset, 0 0 3px 1px rgba(124,45,18,0.3) inset`,
-  
+
   // Contact shadow with warm tint
   contactShadow: `inset 0 0 ${8 + AO_STRENGTH * 8}px ${4 + AO_STRENGTH * 4}px rgba(69,26,3,${AO_STRENGTH * 0.3})`,
-  
+
   // Outer lift shadow (warmer)
   outerGlow: `0 4px 14px rgba(124,45,18,0.3), 0 2px 5px rgba(154,52,18,0.2), 0 0 16px rgba(251,146,60,0.1)`,
-  
+
   // Elbow fitting colors
   elbow: {
     innerWall: '#451a03',
@@ -264,7 +265,7 @@ const ORANGE_PIPE_MATERIAL = {
     outerRim: '#451a03',
     rimLight: `rgba(251,146,60,${RIM_LIGHT_INTENSITY * 0.8})`,
   },
-  
+
   // Bevel ring at elbow joints
   bevelRing: 'rgba(154,52,18,0.55)',
 } as const;
@@ -295,7 +296,7 @@ const WIRE_PALETTE = [
   { color: '#9ca3af', width: 1.5, offset: 5.2, zIndex: 2 },  // Light grey
   { color: '#4b5563', width: 1.6, offset: 8.0, zIndex: 4 },  // Grey
   { color: '#d1d5db', width: 1.3, offset: 3.5, zIndex: 5 },  // Very light grey (signal)
-  
+
   // Brand accent cables (power, data lines)
   { color: '#0ea5e9', width: 1.7, offset: 6.5, zIndex: 7 },  // Sky blue (brand)
   { color: '#38bdf8', width: 1.4, offset: 1.5, zIndex: 6 },  // Light blue
@@ -325,9 +326,9 @@ interface JunctionBlockProps {
   useOrangeMaterial?: boolean; // Use orange pipe material for text-frame
 }
 
-function JunctionBlock({ 
-  position, 
-  size, 
+function JunctionBlock({
+  position,
+  size,
   thickness,
   wireCount = WIRE_PALETTE.length,
   useOrangeMaterial = false,
@@ -336,7 +337,7 @@ function JunctionBlock({
   const r = size;
   // Junction exactly matches corner radius + half thickness for proper alignment
   const junctionSize = r + t * 0.5;
-  
+
   // Position the junction block at each corner - aligned with pipe endpoints
   const posStyles: Record<string, React.CSSProperties> = {
     topLeft: { top: -t * 0.5, left: -t * 0.5 },
@@ -354,7 +355,7 @@ function JunctionBlock({
     const arcR = r - offset * 0.8;
     // Start position along the pipe thickness
     const inset = t * 0.35 + offset * 0.5;
-    
+
     switch (position) {
       case 'topLeft':
         // Arc from right edge to bottom edge
@@ -374,7 +375,7 @@ function JunctionBlock({
   };
 
   // Sort wires by zIndex for proper layering
-  const sortedWires = useMemo(() => 
+  const sortedWires = useMemo(() =>
     [...WIRE_PALETTE]
       .slice(0, wireCount)
       .sort((a, b) => a.zIndex - b.zIndex),
@@ -383,7 +384,7 @@ function JunctionBlock({
 
   // Unique gradient ID for this corner
   const gradId = `junction-shade-${position}`;
-  
+
   // Elbow gradient center positioned to match top-left light source
   // Highlight appears on the side facing the light
   const elbowGradientCenter = {
@@ -392,15 +393,15 @@ function JunctionBlock({
     bottomLeft: '80% 20%',
     bottomRight: '20% 20%',
   }[position];
-  
+
   // Get material-specific elbow colors
   const elbowColors = useOrangeMaterial ? ORANGE_PIPE_MATERIAL.elbow : PIPE_MATERIAL.elbow;
-  
+
   // Inner rim color (darker for wall thickness illusion)
   const innerRimColor = useOrangeMaterial ? 'rgba(69,26,3,0.7)' : 'rgba(15,23,42,0.6)';
 
   return (
-    <div 
+    <div
       className="absolute"
       style={{
         ...posStyles[position],
@@ -422,7 +423,7 @@ function JunctionBlock({
               Light direction: top-left, so brightest zone faces that corner.
               4 intensity zones: highlight → falloff → midtone → shadow → rim
           ═══════════════════════════════════════════════════════════════ */}
-          <radialGradient 
+          <radialGradient
             id={`elbow-fill-${position}`}
             cx={elbowGradientCenter.split(' ')[0]}
             cy={elbowGradientCenter.split(' ')[1]}
@@ -444,7 +445,7 @@ function JunctionBlock({
             {/* Zone 6: Rim light (backscatter from environment) */}
             <stop offset="100%" stopColor={elbowColors.rimLight} stopOpacity="1" />
           </radialGradient>
-          
+
           {/* Gradient for wire highlights */}
           <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#fff" stopOpacity="0.35" />
@@ -452,7 +453,7 @@ function JunctionBlock({
             <stop offset="100%" stopColor="#000" stopOpacity="0.2" />
           </linearGradient>
         </defs>
-        
+
         {/* Outer shadow layer for depth separation */}
         <path
           d={getElbowArcPath(position, junctionSize, t * 1.15, r)}
@@ -462,7 +463,7 @@ function JunctionBlock({
           strokeLinecap="round"
           style={{ filter: 'blur(1.5px)' }}
         />
-        
+
         {/* Main elbow arc - the 3D pipe corner fitting */}
         <path
           d={getElbowArcPath(position, junctionSize, t, r)}
@@ -471,7 +472,7 @@ function JunctionBlock({
           strokeWidth={t}
           strokeLinecap="round"
         />
-        
+
         {/* ═══════════════════════════════════════════════════════════════
             BEVEL RINGS - Joint between straight segment and elbow
             Small arcs at each end suggesting welded/joined fittings
@@ -518,7 +519,7 @@ function JunctionBlock({
             />
           ));
         })()}
-        
+
         {/* Inner rim - suggests hollow pipe wall thickness */}
         <path
           d={getElbowArcPath(position, junctionSize, t * 0.12, r - t * 0.42)}
@@ -527,7 +528,7 @@ function JunctionBlock({
           strokeWidth={1.5}
           strokeLinecap="round"
         />
-        
+
         {/* Render wire bundle on top of elbow */}
         {sortedWires.map((wire, i) => (
           <g key={i}>
@@ -573,7 +574,7 @@ function getElbowArcPath(
   const s = size;
   const offset = thickness * 0.5;
   const arcR = radius;
-  
+
   switch (position) {
     case 'topLeft':
       return `M ${s} ${offset} A ${arcR} ${arcR} 0 0 0 ${offset} ${s}`;
@@ -615,7 +616,7 @@ function VolumetricElbow({ position, size, thickness }: VolumetricElbowProps) {
 
   // SVG elbow path with 3D gradient
   const gradId = `elbow-grad-${position}`;
-  
+
   return (
     <div
       className="absolute"
@@ -637,7 +638,7 @@ function VolumetricElbow({ position, size, thickness }: VolumetricElbowProps) {
               VOLUMETRIC ELBOW GRADIENT - Metallic character
               Same lighting model as JunctionBlock but for sealed elbows
           ═══════════════════════════════════════════════════════════════ */}
-          <radialGradient 
+          <radialGradient
             id={gradId}
             cx={position.includes('Right') ? '20%' : '80%'}
             cy={position.includes('bottom') ? '20%' : '80%'}
@@ -660,7 +661,7 @@ function VolumetricElbow({ position, size, thickness }: VolumetricElbowProps) {
             <stop offset="100%" stopColor={`rgba(148,163,184,${RIM_LIGHT_INTENSITY})`} stopOpacity="1" />
           </radialGradient>
         </defs>
-        
+
         {/* Outer shadow for depth */}
         <path
           d={getElbowPath(position, elbowSize, t * 1.15, r, 'outer')}
@@ -670,7 +671,7 @@ function VolumetricElbow({ position, size, thickness }: VolumetricElbowProps) {
           strokeLinecap="round"
           style={{ filter: 'blur(1.5px)' }}
         />
-        
+
         {/* Main elbow arc */}
         <path
           d={getElbowPath(position, elbowSize, t, r, 'outer')}
@@ -679,7 +680,7 @@ function VolumetricElbow({ position, size, thickness }: VolumetricElbowProps) {
           strokeWidth={t}
           strokeLinecap="round"
         />
-        
+
         {/* Inner shadow line (wall thickness) */}
         <path
           d={getElbowPath(position, elbowSize, t * 0.3, r - t * 0.35, 'inner')}
@@ -705,7 +706,7 @@ function getElbowPath(
   const t = thickness;
   const r = radius;
   const offset = type === 'inner' ? t * 0.2 : t * 0.5;
-  
+
   switch (position) {
     case 'topLeft':
       return `M ${s} ${offset} A ${r} ${r} 0 0 0 ${offset} ${s}`;
@@ -751,15 +752,15 @@ function PipeFrame({
     'text-frame': { defaultThickness: 13, defaultRadius: 26, shadow: true, vignette: false },
     'top-bottom': { defaultThickness: 12, defaultRadius: 20, shadow: false, vignette: false },
   };
-  
+
   const config = variantConfig[variant];
   const t = thickness ?? config.defaultThickness;
   const r = cornerRadius ?? config.defaultRadius;
-  
+
   // Select material based on variant: orange for text-frame, blue-grey for others
   const isOrange = variant === 'text-frame';
   const material = isOrange ? ORANGE_PIPE_MATERIAL : PIPE_MATERIAL;
-  
+
   // Common styling
   const pipeShadow = config.shadow ? material.outerGlow : 'none';
 
@@ -770,7 +771,7 @@ function PipeFrame({
           Separates frame from background - frame floats in space
       ═══════════════════════════════════════════════════════════════════ */}
       {config.shadow && (
-        <div 
+        <div
           className="absolute pointer-events-none"
           style={{
             inset: -t * 0.6,
@@ -788,7 +789,7 @@ function PipeFrame({
           Makes pipe appear to sit ABOVE content, casting shadow
       ═══════════════════════════════════════════════════════════════════ */}
       {(variant === 'image-frame' || variant === 'text-frame') && AO_STRENGTH > 0 && (
-        <div 
+        <div
           className="absolute pointer-events-none"
           style={{
             inset: t * 0.25,
@@ -807,61 +808,61 @@ function PipeFrame({
       {(variant === 'image-frame' || variant === 'text-frame') && (
         <div className="absolute inset-0 pointer-events-none z-10">
           {/* TOP pipe segment - horizontal gradient */}
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              top: -t * 0.5, 
-              left: r, 
-              right: r, 
-              height: t, 
-              background: material.horizontal, 
+            style={{
+              top: -t * 0.5,
+              left: r,
+              right: r,
+              height: t,
+              background: material.horizontal,
               borderRadius: 2,
               boxShadow: `${material.innerRim}, ${pipeShadow}`,
-            }} 
+            }}
           />
-          
+
           {/* BOTTOM pipe segment - horizontal gradient */}
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              bottom: -t * 0.5, 
-              left: r, 
-              right: r, 
-              height: t, 
-              background: material.horizontal, 
+            style={{
+              bottom: -t * 0.5,
+              left: r,
+              right: r,
+              height: t,
+              background: material.horizontal,
               borderRadius: 2,
               boxShadow: `${material.innerRim}, ${pipeShadow}`,
-            }} 
+            }}
           />
-          
+
           {/* LEFT pipe segment - vertical gradient */}
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              left: -t * 0.5, 
-              top: r, 
-              bottom: r, 
-              width: t, 
-              background: material.vertical, 
+            style={{
+              left: -t * 0.5,
+              top: r,
+              bottom: r,
+              width: t,
+              background: material.vertical,
               borderRadius: 2,
               boxShadow: `${material.innerRim}, ${pipeShadow}`,
-            }} 
+            }}
           />
-          
+
           {/* RIGHT pipe segment - vertical gradient */}
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              right: -t * 0.5, 
-              top: r, 
-              bottom: r, 
-              width: t, 
-              background: material.vertical, 
+            style={{
+              right: -t * 0.5,
+              top: r,
+              bottom: r,
+              width: t,
+              background: material.vertical,
               borderRadius: 2,
               boxShadow: `${material.innerRim}, ${pipeShadow}`,
-            }} 
+            }}
           />
-          
+
           {/* CORNERS: Elbow fittings with radial shading */}
           {showCornerWires ? (
             <>
@@ -887,49 +888,49 @@ function PipeFrame({
       {variant === 'top-bottom' && (
         <div className="absolute inset-0 pointer-events-none z-10">
           {/* Horizontal pipes */}
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              top: -t * 0.5, 
-              left: t * 0.5, 
-              right: t * 0.5, 
-              height: t, 
-              background: PIPE_MATERIAL.horizontal, 
+            style={{
+              top: -t * 0.5,
+              left: t * 0.5,
+              right: t * 0.5,
+              height: t,
+              background: PIPE_MATERIAL.horizontal,
               borderRadius: 2,
               boxShadow: PIPE_MATERIAL.innerRim,
-            }} 
+            }}
           />
-          <div 
+          <div
             className="absolute"
-            style={{ 
-              bottom: -t * 0.5, 
-              left: t * 0.5, 
-              right: t * 0.5, 
-              height: t, 
-              background: PIPE_MATERIAL.horizontal, 
+            style={{
+              bottom: -t * 0.5,
+              left: t * 0.5,
+              right: t * 0.5,
+              height: t,
+              background: PIPE_MATERIAL.horizontal,
               borderRadius: 2,
               boxShadow: PIPE_MATERIAL.innerRim,
-            }} 
+            }}
           />
-          
+
           {/* End caps */}
           {[
-            { top: -t * 0.5, left: -t * 0.5 }, 
-            { top: -t * 0.5, right: -t * 0.5 }, 
-            { bottom: -t * 0.5, left: -t * 0.5 }, 
+            { top: -t * 0.5, left: -t * 0.5 },
+            { top: -t * 0.5, right: -t * 0.5 },
+            { bottom: -t * 0.5, left: -t * 0.5 },
             { bottom: -t * 0.5, right: -t * 0.5 }
           ].map((pos, i) => (
-            <div 
-              key={i} 
-              className="absolute" 
-              style={{ 
-                ...pos, 
-                width: t, 
-                height: t, 
-                borderRadius: '50%', 
-                background: 'radial-gradient(circle at 30% 30%, #94a3b8 0%, #64748b 35%, #334155 70%, #1e293b 100%)', 
-                boxShadow: 'inset 1px 1px 3px rgba(255,255,255,0.2), inset -1px -1px 3px rgba(0,0,0,0.4)' 
-              }} 
+            <div
+              key={i}
+              className="absolute"
+              style={{
+                ...pos,
+                width: t,
+                height: t,
+                borderRadius: '50%',
+                background: 'radial-gradient(circle at 30% 30%, #94a3b8 0%, #64748b 35%, #334155 70%, #1e293b 100%)',
+                boxShadow: 'inset 1px 1px 3px rgba(255,255,255,0.2), inset -1px -1px 3px rgba(0,0,0,0.4)'
+              }}
             />
           ))}
         </div>
@@ -937,7 +938,7 @@ function PipeFrame({
 
       {/* Optional: Inner vignette for image-frame */}
       {config.vignette && variant === 'image-frame' && (
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none z-15 rounded-lg"
           style={{
             background: 'linear-gradient(to top, rgba(15,23,42,0.25) 0%, transparent 30%, transparent 70%, rgba(15,23,42,0.08) 100%)',
@@ -947,8 +948,8 @@ function PipeFrame({
       )}
 
       {/* Content container */}
-      <div 
-        className="relative z-20 h-full" 
+      <div
+        className="relative z-20 h-full"
         style={{ padding: t * 0.5 + 4 }}
       >
         {children}
@@ -997,23 +998,14 @@ function PipeFrame({
 //
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// Vision & Mission content configuration
-const aboutStatements = {
-  vision: {
-    id: 'vision',
-    label: 'Our Vision',
-    title: 'Our Vision',
-    text: 'To be the most trusted and innovative plastic piping solutions provider across the Gulf region, setting industry benchmarks for quality, sustainability, and customer excellence.',
-  },
-  mission: {
-    id: 'mission',
-    label: 'Our Mission',
-    title: 'Our Mission',
-    text: 'Delivering premium European-engineered piping systems tailored for Gulf conditions, backed by three decades of manufacturing expertise and unwavering commitment to ISO-certified quality.',
-  },
-} as const;
+type StatementKey = 'vision' | 'mission';
 
-type StatementKey = keyof typeof aboutStatements;
+interface StatementData {
+  id: string;
+  label: string;
+  title: string;
+  text: string;
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CONFIGURATION CONSTANTS (adjust these to tune the animation)
@@ -1028,7 +1020,7 @@ const SCROLL_HEIGHT_MULTIPLIER = 1.8;
 const SWAP_THRESHOLD = 0.5;
 
 // Hero image path
-const HERO_IMAGE_PATH = '/images/about/CrownOutside.jpg';
+const HERO_IMAGE_PATH = '/images/about/CrownOutside.jpeg';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN COMPONENT
@@ -1037,6 +1029,23 @@ const HERO_IMAGE_PATH = '/images/about/CrownOutside.jpg';
 export default function AboutHeroCinematic() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = useState(true); // Default to mobile for SSR
+  const t = useT();
+
+  // Build translated statements
+  const aboutStatements = useMemo(() => ({
+    vision: {
+      id: 'vision',
+      label: t('about.hero.vision.label'),
+      title: t('about.hero.vision.title'),
+      text: t('about.hero.vision.text'),
+    },
+    mission: {
+      id: 'mission',
+      label: t('about.hero.mission.label'),
+      title: t('about.hero.mission.title'),
+      text: t('about.hero.mission.text'),
+    },
+  }), [t]);
 
   // Detect breakpoint: mobile/tablet (< 1024px) vs desktop (>= 1024px)
   // SSR-safe: guards window access
@@ -1051,10 +1060,10 @@ export default function AboutHeroCinematic() {
 
   // Render mobile or desktop version
   if (isMobile) {
-    return <MobileHero prefersReducedMotion={prefersReducedMotion} />;
+    return <MobileHero prefersReducedMotion={prefersReducedMotion} t={t} aboutStatements={aboutStatements} />;
   }
 
-  return <DesktopHero prefersReducedMotion={prefersReducedMotion} />;
+  return <DesktopHero prefersReducedMotion={prefersReducedMotion} t={t} aboutStatements={aboutStatements} />;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1063,9 +1072,11 @@ export default function AboutHeroCinematic() {
 
 interface DesktopHeroProps {
   prefersReducedMotion: boolean | null;
+  t: ReturnType<typeof useT>;
+  aboutStatements: Record<StatementKey, StatementData>;
 }
 
-function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
+function DesktopHero({ prefersReducedMotion, t, aboutStatements }: DesktopHeroProps) {
   // ─────────────────────────────────────────────────────────────────────────────
   // SCROLL TRACKING
   // scrollContainerRef = OUTER container with extra height (scroll target)
@@ -1112,8 +1123,8 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
   const imageLeft = useTransform(
     scrollYProgress,
     [0, 0.15, 0.85, 1],
-    prefersReducedMotion 
-      ? ['5%', '5%', '5%', '5%'] 
+    prefersReducedMotion
+      ? ['5%', '5%', '5%', '5%']
       : ['5%', '5%', '50%', '50%']
   );
 
@@ -1121,8 +1132,8 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
   const textLeft = useTransform(
     scrollYProgress,
     [0, 0.15, 0.85, 1],
-    prefersReducedMotion 
-      ? ['50%', '50%', '50%', '50%'] 
+    prefersReducedMotion
+      ? ['50%', '50%', '50%', '50%']
       : ['50%', '50%', '0%', '0%']
   );
 
@@ -1173,7 +1184,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
             <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none h-full">
               {/* Positioning container for columns */}
               <div className="relative h-full">
-                
+
                 {/* ─────────────────────────────────────────────────────────────
                     IMAGE COLUMN (Absolutely positioned)
                     Starts on left (~5%), glides to right (~50%) during scroll.
@@ -1189,7 +1200,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                   >
                     {/* Radial glow behind image */}
                     <div className="absolute -inset-8 bg-gradient-radial from-sky-400/30 via-blue-500/10 to-transparent rounded-full blur-2xl" />
-                    
+
                     {/* Image card with 3D PVC Pipe Frame */}
                     {/* Full variant = 4 sides with grey elbows (sealed frame) */}
                     <PipeFrame
@@ -1231,80 +1242,79 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                   >
                     {/* Inner card with frosted glass effect */}
                     <div className="h-full bg-slate-100/50 backdrop-blur-md rounded-3xl p-6 lg:p-8 2xl:p-10 shadow-xl">
-                    {/* Breadcrumb */}
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      className="mb-4"
-                    >
-                      <span className="text-sm text-slate-500">
-                        Home / <span className="text-primary font-medium">About Us</span>
-                      </span>
-                    </motion.div>
-
-                    {/* Main Heading */}
-                    <motion.h1
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      className="text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 mb-3 leading-tight"
-                    >
-                      Crown Plastic Pipes
-                      <span className="block text-primary">Factory L.L.C.</span>
-                    </motion.h1>
-
-                    {/* Tagline */}
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                      className="text-base lg:text-lg text-slate-800 mb-6 font-extrabold tracking-wide uppercase"
-                    >
-                      European technology, Gulf standards.
-                    </motion.p>
-
-                    {/* Vision/Mission Content with Crossfade */}
-                    <div className="relative min-h-[160px] mb-6">
-                      {/* Vision Content */}
+                      {/* Breadcrumb */}
                       <motion.div
-                        className="absolute inset-0"
-                        style={{ 
-                          opacity: prefersReducedMotion 
-                            ? (activeStatement === 'vision' ? 1 : 0) 
-                            : visionOpacity 
-                        }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="mb-4"
                       >
-                        <StatementContent statement={aboutStatements.vision} />
+                        <span className="text-sm text-slate-500">
+                          {t('about.hero.breadcrumbs.home')} / <span className="text-primary font-medium">{t('about.hero.breadcrumbs.current')}</span>
+                        </span>
                       </motion.div>
 
-                      {/* Mission Content */}
-                      <motion.div
-                        className="absolute inset-0"
-                        style={{ 
-                          opacity: prefersReducedMotion 
-                            ? (activeStatement === 'mission' ? 1 : 0) 
-                            : missionOpacity 
-                        }}
+                      {/* Main Heading */}
+                      <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 mb-3 leading-tight"
                       >
-                        <StatementContent statement={aboutStatements.mission} />
-                      </motion.div>
-                    </div>
+                        {t('about.hero.title')}
+                      </motion.h1>
 
-                    {/* Active state indicator pills - positioned below content */}
-                    <div className="flex gap-2 pt-4">
-                      {(['vision', 'mission'] as const).map((key) => (
-                        <div
-                          key={key}
-                          className={cn(
-                            'w-2 h-2 rounded-full transition-all duration-300',
-                            activeStatement === key
-                              ? 'bg-primary w-6'
-                              : 'bg-slate-300'
-                          )}
-                        />
-                      ))}
-                    </div>
+                      {/* Tagline */}
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-base lg:text-lg text-slate-800 mb-6 font-extrabold tracking-wide uppercase"
+                      >
+                        {t('about.hero.tagline')}
+                      </motion.p>
+
+                      {/* Vision/Mission Content with Crossfade */}
+                      <div className="relative min-h-[160px] mb-6">
+                        {/* Vision Content */}
+                        <motion.div
+                          className="absolute inset-0"
+                          style={{
+                            opacity: prefersReducedMotion
+                              ? (activeStatement === 'vision' ? 1 : 0)
+                              : visionOpacity
+                          }}
+                        >
+                          <StatementContent statement={aboutStatements.vision} />
+                        </motion.div>
+
+                        {/* Mission Content */}
+                        <motion.div
+                          className="absolute inset-0"
+                          style={{
+                            opacity: prefersReducedMotion
+                              ? (activeStatement === 'mission' ? 1 : 0)
+                              : missionOpacity
+                          }}
+                        >
+                          <StatementContent statement={aboutStatements.mission} />
+                        </motion.div>
+                      </div>
+
+                      {/* Active state indicator pills - positioned below content */}
+                      <div className="flex gap-2 pt-4">
+                        {(['vision', 'mission'] as const).map((key) => (
+                          <div
+                            key={key}
+                            className={cn(
+                              'w-2 h-2 rounded-full transition-all duration-300',
+                              activeStatement === key
+                                ? 'bg-primary w-6'
+                                : 'bg-slate-300'
+                            )}
+                          />
+                        ))}
+                      </div>
                     </div>
                   </PipeFrame>
                 </motion.div>
@@ -1320,7 +1330,7 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
                 style={{ height: progressHeight }}
               />
             </div>
-            <span className="text-[10px] text-slate-500 uppercase tracking-wider">Scroll</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-wider">{t('about.hero.scroll')}</span>
           </div>
         </div>
       </div>
@@ -1334,9 +1344,11 @@ function DesktopHero({ prefersReducedMotion }: DesktopHeroProps) {
 
 interface MobileHeroProps {
   prefersReducedMotion: boolean | null;
+  t: ReturnType<typeof useT>;
+  aboutStatements: Record<StatementKey, StatementData>;
 }
 
-function MobileHero({ prefersReducedMotion }: MobileHeroProps) {
+function MobileHero({ prefersReducedMotion, t, aboutStatements }: MobileHeroProps) {
   const [activeTab, setActiveTab] = useState<StatementKey>('vision');
 
   return (
@@ -1348,7 +1360,7 @@ function MobileHero({ prefersReducedMotion }: MobileHeroProps) {
         {/* Breadcrumb */}
         <div className="mb-4 md:mb-6">
           <span className="text-sm text-slate-400">
-            Home / <span className="text-sky-300 font-medium">About Us</span>
+            {t('about.hero.breadcrumbs.home')} / <span className="text-sky-300 font-medium">{t('about.hero.breadcrumbs.current')}</span>
           </span>
         </div>
 
@@ -1372,13 +1384,12 @@ function MobileHero({ prefersReducedMotion }: MobileHeroProps) {
 
         {/* Heading */}
         <h1 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">
-          Crown Plastic Pipes
-          <span className="block text-sky-400">Factory L.L.C.</span>
+          {t('about.hero.title')}
         </h1>
 
         {/* Tagline */}
         <p className="text-base md:text-lg text-slate-300 mb-6 font-medium">
-          European technology, Gulf standards.
+          {t('about.hero.tagline')}
         </p>
 
         {/* Tab Pills */}
@@ -1424,7 +1435,7 @@ function MobileHero({ prefersReducedMotion }: MobileHeroProps) {
 
 // Statement Content Block (Vision or Mission)
 interface StatementContentProps {
-  statement: typeof aboutStatements.vision | typeof aboutStatements.mission;
+  statement: StatementData;
   variant?: 'desktop' | 'mobile';
 }
 
@@ -1512,7 +1523,7 @@ function StatementContent({ statement, variant = 'desktop' }: StatementContentPr
 function HeroBackground() {
   const prefersReducedMotion = useReducedMotion();
   const videoRef = useRef<HTMLVideoElement>(null);
-  
+
   // Pause video if user prefers reduced motion
   useEffect(() => {
     if (videoRef.current) {
@@ -1525,7 +1536,7 @@ function HeroBackground() {
       }
     }
   }, [prefersReducedMotion]);
-  
+
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* ================================================================
@@ -1535,7 +1546,7 @@ function HeroBackground() {
       ================================================================ */}
       {prefersReducedMotion ? (
         // Static fallback for prefers-reduced-motion
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             background: `
@@ -1568,7 +1579,7 @@ function HeroBackground() {
           - Subtle darkening at edges for text contrast
           - Stronger on mobile (sm:) for readability
       ================================================================ */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
@@ -1582,7 +1593,7 @@ function HeroBackground() {
         }}
       />
       {/* Mobile-specific darker overlay for better text readability */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none md:opacity-0"
         style={{
           background: `

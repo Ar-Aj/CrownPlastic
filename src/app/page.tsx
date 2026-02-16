@@ -9,14 +9,14 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
-import { 
-  ArrowRight, Phone, Shield, Award, Truck, 
+import {
+  ArrowRight, Phone, Shield, Award, Truck, Factory,
   CheckCircle2, Package,
   Globe, Clock, Earth, Recycle
 } from 'lucide-react';
 
 // Components
-import { 
+import {
   LogoCarousel3D,
   AnimatedStatsStrip,
   QuoteButton,
@@ -38,7 +38,7 @@ import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
 
 // Design System
-import { 
+import {
   radialStagger,
   radialItem,
 } from '@/lib/design-system';
@@ -50,9 +50,10 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function CrownHero() {
+  const t = useT();
   return (
     <>
-      {/* ═══════════════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════════════════════
           PLACEHOLDER: Future VideoCarousel3D Component
           
           This section will contain a 3D-style 6-video carousel showcasing:
@@ -65,34 +66,33 @@ function CrownHero() {
           Mobile: Single video with swipe navigation
           Desktop: Grid/carousel layout with 3D perspective
       ═══════════════════════════════════════════════════════════════════════ */}
-      
+
       <header className="relative min-h-[70vh] md:min-h-[80vh] flex items-center bg-white">
         {/* Subtle static accent (no animation) */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-transparent to-gray-50" />
-        
+
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-12 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <div className="space-y-8">
               {/* Main Headline */}
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Premium UPVC Piping Solutions for the GCC
+                {t('home.hero.title')}
               </h1>
 
               {/* Supporting Line */}
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
-                Leading UAE manufacturer of UPVC, PPR, HDPE pipes & fittings for water supply, 
-                drainage, and infrastructure projects across the Gulf.
+              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
+                {t('home.hero.description')}
               </p>
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
                 <CrownButton variant="primary" size="lg">
-                  Request a Quote
+                  {t('home.hero.request_quote')}
                   <ArrowRight className="w-5 h-5" />
                 </CrownButton>
                 <CrownButton variant="secondary" size="lg" href="/products" className="!bg-gray-100 !text-gray-800 !border-gray-200 hover:!bg-gray-200">
-                  View Products
+                  {t('home.hero.view_products')}
                   <Package className="w-5 h-5" />
                 </CrownButton>
               </div>
@@ -115,13 +115,13 @@ function CrownHero() {
                   {/* Subtle vignette - doesn't obstruct center */}
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-900/20" />
                 </div>
-                
+
                 {/* Innovative Floating Glass Tags - Corner Anchored */}
                 {/* Top-Left: Floating Glass Tag with Connecting Line */}
                 <div className="absolute -top-3 -left-3 group">
                   {/* Connecting line to image */}
                   <div className="absolute top-1/2 left-1/2 w-8 h-8 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
-                  
+
                   {/* Floating compact stat */}
                   <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
                     <div className="flex items-center gap-2">
@@ -129,8 +129,8 @@ function CrownHero() {
                         <Clock className="w-4 h-4 text-primary" />
                       </div>
                       <div className="text-left">
-                        <div className="text-xl font-bold text-gray-900 leading-none">30+</div>
-                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Years</div>
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.years')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.years_label')}</div>
                       </div>
                     </div>
                   </div>
@@ -139,15 +139,15 @@ function CrownHero() {
                 {/* Top-Right: Floating Glass Tag */}
                 <div className="absolute -top-3 -right-3 group">
                   <div className="absolute top-1/2 right-1/2 w-8 h-8 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
-                  
+
                   <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Package className="w-4 h-4 text-primary" />
                       </div>
                       <div className="text-left">
-                        <div className="text-xl font-bold text-gray-900 leading-none">5000+</div>
-                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Products</div>
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.products')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.products_label')}</div>
                       </div>
                     </div>
                   </div>
@@ -156,15 +156,15 @@ function CrownHero() {
                 {/* Bottom-Left: Floating Glass Tag */}
                 <div className="absolute -bottom-3 -left-3 group">
                   <div className="absolute bottom-1/2 left-1/2 w-8 h-8 border-l-2 border-b-2 border-primary/30 rounded-bl-lg" />
-                  
+
                   <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Globe className="w-4 h-4 text-primary" />
                       </div>
                       <div className="text-left">
-                        <div className="text-xl font-bold text-gray-900 leading-none">52+</div>
-                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Countries</div>
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.countries')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.countries_label')}</div>
                       </div>
                     </div>
                   </div>
@@ -173,15 +173,15 @@ function CrownHero() {
                 {/* Bottom-Right: Floating Glass Tag */}
                 <div className="absolute -bottom-3 -right-3 group">
                   <div className="absolute bottom-1/2 right-1/2 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
-                  
+
                   <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Truck className="w-4 h-4 text-primary" />
+                        <Factory className="w-4 h-4 text-primary" />
                       </div>
                       <div className="text-left">
-                        <div className="text-xl font-bold text-gray-900 leading-none">24/7</div>
-                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">Delivery</div>
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.units')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.units_label')}</div>
                       </div>
                     </div>
                   </div>
@@ -200,6 +200,7 @@ function CrownHero() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function ProductCategoriesSection() {
+  const t = useT();
   const { language } = useLanguage();
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -216,13 +217,13 @@ function ProductCategoriesSection() {
     <section ref={ref} className="py-12 md:py-16 bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-50" />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Our Products"
-          title="Premium Piping"
-          titleHighlight="Solutions"
-          subtitle="Comprehensive range of UPVC, PPR, and HDPE piping systems for every application"
+          label={t('home.products_section.label')}
+          title={t('home.products_section.title_prefix')}
+          titleHighlight={t('home.products_section.title_highlight')}
+          subtitle={t('home.products_section.subtitle')}
         />
 
         {/* Product Grid with Radial Stagger */}
@@ -239,10 +240,10 @@ function ProductCategoriesSection() {
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-sm group-hover:shadow-2xl group-hover:shadow-slate-900/20 transition-all duration-500 ease-out">
                     {/* Background - transitions from white to dark navy */}
                     <div className="absolute inset-0 bg-white group-hover:bg-gradient-to-br group-hover:from-slate-800 group-hover:via-slate-900 group-hover:to-blue-950 transition-all duration-500" />
-                    
+
                     {/* Subtle border */}
                     <div className="absolute inset-0 rounded-2xl border border-gray-100 group-hover:border-slate-700/50 transition-colors duration-500" />
-                    
+
                     <div className="relative p-6">
                       {/* Image */}
                       {cat.image && (
@@ -258,7 +259,7 @@ function ProductCategoriesSection() {
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-30 group-hover:opacity-70 transition-opacity duration-500" />
                         </div>
                       )}
-                      
+
                       {/* Content */}
                       <h3 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-white transition-colors duration-400">
                         {cat.title}
@@ -266,7 +267,7 @@ function ProductCategoriesSection() {
                       <p className="text-sm mb-4 line-clamp-2 text-gray-600 group-hover:text-slate-300 transition-colors duration-400">
                         {cat.description}
                       </p>
-                      
+
                       {/* View details link */}
                       <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:text-amber-400 transition-all duration-400">
                         <span className="group-hover:tracking-wide transition-all duration-400">View Products</span>
@@ -281,14 +282,14 @@ function ProductCategoriesSection() {
         </motion.div>
 
         {/* View All Button */}
-        <motion.div 
+        <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <MagneticButton href="/products" variant="outline" size="lg">
-            View All Products
+            {t('home.products_section.view_all')}
             <ArrowRight className="w-5 h-5" />
           </MagneticButton>
         </motion.div>
@@ -303,20 +304,21 @@ function ProductCategoriesSection() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function NewStatsStripSection() {
+  const t = useT();
   // 8 stats as specified: mix of numbers, certifications, and quality metrics
   const statsData = [
-    { icon: Award, value: '30+', label: 'Years of Excellence' },
-    { icon: Package, value: '5000+', label: 'Products Available' },
-    { icon: Globe, value: '6', label: 'GCC Countries' },
-    { icon: Earth, value: '52+', label: 'Countries Served' },
-    { icon: Shield, value: 'ISO 9001:2015', label: 'Quality Certified' },
-    { icon: Shield, value: 'ISO 14001:2015', label: 'Environmental Certified' },
-    { icon: Shield, value: 'ISO 45001:2018', label: 'Safety Certified' },
-    { icon: Recycle, value: '100%', label: 'Virgin uPVC Raw Material' },
+    { icon: Award, value: '30+', label: t('home.stats_strip.years') },
+    { icon: Package, value: '5000+', label: t('home.stats_strip.products') },
+    { icon: Globe, value: '6', label: t('home.stats_strip.gcc') },
+    { icon: Earth, value: '52+', label: t('home.stats_strip.countries') },
+    { icon: Shield, value: 'ISO 9001:2015', label: t('home.stats_strip.iso_quality') },
+    { icon: Shield, value: 'ISO 14001:2015', label: t('home.stats_strip.iso_env') },
+    { icon: Shield, value: 'ISO 45001:2018', label: t('home.stats_strip.iso_safety') },
+    { icon: Recycle, value: '100%', label: t('home.stats_strip.material') },
   ];
 
   return (
-    <AnimatedStatsStrip 
+    <AnimatedStatsStrip
       stats={statsData}
       loopDurationMs={9000} // 35 seconds for one full loop - calm B2B feel
     />
@@ -333,10 +335,10 @@ function AboutPreviewSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const features = [
-    'ISO 9001:2015 Quality Management',
-    'BS EN 1452 & ASTM Certified Products',
-    'Complete Range of Piping Solutions',
-    'Same-Day Delivery Across UAE',
+    t('home.about_preview.features.quality'),
+    t('home.about_preview.features.certified'),
+    t('home.about_preview.features.range'),
+    t('home.about_preview.features.delivery'),
   ];
 
   return (
@@ -350,25 +352,23 @@ function AboutPreviewSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
-              {t('home.about_badge')}
+              {t('home.about_preview.badge')}
             </span>
             <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-              Trusted by UAE&apos;s{' '}
+              {t('home.about_preview.title_prefix')}{' '}
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                Leading Contractors
+                {t('home.about_preview.title_highlight')}
               </span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              For over three decades, Crown Plastic Pipes has been the preferred choice 
-              for premium piping solutions across the GCC. Our commitment to quality, 
-              innovation, and customer service sets us apart.
+              {t('home.about_preview.description')}
             </p>
-            
+
             {/* Feature List */}
             <ul className="space-y-4 mb-8">
               {features.map((feature, i) => (
                 <motion.li
-                  key={feature}
+                  key={i}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.2 + i * 0.1 }}
@@ -387,11 +387,11 @@ function AboutPreviewSection() {
                 href="/about-us"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
               >
-                Learn More About Us
+                {t('home.about_preview.learn_more')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <QuoteButton variant="primary" size="md">
-                Request a Quote
+                {t('home.about_preview.request_quote')}
               </QuoteButton>
             </div>
           </motion.div>
@@ -414,37 +414,57 @@ function AboutPreviewSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            
+
             {/* Floating certification card */}
-            <motion.div 
-              className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl max-w-xs hidden md:block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+            {/* Bottom-Left: Floating certification card - Updated to Minimalist Blue Theme */}
+            <motion.div
+              className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 p-4 pr-6 rounded-2xl shadow-xl shadow-blue-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.5 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(59 130 246 / 0.1)" }}
             >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
-                  <Shield className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">ISO 9001:2015</p>
-                  <p className="text-sm text-gray-500">Quality Certified</p>
-                </div>
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-blue-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 9001:2015</div>
+                <div className="text-xs text-blue-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.quality')}</div>
               </div>
             </motion.div>
 
-            {/* Floating stats card */}
-            <motion.div 
-              className="absolute -top-4 -right-4 bg-gradient-to-br from-primary to-primary-dark text-white p-4 rounded-xl shadow-xl hidden md:block"
-              initial={{ opacity: 0, scale: 0.8 }}
+            {/* Bottom-Right: Floating certification card - Updated to Minimalist Teal Theme */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-100 p-4 pr-6 rounded-2xl shadow-xl shadow-teal-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.6, type: 'spring' }}
+              transition={{ delay: 0.7 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(20 184 166 / 0.1)" }}
             >
-              <div className="text-3xl font-bold">
-                <AnimatedCounter value={30} suffix="+" />
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-teal-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-teal-600" />
               </div>
-              <div className="text-sm text-blue-100">Years Experience</div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 45001:2018</div>
+                <div className="text-xs text-teal-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.safety')}</div>
+              </div>
+            </motion.div>
+
+            {/* Top-Right: Floating certification card - Updated to Minimalist Blue/Green Theme */}
+            <motion.div
+              className="absolute -top-6 -right-6 bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 p-4 pr-6 rounded-2xl shadow-xl shadow-emerald-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(16 185 129 / 0.1)" }}
+            >
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-emerald-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 14001:2015</div>
+                <div className="text-xs text-emerald-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.env')}</div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -470,9 +490,9 @@ function FinalCTASection() {
   return (
     <section className="relative py-12 md:py-14 overflow-hidden">
       <GradientMesh variant="emerald" />
-      
+
       {/* Animated gradient overlay */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0"
         animate={{
           background: [
@@ -483,45 +503,45 @@ function FinalCTASection() {
         }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.span 
+          <motion.span
             className="inline-block text-emerald-200 text-sm font-semibold uppercase tracking-wider mb-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Ready to Start?
+            {t('home.final_cta.label')}
           </motion.span>
-          
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t('home.cta_title')}
+            {t('home.final_cta.title')}
           </h2>
-          
+
           <p className="text-emerald-100/90 text-lg mb-10 max-w-2xl mx-auto">
-            {t('home.cta_subtitle')}
+            {t('home.final_cta.subtitle')}
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <QuoteButton variant="outline" size="lg" className="!bg-white !text-emerald-700 hover:!bg-emerald-50">
-              Get a Free Quote
+              {t('home.final_cta.quote_btn')}
               <ArrowRight className="w-5 h-5" />
             </QuoteButton>
-            <MagneticButton href="tel:+97142675678" variant="secondary" size="lg">
+            <MagneticButton href="tel:+97165436781" variant="secondary" size="lg">
               <Phone className="w-5 h-5" />
-              +971 4 267 5678
+              +971 6 543 6781
             </MagneticButton>
           </div>
-          
+
           {/* Trust indicators */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -530,15 +550,15 @@ function FinalCTASection() {
           >
             <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
               <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-              <span>30+ Years Experience</span>
+              <span>{t('home.final_cta.trust.experience')}</span>
             </div>
             <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
               <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-              <span>ISO 9001:2015 Certified</span>
+              <span>{t('home.final_cta.trust.iso')}</span>
             </div>
             <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
               <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-              <span>5,000+ Products</span>
+              <span>{t('home.final_cta.trust.products')}</span>
             </div>
           </motion.div>
         </motion.div>
@@ -552,6 +572,7 @@ function FinalCTASection() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export default function HomePage() {
+  const t = useT();
   return (
     <>
       {/* Video Carousel - Top Section */}
@@ -563,8 +584,8 @@ export default function HomePage() {
       {/* 3D Logo Carousel - Trusted by Industry Leaders */}
       <LogoCarousel3D
         logos={clientLogos.slice(0, 12)}
-        title="Trusted by Industry Leaders"
-        subtitle="Partnering with the most prestigious developers and contractors across the Gulf region"
+        title={t('home.logo_carousel.title')}
+        subtitle={t('home.logo_carousel.subtitle')}
       />
 
       {/* Product Categories - Glass Grid */}

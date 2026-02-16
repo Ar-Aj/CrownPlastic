@@ -398,13 +398,13 @@ const ductApplications = [
 export const upvcDuctPipesAndAccessories: ProductDetailConfig = {
   slug: 'upvc-duct-black',
   categorySlug: 'upvc-duct',
-  
+
   title: 'UPVC Duct Pipes & Accessories Black Pipes / Fittings',
   titleAr: 'أنابيب وملحقات قنوات UPVC',
-  
+
   shortDescription: 'Black/Dark Grey UPVC duct pipes and accessories manufactured to NEMA, DIN, BS, and Etisalat/DU specifications for electrical, communication, and cable protection applications.',
   shortDescriptionAr: 'أنابيب وملحقات قنوات UPVC باللون الأسود/الرمادي الداكن مصنعة وفقاً لمعايير NEMA وDIN وBS ومواصفات اتصالات/دو لتطبيقات الكهرباء والاتصالات وحماية الكابلات.',
-  
+
   overview: `The document provides a product catalogue for UPVC/PVC Duct Pipes and associated accessories, manufactured to various international standards for electrical, communication, and pressure applications.
 
 **Pipes Range:**
@@ -426,7 +426,7 @@ The catalogue includes a range of fabricated products for duct applications, spe
 
 **نطاق الملحقات:**
 يتضمن الكتالوج مجموعة من المنتجات المصنعة لتطبيقات القنوات، وتحديداً أغطية نهاية القناة، وموصلات القناة، وفوهات القناة، ومنحنيات القناة 90/45°.`,
-  
+
   features: ductFeatures,
   featuresAr: [
     'متوفر بطول قياسي 5.8 متر أو حسب الطلب',
@@ -436,7 +436,7 @@ The catalogue includes a range of fabricated products for duct applications, spe
     'منحنيات إضاءة الشوارع 90° متوفرة لأنابيب 3 بوصة فئة C',
     'مصنعة بواسطة مصنع كراون للأنابيب البلاستيكية ذ.م.م.',
   ],
-  
+
   applications: ductApplications,
   applicationsAr: [
     'التطبيقات الكهربائية فوق الأرض (EPC 40 PVC و EPC 80 PVC)',
@@ -446,15 +446,15 @@ The catalogue includes a range of fabricated products for duct applications, spe
     'كابلات الكهرباء والهاتف (D54, D56, D57 DUCT PIPE)',
     'تطبيقات القنوات للملحقات المصنعة',
   ],
-  
+
   pipesTables: ductPipesTables,
-  
+
   fittings: ductFittings,
-  
+
   downloads: [
     { label: 'UPVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC-DUCT-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use appropriate solvent cement for PVC/UPVC joints',
@@ -471,6 +471,24 @@ The catalogue includes a range of fabricated products for duct applications, spe
       'Do not install without proper bedding for underground applications',
       'Do not drag pipes over rough surfaces during handling',
       'Do not use damaged or deformed pipes',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'استخدم لاصق مذيب مناسب لوصلات PVC/UPVC',
+      'تأكد من عمق الإدخال المناسب في الوصلات المقبسية',
+      'اترك وقتاً كافياً للمعالجة قبل اختبار الضغط',
+      'استخدم الملحقات والتوصيلات الموصى بها من الشركة المصنعة',
+      'اتبع مواصفات اتصالات/دو لتركيبات الاتصالات',
+      'خزّن الأنابيب في مناطق مغطاة بعيداً عن أشعة الشمس المباشرة',
+    ],
+    donts: [
+      'لا تستخدم الأنابيب فوق فئة الضغط المصنفة',
+      'لا تعرّض لدرجات حرارة تتجاوز الحد المصنف',
+      'لا تستخدم توصيلات غير متوافقة من أنظمة مواد أخرى',
+      'لا تركّب بدون فرشة مناسبة للتطبيقات تحت الأرض',
+      'لا تسحب الأنابيب على الأسطح الخشنة أثناء المناولة',
+      'لا تستخدم أنابيب تالفة أو مشوهة',
     ],
   },
 };

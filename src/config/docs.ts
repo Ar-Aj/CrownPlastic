@@ -12,7 +12,9 @@
 export interface PdfDocument {
   src: string;
   title: string;
+  titleAr?: string;
   description: string;
+  descriptionAr?: string;
 }
 
 // ============================================================================
@@ -25,21 +27,21 @@ const PDF_PATHS = {
   UPVC_PRESSURE_FITTINGS_BS_EN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015_compressed.pdf',
   UPVC_PRESSURE_FITTINGS_DIN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063_compressed.pdf',
   UPVC_PRESSURE_FITTINGS_ASTM: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20ASTM%20D%202466%20SCH-40_compressed.pdf',
-  
+
   // UPVC Drainage
   UPVC_DRAINAGE_PIPES: '/pdfs/UPVC%20DRAINAGE%20PIPES_compressed.pdf',
   UPVC_DRAINAGE_FITTINGS_1329: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%2C2014%20-%20SUPERSEDED%20BS%205255%20AND%20BS4514_compressed.pdf',
   UPVC_DRAINAGE_FITTINGS_1401: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20AND%20BS%205481_compressed.pdf',
-  
+
   // UPVC Duct & Conduit
   UPVC_DUCT_PIPES: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES_compressed.pdf',
   UPVC_FABRICATION: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES_compressed.pdf',
   UPVC_CONDUIT: '/pdfs/UPVC%20CONDUIT%20PIPE_compressed.pdf',
-  
+
   // Common UPVC
   UPVC_STANDARDS: '/pdfs/UPVC%20PIPES%20AND%20FITTINGS%20STANDARDS_compressed.pdf',
   UPVC_TECH_SPECS: '/pdfs/UPVC%20TECHNICAL%20SPECIFICATIONS%20AND%20MATERIAL%20PROPERTIES_compressed.pdf',
-  
+
   // PPR & Polyethylene
   PPR_PIPES: '/pdfs/PPR%20PIPES_compressed.pdf',
   PE_SYSTEM: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM_compressed.pdf',
@@ -53,84 +55,112 @@ const DOCS = {
   upvcPressurePipes: {
     src: PDF_PATHS.UPVC_PRESSURE_PIPES,
     title: 'UPVC Pressure Pipes',
+    titleAr: 'أنابيب الضغط UPVC',
     description: 'Metric & Inch series pipes | PN6-16 pressure ratings',
+    descriptionAr: 'أنابيب بالسلسلة المترية والبوصة | تصنيفات ضغط PN6-16',
   },
   upvcPressureFittingsBsEn: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_BS_EN,
     title: 'Pressure Fittings - BS EN Standard',
+    titleAr: 'توصيلات الضغط - معيار BS EN',
     description: 'BS EN 14523 & BS 4346 PN15 fittings specifications',
+    descriptionAr: 'مواصفات توصيلات BS EN 14523 و BS 4346 PN15',
   },
   upvcPressureFittingsDin: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_DIN,
     title: 'Pressure Fittings - DIN Standard',
+    titleAr: 'توصيلات الضغط - معيار DIN',
     description: 'DIN 8063 fittings for metric pressure systems',
+    descriptionAr: 'توصيلات DIN 8063 لأنظمة الضغط المترية',
   },
   upvcPressureFittingsAstm: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_ASTM,
     title: 'Pressure Fittings - ASTM Standard',
+    titleAr: 'توصيلات الضغط - معيار ASTM',
     description: 'ASTM D2466 Schedule 40 fittings for inch series',
+    descriptionAr: 'توصيلات ASTM D2466 جدول 40 لسلسلة البوصة',
   },
-  
+
   // UPVC Drainage
   upvcDrainagePipes: {
     src: PDF_PATHS.UPVC_DRAINAGE_PIPES,
     title: 'UPVC Drainage Pipes',
+    titleAr: 'أنابيب الصرف UPVC',
     description: 'Above & underground drainage pipe systems',
+    descriptionAr: 'أنظمة أنابيب الصرف الأرضية وتحت الأرض',
   },
   upvcDrainageFittings1329: {
     src: PDF_PATHS.UPVC_DRAINAGE_FITTINGS_1329,
     title: 'Drainage Fittings - BS EN 1329',
+    titleAr: 'توصيلات الصرف - BS EN 1329',
     description: 'Above ground fittings (supersedes BS 5255 & BS 4514)',
+    descriptionAr: 'توصيلات أرضية (تحل محل BS 5255 و BS 4514)',
   },
   upvcDrainageFittings1401: {
     src: PDF_PATHS.UPVC_DRAINAGE_FITTINGS_1401,
     title: 'Drainage Fittings - BS EN 1401',
+    titleAr: 'توصيلات الصرف - BS EN 1401',
     description: 'Underground fittings (supersedes BS 4660 & BS 5481)',
+    descriptionAr: 'توصيلات تحت الأرض (تحل محل BS 4660 و BS 5481)',
   },
-  
+
   // UPVC Duct & Fabrication
   upvcDuctPipes: {
     src: PDF_PATHS.UPVC_DUCT_PIPES,
     title: 'UPVC Duct Pipes & Accessories',
+    titleAr: 'أنابيب وملحقات قنوات UPVC',
     description: 'Telecom & electrical cable protection systems',
+    descriptionAr: 'أنظمة حماية كابلات الاتصالات والكهرباء',
   },
   upvcFabrication: {
     src: PDF_PATHS.UPVC_FABRICATION,
     title: 'Fabrication & Accessories',
+    titleAr: 'التصنيع والملحقات',
     description: 'Custom fabrication options & system accessories',
+    descriptionAr: 'خيارات التصنيع المخصصة وملحقات النظام',
   },
-  
+
   // PVC Conduit
   pvcConduit: {
     src: PDF_PATHS.UPVC_CONDUIT,
     title: 'PVC Conduit Pipes',
+    titleAr: 'أنابيب قنوات PVC',
     description: 'Schedule 40/80 | 320N/750N/1250N crush resistance',
+    descriptionAr: 'جدول 40/80 | مقاومة سحق 320N/750N/1250N',
   },
-  
+
   // Common UPVC References
   upvcStandards: {
     src: PDF_PATHS.UPVC_STANDARDS,
     title: 'Standards Overview',
+    titleAr: 'نظرة عامة على المعايير',
     description: 'Complete standards reference for UPVC systems',
+    descriptionAr: 'مرجع المعايير الكامل لأنظمة UPVC',
   },
   upvcTechSpecs: {
     src: PDF_PATHS.UPVC_TECH_SPECS,
     title: 'Technical Specifications',
+    titleAr: 'المواصفات الفنية',
     description: 'Material properties, chemical resistance & testing data',
+    descriptionAr: 'خصائص المواد ومقاومة المواد الكيميائية وبيانات الاختبار',
   },
-  
+
   // PPR
   pprPipes: {
     src: PDF_PATHS.PPR_PIPES,
     title: 'PPR Pipes',
+    titleAr: 'أنابيب PPR',
     description: 'Hot & cold water systems | PN10/16/20 | DIN 8077/78',
+    descriptionAr: 'أنظمة المياه الساخنة والباردة | PN10/16/20 | DIN 8077/78',
   },
-  
+
   // Polyethylene
   peSystem: {
     src: PDF_PATHS.PE_SYSTEM,
     title: 'Polyethylene Pipe Systems',
+    titleAr: 'أنظمة أنابيب البولي إيثيلين',
     description: 'HDPE PE63/80/100 | Irrigation & water distribution',
+    descriptionAr: 'HDPE PE63/80/100 | الري وتوزيع المياه',
   },
 } as const;
 
@@ -199,7 +229,7 @@ export const productDocs: Record<string, PdfDocument[]> = {
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  
+
   // -------------------------------------------------------------------------
   // UPVC DRAINAGE PRODUCTS (new standardized slugs)
   // -------------------------------------------------------------------------
@@ -215,7 +245,7 @@ export const productDocs: Record<string, PdfDocument[]> = {
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  
+
   // -------------------------------------------------------------------------
   // UPVC DUCT PRODUCTS (single family)
   // -------------------------------------------------------------------------
@@ -225,7 +255,7 @@ export const productDocs: Record<string, PdfDocument[]> = {
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  
+
   // -------------------------------------------------------------------------
   // PVC CONDUIT PRODUCTS (new standardized slugs)
   // -------------------------------------------------------------------------
@@ -239,7 +269,7 @@ export const productDocs: Record<string, PdfDocument[]> = {
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  
+
   // -------------------------------------------------------------------------
   // PPR PRODUCTS (existing slugs maintained)
   // -------------------------------------------------------------------------
@@ -252,7 +282,7 @@ export const productDocs: Record<string, PdfDocument[]> = {
   'ppr/ppr-sdr6-pn20': [
     DOCS.pprPipes,
   ],
-  
+
   // -------------------------------------------------------------------------
   // POLYETHYLENE (HDPE) - No subProducts exposed, category-level only
   // -------------------------------------------------------------------------
@@ -316,11 +346,11 @@ export function getDocsByCategory(categorySlug: string): PdfDocument[] {
 export function getDocsByProduct(categorySlug: string, productSlug: string): PdfDocument[] {
   const key = `${categorySlug}/${productSlug}`;
   const docs = productDocs[key];
-  
+
   // If no product-specific docs, fall back to category docs
   if (!docs || docs.length === 0) {
     return categoryDocs[categorySlug] || [];
   }
-  
+
   return docs;
 }

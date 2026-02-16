@@ -632,16 +632,16 @@ const din8063Fittings: Fitting[] = [
 export const pvcPressureDin8063: ProductDetailConfig = {
   slug: 'pvc-pressure-din-8063',
   categorySlug: 'upvc-pressure',
-  
+
   title: 'PVC Pressure Pipes & Fittings DIN 8063',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار DIN 8063',
-  
+
   shortDescription: 'German standard PVC pressure pipes and fittings for potable water supply systems. Complete range of moulded, fabricated, and brass insert fittings.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الألماني لأنظمة إمداد المياه الصالحة للشرب.',
-  
+
   overview: 'Crown Plastic Pipes manufactures a comprehensive range of PVC-U pressure pipes and fittings conforming to DIN 8063 standards. These products are designed for potable water supply, irrigation systems, and industrial applications where reliability and longevity are paramount. Our DIN 8063 range includes solvent weld joints ensuring leak-free connections and long service life exceeding 50 years.',
   overviewAr: 'تصنع كراون للأنابيب البلاستيكية مجموعة شاملة من أنابيب وتوصيلات الضغط PVC-U المطابقة لمعايير DIN 8063.',
-  
+
   features: [
     'Conforms to DIN 8063 standard',
     'Lead-free material for potable water safety',
@@ -662,7 +662,7 @@ export const pvcPressureDin8063: ProductDetailConfig = {
     'سهولة التوصيل بالإسمنت المذيب',
     'مجموعة كاملة من 20 مم إلى 400 مم',
   ],
-  
+
   applications: [
     'Potable water distribution networks',
     'Agricultural irrigation systems',
@@ -683,7 +683,7 @@ export const pvcPressureDin8063: ProductDetailConfig = {
     'خدمات المباني التجارية',
     'مرافق معالجة المياه',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from DIN 8063 catalogue
   // ───────────────────────────────────────────────────────────────────────────
@@ -717,16 +717,16 @@ export const pvcPressureDin8063: ProductDetailConfig = {
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // DIN 8063 Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: din8063Fittings,
-  
+
   downloads: [
     { label: 'DIN 8063 Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063_compressed.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use solvent cement specifically designed for PVC-U',
@@ -741,6 +741,22 @@ export const pvcPressureDin8063: ProductDetailConfig = {
       'Do not use incompatible solvents or adhesives',
       'Do not overtighten threaded connections',
       'Do not drag pipes across rough surfaces',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'استخدم لاصق مذيب مصمم خصيصاً لـ PVC-U',
+      'نظف وأزل الشحوم من جميع الأسطح قبل التوصيل',
+      'اترك وقتاً كافياً للمعالجة قبل اختبار الضغط',
+      'ادعم الأنابيب على فترات منتظمة وفقاً للإرشادات',
+      'خزّن الأنابيب على أسطح مستوية بعيداً عن أشعة الشمس المباشرة',
+    ],
+    donts: [
+      'لا تستخدم الأنابيب لتطبيقات الهواء المضغوط أو الغاز',
+      'لا تعرّض لدرجات حرارة تتجاوز 60 درجة مئوية',
+      'لا تستخدم مذيبات أو لاصقات غير متوافقة',
+      'لا تُفرط في شد التوصيلات الملولبة',
+      'لا تسحب الأنابيب على الأسطح الخشنة',
     ],
   },
 };
@@ -1415,16 +1431,16 @@ const bsEn1452Fittings: Fitting[] = [
 export const pvcPressureBsEn1452: ProductDetailConfig = {
   slug: 'pvc-pressure-bs-en-1452',
   categorySlug: 'upvc-pressure',
-  
+
   title: 'PVC Pressure Pipes & Fittings BS EN 1452:23 / BS 4346 (PN 15)',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار BS EN 1452:23 / BS 4346 (PN 15)',
-  
+
   shortDescription: 'British standard PVC pressure pipes and fittings rated at PN 15 for water supply networks. Certified to BS EN 1452:23 and BS 4346.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار البريطاني بتصنيف PN 15 لشبكات إمداد المياه.',
-  
+
   overview: 'Our BS EN 1452 range represents the British standard for PVC-U pressure piping systems. These products are Kitemark certified and widely specified for municipal water distribution, building services, and infrastructure projects across the GCC and Middle East. The PN 15 pressure rating provides a reliable safety margin for demanding applications.',
   overviewAr: 'تمثل مجموعة BS EN 1452 لدينا المعيار البريطاني لأنظمة أنابيب الضغط PVC-U.',
-  
+
   features: [
     'Conforms to BS EN 1452:23 and BS 4346',
     'PN 15 pressure rating',
@@ -1445,7 +1461,7 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
     'توافق تام مع النظام',
     'مقاومة الزحف طويلة المدى',
   ],
-  
+
   applications: [
     'Municipal water supply',
     'High-rise building services',
@@ -1466,7 +1482,7 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
     'توزيع محطات تحلية المياه',
     'أنظمة التبريد المركزي',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from BS EN 1452 catalogue
   // ───────────────────────────────────────────────────────────────────────────
@@ -1485,16 +1501,16 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // BS EN 1452:3/BS 4346 (PN 15) Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: bsEn1452Fittings,
-  
+
   downloads: [
     { label: 'BS EN 1452 Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015_compressed.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Follow BS 8558 installation code of practice',
@@ -1509,6 +1525,22 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
       'Do not use excessive force when jointing',
       'Do not mix with incompatible pipe materials',
       'Do not ignore manufacturer installation guides',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'اتبع مدونة ممارسات التركيب BS 8558',
+      'استخدم فقط مركبات التوصيل المعتمدة',
+      'أجرِ اختبارات الضغط وفقاً لـ BS EN 805',
+      'وفر كتل دعم عند المنحنيات والتفرعات',
+      'اسمح بالتمدد الحراري في المسارات الطويلة',
+    ],
+    donts: [
+      'لا تستخدم للمياه الساخنة فوق 25 درجة مئوية',
+      'لا تركّب بدون فرشة مناسبة',
+      'لا تستخدم قوة مفرطة عند التوصيل',
+      'لا تخلط مع مواد أنابيب غير متوافقة',
+      'لا تتجاهل أدلة تركيب الشركة المصنعة',
     ],
   },
 };
@@ -2177,16 +2209,16 @@ const astmD2466Fittings: Fitting[] = [
 export const pvcPressureAstmD2466: ProductDetailConfig = {
   slug: 'pvc-pressure-astm-d2466',
   categorySlug: 'upvc-pressure',
-  
+
   title: 'PVC Pressure Pipes & Fittings ASTM D 2466 SCH-40',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار ASTM D 2466 SCH-40',
-  
+
   shortDescription: 'American standard Schedule 40 PVC pressure pipes and fittings. Socket-type fittings with solvent cement joints for industrial and commercial applications.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الأمريكي Schedule 40.',
-  
+
   overview: 'Crown Plastic Pipes offers a complete range of Schedule 40 PVC pipes and fittings manufactured to ASTM D 2466 specifications. The Schedule 40 wall thickness provides excellent pressure ratings while maintaining economical installation costs. Ideal for industrial process piping, chemical handling, and high-demand commercial applications.',
   overviewAr: 'تقدم كراون للأنابيب البلاستيكية مجموعة كاملة من أنابيب وتوصيلات PVC بمواصفات Schedule 40 المصنعة وفقاً لمواصفات ASTM D 2466.',
-  
+
   features: [
     'Conforms to ASTM D 2466 standard',
     'Schedule 40 wall thickness',
@@ -2207,7 +2239,7 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
     'لون رمادي لسهولة التعرف',
     'متوفر بمقاسات البوصة',
   ],
-  
+
   applications: [
     'Industrial process piping',
     'Chemical handling systems',
@@ -2228,7 +2260,7 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
     'تعويض أبراج التبريد',
     'مرافق التصنيع',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from ASTM D 2466 catalogue
   // ───────────────────────────────────────────────────────────────────────────
@@ -2248,16 +2280,16 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // ASTM D 2466 Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: astmD2466Fittings,
-  
+
   downloads: [
     { label: 'ASTM D 2466 Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20ASTM%20D%202466%20SCH-40_compressed.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use ASTM D 2564 PVC solvent cement',
@@ -2272,6 +2304,22 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
       'Do not expose to direct flame or heat guns',
       'Do not use petroleum-based lubricants',
       'Do not subject to sudden pressure surges',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'استخدم لاصق مذيب PVC وفقاً لـ ASTM D 2564',
+      'جهّز الوصلات بالبرايمر البنفسجي حسب الكود',
+      'اترك وقت معالجة مناسب حسب درجة الحرارة',
+      'اتبع إجراءات المناولة وفقاً لـ ASTM F 402',
+      'استخدم جدول 80 للتوصيلات الملولبة',
+    ],
+    donts: [
+      'لا تستخدم للغازات المضغوطة',
+      'لا تلولب توصيلات جدول 40',
+      'لا تعرّض للّهب المباشر أو مسدسات الحرارة',
+      'لا تستخدم مواد تشحيم بترولية',
+      'لا تعرّض لارتفاعات ضغط مفاجئة',
     ],
   },
 };

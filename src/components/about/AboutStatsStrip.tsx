@@ -1,17 +1,18 @@
 'use client';
 
 import { LucideIcon } from 'lucide-react';
-import { useEffect, useRef, useCallback } from 'react';
-import { 
-  Calendar, 
-  Package, 
-  Shield, 
-  Globe, 
-  Users, 
+import { useEffect, useRef, useCallback, useMemo } from 'react';
+import {
+  Calendar,
+  Package,
+  Shield,
+  Globe,
+  Users,
   Award,
   Droplet,
   MapPin
 } from 'lucide-react';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // ABOUT STATS STRIP COMPONENT
@@ -43,20 +44,21 @@ interface AboutStatsStripProps {
 // ABOUT-SPECIFIC STATS DATA
 // Update this array to modify the stats displayed in the About page strip
 // ═══════════════════════════════════════════════════════════════════════════════
-const aboutStatsData: AboutStatItem[] = [
-  { icon: Calendar, value: '1995', label: 'Established in UAE' },
-  { icon: Award, value: '30+ Years', label: 'GCC Excellence' },
-  { icon: Package, value: '5,000+ SKUs', label: 'UPVC / PPRC / HDPE' },
-  { icon: Shield, value: 'ISO Certified', label: '9001 • 14001 • 45001' },
-  { icon: Droplet, value: '100% Virgin', label: 'uPVC Raw Material' },
-  { icon: Globe, value: 'GCC + Export', label: 'Regional & International' },
-  { icon: Users, value: '10,000+', label: 'Projects Completed' },
-  { icon: MapPin, value: '6 Countries', label: 'GCC Presence' },
-];
+const STAT_ICONS = [Calendar, Award, Package, Shield, Droplet, Globe, Users, MapPin];
+const STAT_KEYS = ['established', 'excellence', 'skus', 'iso', 'materials', 'export', 'projects', 'presence'];
 
 export default function AboutStatsStrip({
   loopDurationMs = 20000,
 }: AboutStatsStripProps) {
+  const t = useT();
+  const aboutStatsData: AboutStatItem[] = useMemo(() =>
+    STAT_KEYS.map((key, i) => ({
+      icon: STAT_ICONS[i],
+      value: t(`about.stats.${key}.value` as any),
+      label: t(`about.stats.${key}.label` as any),
+    })),
+    [t]);
+
   const scrollerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
   const isPausedRef = useRef(false);
@@ -72,7 +74,7 @@ export default function AboutStatsStrip({
 
     const scroller = scrollerRef.current;
     const totalWidth = scroller.scrollWidth / 2; // Half because we have 2 copies
-    
+
     // Calculate speed: pixels per frame (assuming 60fps)
     const pixelsPerMs = totalWidth / loopDurationMs;
     const pixelsPerFrame = pixelsPerMs * (1000 / 60); // ~16.67ms per frame

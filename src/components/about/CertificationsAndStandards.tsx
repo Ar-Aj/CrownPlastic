@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import { motion, useInView, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { certifications, standards, type Certification, type Standard } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CERTIFICATIONS & STANDARDS - Interactive Drawer Section
@@ -17,8 +18,44 @@ export default function CertificationsAndStandards() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
-  const selectedCert = certifications.find((c) => c.id === activeCert);
+  // Translate certification names/scope/body/benefit
+  const translatedCerts = useMemo(() =>
+    certifications.map((c) => ({
+      ...c,
+      name: t(`about.certifications.items.${c.id}.name` as any),
+      scope: t(`about.certifications.items.${c.id}.scope` as any),
+      issuingBody: t(`about.certifications.items.${c.id}.issuing_body` as any),
+      benefit: t(`about.certifications.items.${c.id}.benefit` as any),
+    })),
+    [t]);
+
+  // Map standard codes to dictionary keys
+  const STANDARD_CODE_TO_KEY: Record<string, string> = {
+    'BS EN 1452': 'bs_en',
+    'DIN 8061/8062': 'din',
+    'ISO 4422': 'iso',
+    'ASTM D1785': 'astm',
+    'SASO': 'saso',
+    'NEMA TC-2': 'nema',
+  };
+
+  // Translate standard names/application/productTypes
+  const translatedStandards = useMemo(() =>
+    standards.map((s) => {
+      const key = STANDARD_CODE_TO_KEY[s.code];
+      if (!key) return s;
+      return {
+        ...s,
+        name: t(`about.certifications.standards_table.items.${key}.name` as any),
+        application: t(`about.certifications.standards_table.items.${key}.application` as any),
+        productTypes: t(`about.certifications.standards_table.items.${key}.product_types` as any),
+      };
+    }),
+    [t]);
+
+  const selectedCert = translatedCerts.find((c) => c.id === activeCert);
 
   return (
     <section
@@ -34,13 +71,13 @@ export default function CertificationsAndStandards() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-            Quality Assurance
+            {t('about.certifications.badge')}
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Certifications & Standards
+            {t('about.certifications.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Internationally recognized certifications ensuring product quality, safety, and environmental compliance
+            {t('about.certifications.description')}
           </p>
         </motion.div>
 
@@ -51,7 +88,7 @@ export default function CertificationsAndStandards() {
           transition={{ duration: 0.3, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {certifications.map((cert, index) => (
+          {translatedCerts.map((cert, index) => (
             <CertificationPill
               key={cert.id}
               cert={cert}
@@ -78,6 +115,7 @@ export default function CertificationsAndStandards() {
                 cert={selectedCert}
                 onClose={() => setActiveCert(null)}
                 prefersReducedMotion={prefersReducedMotion}
+                t={t}
               />
             </motion.div>
           )}
@@ -89,7 +127,7 @@ export default function CertificationsAndStandards() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <StandardsTable standards={standards} />
+          <StandardsTable standards={translatedStandards} t={t} />
         </motion.div>
       </div>
     </section>
@@ -162,7 +200,7 @@ interface CertificationDetailsProps {
   prefersReducedMotion: boolean | null;
 }
 
-function CertificationDetails({ cert, onClose, prefersReducedMotion }: CertificationDetailsProps) {
+function CertificationDetails({ cert, onClose, prefersReducedMotion, t }: CertificationDetailsProps & { t: ReturnType<typeof useT> }) {
   return (
     <motion.div
       initial={prefersReducedMotion ? {} : { y: -20 }}
@@ -193,7 +231,7 @@ function CertificationDetails({ cert, onClose, prefersReducedMotion }: Certifica
         {/* Scope */}
         <div className="p-4 rounded-xl bg-gray-50">
           <span className="text-xs uppercase tracking-wider text-gray-500 font-medium block mb-2">
-            Scope
+            {t('about.certifications.drawer_labels.scope')}
           </span>
           <p className="text-gray-700">{cert.scope}</p>
         </div>
@@ -201,7 +239,7 @@ function CertificationDetails({ cert, onClose, prefersReducedMotion }: Certifica
         {/* Issuing Body */}
         <div className="p-4 rounded-xl bg-gray-50">
           <span className="text-xs uppercase tracking-wider text-gray-500 font-medium block mb-2">
-            Issuing Body
+            {t('about.certifications.drawer_labels.issuing_body')}
           </span>
           <p className="text-gray-700">{cert.issuingBody}</p>
         </div>
@@ -209,7 +247,7 @@ function CertificationDetails({ cert, onClose, prefersReducedMotion }: Certifica
         {/* Customer Benefit */}
         <div className="p-4 rounded-xl bg-primary/5 border border-primary/20">
           <span className="text-xs uppercase tracking-wider text-primary font-medium block mb-2">
-            Customer Benefit
+            {t('about.certifications.drawer_labels.benefit')}
           </span>
           <p className="text-gray-700">{cert.benefit}</p>
         </div>
@@ -224,15 +262,16 @@ function CertificationDetails({ cert, onClose, prefersReducedMotion }: Certifica
 
 interface StandardsTableProps {
   standards: Standard[];
+  t: ReturnType<typeof useT>;
 }
 
-function StandardsTable({ standards }: StandardsTableProps) {
+function StandardsTable({ standards, t }: StandardsTableProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
       {/* Table Header */}
       <div className="px-6 py-4 bg-gray-50 border-b border-gray-100">
-        <h3 className="text-lg font-bold text-gray-900">Standards Compliance</h3>
-        <p className="text-sm text-gray-500">Product specifications across international standards</p>
+        <h3 className="text-lg font-bold text-gray-900">{t('about.certifications.standards_table.title')}</h3>
+        <p className="text-sm text-gray-500">{t('about.certifications.standards_table.subtitle')}</p>
       </div>
 
       {/* Table Content */}
@@ -241,16 +280,16 @@ function StandardsTable({ standards }: StandardsTableProps) {
           <thead>
             <tr className="border-b border-gray-100">
               <th className="px-6 py-4 text-left text-xs uppercase tracking-wider text-gray-500 font-semibold">
-                Standard
+                {t('about.certifications.standards_table.headers.standard')}
               </th>
               <th className="px-6 py-4 text-left text-xs uppercase tracking-wider text-gray-500 font-semibold hidden md:table-cell">
-                Name
+                {t('about.certifications.standards_table.headers.name')}
               </th>
               <th className="px-6 py-4 text-left text-xs uppercase tracking-wider text-gray-500 font-semibold">
-                Application
+                {t('about.certifications.standards_table.headers.application')}
               </th>
               <th className="px-6 py-4 text-left text-xs uppercase tracking-wider text-gray-500 font-semibold hidden lg:table-cell">
-                Product Types
+                {t('about.certifications.standards_table.headers.product_types')}
               </th>
             </tr>
           </thead>
@@ -281,7 +320,7 @@ function StandardsTable({ standards }: StandardsTableProps) {
 
       {/* Mobile View Enhancement */}
       <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 text-center md:hidden">
-        <span className="text-sm text-gray-500">Scroll horizontally for more details</span>
+        <span className="text-sm text-gray-500">{t('about.certifications.standards_table.scroll_hint')}</span>
       </div>
     </div>
   );

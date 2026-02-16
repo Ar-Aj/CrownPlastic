@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import CrownButton from '@/components/ui/crown/CrownButton';
 import Icon from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // COMPANY PROFILE STRIP - Closing Section with CTAs
@@ -15,6 +16,7 @@ export default function CompanyProfileStrip() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   return (
     <section
@@ -40,10 +42,10 @@ export default function CompanyProfileStrip() {
             className="text-center mb-8"
           >
             <span className="inline-block px-4 py-1 bg-white/10 text-white/90 text-sm font-medium rounded-full mb-4 border border-white/20">
-              Company Profile
+              {t('about.profile.badge')}
             </span>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Crown Plastic Pipes Factory L.L.C.
+              {t('about.profile.title')}
             </h2>
           </motion.div>
 
@@ -55,15 +57,10 @@ export default function CompanyProfileStrip() {
             className="text-center mb-10"
           >
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-6">
-              Established in 1995 in Sharjah, UAE, Crown Plastic Pipes Factory L.L.C. has grown into a leading
-              manufacturer of high-quality plastic piping systems for the GCC region. With over 5,000 product
-              variants across UPVC, PPR, and HDPE categories, we serve diverse sectors including irrigation,
-              construction, plumbing, and infrastructure development.
+              {t('about.profile.text_1')}
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
-              Our ISO-certified manufacturing facility, equipped with European Battenfeld extrusion technology
-              and in-house testing laboratories, ensures every product meets international standards
-              (BS EN, DIN, ISO, ASTM, SASO) and is specifically engineered for Gulf climate conditions.
+              {t('about.profile.text_2')}
             </p>
           </motion.div>
 
@@ -74,10 +71,10 @@ export default function CompanyProfileStrip() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10"
           >
-            <HighlightStat value="30+" label="Years Experience" />
-            <HighlightStat value="5,000+" label="Product Variants" />
-            <HighlightStat value="10,000+" label="Customers" />
-            <HighlightStat value="6+" label="GCC Markets" />
+            <HighlightStat value="30+" label={t('about.profile.highlights.experience')} />
+            <HighlightStat value="5,000+" label={t('about.profile.highlights.variants')} />
+            <HighlightStat value="10,000+" label={t('about.profile.highlights.customers')} />
+            <HighlightStat value="6+" label={t('about.profile.highlights.markets')} />
           </motion.div>
 
           {/* CTAs */}
@@ -94,7 +91,7 @@ export default function CompanyProfileStrip() {
               className="group"
             >
               <Icon name="download" size={20} />
-              <span>Download Technical Catalogue</span>
+              <span>{t('about.profile.cta.download')}</span>
             </CrownButton>
             <CrownButton
               href="/contact-us"
@@ -103,7 +100,7 @@ export default function CompanyProfileStrip() {
               className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-gray-900"
             >
               <Icon name="phone" size={20} />
-              <span>Contact Technical Team</span>
+              <span>{t('about.profile.cta.contact')}</span>
             </CrownButton>
           </motion.div>
 
@@ -117,18 +114,18 @@ export default function CompanyProfileStrip() {
             <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-white/60">
               <div className="flex items-center gap-2">
                 <Icon name="location" size={16} className="text-primary" />
-                <span>Sharjah, UAE</span>
+                <span>{t('about.profile.contact_info.address')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="phone" size={16} className="text-primary" />
-                <a href="tel:+97165314488" className="hover:text-white transition-colors">
-                  +971 6 531 4488
+                <a href="tel:+97165436781" className="hover:text-white transition-colors">
+                  +971 6 543 6781
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="email" size={16} className="text-primary" />
-                <a href="mailto:info@crownpipes.com" className="hover:text-white transition-colors">
-                  info@crownpipes.com
+                <a href="mailto:info@crownplasticuae.com" className="hover:text-white transition-colors">
+                  info@crownplasticuae.com
                 </a>
               </div>
             </div>

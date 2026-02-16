@@ -154,13 +154,13 @@ const sch80PipesTables: PipeTable[] = [
 export const upvcConduitSch40: ProductDetailConfig = {
   slug: 'upvc-conduit-sch-40',
   categorySlug: 'pvc-conduit',
-  
+
   title: 'UPVC Conduit Pipes – SCH 40',
   titleAr: 'أنابيب قنوات UPVC – SCH 40',
-  
+
   shortDescription: 'Schedule 40 PVC conduit pipes for US market applications. Designed for electrical conduit installations with standard wall thickness, available in trade sizes from 1/2" to 6".',
   shortDescriptionAr: 'أنابيب قنوات PVC جدول 40 لتطبيقات السوق الأمريكي. مصممة لتركيبات القنوات الكهربائية بسماكة جدار قياسية.',
-  
+
   overview: `The SCHEDULE 40 CONDUIT is a type of PVC conduit pipe listed for the US market, indicated by the 'US' designation and the use of Trade Dimensions (e.g., 1/2", 3/4", 1").
 
 This document primarily covers PVC Conduit Pipes, including both heavy-duty and light-duty round conduits based on compression force (1250N, 750N, 320N) and the US-standard SCHEDULE 40 and SCHEDULE 80 conduits.
@@ -178,7 +178,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 • الجدول: SCH 40 (جدار قياسي)
 • النظام: نظام قنوات ثقيل/خفيف (مقاسات تجارية أمريكية)
 • المعايير: ISO 9001:2015، ISO 18001`,
-  
+
   features: [
     'Designed for electrical conduit applications in US trade sizes',
     'Consistent dimensional control for reliable installations',
@@ -196,7 +196,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'مقاوم للتآكل ولا يحتاج صيانة',
     'خفيف الوزن لسهولة المناولة والتركيب',
   ],
-  
+
   applications: sharedApplications,
   applicationsAr: [
     'حماية الأسلاك الكهربائية في المشاريع التجارية والسكنية',
@@ -204,22 +204,22 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'تركيبات القنوات الكهربائية تحت الأرض',
     'أنظمة حماية كابلات الاتصالات',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from UPVC CONDUIT PIPE.txt JSON)
   // 4 tables: Schedule 40, Heavy Grade, Medium Grade, Light Grade
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch40PipesTables,
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (conduit is pipe-only for now)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
-  
+
   downloads: [
     { label: 'UPVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use appropriate solvent cement for joining conduit pipes',
@@ -236,6 +236,22 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
       'Do not use for compressed air or fluid transport',
     ],
   },
+  dosDontsAr: {
+    dos: [
+      'استخدم لاصق مذيب مناسب لتوصيل أنابيب القنوات',
+      'تأكد من الدعم والتثبيت المناسب على فترات موصى بها',
+      'اسمح بالتمدد الحراري في المسارات الطويلة',
+      'استخدم صناديق السحب على فترات مناسبة لمسارات الكابلات الطويلة',
+      'اتبع أكواد الكهرباء المحلية للتركيب',
+    ],
+    donts: [
+      'لا تعرّض لأشعة الشمس المباشرة لفترات طويلة بدون حماية من الأشعة فوق البنفسجية',
+      'لا تتجاوز الحد الأقصى لسعة ملء الكابلات',
+      'لا تستخدم قنوات تالفة أو متشققة',
+      'لا تخلط مع أنظمة قنوات غير متوافقة',
+      'لا تستخدم للهواء المضغوط أو نقل السوائل',
+    ],
+  },
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -245,13 +261,13 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 export const upvcConduitSch80: ProductDetailConfig = {
   slug: 'upvc-conduit-sch-80',
   categorySlug: 'pvc-conduit',
-  
+
   title: 'UPVC Conduit Pipes – SCH 80',
   titleAr: 'أنابيب قنوات UPVC – SCH 80',
-  
+
   shortDescription: 'Schedule 80 heavy-duty PVC conduit pipes for US market applications. Features thicker walls compared to SCH 40 for demanding installations requiring extra protection.',
   shortDescriptionAr: 'أنابيب قنوات PVC جدول 80 ثقيلة الاستخدام لتطبيقات السوق الأمريكي. تتميز بجدران أكثر سماكة مقارنة بجدول 40.',
-  
+
   overview: `The SCHEDULE 80 CONDUIT is a heavy-duty PVC conduit pipe for the US market, featuring thicker walls compared to SCH 40 for demanding installations requiring extra protection and mechanical strength.
 
 This document primarily covers PVC Conduit Pipes, including both heavy-duty and light-duty round conduits based on compression force (1250N, 750N, 320N) and the US-standard SCHEDULE 40 and SCHEDULE 80 conduits.
@@ -269,7 +285,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 • الجدول: SCH 80 (استخدام ثقيل / جدار سميك إضافي)
 • النظام: نظام قنوات ثقيل (مقاسات تجارية أمريكية)
 • المعايير: ISO 9001:2015، ISO 18001`,
-  
+
   features: [
     'Heavy-duty construction with thicker walls than SCH 40',
     'Enhanced mechanical protection for demanding environments',
@@ -289,7 +305,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'خصائص عزل كهربائي ممتازة',
     'مقاوم للتآكل ولا يحتاج صيانة',
   ],
-  
+
   applications: [
     'Protection of electrical wiring in commercial and industrial facilities',
     'Underground and direct burial electrical installations',
@@ -305,22 +321,22 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'المناطق التي تتطلب حماية ميكانيكية عالية',
     'مسارات القنوات الكهربائية المغلفة بالخرسانة',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from UPVC CONDUIT PIPE.txt JSON)
   // 1 table: Schedule 80
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch80PipesTables,
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (conduit is pipe-only for now)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
-  
+
   downloads: [
     { label: 'UPVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use appropriate solvent cement for joining conduit pipes',
@@ -336,6 +352,23 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
       'Do not use damaged or cracked conduit',
       'Do not mix SCH 80 with SCH 40 in the same run without proper transitions',
       'Do not use for compressed air or fluid transport',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'استخدم لاصق مذيب مناسب لتوصيل أنابيب القنوات',
+      'تأكد من الدعم والتثبيت المناسب على فترات موصى بها',
+      'اسمح بالتمدد الحراري في المسارات الطويلة',
+      'استخدم صناديق السحب على فترات مناسبة لمسارات الكابلات الطويلة',
+      'اتبع أكواد الكهرباء المحلية للتركيب',
+      'استخدم توصيلات جدول 80 مع قنوات جدول 80 لسماكة جدار متسقة',
+    ],
+    donts: [
+      'لا تعرّض لأشعة الشمس المباشرة لفترات طويلة بدون حماية من الأشعة فوق البنفسجية',
+      'لا تتجاوز الحد الأقصى لسعة ملء الكابلات',
+      'لا تستخدم قنوات تالفة أو متشققة',
+      'لا تخلط جدول 80 مع جدول 40 في نفس المسار بدون انتقالات مناسبة',
+      'لا تستخدم للهواء المضغوط أو نقل السوائل',
     ],
   },
 };

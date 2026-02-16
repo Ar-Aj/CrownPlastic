@@ -34,13 +34,13 @@ const typeAConstructionTable: PipeTable = {
 export const greaseTrapTypeA: ProductDetailConfig = {
   slug: 'pvc-upvc-grease-trap-type-a',
   categorySlug: 'fabrications',
-  
+
   title: 'PVC/UPVC Grease Trap – Type A',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع A',
-  
+
   shortDescription: 'Type A Grease Trap featuring a single removable PVC perforated bucket (450mm deep) for solid waste collection, with a GRP sealed cover (1070×820×15mm THK) and brass wing nut/bolt securing.',
   shortDescriptionAr: 'مصيدة شحوم النوع A مع دلو PVC مثقب قابل للإزالة بعمق 450 مم وغطاء GRP محكم.',
-  
+
   overview: `Type A is a Grease Trap design featuring a single removable PVC perforated bucket (450mm deep) for solid waste collection, with a GRP sealed cover (1070×820×15mm THK). It includes a 10×30 BRASS WING NUT/BOLT and a 5mm THICK NEOPRENE GASKET for sealing.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
@@ -53,7 +53,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Hardware: 10×30 BRASS WING NUT/BOLT
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
-  
+
   features: [
     'Removable PVC perforated bucket (450mm deep)',
     'Bucket has 25 holes in four rows each side',
@@ -63,7 +63,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Custom built product based on waste water and site condition',
     'Removable perforated bucket for solid waste collection',
   ],
-  
+
   applications: [
     'Grease Traps, as per Dubai Municipality approved drawing',
     'Commercial kitchen waste management',
@@ -72,14 +72,14 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Grease Traps (Types A, B, C, D)',
     'Petrol/Oil and Water Triple Interceptor',
   ],
-  
+
   pipesTables: [typeAConstructionTable],
   fittings: [],
-  
+
   downloads: [
     { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Install as per Dubai Municipality approved drawings',
@@ -94,6 +94,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'Do not neglect regular maintenance and cleaning schedules',
       'Do not modify the design without engineering approval',
       'Do not dispose of hazardous materials through grease traps',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'ركّب وفقاً لرسومات بلدية دبي المعتمدة',
+      'نظّف وصُن الدلو المثقب الفردي بانتظام',
+      'تأكد من إحكام حشية النيوبرين عند إعادة التجميع',
+      'استخدم معدات رفع مناسبة لغطاء GRP (1070×820 مم)',
+      'جدوِل فحوصات دورية لتراكم الشحوم',
+    ],
+    donts: [
+      'لا تُحمّل النفايات الصلبة فوق السعة التصميمية',
+      'لا تستخدم مواد كيميائية غير متوافقة قد تضر بالـ PVC/UPVC',
+      'لا تهمل جداول الصيانة والتنظيف المنتظمة',
+      'لا تعدّل التصميم بدون موافقة هندسية',
+      'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
 };
@@ -123,13 +139,13 @@ const typeBConstructionTable: PipeTable = {
 export const greaseTrapTypeB: ProductDetailConfig = {
   slug: 'pvc-upvc-grease-trap-type-b',
   categorySlug: 'fabrications',
-  
+
   title: 'PVC/UPVC Grease Trap – Type B',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع B',
-  
+
   shortDescription: 'Type B Grease Trap similar to Type A but featuring two removable PVC perforated buckets (260mm deep). The system includes Lifting Handles for easier maintenance access.',
   shortDescriptionAr: 'مصيدة شحوم النوع B بدلوين PVC مثقبين قابلين للإزالة بعمق 260 مم مع مقابض رفع.',
-  
+
   overview: `Type B is a Grease Trap design similar to Type A but featuring two removable PVC perforated buckets (260mm deep). The system includes a Lifting Handle and components like a 5mm THICK GASKET and GRP COVER.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
@@ -143,7 +159,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Gasket: 5mm thick gasket
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
-  
+
   features: [
     'Removable PVC perforated two bucket system (260mm deep)',
     'Buckets have 25 holes in four rows each side',
@@ -153,7 +169,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Custom built product based on waste water and site condition',
     'Dual removable perforated buckets for solid waste collection',
   ],
-  
+
   applications: [
     'Grease Traps, as per Dubai Municipality approved drawing',
     'Commercial kitchen waste management requiring frequent access',
@@ -162,14 +178,14 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Grease Traps (Types A, B, C, D)',
     'Petrol/Oil and Water Triple Interceptor',
   ],
-  
+
   pipesTables: [typeBConstructionTable],
   fittings: [],
-  
+
   downloads: [
     { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Install as per Dubai Municipality approved drawings',
@@ -184,6 +200,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'Do not neglect regular maintenance of dual bucket system',
       'Do not modify the design without engineering approval',
       'Do not dispose of hazardous materials through grease traps',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'ركّب وفقاً لرسومات بلدية دبي المعتمدة',
+      'نظّف وصُن كلا الدلوين المثقبين بانتظام',
+      'استخدم مقابض الرفع عند إزالة الدلاء للتنظيف',
+      'تأكد من إحكام حشية 5 مم عند إعادة التجميع',
+      'جدوِل فحوصات دورية لتراكم الشحوم في كلا الدلوين',
+    ],
+    donts: [
+      'لا تُحمّل أياً من الدلاء بالنفايات الصلبة فوق السعة التصميمية',
+      'لا تستخدم مواد كيميائية غير متوافقة قد تضر بالـ PVC/UPVC',
+      'لا تهمل الصيانة المنتظمة لنظام الدلو المزدوج',
+      'لا تعدّل التصميم بدون موافقة هندسية',
+      'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
 };
@@ -214,13 +246,13 @@ const typeCConstructionTable: PipeTable = {
 export const greaseTrapTypeC: ProductDetailConfig = {
   slug: 'pvc-upvc-grease-trap-type-c',
   categorySlug: 'fabrications',
-  
+
   title: 'PVC/UPVC Grease Trap – Type C',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع C',
-  
+
   shortDescription: 'Type C Grease Trap notable for its large size (1980mm overall length) and inclusion of a BAFFLE for enhanced grease separation. Uses a removable PVC perforated bucket with 25 holes in five rows.',
   shortDescriptionAr: 'مصيدة شحوم النوع C كبيرة الحجم بطول 1980 مم مع جدار حاجز داخلي لفصل الشحوم المحسن.',
-  
+
   overview: `Type C is a Grease Trap design notable for its large size (1980mm overall length) and inclusion of a BAFFLE. It uses a removable PVC perforated bucket with 25 holes in five rows.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
@@ -235,7 +267,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Gasket: 5mm THICK NEOPRENE GASKET
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
-  
+
   features: [
     'Includes a baffle wall for enhanced grease separation',
     'Removable PVC perforated bucket with 25 holes in five rows',
@@ -245,7 +277,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Custom built product based on waste water and site condition',
     'Removable perforated bucket for solid waste collection',
   ],
-  
+
   applications: [
     'Grease Traps, as per Dubai Municipality approved drawing',
     'Large-volume commercial kitchen waste management',
@@ -254,14 +286,14 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Grease Traps (Types A, B, C, D)',
     'Petrol/Oil and Water Triple Interceptor',
   ],
-  
+
   pipesTables: [typeCConstructionTable],
   fittings: [],
-  
+
   downloads: [
     { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Install as per Dubai Municipality approved drawings',
@@ -276,6 +308,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'Do not neglect cleaning the baffle wall area',
       'Do not modify the baffle design without engineering approval',
       'Do not dispose of hazardous materials through grease traps',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'ركّب وفقاً لرسومات بلدية دبي المعتمدة',
+      'نظّف وصُن الدلو المثقب والجدار الحاجز بانتظام',
+      'تأكد من إحكام حشية النيوبرين عند إعادة التجميع',
+      'وفّر مساحة كافية للطول الإجمالي 1980 مم عند التركيب',
+      'جدوِل فحوصات دورية لتراكم الشحوم خلف الجدار الحاجز',
+    ],
+    donts: [
+      'لا تُحمّل النفايات الصلبة فوق السعة التصميمية',
+      'لا تستخدم مواد كيميائية غير متوافقة قد تضر بالـ PVC/UPVC أو الحاجز',
+      'لا تهمل تنظيف منطقة الجدار الحاجز',
+      'لا تعدّل تصميم الحاجز بدون موافقة هندسية',
+      'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
 };
@@ -306,13 +354,13 @@ const typeDConstructionTable: PipeTable = {
 export const greaseTrapTypeD: ProductDetailConfig = {
   slug: 'pvc-upvc-grease-trap-type-d',
   categorySlug: 'fabrications',
-  
+
   title: 'PVC/UPVC Grease Trap – Type D',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع D',
-  
+
   shortDescription: 'Type D Grease Trap featuring a GRP SEALED COVER (670×670×15mm THICK) secured by WING NUTS (24 NOS). Uses a smaller, removable PVC perforated bucket (360×360×300mm DEEP) with 12mm holes in 3 rows.',
   shortDescriptionAr: 'مصيدة شحوم النوع D بغطاء GRP محكم 670×670×15 مم مثبت بـ 24 صامولة جناحية.',
-  
+
   overview: `Type D is a Grease Trap design featuring a GRP SEALED COVER (670×670×15mm THICK) secured by WING NUTS. It uses a smaller, removable PVC perforated bucket (360×360×300mm DEEP) with 12mm holes in 3 rows.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
@@ -327,7 +375,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Bucket Perforations: 12mm holes in 3 rows each
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
-  
+
   features: [
     'GRP sealed cover (670×670×15mm THICK)',
     'Cover secured by 055 (2") AIR VENT WING NUTS (24 NOS)',
@@ -337,7 +385,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Custom built product based on waste water and site condition',
     'Smaller removable perforated bucket for solid waste collection',
   ],
-  
+
   applications: [
     'Grease Traps, as per Dubai Municipality approved drawing',
     'Compact installation sites with space constraints',
@@ -346,14 +394,14 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
     'Grease Traps (Types A, B, C, D)',
     'Petrol/Oil and Water Triple Interceptor',
   ],
-  
+
   pipesTables: [typeDConstructionTable],
   fittings: [],
-  
+
   downloads: [
     { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Install as per Dubai Municipality approved drawings',
@@ -368,6 +416,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'Do not over-tighten wing nuts on GRP cover',
       'Do not modify the design without engineering approval',
       'Do not dispose of hazardous materials through grease traps',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'ركّب وفقاً لرسومات بلدية دبي المعتمدة',
+      'نظّف وصُن الدلو المثقب المدمج بانتظام',
+      'ثبّت جميع الصامولات الجناحية الـ 24 بشكل صحيح عند إعادة التجميع',
+      'تأكد من عدم انسداد فتحة التهوية 2 بوصة',
+      'جدوِل فحوصات دورية لتراكم الشحوم',
+    ],
+    donts: [
+      'لا تُحمّل الدلو المدمج فوق السعة التصميمية',
+      'لا تستخدم مواد كيميائية غير متوافقة قد تضر بالـ PVC/UPVC',
+      'لا تُفرط في شد الصامولات الجناحية على غطاء GRP',
+      'لا تعدّل التصميم بدون موافقة هندسية',
+      'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
 };

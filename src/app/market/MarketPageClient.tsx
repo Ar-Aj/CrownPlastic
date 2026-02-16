@@ -8,8 +8,8 @@
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring, useInView, useMotionValue, Variants } from 'framer-motion';
-import { 
-  Award, Truck, BadgeDollarSign, Wrench, Phone, Mail, 
+import {
+  Award, Truck, BadgeDollarSign, Wrench, Phone, Mail,
   ArrowRight, ChevronUp, Shield, CheckCircle2, Star,
   Building2, FileCheck, Zap, Package, ExternalLink
 } from 'lucide-react';
@@ -17,6 +17,8 @@ import { RegionalMarket } from '@/config/markets';
 import { BreadcrumbSchema } from '@/components/schemas';
 import { LocalBusinessRatingSchema } from '@/components/schemas/ReviewSchema';
 import { TechnicalGuideSchema } from '@/components/schemas/ArticleSchema';
+import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -37,8 +39,8 @@ const staggerContainer: Variants = {
 
 const fadeUpVariant: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.6 }
   },
@@ -46,7 +48,7 @@ const fadeUpVariant: Variants = {
 
 const fadeInVariant: Variants = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
     transition: { duration: 0.5 }
   },
@@ -54,8 +56,8 @@ const fadeInVariant: Variants = {
 
 const scaleInVariant: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
     transition: { duration: 0.5 }
   },
@@ -76,7 +78,7 @@ function AnimatedCounter({ value, suffix = '', duration = 2 }: { value: number; 
 
   useEffect(() => {
     if (!isInView) return;
-    
+
     let startTime: number;
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
@@ -146,7 +148,7 @@ function GradientMesh() {
     <div className="absolute inset-0 overflow-hidden">
       {/* Primary gradient mesh */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900" />
-      
+
       {/* Animated gradient orbs */}
       <motion.div
         className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-blue-600/30 to-cyan-500/20 blur-3xl"
@@ -186,7 +188,7 @@ function GradientMesh() {
           ease: 'linear',
         }}
       />
-      
+
       {/* Noise texture overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50" />
     </div>
@@ -239,9 +241,9 @@ function GlassStatCard({ value, suffix, label, delay = 0 }: { value: number; suf
     >
       <TiltCard className="group">
         <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 overflow-hidden">
-          {/* Gradient border effect on hover */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500/0 via-amber-500/0 to-cyan-500/0 group-hover:from-amber-500/20 group-hover:via-transparent group-hover:to-cyan-500/20 transition-all duration-500" />
-          
+          {/* Subtle blue border glow on hover */}
+          <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-400/30 transition-all duration-500" />
+
           <div className="relative text-center">
             <div className="text-4xl font-bold text-white mb-1">
               <AnimatedCounter value={value} suffix={suffix} />
@@ -259,6 +261,7 @@ function GlassStatCard({ value, suffix, label, delay = 0 }: { value: number; suf
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function CertificationBadge({ name, index }: { name: string; index: number }) {
+  const t = useT();
   return (
     <motion.div
       variants={fadeInVariant}
@@ -278,10 +281,10 @@ function CertificationBadge({ name, index }: { name: string; index: number }) {
         </motion.div>
         <span className="text-sm font-medium text-gray-200">{name}</span>
       </div>
-      
+
       {/* Hover tooltip */}
       <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 rounded-lg text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-white/10">
-        Certified Compliant
+        {t('markets.regional.certified_compliant')}
         <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-800 rotate-45 -mt-1 border-r border-b border-white/10" />
       </div>
     </motion.div>
@@ -292,16 +295,16 @@ function CertificationBadge({ name, index }: { name: string; index: number }) {
 // FEATURE CARD
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const featureIcons: Record<string, React.ElementType> = {
-  'Certified Quality': Award,
-  'Fast Delivery': Truck,
-  'Competitive Pricing': BadgeDollarSign,
-  'Technical Support': Wrench,
+const featureIconKeys: Record<string, React.ElementType> = {
+  certified_quality: Award,
+  fast_delivery: Truck,
+  competitive_pricing: BadgeDollarSign,
+  technical_support: Wrench,
 };
 
-function FeatureCard({ title, description, index }: { title: string; description: string; index: number }) {
-  const Icon = featureIcons[title] || Award;
-  
+function FeatureCard({ title, description, index, iconKey }: { title: string; description: string; index: number; iconKey?: string }) {
+  const Icon = (iconKey ? featureIconKeys[iconKey] : undefined) || Award;
+
   return (
     <motion.div
       variants={fadeUpVariant}
@@ -312,22 +315,19 @@ function FeatureCard({ title, description, index }: { title: string; description
     >
       <TiltCard>
         <div className="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 overflow-hidden h-full">
-          {/* Animated gradient border */}
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <div className="absolute inset-[1px] rounded-2xl bg-white" />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 animate-gradient-x" />
-          </div>
-          
+          {/* Subtle blue border glow on hover */}
+          <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-blue-500/40 transition-all duration-500" />
+
           <div className="relative">
             {/* Icon */}
-            <motion.div 
-              className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-blue-500/25"
+            <motion.div
+              className="w-14 h-14 bg-blue-900 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-blue-900/25"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
               <Icon className="w-7 h-7 text-white" />
             </motion.div>
-            
+
             <h3 className="font-bold text-gray-900 text-lg mb-2">{title}</h3>
             <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
           </div>
@@ -347,14 +347,14 @@ function DistrictTag({ name, index }: { name: string; index: number }) {
       initial={{ opacity: 0, scale: 0.8, y: 20 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ 
+      transition={{
         delay: index * 0.05,
         type: 'spring',
         stiffness: 400,
         damping: 25
       }}
-      whileHover={{ 
-        scale: 1.05, 
+      whileHover={{
+        scale: 1.05,
         y: -2,
         boxShadow: '0 10px 30px -10px rgba(0, 114, 188, 0.3)'
       }}
@@ -369,11 +369,12 @@ function DistrictTag({ name, index }: { name: string; index: number }) {
 // PRODUCT CARD
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function ProductCard({ product, index, isPopular = false }: { 
-  product: { name: string; href: string; desc: string }; 
+function ProductCard({ product, index, isPopular = false }: {
+  product: { name: string; href: string; desc: string };
   index: number;
   isPopular?: boolean;
 }) {
+  const t = useT();
   return (
     <motion.div
       variants={fadeUpVariant}
@@ -386,29 +387,29 @@ function ProductCard({ product, index, isPopular = false }: {
         <div className="relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 h-full overflow-hidden shadow-sm hover:shadow-lg">
           {/* Popular badge */}
           {isPopular && (
-            <motion.div 
+            <motion.div
               className="absolute -top-1 -right-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               <Star className="w-3 h-3 inline mr-1" />
-              Popular
+              {t('markets.regional.products.popular')}
             </motion.div>
           )}
-          
+
           {/* Icon placeholder */}
           <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl flex items-center justify-center mb-4 group-hover:from-blue-100 group-hover:to-blue-50 transition-colors">
             <Package className="w-6 h-6 text-gray-400 group-hover:text-blue-500 transition-colors" />
           </div>
-          
+
           <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
             {product.name}
           </h3>
           <p className="text-gray-500 text-sm mb-3">{product.desc}</p>
-          
+
           {/* View details link */}
           <div className="flex items-center gap-1 text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
-            View Details
+            {t('markets.regional.products.view_details')}
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
@@ -418,20 +419,7 @@ function ProductCard({ product, index, isPopular = false }: {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SCROLL PROGRESS BAR
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function ScrollProgress() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-  
-  return (
-    <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 origin-left z-50"
-      style={{ scaleX }}
-    />
-  );
-}
+// (ScrollProgress removed — not needed)
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // BACK TO TOP BUTTON
@@ -439,13 +427,13 @@ function ScrollProgress() {
 
 function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const toggleVisibility = () => setIsVisible(window.scrollY > 500);
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
-  
+
   return (
     <motion.button
       initial={{ opacity: 0, scale: 0.8 }}
@@ -465,8 +453,8 @@ function BackToTop() {
 // MAGNETIC BUTTON
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function MagneticButton({ children, href, variant = 'primary', className = '' }: { 
-  children: React.ReactNode; 
+function MagneticButton({ children, href, variant = 'primary', className = '' }: {
+  children: React.ReactNode;
   href: string;
   variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
@@ -518,7 +506,7 @@ function MagneticButton({ children, href, variant = 'primary', className = '' }:
 
 function AnimatedCheck({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
-    <motion.li 
+    <motion.li
       className="flex items-start gap-3"
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -547,45 +535,59 @@ interface MarketPageClientProps {
 }
 
 export default function MarketPageClient({ market }: MarketPageClientProps) {
+  const t = useT();
+  const { language } = useLanguage();
+  const isAr = language === 'ar';
   const pageUrl = `${baseUrl}/market/${market.slug}`;
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  
+
+  // Language-aware config fields
+  const marketTitle = isAr ? market.titleAr : market.title;
+  const marketDescription = isAr ? market.descriptionAr : market.description;
+  const marketCountry = isAr ? market.countryAr : market.country;
+  const marketCity = isAr ? (market.cityAr || market.countryAr) : (market.city || market.country);
+  const marketCtaText = isAr ? market.cta.textAr : market.cta.text;
+
   const breadcrumbItems = [
-    { name: 'Home', url: baseUrl },
-    { name: 'Markets', url: `${baseUrl}/market` },
-    { name: market.country, url: `${baseUrl}/market/${market.countryCode.toLowerCase()}` },
-    ...(market.city ? [{ name: market.city, url: pageUrl }] : []),
-    { name: market.title.split(' - ')[0], url: pageUrl },
+    { name: t('markets.regional.breadcrumb_home'), url: baseUrl },
+    { name: t('markets.regional.breadcrumb_markets'), url: `${baseUrl}/market` },
+    { name: marketCountry, url: `${baseUrl}/market/${market.countryCode.toLowerCase()}` },
+    ...(market.city ? [{ name: isAr ? (market.cityAr || market.city) : market.city, url: pageUrl }] : []),
+    { name: marketTitle.split(' - ')[0], url: pageUrl },
   ];
 
   const products = [
-    { name: 'UPVC Pressure Pipes', href: '/products/upvc-pressure', desc: 'BS EN 1452 certified' },
-    { name: 'UPVC Drainage Pipes', href: '/products/upvc-drainage', desc: 'BS EN 1401 compliant' },
-    { name: 'PPR Hot & Cold Pipes', href: '/products/ppr', desc: 'DIN 8077/8078 standard' },
-    { name: 'HDPE Pipes', href: '/products/polyethylene', desc: 'ISO 4427 certified' },
-    { name: 'PVC Conduit Pipes', href: '/products/pvc-conduit', desc: 'Electrical applications' },
-    { name: 'UPVC Duct Pipes', href: '/products/upvc-duct', desc: 'Telecom & cable ducting' },
+    { name: t('markets.regional.products.items.upvc_pressure.name'), href: '/products/upvc-pressure', desc: t('markets.regional.products.items.upvc_pressure.desc') },
+    { name: t('markets.regional.products.items.upvc_drainage.name'), href: '/products/upvc-drainage', desc: t('markets.regional.products.items.upvc_drainage.desc') },
+    { name: t('markets.regional.products.items.ppr.name'), href: '/products/ppr', desc: t('markets.regional.products.items.ppr.desc') },
+    { name: t('markets.regional.products.items.hdpe.name'), href: '/products/polyethylene', desc: t('markets.regional.products.items.hdpe.desc') },
+    { name: t('markets.regional.products.items.pvc_conduit.name'), href: '/products/pvc-conduit', desc: t('markets.regional.products.items.pvc_conduit.desc') },
+    { name: t('markets.regional.products.items.upvc_duct.name'), href: '/products/upvc-duct', desc: t('markets.regional.products.items.upvc_duct.desc') },
   ];
 
   const features = [
     {
-      title: 'Certified Quality',
-      description: `All products ${market.certifications.slice(0, 2).join(' & ')} certified`,
+      iconKey: 'certified_quality',
+      title: t('markets.regional.features.certified_quality'),
+      description: t('markets.regional.features.certified_quality_tpl').replace('{certs}', market.certifications.slice(0, 2).join(' & ')),
     },
     {
-      title: 'Fast Delivery',
-      description: `${market.deliveryTime} to ${market.city || market.country}`,
+      iconKey: 'fast_delivery',
+      title: t('markets.regional.features.fast_delivery'),
+      description: t('markets.regional.features.fast_delivery_tpl').replace('{deliveryTime}', market.deliveryTime).replace('{location}', marketCity),
     },
     {
-      title: 'Competitive Pricing',
-      description: `Bulk discounts available in ${market.currency}`,
+      iconKey: 'competitive_pricing',
+      title: t('markets.regional.features.competitive_pricing'),
+      description: t('markets.regional.features.competitive_pricing_tpl').replace('{currency}', market.currency),
     },
     {
-      title: 'Technical Support',
-      description: 'Expert consultation for your projects',
+      iconKey: 'technical_support',
+      title: t('markets.regional.features.technical_support'),
+      description: t('markets.regional.features.technical_support_desc'),
     },
   ];
 
@@ -608,9 +610,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
         proficiencyLevel="Beginner"
       />
 
-      {/* Scroll Progress */}
-      <ScrollProgress />
-      
+
       {/* Back to Top */}
       <BackToTop />
 
@@ -622,28 +622,28 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
         <header ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden">
           <GradientMesh />
           <FloatingParticles />
-          
-          <motion.div 
+
+          <motion.div
             className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-24"
             style={{ opacity: heroOpacity, y: heroY }}
           >
             {/* Breadcrumb */}
-            <motion.nav 
+            <motion.nav
               className="text-sm mb-8"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               <ol className="flex flex-wrap items-center gap-2 text-blue-200/70">
-                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">{t('markets.regional.breadcrumb_home')}</Link></li>
                 <li className="text-blue-300/40">/</li>
-                <li><Link href="/market" className="hover:text-white transition-colors">Markets</Link></li>
+                <li><Link href="/market" className="hover:text-white transition-colors">{t('markets.regional.breadcrumb_markets')}</Link></li>
                 <li className="text-blue-300/40">/</li>
-                <li><Link href={`/market/${market.countryCode.toLowerCase()}`} className="hover:text-white transition-colors">{market.country}</Link></li>
+                <li><Link href={`/market/${market.countryCode.toLowerCase()}`} className="hover:text-white transition-colors">{marketCountry}</Link></li>
                 {market.city && (
                   <>
                     <li className="text-blue-300/40">/</li>
-                    <li className="text-white font-medium">{market.city}</li>
+                    <li className="text-white font-medium">{isAr ? (market.cityAr || market.city) : market.city}</li>
                   </>
                 )}
               </ol>
@@ -651,13 +651,13 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Column - Content */}
-              <motion.div 
+              <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
               >
                 {/* Badges */}
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap items-center gap-3 mb-6"
                   variants={fadeUpVariant}
                 >
@@ -667,53 +667,53 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   </span>
                   <span className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm text-blue-300 text-sm px-4 py-2 rounded-full border border-blue-500/30">
                     <Zap className="w-4 h-4" />
-                    {market.deliveryTime}
+                    {isAr ? market.deliveryTimeAr : market.deliveryTime}
                   </span>
                 </motion.div>
 
                 {/* Title with gradient */}
-                <motion.h1 
+                <motion.h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                   variants={fadeUpVariant}
                 >
                   <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                    {market.title.split(' for ')[0]}
+                    {marketTitle.split(isAr ? ' لـ' : ' for ')[0]}
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">
-                    {market.title.includes(' for ') ? `for ${market.title.split(' for ')[1]}` : ''}
+                    {marketTitle.includes(isAr ? ' لـ' : ' for ') ? (isAr ? `لـ${marketTitle.split(' لـ')[1]}` : `for ${marketTitle.split(' for ')[1]}`) : ''}
                   </span>
                 </motion.h1>
 
-                <motion.p 
+                <motion.p
                   className="text-xl text-blue-100/80 mb-8 max-w-xl leading-relaxed"
                   variants={fadeUpVariant}
                 >
-                  {market.description}
+                  {marketDescription}
                 </motion.p>
 
                 {/* CTAs */}
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap gap-4"
                   variants={fadeUpVariant}
                 >
                   <MagneticButton href={market.cta.link} variant="primary">
-                    {market.cta.text}
+                    {marketCtaText}
                     <ArrowRight className="w-5 h-5" />
                   </MagneticButton>
                   <MagneticButton href={`tel:${market.telephone}`} variant="secondary">
                     <Phone className="w-5 h-5" />
-                    Call Now
+                    {t('markets.regional.call_now')}
                   </MagneticButton>
                 </motion.div>
               </motion.div>
 
               {/* Right Column - Stats Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <GlassStatCard value={30} suffix="+" label="Years Experience" delay={0.3} />
-                <GlassStatCard value={4.8} suffix="★" label="Customer Rating" delay={0.4} />
-                <GlassStatCard value={market.certifications.length} label="Certifications" delay={0.5} />
-                <GlassStatCard value={24} suffix="/7" label="Support Available" delay={0.6} />
+                <GlassStatCard value={30} suffix="+" label={t('markets.regional.hero_stats.experience_label')} delay={0.3} />
+                <GlassStatCard value={4.8} suffix="★" label={t('markets.regional.hero_stats.rating_label')} delay={0.4} />
+                <GlassStatCard value={market.certifications.length} label={t('markets.regional.hero_stats.certifications_label')} delay={0.5} />
+                <GlassStatCard value={24} suffix="/7" label={t('markets.regional.hero_stats.support_label')} delay={0.6} />
               </div>
             </div>
           </motion.div>
@@ -724,7 +724,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
         ═══════════════════════════════════════════════════════════════════════════════ */}
         <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-8 border-y border-white/10">
           <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
-            <motion.div 
+            <motion.div
               className="flex flex-wrap justify-center items-center gap-4 md:gap-6"
               variants={staggerContainer}
               initial="hidden"
@@ -745,7 +745,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content - 2/3 */}
             <div className="lg:col-span-2 space-y-20">
-              
+
               {/* Why Choose Us Section */}
               <section>
                 <motion.div
@@ -754,15 +754,15 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   viewport={{ once: true }}
                   className="mb-10"
                 >
-                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">{t('markets.regional.why_choose.label')}</span>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-                    Premium Quality for{' '}
+                    {t('markets.regional.why_choose.title_prefix')}{' '}
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                      {market.city || market.country}
+                      {marketCity}
                     </span>
                   </h2>
                 </motion.div>
-                
+
                 <div className="grid sm:grid-cols-2 gap-6">
                   {features.map((feature, index) => (
                     <FeatureCard key={feature.title} {...feature} index={index} />
@@ -779,15 +779,15 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                     viewport={{ once: true }}
                     className="mb-8"
                   >
-                    <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Coverage Area</span>
+                    <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">{t('markets.regional.coverage.label')}</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-                      Delivering to{' '}
+                      {t('markets.regional.coverage.title_prefix')}{' '}
                       <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
-                        {market.city || market.country}
+                        {marketCity}
                       </span>
                     </h2>
                   </motion.div>
-                  
+
                   <div className="flex flex-wrap gap-3">
                     {market.districts.map((district, index) => (
                       <DistrictTag key={district} name={district} index={index} />
@@ -804,17 +804,17 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   viewport={{ once: true }}
                   className="mb-10"
                 >
-                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Our Products</span>
+                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">{t('markets.regional.products.label')}</span>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-                    Premium Piping Solutions
+                    {t('markets.regional.products.title')}
                   </h2>
                 </motion.div>
-                
+
                 <div className="grid sm:grid-cols-2 gap-5">
                   {products.map((product, index) => (
-                    <ProductCard 
-                      key={product.name} 
-                      product={product} 
+                    <ProductCard
+                      key={product.name}
+                      product={product}
                       index={index}
                       isPopular={index === 0}
                     />
@@ -827,7 +827,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                 STICKY SIDEBAR
             ═══════════════════════════════════════════════════════════════════════════════ */}
             <div className="lg:col-span-1">
-              <motion.div 
+              <motion.div
                 className="sticky top-24 space-y-6"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -839,22 +839,22 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   {/* Background decoration */}
                   <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl" />
                   <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl" />
-                  
+
                   <div className="relative">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                         <Building2 className="w-6 h-6 text-amber-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold">Get a Quote</h3>
-                        <p className="text-blue-200/70 text-sm">Fast response guaranteed</p>
+                        <h3 className="text-xl font-bold">{t('markets.regional.sidebar.quote_title')}</h3>
+                        <p className="text-blue-200/70 text-sm">{t('markets.regional.sidebar.quote_subtitle')}</p>
                       </div>
                     </div>
-                    
+
                     <p className="text-blue-100/80 mb-6 text-sm leading-relaxed">
-                      Contact us for {market.city || market.country} pricing, bulk discounts, and delivery options.
+                      {t('markets.regional.sidebar.contact_tpl').replace('{location}', marketCity)}
                     </p>
-                    
+
                     <div className="space-y-4 mb-8">
                       <motion.a
                         href={`tel:${market.telephone}`}
@@ -866,10 +866,10 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                         </div>
                         <div>
                           <p className="text-white font-medium">{market.telephone}</p>
-                          <p className="text-blue-200/50 text-xs">Available 24/7</p>
+                          <p className="text-blue-200/50 text-xs">{t('markets.regional.sidebar.available_24_7')}</p>
                         </div>
                       </motion.a>
-                      
+
                       <motion.a
                         href="mailto:info@crownplasticuae.com"
                         className="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group"
@@ -880,13 +880,13 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                         </div>
                         <div>
                           <p className="text-white font-medium">info@crownplasticuae.com</p>
-                          <p className="text-blue-200/50 text-xs">Response within 2 hours</p>
+                          <p className="text-blue-200/50 text-xs">{t('markets.regional.sidebar.response_time')}</p>
                         </div>
                       </motion.a>
                     </div>
 
                     <MagneticButton href={market.cta.link} variant="primary" className="w-full justify-center">
-                      {market.cta.text}
+                      {marketCtaText}
                       <ArrowRight className="w-5 h-5" />
                     </MagneticButton>
                   </div>
@@ -898,14 +898,14 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                     <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                       <Truck className="w-5 h-5 text-emerald-600" />
                     </div>
-                    <h3 className="font-bold text-gray-900">Delivery Information</h3>
+                    <h3 className="font-bold text-gray-900">{t('markets.regional.sidebar.delivery_title')}</h3>
                   </div>
-                  
+
                   <ul className="space-y-4">
-                    <AnimatedCheck delay={0}>Delivery: {market.deliveryTime}</AnimatedCheck>
-                    <AnimatedCheck delay={0.1}>Currency: {market.currency}</AnimatedCheck>
-                    <AnimatedCheck delay={0.2}>Free shipping on bulk orders</AnimatedCheck>
-                    <AnimatedCheck delay={0.3}>Full export documentation</AnimatedCheck>
+                    <AnimatedCheck delay={0}>{t('markets.regional.sidebar.delivery_prefix')} {market.deliveryTime}</AnimatedCheck>
+                    <AnimatedCheck delay={0.1}>{t('markets.regional.sidebar.currency_prefix')} {market.currency}</AnimatedCheck>
+                    <AnimatedCheck delay={0.2}>{t('markets.regional.sidebar.free_shipping')}</AnimatedCheck>
+                    <AnimatedCheck delay={0.3}>{t('markets.regional.sidebar.full_documentation')}</AnimatedCheck>
                   </ul>
                 </div>
 
@@ -915,25 +915,25 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                     <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
                       <FileCheck className="w-5 h-5 text-blue-600" />
                     </div>
-                    <h3 className="font-bold text-gray-900">Resources</h3>
+                    <h3 className="font-bold text-gray-900">{t('markets.regional.sidebar.resources_title')}</h3>
                   </div>
-                  
+
                   <ul className="space-y-3">
                     {[
-                      { href: '/technical/bs-en-1452-complete-guide', text: 'BS EN 1452 Guide' },
-                      { href: '/technical/gso-saso-compliance-guide', text: 'GSO/SASO Compliance' },
-                      { href: '/support/faqs', text: 'Technical FAQs' },
-                      { href: '/resources', text: 'Downloads & Catalogues' },
+                      { href: '/technical/bs-en-1452-complete-guide', text: t('markets.regional.sidebar.resource_links.bs_en_guide') },
+                      { href: '/technical/gso-saso-compliance-guide', text: t('markets.regional.sidebar.resource_links.gso_saso') },
+                      { href: '/support/faqs', text: t('markets.regional.sidebar.resource_links.faqs') },
+                      { href: '/resources', text: t('markets.regional.sidebar.resource_links.downloads') },
                     ].map((link, i) => (
-                      <motion.li 
+                      <motion.li
                         key={link.href}
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
                       >
-                        <Link 
-                          href={link.href} 
+                        <Link
+                          href={link.href}
                           className="flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium group"
                         >
                           <span>{link.text}</span>
@@ -954,7 +954,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
         <section className="relative py-24 overflow-hidden">
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800" />
-          <motion.div 
+          <motion.div
             className="absolute inset-0"
             animate={{
               background: [
@@ -965,40 +965,39 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
             }}
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           />
-          
+
           <div className="container mx-auto px-4 max-w-4xl relative z-10">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <motion.span 
+              <motion.span
                 className="inline-block text-emerald-200 text-sm font-semibold uppercase tracking-wider mb-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                Ready to Start?
+                {t('markets.regional.cta.label')}
               </motion.span>
-              
+
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transform Your{' '}
+                {t('markets.regional.cta.title_prefix')}{' '}
                 <span className="bg-gradient-to-r from-amber-300 to-amber-400 bg-clip-text text-transparent">
-                  {market.city || market.country}
+                  {marketCity}
                 </span>{' '}
-                Project
+                {t('markets.regional.cta.title_suffix')}
               </h2>
-              
+
               <p className="text-emerald-100/90 text-lg mb-10 max-w-2xl mx-auto">
-                Contact our {market.country} sales team for competitive pricing, bulk discounts, 
-                and premium delivery to your project location.
+                {t('markets.regional.cta.subtitle_tpl').replace('{country}', marketCountry)}
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-4">
                 <MagneticButton href={market.cta.link} variant="outline">
-                  {market.cta.text}
+                  {marketCtaText}
                   <ArrowRight className="w-5 h-5" />
                 </MagneticButton>
                 <MagneticButton href={`tel:${market.telephone}`} variant="secondary" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-emerald-700">
@@ -1006,9 +1005,9 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   {market.telephone}
                 </MagneticButton>
               </div>
-              
+
               {/* Trust indicators */}
-              <motion.div 
+              <motion.div
                 className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/20"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -1017,15 +1016,15 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
               >
                 <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
                   <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                  <span>30+ Years Experience</span>
+                  <span>{t('markets.regional.cta.trust.experience')}</span>
                 </div>
                 <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
                   <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                  <span>ISO 9001:2015 Certified</span>
+                  <span>{t('markets.regional.cta.trust.iso')}</span>
                 </div>
                 <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
                   <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                  <span>5,000+ Products</span>
+                  <span>{t('markets.regional.cta.trust.products')}</span>
                 </div>
               </motion.div>
             </motion.div>

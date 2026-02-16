@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Icon from '@/components/ui/Icon';
+import { useT } from '@/i18n';
 
 interface PdfViewerProps {
   /** Path to PDF in /public/pdfs/... e.g. '/pdfs/UPVC%20PRESSURE%20PIPES_compressed.pdf' */
@@ -26,6 +27,7 @@ interface PdfViewerProps {
  * This component provides view-only UX without encouraging downloads.
  */
 export default function PdfViewer({ src, title, description }: PdfViewerProps) {
+  const t = useT();
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -84,7 +86,7 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
               <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
             )}
             <p className="text-xs text-primary mt-2 flex items-center gap-1">
-              View Technical Document
+              {t('products.detail.view_tech_doc')}
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -135,7 +137,7 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
             {isLoading && (
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 z-10">
                 <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4" />
-                <p className="text-gray-600 text-sm font-medium">Loading document...</p>
+                <p className="text-gray-600 text-sm font-medium">{t('products.detail.loading_doc')}</p>
               </div>
             )}
 

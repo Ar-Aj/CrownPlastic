@@ -2,10 +2,10 @@
 
 import { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion, AnimatePresence } from 'framer-motion';
-import { journeyEvents, type JourneyEvent } from './about.types';
 import Icon, { type IconName } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
 import { PvcPipeProgress } from './PvcPipeProgress';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -55,43 +55,19 @@ interface JourneyStory {
   tagline: string;
 }
 
-const journeyStories: JourneyStory[] = [
-  {
-    id: 'foundation',
-    title: 'Foundation & Setup',
-    icon: 'building',
-    yearRange: '1995–2004',
-    eventIndices: [0, 1, 2],
-    tagline: 'Established in Sharjah with a vision to serve GCC infrastructure',
-  },
-  {
-    id: 'expansion',
-    title: 'Expansion & Innovation',
-    icon: 'factory',
-    yearRange: '2005–2012',
-    eventIndices: [3, 4, 5, 6],
-    tagline: 'ISO certified, new product lines, and regional distribution network',
-  },
-  {
-    id: 'excellence',
-    title: 'Excellence & Technology',
-    icon: 'cog',
-    yearRange: '2015–2020',
-    eventIndices: [7, 8, 9],
-    tagline: 'European extrusion technology and automated quality systems',
-  },
-  {
-    id: 'leadership',
-    title: 'GCC Leadership',
-    icon: 'globe',
-    yearRange: '2022–2025',
-    eventIndices: [10, 11],
-    tagline: 'Regional certifications and 5,000+ products serving 10,000+ customers',
-  },
+// Structural data for stories — translatable text is injected at render time
+const STORY_STRUCTURE = [
+  { id: 'foundation', icon: 'building' as IconName, yearRange: '1995–2004', eventIndices: [0, 1, 2] },
+  { id: 'expansion', icon: 'factory' as IconName, yearRange: '2005–2012', eventIndices: [3, 4, 5, 6] },
+  { id: 'excellence', icon: 'cog' as IconName, yearRange: '2015–2020', eventIndices: [7, 8, 9] },
+  { id: 'leadership', icon: 'globe' as IconName, yearRange: '2022–2025', eventIndices: [10, 11] },
 ];
 
-function getStoryEvents(story: JourneyStory): JourneyEvent[] {
-  return story.eventIndices.map((i) => journeyEvents[i]).filter(Boolean);
+// Year keys for event translation lookup
+const EVENT_YEARS = ['1995', '1998', '2004', '2005', '2008', '2010', '2012', '2015', '2018', '2020', '2022', '2025'];
+
+function getStoryEvents(story: JourneyStory, translatedEvents: Array<{ year: string; title: string; highlight?: boolean }>): Array<{ year: string; title: string; highlight?: boolean }> {
+  return story.eventIndices.map((i) => translatedEvents[i]).filter(Boolean);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -101,6 +77,25 @@ function getStoryEvents(story: JourneyStory): JourneyEvent[] {
 export default function PipingJourney() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = useState(false);
+  const t = useT();
+
+  // Build translated stories
+  const journeyStories: JourneyStory[] = useMemo(() =>
+    STORY_STRUCTURE.map((s) => ({
+      ...s,
+      title: t(`about.journey.stories.${s.id}.title` as any),
+      tagline: t(`about.journey.stories.${s.id}.tagline` as any),
+    })),
+    [t]);
+
+  // Build translated events (year, title, highlight)
+  const translatedEvents = useMemo(() =>
+    EVENT_YEARS.map((year) => ({
+      year,
+      title: t(`about.journey.events.${year}.title` as any),
+      highlight: ['1995', '2015', '2025'].includes(year),
+    })),
+    [t]);
 
   // SSR-safe: guards window access
   useEffect(() => {
@@ -115,7 +110,7 @@ export default function PipingJourney() {
   return (
     <section className="bg-white">
       {/* Desktop: Pinned story strip with header inside sticky area */}
-      {!isMobile && !prefersReducedMotion && <DesktopPinnedStrip />}
+      {!isMobile && !prefersReducedMotion && <DesktopPinnedStrip t={t} journeyStories={journeyStories} translatedEvents={translatedEvents} />}
 
       {/* Mobile: Story carousel (no pinning) */}
       {isMobile && (
@@ -124,17 +119,17 @@ export default function PipingJourney() {
           <div className="py-8 md:py-10">
             <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
-                Our Journey
+                {t('about.journey.badge')}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                30 Years of Excellence
+                {t('about.journey.title')}
               </h2>
               <p className="text-base text-gray-600 max-w-2xl mx-auto">
-                From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+                {t('about.journey.subtitle')}
               </p>
             </div>
           </div>
-          <MobileStoryCarousel prefersReducedMotion={prefersReducedMotion} />
+          <MobileStoryCarousel prefersReducedMotion={prefersReducedMotion} t={t} journeyStories={journeyStories} translatedEvents={translatedEvents} />
         </>
       )}
 
@@ -145,17 +140,17 @@ export default function PipingJourney() {
           <div className="py-8 md:py-10">
             <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
               <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
-                Our Journey
+                {t('about.journey.badge')}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                30 Years of Excellence
+                {t('about.journey.title')}
               </h2>
               <p className="text-base text-gray-600 max-w-2xl mx-auto">
-                From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+                {t('about.journey.subtitle')}
               </p>
             </div>
           </div>
-          <ReducedMotionFallback />
+          <ReducedMotionFallback journeyStories={journeyStories} translatedEvents={translatedEvents} />
         </>
       )}
     </section>
@@ -166,7 +161,7 @@ export default function PipingJourney() {
 // DESKTOP PINNED STRIP
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function DesktopPinnedStrip() {
+function DesktopPinnedStrip({ t, journeyStories, translatedEvents }: { t: ReturnType<typeof useT>; journeyStories: JourneyStory[]; translatedEvents: Array<{ year: string; title: string; highlight?: boolean }> }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrollPerStory, setScrollPerStory] = useState(SCROLL_PER_STORY);
@@ -184,24 +179,15 @@ function DesktopPinnedStrip() {
     return () => window.removeEventListener('resize', updateScrollDistance);
   }, []);
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // SCROLL TRACKING
-  // Target: the outer SCROLL CONTAINER (tall element)
-  // Offset: 'start start' = progress starts when container top reaches viewport top
-  //         'end end' = progress ends when container bottom reaches viewport bottom
-  // ─────────────────────────────────────────────────────────────────────────
   const { scrollYProgress } = useScroll({
     target: scrollContainerRef,
     offset: ['start start', 'end end'],
   });
 
-  // Map scroll progress to pipe fill (0 to 1 for PvcPipeProgress)
   const pipeFillProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // Update active story index based on scroll progress
   useEffect(() => {
     const unsubscribe = scrollYProgress.on('change', (progress) => {
-      // Map [0,1] progress to story index [0, storyCount-1]
       const index = Math.min(
         Math.floor(progress * journeyStories.length),
         journeyStories.length - 1
@@ -209,48 +195,21 @@ function DesktopPinnedStrip() {
       setActiveIndex(index);
     });
     return unsubscribe;
-  }, [scrollYProgress]);
+  }, [scrollYProgress, journeyStories.length]);
 
   const activeStory = journeyStories[activeIndex];
-  const activeEvents = useMemo(() => getStoryEvents(activeStory), [activeStory]);
+  const activeEvents = useMemo(() => getStoryEvents(activeStory, translatedEvents), [activeStory, translatedEvents]);
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // HEIGHT CALCULATION
-  // 
-  // stickyHeight = 100vh - HEADER_OFFSET (the visible pinned area)
-  // scrollDistance = (storyCount - 1) × SCROLL_PER_STORY (extra scroll for transitions)
-  // containerHeight = stickyHeight + scrollDistance
-  //
-  // For 4 stories with SCROLL_PER_STORY=60vh:
-  //   stickyHeight = ~88vh (on 1000px viewport with 120px header)
-  //   scrollDistance = 3 × 60vh = 180vh
-  //   containerHeight = ~268vh
-  //
-  // This ensures:
-  // - The sticky viewport fills exactly one screen
-  // - The scroll distance provides room for story transitions
-  // - No extra blank space above or below
-  // ─────────────────────────────────────────────────────────────────────────
   const scrollDistance = (journeyStories.length - 1) * scrollPerStory;
-  const stickyHeightVh = 100 - (HEADER_OFFSET / 10); // Approximate vh conversion
+  const stickyHeightVh = 100 - (HEADER_OFFSET / 10);
   const containerHeight = stickyHeightVh + scrollDistance;
 
   return (
-    // ─────────────────────────────────────────────────────────────────────────
-    // SCROLL CONTAINER: The tall element that creates scroll distance
-    // This is the useScroll target
-    // ─────────────────────────────────────────────────────────────────────────
     <div
       ref={scrollContainerRef}
       className="relative pb-20 2xl:pb-0"
       style={{ height: `${containerHeight}vh` }}
     >
-      {/* ───────────────────────────────────────────────────────────────────────
-          STICKY VIEWPORT: Pins below header while user scrolls
-          - position: sticky keeps it fixed at top: HEADER_OFFSET
-          - height: calc(100vh - HEADER_OFFSET) fills exactly one viewport
-          - Now includes section header that stays visible during scroll lock
-          ─────────────────────────────────────────────────────────────────────── */}
       <div
         className="sticky overflow-hidden bg-white"
         style={{
@@ -258,23 +217,19 @@ function DesktopPinnedStrip() {
           height: 'min(calc(100vh - 100px), 850px)',
         }}
       >
-        {/* Background gradient */}
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-40 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
-        {/* ─────────────────────────────────────────────────────────────────────
-            CONTENT: Section header + story content within sticky viewport
-            ───────────────────────────────────────────────────────────────────── */}
         <div className="h-full flex flex-col mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
           {/* Section Header - Stays visible during scroll lock */}
           <div className="pt-8 pb-4 text-center flex-shrink-0">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
-              Our Journey
+              {t('about.journey.badge')}
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-              30 Years of Excellence
+              {t('about.journey.title')}
             </h2>
             <p className="text-sm lg:text-base text-gray-600 max-w-2xl mx-auto">
-              From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+              {t('about.journey.subtitle')}
             </p>
           </div>
 
@@ -299,12 +254,6 @@ function DesktopPinnedStrip() {
 
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
             <div className="relative py-6 mb-3 lg:mb-4 2xl:py-8 2xl:mb-6">
-              {/* ─────────────────────────────────────────────────────────────────
-                  3D PVC PIPE PROGRESS BAR
-                  - Dark grey cylindrical pipe with Crown blue fill
-                  - Progress (0-1) mapped from scrollYProgress
-                  - Sits below the story nodes
-                  ───────────────────────────────────────────────────────────────── */}
               <div className="absolute inset-x-4 lg:inset-x-12 top-1/2 -translate-y-1/2">
                 <PvcPipeProgress progress={pipeFillProgress} />
               </div>
@@ -379,7 +328,7 @@ function DesktopPinnedStrip() {
                 animate={{ y: [0, 3, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
-                ↓ Scroll to explore
+                {t('about.journey.scroll_hint')}
               </motion.div>
             </motion.div>
           </div>
@@ -394,11 +343,7 @@ function DesktopPinnedStrip() {
 // No tall containers or vh-based heights to avoid blank space
 // ═══════════════════════════════════════════════════════════════════════════════
 
-interface MobileStoryCarouselProps {
-  prefersReducedMotion: boolean | null;
-}
-
-function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps) {
+function MobileStoryCarousel({ prefersReducedMotion, t, journeyStories, translatedEvents }: { prefersReducedMotion: boolean | null; t: ReturnType<typeof useT>; journeyStories: JourneyStory[]; translatedEvents: Array<{ year: string; title: string; highlight?: boolean }> }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [fillPercentage, setFillPercentage] = useState(0);
@@ -416,7 +361,7 @@ function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps)
     const cardWidth = container.clientWidth * 0.85;
     const index = Math.round(scrollLeft / cardWidth);
     setActiveIndex(Math.min(Math.max(0, index), journeyStories.length - 1));
-  }, []);
+  }, [journeyStories.length]);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -476,7 +421,7 @@ function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps)
       >
         <div className="flex gap-4 px-4" style={{ width: 'max-content' }}>
           {journeyStories.map((story, index) => {
-            const events = getStoryEvents(story);
+            const events = getStoryEvents(story, translatedEvents);
             return (
               <div
                 key={story.id}
@@ -496,7 +441,7 @@ function MobileStoryCarousel({ prefersReducedMotion }: MobileStoryCarouselProps)
       </div>
 
       <div className="text-center mt-3 text-sm text-gray-400">
-        ← Swipe to explore →
+        {t('about.journey.swipe_hint')}
       </div>
     </div>
   );
@@ -522,8 +467,8 @@ function StoryNode({ story, isPast, isActive }: StoryNodeProps) {
           isActive
             ? 'bg-primary scale-110 shadow-lg shadow-primary/30 ring-4 ring-primary/20'
             : isPast
-            ? 'bg-primary shadow-sm'
-            : 'bg-gray-200'
+              ? 'bg-primary shadow-sm'
+              : 'bg-gray-200'
         )}
       >
         <Icon
@@ -568,8 +513,8 @@ function MobileStoryNode({ story, isPast, isActive }: MobileStoryNodeProps) {
           isActive
             ? 'bg-primary scale-110 shadow-md shadow-primary/30 ring-2 ring-primary/20'
             : isPast
-            ? 'bg-primary'
-            : 'bg-gray-200'
+              ? 'bg-primary'
+              : 'bg-gray-200'
         )}
       >
         <Icon
@@ -592,7 +537,7 @@ function MobileStoryNode({ story, isPast, isActive }: MobileStoryNodeProps) {
 
 interface MobileStoryCardProps {
   story: JourneyStory;
-  events: JourneyEvent[];
+  events: Array<{ year: string; title: string; highlight?: boolean }>;
   isActive: boolean;
 }
 
@@ -641,7 +586,7 @@ function MobileStoryCard({ story, events, isActive }: MobileStoryCardProps) {
 // REDUCED MOTION FALLBACK
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function ReducedMotionFallback() {
+function ReducedMotionFallback({ journeyStories, translatedEvents }: { journeyStories: JourneyStory[]; translatedEvents: Array<{ year: string; title: string; highlight?: boolean }> }) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
@@ -668,7 +613,7 @@ function ReducedMotionFallback() {
       {/* Accordion */}
       <div className="space-y-2 max-w-2xl mx-auto">
         {journeyStories.map((story, index) => {
-          const events = getStoryEvents(story);
+          const events = getStoryEvents(story, translatedEvents);
           const isExpanded = expandedIndex === index;
 
           return (

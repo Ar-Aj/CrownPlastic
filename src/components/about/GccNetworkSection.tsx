@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import { motion, useInView, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { gccMarkets, type GccMarket } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // GCC NETWORK SECTION - Interactive Regional Map
@@ -17,8 +18,18 @@ export default function GccNetworkSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
-  const currentMarket = gccMarkets.find((m) => m.id === activeMarket) || gccMarkets[0];
+  // Translate market names and notes
+  const translatedMarkets = useMemo(() =>
+    gccMarkets.map((m) => ({
+      ...m,
+      name: t(`about.network.markets.${m.id}.name` as any),
+      note: t(`about.network.markets.${m.id}.note` as any),
+    })),
+    [t]);
+
+  const currentMarket = translatedMarkets.find((m) => m.id === activeMarket) || translatedMarkets[0];
 
   return (
     <section
@@ -35,38 +46,36 @@ export default function GccNetworkSection() {
           >
             {/* Badge */}
             <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-              Distribution Network
+              {t('about.network.badge')}
             </span>
 
             {/* Heading */}
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Serving GCC &<br />
-              <span className="text-primary">Sub-continent</span>
+              {t('about.network.heading_main')}<br />
+              <span className="text-primary">{t('about.network.heading_highlight')}</span>
             </h2>
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              From our manufacturing hub in Sharjah, UAE, we supply high-quality plastic piping
-              solutions across the Gulf Cooperation Council countries and beyond. Our established
-              distribution network ensures reliable delivery and local support.
+              {t('about.network.description')}
             </p>
 
             {/* Key Sectors */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
-                { icon: 'water' as const, label: 'Irrigation' },
-                { icon: 'building' as const, label: 'Construction' },
-                { icon: 'plumbing' as const, label: 'Plumbing' },
-                { icon: 'eco' as const, label: 'Landscaping' },
+                { icon: 'water' as const, key: 'irrigation' },
+                { icon: 'building' as const, key: 'construction' },
+                { icon: 'plumbing' as const, key: 'plumbing' },
+                { icon: 'eco' as const, key: 'landscaping' },
               ].map((sector) => (
                 <div
-                  key={sector.label}
+                  key={sector.key}
                   className="flex items-center gap-3 p-3 rounded-xl bg-gray-50"
                 >
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Icon name={sector.icon} size={20} className="text-primary" />
                   </div>
-                  <span className="font-medium text-gray-700">{sector.label}</span>
+                  <span className="font-medium text-gray-700">{t(`about.network.sectors.${sector.key}` as any)}</span>
                 </div>
               ))}
             </div>
@@ -100,10 +109,11 @@ export default function GccNetworkSection() {
             className="relative"
           >
             <GccMap
-              markets={gccMarkets}
+              markets={translatedMarkets}
               activeMarket={activeMarket}
               onSelectMarket={setActiveMarket}
               prefersReducedMotion={prefersReducedMotion}
+              t={t}
             />
           </motion.div>
         </div>
@@ -121,9 +131,10 @@ interface GccMapProps {
   activeMarket: string;
   onSelectMarket: (id: string) => void;
   prefersReducedMotion: boolean | null;
+  t: ReturnType<typeof useT>;
 }
 
-function GccMap({ markets, activeMarket, onSelectMarket, prefersReducedMotion }: GccMapProps) {
+function GccMap({ markets, activeMarket, onSelectMarket, prefersReducedMotion, t }: GccMapProps) {
   // Grid positions for each country (row, col) - simplified representation
   const positions: Record<string, { row: number; col: number; span?: number }> = {
     kuwait: { row: 1, col: 1 },
@@ -145,7 +156,7 @@ function GccMap({ markets, activeMarket, onSelectMarket, prefersReducedMotion }:
       {/* Map Title */}
       <div className="relative text-center mb-6">
         <span className="text-sm text-gray-500 uppercase tracking-wider font-medium">
-          GCC Region Coverage
+          {t('about.network.map_title')}
         </span>
       </div>
 
@@ -222,15 +233,15 @@ function GccMap({ markets, activeMarket, onSelectMarket, prefersReducedMotion }:
       <div className="relative mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-primary rounded-full" />
-          <span className="text-gray-600">Manufacturing HQ</span>
+          <span className="text-gray-600">{t('about.network.legend.hq')}</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-gray-300 rounded-full" />
-          <span className="text-gray-600">Distribution</span>
+          <span className="text-gray-600">{t('about.network.legend.distribution')}</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 border-2 border-gray-400 rounded-full" />
-          <span className="text-gray-600">Export Market</span>
+          <span className="text-gray-600">{t('about.network.legend.export')}</span>
         </div>
       </div>
     </div>

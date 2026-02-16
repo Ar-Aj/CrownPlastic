@@ -67,13 +67,13 @@ const _sharedBenefits = [
 export const pprSdr11Pn10: ProductDetailConfig = {
   slug: 'ppr-sdr11-pn10',
   categorySlug: 'ppr',
-  
+
   title: 'CROWN PPR PIPES – SDR11 / PN 10',
   titleAr: 'أنابيب كراون PPR – SDR11 / PN 10',
-  
+
   shortDescription: 'CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable for various applications including hot and cold water supply, HVAC, and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR11/PN10 مطابقة لمعيار DIN 8077/78. مناسبة لتطبيقات متعددة بما في ذلك إمداد المياه الساخنة والباردة.',
-  
+
   overview: `Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable for various applications including hot and cold water supply, HVAC, and aggressive fluids.
@@ -88,7 +88,7 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
   overviewAr: `معايير أنابيب PPR SDR11/PN10 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR11/PN10 مطابقة لمعيار DIN 8077/78. مناسبة لتطبيقات متعددة بما في ذلك إمداد المياه الساخنة والباردة ونظام التدفئة والتهوية والتكييف والسوائل العدوانية.`,
-  
+
   features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
@@ -100,7 +100,7 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-  
+
   applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
@@ -110,7 +110,7 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
@@ -138,16 +138,16 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
-  
+
   downloads: [
     { label: 'PPR Pipes Catalogue (PDF)', href: '/pdfs/PPR-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use heat fusion welding for joining PPR pipes and fittings',
@@ -164,6 +164,22 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
       'Do not use damaged or deformed pipes',
     ],
   },
+  dosDontsAr: {
+    dos: [
+      'استخدم اللحام بالانصهار الحراري لتوصيل أنابيب وتوصيلات PPR',
+      'تأكد من درجة حرارة الانصهار الصحيحة (260 درجة مئوية عادةً لـ PPR)',
+      'اترك وقت تبريد كافٍ قبل اختبار الضغط',
+      'ادعم الأنابيب على فترات موصى بها',
+      'خزّن الأنابيب بعيداً عن أشعة الشمس المباشرة ومصادر الحرارة',
+    ],
+    donts: [
+      'لا تستخدم اللاصق المذيب – PPR يتطلب اللحام الحراري',
+      'لا تعرّض لدرجات حرارة تتجاوز الحد المصنف',
+      'لا تستخدم توصيلات غير متوافقة من أنظمة مواد أخرى',
+      'لا تُفرط في شد التوصيلات الملولبة',
+      'لا تستخدم أنابيب تالفة أو مشوهة',
+    ],
+  },
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -173,13 +189,13 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
 export const pprSdr7_4Pn16: ProductDetailConfig = {
   slug: 'ppr-sdr7-4-pn16',
   categorySlug: 'ppr',
-  
+
   title: 'CROWN PPR PIPES – SDR7.4 / PN 16',
   titleAr: 'أنابيب كراون PPR – SDR7.4 / PN 16',
-  
+
   shortDescription: 'CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher pressure class suitable for a wide range of applications including potable water and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR7.4/PN16 مطابقة لمعيار DIN 8077/78. فئة ضغط أعلى مناسبة لمجموعة واسعة من التطبيقات.',
-  
+
   overview: `Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher pressure class suitable for a wide range of applications including potable water and aggressive fluids.
@@ -194,7 +210,7 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
   overviewAr: `معايير أنابيب PPR SDR7.4/PN16 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR7.4/PN16 مطابقة لمعيار DIN 8077/78. فئة ضغط أعلى مناسبة لمجموعة واسعة من التطبيقات بما في ذلك مياه الشرب والسوائل العدوانية.`,
-  
+
   features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
@@ -206,7 +222,7 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-  
+
   applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
@@ -216,7 +232,7 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
@@ -244,16 +260,16 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
-  
+
   downloads: [
     { label: 'PPR Pipes Catalogue (PDF)', href: '/pdfs/PPR-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use heat fusion welding for joining PPR pipes and fittings',
@@ -270,6 +286,22 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
       'Do not use damaged or deformed pipes',
     ],
   },
+  dosDontsAr: {
+    dos: [
+      'استخدم اللحام بالانصهار الحراري لتوصيل أنابيب وتوصيلات PPR',
+      'تأكد من درجة حرارة الانصهار الصحيحة (260 درجة مئوية عادةً لـ PPR)',
+      'اترك وقت تبريد كافٍ قبل اختبار الضغط',
+      'ادعم الأنابيب على فترات موصى بها',
+      'خزّن الأنابيب بعيداً عن أشعة الشمس المباشرة ومصادر الحرارة',
+    ],
+    donts: [
+      'لا تستخدم اللاصق المذيب – PPR يتطلب اللحام الحراري',
+      'لا تعرّض لدرجات حرارة تتجاوز الحد المصنف',
+      'لا تستخدم توصيلات غير متوافقة من أنظمة مواد أخرى',
+      'لا تُفرط في شد التوصيلات الملولبة',
+      'لا تستخدم أنابيب تالفة أو مشوهة',
+    ],
+  },
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -279,13 +311,13 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
 export const pprSdr6Pn20: ProductDetailConfig = {
   slug: 'ppr-sdr6-pn20',
   categorySlug: 'ppr',
-  
+
   title: 'CROWN PPR PIPES – SDR6 / PN 20',
   titleAr: 'أنابيب كراون PPR – SDR6 / PN 20',
-  
+
   shortDescription: 'CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the highest pressure class presented, suitable for demanding applications including hot and cold water supply and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR6/PN20 مطابقة لمعيار DIN 8077/78. هذه أعلى فئة ضغط مناسبة للتطبيقات المتطلبة.',
-  
+
   overview: `Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the highest pressure class presented, suitable for demanding applications including hot and cold water supply and aggressive fluids.
@@ -300,7 +332,7 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
   overviewAr: `معايير أنابيب PPR SDR6/PN20 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR6/PN20 مطابقة لمعيار DIN 8077/78. هذه أعلى فئة ضغط مقدمة، مناسبة للتطبيقات المتطلبة بما في ذلك إمداد المياه الساخنة والباردة والسوائل العدوانية.`,
-  
+
   features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
@@ -312,7 +344,7 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-  
+
   applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
@@ -322,7 +354,7 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
@@ -349,16 +381,16 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
       ],
     },
   ],
-  
+
   // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
-  
+
   downloads: [
     { label: 'PPR Pipes Catalogue (PDF)', href: '/pdfs/PPR-PIPES-CATALOGUE.pdf' },
   ],
-  
+
   dosDonts: {
     dos: [
       'Use heat fusion welding for joining PPR pipes and fittings',
@@ -373,6 +405,22 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
       'Do not use incompatible fittings from other material systems',
       'Do not overtighten threaded connections',
       'Do not use damaged or deformed pipes',
+    ],
+  },
+  dosDontsAr: {
+    dos: [
+      'استخدم اللحام بالانصهار الحراري لتوصيل أنابيب وتوصيلات PPR',
+      'تأكد من درجة حرارة الانصهار الصحيحة (260 درجة مئوية عادةً لـ PPR)',
+      'اترك وقت تبريد كافٍ قبل اختبار الضغط',
+      'ادعم الأنابيب على فترات موصى بها',
+      'خزّن الأنابيب بعيداً عن أشعة الشمس المباشرة ومصادر الحرارة',
+    ],
+    donts: [
+      'لا تستخدم اللاصق المذيب – PPR يتطلب اللحام الحراري',
+      'لا تعرّض لدرجات حرارة تتجاوز الحد المصنف',
+      'لا تستخدم توصيلات غير متوافقة من أنظمة مواد أخرى',
+      'لا تُفرط في شد التوصيلات الملولبة',
+      'لا تستخدم أنابيب تالفة أو مشوهة',
     ],
   },
 };

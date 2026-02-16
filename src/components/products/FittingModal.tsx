@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, ChevronUp, Table2 } from 'lucide-react';
 import { type Fitting, FITTING_FAMILY_LABELS } from '@/types/productDetail';
+import { useT } from '@/i18n';
 
 interface FittingModalProps {
   fitting: Fitting | null;
@@ -19,7 +20,8 @@ interface FittingModalProps {
  */
 export default function FittingModal({ fitting, isOpen, onClose }: FittingModalProps) {
   const [showSpecTable, setShowSpecTable] = useState(false);
-  
+  const t = useT();
+
   // Close on escape key
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose();
@@ -78,7 +80,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
               <button
                 onClick={onClose}
                 className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[#F7F9FC] hover:bg-[#E5EEFF] transition-colors"
-                aria-label="Close modal"
+                aria-label={t('products.fitting_modal.close_modal')}
               >
                 <X className="w-5 h-5 text-[#6B7280]" />
               </button>
@@ -107,9 +109,9 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                           {fitting.code}
                         </span>
                       )}
-                      
+
                       {/* Name */}
-                      <h2 
+                      <h2
                         id="fitting-modal-title"
                         className="text-lg md:text-xl font-bold text-[#111827] leading-tight mb-2"
                       >
@@ -127,11 +129,10 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                           {fitting.tags.map((tag) => (
                             <span
                               key={tag}
-                              className={`text-xs font-bold px-2 py-0.5 rounded ${
-                                tag === 'NEW' 
-                                  ? 'bg-[#059669] text-white' 
+                              className={`text-xs font-bold px-2 py-0.5 rounded ${tag === 'NEW'
+                                  ? 'bg-[#059669] text-white'
                                   : 'bg-[#F7F9FC] text-[#374151]'
-                              }`}
+                                }`}
                             >
                               {tag}
                             </span>
@@ -145,9 +146,9 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                 {/* Sizes table */}
                 <div className="px-6 pb-4">
                   <h3 className="text-sm font-semibold text-[#374151] uppercase tracking-wide mb-3">
-                    Available Sizes
+                    {t('products.fitting_modal.available_sizes')}
                   </h3>
-                  
+
                   {fitting.sizes.length > 0 ? (
                     <div className="overflow-hidden rounded-xl border border-gray-200">
                       <table className="min-w-full divide-y divide-gray-200">
@@ -157,13 +158,13 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                               scope="col"
                               className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-[#0052CC]"
                             >
-                              Size (mm)
+                              {t('products.fitting_modal.size_mm')}
                             </th>
                           </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-100">
                           {fitting.sizes.map((size, index) => (
-                            <tr 
+                            <tr
                               key={index}
                               className={`${index % 2 === 0 ? 'bg-white' : 'bg-[#F9FAFB]'} hover:bg-[#F3F4F6] transition-colors`}
                             >
@@ -187,7 +188,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                     </div>
                   ) : (
                     <div className="py-4 text-center text-[#6B7280] bg-[#F9FAFB] rounded-xl border border-gray-200">
-                      Size data will be populated from product specifications.
+                      {t('products.fitting_modal.empty_sizes')}
                     </div>
                   )}
                 </div>
@@ -201,7 +202,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                     >
                       <Table2 className="w-4 h-4 text-[#0052CC]" />
                       <span className="flex-1 text-sm font-semibold text-[#374151] uppercase tracking-wide">
-                        Technical Specifications
+                        {t('products.fitting_modal.tech_specifications')}
                       </span>
                       {showSpecTable ? (
                         <ChevronUp className="w-4 h-4 text-[#6B7280]" />

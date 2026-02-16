@@ -7,6 +7,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef } from 'react';
+import { useT } from '@/i18n';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
@@ -36,8 +37,8 @@ import {
 } from '@/components/ui/premium';
 
 // Design System
-import { 
-  radialStagger, 
+import {
+  radialStagger,
   radialItem,
 } from '@/lib/design-system';
 
@@ -48,11 +49,12 @@ import {
 
 function SustainabilityHero() {
   const prefersReducedMotion = useReducedMotion();
-  
+  const t = useT();
+
   const heroHighlights = [
-    { icon: Timer, text: 'Long service life reduces replacement waste' },
-    { icon: Shield, text: 'Lead-free, heavy-metal-free formulations' },
-    { icon: Award, text: 'Manufactured to international standards' },
+    { icon: Timer, text: t('sustainability.hero.highlights.iso' as any) },
+    { icon: Shield, text: t('sustainability.hero.highlights.virgin' as any) },
+    { icon: Award, text: t('sustainability.hero.highlights.gcc' as any) },
   ];
 
   return (
@@ -62,15 +64,15 @@ function SustainabilityHero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-emerald-500/10 blur-[100px]" />
       </div>
-      
+
       {/* Tech grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column - Content */}
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={prefersReducedMotion ? {} : { opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -78,32 +80,28 @@ function SustainabilityHero() {
           >
             {/* Label */}
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md text-emerald-400 text-sm font-semibold rounded-full uppercase tracking-wider border border-white/10">
-              Sustainability
+              {t('sustainability.hero.label' as any)}
             </span>
 
             {/* Main Headline - SEO optimized */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
-              Sustainable Piping Systems,{' '}
-              <span className="text-emerald-400">
-                Built for Decades
-              </span>
+              {t('sustainability.hero.title' as any)}
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
-              Long-life UPVC piping systems that reduce replacement waste, optimise material usage, 
-              and meet GCC building standards. Designed for projects that think in decades, not years.
+              {t('sustainability.hero.subtitle' as any)}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-2">
               <QuoteButton variant="primary" size="lg" className="!bg-[#0072BC] hover:!bg-[#005a96] shadow-lg shadow-emerald-500/20">
-                Talk to Our Team
+                {t('sustainability.hero.cta_primary' as any)}
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
               <MagneticButton href="/resources" variant="outline" size="lg" className="!bg-sky-100 !border-sky-200 !text-slate-900 hover:!bg-[#0072BC] hover:!text-white hover:!border-[#0072BC] transition-colors duration-300">
                 <FileText className="w-5 h-5" />
-                Download Sustainability Brief
+                {t('sustainability.hero.cta_secondary' as any)}
               </MagneticButton>
             </div>
 
@@ -125,7 +123,7 @@ function SustainabilityHero() {
           </motion.div>
 
           {/* Right Column - Hero Image */}
-          <motion.div 
+          <motion.div
             className="relative"
             initial={prefersReducedMotion ? {} : { opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -140,13 +138,13 @@ function SustainabilityHero() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              
+
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#001424]/50 via-transparent to-white/5" />
             </div>
 
             {/* Floating stat card - Glass */}
-            <motion.div 
+            <motion.div
               className="absolute -bottom-4 -left-4 bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-xl max-w-[200px] hidden md:block border border-white/20"
               initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -157,8 +155,8 @@ function SustainabilityHero() {
                   <Recycle className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-extrabold text-white text-lg">50+ Years</p>
-                  <p className="text-xs text-slate-300">Service Life Design</p>
+                  <p className="font-extrabold text-white text-lg">{t('sustainability.hero.floating_stat_value' as any)}</p>
+                  <p className="text-xs text-slate-300">{t('sustainability.hero.floating_stat_label' as any)}</p>
                 </div>
               </div>
             </motion.div>
@@ -177,37 +175,38 @@ function SustainabilityHero() {
 function EnvironmentalCommitmentsSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const commitments = [
     {
       icon: Timer,
-      title: 'Extended Service Life',
-      description: 'UPVC systems designed to last 50+ years, significantly reducing the need for replacements and minimizing lifecycle waste.',
+      title: t('sustainability.commitments.items.service_life.title' as any),
+      description: t('sustainability.commitments.items.service_life.description' as any),
     },
     {
       icon: Droplets,
-      title: 'Water-Tight Integrity',
-      description: 'Precision-engineered joints and fittings prevent leaks that cause water loss, structural damage, and costly repairs.',
+      title: t('sustainability.commitments.items.water_tight.title' as any),
+      description: t('sustainability.commitments.items.water_tight.description' as any),
     },
     {
       icon: Factory,
-      title: 'Efficient Manufacturing',
-      description: 'Optimized extrusion processes and quality control reduce material waste while maintaining consistent product standards.',
+      title: t('sustainability.commitments.items.manufacturing.title' as any),
+      description: t('sustainability.commitments.items.manufacturing.description' as any),
     },
     {
       icon: Award,
-      title: 'Standards Compliance',
-      description: 'Products manufactured to BS EN, ASTM, and ISO standards that ensure reliable performance and resource efficiency.',
+      title: t('sustainability.commitments.items.standards.title' as any),
+      description: t('sustainability.commitments.items.standards.description' as any),
     },
     {
       icon: Thermometer,
-      title: 'Gulf-Condition Engineering',
-      description: 'Formulations designed for extreme heat, UV exposure, and high pressure—extending system life in demanding GCC environments.',
+      title: t('sustainability.commitments.items.gulf.title' as any),
+      description: t('sustainability.commitments.items.gulf.description' as any),
     },
     {
       icon: Recycle,
-      title: 'End-of-Life Awareness',
-      description: 'UPVC is inherently recyclable. We support responsible disposal practices and industry recycling initiatives.',
+      title: t('sustainability.commitments.items.recycling.title' as any),
+      description: t('sustainability.commitments.items.recycling.description' as any),
     },
   ];
 
@@ -215,13 +214,13 @@ function EnvironmentalCommitmentsSection() {
     <section ref={ref} className="py-16 md:py-24 bg-white relative overflow-hidden">
       {/* Subtle tech grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30" />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Our Commitment"
-          title="Responsible Manufacturing,"
-          titleHighlight="Sustainable Outcomes"
-          subtitle="Crown Plastic Pipes integrates lifecycle thinking, resource efficiency, and durability into every product—delivering piping systems that serve projects reliably for decades."
+          label={t('sustainability.commitments.label' as any)}
+          title={t('sustainability.commitments.title' as any)}
+          titleHighlight={t('sustainability.commitments.title_highlight' as any)}
+          subtitle={t('sustainability.commitments.subtitle' as any)}
         />
 
         {/* Commitments Grid */}
@@ -254,15 +253,17 @@ function EnvironmentalCommitmentsSection() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function SustainabilityStatsStrip() {
+  const t = useT();
+
   const statsData = [
-    { icon: Timer, value: '50+', label: 'Years Service Life Design' },
-    { icon: Shield, value: '100%', label: 'Virgin UPVC Materials' },
-    { icon: Award, value: '3×', label: 'ISO Certified Manufacturing' },
-    { icon: Recycle, value: 'Recyclable', label: 'End-of-Life Material' },
-    { icon: Thermometer, value: 'Gulf-Ready', label: 'Extreme Condition Tested' },
-    { icon: Droplets, value: 'Zero-Leak', label: 'Precision Joint Design' },
-    { icon: Factory, value: 'Optimized', label: 'Low-Waste Production' },
-    { icon: Scale, value: 'Standards', label: 'BS EN / ASTM Compliant' },
+    { icon: Timer, value: t('sustainability.stats.service_life.value' as any), label: t('sustainability.stats.service_life.label' as any) },
+    { icon: Shield, value: t('sustainability.stats.virgin.value' as any), label: t('sustainability.stats.virgin.label' as any) },
+    { icon: Award, value: t('sustainability.stats.iso.value' as any), label: t('sustainability.stats.iso.label' as any) },
+    { icon: Recycle, value: t('sustainability.stats.recyclable.value' as any), label: t('sustainability.stats.recyclable.label' as any) },
+    { icon: Thermometer, value: t('sustainability.stats.gulf.value' as any), label: t('sustainability.stats.gulf.label' as any) },
+    { icon: Droplets, value: t('sustainability.stats.zero_leak.value' as any), label: t('sustainability.stats.zero_leak.label' as any) },
+    { icon: Factory, value: t('sustainability.stats.optimized.value' as any), label: t('sustainability.stats.optimized.label' as any) },
+    { icon: Scale, value: t('sustainability.stats.compliant.value' as any), label: t('sustainability.stats.compliant.label' as any) },
   ];
 
   return (
@@ -287,31 +288,32 @@ function SustainabilityStatsStrip() {
 function SustainabilityPillarsSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const pillars = [
     {
       icon: Timer,
-      title: 'Product Durability & Lifecycle',
-      description: 'Our UPVC systems are engineered for 50+ years of reliable service. Corrosion-resistant, UV-stabilized, and pressure-rated formulations minimize replacements and reduce lifecycle environmental impact.',
-      highlight: '50+ Year Design Life',
+      title: t('sustainability.pillars.items.durability.title' as any),
+      description: t('sustainability.pillars.items.durability.description' as any),
+      highlight: t('sustainability.pillars.items.durability.highlight' as any),
     },
     {
       icon: Factory,
-      title: 'Precision Manufacturing',
-      description: 'State-of-the-art extrusion lines with strict quality control ensure consistent wall thickness, dimensional accuracy, and minimal material waste throughout production.',
-      highlight: 'ISO 9001:2015 Certified',
+      title: t('sustainability.pillars.items.manufacturing.title' as any),
+      description: t('sustainability.pillars.items.manufacturing.description' as any),
+      highlight: t('sustainability.pillars.items.manufacturing.highlight' as any),
     },
     {
       icon: Award,
-      title: 'Standards & Compliance',
-      description: 'Every product meets recognized international standards (BS EN 1452, ASTM, DIN) that ensure safe installation, efficient performance, and long-term system reliability.',
-      highlight: 'Multi-Standard Certified',
+      title: t('sustainability.pillars.items.compliance.title' as any),
+      description: t('sustainability.pillars.items.compliance.description' as any),
+      highlight: t('sustainability.pillars.items.compliance.highlight' as any),
     },
     {
       icon: Users,
-      title: 'Support & Responsibility',
-      description: 'We partner with consultants and contractors to design piping systems that perform reliably for decades—reducing premature failures, maintenance costs, and resource waste.',
-      highlight: 'Technical Partnership',
+      title: t('sustainability.pillars.items.support.title' as any),
+      description: t('sustainability.pillars.items.support.description' as any),
+      highlight: t('sustainability.pillars.items.support.highlight' as any),
     },
   ];
 
@@ -319,16 +321,16 @@ function SustainabilityPillarsSection() {
     <section ref={ref} className="py-16 md:py-24 bg-gradient-to-br from-[#002B4A] to-[#001424] relative overflow-hidden">
       {/* Glowing orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
-      
+
       {/* Tech grid */}
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Sustainability Pillars"
-          title="Building Sustainable"
-          titleHighlight="Infrastructure"
-          subtitle="Four core principles guide our approach to sustainable piping solutions for the Gulf region."
+          label={t('sustainability.pillars.label' as any)}
+          title={t('sustainability.pillars.title' as any)}
+          titleHighlight={t('sustainability.pillars.title_highlight' as any)}
+          subtitle={t('sustainability.pillars.subtitle' as any)}
           dark
         />
 
@@ -345,21 +347,21 @@ function SustainabilityPillarsSection() {
                 <div className="group relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-500">
                   {/* Glass background */}
                   <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
-                  
+
                   {/* Border */}
                   <div className="absolute inset-0 rounded-2xl border border-white/20 group-hover:border-emerald-400/50 transition-colors duration-500" />
-                  
+
                   <div className="relative p-6 md:p-8">
                     {/* Icon */}
                     <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-5 border border-emerald-400/30">
                       <pillar.icon className="w-7 h-7 text-emerald-400" />
                     </div>
-                    
+
                     {/* Highlight badge */}
                     <span className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-3 border border-emerald-400/30">
                       {pillar.highlight}
                     </span>
-                    
+
                     {/* Content */}
                     <h3 className="text-xl font-extrabold text-white mb-3 tracking-tight">{pillar.title}</h3>
                     <p className="text-slate-300 leading-relaxed">{pillar.description}</p>
@@ -381,14 +383,15 @@ function SustainabilityPillarsSection() {
 
 function GreenManufacturingSection() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       {/* Tech grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30" />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
-        
+
         {/* Block A: Thoughtful Manufacturing - Image Left */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 md:mb-28">
           {/* Image */}
@@ -419,26 +422,21 @@ function GreenManufacturingSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <span className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-4">
-              Manufacturing Excellence
+              {t('sustainability.manufacturing.block_a.label' as any)}
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-              Thoughtful Manufacturing,{' '}
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-                Minimal Waste
-              </span>
+              {t('sustainability.manufacturing.block_a.title' as any)}
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Our Sharjah facility operates modern extrusion lines with precise temperature control, 
-              automated wall-thickness monitoring, and rigorous quality testing. This precision approach 
-              ensures consistent product quality while minimizing material waste and energy consumption.
+              {t('sustainability.manufacturing.block_a.description' as any)}
             </p>
-            
+
             <ul className="space-y-3">
               {[
-                'Controlled extrusion for consistent dimensional accuracy',
-                'In-line quality testing reduces reject rates',
-                'Careful material selection for optimal formulations',
-                'Process optimization for energy efficiency',
+                t('sustainability.manufacturing.block_a.bullets.b1' as any),
+                t('sustainability.manufacturing.block_a.bullets.b2' as any),
+                t('sustainability.manufacturing.block_a.bullets.b3' as any),
+                t('sustainability.manufacturing.block_a.bullets.b4' as any),
               ].map((item, i) => (
                 <motion.li
                   key={i}
@@ -467,27 +465,24 @@ function GreenManufacturingSection() {
             className="lg:order-1"
           >
             <span className="inline-block px-4 py-1.5 bg-teal-100 text-teal-700 text-sm font-semibold rounded-full mb-4">
-              Long-Term Vision
+              {t('sustainability.manufacturing.block_b.label' as any)}
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-              Built for Projects That{' '}
+              {t('sustainability.manufacturing.block_b.title_prefix' as any)}{' '}
               <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-                Think in Decades
+                {t('sustainability.manufacturing.block_b.title_highlight' as any)}
               </span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              We work with consultants, contractors, and developers who understand that reliable 
-              piping infrastructure is a long-term investment. Choosing systems designed to last 
-              reduces breakdowns, site interventions, replacement costs, and construction waste 
-              over the building&apos;s lifetime.
+              {t('sustainability.manufacturing.block_b.description' as any)}
             </p>
-            
+
             <ul className="space-y-3 mb-6">
               {[
-                'Technical support for system design optimization',
-                'Comprehensive product range reduces compatibility issues',
-                'Clear documentation for specification confidence',
-                'Same-day delivery across UAE minimizes project delays',
+                t('sustainability.manufacturing.block_b.bullets.b1' as any),
+                t('sustainability.manufacturing.block_b.bullets.b2' as any),
+                t('sustainability.manufacturing.block_b.bullets.b3' as any),
+                t('sustainability.manufacturing.block_b.bullets.b4' as any),
               ].map((item, i) => (
                 <motion.li
                   key={i}
@@ -507,7 +502,7 @@ function GreenManufacturingSection() {
               href="/about-us"
               className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:gap-3 transition-all"
             >
-              Learn About Our Approach
+              {t('sustainability.manufacturing.block_b.link_text' as any)}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -545,31 +540,32 @@ function GreenManufacturingSection() {
 function ComplianceSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const standards = [
     {
       icon: Shield,
-      title: 'Quality Management',
-      code: 'ISO 9001:2015',
-      description: 'Certified quality management system ensuring consistent product excellence and continuous improvement.',
+      title: t('sustainability.compliance.items.quality.title' as any),
+      code: t('sustainability.compliance.items.quality.code' as any),
+      description: t('sustainability.compliance.items.quality.description' as any),
     },
     {
       icon: Leaf,
-      title: 'Environmental Management',
-      code: 'ISO 14001:2015',
-      description: 'Environmental management certification demonstrating our commitment to responsible manufacturing practices.',
+      title: t('sustainability.compliance.items.environmental.title' as any),
+      code: t('sustainability.compliance.items.environmental.code' as any),
+      description: t('sustainability.compliance.items.environmental.description' as any),
     },
     {
       icon: ClipboardCheck,
-      title: 'Product Standards',
-      code: 'BS EN / ASTM / DIN',
-      description: 'Products tested and certified to international piping standards for pressure, drainage, and conduit applications.',
+      title: t('sustainability.compliance.items.product_standards.title' as any),
+      code: t('sustainability.compliance.items.product_standards.code' as any),
+      description: t('sustainability.compliance.items.product_standards.description' as any),
     },
     {
       icon: FileText,
-      title: 'Technical Transparency',
-      code: 'Full Documentation',
-      description: 'Complete technical datasheets, installation guides, and submittal packages for specification confidence.',
+      title: t('sustainability.compliance.items.transparency.title' as any),
+      code: t('sustainability.compliance.items.transparency.code' as any),
+      description: t('sustainability.compliance.items.transparency.description' as any),
     },
   ];
 
@@ -577,13 +573,13 @@ function ComplianceSection() {
     <section ref={ref} className="py-16 md:py-24 bg-slate-900 relative overflow-hidden">
       {/* Tech grid */}
       <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Standards & Responsibility"
-          title="Compliance That Supports"
-          titleHighlight="Sustainability"
-          subtitle="Our certifications and standards compliance ensure reliable, efficient systems that minimize waste and maximize performance."
+          label={t('sustainability.compliance.label' as any)}
+          title={t('sustainability.compliance.title' as any)}
+          titleHighlight={t('sustainability.compliance.title_highlight' as any)}
+          subtitle={t('sustainability.compliance.subtitle' as any)}
           dark
         />
 
@@ -600,11 +596,11 @@ function ComplianceSection() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4 border border-emerald-400/30">
                   <item.icon className="w-6 h-6 text-emerald-400" />
                 </div>
-                
+
                 <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
                   {item.code}
                 </div>
-                
+
                 <h3 className="text-lg font-extrabold text-white mb-2 tracking-tight">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
               </div>
@@ -623,16 +619,17 @@ function ComplianceSection() {
 
 function WhySustainabilityMattersSection() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   return (
     <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden border-y border-emerald-100/50">
       {/* Bio-Luminescent Light Theme */}
       {/* Base gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF] to-white" />
-      
+
       {/* The Green Core - centered glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-300/20 blur-[120px] rounded-full pointer-events-none" />
-      
+
       {/* The Blue Current - top-right orb */}
       <div className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
@@ -644,7 +641,7 @@ function WhySustainabilityMattersSection() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full mb-6 uppercase tracking-wider border border-emerald-200"
           >
-            Thought Leadership
+            {t('sustainability.thought_leadership.label' as any)}
           </motion.span>
 
           <motion.h2
@@ -654,9 +651,9 @@ function WhySustainabilityMattersSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-extrabold text-[#002B4A] mb-6 leading-tight tracking-tight"
           >
-            Why Sustainable Piping Systems{' '}
+            {t('sustainability.thought_leadership.title' as any)}
             <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-              Matter for the Gulf
+              {t('sustainability.thought_leadership.title_highlight' as any)}
             </span>
           </motion.h2>
 
@@ -668,20 +665,13 @@ function WhySustainabilityMattersSection() {
             className="text-lg text-slate-600 leading-relaxed mb-8 space-y-4"
           >
             <p>
-              In piping infrastructure, true sustainability isn&apos;t about marketing claims—it&apos;s about 
-              engineering systems that genuinely last. A drainage line that fails after 15 years generates 
-              more environmental impact than one designed to serve reliably for 50+.
+              {t('sustainability.thought_leadership.paragraphs.p1' as any)}
             </p>
             <p>
-              Every leak causes water loss. Every premature replacement consumes resources. Every 
-              excavation disrupts buildings and wastes contractor time. The most sustainable piping 
-              decision is often the simplest: choose materials that perform predictably under your 
-              project&apos;s actual conditions.
+              {t('sustainability.thought_leadership.paragraphs.p2' as any)}
             </p>
             <p>
-              For Gulf projects facing extreme heat, UV exposure, and aggressive soil conditions, 
-              this means selecting systems specifically formulated and tested for these environments—not 
-              generic products that may underperform when conditions intensify.
+              {t('sustainability.thought_leadership.paragraphs.p3' as any)}
             </p>
           </motion.div>
 
@@ -694,9 +684,9 @@ function WhySustainabilityMattersSection() {
             className="grid md:grid-cols-3 gap-6 mt-12"
           >
             {[
-              { icon: Timer, title: 'Design for Longevity', desc: 'Systems that last reduce replacements' },
-              { icon: Droplets, title: 'Prevent Failures', desc: 'Leaks waste water and damage structures' },
-              { icon: Award, title: 'Tested Materials', desc: 'Predictable performance under real conditions' },
+              { icon: Timer, title: t('sustainability.thought_leadership.takeaways.longevity.title' as any), desc: t('sustainability.thought_leadership.takeaways.longevity.desc' as any) },
+              { icon: Droplets, title: t('sustainability.thought_leadership.takeaways.failures.title' as any), desc: t('sustainability.thought_leadership.takeaways.failures.desc' as any) },
+              { icon: Award, title: t('sustainability.thought_leadership.takeaways.tested.title' as any), desc: t('sustainability.thought_leadership.takeaways.tested.desc' as any) },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#0072BC] flex items-center justify-center shadow-lg shadow-primary/20">
@@ -720,15 +710,16 @@ function WhySustainabilityMattersSection() {
 
 function SustainabilityCTA() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   return (
     <section className="relative py-16 md:py-20 overflow-hidden">
       {/* Gradient background - emerald with blue anchor */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-700 via-emerald-800 to-teal-900" />
-      
+
       {/* Animated orb */}
       {!prefersReducedMotion && (
-        <motion.div 
+        <motion.div
           className="absolute inset-0"
           animate={{
             background: [
@@ -740,52 +731,51 @@ function SustainabilityCTA() {
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
       )}
-      
+
       {/* Crown blue accent strip */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.span 
+          <motion.span
             className="inline-block text-emerald-200 text-sm font-semibold uppercase tracking-wider mb-4"
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Start Your Next Project Right
+            {t('sustainability.cta.label' as any)}
           </motion.span>
-          
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Design Your Next Project with{' '}
+            {t('sustainability.cta.title' as any)}
             <span className="bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">
-              Long-Life, Reliable Piping
+              {t('sustainability.cta.title_highlight' as any)}
             </span>
           </h2>
-          
+
           <p className="text-emerald-100/90 text-lg mb-10 max-w-2xl mx-auto">
-            Partner with Crown Plastic Pipes for sustainable piping solutions. Our technical team 
-            supports consultants, contractors, and developers from specification to delivery.
+            {t('sustainability.cta.subtitle' as any)}
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <QuoteButton variant="outline" size="lg" className="!bg-white !text-emerald-700 hover:!bg-emerald-50">
-              Request Sustainability Consultation
+              {t('sustainability.cta.cta_primary' as any)}
               <ArrowRight className="w-5 h-5" />
             </QuoteButton>
             <MagneticButton href="/resources" variant="secondary" size="lg">
               <FileText className="w-5 h-5" />
-              Download Technical Catalogue
+              {t('sustainability.cta.cta_secondary' as any)}
             </MagneticButton>
           </div>
-          
+
           {/* Trust indicators */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/20"
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -793,9 +783,9 @@ function SustainabilityCTA() {
             transition={{ delay: 0.4 }}
           >
             {[
-              { icon: Users, text: 'Consultant Support' },
-              { icon: FileText, text: 'Technical Documentation' },
-              { icon: Timer, text: 'Long-Term Performance' },
+              { icon: Users, text: t('sustainability.cta.trust.consultant' as any) },
+              { icon: FileText, text: t('sustainability.cta.trust.documentation' as any) },
+              { icon: Timer, text: t('sustainability.cta.trust.performance' as any) },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-emerald-100/80 text-sm">
                 <item.icon className="w-4 h-4 text-emerald-300" />

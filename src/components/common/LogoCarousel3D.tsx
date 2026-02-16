@@ -320,10 +320,9 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
         {/* 3D Carousel Container */}
         <div className="relative">
           {/* Animated scroll hint - fades away after interaction */}
-          <div 
-            className={`absolute inset-0 z-30 pointer-events-none flex items-center justify-center transition-opacity duration-1000 ${
-              showScrollHint ? 'opacity-100' : 'opacity-0'
-            }`}
+          <div
+            className={`absolute inset-0 z-30 pointer-events-none flex items-center justify-center transition-opacity duration-1000 ${showScrollHint ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             {/* Left hint */}
             <div className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2">
@@ -331,14 +330,14 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
                 <div className="w-6 h-[2px] bg-gradient-to-l from-white/40 to-transparent rounded-full" />
               </div>
             </div>
-            
+
             {/* Right hint with animated chevrons */}
             <div className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2">
               <div className="flex items-center gap-0.5">
                 <div className="w-6 h-[2px] bg-gradient-to-r from-white/40 to-transparent rounded-full" />
-                <svg 
+                <svg
                   className="w-3 h-3 text-white/50 animate-[scroll-hint_1.5s_ease-in-out_infinite]"
-                  viewBox="0 0 24 24" 
+                  viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                 >
@@ -374,7 +373,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
             {logos.map((logo, index) => {
               const style = getLogoStyle(index);
               const isCenter = (index - currentIndex + totalLogos) % totalLogos === 0;
-              
+
               return (
                 <div
                   key={`${logo.name}-${index}`}
@@ -399,7 +398,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
                       />
                     </div>
                   </div>
-                  
+
                   {/* Logo name label (visible on center card only) */}
                   {isCenter && (
                     <div className="absolute -bottom-12 sm:-bottom-14 md:-bottom-16 left-1/2 -translate-x-1/2 text-center w-full px-2">
@@ -419,16 +418,15 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
           </div>
 
           {/* Dot indicators */}
-          <div className="relative z-50 flex justify-center gap-2 mt-16 sm:mt-18 md:mt-20 lg:mt-24 2xl:mt-28">
+          <div className="relative z-50 flex justify-center gap-2 mt-20 sm:mt-28 lg:mt-24 2xl:mt-28">
             {logos.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex
+                className={`h-2 rounded-full transition-all ${index === currentIndex
                     ? 'bg-primary w-6 md:w-8'
                     : 'w-2 bg-white/30 hover:bg-white/50'
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

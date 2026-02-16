@@ -7,6 +7,7 @@ import { type ProductDetailConfig, PRODUCT_DETAIL_SECTIONS } from '@/types/produ
 import { PipesSection } from './PipesTable';
 import { FittingsSection } from './FittingsGallery';
 import { useLanguage } from '@/context/LanguageContext';
+import { useT } from '@/i18n';
 import { getCategoryBySlug } from '@/config/products';
 
 // Design System imports
@@ -33,22 +34,23 @@ interface ProductDetailLayoutProps {
  */
 export default function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
   const { language } = useLanguage();
+  const t = useT();
   const [activeSection, setActiveSection] = useState('overview');
   const category = getCategoryBySlug(product.categorySlug);
 
   // Get localized content
   const title = language === 'ar' ? (product.titleAr || product.title) : product.title;
-  const shortDesc = language === 'ar' 
-    ? (product.shortDescriptionAr || product.shortDescription) 
+  const shortDesc = language === 'ar'
+    ? (product.shortDescriptionAr || product.shortDescription)
     : product.shortDescription;
   const overview = language === 'ar' ? (product.overviewAr || product.overview) : product.overview;
   const features = language === 'ar' ? (product.featuresAr || product.features) : product.features;
-  const applications = language === 'ar' 
-    ? (product.applicationsAr || product.applications) 
+  const applications = language === 'ar'
+    ? (product.applicationsAr || product.applications)
     : product.applications;
   const dosDonts = language === 'ar' ? (product.dosDontsAr || product.dosDonts) : product.dosDonts;
-  const categoryName = category 
-    ? (language === 'ar' ? (category.nameAr || category.name) : category.name) 
+  const categoryName = category
+    ? (language === 'ar' ? (category.nameAr || category.name) : category.name)
     : '';
 
   // Deduplicate features and applications
@@ -94,13 +96,13 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of visibleSections) {
         const element = document.getElementById(section.id);
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section.id);
             break;
@@ -116,7 +118,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   // Extract standards/badges from title or features for hero badges
   const heroBadges = useMemo(() => {
     const badges: string[] = [];
-    
+
     // Extract from title - e.g., "DIN 8063", "BS EN 1452", "PN 10"
     const standardPatterns = [
       /DIN\s*\d+/gi,
@@ -126,14 +128,14 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       /SDR\s*[\d.]+/gi,
       /ISO\s*\d+/gi,
     ];
-    
+
     for (const pattern of standardPatterns) {
       const matches = title.match(pattern);
       if (matches) {
         badges.push(...matches.map(m => m.toUpperCase().replace(/\s+/g, ' ')));
       }
     }
-    
+
     return Array.from(new Set(badges)).slice(0, 4); // Max 4 badges
   }, [title]);
 
@@ -150,7 +152,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <div className="absolute bottom-10 left-10 w-2 h-2 rounded-full bg-primary/60 shadow-[0_0_0_6px_rgba(0,114,188,0.25)]" />
           <div className="absolute top-12 right-32 w-1.5 h-1.5 rounded-full bg-primary/40 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
         </div>
-        
+
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start relative">
           {/* Left column - Content card */}
           <div className="lg:col-span-3">
@@ -158,12 +160,12 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               {/* Breadcrumb */}
               <nav className="flex items-center gap-2 text-sm text-slate-500 mb-4" aria-label="Breadcrumb">
                 <Link href="/products" className="hover:text-primary transition-colors">
-                  Products
+                  {t('products.detail_layout.breadcrumb_products')}
                 </Link>
                 <ChevronRight className="w-4 h-4" />
                 {category && (
                   <>
-                    <Link 
+                    <Link
                       href={`/products/${product.categorySlug}`}
                       className="hover:text-primary transition-colors"
                     >
@@ -196,7 +198,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               {heroBadges.length > 0 && (
                 <div className="mb-6">
                   <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-                    Standards & Certifications
+                    {t('products.detail_layout.standards_certifications')}
                   </h3>
                   <ProductBadgeRow gap="sm">
                     {heroBadges.map((badge) => (
@@ -214,7 +216,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                   href="/contact-us"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg shadow-primary/20"
                 >
-                  Request Quote
+                  {t('products.detail_layout.request_quote')}
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 {product.downloads && product.downloads.length > 0 && (
@@ -225,7 +227,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                     className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl font-semibold transition-colors"
                   >
                     <Download className="w-5 h-5" />
-                    Download Catalogue
+                    {t('products.detail_layout.download_catalogue')}
                   </a>
                 )}
               </div>
@@ -247,30 +249,30 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                     <rect width="100" height="100" fill="url(#heroPattern)" />
                   </svg>
                 </div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="text-primary/60 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Crown Plastic Pipes
+                    {t('products.detail_layout.crown_plastic_pipes')}
                   </div>
                   <div className="text-2xl font-bold text-slate-800 mb-4">
-                    Premium Quality
+                    {t('products.detail_layout.premium_quality')}
                   </div>
                   <div className="space-y-3 text-sm text-slate-600">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary/60" />
-                      <span>ISO 9001:2015 Certified</span>
+                      <span>{t('products.detail_layout.iso_certified')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary/60" />
-                      <span>GCC Market Leader</span>
+                      <span>{t('products.detail_layout.gcc_market_leader')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary/60" />
-                      <span>52+ Countries</span>
+                      <span>{t('products.detail_layout.countries')}</span>
                     </div>
                   </div>
-                  
+
                   {/* Pressure class badges if available */}
                   {heroBadges.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200">
@@ -298,16 +300,15 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               {visibleSections.map((section) => {
                 const label = language === 'ar' ? (section.labelAr || section.label) : section.label;
                 const isActive = activeSection === section.id;
-                
+
                 return (
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                      isActive
-                        ? 'bg-primary text-white shadow-sm'
-                        : 'text-slate-600 hover:text-primary hover:bg-slate-100'
-                    }`}
+                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${isActive
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'text-slate-600 hover:text-primary hover:bg-slate-100'
+                      }`}
                   >
                     {label}
                   </button>
@@ -323,9 +324,9 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       ═══════════════════════════════════════════════════════════════════════════ */}
       {overview && (
         <ProductSection id="overview" background="white" size="md">
-          <ProductSectionHeader 
-            title="Overview" 
-            subtitle="Product introduction and key characteristics"
+          <ProductSectionHeader
+            title={t('products.detail_layout.overview_title')}
+            subtitle={t('products.detail_layout.overview_subtitle')}
           />
           <ProductCardSurface variant="elevated" padding="lg">
             <div className="prose prose-lg max-w-4xl">
@@ -346,9 +347,9 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             <RadialGlowOverlay intensity="subtle" position="top" />
             <div className="absolute bottom-8 right-16 w-1.5 h-1.5 rounded-full bg-primary/50 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
           </div>
-          <ProductSectionHeader 
-            title="Features" 
-            subtitle="Technical advantages and key benefits of this product range"
+          <ProductSectionHeader
+            title={t('products.detail_layout.features_title')}
+            subtitle={t('products.detail_layout.features_subtitle')}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {uniqueFeatures.map((feature, index) => (
@@ -373,9 +374,9 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       ═══════════════════════════════════════════════════════════════════════════ */}
       {uniqueApplications.length > 0 && (
         <ProductSection id="applications" background="white" size="md" showGlow>
-          <ProductSectionHeader 
-            title="Applications" 
-            subtitle="Ideal use cases and industries for this product"
+          <ProductSectionHeader
+            title={t('products.detail_layout.applications_title')}
+            subtitle={t('products.detail_layout.applications_subtitle')}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {uniqueApplications.map((app, index) => (
@@ -398,18 +399,18 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             <RadialGlowOverlay intensity="subtle" position="center" />
             <div className="absolute top-10 left-16 w-1.5 h-1.5 rounded-full bg-primary/45 shadow-[0_0_0_4px_rgba(0,114,188,0.18)]" />
           </div>
-          <ProductSectionHeader 
-            title={language === 'ar' 
-              ? (product.variantsSectionTitleAr || product.variantsSectionTitle || 'التكوينات') 
-              : (product.variantsSectionTitle || 'Product Configurations')} 
-            subtitle="Available design types and configurations"
+          <ProductSectionHeader
+            title={language === 'ar'
+              ? (product.variantsSectionTitleAr || product.variantsSectionTitle || 'التكوينات')
+              : (product.variantsSectionTitle || t('products.detail_layout.configurations_default'))}
+            subtitle={t('products.detail_layout.configurations_subtitle')}
           />
           <div className="grid md:grid-cols-2 gap-6">
             {product.variants.map((variant) => {
               const variantTitle = language === 'ar' ? (variant.titleAr || variant.title) : variant.title;
               const variantDesc = language === 'ar' ? (variant.descriptionAr || variant.description) : variant.description;
               const variantFeatures = language === 'ar' ? (variant.featuresAr || variant.features) : variant.features;
-              
+
               return (
                 <ProductCardSurface key={variant.id} variant="elevated" padding="lg" hoverable>
                   <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
@@ -451,7 +452,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       ═══════════════════════════════════════════════════════════════════════════ */}
       {product.videoUrl && (
         <ProductSection id="video" background="white" size="md">
-          <ProductSectionHeader title="Product Video" align="center" />
+          <ProductSectionHeader title={t('products.detail_layout.video_title')} align="center" />
           <div className="max-w-4xl mx-auto">
             <ProductCardSurface variant="elevated" padding="none" className="overflow-hidden">
               <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-xl">
@@ -479,7 +480,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             <RadialGlowOverlay intensity="subtle" position="bottom" />
             <div className="absolute top-12 right-20 w-1.5 h-1.5 rounded-full bg-primary/45 shadow-[0_0_0_4px_rgba(0,114,188,0.18)]" />
           </div>
-          <ProductSectionHeader title="Installation Guidelines" subtitle="Best practices for optimal performance and longevity" />
+          <ProductSectionHeader title={t('products.detail_layout.installation_title')} subtitle={t('products.detail_layout.installation_subtitle')} />
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
             {/* Do's */}
             {dosDonts.dos.length > 0 && (
@@ -487,7 +488,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                 <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-emerald-100 via-emerald-400/60 to-emerald-100" />
                 <h3 className="flex items-center gap-2 text-lg font-bold text-emerald-600 mb-4">
                   <CheckCircle2 className="w-6 h-6" />
-                  Do&apos;s
+                  {t('products.detail_layout.dos_heading')}
                 </h3>
                 <ul className="space-y-3">
                   {dosDonts.dos.map((item, index) => (
@@ -508,7 +509,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                 <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-red-100 via-red-400/60 to-red-100" />
                 <h3 className="flex items-center gap-2 text-lg font-bold text-red-600 mb-4">
                   <XCircle className="w-6 h-6" />
-                  Don&apos;ts
+                  {t('products.detail_layout.donts_heading')}
                 </h3>
                 <ul className="space-y-3">
                   {dosDonts.donts.map((item, index) => (
@@ -533,7 +534,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       ═══════════════════════════════════════════════════════════════════════════ */}
       {product.downloads && product.downloads.length > 0 && (
         <ProductSection background="white" size="md">
-          <ProductSectionHeader title="Downloads" />
+          <ProductSectionHeader title={t('products.detail_layout.downloads_title')} />
           <div className="flex flex-wrap gap-3">
             {product.downloads.map((download, index) => (
               <a
@@ -558,24 +559,24 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       <div className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16 md:py-20">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Need assistance with {title}?
+            {t('products.detail_layout.need_assistance_with')} {title}?
           </h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Our technical team is here to help you select the right products for your project.
+            {t('products.detail_layout.cta_subtitle')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact-us"
               className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:bg-slate-100 transition-colors shadow-lg"
             >
-              Contact Us
+              {t('products.detail_layout.contact_us')}
               <ChevronRight className="w-5 h-5" />
             </Link>
             <Link
               href="/resources"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-colors border border-white/20"
             >
-              View All Resources
+              {t('products.detail_layout.view_all_resources')}
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@
 // Single-currency pricing per region with proper schema markup
 
 import { useLanguage } from '@/context/LanguageContext';
+import { useT } from '@/i18n';
 import { Icon } from '@/components/ui/Icon';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -18,12 +19,14 @@ interface RegionalProductCatalogClientProps {
 
 export default function RegionalProductCatalogClient({ catalog, products }: RegionalProductCatalogClientProps) {
   const { language } = useLanguage();
+  const t = useT();
+  const isAr = language === 'ar';
 
   const breadcrumbs = [
-    { name: 'Home', nameAr: 'الرئيسية', url: '/' },
-    { name: 'Markets', nameAr: 'الأسواق', url: '/market' },
-    { name: catalog.region, nameAr: catalog.titleAr, url: `/market/${catalog.regionSlug}` },
-    { name: 'UPVC Pipes', nameAr: 'أنابيب UPVC', url: `/market/${catalog.regionSlug}/products/upvc-pipes` },
+    { name: t('markets.regional.breadcrumb_home'), nameAr: t('markets.regional.breadcrumb_home'), url: '/' },
+    { name: t('markets.regional.breadcrumb_markets'), nameAr: t('markets.regional.breadcrumb_markets'), url: '/market' },
+    { name: isAr ? catalog.titleAr : catalog.region, nameAr: catalog.titleAr, url: `/market/${catalog.regionSlug}` },
+    { name: t('markets.catalog.breadcrumb_upvc'), nameAr: t('markets.catalog.breadcrumb_upvc'), url: `/market/${catalog.regionSlug}/products/upvc-pipes` },
   ];
 
   const baseUrl = 'https://crownplasticuae.com';
@@ -33,7 +36,7 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
     <>
       {/* Schemas */}
       <BreadcrumbSchema items={breadcrumbs} />
-      
+
       {/* Regional LocalBusiness Schema */}
       <Script
         id={`localbusiness-regional-${catalog.regionSlug}`}
@@ -57,7 +60,7 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
           }),
         }}
       />
-      
+
       {/* Bulk Pricing Schema for each product */}
       {products.slice(0, 3).map((product) => (
         <BulkPricingSchema
@@ -105,11 +108,11 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
             {/* Regional Info */}
             <div className="flex flex-wrap gap-4 mt-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                <span className="text-blue-200 text-sm">Currency:</span>
+                <span className="text-blue-200 text-sm">{t('markets.catalog.currency_label')}</span>
                 <span className="ml-2 font-bold">{catalog.currency}</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                <span className="text-blue-200 text-sm">Delivery:</span>
+                <span className="text-blue-200 text-sm">{t('markets.catalog.delivery_label')}</span>
                 <span className="ml-2 font-bold">{catalog.deliveryTime}</span>
               </div>
             </div>
@@ -120,7 +123,7 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
-              {language === 'ar' ? 'أسعار الجملة' : 'Bulk Pricing Tiers'}
+              {t('markets.catalog.bulk_pricing_title')}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {standardBulkTiers.map((tier) => (
@@ -142,7 +145,7 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
         <section className="py-12">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              {language === 'ar' ? 'كتالوج الأسعار' : 'Price Catalog'} ({catalog.currency})
+              {t('markets.catalog.price_catalog_title')} ({catalog.currency})
             </h2>
 
             {/* Price Table */}
@@ -152,19 +155,19 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
                   <thead className="bg-gray-50">
                     <tr>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                        {language === 'ar' ? 'المنتج' : 'Product'}
+                        {t('markets.catalog.table.product')}
                       </th>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                        {language === 'ar' ? 'الكود' : 'SKU'}
+                        {t('markets.catalog.table.sku')}
                       </th>
                       <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">
-                        {language === 'ar' ? 'السعر الأساسي' : 'Base Price'}
+                        {t('markets.catalog.table.base_price')}
                       </th>
                       <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">
-                        {language === 'ar' ? 'سعر الجملة (-10%)' : 'Bulk Price (-10%)'}
+                        {t('markets.catalog.table.bulk_price')}
                       </th>
                       <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
-                        {language === 'ar' ? 'الحد الأدنى' : 'Min. Order'}
+                        {t('markets.catalog.table.min_order')}
                       </th>
                     </tr>
                   </thead>
@@ -208,15 +211,12 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
                 <Icon name="phone" className="w-5 h-5 text-blue-600 mt-0.5" />
                 <div>
                   <h3 className="font-semibold text-blue-900">
-                    {language === 'ar' ? 'طلبات 100+ وحدة' : 'Orders of 100+ Units'}
+                    {t('markets.catalog.wholesale.title')}
                   </h3>
                   <p className="text-blue-700 text-sm mt-1">
-                    {language === 'ar' 
-                      ? 'للحصول على أفضل أسعار الجملة للطلبات الكبيرة، يرجى التواصل مع فريق المبيعات.'
-                      : 'For best wholesale pricing on large orders, please contact our sales team for a custom quote.'
-                    }
+                    {t('markets.catalog.wholesale.description')}
                   </p>
-                  <a 
+                  <a
                     href={`tel:${catalog.telephone}`}
                     className="inline-flex items-center gap-2 mt-2 text-blue-700 font-medium hover:text-blue-900"
                   >
@@ -232,11 +232,11 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
         <section className="py-12 bg-gray-100">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              {language === 'ar' ? 'الشهادات المعتمدة' : 'Certifications'}
+              {t('markets.catalog.certifications_title')}
             </h2>
             <div className="flex flex-wrap gap-3">
               {catalog.certifications.map((cert) => (
-                <span 
+                <span
                   key={cert}
                   className="bg-white px-4 py-2 rounded-lg shadow-sm text-gray-700 font-medium"
                 >
@@ -251,20 +251,17 @@ export default function RegionalProductCatalogClient({ catalog, products }: Regi
         <section className="py-16 bg-gradient-to-br from-orange-500 to-orange-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              {language === 'ar' ? 'هل أنت مستعد للطلب؟' : 'Ready to Order?'}
+              {t('markets.catalog.cta.title')}
             </h2>
             <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">
-              {language === 'ar'
-                ? `احصل على عرض سعر مخصص لمشروعك في ${catalog.region}. توصيل في ${catalog.deliveryTime}.`
-                : `Get a custom quote for your ${catalog.region} project. Delivery in ${catalog.deliveryTime}.`
-              }
+              {t('markets.catalog.cta.subtitle_tpl').replace('{region}', isAr ? catalog.titleAr : catalog.region).replace('{deliveryTime}', catalog.deliveryTime)}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={`/contact-us?region=${catalog.regionSlug}&product=upvc-pipes`}
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-colors"
               >
-                {language === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
+                {t('markets.catalog.cta.button')}
               </Link>
               <a
                 href={`tel:${catalog.telephone}`}

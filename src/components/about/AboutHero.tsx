@@ -136,17 +136,17 @@ export default function AboutHero() {
               >
                 {/* Blue gradient overlay at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-10" />
-                
+
                 <Image
                   src="/images/about/factory-hero.jpeg"
-                  alt="Crown Plastic Pipes manufacturing facility in Sharjah, UAE"
+                  alt="Crown Plastic Pipes manufacturing facility in Umm Al Quwain, UAE"
                   width={1200}
                   height={900}
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-full object-cover object-center"
                 />
-                
+
                 {/* Dark Blue Accent Corner */}
                 <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/90 hidden lg:block" />
               </motion.div>

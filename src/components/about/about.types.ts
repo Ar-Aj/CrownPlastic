@@ -73,7 +73,7 @@ export const heroFacts: HeroFact[] = [
     id: 'since-1995',
     label: 'Since 1995',
     subtitle: 'Three Decades of Excellence',
-    description: 'Pioneering UPVC, PPR, and HDPE piping solutions from Sharjah, UAE. ISO-certified manufacturing serving GCC infrastructure projects for 30+ years.',
+    description: 'Pioneering UPVC, PPR, and HDPE piping solutions from Umm Al Quwain, UAE. ISO-certified manufacturing serving GCC infrastructure projects for 30+ years.',
   },
   {
     id: 'manufacturing',
@@ -193,7 +193,7 @@ export const journeyEvents: JourneyEvent[] = [
 ];
 
 export const gccMarkets: GccMarket[] = [
-  { id: 'uae', name: 'United Arab Emirates', code: 'UAE', note: 'Headquarters & manufacturing hub in Sharjah', active: true },
+  { id: 'uae', name: 'United Arab Emirates', code: 'UAE', note: 'Headquarters & manufacturing hub in Umm Al Quwain', active: true },
   { id: 'ksa', name: 'Saudi Arabia', code: 'KSA', note: 'Major export market, SASO certified products' },
   { id: 'oman', name: 'Oman', code: 'OMN', note: 'Infrastructure & irrigation projects' },
   { id: 'qatar', name: 'Qatar', code: 'QAT', note: 'Construction & development sector' },

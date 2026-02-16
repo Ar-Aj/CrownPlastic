@@ -2,6 +2,7 @@
 
 import { type PipeTable } from '@/types/productDetail';
 import { PDSection, PDSectionHeader, PDTableShell } from '@/components/productDetail';
+import { useT } from '@/i18n';
 
 interface PipesTableProps {
   table: PipeTable;
@@ -12,6 +13,7 @@ interface PipesTableProps {
  * Uses the product detail design system for consistent styling.
  */
 export default function PipesTable({ table }: PipesTableProps) {
+  const t = useT();
   return (
     <PDTableShell title={table.title} className="mb-8 last:mb-0">
       {/* Scrollable container for mobile */}
@@ -42,11 +44,11 @@ export default function PipesTable({ table }: PipesTableProps) {
               })}
             </tr>
           </thead>
-          
+
           {/* Body */}
           <tbody className="bg-white divide-y divide-gray-100">
             {table.rows.map((row, rowIndex) => (
-              <tr 
+              <tr
                 key={rowIndex}
                 className={`${rowIndex % 2 === 0 ? 'bg-white' : 'bg-[#F9FAFB]'} hover:bg-[#F3F4F6] transition-colors`}
               >
@@ -71,11 +73,11 @@ export default function PipesTable({ table }: PipesTableProps) {
             ))}
           </tbody>
         </table>
-        
+
         {/* Empty state */}
         {table.rows.length === 0 && (
           <div className="px-4 py-8 text-center text-[#6B7280] bg-[#F9FAFB]">
-            No data available. Table data will be populated from product specifications.
+            {t('products.pipes.empty_state')}
           </div>
         )}
       </div>
@@ -88,13 +90,14 @@ export default function PipesTable({ table }: PipesTableProps) {
  * Uses PDSection for consistent spacing and light background.
  */
 export function PipesSection({ tables }: { tables: PipeTable[] }) {
+  const t = useT();
   if (!tables || tables.length === 0) return null;
-  
+
   return (
     <PDSection id="pipes" background="surface" size="md">
-      <PDSectionHeader 
-        title="Pipe Specifications" 
-        subtitle="Technical dimensions and parameters for all pipe sizes"
+      <PDSectionHeader
+        title={t('products.pipes.section_title')}
+        subtitle={t('products.pipes.section_subtitle')}
       />
       {tables.map((table) => (
         <PipesTable key={table.id} table={table} />

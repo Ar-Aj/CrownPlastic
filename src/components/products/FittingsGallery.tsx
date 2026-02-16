@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { type Fitting, type FittingFamily, FITTING_FAMILY_LABELS } from '@/types/productDetail';
 import FittingModal from './FittingModal';
 import { ProductSection, ProductSectionHeader, RadialGlowOverlay } from '@/components/products/design-system';
+import { useT } from '@/i18n';
 
 interface FittingsGalleryProps {
   fittings: Fitting[];
@@ -19,6 +20,7 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
   const [activeFamily, setActiveFamily] = useState<FittingFamily | 'all'>('all');
   const [selectedFitting, setSelectedFitting] = useState<Fitting | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const t = useT();
 
   // Derive available families from fittings data
   const availableFamilies = useMemo(() => {
@@ -53,22 +55,21 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
         <RadialGlowOverlay intensity="subtle" position="center" />
         <div className="absolute bottom-10 left-8 w-1.5 h-1.5 rounded-full bg-primary/50 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
       </div>
-      <ProductSectionHeader 
-        title="Fittings & Accessories"
-        subtitle="Complete range of fittings for this product line"
+      <ProductSectionHeader
+        title={t('products.fittings.section_title')}
+        subtitle={t('products.fittings.section_subtitle')}
       />
-  
+
       {/* Filter tabs - horizontally scrollable on mobile */}
       <div className="mb-8 -mx-4 px-4 overflow-x-auto">
         <div className="flex gap-2 min-w-max pb-2">
           {/* All tab */}
           <button
             onClick={() => setActiveFamily('all')}
-            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-              activeFamily === 'all'
+            className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${activeFamily === 'all'
                 ? 'bg-primary text-white shadow-sm'
                 : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-white border border-slate-200 shadow-sm'
-            }`}
+              }`}
           >
             All ({fittings.length})
           </button>
@@ -80,11 +81,10 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
               <button
                 key={family}
                 onClick={() => setActiveFamily(family)}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                  activeFamily === family
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${activeFamily === family
                     ? 'bg-primary text-white shadow-sm'
                     : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-white border border-slate-200 shadow-sm'
-                }`}
+                  }`}
               >
                 {FITTING_FAMILY_LABELS[family]} ({count})
               </button>
@@ -107,7 +107,7 @@ export default function FittingsGallery({ fittings }: FittingsGalleryProps) {
       {/* Empty state */}
       {filteredFittings.length === 0 && (
         <div className="py-12 text-center text-slate-400">
-          No fittings found in this category.
+          {t('products.fittings.empty_state')}
         </div>
       )}
 

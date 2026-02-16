@@ -1,10 +1,11 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { innovationPillars, type InnovationPillar } from './about.types';
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // INNOVATION LAB SECTION - R&D Card Wall
@@ -16,6 +17,39 @@ export default function InnovationLabSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
+
+  // Map pillar IDs to dictionary keys (kebab-case to snake_case)
+  const PILLAR_ID_TO_KEY: Record<string, string> = {
+    'virgin-material': 'virgin_material',
+    'inhouse-qc': 'inhouse_qc',
+    'gulf-climate': 'gulf_climate',
+    'independent-lab': 'independent_lab',
+    'chemical-resistance': 'chemical_resistance',
+    'european-tech': 'european_tech',
+  };
+
+  // Translate pillar titles/descriptions/specs
+  const translatedPillars = useMemo(() =>
+    innovationPillars.map((p) => {
+      const key = PILLAR_ID_TO_KEY[p.id];
+      if (!key) return p;
+      const pillarPath = `about.innovation.pillars.${key}`;
+      return {
+        ...p,
+        title: t(`${pillarPath}.title` as any),
+        description: t(`${pillarPath}.description` as any),
+        specs: p.specs?.map((spec, i) => {
+          // Specs in dictionary use specific property keys
+          const specKeys = getSpecKeys(key, i);
+          return {
+            property: t(`${pillarPath}.specs.${specKeys.prop}` as any),
+            value: t(`${pillarPath}.specs.${specKeys.val}` as any),
+          };
+        }),
+      };
+    }),
+    [t]);
 
   return (
     <section
@@ -31,25 +65,26 @@ export default function InnovationLabSection() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-            Research & Development
+            {t('about.innovation.badge')}
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Innovation Laboratory
+            {t('about.innovation.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            In-house R&D capabilities driving product excellence and continuous improvement
+            {t('about.innovation.description')}
           </p>
         </motion.div>
 
         {/* Innovation Card Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {innovationPillars.map((pillar, index) => (
+          {translatedPillars.map((pillar, index) => (
             <InnovationCard
               key={pillar.id}
               pillar={pillar}
               index={index}
               isInView={isInView}
               prefersReducedMotion={prefersReducedMotion}
+              specsLabel={t('about.innovation.specs_label')}
             />
           ))}
         </div>
@@ -64,29 +99,60 @@ export default function InnovationLabSection() {
           <div className="grid md:grid-cols-4 gap-6">
             <LabFeature
               icon="microscope"
-              title="In-House Lab"
-              description="Fully equipped testing facility"
+              title={t('about.innovation.lab_features.inhouse_lab.title')}
+              description={t('about.innovation.lab_features.inhouse_lab.description')}
             />
             <LabFeature
               icon="certified"
-              title="ISO 17025"
-              description="Accredited testing procedures"
+              title={t('about.innovation.lab_features.iso_17025.title')}
+              description={t('about.innovation.lab_features.iso_17025.description')}
             />
             <LabFeature
               icon="cog"
-              title="Battenfeld Lines"
-              description="European extrusion technology"
+              title={t('about.innovation.lab_features.battenfeld.title')}
+              description={t('about.innovation.lab_features.battenfeld.description')}
             />
             <LabFeature
               icon="climate"
-              title="Climate Chamber"
-              description="Gulf conditions simulation"
+              title={t('about.innovation.lab_features.climate_chamber.title')}
+              description={t('about.innovation.lab_features.climate_chamber.description')}
             />
           </div>
         </motion.div>
       </div>
     </section>
   );
+}
+
+// Helper: return dictionary spec property/value keys for each pillar
+function getSpecKeys(pillarKey: string, specIndex: number): { prop: string; val: string } {
+  const specKeyMap: Record<string, { prop: string; val: string }[]> = {
+    virgin_material: [
+      { prop: 'purity', val: 'purity_val' },
+      { prop: 'contamination', val: 'contamination_val' },
+    ],
+    inhouse_qc: [
+      { prop: 'testing', val: 'testing_val' },
+      { prop: 'params', val: 'params_val' },
+    ],
+    gulf_climate: [
+      { prop: 'vicat', val: 'vicat_val' },
+      { prop: 'service', val: 'service_val' },
+    ],
+    independent_lab: [
+      { prop: 'accreditation', val: 'accreditation_val' },
+      { prop: 'standards', val: 'standards_val' },
+    ],
+    chemical_resistance: [
+      { prop: 'acid', val: 'acid_val' },
+      { prop: 'alkali', val: 'alkali_val' },
+    ],
+    european_tech: [
+      { prop: 'equipment', val: 'equipment_val' },
+      { prop: 'tolerance', val: 'tolerance_val' },
+    ],
+  };
+  return specKeyMap[pillarKey]?.[specIndex] ?? { prop: `spec${specIndex}`, val: `spec${specIndex}_val` };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -98,9 +164,10 @@ interface InnovationCardProps {
   index: number;
   isInView: boolean;
   prefersReducedMotion: boolean | null;
+  specsLabel: string;
 }
 
-function InnovationCard({ pillar, index, isInView, prefersReducedMotion }: InnovationCardProps) {
+function InnovationCard({ pillar, index, isInView, prefersReducedMotion, specsLabel }: InnovationCardProps) {
   // Calculate stagger delay
   const row = Math.floor(index / 3);
   const col = index % 3;
@@ -115,11 +182,11 @@ function InnovationCard({ pillar, index, isInView, prefersReducedMotion }: Innov
         prefersReducedMotion
           ? {}
           : {
-              y: -6,
-              rotateX: 2,
-              rotateY: -2,
-              transition: { duration: 0.2 },
-            }
+            y: -6,
+            rotateX: 2,
+            rotateY: -2,
+            transition: { duration: 0.2 },
+          }
       }
       className={cn(
         'group relative p-6 rounded-2xl transition-all duration-300',
@@ -151,7 +218,7 @@ function InnovationCard({ pillar, index, isInView, prefersReducedMotion }: Innov
             <span className="w-3 h-3 rounded-full bg-gray-700" />
             <span className="w-3 h-3 rounded-full bg-gray-700" />
             <span className="w-3 h-3 rounded-full bg-gray-700" />
-            <span className="ml-2">specifications</span>
+            <span className="ml-2">{specsLabel}</span>
           </div>
           {pillar.specs.map((spec, i) => (
             <div key={i} className="flex justify-between gap-4 py-1">

@@ -151,7 +151,7 @@ function YearNavigator({
     <div className="relative">
       {/* Progress Line Background */}
       <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200 rounded-full" />
-      
+
       {/* Active Progress Line */}
       <motion.div
         className="absolute left-4 top-0 w-0.5 bg-primary rounded-full origin-top"
@@ -182,8 +182,8 @@ function YearNavigator({
                 index === activeIndex
                   ? 'bg-primary border-primary scale-110'
                   : index < activeIndex
-                  ? 'bg-primary/20 border-primary/40'
-                  : 'bg-white border-gray-300 group-hover:border-primary/50'
+                    ? 'bg-primary/20 border-primary/40'
+                    : 'bg-white border-gray-300 group-hover:border-primary/50'
               )}
             >
               {index === activeIndex && (

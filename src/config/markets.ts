@@ -14,6 +14,7 @@ export interface RegionalMarket {
   descriptionAr: string;
   keywords: string[];
   focus: string; // e.g., 'SASO compliance', 'commercial projects'
+  focusAr: string;
   certifications: string[];
   cta: {
     text: string;
@@ -27,6 +28,7 @@ export interface RegionalMarket {
   };
   telephone: string;
   deliveryTime: string;
+  deliveryTimeAr: string;
   currency: string;
 }
 
@@ -46,6 +48,7 @@ export const saudiMarkets: RegionalMarket[] = [
     descriptionAr: 'تقدم كراون بلاستيك بايبس أنابيب UPVC معتمدة من ساسو TR-BM-5 للسوق السعودي. التوافق الكامل مع أكواد البناء السعودية ومعايير GSO ومتطلبات الشهادات المحلية.',
     keywords: ['SASO certified UPVC pipes', 'Saudi Arabia pipe supplier', 'SASO TR-BM-5', 'Saudi building materials', 'UPVC pipes KSA', 'GSO certified pipes Saudi'],
     focus: 'SASO compliance and certification',
+    focusAr: 'امتثال واعتماد ساسو',
     certifications: ['SASO TR-BM-5', 'GSO EN 805', 'BS EN 1452', 'ISO 9001:2015'],
     cta: {
       text: 'Get SASO-Certified Pipes',
@@ -56,6 +59,7 @@ export const saudiMarkets: RegionalMarket[] = [
     geo: { latitude: 24.7136, longitude: 46.6753 },
     telephone: '+971 6 543 6781',
     deliveryTime: '3-5 business days',
+    deliveryTimeAr: '٣-٥ أيام عمل',
     currency: 'SAR',
   },
   {
@@ -71,6 +75,7 @@ export const saudiMarkets: RegionalMarket[] = [
     descriptionAr: 'موزع أنابيب UPVC الرائد في خدمة الرياض والمنطقة الوسطى. توصيل سريع لمشاريع البناء في الرياض، أسعار تنافسية، منتجات معتمدة من ساسو.',
     keywords: ['UPVC pipes Riyadh', 'Riyadh pipe distributor', 'plastic pipes Riyadh', 'construction materials Riyadh', 'UPVC supplier Central Region'],
     focus: 'Riyadh delivery and pricing',
+    focusAr: 'توصيل وأسعار الرياض',
     certifications: ['SASO TR-BM-5', 'GSO EN 805', 'BS EN 1452'],
     cta: {
       text: 'Request Quote for Riyadh Delivery',
@@ -81,6 +86,7 @@ export const saudiMarkets: RegionalMarket[] = [
     geo: { latitude: 24.7136, longitude: 46.6753 },
     telephone: '+971 6 543 6781',
     deliveryTime: '3-5 business days',
+    deliveryTimeAr: '٣-٥ أيام عمل',
     currency: 'SAR',
   },
   {
@@ -96,6 +102,7 @@ export const saudiMarkets: RegionalMarket[] = [
     descriptionAr: 'مورد أنابيب UPVC بالجملة لجدة والمنطقة الغربية. شحنات حاويات، أسعار بالجملة، توصيل لميناء جدة الإسلامي.',
     keywords: ['UPVC pipes wholesale Jeddah', 'Jeddah pipe supplier', 'bulk pipes Jeddah', 'construction materials Western Region', 'Jeddah Islamic Port delivery'],
     focus: 'Bulk orders and wholesale',
+    focusAr: 'طلبات بالجملة وتجارة الجملة',
     certifications: ['SASO TR-BM-5', 'GSO EN 805', 'BS EN 1452'],
     cta: {
       text: 'Bulk Order Form for Jeddah',
@@ -106,6 +113,7 @@ export const saudiMarkets: RegionalMarket[] = [
     geo: { latitude: 21.4858, longitude: 39.1925 },
     telephone: '+971 6 543 6781',
     deliveryTime: '3-5 business days via port',
+    deliveryTimeAr: '٣-٥ أيام عمل عبر الميناء',
     currency: 'SAR',
   },
 ];
@@ -128,6 +136,7 @@ export const uaeMarkets: RegionalMarket[] = [
     descriptionAr: 'مورد أنابيب UPVC الممتازة لمشاريع البناء التجارية في دبي. خدمة دبي مارينا، داون تاون دبي، بزنس باي والمشاريع الكبرى.',
     keywords: ['UPVC pipes Dubai commercial', 'Dubai construction materials', 'Business Bay pipes', 'Downtown Dubai supplier', 'commercial plumbing Dubai'],
     focus: 'Commercial projects in Dubai',
+    focusAr: 'المشاريع التجارية في دبي',
     certifications: ['BS EN 1452', 'DIN 8062', 'GSO EN 805', 'Dubai Municipality Approved'],
     cta: {
       text: 'Commercial Project Inquiry',
@@ -138,6 +147,7 @@ export const uaeMarkets: RegionalMarket[] = [
     geo: { latitude: 25.2048, longitude: 55.2708 },
     telephone: '+971 6 543 6781',
     deliveryTime: 'Same day - 24 hours',
+    deliveryTimeAr: 'نفس اليوم - ٢٤ ساعة',
     currency: 'AED',
   },
   {
@@ -153,6 +163,7 @@ export const uaeMarkets: RegionalMarket[] = [
     descriptionAr: 'مورد أنابيب UPVC معتمد لمشاريع حكومة أبوظبي والبلدية والبنية التحتية. معتمد من ITC، مؤهل لعلامة جودة أبوظبي.',
     keywords: ['Abu Dhabi government pipes', 'municipal projects Abu Dhabi', 'ITC approved pipes', 'Abu Dhabi infrastructure', 'ADNOC contractors'],
     focus: 'Government and municipal projects',
+    focusAr: 'المشاريع الحكومية والبلدية',
     certifications: ['BS EN 1452', 'Abu Dhabi Quality Mark', 'ITC Approved', 'ISO 9001:2015'],
     cta: {
       text: 'Government Bidding Support',
@@ -163,6 +174,7 @@ export const uaeMarkets: RegionalMarket[] = [
     geo: { latitude: 24.4539, longitude: 54.3773 },
     telephone: '+971 6 543 6781',
     deliveryTime: 'Same day - 48 hours',
+    deliveryTimeAr: 'نفس اليوم - ٤٨ ساعة',
     currency: 'AED',
   },
 ];
@@ -185,6 +197,7 @@ export const gccMarkets: RegionalMarket[] = [
     descriptionAr: 'مصدر أنابيب UPVC معتمد من GSO لمشاريع البناء والبنية التحتية في الكويت. شحنات حاويات إلى ميناء الشويخ.',
     keywords: ['UPVC pipes Kuwait', 'Kuwait pipe supplier', 'GSO certified Kuwait', 'Shuwaikh Port delivery', 'Kuwait construction materials'],
     focus: 'Kuwait market export',
+    focusAr: 'تصدير لسوق الكويت',
     certifications: ['GSO EN 805', 'BS EN 1452', 'ISO 9001:2015'],
     cta: {
       text: 'Request Kuwait Export Quote',
@@ -195,6 +208,7 @@ export const gccMarkets: RegionalMarket[] = [
     geo: { latitude: 29.3759, longitude: 47.9774 },
     telephone: '+971 6 543 6781',
     deliveryTime: '5-7 business days',
+    deliveryTimeAr: '٥-٧ أيام عمل',
     currency: 'KWD',
   },
   {
@@ -210,6 +224,7 @@ export const gccMarkets: RegionalMarket[] = [
     descriptionAr: 'مورد أنابيب UPVC الممتازة لقطر. خدمة الدوحة ولوسيل واللؤلؤة ومشاريع البنية التحتية الكبرى.',
     keywords: ['UPVC pipes Qatar', 'Doha pipe supplier', 'Lusail construction', 'Qatar World Cup projects', 'QCS compliant pipes'],
     focus: 'Qatar infrastructure projects',
+    focusAr: 'مشاريع البنية التحتية في قطر',
     certifications: ['GSO EN 805', 'BS EN 1452', 'QCS Compliant'],
     cta: {
       text: 'Qatar Project Inquiry',
@@ -220,6 +235,7 @@ export const gccMarkets: RegionalMarket[] = [
     geo: { latitude: 25.2854, longitude: 51.5310 },
     telephone: '+971 6 543 6781',
     deliveryTime: '5-7 business days',
+    deliveryTimeAr: '٥-٧ أيام عمل',
     currency: 'QAR',
   },
   {
@@ -235,6 +251,7 @@ export const gccMarkets: RegionalMarket[] = [
     descriptionAr: 'مورد أنابيب UPVC لصناعة البناء في البحرين. توصيل سريع عبر جسر الملك فهد أو ميناء خليفة بن سلمان.',
     keywords: ['UPVC pipes Bahrain', 'Manama pipe supplier', 'Bahrain construction materials', 'King Fahd Causeway delivery'],
     focus: 'Bahrain market',
+    focusAr: 'سوق البحرين',
     certifications: ['GSO EN 805', 'BS EN 1452', 'ISO 9001:2015'],
     cta: {
       text: 'Bahrain Delivery Quote',
@@ -245,6 +262,7 @@ export const gccMarkets: RegionalMarket[] = [
     geo: { latitude: 26.2285, longitude: 50.5860 },
     telephone: '+971 6 543 6781',
     deliveryTime: '2-4 business days',
+    deliveryTimeAr: '٢-٤ أيام عمل',
     currency: 'BHD',
   },
   {
@@ -260,6 +278,7 @@ export const gccMarkets: RegionalMarket[] = [
     descriptionAr: 'مصدر أنابيب UPVC للبناء والبنية التحتية في عُمان. خدمة مسقط وصحار وصلالة وجميع المحافظات العمانية.',
     keywords: ['UPVC pipes Oman', 'Muscat pipe supplier', 'Oman construction materials', 'Sultan Qaboos Port delivery', 'Sohar industrial'],
     focus: 'Oman market',
+    focusAr: 'سوق عُمان',
     certifications: ['GSO EN 805', 'BS EN 1452', 'ISO 9001:2015'],
     cta: {
       text: 'Oman Export Inquiry',
@@ -270,6 +289,7 @@ export const gccMarkets: RegionalMarket[] = [
     geo: { latitude: 23.5880, longitude: 58.3829 },
     telephone: '+971 6 543 6781',
     deliveryTime: '3-5 business days',
+    deliveryTimeAr: '٣-٥ أيام عمل',
     currency: 'OMR',
   },
 ];

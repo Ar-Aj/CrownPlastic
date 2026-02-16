@@ -8,6 +8,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useRef } from 'react';
+import { useT } from '@/i18n';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
@@ -65,12 +66,13 @@ import {
 
 function InnovationHero() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   const heroTags = [
-    { icon: Microscope, text: 'Precision Extrusion' },
-    { icon: TestTube2, text: 'Quality Testing' },
-    { icon: Cog, text: 'Process Optimization' },
-    { icon: Target, text: 'Standards Compliance' },
+    { icon: Microscope, text: t('innovation.hero.tags.extrusion' as any) },
+    { icon: TestTube2, text: t('innovation.hero.tags.testing' as any) },
+    { icon: Cog, text: t('innovation.hero.tags.process' as any) },
+    { icon: Target, text: t('innovation.hero.tags.standards' as any) },
   ];
 
   return (
@@ -131,32 +133,30 @@ function InnovationHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Innovation
+              {t('innovation.hero.label' as any)}
             </motion.span>
 
             {/* Main Headline - SEO optimized */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-              Innovation in{' '}
+              {t('innovation.hero.title_prefix' as any)}
               <span className="bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
-                Every Length of Pipe
+                {t('innovation.hero.title_highlight' as any)}
               </span>
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl">
-              Precision extrusion technology, rigorous quality testing, and continuous improvement
-              in formulations and tooling. We engineer UPVC piping systems for long-term performance
-              in Gulf construction and infrastructure projects.
+              {t('innovation.hero.subtitle' as any)}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-2">
               <QuoteButton variant="primary" size="lg">
-                Discuss Technical Requirements
+                {t('innovation.hero.cta_primary' as any)}
                 <ArrowRight className="w-5 h-5" />
               </QuoteButton>
               <MagneticButton href="/products" variant="secondary" size="lg">
-                Explore Product Range
+                {t('innovation.hero.cta_secondary' as any)}
               </MagneticButton>
             </div>
 
@@ -206,7 +206,7 @@ function InnovationHero() {
               >
                 <div className="flex items-center gap-2">
                   <Gauge className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white text-sm font-semibold">ISO 9001:2015</span>
+                  <span className="text-white text-sm font-semibold">{t('innovation.hero.floating_badge_iso' as any)}</span>
                 </div>
               </motion.div>
 
@@ -221,8 +221,8 @@ function InnovationHero() {
                     <Zap className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-sm">5000+</p>
-                    <p className="text-xs text-slate-400">Products Range</p>
+                    <p className="font-bold text-white text-sm">{t('innovation.hero.floating_badge_value' as any)}</p>
+                    <p className="text-xs text-slate-400">{t('innovation.hero.floating_badge_label' as any)}</p>
                   </div>
                 </div>
               </motion.div>
@@ -242,31 +242,28 @@ function InnovationHero() {
 function InnovationDefinitionSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const approaches = [
     {
       icon: Microscope,
-      title: 'Material & Formulation Expertise',
-      description:
-        'Deep understanding of UPVC compound behavior under Gulf conditions—optimizing additives, stabilizers, and impact modifiers for long-term performance.',
+      title: t('innovation.definition.items.material.title' as any),
+      description: t('innovation.definition.items.material.description' as any),
     },
     {
       icon: Cog,
-      title: 'Tooling & Process Optimization',
-      description:
-        'Continuous refinement of extrusion dies, calibration systems, and cooling processes to achieve consistent wall thickness and dimensional accuracy.',
+      title: t('innovation.definition.items.tooling.title' as any),
+      description: t('innovation.definition.items.tooling.description' as any),
     },
     {
       icon: TestTube2,
-      title: 'Testing & Quality Assurance',
-      description:
-        'Rigorous in-house testing protocols including hydrostatic pressure, impact resistance, and dimensional verification at every production stage.',
+      title: t('innovation.definition.items.testing.title' as any),
+      description: t('innovation.definition.items.testing.description' as any),
     },
     {
       icon: Target,
-      title: 'Application Understanding',
-      description:
-        'Engineering systems specifically for pressure, drainage, and ducting applications in GCC construction—not generic one-size-fits-all products.',
+      title: t('innovation.definition.items.application.title' as any),
+      description: t('innovation.definition.items.application.description' as any),
     },
   ];
 
@@ -277,10 +274,10 @@ function InnovationDefinitionSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Our Approach"
-          title="Innovation Means"
-          titleHighlight="Better Performance"
-          subtitle="At Crown Plastic Pipes, innovation isn't about marketing buzz—it's about engineering piping systems that genuinely perform better, last longer, and require less maintenance over their service life."
+          label={t('innovation.definition.label' as any)}
+          title={t('innovation.definition.title' as any)}
+          titleHighlight={t('innovation.definition.title_highlight' as any)}
+          subtitle={t('innovation.definition.subtitle' as any)}
         />
 
         {/* Approaches Grid */}
@@ -315,34 +312,31 @@ function InnovationDefinitionSection() {
 function InnovationPillarsSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const pillars = [
     {
       icon: Microscope,
-      title: 'Material Science & Formulation',
-      description:
-        'Our R&D focuses on compound optimization for extreme Gulf conditions—UV stabilization, heat resistance, and impact performance. Every formulation decision is backed by testing data.',
+      title: t('innovation.pillars.items.material.title' as any),
+      description: t('innovation.pillars.items.material.description' as any),
       accent: 'from-cyan-500 to-blue-500',
     },
     {
       icon: Factory,
-      title: 'Tooling & Production Technology',
-      description:
-        'State-of-the-art extrusion lines with precision temperature control, automated dimensional monitoring, and advanced die design ensure consistent quality across production runs.',
+      title: t('innovation.pillars.items.production.title' as any),
+      description: t('innovation.pillars.items.production.description' as any),
       accent: 'from-sky-500 to-cyan-500',
     },
     {
       icon: TestTube2,
-      title: 'Testing & Quality Assurance',
-      description:
-        'In-house laboratory equipped for hydrostatic testing, impact resistance, Vicat softening point, and dimensional verification. Quality isn\'t inspected in—it\'s built in.',
+      title: t('innovation.pillars.items.testing.title' as any),
+      description: t('innovation.pillars.items.testing.description' as any),
       accent: 'from-blue-500 to-indigo-500',
     },
     {
       icon: Headphones,
-      title: 'Application Engineering & Support',
-      description:
-        'Technical guidance for consultants and contractors—helping select the right products, specify correctly, and design piping systems that perform as expected over decades.',
+      title: t('innovation.pillars.items.support.title' as any),
+      description: t('innovation.pillars.items.support.description' as any),
       accent: 'from-indigo-500 to-purple-500',
     },
   ];
@@ -372,10 +366,10 @@ function InnovationPillarsSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Technology Pillars"
-          title="R&D Excellence in"
-          titleHighlight="Piping Technology"
-          subtitle="Four core technology areas drive our innovation—from material science to application support."
+          label={t('innovation.pillars.label' as any)}
+          title={t('innovation.pillars.title' as any)}
+          titleHighlight={t('innovation.pillars.title_highlight' as any)}
+          subtitle={t('innovation.pillars.subtitle' as any)}
           dark
         />
 
@@ -428,32 +422,33 @@ function InnovationTimelineSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   const timelineSteps = [
     {
       icon: Building2,
-      title: 'Foundation',
-      description: 'Established with a commitment to quality UPVC manufacturing for the Gulf market.',
+      title: t('innovation.timeline.steps.foundation.title' as any),
+      description: t('innovation.timeline.steps.foundation.description' as any),
     },
     {
       icon: TrendingUp,
-      title: 'Scaling Production',
-      description: 'Expanded capacity with modern extrusion lines and automated quality control systems.',
+      title: t('innovation.timeline.steps.scaling.title' as any),
+      description: t('innovation.timeline.steps.scaling.description' as any),
     },
     {
       icon: TestTube2,
-      title: 'Advanced QA',
-      description: 'In-house laboratory capabilities for comprehensive testing and formulation development.',
+      title: t('innovation.timeline.steps.qa.title' as any),
+      description: t('innovation.timeline.steps.qa.description' as any),
     },
     {
       icon: Database,
-      title: 'Data-Driven Quality',
-      description: 'Digital monitoring of production parameters for consistent, traceable quality.',
+      title: t('innovation.timeline.steps.data.title' as any),
+      description: t('innovation.timeline.steps.data.description' as any),
     },
     {
       icon: Lightbulb,
-      title: 'Future-Ready Systems',
-      description: 'Continuous R&D investment in materials, processes, and application engineering.',
+      title: t('innovation.timeline.steps.future.title' as any),
+      description: t('innovation.timeline.steps.future.description' as any),
     },
   ];
 
@@ -464,10 +459,10 @@ function InnovationTimelineSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Our Journey"
-          title="Continuous"
-          titleHighlight="Improvement"
-          subtitle="A commitment to getting better—refining processes, upgrading technology, and deepening our expertise year after year."
+          label={t('innovation.timeline.label' as any)}
+          title={t('innovation.timeline.title' as any)}
+          titleHighlight={t('innovation.timeline.title_highlight' as any)}
+          subtitle={t('innovation.timeline.subtitle' as any)}
         />
 
         {/* Desktop: Horizontal Timeline */}
@@ -550,48 +545,43 @@ function InnovationTimelineSection() {
 function InnovationShowcaseSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const productInnovations = [
     {
       icon: Gauge,
-      title: 'Pressure Piping – Consistent, Long-Life Performance',
-      description:
-        'Precision wall thickness and pressure-rated formulations deliver predictable hydraulic performance over decades. Compatible with international standards for specification confidence.',
+      title: t('innovation.showcase.items.pressure.title' as any),
+      description: t('innovation.showcase.items.pressure.description' as any),
       href: '/products/upvc-pressure-pipe-fittings',
     },
     {
       icon: Droplets,
-      title: 'Drainage Systems – Engineered Flow Efficiency',
-      description:
-        'Smooth bore design and accurate joint tolerances ensure reliable drainage without blockages or leaks. Self-extinguishing and chemical resistant formulations.',
+      title: t('innovation.showcase.items.drainage.title' as any),
+      description: t('innovation.showcase.items.drainage.description' as any),
       href: '/products/upvc-drainage-pipe-fittings',
     },
     {
       icon: Cable,
-      title: 'Duct & Conduit – Cable Protection Excellence',
-      description:
-        'Impact-resistant, UV-stabilized conduit systems protect critical electrical and communications infrastructure. Easy installation with consistent dimensional accuracy.',
+      title: t('innovation.showcase.items.conduit.title' as any),
+      description: t('innovation.showcase.items.conduit.description' as any),
       href: '/products/upvc-conduit-pipes',
     },
     {
       icon: Thermometer,
-      title: 'PPR Hot & Cold – Thermal Performance',
-      description:
-        'Polypropylene random systems for demanding temperature applications up to 95°C. Reliable fusion-weld joints eliminate leak points for long-term reliability.',
+      title: t('innovation.showcase.items.ppr.title' as any),
+      description: t('innovation.showcase.items.ppr.description' as any),
       href: '/products/ppr-pipe-systems',
     },
     {
       icon: Layers,
-      title: 'HDPE Systems – Flexibility & Durability',
-      description:
-        'High-density polyethylene for buried applications, agriculture, and industrial use. Excellent chemical resistance and flexibility for challenging installations.',
+      title: t('innovation.showcase.items.hdpe.title' as any),
+      description: t('innovation.showcase.items.hdpe.description' as any),
       href: '/products/hdpe-pipe-systems',
     },
     {
       icon: Wrench,
-      title: 'Fabrications & Specials – Custom Engineering',
-      description:
-        'Custom fabricated fittings and special configurations when standard components don\'t fit the project requirements. Technical support from design to delivery.',
+      title: t('innovation.showcase.items.fabrications.title' as any),
+      description: t('innovation.showcase.items.fabrications.description' as any),
       href: '/fabrications',
     },
   ];
@@ -600,10 +590,10 @@ function InnovationShowcaseSection() {
     <section ref={ref} className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Technology in Action"
-          title="Product Innovation"
-          titleHighlight="Showcase"
-          subtitle="From precision manufacturing to application engineering—see how technology translates into products that perform."
+          label={t('innovation.showcase.label' as any)}
+          title={t('innovation.showcase.title' as any)}
+          titleHighlight={t('innovation.showcase.title_highlight' as any)}
+          subtitle={t('innovation.showcase.subtitle' as any)}
         />
 
         {/* Products Grid */}
@@ -625,7 +615,7 @@ function InnovationShowcaseSection() {
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4 group-hover:text-slate-200 transition-colors duration-300">{item.description}</p>
                   <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-accent group-hover:gap-2 transition-all duration-300">
-                    Learn More <ChevronRight className="w-4 h-4" />
+                    {t('innovation.showcase.learn_more' as any)} <ChevronRight className="w-4 h-4" />
                   </span>
                 </div>
               </Link>
@@ -645,31 +635,28 @@ function InnovationShowcaseSection() {
 function InnovationQualitySection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const t = useT();
 
   const qualityAreas = [
     {
       icon: TestTube2,
-      title: 'Routine Testing & QC',
-      description:
-        'Every production batch undergoes dimensional verification, hydrostatic pressure testing, and visual inspection. Consistent quality is non-negotiable.',
+      title: t('innovation.quality.items.routine.title' as any),
+      description: t('innovation.quality.items.routine.description' as any),
     },
     {
       icon: Award,
-      title: 'Standards Compliance',
-      description:
-        'Products manufactured to BS EN 1452, ASTM D2466, DIN 8063, and other recognized international standards. ISO 9001:2015 certified quality management.',
+      title: t('innovation.quality.items.standards.title' as any),
+      description: t('innovation.quality.items.standards.description' as any),
     },
     {
       icon: ClipboardCheck,
-      title: 'Traceability & Documentation',
-      description:
-        'Complete batch traceability, test certificates, and technical submittals. The documentation consultants and contractors need for confident specification.',
+      title: t('innovation.quality.items.traceability.title' as any),
+      description: t('innovation.quality.items.traceability.description' as any),
     },
     {
       icon: Users,
-      title: 'Supporting Specifications',
-      description:
-        'Our testing and documentation help engineers and consultants specify with confidence—clear data, proven performance, reliable supply.',
+      title: t('innovation.quality.items.specifications.title' as any),
+      description: t('innovation.quality.items.specifications.description' as any),
     },
   ];
 
@@ -689,10 +676,10 @@ function InnovationQualitySection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Quality & Testing"
-          title="Technology in"
-          titleHighlight="Quality Assurance"
-          subtitle="Innovation means rigorous, repeatable processes—not marketing buzz. Our quality systems ensure every product performs as specified."
+          label={t('innovation.quality.label' as any)}
+          title={t('innovation.quality.title' as any)}
+          titleHighlight={t('innovation.quality.title_highlight' as any)}
+          subtitle={t('innovation.quality.subtitle' as any)}
           dark
         />
 
@@ -732,36 +719,37 @@ function InnovationQualitySection() {
 
 function InnovationSupportSection() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   const partnerTypes = [
     {
-      title: 'For Consultants',
+      title: t('innovation.support.partners.consultants.title' as any),
       icon: FileText,
       points: [
-        'Technical datasheets for accurate specification',
-        'Test certificates and compliance documentation',
-        'Product selection guidance for applications',
-        'Responsive technical queries support',
+        t('innovation.support.partners.consultants.points.p1' as any),
+        t('innovation.support.partners.consultants.points.p2' as any),
+        t('innovation.support.partners.consultants.points.p3' as any),
+        t('innovation.support.partners.consultants.points.p4' as any),
       ],
     },
     {
-      title: 'For Contractors',
+      title: t('innovation.support.partners.contractors.title' as any),
       icon: Wrench,
       points: [
-        'Reliable same-day delivery across UAE',
-        'Consistent product quality batch-to-batch',
-        'Clear installation guidance',
-        'Technical support for site challenges',
+        t('innovation.support.partners.contractors.points.p1' as any),
+        t('innovation.support.partners.contractors.points.p2' as any),
+        t('innovation.support.partners.contractors.points.p3' as any),
+        t('innovation.support.partners.contractors.points.p4' as any),
       ],
     },
     {
-      title: 'For Developers',
+      title: t('innovation.support.partners.developers.title' as any),
       icon: Building2,
       points: [
-        'Long-term performance for asset value',
-        'Reduced maintenance and replacement costs',
-        'Standards-compliant systems',
-        'Comprehensive product range coverage',
+        t('innovation.support.partners.developers.points.p1' as any),
+        t('innovation.support.partners.developers.points.p2' as any),
+        t('innovation.support.partners.developers.points.p3' as any),
+        t('innovation.support.partners.developers.points.p4' as any),
       ],
     },
   ];
@@ -773,10 +761,10 @@ function InnovationSupportSection() {
 
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         <SectionHeader
-          label="Collaboration"
-          title="Innovation in"
-          titleHighlight="Support & Partnership"
-          subtitle="Technology alone isn't enough. We work closely with consultants, contractors, and developers to deliver piping systems that perform as expected over decades."
+          label={t('innovation.support.label' as any)}
+          title={t('innovation.support.title' as any)}
+          titleHighlight={t('innovation.support.title_highlight' as any)}
+          subtitle={t('innovation.support.subtitle' as any)}
         />
 
         {/* Partner Grid */}
@@ -820,6 +808,7 @@ function InnovationSupportSection() {
 
 function InnovationCTA() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useT();
 
   return (
     <section className="relative py-16 md:py-20 overflow-hidden">
@@ -861,30 +850,29 @@ function InnovationCTA() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Partner in Innovation
+            {t('innovation.cta.label' as any)}
           </motion.span>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Bring Innovation Into{' '}
+            {t('innovation.cta.title_prefix' as any)}
             <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-              Your Next Project
+              {t('innovation.cta.title_highlight' as any)}
             </span>
           </h2>
 
           <p className="text-blue-100/90 text-lg mb-10 max-w-2xl mx-auto">
-            Technical discussions with consultants, contractors, and developers. 
-            Our team helps you select and specify piping systems for long-term performance.
+            {t('innovation.cta.subtitle' as any)}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <QuoteButton variant="outline" size="lg" className="!bg-white !text-primary hover:!bg-cyan-50">
-              Schedule a Technical Consultation
+              {t('innovation.cta.cta_primary' as any)}
               <ArrowRight className="w-5 h-5" />
             </QuoteButton>
             <MagneticButton href="/resources" variant="secondary" size="lg">
               <BookOpen className="w-5 h-5" />
-              Download Technical Catalogue
+              {t('innovation.cta.cta_secondary' as any)}
             </MagneticButton>
           </div>
 
@@ -897,9 +885,9 @@ function InnovationCTA() {
             transition={{ delay: 0.4 }}
           >
             {[
-              { icon: Users, text: 'Support for consultants' },
-              { icon: FileText, text: 'Detailed technical data' },
-              { icon: Shield, text: 'Focused on long-term performance' },
+              { icon: Users, text: t('innovation.cta.trust.consultants' as any) },
+              { icon: FileText, text: t('innovation.cta.trust.data' as any) },
+              { icon: Shield, text: t('innovation.cta.trust.performance' as any) },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-blue-100/80 text-sm">
                 <item.icon className="w-4 h-4 text-cyan-300" />

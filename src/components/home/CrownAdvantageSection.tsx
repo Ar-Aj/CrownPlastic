@@ -97,7 +97,7 @@ interface CardMediaProps {
 /** Locked aspect ratio container with image or icon fallback */
 function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: CardMediaProps) {
   if (aspect === 'none') return null;
-  
+
   // Fixed square container sizes per size variant
   const squareSizes = {
     sm: 'w-full max-w-[56px] md:max-w-[72px]',
@@ -105,7 +105,7 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
     lg: 'w-full max-w-[88px] md:max-w-[100px]',
     hero: 'w-14 md:w-16 lg:w-20',
   };
-  
+
   const iconSizes = {
     sm: 'w-6 h-6',
     md: 'w-8 h-8',
@@ -141,12 +141,12 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
 }
 
 /** Portrait video thumbnail with locked 9:16 aspect - width-driven, no vh hacks */
-function VideoThumbnail({ 
-  video, 
+function VideoThumbnail({
+  video,
   onPlay,
   hideOverlayTitle = false,
-}: { 
-  video: MediaVideoItem; 
+}: {
+  video: MediaVideoItem;
   onPlay: () => void;
   /** Hide the overlay title (for desktop side-by-side layout) */
   hideOverlayTitle?: boolean;
@@ -160,7 +160,7 @@ function VideoThumbnail({
       <div className="aspect-[9/16] w-full h-full relative">
         {/* Background tint */}
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900/20 via-slate-800/40 to-slate-900/60" />
-        
+
         {video.thumbnailSrc ? (
           <Image
             src={video.thumbnailSrc}
@@ -172,24 +172,24 @@ function VideoThumbnail({
         ) : (
           <div className="absolute inset-0 bg-gradient-to-b from-blue-800/30 via-slate-800/50 to-slate-900/70" />
         )}
-        
+
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-        
+
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-9 h-9 md:w-11 md:h-11 bg-white/25 group-hover/video:bg-white/40 rounded-full flex items-center justify-center transition-all group-hover/video:scale-110 shadow-lg">
             <Play className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" />
           </div>
         </div>
-        
+
         {/* Duration badge */}
         {video.duration && (
           <div className="absolute top-2 right-2 px-1.5 py-0.5 bg-black/70 text-white text-[10px] rounded font-medium">
             {video.duration}
           </div>
         )}
-        
+
         {/* Title at bottom - hidden on desktop when using side-by-side layout */}
         {!hideOverlayTitle && (
           <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
@@ -209,20 +209,20 @@ function VideoThumbnail({
 
 function useCountUp(targetValue: string, isInView: boolean, duration = 2000) {
   const [display, setDisplay] = useState('0');
-  
+
   useEffect(() => {
     if (!isInView) return;
-    
+
     const numMatch = targetValue.match(/^(\d+)/);
     if (!numMatch) {
       setDisplay(targetValue);
       return;
     }
-    
+
     const target = parseInt(numMatch[1], 10);
     const suffix = targetValue.slice(numMatch[1].length);
     const startTime = performance.now();
-    
+
     const animate = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
@@ -231,10 +231,10 @@ function useCountUp(targetValue: string, isInView: boolean, duration = 2000) {
       setDisplay(`${current}${suffix}`);
       if (progress < 1) requestAnimationFrame(animate);
     };
-    
+
     requestAnimationFrame(animate);
   }, [isInView, targetValue, duration]);
-  
+
   return display;
 }
 
@@ -244,7 +244,7 @@ function useCountUp(targetValue: string, isInView: boolean, duration = 2000) {
 
 function VideoModal({ video, isOpen, onClose }: { video: MediaVideoItem | null; isOpen: boolean; onClose: () => void }) {
   if (!isOpen || !video) return null;
-  
+
   return (
     <AnimatePresence>
       <motion.div
@@ -298,13 +298,13 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
   const Icon = iconMap[item.iconKey];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
-  
+
   const sizeClasses = {
     sm: 'p-3 md:p-4',
     md: 'p-4 md:p-5',
     lg: 'p-5 md:p-6',
   };
-  
+
   const statSizes = {
     sm: 'text-xl md:text-2xl',
     md: 'text-2xl md:text-3xl',
@@ -332,7 +332,7 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
       >
         {/* Animated shine sweep on hover */}
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
-        
+
         {/* Source badge */}
         <div className={`absolute top-2 right-2 px-2 py-0.5 text-[10px] font-medium rounded border ${tagColors[item.sourceTag]}`}>
           {item.sourceTag}
@@ -349,7 +349,7 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
               size={size}
             />
           </div>
-          
+
           {/* Stat + Label */}
           {item.highlightStat && (
             <div className="mb-1">
@@ -361,12 +361,12 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
               )}
             </div>
           )}
-          
+
           {/* Title */}
           <h4 className="font-semibold text-slate-100 text-sm leading-tight mb-1">
             {item.shortTitle || item.title}
           </h4>
-          
+
           {/* Description (optional) */}
           {showDescription && (
             <p className="text-xs text-slate-400 leading-relaxed line-clamp-2 mt-auto">
@@ -398,7 +398,7 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
     >
       {/* Floating glow behind */}
       <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/10 via-cyan-500/5 to-transparent rounded-3xl blur-2xl" />
-      
+
       {/* Hero card - compact aspect ratio for desktop, max-height constrained */}
       <div className={`
         relative bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl lg:rounded-3xl 
@@ -410,7 +410,7 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
         <div className={`absolute top-3 right-3 lg:top-4 lg:right-4 z-20 px-2 py-0.5 lg:px-2.5 lg:py-1 text-[10px] lg:text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
           {item.sourceTag}
         </div>
-        
+
         {/* Full-cover background image */}
         {item.imageSrc && (
           <div className="absolute inset-0 opacity-25">
@@ -423,7 +423,7 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
             />
           </div>
         )}
-        
+
         {/* Text content on top of image */}
         <div className="relative z-10 flex flex-col h-full justify-between text-white">
           {/* Big animated number */}
@@ -437,17 +437,17 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
               {animatedValue}
             </motion.div>
           )}
-          
+
           {/* Stat label */}
           {item.statLabel && (
             <div className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 lg:mb-3 text-sky-300/90">
               {item.statLabel}
             </div>
           )}
-          
+
           {/* Title */}
           <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-2">{item.title}</h3>
-          
+
           {/* Description - hidden on compact mobile */}
           {item.description && (
             <p className={`text-sm text-slate-200 leading-relaxed ${compact ? 'hidden md:block' : ''} line-clamp-3 lg:line-clamp-none`}>
@@ -455,7 +455,7 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
             </p>
           )}
         </div>
-        
+
         {/* Animated border glow */}
         <motion.div
           className="absolute inset-0 rounded-2xl lg:rounded-3xl border-2 border-transparent pointer-events-none"
@@ -521,7 +521,7 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
                 )}
               </div>
             </div>
-            
+
             {/* Mobile/Tablet (< lg): Thumbnail only with overlay title */}
             <div className="lg:hidden h-full">
               <div className="w-full max-w-[140px] mx-auto h-full">
@@ -555,7 +555,7 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
             View All →
           </Link>
         </div>
-        
+
         {/* Videos grid - 2 columns, aspect-driven height */}
         <div className="grid grid-cols-2 gap-2 md:gap-3">
           {videos.slice(0, 2).map((video) => (
@@ -575,9 +575,19 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
 // SECTION HEADER
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function SectionHeader() {
-  const { headingLabel, headingTitle, headingAccent } = crownAdvantageConfig;
-  
+// ═══════════════════════════════════════════════════════════════════════════════
+// SECTION HEADER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function SectionHeader({
+  label,
+  title,
+  accent
+}: {
+  label: string;
+  title: string;
+  accent: string;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -587,12 +597,12 @@ function SectionHeader() {
       className="mb-6 md:mb-8 lg:mb-0"
     >
       <span className="inline-block px-3 py-1 bg-sky-500/20 text-sky-300 text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">
-        {headingLabel}
+        {label}
       </span>
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-        {headingTitle}{' '}
+        {title}{' '}
         <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
-          {headingAccent}
+          {accent}
         </span>
       </h2>
     </motion.div>
@@ -602,16 +612,54 @@ function SectionHeader() {
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN SECTION COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
+import { useT } from '@/i18n';
 
 export default function CrownAdvantageSection() {
+  const t = useT();
   const [activeVideo, setActiveVideo] = useState<MediaVideoItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const heroItem = getHeroAdvantage();
-  const primaryItems = getPrimaryAdvantages();
-  const secondaryItems = getSecondaryAdvantages();
-  const mediaItems = getMediaItems();
-  
+  // Helper to map config IDs to translation keys
+  const getTranslationKey = (id: string) => {
+    const map: Record<string, string> = {
+      'experience': 'experience',
+      'product-range': 'range',
+      'certifications': 'certifications',
+      'exports': 'exports',
+      'quality': 'materials',
+      'standards': 'standards',
+      'manufacturing': 'technology',
+    };
+    return map[id] || id;
+  };
+
+  const translateItem = (item: AdvantageItem): AdvantageItem => {
+    const key = getTranslationKey(item.id);
+    // Cast to any to access dynamic properties on t() result which is strictly typed
+    // But here we use path strings. type check might fail if types are strict.
+    // We already updated TranslationPath to be recursive.
+
+    // safe check: if item is undefined return it
+    if (!item) return item;
+
+    return {
+      ...item,
+      title: t(`home.advantage.items.${key}.title` as any),
+      description: t(`home.advantage.items.${key}.description` as any),
+      statLabel: item.statLabel ? t(`home.advantage.items.${key}.stat_label` as any) : item.statLabel,
+    };
+  };
+
+  const heroItem = translateItem(getHeroAdvantage());
+  const primaryItems = getPrimaryAdvantages().map(translateItem);
+  const secondaryItems = getSecondaryAdvantages().map(translateItem);
+
+  const mediaItems = getMediaItems().map((item, idx) => ({
+    ...item,
+    title: idx === 0 ? t('home.advantage.video_titles.choose_us') : t('home.advantage.video_titles.factory'),
+    shortTitle: idx === 0 ? t('home.advantage.video_titles.choose_us') : t('home.advantage.video_titles.factory'),
+  }));
+
   // Technology card is the first secondary item (Manufacturing/Technology)
   const technologyCard = secondaryItems.find(item => item.id === 'manufacturing') || secondaryItems[2];
   // Remaining secondary cards (Materials, Standards)
@@ -622,6 +670,12 @@ export default function CrownAdvantageSection() {
     setIsModalOpen(true);
   }, []);
 
+  const headerProps = {
+    label: t('home.advantage.heading_label'),
+    title: t('home.advantage.heading_title'),
+    accent: t('home.advantage.heading_accent'),
+  };
+
   return (
     <section
       id={crownAdvantageConfig.sectionId}
@@ -631,7 +685,7 @@ export default function CrownAdvantageSection() {
           BACKGROUND
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#020c18] via-[#041225] to-[#020c18]" />
-      
+
       {/* Grid pattern - slightly more visible */}
       <div
         className="absolute inset-0 opacity-[0.05]"
@@ -643,10 +697,10 @@ export default function CrownAdvantageSection() {
           backgroundSize: '50px 50px',
         }}
       />
-      
+
       {/* Radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(14,165,233,0.12)_0%,transparent_60%)]" />
-      
+
       {/* Top border accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
 
@@ -654,16 +708,16 @@ export default function CrownAdvantageSection() {
           CONTENT CONTAINER - Matches hero section padding/width
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
-        
+
         {/* ═══════════════════════════════════════════════════════════════════
             MOBILE LAYOUT (< md): Compact vertical stack
         ═══════════════════════════════════════════════════════════════════ */}
         <div className="md:hidden space-y-4">
-          <SectionHeader />
-          
+          <SectionHeader {...headerProps} />
+
           {/* Hero stat - compact aspect */}
           <HeroStatBlock item={heroItem} compact />
-          
+
           {/* Primary cards - 2x2 grid (3 items + 1 tech) */}
           <div className="grid grid-cols-2 gap-3">
             {primaryItems.slice(0, 2).map((item, idx) => (
@@ -676,12 +730,12 @@ export default function CrownAdvantageSection() {
               <DataTile key={technologyCard.id} item={technologyCard} size="sm" delay={0.3} />
             )}
           </div>
-          
+
           {/* Video panel - aspect-driven, no fixed vh */}
           {mediaItems.length > 0 && (
             <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
           )}
-          
+
           {/* Remaining secondary cards */}
           <div className="grid grid-cols-2 gap-3">
             {bottomSecondaryCards.map((item, idx) => (
@@ -694,13 +748,13 @@ export default function CrownAdvantageSection() {
             TABLET LAYOUT (md to < lg): Balanced 2-column
         ═══════════════════════════════════════════════════════════════════ */}
         <div className="hidden md:block lg:hidden">
-          <SectionHeader />
-          
+          <SectionHeader {...headerProps} />
+
           {/* Top row: Hero + Primary stats */}
           <div className="grid grid-cols-[1fr_1fr] gap-4 mt-5">
             {/* Left: Hero */}
             <HeroStatBlock item={heroItem} />
-            
+
             {/* Right: 3 primary stats stacked */}
             <div className="grid grid-rows-3 gap-3">
               {primaryItems.map((item, idx) => (
@@ -708,20 +762,20 @@ export default function CrownAdvantageSection() {
               ))}
             </div>
           </div>
-          
+
           {/* Middle row: Technology + Videos */}
           <div className="grid grid-cols-[1fr_2fr] gap-4 mt-4">
             {/* Technology card */}
             {technologyCard && (
               <DataTile key={technologyCard.id} item={technologyCard} size="md" showDescription delay={0.3} />
             )}
-            
+
             {/* Video panel - inline, aspect-driven */}
             {mediaItems.length > 0 && (
               <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
             )}
           </div>
-          
+
           {/* Bottom row: remaining secondary cards */}
           <div className="grid grid-cols-2 gap-4 mt-4">
             {bottomSecondaryCards.map((item, idx) => (
@@ -737,18 +791,18 @@ export default function CrownAdvantageSection() {
             Row 3: 2 Secondary cards
         ═══════════════════════════════════════════════════════════════════ */}
         <div className="hidden lg:block">
-          
+
           {/* Section header */}
-          <SectionHeader />
-          
+          <SectionHeader {...headerProps} />
+
           {/* ─────────────────────────────────────────────────────────────────
               ROW 1: Hero + Primary Stats (equal height)
           ───────────────────────────────────────────────────────────────── */}
           <div className="grid grid-cols-[45%_1fr] xl:grid-cols-[42%_1fr] gap-5 xl:gap-6 mt-6">
-            
+
             {/* Hero card - height matches primary row */}
             <HeroStatBlock item={heroItem} />
-            
+
             {/* Primary stats - 3 columns, stretch to match hero height */}
             <div className="grid grid-cols-3 gap-4 xl:gap-5">
               {primaryItems.map((item, idx) => (
@@ -756,29 +810,29 @@ export default function CrownAdvantageSection() {
               ))}
             </div>
           </div>
-          
+
           {/* ─────────────────────────────────────────────────────────────────
               ROW 2: Technology + Videos (height-capped, compact 9:16)
               Max height ~32vh to keep section within ~90vh total
           ───────────────────────────────────────────────────────────────── */}
           <div className="grid grid-cols-[1fr_2fr] xl:grid-cols-[28%_1fr] gap-5 xl:gap-6 mt-5 mb-8 lg:mb-10 max-h-[32vh] xl:max-h-[30vh]">
-            
+
             {/* Technology card - fills row height */}
             {technologyCard && (
               <div className="h-full">
                 <DataTile key={technologyCard.id} item={technologyCard} size="md" showDescription delay={0.3} />
               </div>
             )}
-            
+
             {/* Videos - compact 9:16 containers within capped row */}
             {mediaItems.length > 0 && (
               <div className="flex flex-col h-full overflow-hidden">
                 <div className="flex items-center justify-between mb-2 flex-shrink-0">
                   <h4 className="text-sm font-semibold text-slate-200">
-                    {crownAdvantageConfig.mediaCardTitle}
+                    {t('home.advantage.media_card_title')}
                   </h4>
                   <Link href="/media-blogs" className="text-xs text-sky-400 hover:text-sky-300 transition-colors">
-                    View All →
+                    {t('nav.view_all')} →
                   </Link>
                 </div>
                 <div className="flex-1 min-h-0">
@@ -787,7 +841,7 @@ export default function CrownAdvantageSection() {
               </div>
             )}
           </div>
-          
+
           {/* ─────────────────────────────────────────────────────────────────
               ROW 3: Remaining Secondary Cards (clean 50/50 split, full width)
           ───────────────────────────────────────────────────────────────── */}
@@ -806,3 +860,5 @@ export default function CrownAdvantageSection() {
 }
 
 export { CrownAdvantageSection };
+
+
