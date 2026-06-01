@@ -1,0 +1,733 @@
+[
+    {
+        "fitting_type": "ELBOW 90°",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS (mm) - d": "42.16",
+                "DIMENSIONS (mm) - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "ELBOW 45°",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS (mm) - d": "42.16",
+                "DIMENSIONS (mm) - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE ELBOW 90°",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS - d": "21.34",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS - d": "26.67",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS - d": "33.4",
+                "DIMENSIONS - G": "1"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS - d": "42.16",
+                "DIMENSIONS - G": "1 1/4"","DIMENSIONS - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "1 1/2"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "2"","DIMENSIONS - L": "36.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "SOCKET/COUPLER",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS (mm) - d": "42.16",
+                "DIMENSIONS (mm) - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCER BUSH/SOCKET",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 X 1/2"","DIMENSIONS (mm) - D": "26.67",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "32.6"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 1/2"","DIMENSIONS (mm) - D": "33.4",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "34.1"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 3/4"","DIMENSIONS (mm) - D": "33.4",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "34.1"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4 X 1/2"","DIMENSIONS (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "36"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4 X 3/4"","DIMENSIONS (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "36"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4 X 1"","DIMENSIONS (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "36"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1/2"","DIMENSIONS (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "40.8"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 3/4"","DIMENSIONS (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "40.8"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1"","DIMENSIONS (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "40.8"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1/2"","DIMENSIONS (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "47.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 3/4"","DIMENSIONS (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "47.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1"","DIMENSIONS (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "47.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1 1/2"","DIMENSIONS (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "47.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3 X 1 1/2"","DIMENSIONS (mm) - D": "88.9",
+                "DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "58"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3 X 2"","DIMENSIONS (mm) - D": "88.9",
+                "DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "58"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4 X 2"","DIMENSIONS (mm) - D": "114.3",
+                "DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "54"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4 X 3"","DIMENSIONS (mm) - D": "114.3",
+                "DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "54"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6 X 3"","DIMENSIONS (mm) - D": "168.3",
+                "DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "80"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6 X 4"","DIMENSIONS (mm) - D": "168.3",
+                "DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "80"
+            }
+        ]
+    },
+    {
+        "fitting_type": "MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS - d": "21.34",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS - d": "26.67",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS - d": "33.4",
+                "DIMENSIONS - G": "1"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS - d": "42.16",
+                "DIMENSIONS - G": "1 1/4"","DIMENSIONS - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "1 1/2"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "2"","DIMENSIONS - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS - d": "88.9",
+                "DIMENSIONS - G": "3"","DIMENSIONS - L": "51.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS - d": "114.3",
+                "DIMENSIONS - G": "4"","DIMENSIONS - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS - d": "168.3",
+                "DIMENSIONS - G": "6"","DIMENSIONS - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED ADAPTOR/SOCKET",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS - d": "21.34",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS - d": "26.67",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS - d": "33.4",
+                "DIMENSIONS - G": "1"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS - d": "42.16",
+                "DIMENSIONS - G": "1 1/4"","DIMENSIONS - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "1 1/2"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "2"","DIMENSIONS - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS - d": "88.9",
+                "DIMENSIONS - G": "3"","DIMENSIONS - L": "51.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS - d": "114.3",
+                "DIMENSIONS - G": "4"","DIMENSIONS - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS - d": "168.3",
+                "DIMENSIONS - G": "6"","DIMENSIONS - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "EQUAL TEE",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4"","DIMENSIONS (mm) - d": "42.16",
+                "DIMENSIONS (mm) - L": "26.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCING TEE",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 X 1/2 X 3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - di": "21.34",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 1/2 X 1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - di": "21.34",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 3/4 X 1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - di": "26.67",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1/2 X 1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - di": "21.34",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 3/4 X 1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - di": "26.67",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1 X 1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - di": "33.4",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1/2 X 2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - di": "21.34",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 3/4 X 2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - di": "26.67",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1 X 2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - di": "33.4",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1 1/2 X 2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - di": "48.26",
+                "DIMENSIONS (mm) - L": "36.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED REDUCING TEE",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 X 1/2 X 3/4"","DIMENSIONS - d": "21.34",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 1/2 X 1"","DIMENSIONS - d": "33.4",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 3/4 X 1"","DIMENSIONS - d": "33.4",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1/2 X 1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 3/4 X 1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1 X 1 1/2"","DIMENSIONS - d": "48.26",
+                "DIMENSIONS - G": "1"","DIMENSIONS - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1/2 X 2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 3/4 X 2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1 X 2"","DIMENSIONS - d": "60.33",
+                "DIMENSIONS - G": "1"","DIMENSIONS - L": "36.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED EQUAL TEE",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2 X 1/2 X 1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "DIMENSIONS (mm) - G": "1/2"","PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4 X 3/4 X 3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "DIMENSIONS (mm) - G": "3/4"","PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 1 X 1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "DIMENSIONS (mm) - G": "1"","PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4 X 1 1/4 X 1 1/4"","DIMENSIONS (mm) - d": "42.16",
+                "DIMENSIONS (mm) - L": "26.5",
+                "DIMENSIONS (mm) - G": "1 1/4"","PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1/2 X 1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5",
+                "DIMENSIONS (mm) - G": "1 1/2"","PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 2 X 2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5",
+                "DIMENSIONS (mm) - G": "2"","PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED REDUCER BUSH",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 X 1/2"","DIMENSIONS - D": "21.34",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "32.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 1/2"","DIMENSIONS - D": "33.4",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "35.6"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 X 3/4"","DIMENSIONS - D": "33.4",
+                "DIMENSIONS - G": "3/4"","DIMENSIONS - L": "35.6"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 X 1/2"","DIMENSIONS - D": "48.26",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "43.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 X 1/2"","DIMENSIONS - D": "60.33",
+                "DIMENSIONS - G": "1/2"","DIMENSIONS - L": "47.4"
+            }
+        ]
+    },
+    {
+        "fitting_type": "UNION",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FLANGES WITH STUB",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D2": "60",
+                "DIMENSIONS (mm) - D1": "43.5",
+                "DIMENSIONS (mm) - d2": "92.5",
+                "DIMENSIONS (mm) - D3": "120",
+                "DIMENSIONS (mm) - D4": "152.4",
+                "DIMENSIONS (mm) - H": "77.6",
+                "DIMENSIONS (mm) - h": "20.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 1/2"","DIMENSIONS (mm) - D2": "107.2",
+                "DIMENSIONS (mm) - D1": "73.4",
+                "DIMENSIONS (mm) - d2": "49",
+                "DIMENSIONS (mm) - D3": "107.6",
+                "DIMENSIONS (mm) - D4": "140",
+                "DIMENSIONS (mm) - H": "177.6",
+                "DIMENSIONS (mm) - h": "92.6"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D2": "24.8",
+                "DIMENSIONS (mm) - D1": "119.9",
+                "DIMENSIONS (mm) - d2": "89.4",
+                "DIMENSIONS (mm) - D3": "54.9",
+                "DIMENSIONS (mm) - D4": "120.6",
+                "DIMENSIONS (mm) - H": "152.5",
+                "DIMENSIONS (mm) - h": "191.4"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D2": "109.4",
+                "DIMENSIONS (mm) - D1": "26.4",
+                "DIMENSIONS (mm) - d2": "152.5",
+                "DIMENSIONS (mm) - D3": "110.4",
+                "DIMENSIONS (mm) - D4": "64.8",
+                "DIMENSIONS (mm) - H": "153.0",
+                "DIMENSIONS (mm) - h": "191"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D2": "229.7",
+                "DIMENSIONS (mm) - D1": "134",
+                "DIMENSIONS (mm) - d2": "28.5",
+                "DIMENSIONS (mm) - D3": "206",
+                "DIMENSIONS (mm) - D4": "160.5",
+                "DIMENSIONS (mm) - H": "85",
+                "DIMENSIONS (mm) - h": "207.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "HEX NIPPLE",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS - G": "1/2"","DIMENSIONS - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS - G": "3/4"","DIMENSIONS - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS - G": "1"","DIMENSIONS - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS - G": "1 1/2"","DIMENSIONS - L": "31.5"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REPAIR SOCKET/ CONVERTABLE SOCKET",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\" X 20",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\" X 25",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\" X 32",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - d1": "32",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\" X 40",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\" X 50",
+                "DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - d1": "50",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\" X 63",
+                "DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - d1": "63",
+                "DIMENSIONS (mm) - L": "38"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 1/2\" X 75",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\" X 90",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\" X 110",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\" X 160",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8\" X 200",
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - L": null
+            }
+        ]
+    },
+    {
+        "fitting_type": "END CAP",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2"","DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4"","DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1"","DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91"
+            }
+        ]
+    }
+]

@@ -1,0 +1,216 @@
+[
+    {
+        "fitting_name": "ELBOW 90°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "ELBOW 45°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "SOCKET/COUPLER",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70"
+            }
+        ]
+    },
+    {
+        "fitting_name": "REDUCER BUSH/SOCKET",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "4x3"","DIMENSIONS (mm) - D": "110.0",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "50.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6x3"","DIMENSIONS (mm) - D": "160.0",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "60.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8x6"","DIMENSIONS (mm) - D": "200.0",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "73.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "TEE 87.5°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "170.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "219.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "296.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0",
+                "DIMENSIONS (mm) - H": "355.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "Y - 45°/SKEW TEE",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "195.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "259.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "257.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "ACCESS CAP/CLEAN OUT",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - H": "70"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - H": "76"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - H": "100"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "ACCESS/DOOR ELBOW 90°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "92.5",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - D1": "43.0",
+                "DIMENSIONS (mm) - Tr": "Tr76X4",
+                "DIMENSIONS (mm) - H": "66.5",
+                "DIMENSIONS (mm) - L": "96.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - D1": "51.3",
+                "DIMENSIONS (mm) - Tr": "Tr104X4",
+                "DIMENSIONS (mm) - H": "90.4",
+                "DIMENSIONS (mm) - L": "119.3"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - D1": null,
+                "DIMENSIONS (mm) - Tr": null,
+                "DIMENSIONS (mm) - H": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - D1": null,
+                "DIMENSIONS (mm) - Tr": null,
+                "DIMENSIONS (mm) - H": null,
+                "DIMENSIONS (mm) - L": null
+            }
+        ]
+    }
+]

@@ -7,7 +7,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { motion, useInView, Variants } from 'framer-motion';
 import { ClientLogo } from '@/config/clients';
 
@@ -55,7 +55,7 @@ function LogoCard({ logo, variant }: LogoCardProps) {
     >
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/0 via-transparent to-amber-500/0 group-hover:from-blue-500/5 group-hover:to-amber-500/5 transition-all duration-500" />
-      
+
       {/* Logo placeholder - grayscale to color on hover */}
       <div className="relative w-full h-full flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
         {/* Check if image exists, otherwise show placeholder text */}
@@ -77,7 +77,7 @@ function LogoCard({ logo, variant }: LogoCardProps) {
           {logo.name}
         </span>
       </div>
-      
+
       {/* Hover tooltip */}
       <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-slate-800 rounded-lg text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 border border-white/10">
         {logo.name}
@@ -119,7 +119,7 @@ function GridVariant({ logos, title, subtitle }: GridVariantProps) {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wMyIvPjwvc3ZnPg==')] opacity-50" />
-      
+
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
         {/* Header */}
         {(title || subtitle) && (
@@ -171,13 +171,13 @@ interface ScrollVariantProps {
 function ScrollVariant({ logos, speed = 30, direction = 'left' }: ScrollVariantProps) {
   // Duplicate logos for seamless loop
   const duplicatedLogos = [...logos, ...logos];
-  
+
   return (
-    <div className="relative py-8 overflow-hidden bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+    <div className="relative py-8 overflow-hidden bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900" dir="ltr">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-900 to-transparent z-10" />
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-900 to-transparent z-10" />
-      
+
       {/* Scrolling container */}
       <motion.div
         className="flex gap-8"
@@ -228,7 +228,7 @@ function CompactVariant({ logos, title }: CompactVariantProps) {
             {title}
           </motion.p>
         )}
-        
+
         <motion.div
           variants={containerVariants}
           initial="hidden"

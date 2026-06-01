@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, MotionValue, useTransform, useReducedMotion, useMotionValue } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPE WITH FLOW COMPONENT
@@ -35,10 +36,10 @@ import { motion, MotionValue, useTransform, useReducedMotion, useMotionValue } f
 const PIPE_COLORS = {
   // Outer pipe body - dark grey with metallic hint
   outerDark: '#1a1d23',
-  outerMid: '#2a2e36', 
+  outerMid: '#2a2e36',
   outerLight: '#3a3e46',
   outerHighlight: '#4a4e56',
-  
+
   // Inner cavity - darker to show depth
   innerDark: '#0a0d13',
   innerMid: '#15181f',
@@ -62,25 +63,29 @@ interface PipeWithFlowProps {
   progress: number | MotionValue<number>;
   /** Optional className for outer container */
   className?: string;
+  /** Override RTL detection (useful for previews) */
+  forceRTL?: boolean;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
+export function PipeWithFlow({ progress, className = '', forceRTL }: PipeWithFlowProps) {
   const prefersReducedMotion = useReducedMotion();
-  
+  const { isRTL: contextRTL } = useLanguage();
+  const isRTL = forceRTL ?? contextRTL;
+
   // Transform progress (0-1) to percentage width for the water fill
   // IMPORTANT: Always call all hooks unconditionally (React Hooks rules)
   const staticMotion = useMotionValue(0);
   const progressMotion = typeof progress === 'number' ? staticMotion : progress;
-  
+
   // Update static motion value when progress number changes
   if (typeof progress === 'number') {
     staticMotion.set(progress);
   }
-    
+
   const fillWidth = useTransform(
     progressMotion,
     (v: number) => `${Math.max(0, Math.min(100, v * 100))}%`
@@ -100,8 +105,8 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
           - Outer layer: Visible pipe wall (dark grey, 3D)
           - Inner layer: Cavity where water flows
           ═══════════════════════════════════════════════════════════════════════ */}
-      <div 
-        className="absolute inset-y-0 left-3 right-3 rounded-full overflow-hidden"
+      <div
+        className="absolute inset-y-0 ltr:left-3 ltr:right-3 rtl:left-3 rtl:right-3 rounded-full overflow-hidden"
         style={{
           // Outer pipe surface - 3D cylindrical gradient
           background: `linear-gradient(to bottom,
@@ -124,7 +129,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
             TOP PIPE WALL - Visible solid portion (top ~35%)
             This creates the "half pipe" effect where you see the wall
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute top-0 left-0 right-0 h-[35%] pointer-events-none"
           style={{
             background: `linear-gradient(to bottom,
@@ -138,7 +143,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
         {/* ─────────────────────────────────────────────────────────────────────
             TOP HIGHLIGHT - Simulates light on cylindrical surface
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute top-0 left-0 right-0 h-[20%] rounded-t-full pointer-events-none"
           style={{
             background: 'linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, transparent 100%)',
@@ -149,7 +154,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
             INNER CAVITY - The hollow center where water flows
             Darker to show depth, positioned in the middle
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute top-[30%] bottom-[30%] left-0 right-0 overflow-hidden"
           style={{
             background: `linear-gradient(to bottom,
@@ -168,7 +173,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
               Glow effect simulates pressurized/lit water
               ─────────────────────────────────────────────────────────────────── */}
           <motion.div
-            className="absolute inset-y-0 left-0 rounded-r-full"
+            className={`absolute inset-y-0 ${isRTL ? 'right-0 rounded-l-full' : 'left-0 rounded-r-full'}`}
             style={{
               width: fillWidth,
               // Water gradient - bright cyan to royal blue
@@ -187,22 +192,22 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
             }}
           >
             {/* Water surface highlight */}
-            <div 
+            <div
               className="absolute top-0 left-0 right-0 h-[45%]"
               style={{
                 background: 'linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
                 borderRadius: 'inherit',
               }}
             />
-            
+
             {/* Wave/ripple effect - subtle horizontal shimmer */}
             {!prefersReducedMotion && <WaterWaveEffect />}
-            
+
             {/* Leading edge glow - brighter at the flow front */}
-            <div 
-              className="absolute right-0 top-0 bottom-0 w-4"
+            <div
+              className={`absolute top-0 bottom-0 w-4 ${isRTL ? 'left-0' : 'right-0'}`}
               style={{
-                background: `linear-gradient(to left, 
+                background: `linear-gradient(${isRTL ? 'to right' : 'to left'}, 
                   rgba(56, 189, 248, 0.8) 0%, 
                   rgba(56, 189, 248, 0.3) 50%,
                   transparent 100%
@@ -216,7 +221,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
         {/* ─────────────────────────────────────────────────────────────────────
             BOTTOM PIPE WALL - Visible solid portion (bottom ~35%)
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute bottom-0 left-0 right-0 h-[35%] pointer-events-none"
           style={{
             background: `linear-gradient(to top,
@@ -230,7 +235,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
         {/* ─────────────────────────────────────────────────────────────────────
             BOTTOM SHADOW - Enhances 3D depth
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute bottom-0 left-0 right-0 h-[15%] rounded-b-full pointer-events-none"
           style={{
             background: 'linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 100%)',
@@ -240,7 +245,7 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
         {/* ─────────────────────────────────────────────────────────────────────
             PIPE RINGS - Subtle joint markers
             ───────────────────────────────────────────────────────────────────── */}
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none opacity-50"
           style={{
             background: `repeating-linear-gradient(90deg,
@@ -270,13 +275,13 @@ export function PipeWithFlow({ progress, className = '' }: PipeWithFlowProps) {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function PipeEndCap({ position }: { position: 'left' | 'right' }) {
+  // In RTL the pipe is visually mirrored — Tailwind ltr:/rtl: handles positioning via DOM dir attribute
   const isLeft = position === 'left';
-  
+
   return (
     <div
-      className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 rounded-full z-10 ${
-        isLeft ? 'left-0' : 'right-0'
-      }`}
+      className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 rounded-full z-10 ${isLeft ? 'ltr:left-0 rtl:right-0' : 'ltr:right-0 rtl:left-0'
+        }`}
       style={{
         // Outer cap - 3D convex surface
         background: `radial-gradient(circle at ${isLeft ? '35%' : '65%'} 35%,
@@ -302,7 +307,7 @@ function PipeEndCap({ position }: { position: 'left' | 'right' }) {
           boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.8)',
         }}
       />
-      
+
       {/* Highlight reflection */}
       <div
         className={`absolute top-1 ${isLeft ? 'left-1' : 'right-1'} w-2 h-2 rounded-full`}

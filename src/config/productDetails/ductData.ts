@@ -1,4 +1,4 @@
-/**
+﻿/**
  * UPVC Duct Pipes & Accessories - Product Detail Configuration
  * 
  * Source: UPVC DUCT PIPES AND ACCESSORIES.txt JSON (extracted from PDF)
@@ -379,7 +379,7 @@ const ductFeatures = [
   'Duct 90/45° LR Bends include one solvent socket end',
   'Duct 90° Lighting LR Bends available for 4" Class C duct pipe, in various pole sizes',
   'Duct 90° Street Lighting LR Bends available for 3" Class C duct pipe, in various pole sizes',
-  'Manufactured by Crown Plastic Pipes Factory L.L.C.',
+  'Manufactured by Crown Plastic Pipes / Fittings Factory L.L.C.',
 ];
 
 const ductApplications = [
@@ -399,10 +399,10 @@ export const upvcDuctPipesAndAccessories: ProductDetailConfig = {
   slug: 'upvc-duct-black',
   categorySlug: 'upvc-duct',
 
-  title: 'UPVC Duct Pipes & Accessories Black Pipes / Fittings',
+  title: 'PVC Duct Pipes & Accessories Black Pipes / Fittings',
   titleAr: 'أنابيب وملحقات قنوات UPVC',
 
-  shortDescription: 'Black/Dark Grey UPVC duct pipes and accessories manufactured to NEMA, DIN, BS, and Etisalat/DU specifications for electrical, communication, and cable protection applications.',
+  shortDescription: 'Black/Dark Grey PVC duct pipes and accessories manufactured to NEMA, DIN, BS, and Etisalat/DU specifications for electrical, communication, and cable protection applications.',
   shortDescriptionAr: 'أنابيب وملحقات قنوات UPVC باللون الأسود/الرمادي الداكن مصنعة وفقاً لمعايير NEMA وDIN وBS ومواصفات اتصالات/دو لتطبيقات الكهرباء والاتصالات وحماية الكابلات.',
 
   overview: `The document provides a product catalogue for UPVC/PVC Duct Pipes and associated accessories, manufactured to various international standards for electrical, communication, and pressure applications.
@@ -434,7 +434,7 @@ The catalogue includes a range of fabricated products for duct applications, spe
     'منحنيات 90/45° تتضمن طرف مقبس لحام واحد',
     'منحنيات إضاءة 90° متوفرة لأنابيب 4 بوصة فئة C',
     'منحنيات إضاءة الشوارع 90° متوفرة لأنابيب 3 بوصة فئة C',
-    'مصنعة بواسطة مصنع كراون للأنابيب البلاستيكية ذ.م.م.',
+    'مصنعة بواسطة مصنع كراون للأنابيب والوصلات البلاستيكية ذ.م.م.',
   ],
 
   applications: ductApplications,
@@ -452,7 +452,7 @@ The catalogue includes a range of fabricated products for duct applications, spe
   fittings: ductFittings,
 
   downloads: [
-    { label: 'UPVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC-DUCT-PIPES-CATALOGUE.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {

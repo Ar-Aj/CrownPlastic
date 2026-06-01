@@ -1,7 +1,6 @@
 // HowTo Schema Component for Crown Plastic Pipes - Phase 2 AEO
 // Implements HowTo JSON-LD for installation guides and step-by-step content
 
-import Script from 'next/script';
 import { companyInfo } from '@/config/schemas';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -171,7 +170,7 @@ export function HowToSchema({
   };
 
   return (
-    <Script
+    <script
       id={`howto-schema-${name.toLowerCase().replace(/\s+/g, '-').substring(0, 50)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}

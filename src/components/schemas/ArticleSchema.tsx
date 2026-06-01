@@ -1,7 +1,6 @@
 // Article Schema Component for Crown Plastic Pipes - Phase 2 AEO
 // Implements Article JSON-LD with E-E-A-T signals for technical guides
 
-import Script from 'next/script';
 import { companyInfo } from '@/config/schemas';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -132,7 +131,7 @@ export function ArticleSchema({
   };
 
   return (
-    <Script
+    <script
       id={`article-schema-${title.toLowerCase().replace(/\s+/g, '-').substring(0, 50)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -211,7 +210,7 @@ export function TechnicalGuideSchema({
   };
 
   return (
-    <Script
+    <script
       id={`tech-guide-schema-${articleProps.title.toLowerCase().replace(/\s+/g, '-').substring(0, 50)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(guideSchema) }}

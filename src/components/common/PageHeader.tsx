@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { usePrefersReducedMotion } from './useAnimations';
 import { useT } from '@/i18n';
 
@@ -37,14 +37,14 @@ export default function PageHeader({
   const getAnimStyle = (delay: number) => ({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
-    transition: prefersReducedMotion 
-      ? 'none' 
+    transition: prefersReducedMotion
+      ? 'none'
       : `opacity 250ms ease-out ${delay}ms, transform 250ms ease-out ${delay}ms`,
   });
 
   return (
-    <section className={`${backgroundClass} text-white pt-[130px]`}>
-      <div className="container mx-auto px-4 py-12 md:py-16">
+    <section className={`${backgroundClass} text-white pt-[150px] md:pt-[180px]`}>
+      <div className="w-full max-w-[90%] xl:max-w-[1600px] 2xl:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {breadcrumbs && (
           <div className="mb-4" style={getAnimStyle(0)}>
             <nav aria-label="Breadcrumb">
@@ -72,14 +72,14 @@ export default function PageHeader({
             </nav>
           </div>
         )}
-        <h1 
+        <h1
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           style={getAnimStyle(50)}
         >
           {title}
         </h1>
         {subtitle && (
-          <p 
+          <p
             className="text-lg md:text-xl text-white/90 max-w-3xl"
             style={getAnimStyle(100)}
           >

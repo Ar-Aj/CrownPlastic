@@ -9,6 +9,7 @@
 import { useState, useEffect, useCallback, createContext, useContext, ReactNode } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { X, Send, Phone, User, Package, CheckCircle, Loader2 } from 'lucide-react';
+import Link from '@/components/common/LocaleLink';
 import { brand } from '@/config/brand';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -22,26 +23,26 @@ const overlayVariants: Variants = {
 };
 
 const modalVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.95, 
-    y: 20 
+  hidden: {
+    opacity: 0,
+    scale: 0.95,
+    y: 20
   },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
+  visible: {
+    opacity: 1,
+    scale: 1,
     y: 0,
-    transition: { 
-      type: 'spring', 
-      damping: 25, 
-      stiffness: 400 
-    } 
+    transition: {
+      type: 'spring',
+      damping: 25,
+      stiffness: 400
+    }
   },
-  exit: { 
-    opacity: 0, 
-    scale: 0.95, 
+  exit: {
+    opacity: 0,
+    scale: 0.95,
     y: 20,
-    transition: { duration: 0.2 } 
+    transition: { duration: 0.2 }
   },
 };
 
@@ -169,12 +170,12 @@ function QuickQuoteModal() {
     try {
       // In production, this would be an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Optionally send to API
       // await fetch('/api/quote', { method: 'POST', body: JSON.stringify(formData) });
-      
+
       setStatus('success');
-      
+
       // Redirect to WhatsApp after short delay
       setTimeout(() => {
         const phone = brand.contact.phone.replace(/[^0-9+]/g, '').replace('+', '');
@@ -182,7 +183,7 @@ function QuickQuoteModal() {
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         closeModal();
       }, 1500);
-      
+
     } catch {
       setStatus('error');
     }
@@ -207,7 +208,7 @@ function QuickQuoteModal() {
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
             aria-hidden="true"
           />
-          
+
           {/* Modal */}
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div
@@ -223,7 +224,7 @@ function QuickQuoteModal() {
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
                 {/* Header gradient */}
                 <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-br from-primary via-primary-dark to-blue-900" />
-                
+
                 {/* Close button */}
                 <button
                   onClick={closeModal}
@@ -232,7 +233,7 @@ function QuickQuoteModal() {
                 >
                   <X className="w-5 h-5" />
                 </button>
-                
+
                 {/* Content */}
                 <div className="relative pt-6 pb-8 px-6">
                   {/* Header */}
@@ -244,19 +245,19 @@ function QuickQuoteModal() {
                         <Send className="w-8 h-8 text-primary" />
                       )}
                     </div>
-                    <h2 
+                    <h2
                       id="quote-modal-title"
                       className="text-2xl font-bold text-white"
                     >
                       {status === 'success' ? 'Request Sent!' : 'Get a Quick Quote'}
                     </h2>
                     <p className="text-blue-100 text-sm mt-1">
-                      {status === 'success' 
-                        ? 'Redirecting to WhatsApp...' 
+                      {status === 'success'
+                        ? 'Redirecting to WhatsApp...'
                         : 'Fill in your details and we\'ll contact you within 2 hours'}
                     </p>
                   </div>
-                  
+
                   {/* Form */}
                   {status !== 'success' && (
                     <form onSubmit={handleSubmit} className="space-y-4 pt-4">
@@ -282,7 +283,7 @@ function QuickQuoteModal() {
                           />
                         </div>
                       </motion.div>
-                      
+
                       {/* Phone Input */}
                       <motion.div
                         variants={inputVariants}
@@ -305,7 +306,7 @@ function QuickQuoteModal() {
                           />
                         </div>
                       </motion.div>
-                      
+
                       {/* Product Interest */}
                       <motion.div
                         variants={inputVariants}
@@ -329,7 +330,7 @@ function QuickQuoteModal() {
                             <option value="PPR Pipes">PPR Hot & Cold Pipes</option>
                             <option value="HDPE Pipes">HDPE Pipes</option>
                             <option value="PVC Conduit">PVC Conduit Pipes</option>
-                            <option value="UPVC Duct">UPVC Duct Pipes</option>
+                            <option value="PVC Duct">PVC Duct Pipes</option>
                             <option value="Fittings">Fittings & Accessories</option>
                             <option value="Other">Other / Multiple Products</option>
                           </select>
@@ -340,7 +341,7 @@ function QuickQuoteModal() {
                           </div>
                         </div>
                       </motion.div>
-                      
+
                       {/* Submit Button */}
                       <motion.button
                         type="submit"
@@ -361,7 +362,7 @@ function QuickQuoteModal() {
                           </>
                         )}
                       </motion.button>
-                      
+
                       {/* Error message */}
                       {status === 'error' && (
                         <motion.p
@@ -374,7 +375,7 @@ function QuickQuoteModal() {
                       )}
                     </form>
                   )}
-                  
+
                   {/* Success state */}
                   {status === 'success' && (
                     <motion.div
@@ -390,7 +391,7 @@ function QuickQuoteModal() {
                       </div>
                     </motion.div>
                   )}
-                  
+
                   {/* Trust indicators */}
                   <div className="mt-6 pt-4 border-t border-gray-100">
                     <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
@@ -430,38 +431,38 @@ export interface QuoteButtonProps {
   className?: string;
 }
 
-export function QuoteButton({ 
+export function QuoteButton({
   children = 'Get a Quote',
   product,
   variant = 'primary',
   size = 'md',
   className = '',
 }: QuoteButtonProps) {
-  const { openModal } = useQuoteModal();
-
   const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all';
-  
+
   const variants = {
     primary: 'bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/40',
     secondary: 'bg-primary hover:bg-primary-dark text-white shadow-md hover:shadow-lg',
     outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
   };
-  
+
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3',
     lg: 'px-8 py-4 text-lg',
   };
 
+  const href = product
+    ? `/contact-us?tab=quote&product=${encodeURIComponent(product)}`
+    : '/contact-us?tab=quote';
+
   return (
-    <motion.button
-      onClick={() => openModal(product)}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+    <Link
+      href={href}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
-    </motion.button>
+    </Link>
   );
 }
 

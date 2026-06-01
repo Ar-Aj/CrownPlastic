@@ -4,16 +4,16 @@ import {
   createContext,
   useContext,
   useState,
-  useEffect,
   useCallback,
   ReactNode,
 } from 'react';
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { type Locale, defaultLocale, locales, localePath, stripLocale } from '@/lib/i18n-utils';
 
 // ─────────────────────────────────────────────────────────────
 // Types
 // ─────────────────────────────────────────────────────────────
-export type Language = 'en' | 'ar';
+export type Language = Locale;
 
 export interface LanguageContextValue {
   language: Language;
@@ -22,50 +22,9 @@ export interface LanguageContextValue {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Constants
-// ─────────────────────────────────────────────────────────────
-const STORAGE_KEY = 'crown-language';
-const SUPPORTED_LANGUAGES: Language[] = ['en', 'ar'];
-const DEFAULT_LANGUAGE: Language = 'en';
-
-// ─────────────────────────────────────────────────────────────
 // Context
 // ─────────────────────────────────────────────────────────────
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
-
-// ─────────────────────────────────────────────────────────────
-// Helper: Get initial language (client-side only)
-// ─────────────────────────────────────────────────────────────
-function getInitialLanguage(searchParams: URLSearchParams | null): Language {
-  // 1. Check URL query param
-  if (searchParams) {
-    const urlLang = searchParams.get('lang');
-    if (urlLang && SUPPORTED_LANGUAGES.includes(urlLang as Language)) {
-      return urlLang as Language;
-    }
-  }
-
-  // 2. Check localStorage
-  if (typeof window !== 'undefined') {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored && SUPPORTED_LANGUAGES.includes(stored as Language)) {
-      return stored as Language;
-    }
-  }
-
-  // 3. Fallback
-  return DEFAULT_LANGUAGE;
-}
-
-// ─────────────────────────────────────────────────────────────
-// Helper: Update document attributes
-// ─────────────────────────────────────────────────────────────
-function updateDocumentAttributes(lang: Language) {
-  if (typeof document !== 'undefined') {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  }
-}
 
 // ─────────────────────────────────────────────────────────────
 // Provider Component
@@ -78,45 +37,26 @@ interface LanguageProviderProps {
 export function LanguageProvider({ children, initialLanguage }: LanguageProviderProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
-  // Initialize state with provided initial or derive from URL/storage
-  const [language, setLanguageState] = useState<Language>(
-    initialLanguage ?? getInitialLanguage(searchParams)
-  );
+  // Language is derived from the URL [locale] segment, passed by the layout.
+  // Falls back to defaultLocale for SSR hydration safety.
+  const [language] = useState<Language>(initialLanguage ?? defaultLocale);
 
   // Derived state
   const isRTL = language === 'ar';
 
-  // On mount, sync document attributes and check URL
-  useEffect(() => {
-    const derivedLang = getInitialLanguage(searchParams);
-    setLanguageState(derivedLang);
-    updateDocumentAttributes(derivedLang);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Set language handler
+  // Set language handler: navigates to the equivalent page in the new locale
   const setLanguage = useCallback(
     (lang: Language) => {
-      if (!SUPPORTED_LANGUAGES.includes(lang)) return;
+      if (!locales.includes(lang)) return;
+      if (lang === language) return;
 
-      // Update state
-      setLanguageState(lang);
-
-      // Persist to localStorage
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(STORAGE_KEY, lang);
-      }
-
-      // Update document attributes
-      updateDocumentAttributes(lang);
-
-      // Update URL query param (shallow navigation, no reload)
-      const params = new URLSearchParams(searchParams?.toString() ?? '');
-      params.set('lang', lang);
-      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+      // Strip current locale prefix and rebuild with new locale
+      const barePath = stripLocale(pathname);
+      const newPath = localePath(barePath, lang);
+      router.push(newPath);
     },
-    [pathname, searchParams, router]
+    [pathname, language, router]
   );
 
   const value: LanguageContextValue = {

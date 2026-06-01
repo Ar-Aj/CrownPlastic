@@ -1,201 +1,159 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-// Note: Using inline SVG for video icon since 'video' is not in Icon component
+import dynamic from 'next/dynamic';
+import type { YoutubeShort } from '@/config/media';
 
 // ─────────────────────────────────────────────────────────────
-// Types
+// Legacy VideoItem type — kept so MediaBlogsClient import still works
 // ─────────────────────────────────────────────────────────────
 export interface VideoItem {
   id: string;
   title: string;
   description: string;
   thumbnailSrc: string;
-  videoSrc: string; // Will be actual MP4/stream URL later
+  videoSrc: string;
   orientation: '9:16' | '16:9';
 }
 
+// ─────────────────────────────────────────────────────────────
+// Props
+// ─────────────────────────────────────────────────────────────
 interface MediaVideosSectionProps {
   title: string;
   subtitle?: string;
-  videos: VideoItem[];
+  /** New YouTube Shorts data — preferred */
+  shorts?: YoutubeShort[];
+  /** Legacy prop kept for backwards-compat; ignored when shorts is provided */
+  videos?: VideoItem[];
 }
 
 // ─────────────────────────────────────────────────────────────
-// Video Card Component
+// ShortsGrid — uses facade pattern: static thumbnail until user clicks
 // ─────────────────────────────────────────────────────────────
-function VideoCard({ video, onPlay }: { video: VideoItem; onPlay: (video: VideoItem) => void }) {
+import YouTubeFacade from '@/components/common/YouTubeFacade';
+
+function ShortsGrid({ shorts }: { shorts: YoutubeShort[] }) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow group">
-      {/* Thumbnail Area - 9:16 aspect ratio */}
-      <div 
-        className="relative bg-gradient-to-br from-primary/20 to-secondary/20 cursor-pointer"
-        style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-        onClick={() => onPlay(video)}
-      >
-        {video.thumbnailSrc ? (
-          <Image
-            src={video.thumbnailSrc}
-            alt={video.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 400px"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
-            <svg className="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-          </div>
-        )}
-        
-        {/* Play Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
-          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Duration Badge (placeholder) */}
-        <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
-          1:30
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-5">
-        <h3 className="font-bold text-gray-900 text-lg mb-2 line-clamp-2">
-          {video.title}
-        </h3>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-          {video.description}
-        </p>
-        <button
-          onClick={() => onPlay(video)}
-          className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors"
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {shorts.map((short) => (
+        <div
+          key={short.id}
+          className="group flex flex-col gap-4"
         >
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-          Play Video
-        </button>
-      </div>
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────
-// Video Modal Component
-// ─────────────────────────────────────────────────────────────
-function VideoModal({ 
-  video, 
-  isOpen, 
-  onClose 
-}: { 
-  video: VideoItem | null; 
-  isOpen: boolean; 
-  onClose: () => void;
-}) {
-  if (!isOpen || !video) return null;
-
-  return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div 
-        className="relative bg-black rounded-2xl overflow-hidden max-w-md w-full mx-4"
-        style={{ aspectRatio: '9/16', maxHeight: '80vh' }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        {/* Video Player Placeholder */}
-        {video.videoSrc ? (
-          <video
-            src={video.videoSrc}
-            controls
-            autoPlay
-            className="w-full h-full object-contain"
-            playsInline
+          {/* Card */}
+          <div
+            className={[
+              'relative aspect-[9/16] rounded-2xl overflow-hidden',
+              'border border-slate-700/50',
+              'shadow-xl shadow-blue-900/20',
+              'bg-slate-900',
+              /* Glassmorphism hover glow */
+              'ring-1 ring-white/5',
+              'transition-all duration-500',
+              'hover:ring-primary/40 hover:shadow-[0_32px_64px_-12px_rgba(0,114,188,0.35)]',
+              'hover:border-primary/30',
+              'hover:-translate-y-1',
+            ].join(' ')}
           >
-            Your browser does not support video playback.
-          </video>
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <svg className="w-16 h-16 mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <p className="text-lg font-medium">{video.title}</p>
-            <p className="text-sm text-white/60 mt-2">Video coming soon</p>
+            {/* Gradient backdrop visible before facade loads */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 pointer-events-none" />
+
+            <YouTubeFacade
+              videoId=""
+              embedUrl={short.embedUrl}
+              title={short.title}
+              iframeParams="autoplay=1&rel=0&modestbranding=1&playsinline=1"
+              className="z-10"
+            />
+
+            {/* Top-right branding badge */}
+            <div className="absolute top-3 end-3 z-20 pointer-events-none">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 text-[10px] font-semibold text-white/70 uppercase tracking-wider">
+                <svg
+                  className="w-3 h-3 text-red-500"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                YouTube
+              </span>
+            </div>
           </div>
-        )}
-      </div>
+
+          {/* Caption */}
+          <p className="text-sm font-medium text-slate-300 text-center leading-snug px-2 group-hover:text-white transition-colors duration-300">
+            {short.title}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }
 
-// ─────────────────────────────────────────────────────────────
-// Main Section Component
-// ─────────────────────────────────────────────────────────────
-export default function MediaVideosSection({ title, subtitle, videos }: MediaVideosSectionProps) {
-  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+// Wrap in next/dynamic to guarantee client-only render (no SSR iframe mismatch)
+const ShortsGridClient = dynamic(() => Promise.resolve(ShortsGrid), {
+  ssr: false,
+  loading: () => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[0, 1, 2].map((i) => (
+        <div
+          key={i}
+          className="aspect-[9/16] rounded-2xl bg-slate-800/60 animate-pulse border border-slate-700/40"
+        />
+      ))}
+    </div>
+  ),
+});
 
-  const handlePlayVideo = (video: VideoItem) => {
-    setActiveVideo(video);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setActiveVideo(null);
-  };
+// ─────────────────────────────────────────────────────────────
+// Main Export
+// ─────────────────────────────────────────────────────────────
+export default function MediaVideosSection({
+  title,
+  subtitle,
+  shorts,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  videos: _videos,
+}: MediaVideosSectionProps) {
+  const hasShorts = shorts && shorts.length > 0;
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-slate-900 relative overflow-hidden">
+      {/* Subtle background grid */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+      />
+
+      {/* Ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {title}
-          </h2>
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest">
+            Featured Videos
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
           {subtitle && (
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {subtitle}
-            </p>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
           )}
         </div>
 
-        {/* Video Grid - 2 columns for desktop, 1 for mobile */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          {videos.map((video) => (
-            <VideoCard 
-              key={video.id} 
-              video={video} 
-              onPlay={handlePlayVideo}
-            />
-          ))}
-        </div>
+        {/* YouTube Shorts Grid */}
+        {hasShorts ? (
+          <ShortsGridClient shorts={shorts!} />
+        ) : (
+          /* Fallback: no videos at all */
+          <p className="text-center text-slate-500">No videos available.</p>
+        )}
       </div>
-
-      {/* Video Modal */}
-      <VideoModal
-        video={activeVideo}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </section>
   );
 }

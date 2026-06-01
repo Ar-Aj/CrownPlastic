@@ -120,26 +120,20 @@ export const certificationBadges: CertificationBadge[] = [
     descriptionAr: 'الإدارة البيئية',
   },
   {
-    name: 'GSO EN 805',
-    shortName: 'GSO',
-    image: '/images/certs/gso.svg',
-    description: 'Gulf Standards Organization',
-    descriptionAr: 'هيئة التقييس الخليجية',
+    name: 'BS EN 805',
+    shortName: 'BS EN',
+    image: '/images/certs/bs-en.svg',
+    description: 'Water Supply Standard',
+    descriptionAr: 'معيار إمدادات المياه',
   },
   {
-    name: 'SASO TR-BM-5',
-    shortName: 'SASO',
-    image: '/images/certs/saso.svg',
-    description: 'Saudi Standards Authority',
-    descriptionAr: 'هيئة المواصفات السعودية',
+    name: 'ISO 45001:2018',
+    shortName: 'ISO 45001',
+    image: '/images/certs/iso-45001.svg',
+    description: 'Occupational Health & Safety',
+    descriptionAr: 'الصحة والسلامة المهنية',
   },
-  {
-    name: 'BSI Kitemark',
-    shortName: 'Kitemark',
-    image: '/images/certs/kitemark.svg',
-    description: 'British Standards Institution',
-    descriptionAr: 'معهد المواصفات البريطانية',
-  },
+
   {
     name: 'Dubai Central Lab',
     shortName: 'DCL',
@@ -159,7 +153,7 @@ export const projectStats = {
   countriesServed: 25,
   happyCustomers: 10000,
   productsRange: 5000,
-  certifications: 8,
+  certifications: 5,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -210,8 +204,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 'test-3',
-    quote: 'We switched to Crown for our Saudi projects due to their SASO certification. The quality matches European standards at competitive GCC pricing. Highly recommended for any large-scale construction.',
-    quoteAr: 'انتقلنا إلى كراون لمشاريعنا السعودية بسبب شهادة ساسو. الجودة تتطابق مع المعايير الأوروبية بأسعار تنافسية في دول مجلس التعاون. موصى به بشدة لأي بناء واسع النطاق.',
+    quote: 'We switched to Crown for our Saudi projects due to their ISO 9001:2015 certification and BS EN compliance. The quality matches European standards at competitive GCC pricing. Highly recommended for any large-scale construction.',
+    quoteAr: 'انتقلنا إلى كراون لمشاريعنا السعودية بسبب شهادة ISO 9001:2015 والامتثال لمعايير BS EN. الجودة تتطابق مع المعايير الأوروبية بأسعار تنافسية في دول مجلس التعاون. موصى به بشدة لأي بناء واسع النطاق.',
     author: 'Fahad Al-Rashid',
     authorAr: 'فهد الراشد',
     role: 'Operations Manager',

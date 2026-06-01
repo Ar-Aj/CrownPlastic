@@ -2,7 +2,6 @@
 // GOOGLE COMPLIANT: Only renders reviews when real customer data is provided
 // Do NOT use fabricated reviews or certification-based ratings
 
-import Script from 'next/script';
 import { companyInfo } from '@/config/schemas';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -45,7 +44,7 @@ export function ProductReviewSchema({
   if (!reviews || reviews.length === 0) {
     // Return empty placeholder comment for future implementation
     return (
-      <Script
+      <script
         id={`product-review-placeholder-${sku}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -105,7 +104,7 @@ export function ProductReviewSchema({
   };
 
   return (
-    <Script
+    <script
       id={`product-review-schema-${sku}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
@@ -130,7 +129,7 @@ export function OrganizationRatingSchema({
   if (!reviews || reviews.length === 0) {
     // Return placeholder with no rating
     return (
-      <Script
+      <script
         id="organization-rating-placeholder"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -185,7 +184,7 @@ export function OrganizationRatingSchema({
   };
 
   return (
-    <Script
+    <script
       id="organization-rating-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(orgRatingSchema) }}
@@ -213,7 +212,7 @@ export function LocalBusinessRatingSchema({
   // GOOGLE COMPLIANCE: Only render if we have real reviews
   if (!reviews || reviews.length === 0) {
     return (
-      <Script
+      <script
         id={`localbusiness-rating-placeholder-${city.toLowerCase().replace(/\s+/g, '-')}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -266,7 +265,7 @@ export function LocalBusinessRatingSchema({
   };
 
   return (
-    <Script
+    <script
       id={`localbusiness-rating-${city.toLowerCase().replace(/\s+/g, '-')}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(localRatingSchema) }}

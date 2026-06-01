@@ -3,10 +3,11 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { PRODUCT_MAP, type ProductCategory, type ProductItem } from '@/data/productMap';
 import { PRODUCT_WHEEL_IMAGE_MAP, getCategoryAcronym } from '@/data/productWheelMap';
 import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT RANGE WHEEL SELECTOR - Perfectly Centered Circular Layout
@@ -39,32 +40,86 @@ const START_ANGLE = -90; // Top position (12 o'clock)
 
 // Maps productMap.ts category IDs → dictionary keys under about.galaxy.products
 const CATEGORY_KEY_MAP: Record<string, string> = {
-    'upvc-pressure': 'upvc_pressure',
-    'upvc-drainage': 'upvc_drainage',
-    'pvc-conduit': 'upvc_conduit',
-    'ppr': 'ppr',
-    'upvc-duct': 'upvc_duct',
-    'upvc-fabrications': 'upvc_fabrications',
-    'polyethylene': 'hdpe',
+    'upvc-drainage-pipes': 'upvc_drainage_pipes',
+    'upvc-drainage-fittings': 'upvc_drainage_fittings',
+    'pvc-high-pressure-pipes': 'pvc_high_pressure_pipes',
+    'pvc-high-pressure-fittings': 'pvc_high_pressure_fittings',
+    'pvc-sch-40-fittings': 'pvc_sch_40_fittings',
+    'pvc-duct-pipes': 'pvc_duct_pipes',
+    'pvc-duct-fittings': 'pvc_duct_fittings',
+    'pvc-conduit-pipes': 'pvc_conduit_pipes',
+    'ppr-pipes': 'ppr_pipes',
+    'hdpe-pipes': 'hdpe_pipes',
+    'pex-pipes': 'pex_pipes',
+    'fabrications-accessories': 'fabrications_accessories',
+    'solvents': 'solvents',
 };
 
 // Maps productMap.ts item IDs → dictionary item keys
 const ITEM_KEY_MAP: Record<string, string> = {
-    'pvc-pressure-din-8063': 'din_8063',
-    'pvc-pressure-bs-en-1452': 'bs_en_1452',
-    'pvc-pressure-astm-d2466': 'astm_d2466',
-    'upvc-drainage-bs-en-1329': 'bs_en_1329',
-    'upvc-drainage-bs-en-1401': 'bs_en_1401',
-    'upvc-conduit-sch-40': 'sch_40',
-    'upvc-conduit-sch-80': 'sch_80',
-    'ppr-sdr11-pn10': 'sdr11',
-    'ppr-sdr7-4-pn16': 'sdr7_4',
-    'ppr-sdr6-pn20': 'sdr6',
-    'upvc-duct-black': 'black',
-    'upvc-fabrications-type-a': 'type_a',
-    'upvc-fabrications-type-b': 'type_b',
-    'upvc-fabrications-type-c': 'type_c',
-    'upvc-fabrications-type-d': 'type_d',
+    // UPVC Drainage Pipes
+    'upvc-drainage-pipes-bs5255-bs-en-1329': 'bs5255_bs_en_1329',
+    'upvc-drainage-pipes-bs-en-1401': 'bs_en_1401',
+    'upvc-drainage-pipes-non-standard': 'non_standard',
+    // UPVC Drainage Fittings
+    'upvc-drainage-fittings-bs-en-1329': 'bs_en_1329',
+    'upvc-drainage-fittings-bs-en-1401': 'fittings_bs_en_1401',
+    'upvc-drainage-fittings-pushfit': 'pushfit',
+    // PVC High Pressure Pipes
+    'pvc-hp-pipes-iso-4422': 'iso_4422',
+    'pvc-hp-pipes-din-8061-62': 'din_8061_62',
+    'pvc-hp-pipes-bs-en-iso-1452-2': 'bs_en_iso_1452_2',
+    'pvc-hp-pipes-bs-3505': 'bs_3505',
+    'pvc-hp-pipes-bs-3506': 'bs_3506',
+    'pvc-hp-pipes-astm-d1785': 'astm_d1785',
+    'pvc-hp-pipes-astm-d2241': 'astm_d2241',
+    // PVC High Pressure Fittings
+    'pvc-hp-fittings-din-8063': 'din_8063',
+    'pvc-hp-fittings-bs-en-1452-3': 'bs_en_1452_3',
+    'pvc-hp-fittings-valves': 'valves',
+    // PVC SCH 40 Fittings
+    'pvc-sch-40-fittings-astm-d2466': 'astm_d2466',
+    // PVC Duct Pipes
+    'pvc-duct-pipes-nema-tc-2': 'nema_tc_2',
+    'pvc-duct-pipes-nema-tc-6-8': 'nema_tc_6_8',
+    'pvc-duct-pipes-din-8062': 'din_8062',
+    'pvc-duct-pipes-etisalat-du': 'etisalat_du',
+    'pvc-duct-pipes-bs-3505-06': 'bs_3505_06',
+    'pvc-duct-pipes-non-standard': 'duct_non_standard',
+    // PVC Duct Fittings
+    'pvc-duct-fittings-socket': 'socket',
+    'pvc-duct-fittings-bellmouth': 'bellmouth',
+    'pvc-duct-fittings-end-caps': 'end_caps',
+    'pvc-duct-fittings-lr-bends-90-45': 'lr_bends_90_45',
+    'pvc-duct-fittings-street-lighting-bends': 'street_lighting_bends',
+    'pvc-duct-fittings-lightning-bends': 'lightning_bends',
+    // PVC Conduit Pipes
+    'pvc-conduit-pipes-compression-force': 'compression_force',
+    'pvc-conduit-pipes-sch-40': 'sch_40',
+    'pvc-conduit-pipes-sch-80': 'sch_80',
+    // PP-R Pipes
+    'ppr-pipes-sdr11-pn10': 'sdr11_pn10',
+    'ppr-pipes-sdr7-4-pn16': 'sdr7_4_pn16',
+    'ppr-pipes-sdr6-pn20': 'sdr6_pn20',
+    'ppr-pipes-sdr5-pn25': 'sdr5_pn25',
+    // HDPE Pipes
+    'hdpe-pipes-5mpa-pe63': 'pe63_5mpa',
+    'hdpe-pipes-6-3mpa-pe80': 'pe80_6_3mpa',
+    'hdpe-pipes-8mpa-pe100': 'pe100_8mpa',
+    'hdpe-pipes-din-8072': 'din_8072',
+    'hdpe-pipes-asae-s435': 'asae_s435',
+    'hdpe-pipes-aust-std-2698': 'aust_std_2698',
+    'hdpe-pipes-bs-1972-67': 'bs_1972_67',
+    // PEX Pipes
+    'pex-pipes-pn-12-5-pn-20': 'pn_12_5_pn_20',
+    // Fabrications & Accessories
+    'fabrication-grease-trap-type-a': 'grease_trap_type_a',
+    'fabrication-grease-trap-type-b': 'grease_trap_type_b',
+    'fabrication-grease-trap-type-c': 'grease_trap_type_c',
+    'fabrication-grease-trap-type-d': 'grease_trap_type_d',
+    'fabrication-accessories': 'accessories',
+    // Solvents
+    'pvc-solvents': 'pvc_solvents',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -94,12 +149,60 @@ function getNodePosition(
     total: number,
     radius: number,
     startAngle: number = START_ANGLE
-): { x: number; y: number } {
+): { x: number; y: number; angle: number } {
     const angle = startAngle + index * (360 / total);
     const radians = (angle * Math.PI) / 180;
     return {
         x: Math.cos(radians) * radius,
         y: Math.sin(radians) * radius,
+        angle, // Return angle for quadrant-based label positioning
+    };
+}
+
+/**
+ * Determine label position based on node's angular position on the circle.
+ * Returns CSS classes and styles for positioning labels radially outward.
+ * 
+ * Quadrants (angles normalized to -180 to 180):
+ * - Top (-135 to -45): Label above node
+ * - Right (-45 to 45): Label to the right
+ * - Bottom (45 to 135): Label below node  
+ * - Left (135 to 180 or -180 to -135): Label to the left
+ */
+function getLabelPosition(angle: number): {
+    containerClass: string;
+    textAlign: string;
+} {
+    // Normalize angle to -180 to 180 range
+    let normalizedAngle = angle % 360;
+    if (normalizedAngle > 180) normalizedAngle -= 360;
+    if (normalizedAngle < -180) normalizedAngle += 360;
+
+    // Top quadrant: label above
+    if (normalizedAngle >= -135 && normalizedAngle < -45) {
+        return {
+            containerClass: 'bottom-full mb-2 left-1/2 -translate-x-1/2',
+            textAlign: 'text-center',
+        };
+    }
+    // Right quadrant: label to the right
+    if (normalizedAngle >= -45 && normalizedAngle < 45) {
+        return {
+            containerClass: 'left-full ml-2 top-1/2 -translate-y-1/2',
+            textAlign: 'text-left',
+        };
+    }
+    // Bottom quadrant: label below
+    if (normalizedAngle >= 45 && normalizedAngle < 135) {
+        return {
+            containerClass: 'top-full mt-2 left-1/2 -translate-x-1/2',
+            textAlign: 'text-center',
+        };
+    }
+    // Left quadrant: label to the left
+    return {
+        containerClass: 'right-full mr-2 top-1/2 -translate-y-1/2',
+        textAlign: 'text-right',
     };
 }
 
@@ -113,7 +216,8 @@ function getNodePosition(
  * conflict with Framer Motion scale animations which override CSS transforms.
  */
 function CentralHub({
-    hubSize,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    hubSize: _hubSize, // Kept for backwards compatibility but not strictly used for sizing anymore
     activeCategoryId,
     reducedMotion,
 }: {
@@ -129,25 +233,17 @@ function CentralHub({
         setImageError(false);
     }, [activeCategoryId]);
 
-    // Hub is centered using negative margin = half of hub size
-    // This avoids transform conflicts with Framer Motion scale animation
+    const isSquare = activeCategoryId === 'pvc-duct-fittings';
+
+    // Hub is centered using absolute positioning and translate on a static wrapper.
+    // This avoids transform conflicts with the Framer Motion scale animation on the child.
     return (
-        <motion.div
-            className="absolute z-20"
-            style={{
-                left: '50%',
-                top: '50%',
-                marginLeft: -hubSize / 2,
-                marginTop: -hubSize / 2,
-                width: hubSize,
-                height: hubSize,
-            }}
-            initial={reducedMotion ? {} : { scale: 0.92, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.3 }}
-        >
-            <div
-                className="w-full h-full rounded-full flex items-center justify-center overflow-hidden"
+        <div className="absolute z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex items-center justify-center">
+            <motion.div
+                className={`transition-all duration-500 ease-in-out flex items-center justify-center overflow-hidden p-0 rounded-2xl sm:rounded-3xl ${isSquare ? 'aspect-square' : 'aspect-video'} w-36 sm:w-48 md:w-52 lg:w-56 xl:w-64 2xl:w-72 max-w-sm md:max-w-md`}
+                initial={reducedMotion ? {} : { scale: 0.92, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.3 }}
                 style={{
                     background: hasImage
                         ? COLORS.primaryDark
@@ -175,29 +271,29 @@ function CentralHub({
                                 fill
                                 className="object-cover"
                                 onError={() => setImageError(true)}
-                                sizes={`${hubSize}px`}
+                                sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 384px"
                             />
                         </motion.div>
                     </AnimatePresence>
                 )}
 
                 {!hasImage && (
-                    <div className="flex flex-col items-center justify-center text-center">
-                        <span className="text-white font-bold text-xs sm:text-sm leading-tight">Crown</span>
-                        <span className="text-white/70 text-[9px] sm:text-[10px] leading-tight mt-0.5">Product Range</span>
+                    <div className="flex flex-col items-center justify-center text-center p-4">
+                        <span className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">Crown</span>
+                        <span className="text-white/70 text-[10px] sm:text-xs lg:text-sm leading-tight mt-0.5">Product Range</span>
                     </div>
                 )}
 
                 {hasImage && (
                     <div
-                        className="absolute inset-0 rounded-full pointer-events-none"
+                        className="absolute inset-0 pointer-events-none rounded-2xl sm:rounded-3xl"
                         style={{
                             background: 'linear-gradient(to bottom, transparent 55%, rgba(0,59,115,0.5) 100%)',
                         }}
                     />
                 )}
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }
 
@@ -277,7 +373,7 @@ function WheelNode({
     reducedMotion,
 }: {
     category: ProductCategory;
-    position: { x: number; y: number };
+    position: { x: number; y: number; angle: number };
     index: number;
     nodeSize: number;
     isActive: boolean;
@@ -293,6 +389,9 @@ function WheelNode({
     const hasImage = imageSrc && !imageError;
 
     const nodeScale = isActive ? 1.1 : isHovered ? 1.05 : 1;
+    
+    // Get quadrant-based label positioning
+    const labelPos = getLabelPosition(position.angle);
 
     // Position node at center + offset, using margin to center the node itself
     return (
@@ -340,24 +439,27 @@ function WheelNode({
                     </div>
                 ) : (
                     <span
-                        className={`font-bold text-xs sm:text-sm ${isActive ? 'text-white' : 'text-slate-700'}`}
+                        className={`font-bold text-sm sm:text-base lg:text-lg ${isActive ? 'text-white' : 'text-slate-700'}`}
                     >
                         {acronym}
                     </span>
                 )}
             </div>
 
-            {/* Product name permanently displayed ON TOP */}
+            {/* Label positioned radially based on quadrant */}
             <div
-                className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none"
+                className={`absolute z-30 pointer-events-none ${labelPos.containerClass}`}
             >
                 <div
-                    className={`px-2 py-1 rounded-md text-[9px] sm:text-[10px] font-semibold whitespace-nowrap shadow-md transition-all duration-200 ${isActive
+                    className={`px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg text-[8px] sm:text-[9px] lg:text-[10px] font-semibold leading-tight shadow-md transition-all duration-200 whitespace-normal max-w-[90px] sm:max-w-[100px] lg:max-w-[110px] ${labelPos.textAlign} ${isActive
                         ? 'bg-slate-900 text-white'
                         : 'bg-white text-slate-700 border border-slate-200'
                         }`}
+                    style={{ 
+                        textWrap: 'balance',
+                    }}
                 >
-                    {category.name.length > 20 ? category.name.slice(0, 18) + '...' : category.name}
+                    {category.name}
                 </div>
             </div>
 
@@ -416,14 +518,18 @@ function DetailPanelDesktop({
     return (
         <motion.div
             key={category.id}
+            layout
             initial={reducedMotion ? {} : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={reducedMotion ? {} : { opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="w-full h-full flex flex-col"
+            transition={{ 
+                duration: 0.2,
+                layout: { duration: 0.3, ease: 'easeInOut' }
+            }}
+            className="w-full"
         >
-            {/* Fixed header section */}
-            <div className="flex-shrink-0">
+            {/* Header section */}
+            <div>
                 <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 text-center lg:text-left mb-2">
                     {t(`about.galaxy.products.${catKey}.name`)}
                 </h3>
@@ -433,8 +539,8 @@ function DetailPanelDesktop({
                 </p>
             </div>
 
-            {/* Scrollable item grid */}
-            <div className="mt-4 flex-1 min-h-0 overflow-y-auto pr-2 custom-scrollbar">
+            {/* Item grid - no scroll, natural height */}
+            <div className="mt-4">
                 <div className="grid gap-3 grid-cols-2 xl:grid-cols-3">
                     {category.items.map((item) => (
                         <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} t={t} />
@@ -445,7 +551,7 @@ function DetailPanelDesktop({
     );
 }
 
-/** Item chip with Know More button */
+/** Item chip - entire card is clickable, links to specific sub-product detail page */
 function ItemChip({
     item,
     categoryId,
@@ -457,48 +563,80 @@ function ItemChip({
     reducedMotion: boolean;
     t: (key: string) => string;
 }) {
+    const [imgError, setImgError] = useState(false);
+
     // Map category IDs to their product page slugs
     const categorySlugMap: Record<string, string> = {
-        'upvc-pressure': 'upvc-pressure',
-        'upvc-drainage': 'upvc-drainage',
-        'pvc-conduit': 'pvc-conduit',
-        'ppr': 'ppr',
-        'upvc-duct': 'upvc-duct',
-        'upvc-fabrications': 'upvc-fabrications',
-        'polyethylene': 'polyethylene',
+        'upvc-drainage-pipes': 'upvc-drainage-pipes',
+        'upvc-drainage-fittings': 'upvc-drainage-fittings',
+        'pvc-high-pressure-pipes': 'pvc-high-pressure-pipes',
+        'pvc-high-pressure-fittings': 'pvc-high-pressure-fittings',
+        'pvc-sch-40-fittings': 'pvc-sch-40-fittings',
+        'pvc-duct-pipes': 'pvc-duct-pipes',
+        'pvc-duct-fittings': 'pvc-duct-fittings',
+        'pvc-conduit-pipes': 'pvc-conduit-pipes',
+        'ppr-pipes': 'ppr-pipes',
+        'hdpe-pipes': 'hdpe-pipes',
+        'pex-pipes': 'pex-pipes',
+        'fabrications-accessories': 'fabrications-accessories',
+        'solvents': 'solvents',
     };
 
     const categorySlug = categorySlugMap[categoryId] || categoryId;
     const catKey = CATEGORY_KEY_MAP[categoryId] || categoryId;
     const itemKey = ITEM_KEY_MAP[item.id] || item.id;
 
-    return (
-        <motion.div
-            whileHover={reducedMotion ? {} : { scale: 1.02 }}
-            className="rounded-xl border border-slate-200 bg-slate-50 hover:bg-white shadow-sm px-3 py-3 sm:px-4 sm:py-3 transition-all duration-200"
-        >
-            <div className="flex items-start justify-between gap-2">
-                <div className="flex-1">
-                    <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug mb-1">
-                        {t(`about.galaxy.products.${catKey}.items.${itemKey}.name`)}
-                    </h4>
-                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
-                        {t(`about.galaxy.products.${catKey}.items.${itemKey}.info`)}
-                    </p>
-                </div>
+    // Link directly to the specific sub-product detail page using the item ID as the product slug
+    const detailHref = `/products/${categorySlug}/${item.id}`;
 
-                {/* Know More button */}
-                <Link
-                    href={`/products/${categorySlug}`}
-                    className="flex-shrink-0 px-2.5 py-1 rounded-md text-[11px] font-semibold transition-all duration-200 border
-            bg-gradient-to-r from-[#0072BC] to-[#003B73] text-white border-[#003B73]
-            hover:from-[#003B73] hover:to-[#001d3a] hover:shadow-md
-            active:scale-95"
-                >
-                    {t(`about.galaxy.products.${catKey}.items.${itemKey}.btn`)}
-                </Link>
-            </div>
-        </motion.div>
+    const hasImage = !!item.image && !imgError;
+
+    return (
+        <Link href={detailHref} className="block group">
+            <motion.div
+                whileHover={reducedMotion ? {} : { scale: 1.02 }}
+                className="rounded-xl border border-slate-200 bg-slate-50 hover:bg-white shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden"
+            >
+                <div className="flex flex-col gap-0">
+
+                    {/* Thumbnail image — 16:9 aspect ratio, full width across card top */}
+                    {hasImage && (
+                        <div className="relative w-full aspect-video overflow-hidden rounded-t-xl flex-shrink-0">
+                            <Image
+                                src={item.image!}
+                                alt={item.name}
+                                fill
+                                sizes="(max-width: 640px) 280px, 320px"
+                                className="object-contain group-hover:scale-105 transition-transform duration-300 bg-slate-100"
+                                onError={() => setImgError(true)}
+                            />
+                            {/* subtle gradient overlay at bottom for text readability */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/5 pointer-events-none" />
+                        </div>
+                    )}
+
+                    {/* Text content */}
+                    <div className="flex-1 min-w-0 px-3 py-2.5 flex flex-col justify-between gap-1.5">
+                        <div>
+                            <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug line-clamp-2">
+                                {t(`about.galaxy.products.${catKey}.items.${itemKey}.name`)}
+                            </h4>
+                            <p className="text-[10px] sm:text-[11px] text-slate-500 leading-relaxed mt-0.5 line-clamp-2">
+                                {t(`about.galaxy.products.${catKey}.items.${itemKey}.info`)}
+                            </p>
+                        </div>
+
+                        {/* Know More badge — bottom right */}
+                        <div className="flex justify-end">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-gradient-to-r from-[#0072BC] to-[#003B73] text-white">
+                                {t(`about.galaxy.products.${catKey}.items.${itemKey}.btn`)}
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </motion.div>
+        </Link>
     );
 }
 
@@ -513,6 +651,7 @@ export default function AboutProductRangeMap() {
     const [hoveredCategoryId, setHoveredCategoryId] = useState<string | null>(null);
     const reducedMotion = useReducedMotion();
     const t = useT();
+    const { isRTL } = useLanguage();
 
     const activeCategory = PRODUCT_MAP.find((c) => c.id === activeCategoryId) ?? PRODUCT_MAP[0];
 
@@ -526,13 +665,14 @@ export default function AboutProductRangeMap() {
         setActiveCategoryId(id);
     }, []);
 
-    // Responsive sizing based on breakpoint - all use same circular geometry
+    // Responsive sizing for 13 category nodes - enlarged nodes and hub
+    // Increased orbit radius to accommodate larger nodes + external labels
     const wheelConfig = {
-        mobile: { containerSize: 320, hubSize: 90, hubImageSize: 60, orbitRadius: 105, nodeSize: 50, nodeImageSize: 25 },
-        sm: { containerSize: 400, hubSize: 110, hubImageSize: 75, orbitRadius: 130, nodeSize: 60, nodeImageSize: 30 },
-        lg: { containerSize: 520, hubSize: 130, hubImageSize: 90, orbitRadius: 165, nodeSize: 70, nodeImageSize: 36 },
-        xl: { containerSize: 600, hubSize: 150, hubImageSize: 105, orbitRadius: 190, nodeSize: 80, nodeImageSize: 42 },
-        '2xl': { containerSize: 640, hubSize: 170, hubImageSize: 120, orbitRadius: 205, nodeSize: 90, nodeImageSize: 48 },
+        mobile: { containerSize: 380, hubSize: 90, hubImageSize: 65, orbitRadius: 140, nodeSize: 48, nodeImageSize: 26 },
+        sm: { containerSize: 480, hubSize: 110, hubImageSize: 80, orbitRadius: 175, nodeSize: 56, nodeImageSize: 30 },
+        lg: { containerSize: 640, hubSize: 130, hubImageSize: 95, orbitRadius: 240, nodeSize: 68, nodeImageSize: 36 },
+        xl: { containerSize: 740, hubSize: 150, hubImageSize: 110, orbitRadius: 280, nodeSize: 78, nodeImageSize: 42 },
+        '2xl': { containerSize: 840, hubSize: 170, hubImageSize: 125, orbitRadius: 320, nodeSize: 88, nodeImageSize: 48 },
     };
 
     return (
@@ -601,8 +741,8 @@ export default function AboutProductRangeMap() {
                 <div className="lg:hidden flex flex-col items-center w-full max-w-full overflow-x-hidden">
                     {/* Compact wheel for mobile/tablet */}
                     <div className="w-full max-w-full mb-4 sm:mb-6 overflow-hidden">
-                        <div className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] overflow-hidden">
-                            <CenteredGlow size={240} reducedMotion={reducedMotion} />
+                        <div className="relative mx-auto aspect-square w-full max-w-[360px] sm:max-w-[460px] md:max-w-[520px] overflow-visible">
+                            <CenteredGlow size={350} reducedMotion={reducedMotion} />
                             <OrbitRing orbitRadius={wheelConfig.mobile.orbitRadius} reducedMotion={reducedMotion} />
                             <CentralHub
                                 hubSize={wheelConfig.mobile.hubSize}
@@ -651,12 +791,17 @@ export default function AboutProductRangeMap() {
                     </motion.div>
                 </div>
 
-                {/* Desktop Layout (lg+): Two-column grid - Wheel | Detail */}
-                <div className="hidden lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-6 xl:gap-10 items-center lg:min-h-[520px]">
-                    {/* Left column: Wheel */}
-                    <div className="w-full flex items-center justify-center">
-                        <div className="relative aspect-square max-w-[400px] xl:max-w-[480px]">
-                            <CenteredGlow size={420} reducedMotion={reducedMotion} />
+                {/* Desktop Layout (lg+): Two-column grid - Wheel | Detail, reversed in RTL */}
+                <div 
+                    className={`hidden lg:grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] gap-6 xl:gap-10 items-start lg:min-h-[620px] xl:min-h-[700px] 2xl:min-h-[780px] ${
+                        isRTL ? 'direction-rtl' : ''
+                    }`}
+                    dir={isRTL ? 'rtl' : 'ltr'}
+                >
+                    {/* Wheel column - order changes based on direction */}
+                    <div className={`w-full flex items-center ${isRTL ? 'justify-end pr-0 xl:pr-4' : 'justify-start pl-0 xl:pl-4'} ${isRTL ? 'order-2' : 'order-1'}`}>
+                        <div className="relative aspect-square w-full max-w-[580px] xl:max-w-[680px] 2xl:max-w-[780px] overflow-visible">
+                            <CenteredGlow size={550} reducedMotion={reducedMotion} />
                             <OrbitRing orbitRadius={wheelConfig.lg.orbitRadius} reducedMotion={reducedMotion} />
                             <CentralHub
                                 hubSize={wheelConfig.lg.hubSize}
@@ -684,13 +829,18 @@ export default function AboutProductRangeMap() {
                         </div>
                     </div>
 
-                    {/* Right column: Detail card with internal scroll */}
+                    {/* Detail card column - h-fit with smooth height transition */}
                     <motion.div
-                        initial={reducedMotion ? {} : { opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.35, delay: 0.15 }}
-                        className="w-full h-[520px] rounded-2xl bg-white shadow-lg border border-slate-100 px-6 py-6 overflow-hidden"
+                        layout
+                        initial={reducedMotion ? {} : { opacity: 0, x: isRTL ? -20 : 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                            duration: 0.35, 
+                            delay: 0.15,
+                            layout: { duration: 0.3, ease: 'easeInOut' }
+                        }}
+                        className={`w-full h-fit self-start max-h-[90vh] rounded-2xl bg-white shadow-lg border border-slate-100 px-6 py-6 overflow-y-auto ${isRTL ? 'order-1' : 'order-2'}`}
+                        dir="ltr"
                     >
                         <AnimatePresence mode="wait">
                             {activeCategory && (

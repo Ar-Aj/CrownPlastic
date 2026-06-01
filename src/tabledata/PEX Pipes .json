@@ -1,0 +1,31 @@
+``` json
+[
+    {
+        "category": "PN 12.5 & PN 20",
+        "table_name": "Dimensions of Power PEX Pipes",
+        "data": [
+            {
+                "Nominal Outside Diameter (mm)": "16",
+                "Wall Thickness (mm) - PN 12.5": "1.8",
+                "Wall Thickness (mm) - PN 20": "2.2"
+            },
+            {
+                "Nominal Outside Diameter (mm)": "20",
+                "Wall Thickness (mm) - PN 12.5": "1.9",
+                "Wall Thickness (mm) - PN 20": "2.8"
+            },
+            {
+                "Nominal Outside Diameter (mm)": "25",
+                "Wall Thickness (mm) - PN 12.5": "2.3",
+                "Wall Thickness (mm) - PN 20": "3.5"
+            },
+            {
+                "Nominal Outside Diameter (mm)": "32",
+                "Wall Thickness (mm) - PN 12.5": "2.9",
+                "Wall Thickness (mm) - PN 20": "4.4"
+            }
+        ]
+    }
+]
+
+```

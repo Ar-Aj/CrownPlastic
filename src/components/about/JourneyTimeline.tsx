@@ -64,7 +64,7 @@ export default function JourneyTimeline() {
             30 Years of Excellence
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From a single vision in 1995 to GCC&apos;s trusted plastic piping manufacturer
+            From a single vision in 1995 to GCC&apos;s trusted Pipes / Fittings Manufacturer &amp; Distributor
           </p>
         </motion.div>
 

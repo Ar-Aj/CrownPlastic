@@ -21,10 +21,10 @@
 // └──────────────┴──────────────┴──────────────┘
 // ═══════════════════════════════════════════════════════════════════════════════
 
-import { useRef, useState, useEffect, useCallback } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import {
   Award,
   Zap,
@@ -36,7 +36,6 @@ import {
   Clock,
   CheckCircle2,
   Play,
-  X,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -125,6 +124,7 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
               width={88}
               height={88}
               className="w-full h-full object-contain"
+              sizes="88px"
             />
           ) : FallbackIcon ? (
             <FallbackIcon className={`${iconSizes[size]} text-sky-300`} />
@@ -140,66 +140,57 @@ function CardMedia({ aspect, imageSrc, alt = '', FallbackIcon, size = 'md' }: Ca
   return null;
 }
 
-/** Portrait video thumbnail with locked 9:16 aspect - width-driven, no vh hacks */
-function VideoThumbnail({
+/**
+ * YouTubeShortEmbed — Click-to-load facade pattern.
+ * Shows a lightweight thumbnail + play button on initial render.
+ * The real YouTube iframe only loads after user interaction,
+ * eliminating ~1.5s of main-thread blocking per embed.
+ */
+import YouTubeFacade from '@/components/common/YouTubeFacade';
+
+function YouTubeShortEmbed({
   video,
-  onPlay,
   hideOverlayTitle = false,
 }: {
   video: MediaVideoItem;
-  onPlay: () => void;
-  /** Hide the overlay title (for desktop side-by-side layout) */
   hideOverlayTitle?: boolean;
 }) {
   return (
-    <button
-      onClick={onPlay}
-      className="group/video relative w-full h-full rounded-xl overflow-hidden bg-slate-700/40 hover:bg-slate-600/50 transition-colors border border-white/10"
-    >
-      {/* 9:16 aspect ratio - height derived from width, no fixed vh */}
+    <div className="group/video relative w-full h-full rounded-xl overflow-hidden bg-slate-900 border border-white/10 hover:border-sky-500/40 transition-colors">
+      {/* Aspect-ratio shell — height tracks width, no fixed px/vh */}
       <div className="aspect-[9/16] w-full h-full relative">
-        {/* Background tint */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-900/20 via-slate-800/40 to-slate-900/60" />
+        {/* Dark backdrop shown before facade loads */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 pointer-events-none" />
 
-        {video.thumbnailSrc ? (
-          <Image
-            src={video.thumbnailSrc}
-            alt={video.title}
-            fill
-            className="object-cover object-center opacity-80 group-hover/video:opacity-95 transition-opacity"
-            sizes="(max-width: 768px) 45vw, (max-width: 1024px) 25vw, 180px"
+        {video.videoSrc ? (
+          <YouTubeFacade
+            videoId=""
+            embedUrl={video.videoSrc}
+            title={video.title}
+            iframeParams="autoplay=1&rel=0&modestbranding=1&playsinline=1"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-800/30 via-slate-800/50 to-slate-900/70" />
+          /* Fallback placeholder when no videoSrc is set */
+          <>
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-800/30 via-slate-800/50 to-slate-900/70" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-9 h-9 md:w-11 md:h-11 bg-white/25 rounded-full flex items-center justify-center shadow-lg">
+                <Play className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" />
+              </div>
+            </div>
+          </>
         )}
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-
-        {/* Play button */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-9 h-9 md:w-11 md:h-11 bg-white/25 group-hover/video:bg-white/40 rounded-full flex items-center justify-center transition-all group-hover/video:scale-110 shadow-lg">
-            <Play className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" />
-          </div>
-        </div>
-
-        {/* Duration badge */}
-        {video.duration && (
-          <div className="absolute top-2 right-2 px-1.5 py-0.5 bg-black/70 text-white text-[10px] rounded font-medium">
-            {video.duration}
-          </div>
-        )}
-
-        {/* Title at bottom - hidden on desktop when using side-by-side layout */}
+        {/* Title caption below facade (not on top, so it doesn't block the player) */}
         {!hideOverlayTitle && (
-          <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
+          <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent pointer-events-none z-20">
             <p className="text-xs md:text-sm font-medium text-white leading-tight line-clamp-2 drop-shadow-md">
               {video.shortTitle || video.title}
             </p>
           </div>
         )}
       </div>
-    </button>
+    </div>
   );
 }
 
@@ -241,47 +232,6 @@ function useCountUp(targetValue: string, isInView: boolean, duration = 2000) {
 // ═══════════════════════════════════════════════════════════════════════════════
 // VIDEO MODAL
 // ═══════════════════════════════════════════════════════════════════════════════
-
-function VideoModal({ video, isOpen, onClose }: { video: MediaVideoItem | null; isOpen: boolean; onClose: () => void }) {
-  if (!isOpen || !video) return null;
-
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
-        onClick={onClose}
-      >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          className="relative w-full max-w-lg bg-slate-900 rounded-2xl overflow-hidden shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <button
-            onClick={onClose}
-            className="absolute top-3 right-3 z-10 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center transition-colors"
-          >
-            <X className="w-4 h-4 text-white" />
-          </button>
-          <div className="aspect-[9/16] max-h-[80vh] bg-slate-800 flex items-center justify-center">
-            {video.videoSrc ? (
-              <video src={video.videoSrc} controls autoPlay className="w-full h-full object-cover" />
-            ) : (
-              <div className="text-center text-slate-400">
-                <Play className="w-12 h-12 mx-auto mb-3 opacity-40" />
-                <p className="text-sm">Video coming soon</p>
-              </div>
-            )}
-          </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // DATA TILE COMPONENT (Primary/Secondary cards)
@@ -477,12 +427,11 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
 
 interface VideoPanelProps {
   videos: MediaVideoItem[];
-  onPlayVideo: (video: MediaVideoItem) => void;
   /** Inline mode: no wrapper card, just videos */
   inline?: boolean;
 }
 
-function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
+function VideoPanel({ videos, inline = false }: VideoPanelProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
@@ -499,36 +448,27 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
       >
         {videos.slice(0, 2).map((video) => (
           <div key={video.id} className="h-full">
-            {/* Desktop (lg+): Horizontal card - thumbnail left, text right */}
-            <div className="hidden lg:flex lg:flex-row lg:items-stretch lg:gap-4 h-full bg-white/[0.04] rounded-xl border border-white/[0.08] overflow-hidden group/card hover:bg-white/[0.06] transition-colors">
-              {/* Thumbnail - fixed width, 9:16 aspect */}
+            {/* Desktop (lg+): Horizontal card — YouTube iframe left, text right */}
+            <div className="hidden lg:flex lg:flex-row lg:items-stretch lg:gap-4 h-full bg-white/[0.04] rounded-xl border border-white/[0.08] overflow-hidden group/card hover:bg-white/[0.06] transition-colors relative z-10">
+              {/* iframe container — fixed width, 9:16 aspect */}
               <div className="flex-none w-[100px] xl:w-[120px] h-full">
-                <VideoThumbnail
-                  video={video}
-                  onPlay={() => onPlayVideo(video)}
-                  hideOverlayTitle
-                />
+                <YouTubeShortEmbed video={video} hideOverlayTitle />
               </div>
-              {/* Text content - fills remaining width, vertically centered */}
+              {/* Text content — fills remaining width, vertically centered */}
               <div className="flex-1 flex flex-col justify-center py-3 pr-3 min-w-0">
                 <h5 className="text-sm font-semibold text-white leading-snug mb-1 line-clamp-2">
                   {video.title}
                 </h5>
-                {video.duration && (
-                  <span className="text-xs text-slate-400">
-                    {video.duration}
-                  </span>
-                )}
+                <Link href="/media-blogs" className="inline-flex items-center gap-1 text-xs text-sky-400 hover:text-sky-300 transition-colors mt-1">
+                  Watch on YouTube →
+                </Link>
               </div>
             </div>
 
-            {/* Mobile/Tablet (< lg): Thumbnail only with overlay title */}
+            {/* Mobile/Tablet (< lg): iframe only with overlay title */}
             <div className="lg:hidden h-full">
               <div className="w-full max-w-[140px] mx-auto h-full">
-                <VideoThumbnail
-                  video={video}
-                  onPlay={() => onPlayVideo(video)}
-                />
+                <YouTubeShortEmbed video={video} />
               </div>
             </div>
           </div>
@@ -556,14 +496,12 @@ function VideoPanel({ videos, onPlayVideo, inline = false }: VideoPanelProps) {
           </Link>
         </div>
 
-        {/* Videos grid - 2 columns, aspect-driven height */}
+        {/* Videos grid — 2 columns, live YouTube iframes, aspect-driven height */}
         <div className="grid grid-cols-2 gap-2 md:gap-3">
           {videos.slice(0, 2).map((video) => (
-            <VideoThumbnail
-              key={video.id}
-              video={video}
-              onPlay={() => onPlayVideo(video)}
-            />
+            <div key={video.id} className="h-full">
+              <YouTubeShortEmbed video={video} />
+            </div>
           ))}
         </div>
       </div>
@@ -616,8 +554,6 @@ import { useT, TranslationPath } from '@/i18n';
 
 export default function CrownAdvantageSection() {
   const t = useT();
-  const [activeVideo, setActiveVideo] = useState<MediaVideoItem | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Helper to map config IDs to translation keys
   const getTranslationKey = (id: string) => {
@@ -664,11 +600,6 @@ export default function CrownAdvantageSection() {
   const technologyCard = secondaryItems.find(item => item.id === 'manufacturing') || secondaryItems[2];
   // Remaining secondary cards (Materials, Standards)
   const bottomSecondaryCards = secondaryItems.filter(item => item.id !== 'manufacturing');
-
-  const handlePlayVideo = useCallback((video: MediaVideoItem) => {
-    setActiveVideo(video);
-    setIsModalOpen(true);
-  }, []);
 
   const headerProps = {
     label: t('home.advantage.heading_label'),
@@ -733,7 +664,7 @@ export default function CrownAdvantageSection() {
 
           {/* Video panel - aspect-driven, no fixed vh */}
           {mediaItems.length > 0 && (
-            <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} />
+            <VideoPanel videos={mediaItems} />
           )}
 
           {/* Remaining secondary cards */}
@@ -772,7 +703,7 @@ export default function CrownAdvantageSection() {
 
             {/* Video panel - inline, aspect-driven */}
             {mediaItems.length > 0 && (
-              <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
+              <VideoPanel videos={mediaItems} inline />
             )}
           </div>
 
@@ -836,7 +767,7 @@ export default function CrownAdvantageSection() {
                   </Link>
                 </div>
                 <div className="flex-1 min-h-0">
-                  <VideoPanel videos={mediaItems} onPlayVideo={handlePlayVideo} inline />
+                  <VideoPanel videos={mediaItems} inline />
                 </div>
               </div>
             )}
@@ -853,8 +784,6 @@ export default function CrownAdvantageSection() {
         </div>
       </div>
 
-      {/* Video Modal */}
-      <VideoModal video={activeVideo} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

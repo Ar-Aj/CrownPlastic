@@ -13,21 +13,22 @@ import { useT, TranslationPath } from '@/i18n';
 // Palette: Blue / White / Black only
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// Map pillar IDs to dictionary keys (kebab-case to snake_case)
+const PILLAR_ID_TO_KEY: Record<string, string> = {
+  'virgin-material': 'virgin_material',
+  'inhouse-qc': 'inhouse_qc',
+  'gulf-climate': 'gulf_climate',
+  'independent-lab': 'independent_lab',
+  'chemical-resistance': 'chemical_resistance',
+  'european-tech': 'european_tech',
+};
+
 export default function InnovationLabSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
   const t = useT();
 
-  // Map pillar IDs to dictionary keys (kebab-case to snake_case)
-  const PILLAR_ID_TO_KEY: Record<string, string> = {
-    'virgin-material': 'virgin_material',
-    'inhouse-qc': 'inhouse_qc',
-    'gulf-climate': 'gulf_climate',
-    'independent-lab': 'independent_lab',
-    'chemical-resistance': 'chemical_resistance',
-    'european-tech': 'european_tech',
-  };
 
   // Translate pillar titles/descriptions/specs
   const translatedPillars = useMemo(() =>

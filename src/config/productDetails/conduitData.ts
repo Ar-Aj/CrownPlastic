@@ -1,5 +1,5 @@
 /**
- * UPVC Conduit Pipes Product Detail Configurations
+ * PVC Conduit Pipes Product Detail Configurations
  * 
  * Source: upvcConduitData JSON
  * Two series: Schedule 40 (SCH 40) and Schedule 80 (SCH 80)
@@ -34,7 +34,7 @@ const sharedApplications = [
 // ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// PIPE TABLES - Extracted from src/UPVC CONDUIT PIPE.txt JSON
+// PIPE TABLES - Extracted from src/PVC CONDUIT PIPE.txt JSON
 // Part No columns excluded per spec
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -148,14 +148,14 @@ const sch80PipesTables: PipeTable[] = [
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// UPVC CONDUIT PIPES – SCHEDULE 40 (SCH 40)
+// PVC CONDUIT PIPES – SCHEDULE 40 (SCH 40)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const upvcConduitSch40: ProductDetailConfig = {
-  slug: 'upvc-conduit-sch-40',
+  slug: 'pvc-conduit-sch-40',
   categorySlug: 'pvc-conduit',
 
-  title: 'UPVC Conduit Pipes – SCH 40',
+  title: 'PVC Conduit Pipes – SCH 40',
   titleAr: 'أنابيب قنوات UPVC – SCH 40',
 
   shortDescription: 'Schedule 40 PVC conduit pipes for US market applications. Designed for electrical conduit installations with standard wall thickness, available in trade sizes from 1/2" to 6".',
@@ -206,7 +206,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Pipes Section (populated from UPVC CONDUIT PIPE.txt JSON)
+  // Pipes Section (populated from PVC CONDUIT PIPE.txt JSON)
   // 4 tables: Schedule 40, Heavy Grade, Medium Grade, Light Grade
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch40PipesTables,
@@ -217,7 +217,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
   fittings: [],
 
   downloads: [
-    { label: 'UPVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
 
   dosDonts: {
@@ -255,14 +255,14 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// UPVC CONDUIT PIPES – SCHEDULE 80 (SCH 80)
+// PVC CONDUIT PIPES – SCHEDULE 80 (SCH 80)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export const upvcConduitSch80: ProductDetailConfig = {
-  slug: 'upvc-conduit-sch-80',
+  slug: 'pvc-conduit-sch-80',
   categorySlug: 'pvc-conduit',
 
-  title: 'UPVC Conduit Pipes – SCH 80',
+  title: 'PVC Conduit Pipes – SCH 80',
   titleAr: 'أنابيب قنوات UPVC – SCH 80',
 
   shortDescription: 'Schedule 80 heavy-duty PVC conduit pipes for US market applications. Features thicker walls compared to SCH 40 for demanding installations requiring extra protection.',
@@ -323,7 +323,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Pipes Section (populated from UPVC CONDUIT PIPE.txt JSON)
+  // Pipes Section (populated from PVC CONDUIT PIPE.txt JSON)
   // 1 table: Schedule 80
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch80PipesTables,
@@ -334,7 +334,7 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
   fittings: [],
 
   downloads: [
-    { label: 'UPVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
 
   dosDonts: {

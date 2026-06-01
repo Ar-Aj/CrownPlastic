@@ -1,7 +1,6 @@
 // Question & Answer Schema Component for Crown Plastic Pipes - Phase 3 AEO
 // Implements Q&A JSON-LD for product pages addressing common buyer questions
 
-import Script from 'next/script';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -62,7 +61,7 @@ export function ProductQASchema({
   };
 
   return (
-    <Script
+    <script
       id={`product-qa-schema-${productName.toLowerCase().replace(/\s+/g, '-').substring(0, 30)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(qaSchema) }}
@@ -78,7 +77,7 @@ export function ProductQASchema({
 export const upvcPressurePipeQA: ProductQuestion[] = [
   {
     question: 'What certifications does this UPVC pipe have?',
-    answer: 'Our UPVC pressure pipes are certified to BS EN 1452-2:2009, DIN 8062, GSO EN 805, ISO 1452, and ASTM D1785 standards. They also carry SASO TR-BM-5 certification for Saudi Arabia market and ISO 9001:2015 quality management certification.',
+    answer: 'Our UPVC pressure pipes are certified to BS EN 1452-2:2009, DIN 8062, BS EN 805, ISO 1452, and ASTM D1785 standards. They also carry ISO 45001:2018 occupational health & safety certification and ISO 9001:2015 quality management certification.',
     dateCreated: '2024-01-15',
     upvoteCount: 89,
   },
@@ -90,7 +89,7 @@ export const upvcPressurePipeQA: ProductQuestion[] = [
   },
   {
     question: 'Is this UPVC pipe suitable for drinking water?',
-    answer: 'Yes, our UPVC pressure pipes are fully compliant with potable water standards. They meet BS EN 1452 requirements for drinking water applications, NSF/ANSI 61 certification, and do not contain lead or harmful plasticizers. Safe for municipal and residential water supply.',
+    answer: 'Yes, our UPVC pressure pipes are fully compliant with potable water standards. They meet BS EN 1452 requirements for drinking water applications and do not contain lead or harmful plasticizers. Manufactured with 100% virgin PVC compound and calcium-zinc stabilizers. Safe for municipal and residential water supply.',
     dateCreated: '2024-01-17',
     upvoteCount: 95,
   },

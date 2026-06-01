@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import Image from 'next/image';
 import { brand } from '@/config/brand';
 import { useHeroVideo, heroScenes } from './useHeroVideo';
@@ -29,23 +29,22 @@ interface HeroSectionProps {
 }
 
 // Stat counter component with count-up animation
-function StatCounter({ value, label, isInView, index }: { 
-  value: string; 
-  label: string; 
+function StatCounter({ value, label, isInView, index }: {
+  value: string;
+  label: string;
   isInView: boolean;
   index: number;
 }) {
   const { displayValue } = useCountUp(value, 1200, isInView);
   const prefersReducedMotion = usePrefersReducedMotion();
-  
+
   return (
-    <div 
-      className={`${
-        prefersReducedMotion ? '' : 'opacity-0 animate-slide-up'
-      }`}
-      style={prefersReducedMotion ? {} : { 
-        animationDelay: `${0.7 + index * 0.08}s`, 
-        animationFillMode: 'forwards' 
+    <div
+      className={`${prefersReducedMotion ? '' : 'opacity-0 animate-slide-up'
+        }`}
+      style={prefersReducedMotion ? {} : {
+        animationDelay: `${0.7 + index * 0.08}s`,
+        animationFillMode: 'forwards'
       }}
     >
       <p className="text-3xl md:text-4xl font-bold text-accent tabular-nums">
@@ -65,7 +64,7 @@ export default function HeroSection({
   secondaryCtaLink = '/contact-us',
 }: HeroSectionProps) {
   const t = useT();
-  
+
   // Use translations as defaults
   const displayTitle = title ?? t('home.hero_title');
   const displaySubtitle = subtitle ?? t('home.hero_subtitle');
@@ -114,14 +113,14 @@ export default function HeroSection({
   }, [activeSceneId]);
 
   // Animation classes based on motion preference
-  const getAnimClass = () => 
-    prefersReducedMotion 
-      ? '' 
+  const getAnimClass = () =>
+    prefersReducedMotion
+      ? ''
       : `opacity-0 animate-slide-up`;
 
-  const getAnimStyle = (delay: number) => 
-    prefersReducedMotion 
-      ? {} 
+  const getAnimStyle = (delay: number) =>
+    prefersReducedMotion
+      ? {}
       : { animationDelay: `${delay}s`, animationFillMode: 'forwards' as const };
 
   return (
@@ -138,18 +137,16 @@ export default function HeroSection({
           priority
           sizes="100vw"
           quality={85}
-          className={`object-cover transition-opacity duration-700 ${
-            isVideoLoaded ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`object-cover transition-opacity duration-700 ${isVideoLoaded ? 'opacity-0' : 'opacity-100'
+            }`}
         />
-        
+
         {/* Video Background - Lazy loaded after poster renders */}
         {isInView && (
           <video
             ref={videoRef}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              isVideoLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             autoPlay
             muted
             loop
@@ -162,13 +159,13 @@ export default function HeroSection({
         )}
 
         {/* Parallax gradient overlay - moves slightly on scroll */}
-        <div 
+        <div
           className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary-dark/85 to-primary-dark/70 transition-transform duration-100 ease-out"
           style={{
             transform: prefersReducedMotion ? 'none' : `translateY(${parallaxOffset}px)`,
           }}
         />
-        
+
         {/* Additional bottom gradient for depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/50 via-transparent to-transparent" />
       </div>
@@ -177,7 +174,7 @@ export default function HeroSection({
       <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 lg:py-32 flex flex-col justify-center min-h-[90vh] md:min-h-screen">
         <div className="max-w-4xl">
           {/* Trust Badge - Float + Glow animation */}
-          <div 
+          <div
             className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 
               ${prefersReducedMotion ? '' : 'animate-float animate-glow-pulse opacity-0 animate-slide-up'}`}
             style={getAnimStyle(0.1)}
@@ -187,7 +184,7 @@ export default function HeroSection({
           </div>
 
           {/* Main heading - Staggered fade-up */}
-          <h1 
+          <h1
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white ${getAnimClass()}`}
             style={getAnimStyle(0.15)}
           >
@@ -195,7 +192,7 @@ export default function HeroSection({
           </h1>
 
           {/* Subtitle - Staggered fade-up (40-80ms after H1) */}
-          <p 
+          <p
             className={`text-lg md:text-xl text-white/90 mb-8 max-w-2xl ${getAnimClass()}`}
             style={getAnimStyle(0.22)}
           >
@@ -203,7 +200,7 @@ export default function HeroSection({
           </p>
 
           {/* CTAs - with enhanced hover (150ms ease-out) */}
-          <div 
+          <div
             className={`flex flex-wrap items-center gap-4 mb-8 ${getAnimClass()}`}
             style={getAnimStyle(0.30)}
           >
@@ -215,10 +212,10 @@ export default function HeroSection({
                 active:scale-[0.98] rtl:flex-row-reverse"
             >
               {displayCtaText}
-              <svg 
-                className="w-5 h-5 transition-transform duration-150 group-hover:translate-x-0.5 rtl:rotate-180" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-5 h-5 transition-transform duration-150 group-hover:translate-x-0.5 rtl:rotate-180"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -236,7 +233,7 @@ export default function HeroSection({
           </div>
 
           {/* Scene Switcher Pills - with sliding indicator */}
-          <div 
+          <div
             className={`mb-8 ${getAnimClass()}`}
             style={getAnimStyle(0.38)}
           >
@@ -244,7 +241,7 @@ export default function HeroSection({
               <span className="text-white/60 text-sm mr-2 hidden sm:inline">{t('home.hero_view')}</span>
               <div ref={pillContainerRef} className="relative flex gap-2">
                 {/* Sliding indicator */}
-                <div 
+                <div
                   className="absolute top-0 h-full bg-accent rounded-full transition-all duration-300 ease-out shadow-lg shadow-accent/25"
                   style={{
                     left: indicatorStyle.left,
@@ -257,11 +254,10 @@ export default function HeroSection({
                     key={scene.id}
                     data-scene={scene.id}
                     onClick={() => switchScene(scene.id)}
-                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                      activeSceneId === scene.id
+                    className={`relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeSceneId === scene.id
                         ? 'text-white'
                         : 'text-white/70 hover:text-white hover:bg-white/10 backdrop-blur-sm'
-                    }`}
+                      }`}
                   >
                     {scene.label}
                   </button>

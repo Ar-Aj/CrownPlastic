@@ -10,14 +10,14 @@
 // - media-blogs/page.tsx: Featured videos data
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export type IconKey = 
-  | 'quality' 
-  | 'innovation' 
-  | 'delivery' 
-  | 'support' 
-  | 'certifications' 
-  | 'range' 
-  | 'exports' 
+export type IconKey =
+  | 'quality'
+  | 'innovation'
+  | 'delivery'
+  | 'support'
+  | 'certifications'
+  | 'range'
+  | 'exports'
   | 'manufacturing'
   | 'experience';
 
@@ -90,7 +90,7 @@ export const crownAdvantageConfig: CrownAdvantageConfig = {
   headingTitle: 'The Crown',
   headingAccent: 'Advantage',
   subtitle: 'ISO-certified manufacturing excellence since 1995, serving GCC infrastructure with 5,000+ piping solutions.',
-  
+
   // ─────────────────────────────────────────────────────────────────────────
   // FEATURED MEDIA - 2 videos in 9:16 format
   // Source: media-blogs/page.tsx VIDEOS_DATA
@@ -99,20 +99,20 @@ export const crownAdvantageConfig: CrownAdvantageConfig = {
   mediaItems: [
     {
       id: 'video-choose-us',
-      title: '5 Reasons to Choose Crown Plastic Pipes',
-      shortTitle: '5 Reasons',
+      title: 'Premium UPVC Conduit Pipes',
+      shortTitle: 'UPVC Conduit',
       thumbnailSrc: '',
-      videoSrc: '',
-      duration: '1:30',
+      videoSrc: 'https://www.youtube.com/embed/i-zVQ22IvxQ',
+      duration: '0:59',
       imageAspect: 'portrait',
     },
     {
       id: 'video-factory-story',
-      title: 'Inside Crown: Our Sharjah Factory Story',
-      shortTitle: 'Factory Tour',
+      title: 'Reliable UPVC Drainage Pipes',
+      shortTitle: 'UPVC Drainage',
       thumbnailSrc: '',
-      videoSrc: '',
-      duration: '2:15',
+      videoSrc: 'https://www.youtube.com/embed/xR8xmTjNCeU',
+      duration: '0:59',
       imageAspect: 'portrait',
     },
   ],
@@ -187,9 +187,9 @@ export const crownAdvantageConfig: CrownAdvantageConfig = {
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: 'quality',
-      title: '100% Virgin Materials',
+      title: 'Top-tier Raw Materials',
       shortTitle: 'Materials',
-      description: 'Pipes and fittings manufactured from 100% virgin PVC and polymer compounds for clean surfaces, stable dimensions and reliable long-term service.',
+      description: 'Pipes and fittings manufactured from top-tier raw material PVC and polymer compounds for clean surfaces, stable dimensions and reliable long-term service.',
       iconKey: 'quality',
       sourceRef: 'i18n/en.ts: sustainability_extended.pillar_virgin_desc; about.types.ts: innovationPillars virgin-material',
       sourceTag: 'Catalogue',

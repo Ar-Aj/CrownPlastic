@@ -3,63 +3,12 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 // WHATSAPP FLOATING BUTTON COMPONENT
 // Sticky WhatsApp CTA with pulse animation and smart visibility
+// Rewritten without Framer Motion — uses pure CSS transitions for performance.
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { X, MessageCircle } from 'lucide-react';
 import { brand } from '@/config/brand';
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// ANIMATION VARIANTS
-// ═══════════════════════════════════════════════════════════════════════════════
-
-const buttonVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.8, 
-    y: 20 
-  },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
-    y: 0,
-    transition: { 
-      type: 'spring', 
-      stiffness: 400, 
-      damping: 25 
-    } 
-  },
-  exit: { 
-    opacity: 0, 
-    scale: 0.8, 
-    y: 20,
-    transition: { duration: 0.2 } 
-  },
-};
-
-const tooltipVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    x: 10,
-    scale: 0.95 
-  },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    scale: 1,
-    transition: { 
-      duration: 0.2,
-      delay: 0.1 
-    } 
-  },
-  exit: { 
-    opacity: 0, 
-    x: 10,
-    scale: 0.95,
-    transition: { duration: 0.15 } 
-  },
-};
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // WHATSAPP ICON SVG
@@ -167,89 +116,70 @@ export default function WhatsAppButton({
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <div 
-          className={`fixed ${positionClasses[position]} z-50 flex items-center gap-2`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+    <div
+      className={`fixed ${positionClasses[position]} z-50 flex items-center gap-2 transition-all duration-300 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-5 scale-90 pointer-events-none'
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Tooltip */}
+      {showTooltip && (
+        <div
+          className={`absolute ${tooltipPositionClasses[position]} whitespace-nowrap transition-all duration-200 ${
+            isHovered ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-2 scale-95 pointer-events-none'
+          }`}
         >
-          {/* Tooltip */}
-          {showTooltip && (
-            <AnimatePresence>
-              {isHovered && (
-                <motion.div
-                  variants={tooltipVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className={`absolute ${tooltipPositionClasses[position]} whitespace-nowrap`}
-                >
-                  <div className="bg-slate-900 text-white text-sm font-medium px-4 py-2 rounded-xl shadow-lg border border-white/10">
-                    <div className="flex items-center gap-2">
-                      <MessageCircle className="w-4 h-4 text-emerald-400" />
-                      {tooltipText}
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          )}
-
-          {/* Main Button */}
-          <motion.a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative group"
-            aria-label="Contact us on WhatsApp"
-          >
-            {/* Pulse animation rings */}
-            {showPulse && (
-              <>
-                <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
-                <span className="absolute inset-0 rounded-full bg-[#25D366] animate-pulse opacity-20" style={{ animationDelay: '0.5s' }} />
-              </>
-            )}
-            
-            {/* Button */}
-            <div className="relative w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300">
-              <WhatsAppIcon className="w-7 h-7 md:w-8 md:h-8 text-white" />
+          <div className="bg-slate-900 text-white text-sm font-medium px-4 py-2 rounded-xl shadow-lg border border-white/10">
+            <div className="flex items-center gap-2">
+              <MessageCircle className="w-4 h-4 text-emerald-400" />
+              {tooltipText}
             </div>
-            
-            {/* Online indicator */}
-            <span className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white flex items-center justify-center">
-              <span className="w-2 h-2 bg-white rounded-full" />
-            </span>
-          </motion.a>
-
-          {/* Dismiss button (optional, hidden by default) */}
-          <AnimatePresence>
-            {isHovered && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsDismissed(true);
-                }}
-                className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white/70 hover:text-white transition-colors shadow-lg"
-                aria-label="Dismiss WhatsApp button"
-              >
-                <X className="w-3 h-3" />
-              </motion.button>
-            )}
-          </AnimatePresence>
+          </div>
         </div>
       )}
-    </AnimatePresence>
+
+      {/* Main Button */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative group"
+        aria-label="Contact us on WhatsApp"
+      >
+        {/* Pulse animation rings */}
+        {showPulse && (
+          <>
+            <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
+            <span className="absolute inset-0 rounded-full bg-[#25D366] animate-pulse opacity-20" style={{ animationDelay: '0.5s' }} />
+          </>
+        )}
+        
+        {/* Button */}
+        <div className="relative w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300 hover:scale-110 active:scale-95">
+          <WhatsAppIcon className="w-7 h-7 md:w-8 md:h-8 text-white" />
+        </div>
+        
+        {/* Online indicator */}
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white flex items-center justify-center">
+          <span className="w-2 h-2 bg-white rounded-full" />
+        </span>
+      </a>
+
+      {/* Dismiss button (optional, hidden by default) */}
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          setIsDismissed(true);
+        }}
+        className={`absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center text-white/70 hover:text-white transition-all duration-200 shadow-lg ${
+          isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'
+        }`}
+        aria-label="Dismiss WhatsApp button"
+      >
+        <X className="w-3 h-3" />
+      </button>
+    </div>
   );
 }
 
@@ -272,16 +202,14 @@ export function WhatsAppInlineButton({
   const whatsappUrl = `https://wa.me/${phone.replace('+', '')}?text=${encodeURIComponent(message)}`;
 
   return (
-    <motion.a
+    <a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={`inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-md hover:shadow-lg ${className}`}
+      className={`inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] ${className}`}
     >
       <WhatsAppIcon className="w-5 h-5" />
       {text}
-    </motion.a>
+    </a>
   );
 }

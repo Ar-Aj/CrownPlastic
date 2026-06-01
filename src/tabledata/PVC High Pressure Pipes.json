@@ -1,0 +1,1230 @@
+[
+    {
+        "standard": "ISO 4422-2:1996 Superseded by ISO 1452-2/BS EN 1452:2009",
+        "tables": [
+            {
+                "table_description": "Metric size Pressure Pipes",
+                "rows": [
+                    {
+                        "Nominal Outside Diameter": "20 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": null,
+                        "Nominal Wall Thickness (Minimum) - PN 10": null,
+                        "Nominal Wall Thickness (Minimum) - PN 16": "1.5"
+                    },
+                    {
+                        "Nominal Outside Diameter": "25 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": null,
+                        "Nominal Wall Thickness (Minimum) - PN 10": null,
+                        "Nominal Wall Thickness (Minimum) - PN 16": "1.9"
+                    },
+                    {
+                        "Nominal Outside Diameter": "32 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": null,
+                        "Nominal Wall Thickness (Minimum) - PN 10": "1.6",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "2.4"
+                    },
+                    {
+                        "Nominal Outside Diameter": "40 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "1.5",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "1.9",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "3.0"
+                    },
+                    {
+                        "Nominal Outside Diameter": "50 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "1.6",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "2.4",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "3.7"
+                    },
+                    {
+                        "Nominal Outside Diameter": "63 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "2.0",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "3.0",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "4.7"
+                    },
+                    {
+                        "Nominal Outside Diameter": "75 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "2.3",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "3.6",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "5.6"
+                    },
+                    {
+                        "Nominal Outside Diameter": "90 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "2.8",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "4.3",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "6.7"
+                    },
+                    {
+                        "Nominal Outside Diameter": "110 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "2.7",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "4.2",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "6.6"
+                    },
+                    {
+                        "Nominal Outside Diameter": "125 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "3.1",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "4.8",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "7.4"
+                    },
+                    {
+                        "Nominal Outside Diameter": "140 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "3.5",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "5.4",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "8.3"
+                    },
+                    {
+                        "Nominal Outside Diameter": "160 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "4.0",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "6.2",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "9.5"
+                    },
+                    {
+                        "Nominal Outside Diameter": "180 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "4.4",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "6.9",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "10.7"
+                    },
+                    {
+                        "Nominal Outside Diameter": "200 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "4.9",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "7.7",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "11.9"
+                    },
+                    {
+                        "Nominal Outside Diameter": "225 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "5.5",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "8.6",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "13.4"
+                    },
+                    {
+                        "Nominal Outside Diameter": "250 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "6.2",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "9.6",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "14.8"
+                    },
+                    {
+                        "Nominal Outside Diameter": "280 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "6.9",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "10.7",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "16.6"
+                    },
+                    {
+                        "Nominal Outside Diameter": "315 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "7.7",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "12.1",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "18.7"
+                    },
+                    {
+                        "Nominal Outside Diameter": "355 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "8.7",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "13.6",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "21.1"
+                    },
+                    {
+                        "Nominal Outside Diameter": "400 mm",
+                        "Nominal Wall Thickness (Minimum) - PN 6": "9.8",
+                        "Nominal Wall Thickness (Minimum) - PN 10": "15.3",
+                        "Nominal Wall Thickness (Minimum) - PN 16": "23.7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "BS EN ISO 1452-2: 2009",
+        "tables": [
+            {
+                "table_description": "Inch size Pressure Pipes",
+                "rows": [
+                    {
+                        "Size": "1/2\"",
+                        "Mean Outside Dia. - Min": "21.2",
+                        "Mean Outside Dia. - Max": "21.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "1.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "3/4\"",
+                        "Mean Outside Dia. - Min": "26.6",
+                        "Mean Outside Dia. - Max": "26.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "1.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1\"",
+                        "Mean Outside Dia. - Min": "33.4",
+                        "Mean Outside Dia. - Max": "33.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "2.2",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1 1/4\"",
+                        "Mean Outside Dia. - Min": "42.1",
+                        "Mean Outside Dia. - Max": "42.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "2.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "3.3",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "2.2",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "2.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1 1/2\"",
+                        "Mean Outside Dia. - Min": "48.1",
+                        "Mean Outside Dia. - Max": "48.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "3.1",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "3.7",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "2.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "3.0",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "2\"",
+                        "Mean Outside Dia. - Min": "60.2",
+                        "Mean Outside Dia. - Max": "60.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "3.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "4.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "3.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "3.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "2.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "3.0"
+                    },
+                    {
+                        "Size": "3\"",
+                        "Mean Outside Dia. - Min": "88.7",
+                        "Mean Outside Dia. - Max": "89.1",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "5.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "6.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "4.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "5.3",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "3.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "4.1"
+                    },
+                    {
+                        "Size": "4\"",
+                        "Mean Outside Dia. - Min": "114.1",
+                        "Mean Outside Dia. - Max": "114.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "7.3",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "8.4",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "6.0",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "6.9",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "4.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "5.2"
+                    },
+                    {
+                        "Size": "6\"",
+                        "Mean Outside Dia. - Min": "168.0",
+                        "Mean Outside Dia. - Max": "168.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "10.8",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "12.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "8.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "10.2",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "6.6",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "7.6"
+                    },
+                    {
+                        "Size": "8\"",
+                        "Mean Outside Dia. - Min": "218.8",
+                        "Mean Outside Dia. - Max": "219.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "12.6",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "14.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "10.3",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "11.9",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "7.8",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "9.0"
+                    },
+                    {
+                        "Size": "10\"",
+                        "Mean Outside Dia. - Min": "272.6",
+                        "Mean Outside Dia. - Max": "273.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "15.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "18.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "12.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "14.8",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "9.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "11.2"
+                    },
+                    {
+                        "Size": "12\"",
+                        "Mean Outside Dia. - Min": "323.4",
+                        "Mean Outside Dia. - Max": "324.3",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "18.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "21.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "15.2",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "17.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "11.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "13.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "BS 3505:1986 For Cold Potable Water",
+        "tables": [
+            {
+                "table_description": "Inch size Pressure Pipes",
+                "rows": [
+                    {
+                        "Size": "1/2\"",
+                        "Mean Outside Dia. - Min": "21.2",
+                        "Mean Outside Dia. - Max": "21.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "1.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "3/4\"",
+                        "Mean Outside Dia. - Min": "26.6",
+                        "Mean Outside Dia. - Max": "26.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "1.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1\"",
+                        "Mean Outside Dia. - Min": "33.4",
+                        "Mean Outside Dia. - Max": "33.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "2.2",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "2.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": null,
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1 1/4\"",
+                        "Mean Outside Dia. - Min": "42.1",
+                        "Mean Outside Dia. - Max": "42.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "2.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "3.3",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "2.2",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "2.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "1 1/2\"",
+                        "Mean Outside Dia. - Min": "48.1",
+                        "Mean Outside Dia. - Max": "48.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "3.1",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "3.7",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "2.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "3.0",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": null,
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": null
+                    },
+                    {
+                        "Size": "2\"",
+                        "Mean Outside Dia. - Min": "60.2",
+                        "Mean Outside Dia. - Max": "60.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "3.9",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "4.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "3.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "3.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "2.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "3.0"
+                    },
+                    {
+                        "Size": "3\"",
+                        "Mean Outside Dia. - Min": "88.7",
+                        "Mean Outside Dia. - Max": "89.1",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "5.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "6.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "4.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "5.3",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "3.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "4.1"
+                    },
+                    {
+                        "Size": "4\"",
+                        "Mean Outside Dia. - Min": "114.1",
+                        "Mean Outside Dia. - Max": "114.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "7.3",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "8.4",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "6.0",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "6.9",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "4.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "5.2"
+                    },
+                    {
+                        "Size": "6\"",
+                        "Mean Outside Dia. - Min": "168.0",
+                        "Mean Outside Dia. - Max": "168.5",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "10.8",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "12.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "8.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "10.2",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "6.6",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "7.6"
+                    },
+                    {
+                        "Size": "8\"",
+                        "Mean Outside Dia. - Min": "218.8",
+                        "Mean Outside Dia. - Max": "219.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "12.6",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "14.5",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "10.3",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "11.9",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "7.8",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "9.0"
+                    },
+                    {
+                        "Size": "10\"",
+                        "Mean Outside Dia. - Min": "272.6",
+                        "Mean Outside Dia. - Max": "273.4",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "15.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "18.1",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "12.8",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "14.8",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "9.7",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "11.2"
+                    },
+                    {
+                        "Size": "12\"",
+                        "Mean Outside Dia. - Min": "323.4",
+                        "Mean Outside Dia. - Max": "324.3",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Min": "18.7",
+                        "Wall Thickness (mm) - PN-15(CLASS-E) - Max": "21.6",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Min": "15.2",
+                        "Wall Thickness (mm) - PN-12(CLASS-D) - Max": "17.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Min": "11.5",
+                        "Wall Thickness (mm) - PN-9(CLASS-C) - Max": "13.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "DIN 8061/62: 2009 Equivalent to SASO 14-15 : 1998",
+        "tables": [
+            {
+                "table_description": "Metric size Pressure Pipes",
+                "rows": [
+                    {
+                        "Size": "20 mm",
+                        "Mean Outside Dia. - Min": "20.0",
+                        "Mean Outside Dia. - Max": "20.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "1.5",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "1.9",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "25 mm",
+                        "Mean Outside Dia. - Min": "25.0",
+                        "Mean Outside Dia. - Max": "25.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "1.9",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "2.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "1.5",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "1.8",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "32 mm",
+                        "Mean Outside Dia. - Min": "32.0",
+                        "Mean Outside Dia. - Max": "32.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "2.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "2.9",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "1.8",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "1.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "40 mm",
+                        "Mean Outside Dia. - Min": "40.0",
+                        "Mean Outside Dia. - Max": "40.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "3.0",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "3.5",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "1.9",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "2.3",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "1.8",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "2.1",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "50 mm",
+                        "Mean Outside Dia. - Min": "50.0",
+                        "Mean Outside Dia. - Max": "50.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "3.7",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "4.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "2.4",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "2.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "1.8",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "2.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "63 mm",
+                        "Mean Outside Dia. - Min": "63.0",
+                        "Mean Outside Dia. - Max": "63.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "4.7",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "5.4",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "3.0",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "3.4",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "1.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "2.3",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": null
+                    },
+                    {
+                        "Size": "75 mm",
+                        "Mean Outside Dia. - Min": "75.0",
+                        "Mean Outside Dia. - Max": "75.3",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "5.6",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "6.4",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "3.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "4.2",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "2.2",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "2.6",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "1.8",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "2.2"
+                    },
+                    {
+                        "Size": "90 mm",
+                        "Mean Outside Dia. - Min": "90.0",
+                        "Mean Outside Dia. - Max": "90.3",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "6.7",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "7.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "4.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "5.1",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "2.7",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "3.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "1.8",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "2.3"
+                    },
+                    {
+                        "Size": "110 mm",
+                        "Mean Outside Dia. - Min": "110.0",
+                        "Mean Outside Dia. - Max": "110.3",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "8.2",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "9.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "5.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "5.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "3.2",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "3.8",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "2.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "2.6"
+                    },
+                    {
+                        "Size": "125 mm",
+                        "Mean Outside Dia. - Min": "125.0",
+                        "Mean Outside Dia. - Max": "125.3",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "9.3",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "10.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "6.0",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "6.8",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "3.7",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "4.0",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "2.5",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "2.9"
+                    },
+                    {
+                        "Size": "140 mm",
+                        "Mean Outside Dia. - Min": "140.0",
+                        "Mean Outside Dia. - Max": "140.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "10.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "11.8",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "6.7",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "7.5",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "4.1",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "4.5",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "2.8",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "3.3"
+                    },
+                    {
+                        "Size": "160 mm",
+                        "Mean Outside Dia. - Min": "160.0",
+                        "Mean Outside Dia. - Max": "160.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "11.9",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "11.3",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "7.7",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "8.5",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "4.7",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "5.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "3.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "3.8"
+                    },
+                    {
+                        "Size": "180 mm",
+                        "Mean Outside Dia. - Min": "180.0",
+                        "Mean Outside Dia. - Max": "180.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "13.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "15.0",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "8.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "9.4",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "5.3",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "5.7",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "3.6",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "4.2"
+                    },
+                    {
+                        "Size": "200 mm",
+                        "Mean Outside Dia. - Min": "200.0",
+                        "Mean Outside Dia. - Max": "200.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "14.9",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "16.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "9.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "10.7",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "5.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "6.7",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "4.0",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "4.4"
+                    },
+                    {
+                        "Size": "225 mm",
+                        "Mean Outside Dia. - Min": "225.0",
+                        "Mean Outside Dia. - Max": "225.5",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "16.7",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "18.6",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "10.8",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "11.6",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "6.6",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "7.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "4.5",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "4.9"
+                    },
+                    {
+                        "Size": "250 mm",
+                        "Mean Outside Dia. - Min": "250.0",
+                        "Mean Outside Dia. - Max": "250.5",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "18.6",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "20.7",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "11.9",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "13.3",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "7.3",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "8.0",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "4.9",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "5.7"
+                    },
+                    {
+                        "Size": "280 mm",
+                        "Mean Outside Dia. - Min": "280.0",
+                        "Mean Outside Dia. - Max": "280.5",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "20.8",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "23.1",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "13.4",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "14.9",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "8.2",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "9.0",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "5.5",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "6.3"
+                    },
+                    {
+                        "Size": "315 mm",
+                        "Mean Outside Dia. - Min": "315.0",
+                        "Mean Outside Dia. - Max": "315.6",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Min": "23.4",
+                        "Mean Wall Thickness (mm) - PN-16(CLASS-16) - Max": "26.0",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Min": "15.0",
+                        "Mean Wall Thickness (mm) - PN-10(CLASS-10) - Max": "16.7",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Min": "9.2",
+                        "Mean Wall Thickness (mm) - PN-6(CLASS-6) - Max": "10.4",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Min": "6.2",
+                        "Mean Wall Thickness (mm) - PN-4(CLASS-4) - Max": "7.1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "BS 3506:1969 For Industrial Uses",
+        "tables": [
+            {
+                "table_description": "Inch size Pressure Pipes",
+                "rows": [
+                    {
+                        "Nominal Size": "1/2\"",
+                        "Mean Outside Dia. - Min": "21.2",
+                        "Mean Outside Dia. - Max": "21.5",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "1.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "2.1",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": null,
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": null
+                    },
+                    {
+                        "Nominal Size": "3/4\"",
+                        "Mean Outside Dia. - Min": "26.6",
+                        "Mean Outside Dia. - Max": "26.9",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "1.9",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "2.5",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": null,
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": null
+                    },
+                    {
+                        "Nominal Size": "1\"",
+                        "Mean Outside Dia. - Min": "33.4",
+                        "Mean Outside Dia. - Max": "33.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "2.2",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "2.8",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": null,
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": null
+                    },
+                    {
+                        "Nominal Size": "1 1/4\"",
+                        "Mean Outside Dia. - Min": "42.1",
+                        "Mean Outside Dia. - Max": "42.4",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "2.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "3.3",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "2.2",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "2.7",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "1.8",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "2.2"
+                    },
+                    {
+                        "Nominal Size": "1 1/2\"",
+                        "Mean Outside Dia. - Min": "48.1",
+                        "Mean Outside Dia. - Max": "48.4",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "3.1",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "3.7",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "2.5",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "3.0",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": null,
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "1.8",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "2.2"
+                    },
+                    {
+                        "Nominal Size": "2\"",
+                        "Mean Outside Dia. - Min": "60.2",
+                        "Mean Outside Dia. - Max": "60.5",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "3.9",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "4.5",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "3.1",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "3.7",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "2.5",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "3.0",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": null,
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": null,
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "1.8",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "2.2"
+                    },
+                    {
+                        "Nominal Size": "3\"",
+                        "Mean Outside Dia. - Min": "88.7",
+                        "Mean Outside Dia. - Max": "89.1",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "5.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "6.6",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "4.6",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "5.3",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "3.5",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "4.1",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "2.9",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "3.4",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "1.8",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "2.2"
+                    },
+                    {
+                        "Nominal Size": "4\"",
+                        "Mean Outside Dia. - Min": "114.1",
+                        "Mean Outside Dia. - Max": "114.5",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "7.3",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "8.4",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "6.0",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "6.9",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "4.5",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "5.2",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "3.4",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "4.0",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "2.3",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "3.1"
+                    },
+                    {
+                        "Nominal Size": "6\"",
+                        "Mean Outside Dia. - Min": "168.0",
+                        "Mean Outside Dia. - Max": "168.5",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "10.8",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "12.5",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "8.8",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "10.2",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "6.6",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "7.6",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "4.5",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "5.2",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "3.1",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "3.7"
+                    },
+                    {
+                        "Nominal Size": "8\"",
+                        "Mean Outside Dia. - Min": "218.8",
+                        "Mean Outside Dia. - Max": "219.4",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "12.6",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "14.5",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "10.3",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "11.9",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "7.8",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "9.0",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "5.3",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "6.1",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "3.1",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "3.7"
+                    },
+                    {
+                        "Nominal Size": "10\"",
+                        "Mean Outside Dia. - Min": "272.6",
+                        "Mean Outside Dia. - Max": "273.4",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "15.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "18.1",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "12.8",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "14.8",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "9.7",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "11.2",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "6.6",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "7.6",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "3.1",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "3.7"
+                    },
+                    {
+                        "Nominal Size": "12\"",
+                        "Mean Outside Dia. - Min": "323.4",
+                        "Mean Outside Dia. - Max": "324.3",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Min": "18.7",
+                        "Nominal Wall Thickness - PN-15(CLASS-E) - Max": "21.6",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Min": "15.2",
+                        "Nominal Wall Thickness - PN-12(CLASS-D) - Max": "17.5",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Min": "11.5",
+                        "Nominal Wall Thickness - PN-9(CLASS-C) - Max": "13.3",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Min": "7.8",
+                        "Nominal Wall Thickness - PN-6(CLASS-B) - Max": "9.0",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Min": "3.1",
+                        "Nominal Wall Thickness - Non Pressure (CLASS -O) - Max": "3.7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "ASTM D 1785 SCH 40/SCH 80",
+        "tables": [
+            {
+                "table_description": "Inch size Pressure Pipes",
+                "rows": [
+                    {
+                        "Nominal Size Inch": "1/2\"",
+                        "Min Outside Dia. (mm)": "21.24",
+                        "Max Outside Dia. (mm)": "21.44",
+                        "Wall Thickness (mm) - SCH 40 - Min": "2.77",
+                        "Wall Thickness (mm) - SCH 40 - Max": "3.28",
+                        "Pressure Rating (BAR) - SCH 40": "41.40",
+                        "Wall Thickness (mm) - SCH 80 - Min": "3.73",
+                        "Wall Thickness (mm) - SCH 80 - Max": "4.24",
+                        "Pressure Rating (BAR) - SCH 80": "58.60"
+                    },
+                    {
+                        "Nominal Size Inch": "3/4\"",
+                        "Min Outside Dia. (mm)": "26.57",
+                        "Max Outside Dia. (mm)": "26.77",
+                        "Wall Thickness (mm) - SCH 40 - Min": "2.87",
+                        "Wall Thickness (mm) - SCH 40 - Max": "3.38",
+                        "Pressure Rating (BAR) - SCH 40": "33.10",
+                        "Wall Thickness (mm) - SCH 80 - Min": "3.91",
+                        "Wall Thickness (mm) - SCH 80 - Max": "4.42",
+                        "Pressure Rating (BAR) - SCH 80": "47.60"
+                    },
+                    {
+                        "Nominal Size Inch": "1\"",
+                        "Min Outside Dia. (mm)": "33.27",
+                        "Max Outside Dia. (mm)": "33.53",
+                        "Wall Thickness (mm) - SCH 40 - Min": "3.38",
+                        "Wall Thickness (mm) - SCH 40 - Max": "3.89",
+                        "Pressure Rating (BAR) - SCH 40": "31.00",
+                        "Wall Thickness (mm) - SCH 80 - Min": "4.55",
+                        "Wall Thickness (mm) - SCH 80 - Max": "5.08",
+                        "Pressure Rating (BAR) - SCH 80": "43.40"
+                    },
+                    {
+                        "Nominal Size Inch": "1 1/4\"",
+                        "Min Outside Dia. (mm)": "42.03",
+                        "Max Outside Dia. (mm)": "42.29",
+                        "Wall Thickness (mm) - SCH 40 - Min": "3.56",
+                        "Wall Thickness (mm) - SCH 40 - Max": "4.07",
+                        "Pressure Rating (BAR) - SCH 40": "25.50",
+                        "Wall Thickness (mm) - SCH 80 - Min": "4.85",
+                        "Wall Thickness (mm) - SCH 80 - Max": "5.43",
+                        "Pressure Rating (BAR) - SCH 80": "35.90"
+                    },
+                    {
+                        "Nominal Size Inch": "1 1/2\"",
+                        "Min Outside Dia. (mm)": "48.11",
+                        "Max Outside Dia. (mm)": "48.41",
+                        "Wall Thickness (mm) - SCH 40 - Min": "3.68",
+                        "Wall Thickness (mm) - SCH 40 - Max": "4.19",
+                        "Pressure Rating (BAR) - SCH 40": "22.80",
+                        "Wall Thickness (mm) - SCH 80 - Min": "5.08",
+                        "Wall Thickness (mm) - SCH 80 - Max": "5.69",
+                        "Pressure Rating (BAR) - SCH 80": "32.40"
+                    },
+                    {
+                        "Nominal Size Inch": "2\"",
+                        "Min Outside Dia. (mm)": "60.17",
+                        "Max Outside Dia. (mm)": "60.47",
+                        "Wall Thickness (mm) - SCH 40 - Min": "3.91",
+                        "Wall Thickness (mm) - SCH 40 - Max": "4.42",
+                        "Pressure Rating (BAR) - SCH 40": "19.30",
+                        "Wall Thickness (mm) - SCH 80 - Min": "5.54",
+                        "Wall Thickness (mm) - SCH 80 - Max": "6.20",
+                        "Pressure Rating (BAR) - SCH 80": "29.0"
+                    },
+                    {
+                        "Nominal Size Inch": "3\"",
+                        "Min Outside Dia. (mm)": "88.70",
+                        "Max Outside Dia. (mm)": "89.10",
+                        "Wall Thickness (mm) - SCH 40 - Min": "5.49",
+                        "Wall Thickness (mm) - SCH 40 - Max": "6.15",
+                        "Pressure Rating (BAR) - SCH 40": "17.90",
+                        "Wall Thickness (mm) - SCH 80 - Min": "7.62",
+                        "Wall Thickness (mm) - SCH 80 - Max": "8.53",
+                        "Pressure Rating (BAR) - SCH 80": "25.50"
+                    },
+                    {
+                        "Nominal Size Inch": "4\"",
+                        "Min Outside Dia. (mm)": "114.07",
+                        "Max Outside Dia. (mm)": "114.53",
+                        "Wall Thickness (mm) - SCH 40 - Min": "6.02",
+                        "Wall Thickness (mm) - SCH 40 - Max": "6.73",
+                        "Pressure Rating (BAR) - SCH 40": "15.20",
+                        "Wall Thickness (mm) - SCH 80 - Min": "8.56",
+                        "Wall Thickness (mm) - SCH 80 - Max": "9.58",
+                        "Pressure Rating (BAR) - SCH 80": "22.10"
+                    },
+                    {
+                        "Nominal Size Inch": "6\"",
+                        "Min Outside Dia. (mm)": "168.00",
+                        "Max Outside Dia. (mm)": "168.56",
+                        "Wall Thickness (mm) - SCH 40 - Min": "7.11",
+                        "Wall Thickness (mm) - SCH 40 - Max": "7.97",
+                        "Pressure Rating (BAR) - SCH 40": "12.40",
+                        "Wall Thickness (mm) - SCH 80 - Min": "10.97",
+                        "Wall Thickness (mm) - SCH 80 - Max": "12.29",
+                        "Pressure Rating (BAR) - SCH 80": "19.30"
+                    },
+                    {
+                        "Nominal Size Inch": "8\"",
+                        "Min Outside Dia. (mm)": "218.70",
+                        "Max Outside Dia. (mm)": "219.46",
+                        "Wall Thickness (mm) - SCH 40 - Min": "8.18",
+                        "Wall Thickness (mm) - SCH 40 - Max": "9.17",
+                        "Pressure Rating (BAR) - SCH 40": "11.00",
+                        "Wall Thickness (mm) - SCH 80 - Min": "12.70",
+                        "Wall Thickness (mm) - SCH 80 - Max": "14.22",
+                        "Pressure Rating (BAR) - SCH 80": "17.20"
+                    },
+                    {
+                        "Nominal Size Inch": "10\"",
+                        "Min Outside Dia. (mm)": "272.67",
+                        "Max Outside Dia. (mm)": "273.43",
+                        "Wall Thickness (mm) - SCH 40 - Min": "9.27",
+                        "Wall Thickness (mm) - SCH 40 - Max": "10.39",
+                        "Pressure Rating (BAR) - SCH 40": "9.70",
+                        "Wall Thickness (mm) - SCH 80 - Min": "15.06",
+                        "Wall Thickness (mm) - SCH 80 - Max": "16.87",
+                        "Pressure Rating (BAR) - SCH 80": "15.90"
+                    },
+                    {
+                        "Nominal Size Inch": "12\"",
+                        "Min Outside Dia. (mm)": "323.47",
+                        "Max Outside Dia. (mm)": "324.23",
+                        "Wall Thickness (mm) - SCH 40 - Min": "10.31",
+                        "Wall Thickness (mm) - SCH 40 - Max": "11.55",
+                        "Pressure Rating (BAR) - SCH 40": "9.00",
+                        "Wall Thickness (mm) - SCH 80 - Min": "17.45",
+                        "Wall Thickness (mm) - SCH 80 - Max": "19.53",
+                        "Pressure Rating (BAR) - SCH 80": "15.90"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "standard": "ASTM D 2241",
+        "tables": [
+            {
+                "table_description": "Inch size Pressure Pipes",
+                "rows": [
+                    {
+                        "Nominal Outside Dia.": "1/2\"",
+                        "Outside Dia. (mm) - Min": "21.24",
+                        "Outside Dia. (mm) - Max": "21.44",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": null,
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "1.57",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "2.08"
+                    },
+                    {
+                        "Nominal Outside Dia.": "3/4\"",
+                        "Outside Dia. (mm) - Min": "26.57",
+                        "Outside Dia. (mm) - Max": "26.77",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "1.52",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "2.03",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "1.57",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "2.08",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "1.98",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "2.48"
+                    },
+                    {
+                        "Nominal Outside Dia.": "1\"",
+                        "Outside Dia. (mm) - Min": "33.27",
+                        "Outside Dia. (mm) - Max": "33.53",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "1.52",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "2.03",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "1.60",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "2.10",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "1.95",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "2.46",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "2.46",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "2.97"
+                    },
+                    {
+                        "Nominal Outside Dia.": "1 1/4\"",
+                        "Outside Dia. (mm) - Min": "42.03",
+                        "Outside Dia. (mm) - Max": "42.29",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "1.52",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "2.03",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "1.62",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "2.13",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "2.01",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "2.51",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "2.48",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "2.99",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "3.12",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "3.67"
+                    },
+                    {
+                        "Nominal Outside Dia.": "1 1/2\"",
+                        "Outside Dia. (mm) - Min": "48.11",
+                        "Outside Dia. (mm) - Max": "48.41",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "1.52",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "2.03",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "1.85",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "2.36",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "2.28",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "2.79",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "2.84",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "3.53",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "3.58",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "4.08"
+                    },
+                    {
+                        "Nominal Outside Dia.": "2\"",
+                        "Outside Dia. (mm) - Min": "60.17",
+                        "Outside Dia. (mm) - Max": "60.47",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "1.85",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "2.36",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "2.31",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "2.81",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "2.87",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "3.38",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "3.55",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "4.06",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "4.47",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "4.97"
+                    },
+                    {
+                        "Nominal Outside Dia.": "3\"",
+                        "Outside Dia. (mm) - Min": "88.70",
+                        "Outside Dia. (mm) - Max": "89.10",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": null,
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": null,
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "2.16",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "2.67",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "2.74",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "3.25",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "3.42",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "3.93",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "4.24",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "4.75",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "5.23",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "5.86",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "6.57",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "7.36"
+                    },
+                    {
+                        "Nominal Outside Dia.": "4\"",
+                        "Outside Dia. (mm) - Min": "114.07",
+                        "Outside Dia. (mm) - Max": "114.53",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": "1.78",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": "2.29",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "2.80",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "3.30",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "3.50",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "4.01",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "4.39",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "4.90",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "5.43",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "6.09",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "6.73",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "7.54",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "8.45",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "9.47"
+                    },
+                    {
+                        "Nominal Outside Dia.": "6\"",
+                        "Outside Dia. (mm) - Min": "168.00",
+                        "Outside Dia. (mm) - Max": "168.56",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": "2.64",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": "3.15",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "4.12",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "4.62",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "5.18",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "5.79",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "6.47",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "7.26",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "8.02",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "8.99",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "9.90",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "11.10",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "10.46",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "11.70"
+                    },
+                    {
+                        "Nominal Outside Dia.": "8\"",
+                        "Outside Dia. (mm) - Min": "218.70",
+                        "Outside Dia. (mm) - Max": "219.46",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": "3.43",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": "3.93",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "5.33",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "5.96",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "6.73",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "7.54",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "8.43",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "9.44",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "10.41",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "11.65",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "12.90",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "14.45",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": "12.47",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": "13.97"
+                    },
+                    {
+                        "Nominal Outside Dia.": "10\"",
+                        "Outside Dia. (mm) - Min": "272.67",
+                        "Outside Dia. (mm) - Max": "273.43",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": "4.26",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": "4.77",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "6.65",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "7.44",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "8.40",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "9.42",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "10.49",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "11.76",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "12.97",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "14.53",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "16.05",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "17.98",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": null,
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": null
+                    },
+                    {
+                        "Nominal Outside Dia.": "12\"",
+                        "Outside Dia. (mm) - Min": "323.47",
+                        "Outside Dia. (mm) - Max": "324.23",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Min": "5.05",
+                        "Mean Wall Thickness (mm) - PN-4.3 SDR 64 - Max": "5.64",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Min": "7.90",
+                        "Mean Wall Thickness (mm) - PN-6.9 SDR 41 - Max": "8.85",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Min": "9.95",
+                        "Mean Wall Thickness (mm) - PN-8.6 SDR 32.5 - Max": "11.15",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Min": "12.44",
+                        "Mean Wall Thickness (mm) - PN-11 SDR 26 - Max": "13.94",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Min": "15.39",
+                        "Mean Wall Thickness (mm) - PN-13.8 SDR 21 - Max": "17.24",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Min": "19.05",
+                        "Mean Wall Thickness (mm) - PN-17.2 SDR 17 - Max": "21.33",
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Min": null,
+                        "Mean Wall Thickness (mm) - PN 21.7 SDR 13.5 - Max": null
+                    }
+                ]
+            }
+        ]
+    }
+]

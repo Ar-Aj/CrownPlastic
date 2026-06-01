@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { useT } from '@/i18n';
 
 interface BreadcrumbItem {

@@ -23,13 +23,19 @@
  */
 
 export const PRODUCT_WHEEL_IMAGE_MAP: Record<string, string> = {
-  'upvc-pressure': '/images/productmapping/upvc-pressure-wheel.jpg',
-  'upvc-drainage': '/images/productmapping/upvc-drainage-wheel.jpg',
-  'upvc-duct': '/images/productmapping/upvc-duct-wheel.jpg',
-  'pvc-conduit': '/images/productmapping/pvc-conduit-wheel.jpg',
-  'ppr': '/images/productmapping/ppr-wheel.jpg',
-  'upvc-fabrications': '/images/productmapping/upvc-fabrications-wheel.jpg',
-  'polyethylene': '/images/productmapping/hdpe-wheel.jpg', // Note: category ID is 'polyethylene', image is 'hdpe'
+  'upvc-drainage-pipes':         '/images/products/cover/upvc-drainage/pipes/upvcdrainagepipesbs5255.png',
+  'upvc-drainage-fittings':      '/images/products/cover/upvc-drainage/fittings/BS EN 1329-12014.png',
+  'pvc-high-pressure-pipes':     '/images/products/cover/pvc high pressure/CROWN PLASTIC PVC HIGH PRESSURE PIPE ISO 4422-21996.png',
+  'pvc-high-pressure-fittings':  '/images/products/cover/pvc high pressure/fittings/DIN 8063.png',
+  'pvc-sch-40-fittings':         '/images/products/cover/pvc high pressure/fittings/PVC SCH 40 Fittings.png',
+  'pvc-duct-pipes':              '/images/products/cover/upvs duct/pipes/CROWN PLASTIC PVC DUCT PIPE NEMA TC 22003.png',
+  'pvc-duct-fittings':           '/images/products/cover/upvs duct/fittings/duct-socketa.png',
+  'pvc-conduit-pipes':           '/images/products/cover/conduits/pipes/CROWN PLASTIC PVC CONDUIT PIPE 1250N.png',
+  'ppr-pipes':                   '/images/products/cover/ppr/pipes/CROWN PLASTIC PPR PIPE SDR11 PN10.png',
+  'hdpe-pipes':                  '/images/products/cover/hdpe/pipes/CROWN PLASTIC HDPE PIPE PE63.png',
+  'pex-pipes':                   '/images/products/cover/pex/pipes/pex.png',
+  'fabrications-accessories':    '/images/products/cover/fabrication/grease-trap-type-a.png',
+  'solvents':                    '/images/products/cover/solvent/Solventcover.png',
 };
 
 /**

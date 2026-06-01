@@ -1,4 +1,4 @@
-/**
+﻿/**
  * PVC Pressure Pipes & Fittings - Product Detail Configurations
  * 
  * This file contains the detailed product data for the three PVC Pressure standards:
@@ -639,8 +639,8 @@ export const pvcPressureDin8063: ProductDetailConfig = {
   shortDescription: 'German standard PVC pressure pipes and fittings for potable water supply systems. Complete range of moulded, fabricated, and brass insert fittings.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الألماني لأنظمة إمداد المياه الصالحة للشرب.',
 
-  overview: 'Crown Plastic Pipes manufactures a comprehensive range of PVC-U pressure pipes and fittings conforming to DIN 8063 standards. These products are designed for potable water supply, irrigation systems, and industrial applications where reliability and longevity are paramount. Our DIN 8063 range includes solvent weld joints ensuring leak-free connections and long service life exceeding 50 years.',
-  overviewAr: 'تصنع كراون للأنابيب البلاستيكية مجموعة شاملة من أنابيب وتوصيلات الضغط PVC-U المطابقة لمعايير DIN 8063.',
+  overview: 'Crown Plastic Pipes / Fittings manufactures a comprehensive range of PVC-U pressure pipes and fittings conforming to DIN 8063 standards. These products are designed for potable water supply, irrigation systems, and industrial applications where reliability and longevity are paramount. Our DIN 8063 range includes solvent weld joints ensuring leak-free connections and long service life exceeding 50 years.',
+  overviewAr: 'تصنع كراون للأنابيب والوصلات البلاستيكية مجموعة شاملة من أنابيب وتوصيلات الضغط PVC-U المطابقة لمعايير DIN 8063.',
 
   features: [
     'Conforms to DIN 8063 standard',
@@ -1438,14 +1438,14 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
   shortDescription: 'British standard PVC pressure pipes and fittings rated at PN 15 for water supply networks. Certified to BS EN 1452:23 and BS 4346.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار البريطاني بتصنيف PN 15 لشبكات إمداد المياه.',
 
-  overview: 'Our BS EN 1452 range represents the British standard for PVC-U pressure piping systems. These products are Kitemark certified and widely specified for municipal water distribution, building services, and infrastructure projects across the GCC and Middle East. The PN 15 pressure rating provides a reliable safety margin for demanding applications.',
+  overview: 'Our BS EN 1452 range represents the British standard for PVC-U pressure piping systems. These products are independently certified and widely specified for municipal water distribution, building services, and infrastructure projects across the GCC and Middle East. The PN 15 pressure rating provides a reliable safety margin for demanding applications.',
   overviewAr: 'تمثل مجموعة BS EN 1452 لدينا المعيار البريطاني لأنظمة أنابيب الضغط PVC-U.',
 
   features: [
     'Conforms to BS EN 1452:23 and BS 4346',
     'PN 15 pressure rating',
-    'BSI Kitemark certified',
-    'NSF approved for potable water',
+    'Independently tested and certified',
+    'Approved for potable water applications',
     'High impact resistance',
     'Precision-molded fittings',
     'Complete system compatibility',
@@ -1454,8 +1454,8 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
   featuresAr: [
     'مطابق لـ BS EN 1452:23 و BS 4346',
     'تصنيف ضغط PN 15',
-    'معتمد من BSI Kitemark',
-    'معتمد من NSF لمياه الشرب',
+    'معتمد ومختبر بشكل مستقل',
+    'معتمد لتطبيقات مياه الشرب',
     'مقاومة صدم عالية',
     'توصيلات مقولبة بدقة',
     'توافق تام مع النظام',
@@ -2216,14 +2216,14 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
   shortDescription: 'American standard Schedule 40 PVC pressure pipes and fittings. Socket-type fittings with solvent cement joints for industrial and commercial applications.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الأمريكي Schedule 40.',
 
-  overview: 'Crown Plastic Pipes offers a complete range of Schedule 40 PVC pipes and fittings manufactured to ASTM D 2466 specifications. The Schedule 40 wall thickness provides excellent pressure ratings while maintaining economical installation costs. Ideal for industrial process piping, chemical handling, and high-demand commercial applications.',
-  overviewAr: 'تقدم كراون للأنابيب البلاستيكية مجموعة كاملة من أنابيب وتوصيلات PVC بمواصفات Schedule 40 المصنعة وفقاً لمواصفات ASTM D 2466.',
+  overview: 'Crown Plastic Pipes / Fittings offers a complete range of Schedule 40 PVC pipes and fittings manufactured to ASTM D 2466 specifications. The Schedule 40 wall thickness provides excellent pressure ratings while maintaining economical installation costs. Ideal for industrial process piping, chemical handling, and high-demand commercial applications.',
+  overviewAr: 'تقدم كراون للأنابيب والوصلات البلاستيكية مجموعة كاملة من أنابيب وتوصيلات PVC بمواصفات Schedule 40 المصنعة وفقاً لمواصفات ASTM D 2466.',
 
   features: [
     'Conforms to ASTM D 2466 standard',
     'Schedule 40 wall thickness',
     'Socket-type solvent weld joints',
-    'NSF/ANSI 61 certified',
+    'Approved for potable water applications',
     'Excellent chemical resistance',
     'Consistent dimensional accuracy',
     'Gray color for easy identification',
@@ -2233,7 +2233,7 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
     'مطابق لمعيار ASTM D 2466',
     'سماكة جدار Schedule 40',
     'وصلات لحام مذيب من نوع المقبس',
-    'معتمد من NSF/ANSI 61',
+    'معتمد لتطبيقات مياه الشرب',
     'مقاومة كيميائية ممتازة',
     'دقة أبعاد متسقة',
     'لون رمادي لسهولة التعرف',

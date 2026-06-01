@@ -1,14 +1,25 @@
 'use client';
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { ChevronRight, Download, CheckCircle2, XCircle } from 'lucide-react';
 import { type ProductDetailConfig, PRODUCT_DETAIL_SECTIONS } from '@/types/productDetail';
-import { PipesSection } from './PipesTable';
-import { FittingsSection } from './FittingsGallery';
+import { ProductFAQSchema } from '@/components/schemas/ProductFAQSchema';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
 import { getCategoryBySlug } from '@/config/products';
+import { createPortal } from 'react-dom';
+
+// ── Dynamic Imports (below-fold components — reduce initial JS payload) ──────
+// Each has a loading skeleton to reserve DOM height and prevent CLS.
+const DynamicSkeleton = () => <div className="min-h-[200px] bg-gray-50 animate-pulse rounded-lg" />;
+const YouTubeFacade = dynamic(() => import('@/components/common/YouTubeFacade'), { ssr: false, loading: DynamicSkeleton });
+const PipesSection = dynamic(() => import('./PipesTable').then(m => ({ default: m.PipesSection })), { loading: DynamicSkeleton });
+const FittingsSection = dynamic(() => import('./FittingsGallery').then(m => ({ default: m.FittingsSection })), { loading: DynamicSkeleton });
+const ProductFAQAccordion = dynamic(() => import('./ProductFAQAccordion').then(m => ({ default: m.ProductFAQAccordion })), { loading: DynamicSkeleton });
+const DualImagePresentation = dynamic(() => import('./DualImagePresentation'), { loading: DynamicSkeleton });
 
 // Design System imports
 import {
@@ -36,6 +47,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   const { language } = useLanguage();
   const t = useT();
   const [activeSection, setActiveSection] = useState('overview');
+  const [viewerPdf, setViewerPdf] = useState<{ src: string; title: string; description?: string } | null>(null);
   const category = getCategoryBySlug(product.categorySlug);
 
   // Get localized content
@@ -49,6 +61,8 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
     ? (product.applicationsAr || product.applications)
     : product.applications;
   const dosDonts = language === 'ar' ? (product.dosDontsAr || product.dosDonts) : product.dosDonts;
+  const techProps = language === 'ar' ? (product.technicalPropertiesAr || product.technicalProperties) : product.technicalProperties;
+  const sysAdvs = language === 'ar' ? (product.systemAdvantagesAr || product.systemAdvantages) : product.systemAdvantages;
   const categoryName = category
     ? (language === 'ar' ? (category.nameAr || category.name) : category.name)
     : '';
@@ -70,16 +84,19 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       switch (section.id) {
         case 'overview': return !!overview;
         case 'features': return uniqueFeatures.length > 0;
+        case 'technical-properties': return techProps && techProps.length > 0;
+        case 'system-advantages': return sysAdvs && sysAdvs.length > 0;
         case 'applications': return uniqueApplications.length > 0;
         case 'variants': return product.variants && product.variants.length > 0;
-        case 'pipes': return product.pipesTables && product.pipesTables.length > 0;
+        case 'pipes': return (product.pipesTables && product.pipesTables.length > 0) || (product.accessoriesGallery && product.accessoriesGallery.length > 0);
         case 'fittings': return product.fittings && product.fittings.length > 0;
         case 'video': return !!product.videoUrl;
         case 'dos-donts': return dosDonts && (dosDonts.dos.length > 0 || dosDonts.donts.length > 0);
+        case 'frequently-asked-questions': return (uniqueFeatures.length > 0) || (dosDonts && (dosDonts.dos.length > 0 || dosDonts.donts.length > 0));
         default: return false;
       }
     });
-  }, [overview, uniqueFeatures, uniqueApplications, product.variants, product.pipesTables, product.fittings, product.videoUrl, dosDonts]);
+  }, [overview, uniqueFeatures, uniqueApplications, product.variants, product.pipesTables, product.fittings, product.videoUrl, dosDonts, techProps, sysAdvs, product.accessoriesGallery]);
 
   // Smooth scroll to section
   const scrollToSection = useCallback((sectionId: string) => {
@@ -92,27 +109,31 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
     }
   }, []);
 
-  // Track active section on scroll
+  // Track active section on scroll using IntersectionObserver (no forced reflow)
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
+    const observers: IntersectionObserver[] = [];
 
-      for (const section of visibleSections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
+    visibleSections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (!element) return;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
             setActiveSection(section.id);
-            break;
           }
+        },
+        {
+          rootMargin: '-80px 0px -60% 0px',
+          threshold: 0,
         }
-      }
-    };
+      );
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((obs) => obs.disconnect());
   }, [visibleSections]);
 
   // Extract standards/badges from title or features for hero badges
@@ -140,7 +161,9 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   }, [title]);
 
   return (
-    <ProductBackgroundPattern pattern="fine" glow="subtle" patternOpacity={0.35} baseColor="blue" vignette>
+    <>
+    <article itemScope itemType="https://schema.org/Product">
+      <ProductBackgroundPattern pattern="fine" glow="subtle" patternOpacity={0.35} baseColor="blue" vignette className="pt-24 md:pt-28 lg:pt-32">
       {/* ═══════════════════════════════════════════════════════════════════════════
           HERO SECTION - Mid blue band with light cards
       ═══════════════════════════════════════════════════════════════════════════ */}
@@ -153,7 +176,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <div className="absolute top-12 right-32 w-1.5 h-1.5 rounded-full bg-primary/40 shadow-[0_0_0_4px_rgba(0,114,188,0.2)]" />
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start relative">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start relative">
           {/* Left column - Content card */}
           <div className="lg:col-span-3">
             <ProductCardSurface variant="elevated" padding="lg" className="bg-white/95 backdrop-blur-sm">
@@ -185,9 +208,14 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               </span>
 
               {/* Title */}
-              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 leading-tight">
                 {title}
               </h1>
+
+              {/* Commercial Intent Subtitle */}
+              <h2 className="text-lg font-medium text-primary mb-4">
+                {language === 'ar' ? 'المصنع والمورد الرائد في الإمارات' : 'Premium Manufacturer & Supplier in the UAE'}
+              </h2>
 
               {/* Short description */}
               <p className="text-lg text-slate-600 max-w-2xl mb-6 leading-relaxed">
@@ -213,7 +241,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               {/* Action buttons */}
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/contact-us"
+                  href={`/contact-us?tab=quote&product=${product.slug}`}
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg shadow-primary/20"
                 >
                   {t('products.detail_layout.request_quote')}
@@ -235,7 +263,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           </div>
 
           {/* Right column - Product visual with PipeBorderWrapper */}
-          <div className="lg:col-span-2 hidden lg:block">
+          <div className="lg:col-span-2">
             <PipeBorderWrapper thickness={3} radius="xl" glow>
               <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6">
                 {/* Background pattern */}
@@ -271,6 +299,22 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                       <CheckCircle2 className="w-4 h-4 text-primary/60" />
                       <span>{t('products.detail_layout.countries')}</span>
                     </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
+                      <span>{t('products.detail_layout.uv_weather_resistant')}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
+                      <span>{t('products.detail_layout.high_impact_strength')}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
+                      <span>{t('products.detail_layout.corrosion_free')}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary/60" />
+                      <span>{t('products.detail_layout.low_maintenance')}</span>
+                    </div>
                   </div>
 
                   {/* Pressure class badges if available */}
@@ -290,6 +334,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
         </div>
       </ProductSection>
 
+
       {/* ═══════════════════════════════════════════════════════════════════════════
           STICKY SCROLL NAVIGATION
       ═══════════════════════════════════════════════════════════════════════════ */}
@@ -298,7 +343,22 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <div className="overflow-x-auto -mx-4 px-4">
             <div className="flex gap-1 min-w-max py-3">
               {visibleSections.map((section) => {
-                const label = language === 'ar' ? (section.labelAr || section.label) : section.label;
+                const rawLabel = language === 'ar' ? (section.labelAr || section.label) : section.label;
+                
+                // Force 'Visual Breakdown' instead of 'Pipes' for fabrications category
+                const isFabrications = product.categorySlug === 'fabrications' || product.categorySlug === 'fabrications-accessories';
+                const hasAccessoriesGallery = product.accessoriesGallery && product.accessoriesGallery.length > 0;
+                
+                let label = (section.id === 'pipes' && isFabrications)
+                  ? (hasAccessoriesGallery ? 'Accessories' : 'Visual Breakdown')
+                  : rawLabel;
+                
+                // Override fittings tab label dynamically if configured
+                if (section.id === 'fittings' && product.fittingsTabLabelKey) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  label = t(product.fittingsTabLabelKey as any);
+                }
+                
                 const isActive = activeSection === section.id;
 
                 return (
@@ -329,8 +389,8 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             subtitle={t('products.detail_layout.overview_subtitle')}
           />
           <ProductCardSurface variant="elevated" padding="lg">
-            <div className="prose prose-lg max-w-4xl">
-              <p className="text-lg text-slate-600 leading-relaxed">{overview}</p>
+            <div className="prose prose-lg">
+              <p className="text-[1.15rem] text-slate-600 leading-relaxed">{overview}</p>
             </div>
           </ProductCardSurface>
         </ProductSection>
@@ -351,23 +411,89 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             title={t('products.detail_layout.features_title')}
             subtitle={t('products.detail_layout.features_subtitle')}
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-0 p-0 list-none">
             {uniqueFeatures.map((feature, index) => (
-              <ProductCardSurface key={index} variant="elevated" padding="md" hoverable>
-                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
+              <li key={index}>
+                <ProductCardSurface variant="elevated" padding="md" hoverable className="h-full">
+                  <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-sm font-medium text-slate-700">{feature}</span>
                   </div>
-                  <span className="text-sm font-medium text-slate-700">{feature}</span>
-                </div>
-              </ProductCardSurface>
+                </ProductCardSurface>
+              </li>
             ))}
-          </div>
+          </ul>
         </ProductSection>
       )}
 
       <SectionDivider variant="blue" className="my-2" />
+
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          TECHNICAL PROPERTIES SECTION - Descriptive List (dl/dt/dd)
+      ═══════════════════════════════════════════════════════════════════════════ */}
+      {techProps && techProps.length > 0 && (
+        <ProductSection id="technical-properties" background="white" size="md">
+          <ProductSectionHeader
+            title={language === 'ar' ? 'الخصائص الفنية' : 'Technical Properties'}
+            subtitle={language === 'ar' ? 'المواصفات الفنية التفصيلية' : 'Detailed technical specifications'}
+          />
+          <ProductCardSurface variant="elevated" padding="none">
+            <div className="overflow-x-auto rounded-xl">
+              <table className="min-w-full divide-y divide-slate-200">
+                <thead className="bg-slate-50">
+                  <tr>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                      {language === 'ar' ? 'الخاصية' : 'Property'}
+                    </th>
+                    <th scope="col" className="px-6 py-3 text-left pl-6 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                      {language === 'ar' ? 'القيمة' : 'Value'}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-slate-100">
+                  {techProps.map((prop, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">
+                        {prop.property}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-600 font-mono">
+                        {prop.value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </ProductCardSurface>
+        </ProductSection>
+      )}
+
+      {techProps && techProps.length > 0 && <SectionDivider variant="light" className="my-2" />}
+
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          SYSTEM ADVANTAGES SECTION
+      ═══════════════════════════════════════════════════════════════════════════ */}
+      {sysAdvs && sysAdvs.length > 0 && (
+        <ProductSection id="system-advantages" background="soft-blue" size="md" showGlow>
+          <ProductSectionHeader
+            title={language === 'ar' ? 'مزايا النظام' : 'System Advantages'}
+            subtitle={language === 'ar' ? 'الفوائد الرئيسية لاستخدام هذا النظام' : 'Key benefits of using this system'}
+          />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 m-0 p-0 list-none">
+            {sysAdvs.map((adv, idx) => (
+              <li key={idx} className="flex items-start gap-3 bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
+                <span className="text-[15px] leading-relaxed text-slate-700">{adv}</span>
+              </li>
+            ))}
+          </ul>
+        </ProductSection>
+      )}
+
+      {sysAdvs && sysAdvs.length > 0 && <SectionDivider variant="light" className="my-2" />}
 
       {/* ═══════════════════════════════════════════════════════════════════════════
           APPLICATIONS SECTION - Light section
@@ -378,13 +504,15 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             title={t('products.detail_layout.applications_title')}
             subtitle={t('products.detail_layout.applications_subtitle')}
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-0 p-0 list-none">
             {uniqueApplications.map((app, index) => (
-              <ProductCardSurface key={index} variant="accent" padding="md" hoverable accent="blue">
-                <span className="text-sm font-semibold text-slate-800">{app}</span>
-              </ProductCardSurface>
+              <li key={index}>
+                <ProductCardSurface variant="accent" padding="md" hoverable accent="blue" className="h-full">
+                  <span className="text-sm font-semibold text-slate-800">{app}</span>
+                </ProductCardSurface>
+              </li>
             ))}
-          </div>
+          </ul>
         </ProductSection>
       )}
 
@@ -436,14 +564,56 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       {/* ═══════════════════════════════════════════════════════════════════════════
           PIPES TABLES SECTION - Light section
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <PipesSection tables={product.pipesTables} />
+      {/* Fabrications: accessories gallery grid or dual-image visual breakdown */}
+      {product.accessoriesGallery && product.accessoriesGallery.length > 0 ? (
+        <ProductSection id="pipes" background="white" size="md">
+          <ProductSectionHeader
+            title="Accessories"
+            subtitle="Complete range of fabricated piping accessories and components"
+          />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {product.accessoriesGallery.map((item) => {
+              const encodedPath = `/images/fittings/fabrications and accessories/${encodeURIComponent(item.imageSrc)}`;
+              return (
+                <div
+                  key={item.name}
+                  className="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-md hover:border-primary/30 transition-all duration-200"
+                >
+                  <div className="relative aspect-[4/3] bg-slate-50 p-4">
+                    <Image
+                      src={encodedPath}
+                      alt={item.name}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                  </div>
+                  <div className="text-center font-semibold text-sm text-slate-800 p-3 bg-slate-50 border-t border-slate-100">
+                    {item.name}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </ProductSection>
+      ) : product.categorySlug === 'fabrications' || product.categorySlug === 'fabrications-accessories' ? (
+        <div id="pipes">
+          <DualImagePresentation
+            renderImage={product.renderImage ?? ''}
+            diagramImage={product.diagramImage ?? ''}
+            title={title}
+          />
+        </div>
+      ) : (
+        <PipesSection tables={product.pipesTables} />
+      )}
 
       <SectionDivider variant="medium" className="my-2" />
 
       {/* ═══════════════════════════════════════════════════════════════════════════
           FITTINGS GALLERY SECTION - Mid blue section
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <FittingsSection fittings={product.fittings} />
+      <FittingsSection fittings={product.fittings} colorLabel={product.colorLabel} />
 
       <SectionDivider variant="light" className="my-2" />
 
@@ -456,12 +626,11 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <div className="max-w-4xl mx-auto">
             <ProductCardSurface variant="elevated" padding="none" className="overflow-hidden">
               <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-xl">
-                <iframe
-                  src={product.videoUrl}
+                <YouTubeFacade
+                  videoId=""
+                  embedUrl={product.videoUrl}
                   title={`${title} Product Video`}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  iframeParams="autoplay=1&rel=0&modestbranding=1"
                 />
               </div>
             </ProductCardSurface>
@@ -481,7 +650,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
             <div className="absolute top-12 right-20 w-1.5 h-1.5 rounded-full bg-primary/45 shadow-[0_0_0_4px_rgba(0,114,188,0.18)]" />
           </div>
           <ProductSectionHeader title={t('products.detail_layout.installation_title')} subtitle={t('products.detail_layout.installation_subtitle')} />
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {/* Do's */}
             {dosDonts.dos.length > 0 && (
               <ProductCardSurface variant="elevated" padding="lg">
@@ -527,6 +696,12 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
         </ProductSection>
       )}
 
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          AEO FAQ SECTION (Phase 3.2) - Dynamic Schema & UI
+      ═══════════════════════════════════════════════════════════════════════════ */}
+      <ProductFAQSchema product={product} />
+      <ProductFAQAccordion product={product} />
+
       <SectionDivider variant="light" className="my-2" />
 
       {/* ═══════════════════════════════════════════════════════════════════════════
@@ -534,20 +709,38 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       ═══════════════════════════════════════════════════════════════════════════ */}
       {product.downloads && product.downloads.length > 0 && (
         <ProductSection background="white" size="md">
-          <ProductSectionHeader title={t('products.detail_layout.downloads_title')} />
-          <div className="flex flex-wrap gap-3">
-            {product.downloads.map((download, index) => (
-              <a
-                key={index}
-                href={download.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-50 hover:bg-primary/5 text-slate-700 hover:text-primary px-5 py-3 rounded-lg font-medium transition-all border border-slate-200 hover:border-primary/30"
-              >
-                <Download className="w-5 h-5" />
-                {download.label}
-              </a>
-            ))}
+          <div className="bg-blue-50/50 rounded-3xl p-8 md:p-12">
+            <div className="text-center mb-8">
+              <ProductSectionHeader
+                title={t('products.detail_layout.downloads_title')}
+                subtitle={`${t('products.detail_layout.downloads_subtitle')} ${title}.`}
+                align="center"
+              />
+            </div>
+            <div className="flex flex-col items-center gap-4 w-full max-w-3xl mx-auto">
+              {product.downloads.map((download, index) => (
+                <button
+                  key={index}
+                  onClick={() => setViewerPdf({ src: download.href, title: download.label })}
+                  className="group w-full flex items-center gap-4 bg-white hover:shadow-lg hover:border-primary/30 px-6 py-5 rounded-xl font-medium transition-all border border-slate-200 text-left cursor-pointer"
+                >
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Download className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-slate-900 group-hover:text-primary transition-colors mb-0.5">
+                      {download.label}
+                    </h4>
+                    <p className="text-xs text-primary flex items-center gap-1">
+                      {t('products.detail_layout.downloads_view_document')}
+                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         </ProductSection>
       )}
@@ -582,5 +775,101 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
         </div>
       </div>
     </ProductBackgroundPattern>
+
+    </article>
+
+      {/* 1:1 Copied PDF Viewer Modal Overlay */}
+      {viewerPdf && (
+        <PdfViewerModal
+          src={viewerPdf.src}
+          title={viewerPdf.title}
+          onClose={() => setViewerPdf(null)}
+        />
+      )}
+    </>
   );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// INLINE PDF VIEWER MODAL (1:1 Copy from Resources)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function PdfViewerModal({
+    src,
+    title,
+    onClose,
+}: {
+    src: string;
+    title: string;
+    onClose: () => void;
+}) {
+    const [isLoading, setIsLoading] = useState(true);
+    const pdfUrl = `${src}#toolbar=1&navpanes=0&view=Fit`;
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = ''; };
+    }, []);
+
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
+    }, [onClose]);
+
+    if (typeof document === 'undefined') return null;
+
+    return createPortal(
+        <div
+            className="fixed inset-0 z-[9999] flex flex-col bg-black/70 backdrop-blur-sm"
+            onClick={onClose}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="pdf-viewer-title"
+        >
+            {/* Header bar */}
+            <div
+                className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white flex-shrink-0 shadow-sm"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <div className="flex-1 min-w-0 pr-4">
+                    <h3 id="pdf-viewer-title" className="text-sm sm:text-base font-semibold text-gray-900 line-clamp-1">
+                        {title}
+                    </h3>
+                </div>
+                <button
+                    onClick={onClose}
+                    className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center flex-shrink-0 transition-colors"
+                    aria-label="Close document viewer"
+                >
+                    <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            {/* PDF Container */}
+            <div
+                className="flex-1 bg-gray-100 relative min-h-0"
+                onClick={(e) => e.stopPropagation()}
+            >
+                {isLoading && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 z-10">
+                        <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4" />
+                        <p className="text-gray-600 text-sm font-medium">Loading document…</p>
+                    </div>
+                )}
+                <iframe
+                    src={pdfUrl}
+                    className="w-full h-full border-0"
+                    title={title}
+                    onLoad={() => setIsLoading(false)}
+                    allow="fullscreen"
+                />
+            </div>
+        </div>,
+        document.body
+    );
 }

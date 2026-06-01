@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, ChevronUp, Table2 } from 'lucide-react';
 import { type Fitting, FITTING_FAMILY_LABELS } from '@/types/productDetail';
-import { useT } from '@/i18n';
+import { useT, type TranslationPath } from '@/i18n';
+import { formatFraction } from '@/utils/formatters';
 
 interface FittingModalProps {
   fitting: Fitting | null;
@@ -20,7 +22,12 @@ interface FittingModalProps {
  */
 export default function FittingModal({ fitting, isOpen, onClose }: FittingModalProps) {
   const [showSpecTable, setShowSpecTable] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const t = useT();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close on escape key
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -47,7 +54,24 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
 
   if (!fitting) return null;
 
-  return (
+  const determineSizeState = () => {
+    if (!fitting.sizes || fitting.sizes.length === 0) return 'metric';
+    if (fitting.sizes.some(s => String(s.sizeMm).toLowerCase().includes('x') || (s.sizeInch && String(s.sizeInch).toLowerCase().includes('x')))) return 'mixed';
+    if (fitting.sizes.some(s => String(s.sizeMm).includes('/') || String(s.sizeMm).includes('"') || (s.sizeInch && (String(s.sizeInch).includes('/') || String(s.sizeInch).includes('"'))))) return 'imperial';
+    if (fitting.table?.columns.some(col => col.key.toLowerCase().includes('inch') || col.label.toLowerCase().includes('inch'))) return 'imperial';
+    return 'metric';
+  };
+
+  const sizeState = determineSizeState();
+  const nominalSizeHeaderKey = fitting.sizeHeaderOverride || (
+    sizeState === 'mixed' ? 'products.tables.nominal_size_mm_x_inch' :
+    sizeState === 'imperial' ? 'products.tables.nominal_size_inch' :
+    'products.tables.nominal_size_mm'
+  );
+
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <>
@@ -57,13 +81,15 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
-            onClick={onClose}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999]"
             aria-hidden="true"
           />
 
           {/* Modal container - centers the modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div 
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+            onClick={onClose}
+          >
             {/* Modal card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -158,7 +184,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                               scope="col"
                               className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-[#0052CC]"
                             >
-                              {t('products.fitting_modal.size_mm')}
+                              {t(nominalSizeHeaderKey as TranslationPath)}
                             </th>
                           </tr>
                         </thead>
@@ -169,10 +195,10 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                               className={`${index % 2 === 0 ? 'bg-white' : 'bg-[#F9FAFB]'} hover:bg-[#F3F4F6] transition-colors`}
                             >
                               <td className="px-4 py-2.5 text-sm text-[#374151]">
-                                {size.sizeMm}
-                                {size.sizeInch && (
+                                {formatFraction(size.sizeMm)}
+                                {size.sizeInch && size.sizeInch !== size.sizeMm && (
                                   <span className="text-[#6B7280] ml-1">
-                                    ({size.sizeInch})
+                                    ({formatFraction(size.sizeInch)})
                                   </span>
                                 )}
                                 {size.notes && (
@@ -223,17 +249,83 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                           <div className="mt-3 overflow-x-auto rounded-xl border border-gray-200">
                             <table className="min-w-full divide-y divide-gray-200">
                               <thead className="bg-[#E5EEFF]">
-                                <tr>
-                                  {fitting.table.columns.map((col) => (
-                                    <th
-                                      key={col.key}
-                                      scope="col"
-                                      className="px-3 py-3 text-left text-xs font-semibold uppercase tracking-wide text-[#0052CC] whitespace-nowrap"
-                                    >
-                                      {col.label}
-                                    </th>
-                                  ))}
-                                </tr>
+                                {fitting.table.columns.some(c => c.groupLabel) ? (
+                                  <>
+                                    {/* Row 1: standalone cols (rowSpan=2) + group parent headers (colSpan=n) */}
+                                    <tr>
+                                      {(() => {
+                                        const cells: React.ReactNode[] = [];
+                                        let i = 0;
+                                        while (i < fitting.table!.columns.length) {
+                                          const col = fitting.table!.columns[i];
+                                          if (!col.groupLabel) {
+                                            // Standalone column — spans both header rows
+                                            let finalLabelKey = col.label;
+                                            const isNominalCol = col.key.toLowerCase().includes('nominal_size') || col.label.toLowerCase().includes('nominal size');
+                                            if (isNominalCol) finalLabelKey = nominalSizeHeaderKey;
+                                            cells.push(
+                                              <th
+                                                key={col.key}
+                                                rowSpan={2}
+                                                scope="col"
+                                                className="px-3 py-3 text-left text-xs font-semibold tracking-wide text-[#0052CC] whitespace-nowrap align-middle border-r border-[#C2D6FF]"
+                                              >
+                                                {finalLabelKey.startsWith('products.tables') ? (t(finalLabelKey as TranslationPath) as string) : finalLabelKey}
+                                              </th>
+                                            );
+                                            i++;
+                                          } else {
+                                            // First column of a group — render the parent header spanning colSpan cols
+                                            const span = col.colSpan ?? 1;
+                                            const groupKey = col.groupLabel;
+                                            cells.push(
+                                              <th
+                                                key={`grp-${groupKey}-${i}`}
+                                                colSpan={span}
+                                                scope="col"
+                                                className="px-3 py-2 text-center text-xs font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]"
+                                              >
+                                                {groupKey.startsWith('products.tables') ? (t(groupKey as TranslationPath) as string) : groupKey}
+                                              </th>
+                                            );
+                                            i += span;
+                                          }
+                                        }
+                                        return cells;
+                                      })()}
+                                    </tr>
+                                    {/* Row 2: sub-column labels for grouped cols only */}
+                                    <tr className="bg-[#F0F5FF]">
+                                      {fitting.table!.columns.filter(c => c.groupLabel).map(col => (
+                                        <th
+                                          key={`sub-${col.key}`}
+                                          scope="col"
+                                          className="px-3 py-2 text-left text-xs font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-white/50"
+                                        >
+                                          {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                                        </th>
+                                      ))}
+                                    </tr>
+                                  </>
+                                ) : (
+                                  /* Flat single-row header (existing behaviour) */
+                                  <tr>
+                                    {fitting.table.columns.map((col) => (
+                                      <th
+                                        key={col.key}
+                                        scope="col"
+                                        className="px-3 py-3 text-left text-xs font-semibold tracking-wide text-[#0052CC] whitespace-nowrap"
+                                      >
+                                        {(() => {
+                                          let finalLabelKey = col.label;
+                                          const isNominalCol = col.key.toLowerCase().includes('nominal_size') || col.label.toLowerCase().includes('nominal size');
+                                          if (isNominalCol) finalLabelKey = nominalSizeHeaderKey;
+                                          return finalLabelKey.startsWith('products.tables') ? (t(finalLabelKey as TranslationPath) as string) : finalLabelKey;
+                                        })()}
+                                      </th>
+                                    ))}
+                                  </tr>
+                                )}
                               </thead>
                               <tbody className="bg-white divide-y divide-gray-100">
                                 {fitting.table.rows.map((row, rowIndex) => (
@@ -246,7 +338,10 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                                         key={col.key}
                                         className="px-3 py-2 text-sm text-[#374151] whitespace-nowrap"
                                       >
-                                        {row[col.key] ?? ''}
+                                        {row[col.key] != null && row[col.key] !== "" ? (
+                                          formatFraction(String(row[col.key])) +
+                                          (((col.key.toLowerCase().includes('nominal_size') || col.key.toLowerCase().includes('inch') || col.label.toLowerCase().includes('nominal size')) && sizeState !== 'metric' && !fitting.sizeHeaderOverride) && !String(row[col.key]).endsWith('"') ? '"' : '')
+                                        ) : '-'}
                                       </td>
                                     ))}
                                   </tr>
@@ -264,6 +359,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
           </div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }

@@ -38,30 +38,30 @@ export const greaseTrapTypeA: ProductDetailConfig = {
   title: 'PVC/UPVC Grease Trap – Type A',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع A',
 
-  shortDescription: 'Type A Grease Trap featuring a single removable PVC perforated bucket (450mm deep) for solid waste collection, with a GRP sealed cover (1070×820×15mm THK) and brass wing nut/bolt securing.',
+  renderImage: '/images/fabrications/typea_main.png',
+  diagramImage: '/images/fabrications/typea_diagram.png',
+
+  shortDescription: 'Type A Grease Trap featuring a single 450 x 280 x 450 deep removable PVC perforated bucket with 25 holes in four rows on each side. Uses a 670x670x15mm GRP sealed cover.',
   shortDescriptionAr: 'مصيدة شحوم النوع A مع دلو PVC مثقب قابل للإزالة بعمق 450 مم وغطاء GRP محكم.',
 
-  overview: `Type A is a Grease Trap design featuring a single removable PVC perforated bucket (450mm deep) for solid waste collection, with a GRP sealed cover (1070×820×15mm THK). It includes a 10×30 BRASS WING NUT/BOLT and a 5mm THICK NEOPRENE GASKET for sealing.
+  overview: `Type A is a Grease Trap design featuring a single 450 x 280 x 450 deep removable PVC perforated bucket for solid waste collection. It securely fastens with a 670x670x15mm GRP sealed cover.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
 **Type A Key Specifications:**
 • Material: PVC/UPVC, GRP (for cover), Brass (for hardware), Neoprene (for gasket)
-• Jointing Method: Wing nut/bolt securing (for cover)
-• Bucket: Single removable, 450mm deep, 25 holes in four rows each side
-• Cover: GRP sealed, 1070×820×15mm THK
-• Hardware: 10×30 BRASS WING NUT/BOLT
+• Bucket: Single removable, 450 x 280 x 450 deep, 25 holes in four rows each side
+• Cover: GRP sealed, 670x670x15mm
 • Duty/Class: As per Dubai Municipality Approved Drawing
-• Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
+• Standards: ISO 9001:2015, ISO 14001:2015, OHSAS 18001`,
 
   features: [
-    'Removable PVC perforated bucket (450mm deep)',
-    'Bucket has 25 holes in four rows each side',
-    'Sealed cover in GRP (1070×820×15mm THK)',
+    'Single 450 x 280 x 450 deep removable PVC perforated bucket',
+    'Bucket has 25 holes in four rows on each side',
+    'Uses a 670x670x15mm GRP sealed cover',
     'Secured with 10×30 BRASS WING NUT/BOLT and 5mm THICK NEOPRENE GASKET',
     'Use of PVC/UPVC as primary material',
     'Custom built product based on waste water and site condition',
-    'Removable perforated bucket for solid waste collection',
   ],
 
   applications: [
@@ -77,7 +77,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
   fittings: [],
 
   downloads: [
-    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
+    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {
@@ -143,17 +143,20 @@ export const greaseTrapTypeB: ProductDetailConfig = {
   title: 'PVC/UPVC Grease Trap – Type B',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع B',
 
-  shortDescription: 'Type B Grease Trap similar to Type A but featuring two removable PVC perforated buckets (260mm deep). The system includes Lifting Handles for easier maintenance access.',
+  renderImage: '/images/fabrications/typeb_main.png',
+  diagramImage: '/images/fabrications/typeb_diagram.png',
+
+  shortDescription: 'Type B Grease Trap featuring two removable PVC perforated buckets (260mm deep) with 250 holes in four rows on each side.',
   shortDescriptionAr: 'مصيدة شحوم النوع B بدلوين PVC مثقبين قابلين للإزالة بعمق 260 مم مع مقابض رفع.',
 
-  overview: `Type B is a Grease Trap design similar to Type A but featuring two removable PVC perforated buckets (260mm deep). The system includes a Lifting Handle and components like a 5mm THICK GASKET and GRP COVER.
+  overview: `Type B is a Grease Trap design featuring two removable PVC perforated buckets (260mm deep) with 250 holes in four rows on each side. The system includes a Lifting Handle and components like a 5mm THICK GASKET and GRP COVER.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
 **Type B Key Specifications:**
 • Material: PVC/UPVC, GRP (for cover)
 • Bucket Configuration: Two removable perforated buckets, 260mm deep each
-• Bucket Perforations: 25 holes in four rows each side
+• Bucket Perforations: 250 holes in four rows on each side
 • Lifting Feature: Lifting handles included for easy removal
 • Cover: Thick GRP cover
 • Gasket: 5mm thick gasket
@@ -161,13 +164,12 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
 
   features: [
-    'Removable PVC perforated two bucket system (260mm deep)',
-    'Buckets have 25 holes in four rows each side',
+    'Two removable PVC perforated buckets (260mm deep)',
+    'Buckets have 250 holes in four rows on each side',
     'Includes lifting handle for easy bucket removal',
     'Features a thick GRP cover and 5mm thick gasket',
     'Use of PVC/UPVC as primary material',
     'Custom built product based on waste water and site condition',
-    'Dual removable perforated buckets for solid waste collection',
   ],
 
   applications: [
@@ -183,7 +185,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
   fittings: [],
 
   downloads: [
-    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
+    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {
@@ -250,10 +252,13 @@ export const greaseTrapTypeC: ProductDetailConfig = {
   title: 'PVC/UPVC Grease Trap – Type C',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع C',
 
-  shortDescription: 'Type C Grease Trap notable for its large size (1980mm overall length) and inclusion of a BAFFLE for enhanced grease separation. Uses a removable PVC perforated bucket with 25 holes in five rows.',
+  renderImage: '/images/fabrications/typec_main.png',
+  diagramImage: '/images/fabrications/typec_diagram.png',
+
+  shortDescription: 'Type C Grease Trap featuring three removable PVC perforated buckets with 15 holes in five rows. Notable for its large size (1980mm length) and internal baffle.',
   shortDescriptionAr: 'مصيدة شحوم النوع C كبيرة الحجم بطول 1980 مم مع جدار حاجز داخلي لفصل الشحوم المحسن.',
 
-  overview: `Type C is a Grease Trap design notable for its large size (1980mm overall length) and inclusion of a BAFFLE. It uses a removable PVC perforated bucket with 25 holes in five rows.
+  overview: `Type C is a Grease Trap design notable for its large size (1980mm overall length) and inclusion of a BAFFLE. It features three removable PVC perforated buckets with 15 holes in five rows for enhanced solid waste filtration.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
@@ -261,21 +266,21 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
 • Material: PVC/UPVC, Neoprene (for gasket)
 • Overall Length: 1980mm (large format)
 • Baffle: Internal baffle wall for enhanced separation
-• Bucket: Removable PVC perforated bucket
-• Bucket Perforations: 25 holes in five rows
+• Bucket Configuration: Three removable PVC perforated buckets
+• Bucket Perforations: 15 holes in five rows
 • Cover: 600×450mm PVC 8mm TOP COVER
 • Gasket: 5mm THICK NEOPRENE GASKET
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
 
   features: [
+    'Three removable PVC perforated buckets',
+    'Buckets feature 15 holes in five rows',
     'Includes a baffle wall for enhanced grease separation',
-    'Removable PVC perforated bucket with 25 holes in five rows',
     '5mm THICK NEOPRENE GASKET for reliable sealing',
     '600×450mm PVC 8mm TOP COVER',
     'Large overall length of 1980mm for high capacity',
     'Custom built product based on waste water and site condition',
-    'Removable perforated bucket for solid waste collection',
   ],
 
   applications: [
@@ -291,7 +296,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
   fittings: [],
 
   downloads: [
-    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
+    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {
@@ -358,32 +363,34 @@ export const greaseTrapTypeD: ProductDetailConfig = {
   title: 'PVC/UPVC Grease Trap – Type D',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع D',
 
-  shortDescription: 'Type D Grease Trap featuring a GRP SEALED COVER (670×670×15mm THICK) secured by WING NUTS (24 NOS). Uses a smaller, removable PVC perforated bucket (360×360×300mm DEEP) with 12mm holes in 3 rows.',
+  renderImage: '/images/fabrications/typed_main.png',
+  diagramImage: '/images/fabrications/typed_diagram.png',
+
+  shortDescription: 'Type D Grease Trap featuring a single 360 x 360 x 300 deep removable PVC perforated bucket with 12mm holes in 3 rows each. Uses a 600x450mm PVC 8mm top cover.',
   shortDescriptionAr: 'مصيدة شحوم النوع D بغطاء GRP محكم 670×670×15 مم مثبت بـ 24 صامولة جناحية.',
 
-  overview: `Type D is a Grease Trap design featuring a GRP SEALED COVER (670×670×15mm THICK) secured by WING NUTS. It uses a smaller, removable PVC perforated bucket (360×360×300mm DEEP) with 12mm holes in 3 rows.
+  overview: `Type D is a Grease Trap design utilizing a 600x450mm PVC 8mm top cover secured by WING NUTS. It features a single compact 360 x 360 x 300 deep removable PVC perforated bucket with 12mm holes in 3 rows each.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
 **Type D Key Specifications:**
 • Material: PVC/UPVC, GRP (for cover)
 • Jointing Method: Wing nut/bolt securing
-• Cover: GRP SEALED COVER, 670×670×15mm THICK
+• Cover: 600x450mm PVC 8mm top cover
 • Securing: WING NUTS (24 NOS)
 • Air Vent: 055 (2") AIR VENT
-• Bucket: Removable PVC perforated, 360×360×300mm DEEP
+• Bucket: Single removable PVC perforated, 360x360x300 deep
 • Bucket Perforations: 12mm holes in 3 rows each
 • Duty/Class: As per Dubai Municipality Approved Drawing
 • Standards: ISO 9001:2015, ISO 14001-2015, OHSAS 18001`,
 
   features: [
-    'GRP sealed cover (670×670×15mm THICK)',
+    'Single 360 x 360 x 300 deep removable PVC perforated bucket',
+    'Bucket features 12mm holes in 3 rows each',
+    'Uses a 600x450mm PVC 8mm top cover',
     'Cover secured by 055 (2") AIR VENT WING NUTS (24 NOS)',
-    'Removable PVC perforated bucket (360×360×300mm DEEP)',
-    'Bucket has 12mm holes in 3 rows each',
     'Compact design suitable for space-constrained installations',
     'Custom built product based on waste water and site condition',
-    'Smaller removable perforated bucket for solid waste collection',
   ],
 
   applications: [
@@ -399,7 +406,7 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
   fittings: [],
 
   downloads: [
-    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC-FABRICATIONS-CATALOGUE.pdf' },
+    { label: 'PVC/UPVC Fabrications Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {

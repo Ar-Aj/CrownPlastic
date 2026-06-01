@@ -1,0 +1,614 @@
+'use client';
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CROWN PLASTIC PIPES - B2B HOMEPAGE
+// Crown Design System: Blue/White/Black Palette, Mobile-First, Static UI
+// ═══════════════════════════════════════════════════════════════════════════════
+
+import { useRef } from 'react';
+import Link from '@/components/common/LocaleLink';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import { motion, useInView } from 'framer-motion';
+import {
+  ArrowRight, Phone, Shield, Award, Factory,
+  CheckCircle2, Package,
+  Globe, Clock, Earth, Recycle
+} from 'lucide-react';
+
+// Components (above-fold — static imports)
+import {
+  AnimatedStatsStrip,
+  QuoteButton,
+} from '@/components/common';
+import { HomeVideoCarousel } from '@/components/home';
+import { CategoryCardCarousel } from '@/components/products/CategoryCardCarousel';
+import {
+  TiltCard,
+  SectionHeader,
+  GradientMesh,
+  MagneticButton,
+} from '@/components/ui/premium';
+import { CrownButton } from '@/components/ui/crown';
+
+// Components (below-fold — dynamic imports to reduce initial JS payload)
+// Each has a loading skeleton to reserve DOM height and prevent CLS.
+const BelowFoldSkeleton = () => <div className="min-h-[200px] bg-gray-50 animate-pulse rounded-lg" />;
+const LogoCarousel3D = dynamic(() => import('@/components/common').then(m => ({ default: m.LogoCarousel3D })), { loading: BelowFoldSkeleton });
+const CrownAdvantageSection = dynamic(() => import('@/components/home').then(m => ({ default: m.CrownAdvantageSection })), { loading: BelowFoldSkeleton });
+
+// Config & Data
+import { productCategories } from '@/config/products';
+import { clientLogos } from '@/config/clients';
+import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
+
+// Design System
+import {
+  radialStagger,
+  radialItem,
+} from '@/lib/design-system';
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// HERO SECTION - Crown Design System
+// Mobile-first, blue/white/black palette only, static UI
+// Space reserved for future VideoCarousel3D component
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function CrownHero() {
+  const t = useT();
+  return (
+    <>
+      {/* ═══════════════════════════════════════════════════════════════════════════════
+          PLACEHOLDER: Future VideoCarousel3D Component
+          
+          This section will contain a 3D-style 6-video carousel showcasing:
+          - Product manufacturing process
+          - Installation demonstrations  
+          - Factory tour highlights
+          - Quality testing procedures
+          
+          Component will be integrated here or partially overlap hero below.
+          Mobile: Single video with swipe navigation
+          Desktop: Grid/carousel layout with 3D perspective
+      ═══════════════════════════════════════════════════════════════════════ */}
+
+      <header className="relative min-h-[70vh] md:min-h-[80vh] flex items-center bg-white">
+        {/* Subtle static accent (no animation) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-transparent to-gray-50" />
+
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10 py-12 md:py-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Main Headline */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                {t('home.hero.title')}
+              </h1>
+
+              {/* Supporting Line */}
+              <p className="text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl">
+                {t('home.hero.description')}
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4">
+                <CrownButton variant="primary" size="lg" href="/contact-us?tab=quote">
+                  {t('home.hero.request_quote')}
+                  <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+                </CrownButton>
+                <CrownButton variant="secondary" size="lg" href="/products" className="!bg-gray-100 !text-gray-800 !border-gray-200 hover:!bg-gray-200">
+                  {t('home.hero.view_products')}
+                  <Package className="w-5 h-5" />
+                </CrownButton>
+              </div>
+            </div>
+
+            {/* Right Column - Factory Image + Floating Glass Tags */}
+            <div className="relative">
+              {/* Factory/Outlet Background Image - Fully Visible */}
+              <div className="relative rounded-2xl overflow-visible shadow-2xl aspect-[4/3] bg-slate-800">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  {/* TODO: Replace with actual factory image */}
+                  <Image
+                    src="/images/home/factory_home_hero.jpg"
+                    alt="Crown Plastic Factory High-Tech Facility"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                  {/* Subtle vignette - doesn't obstruct center */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-900/20" />
+                </div>
+
+                {/* Innovative Floating Glass Tags - Corner Anchored */}
+                {/* Top-Left: Floating Glass Tag with Connecting Line */}
+                <div className="absolute -top-3 -left-3 group">
+                  {/* Connecting line to image */}
+                  <div className="absolute top-1/2 left-1/2 w-8 h-8 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
+
+                  {/* Floating compact stat */}
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Clock className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.years')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.years_label')}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Top-Right: Floating Glass Tag */}
+                <div className="absolute -top-3 -right-3 group">
+                  <div className="absolute top-1/2 right-1/2 w-8 h-8 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
+
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Package className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.products')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.products_label')}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom-Left: Floating Glass Tag */}
+                <div className="absolute -bottom-3 -left-3 group">
+                  <div className="absolute bottom-1/2 left-1/2 w-8 h-8 border-l-2 border-b-2 border-primary/30 rounded-bl-lg" />
+
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.countries')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.countries_label')}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom-Right: Floating Glass Tag */}
+                <div className="absolute -bottom-3 -right-3 group">
+                  <div className="absolute bottom-1/2 right-1/2 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
+
+                  <div className="relative bg-white/95 backdrop-blur-md rounded-lg px-3 py-2 shadow-lg border border-primary/20 hover:scale-105 transition-transform">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Factory className="w-4 h-4 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <div className="text-xl font-bold text-gray-900 leading-none">{t('home.hero.badges.units')}</div>
+                        <div className="text-[10px] text-gray-600 leading-tight whitespace-nowrap">{t('home.hero.badges.units_label')}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRODUCT CATEGORIES - Glass Grid with Radial Stagger
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function ProductCategoriesSection() {
+  const t = useT();
+  const { language } = useLanguage();
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const categories = productCategories.slice(0, 6).map((cat) => {
+    const subImages = cat.subProducts
+      ? cat.subProducts.map(sub => sub.image).filter((img): img is string => !!img && img !== '')
+      : [];
+    const images = subImages.length > 0 ? subImages : (cat.image ? [cat.image] : []);
+
+    return {
+      title: language === 'ar' ? (cat.nameAr || cat.name) : cat.name,
+      description: language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription,
+      href: `/products/${cat.slug}`,
+      icon: cat.icon,
+      image: cat.image,
+      images,
+    };
+  });
+
+  return (
+    <section ref={ref} className="py-12 md:py-16 bg-white relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-50" />
+
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
+        <SectionHeader
+          label={t('home.products_section.label')}
+          title={t('home.products_section.title_prefix')}
+          titleHighlight={t('home.products_section.title_highlight')}
+          subtitle={t('home.products_section.subtitle')}
+        />
+
+        {/* Product Grid with Radial Stagger */}
+        <motion.div
+          variants={radialStagger}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {categories.map((cat) => (
+            <motion.div key={cat.href} variants={radialItem}>
+              <Link href={cat.href} className="group block h-full">
+                <TiltCard intensity={5}>
+                  <div className="relative rounded-2xl overflow-hidden h-full shadow-sm group-hover:shadow-2xl group-hover:shadow-slate-900/20 transition-all duration-500 ease-out">
+                    {/* Background - transitions from white to dark navy */}
+                    <div className="absolute inset-0 bg-white group-hover:bg-gradient-to-br group-hover:from-slate-800 group-hover:via-slate-900 group-hover:to-blue-950 transition-all duration-500" />
+
+                    {/* Subtle border */}
+                    <div className="absolute inset-0 rounded-2xl border border-gray-100 group-hover:border-slate-700/50 transition-colors duration-500" />
+
+                    <div className="relative">
+                      {/* Image — edge-to-edge, 16:9 aspect ratio */}
+                      <div className="relative w-full aspect-video overflow-hidden" style={{ backgroundColor: '#010816' }}>
+                        <CategoryCardCarousel images={cat.images} alt={cat.title} icon={cat.icon} />
+                      </div>
+
+                      {/* Content — padded below the image */}
+                      <div className="p-5">
+                        <h3 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-white transition-colors duration-400">
+                          {cat.title}
+                        </h3>
+                        <p className="text-sm mb-4 line-clamp-2 text-gray-600 group-hover:text-slate-300 transition-colors duration-400">
+                          {cat.description}
+                        </p>
+
+                        {/* View details link */}
+                        <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:text-amber-400 transition-all duration-400">
+                          <span className="group-hover:tracking-wide transition-all duration-400">{t('home.products_section.view_details')}</span>
+                          <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 transition-transform duration-400" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TiltCard>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* View All Button */}
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <MagneticButton href="/products" variant="outline" size="lg">
+            {t('home.products_section.view_all')}
+            <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+          </MagneticButton>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// STATS STRIP - Animated Horizontal Ticker
+// Slow, constant-speed marquee with 8 stats (certifications + key numbers)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function NewStatsStripSection() {
+  const t = useT();
+  // 8 stats as specified: mix of numbers, certifications, and quality metrics
+  const statsData = [
+    { icon: Award, value: '30+', label: t('home.stats_strip.years') },
+    { icon: Package, value: '5000+', label: t('home.stats_strip.products') },
+    { icon: Globe, value: '6', label: t('home.stats_strip.gcc') },
+    { icon: Earth, value: '52+', label: t('home.stats_strip.countries') },
+    { icon: Shield, value: 'ISO 9001:2015', label: t('home.stats_strip.iso_quality') },
+    { icon: Shield, value: 'ISO 14001:2015', label: t('home.stats_strip.iso_env') },
+    { icon: Shield, value: 'ISO 45001:2018', label: t('home.stats_strip.iso_safety') },
+    { icon: Recycle, value: '100%', label: t('home.stats_strip.material') },
+  ];
+
+  return (
+    <AnimatedStatsStrip
+      stats={statsData}
+      loopDurationMs={9000} // 35 seconds for one full loop - calm B2B feel
+    />
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// ABOUT PREVIEW - Split Screen with Scroll Reveal
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function AboutPreviewSection() {
+  const t = useT();
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const features = [
+    t('home.about_preview.features.quality'),
+    t('home.about_preview.features.certified'),
+    t('home.about_preview.features.range'),
+    t('home.about_preview.features.delivery'),
+  ];
+
+  return (
+    <section ref={ref} className="py-12 md:py-16 bg-gray-50 overflow-hidden">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+              {t('home.about_preview.badge')}
+            </span>
+            <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+              {t('home.about_preview.title_prefix')}{' '}
+              <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
+                {t('home.about_preview.title_highlight')}
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              {t('home.about_preview.description')}
+            </p>
+
+            {/* Feature List */}
+            <ul className="space-y-4 mb-8">
+              {features.map((feature, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.2 + i * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  </div>
+                  <span className="text-gray-700">{feature}</span>
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/about-us"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+              >
+                {t('home.about_preview.learn_more')}
+                <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+              </Link>
+              <QuoteButton variant="primary" size="md">
+                {t('home.about_preview.request_quote')}
+              </QuoteButton>
+            </div>
+          </motion.div>
+
+          {/* Right - Image with Floating Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/home/crown_trusted_section.png"
+                alt="Crown Plastic Pipes Trusted Projects"
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
+                className="w-full h-auto aspect-[4/3] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+
+            {/* Floating certification card */}
+            {/* Bottom-Left: Floating certification card - Updated to Minimalist Blue Theme */}
+            <motion.div
+              className="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 p-4 pr-6 rounded-2xl shadow-xl shadow-blue-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.5 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(59 130 246 / 0.1)" }}
+            >
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-blue-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 9001:2015</div>
+                <div className="text-xs text-blue-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.quality')}</div>
+              </div>
+            </motion.div>
+
+            {/* Bottom-Right: Floating certification card - Updated to Minimalist Teal Theme */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 bg-gradient-to-br from-teal-50 to-cyan-50 border border-teal-100 p-4 pr-6 rounded-2xl shadow-xl shadow-teal-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.7 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(20 184 166 / 0.1)" }}
+            >
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-teal-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-teal-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 45001:2018</div>
+                <div className="text-xs text-teal-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.safety')}</div>
+              </div>
+            </motion.div>
+
+            {/* Top-Right: Floating certification card - Updated to Minimalist Blue/Green Theme */}
+            <motion.div
+              className="absolute -top-6 -right-6 bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 p-4 pr-6 rounded-2xl shadow-xl shadow-emerald-100/20 hidden md:flex items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.6 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(16 185 129 / 0.1)" }}
+            >
+              <div className="w-10 h-10 bg-white rounded-xl shadow-sm border border-emerald-100 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-slate-800 leading-none mb-1">ISO 14001:2015</div>
+                <div className="text-xs text-emerald-600 font-semibold tracking-wide uppercase">{t('home.about_preview.badges.env')}</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// WHY CHOOSE US - Now using CrownAdvantageSection from components/home
+// Dark blue bento grid with hero card + 6 support cards
+// See: src/components/home/CrownAdvantageSection.tsx
+// Config: src/config/homepageAdvantage.ts
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FINAL CTA SECTION - Full Width with Gradient Background
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function FinalCTASection() {
+  const t = useT();
+
+  return (
+    <section className="relative py-12 md:py-14 overflow-hidden">
+      <GradientMesh variant="emerald" />
+
+      {/* Animated gradient overlay */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{
+          background: [
+            'radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)',
+            'radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)',
+            'radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.3) 0%, transparent 50%)',
+          ],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+      />
+
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-10 xl:px-12 2xl:w-[90vw] 2xl:max-w-none relative z-10">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <motion.span
+            className="inline-block text-emerald-200 text-sm font-semibold uppercase tracking-wider mb-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {t('home.final_cta.label')}
+          </motion.span>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            {t('home.final_cta.title')}
+          </h2>
+
+          <p className="text-emerald-100/90 text-lg mb-10 max-w-2xl mx-auto">
+            {t('home.final_cta.subtitle')}
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <QuoteButton variant="outline" size="lg" className="!bg-white !text-emerald-700 hover:!bg-emerald-50">
+              {t('home.final_cta.quote_btn')}
+              <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+            </QuoteButton>
+            <MagneticButton href="tel:+97165436781" variant="secondary" size="lg">
+              <Phone className="w-5 h-5" />
+              <span dir="ltr">+971 6 543 6781</span>
+            </MagneticButton>
+          </div>
+
+          {/* Trust indicators */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/20"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
+              <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+              <span>{t('home.final_cta.trust.experience')}</span>
+            </div>
+            <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
+              <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+              <span>{t('home.final_cta.trust.iso')}</span>
+            </div>
+            <div className="flex items-center gap-2 text-emerald-100/80 text-sm">
+              <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+              <span>{t('home.final_cta.trust.products')}</span>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// MAIN PAGE COMPONENT
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export default function HomePageClient() {
+  const t = useT();
+  return (
+    <>
+      {/* Video Carousel - Top Section */}
+      <HomeVideoCarousel />
+
+      {/* Crown Hero - Blue/White/Black Palette */}
+      <CrownHero />
+
+      {/* 3D Logo Carousel - Trusted by Industry Leaders */}
+      <LogoCarousel3D
+        logos={clientLogos.slice(0, 12)}
+        title={t('home.logo_carousel.title')}
+        subtitle={t('home.logo_carousel.subtitle')}
+      />
+
+      {/* Product Categories - Glass Grid */}
+      <ProductCategoriesSection />
+
+      {/* Stats Strip - Slow Horizontal Ticker with 8 Stats */}
+      <NewStatsStripSection />
+
+      {/* About Preview - Split Screen */}
+      <AboutPreviewSection />
+
+      {/* Why Choose Us - Crown Advantage Section */}
+      <CrownAdvantageSection />
+
+      {/* Final CTA */}
+      <FinalCTASection />
+    </>
+  );
+}

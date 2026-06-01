@@ -6,6 +6,7 @@ import Icon, { type IconName } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
 import { PvcPipeProgress } from './PvcPipeProgress';
 import { useT, TranslationPath } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -347,12 +348,14 @@ function MobileStoryCarousel({ prefersReducedMotion, t, journeyStories, translat
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [fillPercentage, setFillPercentage] = useState(0);
+  const { isRTL } = useLanguage();
 
   const handleScroll = useCallback(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const scrollLeft = container.scrollLeft;
+    // In RTL, scrollLeft is negative in some browsers, use absolute value
+    const scrollLeft = Math.abs(container.scrollLeft);
     const scrollWidth = container.scrollWidth - container.clientWidth;
     const progress = scrollWidth > 0 ? scrollLeft / scrollWidth : 0;
 
@@ -374,8 +377,10 @@ function MobileStoryCarousel({ prefersReducedMotion, t, journeyStories, translat
     const container = scrollContainerRef.current;
     if (!container) return;
     const cardWidth = container.clientWidth * 0.85 + 16;
+    const scrollTarget = index * cardWidth;
     container.scrollTo({
-      left: index * cardWidth,
+      // In RTL, scroll direction is negative in some browsers
+      left: isRTL ? -scrollTarget : scrollTarget,
       behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
   };

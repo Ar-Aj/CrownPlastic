@@ -27,12 +27,12 @@ export const technicalStandardsFAQs: FAQItem[] = [
 
 The standard defines pressure ratings from PN10 to PN25, with Crown Plastic Pipes manufacturing pipes compliant with PN10 (10 bar), PN16 (16 bar), and PN20 (20 bar) ratings. BS EN 1452 covers pipe dimensions from 16mm to 630mm diameter, material composition requirements, and rigorous testing protocols.
 
-Crown Plastic Pipes holds BS EN 1452 certification for our complete UPVC pressure pipe range, verified by BSI Kitemark certification. This ensures our pipes meet strict quality standards for potable water applications, municipal infrastructure, and industrial water transport across the UAE and GCC markets.`,
+Crown Plastic Pipes holds BS EN 1452 certification for our complete UPVC pressure pipe range, verified through independent laboratory testing. This ensures our pipes meet strict quality standards for potable water applications, municipal infrastructure, and industrial water transport across the UAE and GCC markets.`,
     answerAr: `BS EN 1452 هو المعيار الأوروبي لأنابيب البولي فينيل كلوريد غير الملدن (UPVC) المستخدمة في أنظمة إمداد المياه. يحدد هذا المعيار متطلبات أنابيب UPVC بقوة مطلوبة أدنى (MRS) تبلغ 25 ميجا باسكال، مما يضمن متانة استثنائية ومقاومة للضغط.
 
 يحدد المعيار تصنيفات الضغط من PN10 إلى PN25، حيث تصنع Crown Plastic Pipes أنابيب متوافقة مع تصنيفات PN10 (10 بار) و PN16 (16 بار) و PN20 (20 بار). يغطي BS EN 1452 أبعاد الأنابيب من 16 مم إلى 630 مم قطر، ومتطلبات تركيب المواد، وبروتوكولات الاختبار الصارمة.
 
-تحمل Crown Plastic Pipes شهادة BS EN 1452 لمجموعة أنابيب الضغط UPVC الكاملة لدينا، المؤكدة بشهادة BSI Kitemark.`,
+تحمل Crown Plastic Pipes شهادة BS EN 1452 لمجموعة أنابيب الضغط UPVC الكاملة لدينا، المعتمدة من خلال اختبارات مخبرية مستقلة.`,
     cluster: 'technical-standards',
     targetKeywords: ['BS EN 1452', 'UPVC standard', 'European pipe standard', 'MRS 25 MPa'],
     featuredSnippetTarget: 'BS EN 1452 standard explained'
@@ -77,9 +77,9 @@ Crown Plastic Pipes manufactures UPVC pipes certified to both standards, ensurin
   },
   {
     id: 'ts-3',
-    question: 'What is GSO EN 805 water supply standard?',
-    questionAr: 'ما هو معيار GSO EN 805 لإمداد المياه؟',
-    answer: `GSO EN 805 is the Gulf Standard Organization's adopted standard for water supply systems, harmonized with European EN 805. This standard establishes requirements for the design, installation, testing, and commissioning of water supply pipelines in GCC countries.
+    question: 'What is BS EN 805 water supply standard?',
+    questionAr: 'ما هو معيار BS EN 805 لإمداد المياه؟',
+    answer: `BS EN 805 is the European standard for water supply systems, widely adopted across the GCC region. This standard establishes requirements for the design, installation, testing, and commissioning of water supply pipelines.
 
 **Key Requirements:**
 - Pressure testing at 1.5x operating pressure
@@ -89,60 +89,52 @@ Crown Plastic Pipes manufactures UPVC pipes certified to both standards, ensurin
 - Documentation requirements
 
 **Coverage:**
-GSO EN 805 applies to all water supply installations in UAE, Saudi Arabia, Kuwait, Qatar, Bahrain, and Oman. It works in conjunction with product standards like BS EN 1452 for UPVC pipes.
+BS EN 805 applies to water supply installations across the GCC and internationally. It works in conjunction with product standards like BS EN 1452 for UPVC pipes.
 
-Crown Plastic Pipes products are designed to meet GSO EN 805 requirements, ensuring our UPVC pipes can be specified for municipal water projects, residential developments, and commercial buildings across the entire GCC region. Our technical team provides compliance documentation for project submissions.`,
-    answerAr: `GSO EN 805 هو المعيار المعتمد من منظمة التقييس الخليجية لأنظمة إمداد المياه، المتوافق مع المعيار الأوروبي EN 805. يحدد هذا المعيار متطلبات التصميم والتركيب والاختبار والتشغيل لخطوط أنابيب إمداد المياه في دول مجلس التعاون الخليجي.
+Crown Plastic Pipes products are designed to meet BS EN 805 requirements, ensuring our UPVC pipes can be specified for municipal water projects, residential developments, and commercial buildings across the entire GCC region. Our technical team provides compliance documentation for project submissions.`,
+    answerAr: `BS EN 805 هو المعيار الأوروبي لأنظمة إمداد المياه، المعتمد على نطاق واسع في منطقة الخليج. يحدد هذا المعيار متطلبات التصميم والتركيب والاختبار والتشغيل لخطوط أنابيب إمداد المياه.
 
 **المتطلبات الرئيسية:**
 - اختبار الضغط بمعدل 1.5 ضعف ضغط التشغيل
 - إجراءات التطهير لأنظمة المياه الصالحة للشرب
 - متطلبات توافق المواد
 
-**التغطية:**
-ينطبق GSO EN 805 على جميع منشآت إمداد المياه في الإمارات والسعودية والكويت وقطر والبحرين وعمان.
-
-منتجات Crown Plastic Pipes مصممة لتلبية متطلبات GSO EN 805.`,
+منتجات Crown Plastic Pipes مصممة لتلبية متطلبات BS EN 805.`,
     cluster: 'technical-standards',
-    targetKeywords: ['GSO EN 805', 'Gulf water supply standard', 'GCC pipe standard'],
-    featuredSnippetTarget: 'GSO EN 805 explained'
+    targetKeywords: ['BS EN 805', 'water supply standard', 'GCC pipe standard'],
+    featuredSnippetTarget: 'BS EN 805 explained'
   },
   {
     id: 'ts-4',
-    question: 'What is SASO TR-BM-5 certification for pipes?',
-    questionAr: 'ما هي شهادة SASO TR-BM-5 للأنابيب؟',
-    answer: `SASO TR-BM-5 is the Saudi Standards, Metrology and Quality Organization (SASO) technical regulation for building materials, including plastic pipes. This certification is mandatory for any pipe products entering the Saudi Arabian market.
+    question: 'What international certifications are needed for pipes in Saudi Arabia?',
+    questionAr: 'ما الشهادات الدولية المطلوبة للأنابيب في المملكة العربية السعودية؟',
+    answer: `Exporting plastic pipes to Saudi Arabia requires compliance with international quality standards. The key certifications include ISO 9001:2015 quality management, BS EN 1452 for UPVC pressure pipes, and ASTM/DIN manufacturing standards.
 
-**Certification Requirements:**
-- Product testing by SASO-accredited laboratories
+**Key Certification Requirements:**
+- ISO 9001:2015 quality management system certification
+- Product testing by accredited international laboratories
 - Factory quality management system audit
-- Compliance with referenced international standards
-- Arabic labeling requirements
+- Compliance with referenced international standards (BS EN, ASTM, DIN)
 - Periodic surveillance inspections
 
-**Benefits of SASO Certification:**
-- Legal market entry to Saudi Arabia
+**Benefits of International Certification:**
+- Market access to Saudi Arabia and GCC
 - Recognition by Saudi contractors and consultants
 - Required for government projects
 - Demonstrates quality commitment
 
-Crown Plastic Pipes holds SASO TR-BM-5 certification for our UPVC, PPR, and HDPE pipe ranges. This certification enables direct export to Saudi Arabia and ensures our products meet the Kingdom's stringent quality requirements for infrastructure, construction, and industrial applications.`,
-    answerAr: `SASO TR-BM-5 هي اللائحة الفنية من الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو) لمواد البناء، بما في ذلك الأنابيب البلاستيكية. هذه الشهادة إلزامية لأي منتجات أنابيب تدخل السوق السعودية.
+Crown Plastic Pipes holds ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications. Our products are manufactured to BS EN 1452, DIN 8062, and ASTM D1785 standards, enabling direct export to Saudi Arabia and the wider GCC market.`,
+    answerAr: `يتطلب تصدير الأنابيب البلاستيكية إلى المملكة العربية السعودية الامتثال لمعايير الجودة الدولية.
 
-**متطلبات الشهادة:**
-- اختبار المنتج من قبل مختبرات معتمدة من ساسو
-- تدقيق نظام إدارة جودة المصنع
-- الامتثال للمعايير الدولية المرجعية
-- متطلبات وضع العلامات بالعربية
+**متطلبات الشهادة الرئيسية:**
+- شهادة نظام إدارة الجودة ISO 9001:2015
+- اختبار المنتج من قبل مختبرات دولية معتمدة
+- الامتثال للمعايير الدولية (BS EN، ASTM، DIN)
 
-**فوائد شهادة ساسو:**
-- الدخول القانوني للسوق السعودية
-- الاعتراف من المقاولين والاستشاريين السعوديين
-
-تحمل Crown Plastic Pipes شهادة SASO TR-BM-5 لمجموعات أنابيب UPVC و PPR و HDPE لدينا.`,
+تحمل Crown Plastic Pipes شهادات ISO 9001:2015 و ISO 14001:2015 و ISO 45001:2018. منتجاتنا مصنعة وفق معايير BS EN 1452 و DIN 8062 و ASTM D1785.`,
     cluster: 'technical-standards',
-    targetKeywords: ['SASO TR-BM-5', 'Saudi pipe certification', 'SASO certification'],
-    featuredSnippetTarget: 'SASO TR-BM-5 certification'
+    targetKeywords: ['Saudi pipe certification', 'KSA pipe standards', 'ISO certification pipes'],
+    featuredSnippetTarget: 'pipe certifications Saudi Arabia'
   },
   {
     id: 'ts-5',
@@ -514,11 +506,10 @@ Crown Plastic Pipes UPVC products are manufactured with premium virgin PVC compo
 
 | Certification | Region | Requirement |
 |---------------|--------|-------------|
-| NSF/ANSI 61 | International | Drinking water system components |
-| WRAS | UK | Water Regulations Advisory Scheme |
 | BS EN 1452 | Europe/GCC | Potable water supply systems |
-| GSO | GCC | Gulf drinking water compliance |
-| SASO | Saudi Arabia | KSA potable water approval |
+| ISO 9001:2015 | International | Quality management system |
+| BS EN 805 | International | Water supply standard |
+| WRAS | UK | Water Regulations Advisory Scheme |
 
 **Safety Assurance:**
 1. **No lead or heavy metals** - Modern UPVC uses calcium-zinc stabilizers
@@ -529,20 +520,20 @@ Crown Plastic Pipes UPVC products are manufactured with premium virgin PVC compo
 **Health Standards Compliance:**
 UPVC pipes must pass extraction tests confirming that chemical migration into water is below safe limits defined by WHO and regional health authorities.
 
-Crown Plastic Pipes UPVC products are NSF/ANSI 61 certified and approved for potable water applications across UAE, Saudi Arabia, Kuwait, Qatar, and all GCC markets.`,
+Crown Plastic Pipes UPVC products are BS EN 1452 certified and approved for potable water applications across UAE, Saudi Arabia, Kuwait, Qatar, and all GCC markets.`,
     answerAr: `نعم، أنابيب UPVC متوافقة تمامًا مع معايير مياه الشرب عند تصنيعها وفقًا للشهادات المعترف بها. تحمل Crown Plastic Pipes موافقات متعددة للمياه الصالحة للشرب لمجموعة UPVC لدينا.
 
 **شهادات مياه الشرب الرئيسية:**
-- NSF/ANSI 61: مكونات نظام مياه الشرب
 - BS EN 1452: أنظمة إمداد المياه الصالحة للشرب
-- GSO: امتثال مياه الشرب الخليجية
+- BS EN 805: متطلبات إمداد المياه
+- ISO 9001:2015: نظام إدارة الجودة الدولي
 
 **ضمان السلامة:**
 1. **لا رصاص أو معادن ثقيلة**
 2. **لا ملدنات** - "غير ملدن" يعني لا فثالات
 3. **اختبار الهجرة** - يؤكد عدم تسرب مواد ضارة
 
-منتجات Crown Plastic Pipes UPVC معتمدة NSF/ANSI 61 ومعتمدة لتطبيقات المياه الصالحة للشرب.`,
+منتجات Crown Plastic Pipes UPVC معتمدة وفق BS EN 1452 ومعتمدة لتطبيقات المياه الصالحة للشرب.`,
     cluster: 'technical-standards',
     targetKeywords: ['UPVC drinking water safe', 'potable water UPVC', 'UPVC water certification'],
     featuredSnippetTarget: 'UPVC pipes safe drinking water'
@@ -793,7 +784,7 @@ High humidity (>65%) extends cure time by 25-50%. In UAE coastal areas during su
 1. Wait minimum 15-20 minutes before any handling
 2. Allow 24 hours before full pressure testing
 3. Initial pressure test at 50% working pressure
-4. Final test at 150% working pressure per GSO EN 805
+4. Final test at 150% working pressure per BS EN 805
 
 **Signs of Proper Cure:**
 - Joint feels firm and rigid
@@ -1637,7 +1628,7 @@ Crown Plastic Pipes recommends using quality cutting tools for professional resu
     id: 'im-17',
     question: 'How to pressure test UPVC pipe systems?',
     questionAr: 'كيفية اختبار ضغط أنظمة أنابيب UPVC؟',
-    answer: `Pressure testing verifies UPVC system integrity before commissioning. Follow GSO EN 805 and BS EN 1452 requirements:
+    answer: `Pressure testing verifies UPVC system integrity before commissioning. Follow BS EN 805 and BS EN 1452 requirements:
 
 **Pre-Test Checklist:**
 - All joints cured (minimum 24 hours)
@@ -1953,8 +1944,8 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-4',
     question: 'What are the best UPVC pipes for drinking water?',
     questionAr: 'ما هي أفضل أنابيب UPVC لمياه الشرب؟',
-    answer: `Best UPVC pipes for drinking water must have: NSF/ANSI 61 certification (safe for drinking water contact), BS EN 1452 compliance (European potable water standard), GSO approval (Gulf Standards), 100% virgin PVC compound, Calcium-zinc stabilizers (lead-free), No recycled content. Crown Plastic Pipes UPVC products are NSF/ANSI 61 certified and approved for potable water across UAE and GCC.`,
-    answerAr: 'يجب أن تحمل أفضل أنابيب UPVC شهادات NSF/ANSI 61 و BS EN 1452.',
+    answer: `Best UPVC pipes for drinking water must have: BS EN 1452 compliance (European potable water standard), ISO 9001:2015 quality management, 100% virgin PVC compound, Calcium-zinc stabilizers (lead-free), No recycled content. Crown Plastic Pipes UPVC products are BS EN 1452 certified and approved for potable water across UAE and GCC.`,
+    answerAr: 'يجب أن تحمل أفضل أنابيب UPVC شهادة BS EN 1452 ونظام إدارة جودة ISO 9001.',
     cluster: 'comparison-selection',
     targetKeywords: ['best UPVC drinking water', 'potable water pipes', 'safe drinking water UPVC'],
     featuredSnippetTarget: 'best UPVC pipes drinking water'
@@ -2003,8 +1994,8 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-9',
     question: 'Which UPVC pipe brand is best in UAE?',
     questionAr: 'أي علامة تجارية لأنابيب UPVC هي الأفضل في الإمارات؟',
-    answer: `Key selection criteria: BS EN 1452 certification, ISO 9001:2015 quality system, BSI Kitemark, NSF/ANSI 61, GSO mark, full diameter range, technical support, track record. Crown Plastic Pipes advantages: 30+ years UAE manufacturing, factory in Sharjah, BS EN 1452 certified, BSI Kitemark, complete product range, technical support team, competitive pricing, fast GCC delivery.`,
-    answerAr: 'معايير الاختيار: شهادات BS EN 1452، ISO 9001، BSI Kitemark. Crown Plastic Pipes: 30+ سنة تصنيع.',
+    answer: `Key selection criteria: BS EN 1452 certification, ISO 9001:2015 quality system, ISO 14001:2015, full diameter range, technical support, track record. Crown Plastic Pipes advantages: 30+ years UAE manufacturing, factory in Sharjah, BS EN 1452 certified, complete product range, technical support team, competitive pricing, fast GCC delivery.`,
+    answerAr: 'معايير الاختيار: شهادات BS EN 1452، ISO 9001. Crown Plastic Pipes: 30+ سنة تصنيع.',
     cluster: 'comparison-selection',
     targetKeywords: ['best UPVC brand UAE', 'top pipe manufacturer UAE', 'UPVC supplier Dubai'],
     featuredSnippetTarget: 'best UPVC pipe brand UAE'
@@ -2033,8 +2024,8 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-12',
     question: 'What certifications should UPVC pipes have for construction?',
     questionAr: 'ما الشهادات التي يجب أن تحملها أنابيب UPVC للبناء؟',
-    answer: `Essential certifications for UAE/GCC construction: BS EN 1452 (pressure pipes), ISO 9001:2015 (quality system), BSI Kitemark (quality mark), NSF/ANSI 61 (drinking water), GSO (Gulf compliance), SASO (Saudi market). Crown Plastic Pipes holds all these certifications, ensuring our products meet regional building codes and project specifications.`,
-    answerAr: 'الشهادات الأساسية: BS EN 1452، ISO 9001، BSI Kitemark، NSF/ANSI 61، GSO، SASO.',
+    answer: `Essential certifications for UAE/GCC construction: BS EN 1452 (pressure pipes), ISO 9001:2015 (quality system), ISO 14001:2015 (environmental), ISO 45001:2018 (health & safety). Crown Plastic Pipes holds all these certifications, ensuring our products meet regional building codes and project specifications.`,
+    answerAr: 'الشهادات الأساسية: BS EN 1452، ISO 9001، ISO 14001، ISO 45001.',
     cluster: 'comparison-selection',
     targetKeywords: ['UPVC certifications', 'pipe certifications UAE', 'BS EN 1452 certified'],
     featuredSnippetTarget: 'UPVC pipe certifications construction'
@@ -2094,7 +2085,7 @@ export function getFAQById(id: string): FAQItem | undefined {
 // Search FAQs by keyword
 export function searchFAQs(keyword: string): FAQItem[] {
   const lowerKeyword = keyword.toLowerCase();
-  return allFAQs.filter(faq => 
+  return allFAQs.filter(faq =>
     faq.question.toLowerCase().includes(lowerKeyword) ||
     faq.answer.toLowerCase().includes(lowerKeyword) ||
     faq.targetKeywords.some(k => k.toLowerCase().includes(lowerKeyword))

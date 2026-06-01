@@ -1,0 +1,1016 @@
+[
+    {
+        "fitting_type": "ELBOW 90°",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160",
+                "DIMENSIONS (mm) - d": "160",
+                "DIMENSIONS (mm) - L": "86.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "200",
+                "DIMENSIONS (mm) - d": "200",
+                "DIMENSIONS (mm) - L": "106.5",
+                "PN": "10"
+            }
+        ]
+    },
+    {
+        "fitting_type": "ELBOW 45°",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160",
+                "DIMENSIONS (mm) - d": "160",
+                "DIMENSIONS (mm) - L": "86.5",
+                "DIMENSIONS (mm) - PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "200",
+                "DIMENSIONS (mm) - d": "200",
+                "DIMENSIONS (mm) - L": "106.5",
+                "DIMENSIONS (mm) - PN": "10"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE ELBOW 90°",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20 x 1/2\"",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25 x 3/4\"",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 1\"",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - G": "1\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 x 1 1/4\"",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - G": "1 1/4\"",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 x 1 1/2\"",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - G": "1 1/2\"",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 x 2\"",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - G": "2\"",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "SOCKET/COUPLER",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160",
+                "DIMENSIONS (mm) - d": "160",
+                "DIMENSIONS (mm) - L": "86.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "200",
+                "DIMENSIONS (mm) - d": "200",
+                "DIMENSIONS (mm) - L": "106.5",
+                "PN": "10"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCER BUSH/SOCKET",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "25 X 20",
+                "DIMENSIONS (mm) - D": "25",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 20",
+                "DIMENSIONS (mm) - D": "32",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 25",
+                "DIMENSIONS (mm) - D": "32",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 20",
+                "DIMENSIONS (mm) - D": "40",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 25",
+                "DIMENSIONS (mm) - D": "40",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 32",
+                "DIMENSIONS (mm) - D": "40",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 20",
+                "DIMENSIONS (mm) - D": "50",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 25",
+                "DIMENSIONS (mm) - D": "50",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 32",
+                "DIMENSIONS (mm) - D": "50",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 40",
+                "DIMENSIONS (mm) - D": "50",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 25",
+                "DIMENSIONS (mm) - D": "63",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 32",
+                "DIMENSIONS (mm) - D": "63",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 40",
+                "DIMENSIONS (mm) - D": "63",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 50",
+                "DIMENSIONS (mm) - D": "63",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 X 50",
+                "DIMENSIONS (mm) - D": "75",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 X 63",
+                "DIMENSIONS (mm) - D": "75",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 X 63",
+                "DIMENSIONS (mm) - D": "90",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 X 75",
+                "DIMENSIONS (mm) - D": "90",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 X 63",
+                "DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 X 75",
+                "DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 X 90",
+                "DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160 X 90",
+                "DIMENSIONS (mm) - D": "160",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160 X 110",
+                "DIMENSIONS (mm) - D": "160",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20 x 1/2\"",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25 x 3/4\"",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 1\"",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - G": "1\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 x 1 1/4\"",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - G": "1 1/4\"",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 x 1 1/2\"",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - G": "1 1/2\"",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 x 2\"",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - G": "2\"",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 x 2 1/2\"",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - G": "2 1/2\"",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 x 3\"",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - G": "3\"",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 x 4\"",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - G": "4\"",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED ADAPTOR/SOCKET",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20 x 1/2\"",
+                "d": "20",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25 x 3/4\"",
+                "d": "25",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 1\"",
+                "d": "32",
+                "DIMENSIONS (mm) - G": "1\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 x 1 1/4\"",
+                "d": "40",
+                "DIMENSIONS (mm) - G": "1 1/4\"",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 x 1 1/2\"",
+                "d": "50",
+                "DIMENSIONS (mm) - G": "1 1/2\"",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 x 2\"",
+                "d": "63",
+                "DIMENSIONS (mm) - G": "2\"",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 x 2 1/2\"",
+                "d": "75",
+                "DIMENSIONS (mm) - G": "2 1/2\"",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 x 3\"",
+                "d": "90",
+                "DIMENSIONS (mm) - G": "3\"",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 x 4\"",
+                "d": "110",
+                "DIMENSIONS (mm) - G": "4\"",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "EQUAL TEE",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160",
+                "DIMENSIONS (mm) - d": "160",
+                "DIMENSIONS (mm) - L": "86.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED TEE",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20 X 2 X 20",
+                "d": "20",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25 x 1/2 x 25",
+                "d": "25",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25 X 4 X 25",
+                "d": "25",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 1/2 x 32",
+                "d": "32",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 4 X 32",
+                "d": "32",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 1 X 32",
+                "d": "32",
+                "DIMENSIONS (mm) - G": "1\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 x 1 1/4 x 40",
+                "d": "40",
+                "DIMENSIONS (mm) - G": "1 1/4\"",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 x 1 1/2 x 50",
+                "d": "50",
+                "DIMENSIONS (mm) - G": "1 1/2\"",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 x 2 x 63",
+                "d": "63",
+                "DIMENSIONS (mm) - G": "2\"",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 x 2 1/2 x 75",
+                "d": "75",
+                "DIMENSIONS (mm) - G": "2 1/2\"",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 X 3 X 90",
+                "d": "90",
+                "DIMENSIONS (mm) - G": "3\"",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCING TEE",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "25 X 20 X 25",
+                "d": "25",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 20 X 32",
+                "d": "32",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 X 25 X 32",
+                "d": "32",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 20 X 40",
+                "d": "40",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 25 X 40",
+                "d": "40",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 X 32 X 40",
+                "d": "40",
+                "DIMENSIONS (mm) - d1": "32",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 20 X 50",
+                "d": "50",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 25 X 50",
+                "d": "50",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 32 X 50",
+                "d": "50",
+                "DIMENSIONS (mm) - d1": "32",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 X 40 X 50",
+                "d": "50",
+                "DIMENSIONS (mm) - d1": "40",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 25 X 63",
+                "d": "63",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 32 X 63",
+                "d": "63",
+                "DIMENSIONS (mm) - d1": "32",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 40 X 63",
+                "d": "63",
+                "DIMENSIONS (mm) - d1": "40",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63 X 50 X 63",
+                "d": "63",
+                "DIMENSIONS (mm) - d1": "50",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 X 40 X 75",
+                "d": "75",
+                "DIMENSIONS (mm) - d1": "40",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 X 50 X 75",
+                "d": "75",
+                "DIMENSIONS (mm) - d1": "50",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75 X 63 X 75",
+                "d": "75",
+                "DIMENSIONS (mm) - d1": "63",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 X 63 X 90",
+                "d": "90",
+                "DIMENSIONS (mm) - d1": "63",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90 X 75 X 90",
+                "d": "90",
+                "DIMENSIONS (mm) - d1": "75",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110 x 90 x 110",
+                "d": "110",
+                "DIMENSIONS (mm) - d1": "90",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "160 x 110 x 160",
+                "d": "110",
+                "DIMENSIONS (mm) - d1": "110",
+                "DIMENSIONS (mm) - L": "86.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE REDUCER BUSH",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "25 x 1/2\"",
+                "DIMENSIONS (mm) - D": "25",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "32.4",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 1/2\"",
+                "DIMENSIONS (mm) - D": "32",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "35.6",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32 x 3/4\"",
+                "DIMENSIONS (mm) - D": "32",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "35.6",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40 x 1/2\"",
+                "DIMENSIONS (mm) - D": "40",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "40.0",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50 x 1/2\"",
+                "DIMENSIONS (mm) - D": "50",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "43.0",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "UNION",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "18.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.2",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.3",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "37.5",
+                "PN": "16"
+            }
+        ]
+    },
+    {
+        "fitting_type": "END CAP",
+        "standard": "DIN: 8063",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm)": "20",
+                "DIMENSIONS (mm) - d": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "25",
+                "DIMENSIONS (mm) - d": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "32",
+                "DIMENSIONS (mm) - d": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "40",
+                "DIMENSIONS (mm) - d": "40",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "50",
+                "DIMENSIONS (mm) - d": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "63",
+                "DIMENSIONS (mm) - d": "63",
+                "DIMENSIONS (mm) - L": "38.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "75",
+                "DIMENSIONS (mm) - d": "75",
+                "DIMENSIONS (mm) - L": "44.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "90",
+                "DIMENSIONS (mm) - d": "90",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "16"
+            },
+            {
+                "NOMINAL SIZE (mm)": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "61.5",
+                "PN": "16"
+            }
+        ]
+    }
+]

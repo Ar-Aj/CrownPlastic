@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { ArrowRight } from 'lucide-react';
 import { PipeArrowButton } from './PipeArrowButton';
 import { useT } from '@/i18n';
@@ -58,7 +58,7 @@ export function HomeVideoCarousel() {
       title: t('home.video_carousel.slides.pressure.title'),
       description: t('home.video_carousel.slides.pressure.description'),
       ctaLabel: t('home.video_carousel.slides.pressure.cta'),
-      ctaHref: '/products/upvc-pressure-pipes',
+      ctaHref: '/products/pvc-high-pressure-pipes',
     },
     {
       src: '/videos/home1st/ppr_1sthome.mp4',
@@ -72,7 +72,7 @@ export function HomeVideoCarousel() {
       title: t('home.video_carousel.slides.hdpe.title'),
       description: t('home.video_carousel.slides.hdpe.description'),
       ctaLabel: t('home.video_carousel.slides.hdpe.cta'),
-      ctaHref: '/products/hdpe-pipe-systems',
+      ctaHref: '/products/hdpe-pipes',
     },
     {
       src: '/videos/home1st/conduit_1sthome.mp4',

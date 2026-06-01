@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useLanguage, Language } from '@/context/LanguageContext';
 
 // ─────────────────────────────────────────────────────────────
@@ -18,7 +17,7 @@ interface LanguageToggleProps {
 // ─────────────────────────────────────────────────────────────
 /**
  * Language toggle component for switching between English and Arabic.
- * RTL-aware: Uses layoutId for automatic position handling in both LTR and RTL modes.
+ * Rewritten without Framer Motion — uses pure CSS transitions for performance.
  * 
  * - `header` variant: Pill-shaped toggle switch for the navbar
  * - `mobile` variant: Larger touch-friendly buttons for mobile menu
@@ -47,12 +46,10 @@ export default function LanguageToggle({
               aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
               aria-pressed={language === code}
             >
-              {/* Active pill background - uses layoutId for RTL-aware positioning */}
+              {/* Active pill background — CSS transition */}
               {language === code && (
-                <motion.span
-                  layoutId="mobile-lang-pill"
-                  className="absolute inset-0 bg-primary rounded-full shadow-sm"
-                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                <span
+                  className="absolute inset-0 bg-primary rounded-full shadow-sm transition-all duration-300"
                 />
               )}
               <span className={`relative z-10 ${
@@ -67,7 +64,7 @@ export default function LanguageToggle({
     );
   }
 
-  // Header variant - Pill-shaped toggle switch (RTL-aware)
+  // Header variant - Pill-shaped toggle switch
   return (
     <div className={`relative flex items-center rounded-full bg-white/15 p-1 ${className}`}>
       {languages.map(({ code, label }) => (
@@ -78,12 +75,10 @@ export default function LanguageToggle({
           aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
           aria-pressed={language === code}
         >
-          {/* Active pill background - uses layoutId for RTL-aware positioning */}
+          {/* Active pill background — CSS transition */}
           {language === code && (
-            <motion.span
-              layoutId="header-lang-pill"
-              className="absolute inset-0 bg-white rounded-full shadow-sm"
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            <span
+              className="absolute inset-0 bg-white rounded-full shadow-sm transition-all duration-300"
             />
           )}
           <span className={`relative z-10 ${

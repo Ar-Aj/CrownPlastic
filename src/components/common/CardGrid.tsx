@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import Image from 'next/image';
 import { useAnimateOnScroll } from './AnimateOnScroll';
 import Icon, { IconName } from '../ui/Icon';

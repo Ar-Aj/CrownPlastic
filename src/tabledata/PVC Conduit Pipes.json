@@ -1,0 +1,245 @@
+{
+    "1250N / 750N / 320N": {
+        "heavy_grade": [
+            {
+                "dimension": "20 mm",
+                "min_id": "16.0 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "25 mm",
+                "min_id": "20.7 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "32 mm",
+                "min_id": "26.5 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "38 mm",
+                "min_id": "32.5 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "50 mm",
+                "min_id": "43.0 mm",
+                "pcs_pack": "5",
+                "mtrs_pack": "14.5",
+                "length_pc": "2.9 Mtr"
+            }
+        ],
+        "medium_grade": [
+            {
+                "dimension": "20 mm",
+                "min_id": "16.5 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "25 mm",
+                "min_id": "20.9 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "32 mm",
+                "min_id": "27.3 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "38 mm",
+                "min_id": "33.1 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "50 mm",
+                "min_id": "44.4 mm",
+                "pcs_pack": "5",
+                "mtrs_pack": "14.5",
+                "length_pc": "2.9 Mtr"
+            }
+        ],
+        "light_grade": [
+            {
+                "dimension": "20 mm",
+                "min_id": "16.5 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "25 mm",
+                "min_id": "20.9 mm",
+                "pcs_pack": "20",
+                "mtrs_pack": "58",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "32 mm",
+                "min_id": "27.3 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "38 mm",
+                "min_id": "33.1 mm",
+                "pcs_pack": "10",
+                "mtrs_pack": "29",
+                "length_pc": "2.9 Mtr"
+            },
+            {
+                "dimension": "50 mm",
+                "min_id": "44.4 mm",
+                "pcs_pack": "5",
+                "mtrs_pack": "14.5",
+                "length_pc": "2.9 Mtr"
+            }
+        ]
+    },
+    "SCH 40": [
+        {
+            "trade_dimension": "1½\" (16 mm)",
+            "wall_thickness_mm": "2.77",
+            "pcs_pack": "20",
+            "mtrs_pack": "60",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "3½\" (21 mm)",
+            "wall_thickness_mm": "2.87",
+            "pcs_pack": "10",
+            "mtrs_pack": "30",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1\" (27 mm)",
+            "wall_thickness_mm": "3.38",
+            "pcs_pack": "10",
+            "mtrs_pack": "30",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1¼\" (35 mm)",
+            "wall_thickness_mm": "3.56",
+            "pcs_pack": "5",
+            "mtrs_pack": "15",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1½\" (41 mm)",
+            "wall_thickness_mm": "3.68",
+            "pcs_pack": "5",
+            "mtrs_pack": "15",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "2\" (53 mm)",
+            "wall_thickness_mm": "3.91",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "3\" (78 mm)",
+            "wall_thickness_mm": "5.49",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "4\" (103 mm)",
+            "wall_thickness_mm": "6.02",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "6\" (155 mm)",
+            "wall_thickness_mm": "7.11",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        }
+    ],
+    "SCH 80": [
+        {
+            "trade_dimension": "1½\" (16 mm)",
+            "wall_thickness_mm": "3.73",
+            "pcs_pack": "20",
+            "mtrs_pack": "60",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "½\" (21 mm)",
+            "wall_thickness_mm": "3.91",
+            "pcs_pack": "10",
+            "mtrs_pack": "30",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1\" (27 mm)",
+            "wall_thickness_mm": "4.55",
+            "pcs_pack": "10",
+            "mtrs_pack": "30",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1¼\" (35 mm)",
+            "wall_thickness_mm": "4.85",
+            "pcs_pack": "5",
+            "mtrs_pack": "15",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "1½\" (41 mm)",
+            "wall_thickness_mm": "5.08",
+            "pcs_pack": "5",
+            "mtrs_pack": "15",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "2\" (53 mm)",
+            "wall_thickness_mm": "5.54",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "3\" (78 mm)",
+            "wall_thickness_mm": "7.62",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "4\" (103 mm)",
+            "wall_thickness_mm": "8.56",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        },
+        {
+            "trade_dimension": "6\" (155 mm)",
+            "wall_thickness_mm": "10.97",
+            "pcs_pack": "1",
+            "mtrs_pack": "3",
+            "length_pc": "3 Mtr"
+        }
+    ]
+}

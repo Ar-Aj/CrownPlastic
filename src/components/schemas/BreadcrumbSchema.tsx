@@ -1,7 +1,6 @@
 // Breadcrumb Schema Component for Crown Plastic Pipes
 // Generates BreadcrumbList JSON-LD for navigation hierarchy
 
-import Script from 'next/script';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -33,7 +32,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   };
 
   return (
-    <Script
+    <script
       id="breadcrumb-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

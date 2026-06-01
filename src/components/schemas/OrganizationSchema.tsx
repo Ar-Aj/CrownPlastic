@@ -1,7 +1,6 @@
 // Enhanced Organization Schema Component for Crown Plastic Pipes
 // Implements comprehensive Organization + Brand structured data
 
-import Script from 'next/script';
 import { companyInfo, marketsServed, certifications } from '@/config/schemas';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -9,7 +8,7 @@ const baseUrl = 'https://crownplasticuae.com';
 export function OrganizationSchema() {
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['Organization', 'Manufacturer'],
     '@id': `${baseUrl}/#organization`,
     name: companyInfo.name,
     legalName: companyInfo.legalName,
@@ -30,11 +29,11 @@ export function OrganizationSchema() {
     foundingDate: companyInfo.foundingDate,
     foundingLocation: {
       '@type': 'Place',
-      name: 'Sharjah, United Arab Emirates',
+      name: 'Umm Al Quwain, United Arab Emirates',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Sharjah',
-        addressRegion: 'Sharjah',
+        addressLocality: 'Umm Al Quwain',
+        addressRegion: 'Umm Al Quwain',
         addressCountry: 'AE',
       },
     },
@@ -75,17 +74,15 @@ export function OrganizationSchema() {
         availableLanguage: ['English', 'Arabic'],
       },
     ],
-    sameAs: [
-      companyInfo.social.linkedin,
-      companyInfo.social.facebook,
-      companyInfo.social.twitter,
-      companyInfo.social.youtube,
-      companyInfo.social.instagram,
+    sameAs: [],
+    areaServed: [
+      { '@type': 'Country', name: 'United Arab Emirates' },
+      { '@type': 'City', name: 'Dubai' },
+      { '@type': 'City', name: 'Abu Dhabi' },
+      { '@type': 'City', name: 'Sharjah' },
+      { '@type': 'Region', name: 'GCC' },
+      { '@type': 'Region', name: 'Middle East' }
     ],
-    areaServed: marketsServed.map(m => ({
-      '@type': 'Country',
-      name: m.name,
-    })),
     brand: {
       '@type': 'Brand',
       '@id': `${baseUrl}/#brand`,
@@ -108,7 +105,7 @@ export function OrganizationSchema() {
         { '@type': 'OfferCatalog', name: 'PPR Pipes', description: 'DIN 8077/78 hot & cold water pipes' },
         { '@type': 'OfferCatalog', name: 'HDPE Pipe Systems', description: 'ISO 4427 polyethylene pipes' },
         { '@type': 'OfferCatalog', name: 'PVC Conduit Pipes', description: 'Electrical conduit systems' },
-        { '@type': 'OfferCatalog', name: 'UPVC Duct Pipes', description: 'Telecom duct systems' },
+        { '@type': 'OfferCatalog', name: 'PVC Duct Pipes', description: 'Telecom duct systems' },
       ],
     },
     hasCredential: certifications.map(cert => ({
@@ -130,7 +127,13 @@ export function OrganizationSchema() {
       'Plumbing Solutions',
       'BS EN 1452',
       'DIN 8062',
+      'ASTM D1785',
+      'ASTM D2466',
+      'GSO Certification',
+      'SASO Standards',
       'ISO 9001 Quality Management',
+      'ISO 14001 Environmental Management',
+      'ISO 45001 Occupational Safety',
     ],
     // NOTE: Aggregate rating intentionally removed until real customer reviews are collected
     // Google requires authentic reviews - using certifications as reviews violates guidelines
@@ -139,7 +142,7 @@ export function OrganizationSchema() {
   };
 
   return (
-    <Script
+    <script
       id="organization-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

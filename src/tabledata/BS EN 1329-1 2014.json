@@ -1,0 +1,655 @@
+[
+    {
+        "fitting_name": "ELBOW 90°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": "52.0",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "23.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "ELBOW 45°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": "52.0",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "23.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "SOCKET/COUPLER",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": "52.0",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "23"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70"
+            }
+        ]
+    },
+    {
+        "fitting_name": "REDUCER BUSH/SOCKET",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1 1/2"","DIMENSIONS (mm) - D": "55.9",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "22.5",
+                "DIMENSIONS (mm) - H": "31.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3 x 2"","DIMENSIONS (mm) - D": "82.6",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0",
+                "DIMENSIONS (mm) - H": "42.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4 x 2"","DIMENSIONS (mm) - D": "110.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0",
+                "DIMENSIONS (mm) - H": "50.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4 x 3"","DIMENSIONS (mm) - D": "110.0",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "50.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6 x 4"","DIMENSIONS (mm) - D": "160.0",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "60.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8 x 6"","DIMENSIONS (mm) - D": "200.0",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "73.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "TEE 87.5°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": "52.0",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "23.0",
+                "DIMENSIONS (mm) - H": "100.5"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0",
+                "DIMENSIONS (mm) - H": "133.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "170.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "219.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "296.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70.0",
+                "DIMENSIONS (mm) - H": "355.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "Y - 45°/SKEW TEE",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": "52.0",
+                "DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - L": "23.0",
+                "DIMENSIONS (mm) - H": "121.1"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29.0",
+                "DIMENSIONS (mm) - H": "152.1"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40.0",
+                "DIMENSIONS (mm) - H": "195.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48.0",
+                "DIMENSIONS (mm) - H": "259.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58.0",
+                "DIMENSIONS (mm) - H": "257.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "ELBOW 90° MALE/FEMALE",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "49",
+                "DIMENSIONS (mm) - L1": "130"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "TEE 87.5° MALE/FEMALE",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - L": "112",
+                "DIMENSIONS (mm) - L1": "49"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "ACCESS CAP/CLEAN OUT",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - H": "48.50"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - H": "61.00"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - H": "82.00"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - H": "99.00"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - H": "125.00"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "ACCESS/DOOR ELBOW 90°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "92.5",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "43",
+                "DIMENSIONS (mm) - Tr": "Tr76X4",
+                "DIMENSIONS (mm) - d1": "66.5",
+                "DIMENSIONS (mm) - H": "96.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.0",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "51.3",
+                "DIMENSIONS (mm) - Tr": "Tr104X4",
+                "DIMENSIONS (mm) - d1": "90.4",
+                "DIMENSIONS (mm) - H": "119.3"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - Tr": null,
+                "DIMENSIONS (mm) - d1": null,
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "ACCESS/DOOR TEE 87.5°",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "130.2",
+                "DIMENSIONS (mm) - L1": "142.1",
+                "DIMENSIONS (mm) - H": "250.3"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "144.1",
+                "DIMENSIONS (mm) - L1": "144.1",
+                "DIMENSIONS (mm) - H": "288.2"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - L1": null,
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "FEMALE THREADED ELBOW",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS - G": "1 1/2"","DIMENSIONS - d": "42.9",
+                "DIMENSIONS - L": "54.75"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS - G": null,
+                "DIMENSIONS - d": null,
+                "DIMENSIONS - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS - G": null,
+                "DIMENSIONS - d": null,
+                "DIMENSIONS - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS - G": null,
+                "DIMENSIONS - d": null,
+                "DIMENSIONS - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS - G": null,
+                "DIMENSIONS - d": null,
+                "DIMENSIONS - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS - G": null,
+                "DIMENSIONS - d": null,
+                "DIMENSIONS - L": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "INSPECTION PORT/ DOOR SOCKET",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - D": null,
+                "DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - D": "62.0",
+                "DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "29",
+                "DIMENSIONS (mm) - H": "111.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - D": "91.2",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "40",
+                "DIMENSIONS (mm) - H": "168.8"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "120.6",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "48",
+                "DIMENSIONS (mm) - H": "230.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - D": "173.6",
+                "DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "58",
+                "DIMENSIONS (mm) - H": "275.0"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - D": "216.0",
+                "DIMENSIONS (mm) - d": "200.0",
+                "DIMENSIONS (mm) - L": "70",
+                "DIMENSIONS (mm) - H": "335.0"
+            }
+        ]
+    },
+    {
+        "fitting_name": "VENT COWL",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": "55.9",
+                "DIMENSIONS (mm) - L": "49"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - L": "82"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "99.9"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": "160.0",
+                "DIMENSIONS (mm) - L": "143"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - L": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "FEMALE THREADED SOCKET",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2"","DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - G": "1 1/2"","DIMENSIONS (mm) - H": "54"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - G": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - G": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - G": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - G": null,
+                "DIMENSIONS (mm) - H": null
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8"","DIMENSIONS (mm) - d": null,
+                "DIMENSIONS (mm) - G": null,
+                "DIMENSIONS (mm) - H": null
+            }
+        ]
+    },
+    {
+        "fitting_name": "PARAPET ROOF DRAIN",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - D": "117.0",
+                "DIMENSIONS (mm) - d": "110.0",
+                "DIMENSIONS (mm) - L": "99.5",
+                "DIMENSIONS (mm) - B": "4.5",
+                "DIMENSIONS (mm) - H": "167.5",
+                "DIMENSIONS (mm) - H1": "40.5",
+                "DIMENSIONS (mm) - H2": "211.5"
+            }
+        ]
+    },
+    {
+        "fitting_name": "ROOF DRAIN",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "4"","DIMENSIONS (mm) - d1": "63",
+                "DIMENSIONS (mm) - d2": "110.0",
+                "DIMENSIONS (mm) - D1": "122.1",
+                "DIMENSIONS (mm) - D2": "164.9",
+                "DIMENSIONS (mm) - L1": "45",
+                "DIMENSIONS (mm) - L2": "60",
+                "DIMENSIONS (mm) - H1": "179.2",
+                "DIMENSIONS (mm) - H2": "111.6"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP TYPE - A",
+        "data": [
+            {
+                "NOMINAL SIZE (Inch)": "4\"X3\"X2\"X1 1/2"","DIMENSIONS (mm) - D": "116.8",
+                "DIMENSIONS (mm) - D_secondary": "110.0",
+                "DIMENSIONS (mm) - d1": "82.6",
+                "DIMENSIONS (mm) - d2": "55.9",
+                "DIMENSIONS (mm) - d3X3": "42.9",
+                "DIMENSIONS (mm) - H": "149",
+                "DIMENSIONS (mm) - L": "80.5"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP TYPE - B",
+        "data": [
+            {
+                "NOMINAL SIZE (mm)": "110X63X50",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - d1": "50",
+                "DIMENSIONS (mm) - d2": "63",
+                "DIMENSIONS (mm) - H": "76",
+                "DIMENSIONS (mm) - L": "43.7"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP TYPE - C",
+        "data": [
+            {
+                "NOMINAL SIZE (mm)": "4X3X2",
+                "DIMENSIONS (mm) - D": "110",
+                "DIMENSIONS (mm) - d": "82.6",
+                "DIMENSIONS (mm) - d1x3": "55.9",
+                "DIMENSIONS (mm) - H": "118",
+                "DIMENSIONS (mm) - L": "51.5"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP COVER TYPE - A I",
+        "data": [
+            {
+                "NOMINAL SIZE (mm) LXW": "150 X 150",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - d1": "99.5",
+                "DIMENSIONS (mm) - H": "31.8"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP COVER TYPE - A II",
+        "data": [
+            {
+                "NOMINAL SIZE (mm) LXW": "150 X 150",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - d1": "86",
+                "DIMENSIONS (mm) - H": "31.8"
+            }
+        ]
+    },
+    {
+        "fitting_name": "FLOOR DRAIN/TRAP COVER TYPE - B",
+        "data": [
+            {
+                "NOMINAL SIZE (mm) LXW": "150X150",
+                "DIMENSIONS (mm) - d": "110",
+                "DIMENSIONS (mm) - d1": "105",
+                "DIMENSIONS (mm) - H": "9"
+            }
+        ]
+    },
+    {
+        "fitting_name": "BALCONY TRAP",
+        "data": [
+            {
+                "NOMINAL SIZE (mm) LXW": "3\"X3"","DIMENSIONS (mm) - d": "42.9",
+                "DIMENSIONS (mm) - d1": "55.9",
+                "DIMENSIONS (mm) - H": "22"
+            }
+        ]
+    }
+]

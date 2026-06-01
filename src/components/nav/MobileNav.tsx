@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { NavItem } from '@/config/routes';
@@ -17,7 +17,6 @@ interface MobileNavProps {
   onClose: () => void;
 }
 
-// Map nav labels to translation paths (for main nav items)
 const navLabelToPath: Record<string, TranslationPath> = {
   'Home': 'nav.home',
   'About': 'nav.about',
@@ -27,6 +26,21 @@ const navLabelToPath: Record<string, TranslationPath> = {
   'Media & Blogs': 'nav.media_blogs',
   'Resources': 'nav.resources',
   'Contact': 'nav.contact',
+  'All Markets': 'nav.markets.all',
+  'Saudi Arabia': 'nav.markets.saudi_arabia',
+  'Riyadh': 'nav.markets.riyadh',
+  'Jeddah': 'nav.markets.jeddah',
+  'Dubai': 'nav.markets.dubai',
+  'Abu Dhabi': 'nav.markets.abu_dhabi',
+  'Sharjah': 'nav.markets.sharjah',
+  'Ajman': 'nav.markets.ajman',
+  'Umm Al Quwain': 'nav.markets.umm_al_quwain',
+  'Ras Al Khaimah': 'nav.markets.ras_al_khaimah',
+  'Fujairah': 'nav.markets.fujairah',
+  'Kuwait City': 'nav.markets.kuwait_city',
+  'Doha': 'nav.markets.doha',
+  'Manama': 'nav.markets.manama',
+  'Muscat': 'nav.markets.muscat',
 };
 
 export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
@@ -68,7 +82,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
       {/* Backdrop - z-[60] ensures it sits above header (z-50) and all page content */}
       <div
         className="fixed inset-0 bg-black/50 z-[60] lg:hidden transition-opacity duration-300"
-        style={{ 
+        style={{
           opacity: isOpen ? 1 : 0,
           pointerEvents: isOpen ? 'auto' : 'none',
         }}
@@ -76,15 +90,14 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
       />
 
       {/* Mobile menu panel - z-[70] ensures it's the absolute top layer */}
-      <div 
-        className={`fixed top-0 h-full w-80 max-w-full bg-white z-[70] lg:hidden shadow-xl overflow-y-auto ${
-          isRTL ? 'left-0' : 'right-0'
-        }`}
+      <div
+        className={`fixed top-0 h-full w-80 max-w-full bg-white z-[70] lg:hidden shadow-xl overflow-y-auto ${isRTL ? 'left-0' : 'right-0'
+          }`}
         style={{
-          transform: isOpen 
-            ? 'translateX(0)' 
-            : isRTL 
-              ? 'translateX(-100%)' 
+          transform: isOpen
+            ? 'translateX(0)'
+            : isRTL
+              ? 'translateX(-100%)'
               : 'translateX(100%)',
           transition: prefersReducedMotion ? 'none' : 'transform 300ms ease-out',
         }}
@@ -125,9 +138,8 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                   >
                     <span className="font-medium">{translateLabel(item.label)}</span>
                     <svg
-                      className={`w-5 h-5 transition-transform ${
-                        expandedItems.includes(item.label) ? 'rotate-180' : ''
-                      }`}
+                      className={`w-5 h-5 transition-transform ${expandedItems.includes(item.label) ? 'rotate-180' : ''
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -145,7 +157,8 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                         {t('nav.view_all')} {translateLabel(item.label)}
                       </Link>
                       {item.children.map((child) => {
-                        const childLabel = language === 'ar' ? (child.labelAr || child.label) : child.label;
+                        const childPath = navLabelToPath[child.label];
+                        const childLabel = childPath ? t(childPath) : language === 'ar' ? (child.labelAr || child.label) : child.label;
                         return (
                           <Link
                             key={child.href}
@@ -176,7 +189,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
         {/* CTA */}
         <div className="p-4 mt-4 border-t">
           <Link
-            href="/contact-us"
+            href="/contact-us?tab=quote"
             onClick={onClose}
             className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors rtl:flex-row-reverse"
           >

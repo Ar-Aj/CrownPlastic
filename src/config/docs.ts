@@ -23,28 +23,28 @@ export interface PdfDocument {
 // ============================================================================
 const PDF_PATHS = {
   // UPVC Pressure
-  UPVC_PRESSURE_PIPES: '/pdfs/UPVC%20PRESSURE%20PIPES_compressed.pdf',
-  UPVC_PRESSURE_FITTINGS_BS_EN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015_compressed.pdf',
-  UPVC_PRESSURE_FITTINGS_DIN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063_compressed.pdf',
-  UPVC_PRESSURE_FITTINGS_ASTM: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20ASTM%20D%202466%20SCH-40_compressed.pdf',
+  UPVC_PRESSURE_PIPES: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf',
+  UPVC_PRESSURE_FITTINGS_BS_EN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015.pdf',
+  UPVC_PRESSURE_FITTINGS_DIN: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063.pdf',
+  UPVC_PRESSURE_FITTINGS_ASTM: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20ASTM%20D%202466%20SCH-40.pdf',
 
   // UPVC Drainage
-  UPVC_DRAINAGE_PIPES: '/pdfs/UPVC%20DRAINAGE%20PIPES_compressed.pdf',
-  UPVC_DRAINAGE_FITTINGS_1329: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%2C2014%20-%20SUPERSEDED%20BS%205255%20AND%20BS4514_compressed.pdf',
-  UPVC_DRAINAGE_FITTINGS_1401: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20AND%20BS%205481_compressed.pdf',
+  UPVC_DRAINAGE_PIPES: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf',
+  UPVC_DRAINAGE_FITTINGS_1329: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%2C2014%20-%20SUPERSEDED%20BS%205255%20AND%20BS4514.pdf',
+  UPVC_DRAINAGE_FITTINGS_1401: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20AND%20BS%205481.pdf',
 
   // UPVC Duct & Conduit
-  UPVC_DUCT_PIPES: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES_compressed.pdf',
-  UPVC_FABRICATION: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES_compressed.pdf',
-  UPVC_CONDUIT: '/pdfs/UPVC%20CONDUIT%20PIPE_compressed.pdf',
+  UPVC_DUCT_PIPES: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf',
+  UPVC_FABRICATION: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf',
+  UPVC_CONDUIT: '/pdfs/UPVC%20CONDUIT%20PIPE.pdf',
 
   // Common UPVC
-  UPVC_STANDARDS: '/pdfs/UPVC%20PIPES%20AND%20FITTINGS%20STANDARDS_compressed.pdf',
-  UPVC_TECH_SPECS: '/pdfs/UPVC%20TECHNICAL%20SPECIFICATIONS%20AND%20MATERIAL%20PROPERTIES_compressed.pdf',
+  UPVC_STANDARDS: '/pdfs/UPVC%20PIPES%20AND%20FITTINGS%20STANDARDS.pdf',
+  UPVC_TECH_SPECS: '/pdfs/UPVC%20TECHNICAL%20SPECIFICATIONS%20AND%20MATERIAL%20PROPERTIES.pdf',
 
   // PPR & Polyethylene
-  PPR_PIPES: '/pdfs/PPR%20PIPES_compressed.pdf',
-  PE_SYSTEM: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM_compressed.pdf',
+  PPR_PIPES: '/pdfs/PPR%20PIPES.pdf',
+  PE_SYSTEM: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf',
 } as const;
 
 // ============================================================================
@@ -107,7 +107,7 @@ const DOCS = {
   // UPVC Duct & Fabrication
   upvcDuctPipes: {
     src: PDF_PATHS.UPVC_DUCT_PIPES,
-    title: 'UPVC Duct Pipes & Accessories',
+    title: 'PVC Duct Pipes & Accessories',
     titleAr: 'أنابيب وملحقات قنوات UPVC',
     description: 'Telecom & electrical cable protection systems',
     descriptionAr: 'أنظمة حماية كابلات الاتصالات والكهرباء',
@@ -169,6 +169,7 @@ const DOCS = {
 // Maps category slug to array of technical documents for category pages
 // ============================================================================
 export const categoryDocs: Record<string, PdfDocument[]> = {
+  // ── Legacy slugs (kept for backward compat if referenced elsewhere) ──
   'upvc-pressure': [
     DOCS.upvcPressurePipes,
     DOCS.upvcPressureFittingsBsEn,
@@ -201,91 +202,215 @@ export const categoryDocs: Record<string, PdfDocument[]> = {
   'polyethylene': [
     DOCS.peSystem,
   ],
+
+  // ── New 13-category slugs (aligned to config/products.ts) ──
+  'upvc-drainage-pipes': [
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcDrainageFittings1329,
+    DOCS.upvcDrainageFittings1401,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-drainage-fittings': [
+    DOCS.upvcDrainageFittings1329,
+    DOCS.upvcDrainageFittings1401,
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-pipes': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcPressureFittingsDin,
+    DOCS.upvcPressureFittingsAstm,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-fittings': [
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcPressureFittingsDin,
+    DOCS.upvcPressureFittingsAstm,
+    DOCS.upvcPressurePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-sch-40-fittings': [
+    DOCS.upvcPressureFittingsAstm,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-duct-pipes': [
+    DOCS.upvcDuctPipes,
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-duct-fittings': [
+    DOCS.upvcDuctPipes,
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-conduit-pipes': [
+    DOCS.pvcConduit,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'ppr-pipes': [
+    DOCS.pprPipes,
+  ],
+  'hdpe-pipes': [
+    DOCS.peSystem,
+  ],
+  'pex-pipes': [],           // No PEX PDF available in public/pdfs
+  'fabrications-accessories': [
+    DOCS.upvcFabrication,
+    DOCS.upvcStandards,
+  ],
+  'solvents': [],            // No Solvents PDF available in public/pdfs
 };
 
 // ============================================================================
 // PRODUCT-LEVEL DOCUMENTS
 // Maps "categorySlug/productSlug" to array of technical documents for product detail pages
+// Falls back to categoryDocs if no product-specific mapping exists
 // ============================================================================
 export const productDocs: Record<string, PdfDocument[]> = {
-  // -------------------------------------------------------------------------
-  // PVC PRESSURE PRODUCTS (new standardized slugs)
-  // -------------------------------------------------------------------------
-  'upvc-pressure/pvc-pressure-din-8063': [
+  // ─────────────────────────────────────────────────────────────────────────
+  // 1) UPVC DRAINAGE PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  'upvc-drainage-pipes/upvc-drainage-pipes-bs5255-bs-en-1329': [
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcDrainageFittings1329,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-drainage-pipes/upvc-drainage-pipes-bs-en-1401': [
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcDrainageFittings1401,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  // upvc-drainage-pipes-non-standard → falls back to categoryDocs
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 2) UPVC DRAINAGE FITTINGS
+  // ─────────────────────────────────────────────────────────────────────────
+  'upvc-drainage-fittings/upvc-drainage-fittings-bs-en-1329': [
+    DOCS.upvcDrainageFittings1329,
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'upvc-drainage-fittings/upvc-drainage-fittings-bs-en-1401': [
+    DOCS.upvcDrainageFittings1401,
+    DOCS.upvcDrainagePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  // upvc-drainage-fittings-pushfit → falls back to categoryDocs
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 3) PVC HIGH PRESSURE PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  'pvc-high-pressure-pipes/pvc-hp-pipes-iso-4422': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-pipes/pvc-hp-pipes-din-8061-62': [
     DOCS.upvcPressurePipes,
     DOCS.upvcPressureFittingsDin,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  'upvc-pressure/pvc-pressure-bs-en-1452': [
+  'pvc-high-pressure-pipes/pvc-hp-pipes-bs-en-iso-1452-2': [
     DOCS.upvcPressurePipes,
     DOCS.upvcPressureFittingsBsEn,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  'upvc-pressure/pvc-pressure-astm-d2466': [
+  'pvc-high-pressure-pipes/pvc-hp-pipes-bs-3505': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-pipes/pvc-hp-pipes-bs-3506': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-pipes/pvc-hp-pipes-astm-d1785': [
+    DOCS.upvcPressurePipes,
+    DOCS.upvcPressureFittingsAstm,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  'pvc-high-pressure-pipes/pvc-hp-pipes-astm-d2241': [
     DOCS.upvcPressurePipes,
     DOCS.upvcPressureFittingsAstm,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
 
-  // -------------------------------------------------------------------------
-  // UPVC DRAINAGE PRODUCTS (new standardized slugs)
-  // -------------------------------------------------------------------------
-  'upvc-drainage/upvc-drainage-bs-en-1329': [
-    DOCS.upvcDrainagePipes,
-    DOCS.upvcDrainageFittings1329,
+  // ─────────────────────────────────────────────────────────────────────────
+  // 4) PVC HIGH PRESSURE FITTINGS
+  // ─────────────────────────────────────────────────────────────────────────
+  'pvc-high-pressure-fittings/pvc-hp-fittings-din-8063': [
+    DOCS.upvcPressureFittingsDin,
+    DOCS.upvcPressurePipes,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
-  'upvc-drainage/upvc-drainage-bs-en-1401': [
-    DOCS.upvcDrainagePipes,
-    DOCS.upvcDrainageFittings1401,
+  'pvc-high-pressure-fittings/pvc-hp-fittings-bs-en-1452-3': [
+    DOCS.upvcPressureFittingsBsEn,
+    DOCS.upvcPressurePipes,
+    DOCS.upvcStandards,
+    DOCS.upvcTechSpecs,
+  ],
+  // pvc-hp-fittings-valves → falls back to categoryDocs
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 5) PVC SCH 40 FITTINGS
+  // ─────────────────────────────────────────────────────────────────────────
+  'pvc-sch-40-fittings/pvc-sch-40-fittings-astm-d2466': [
+    DOCS.upvcPressureFittingsAstm,
     DOCS.upvcStandards,
     DOCS.upvcTechSpecs,
   ],
 
-  // -------------------------------------------------------------------------
-  // UPVC DUCT PRODUCTS (single family)
-  // -------------------------------------------------------------------------
-  'upvc-duct/upvc-duct-black': [
-    DOCS.upvcDuctPipes,
-    DOCS.upvcFabrication,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
+  // ─────────────────────────────────────────────────────────────────────────
+  // 6) PVC DUCT PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  // All subcategories fall back to categoryDocs (ductPipes + fabrication + standards + techSpecs)
 
-  // -------------------------------------------------------------------------
-  // PVC CONDUIT PRODUCTS (new standardized slugs)
-  // -------------------------------------------------------------------------
-  'pvc-conduit/upvc-conduit-sch-40': [
-    DOCS.pvcConduit,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
-  'pvc-conduit/upvc-conduit-sch-80': [
-    DOCS.pvcConduit,
-    DOCS.upvcStandards,
-    DOCS.upvcTechSpecs,
-  ],
+  // ─────────────────────────────────────────────────────────────────────────
+  // 7) PVC DUCT FITTINGS
+  // ─────────────────────────────────────────────────────────────────────────
+  // Single subcategory falls back to categoryDocs
 
-  // -------------------------------------------------------------------------
-  // PPR PRODUCTS (existing slugs maintained)
-  // -------------------------------------------------------------------------
-  'ppr/ppr-sdr11-pn10': [
-    DOCS.pprPipes,
-  ],
-  'ppr/ppr-sdr7-4-pn16': [
-    DOCS.pprPipes,
-  ],
-  'ppr/ppr-sdr6-pn20': [
-    DOCS.pprPipes,
-  ],
+  // ─────────────────────────────────────────────────────────────────────────
+  // 8) PVC CONDUIT PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  // All subcategories fall back to categoryDocs (conduit + standards + techSpecs)
 
-  // -------------------------------------------------------------------------
-  // POLYETHYLENE (HDPE) - No subProducts exposed, category-level only
-  // -------------------------------------------------------------------------
+  // ─────────────────────────────────────────────────────────────────────────
+  // 9) PP-R PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  // All SDR variants fall back to categoryDocs (pprPipes)
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 10) HDPE PIPES
+  // ─────────────────────────────────────────────────────────────────────────
+  // All PE grade variants fall back to categoryDocs (peSystem)
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 11) PEX PIPES — No PDFs available
+  // 12) FABRICATIONS & ACCESSORIES — Falls back to categoryDocs
+  // 13) SOLVENTS — No PDFs available
+  // ─────────────────────────────────────────────────────────────────────────
 };
 
 // ============================================================================
@@ -305,7 +430,7 @@ export const topLevelDocs: PdfDocument[] = [
   },
   {
     src: PDF_PATHS.UPVC_DUCT_PIPES,
-    title: 'UPVC Duct Pipes',
+    title: 'PVC Duct Pipes',
     description: 'Telecom & electrical | DIN 8062, NEMA TC-2',
   },
   {

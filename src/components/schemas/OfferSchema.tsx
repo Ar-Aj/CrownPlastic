@@ -1,7 +1,6 @@
 // Offer & Pricing Schema Component for Crown Plastic Pipes - Phase 3 AEO
 // Implements Offer, AggregateOffer, and Regional Pricing JSON-LD
 
-import Script from 'next/script';
 import { companyInfo, marketsServed } from '@/config/schemas';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -105,7 +104,7 @@ export function OfferSchema({
   };
 
   return (
-    <Script
+    <script
       id={`offer-schema-${sku}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
@@ -162,7 +161,7 @@ export function AggregateOfferSchema({
   };
 
   return (
-    <Script
+    <script
       id={`aggregate-offer-schema-${productName.toLowerCase().replace(/\s+/g, '-').substring(0, 30)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOfferSchema) }}
@@ -226,7 +225,7 @@ export function RegionalOfferSchema({
   };
 
   return (
-    <Script
+    <script
       id={`regional-offer-schema-${productName.toLowerCase().replace(/\s+/g, '-').substring(0, 30)}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalSchema) }}
@@ -348,7 +347,7 @@ export function BulkPricingSchema({
   };
 
   return (
-    <Script
+    <script
       id={`bulk-pricing-schema-${sku}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(bulkPricingSchema) }}

@@ -1,0 +1,212 @@
+[
+  {
+    "category": "Payload 1: UPVC Drainage Pipes BS 5255 & BS 4514",
+    "tables": [
+      {
+        "tableName": "Above Ground Soil & Waste pipes: BS 5255/BS EN 1329-1:2014",
+        "columns": [
+          "Nominal Size (Inch)",
+          "Min Mean Outside Dia. (mm)",
+          "Max Mean Outside Dia. (mm)",
+          "Mean Wall Thickness (mm) - Min",
+          "Mean Wall Thickness (mm) - Max"
+        ],
+        "rows": [
+          {
+            "Nominal Size (Inch)": "1 1/4\"",
+            "Min Mean Outside Dia. (mm)": "36.15",
+            "Max Mean Outside Dia. (mm)": "36.45",
+            "Mean Wall Thickness (mm) - Min": "1.8",
+            "Mean Wall Thickness (mm) - Max": "2.2"
+          },
+          {
+            "Nominal Size (Inch)": "1 1/2\"",
+            "Min Mean Outside Dia. (mm)": "42.75",
+            "Max Mean Outside Dia. (mm)": "43.05",
+            "Mean Wall Thickness (mm) - Min": "1.9",
+            "Mean Wall Thickness (mm) - Max": "2.3"
+          },
+          {
+            "Nominal Size (Inch)": "2\"",
+            "Min Mean Outside Dia. (mm)": "55.85",
+            "Max Mean Outside Dia. (mm)": "56.05",
+            "Mean Wall Thickness (mm) - Min": "2.0",
+            "Mean Wall Thickness (mm) - Max": "2.4"
+          }
+        ]
+      },
+      {
+        "tableName": "Above Ground Soil & Waste pipes: BS 4514/BS EN 1329 - 1: 2014",
+        "columns": [
+          "Nominal Size (Inch)",
+          "Mean Outside Dia. (mm) - Min",
+          "Mean Outside Dia. (mm) - Max",
+          "Mean Wall Thickness (mm) - Min",
+          "Mean Wall Thickness (mm) - Max"
+        ],
+        "rows": [
+          {
+            "Nominal Size (Inch)": "3\"",
+            "Mean Outside Dia. (mm) - Min": "82.00",
+            "Mean Outside Dia. (mm) - Max": "82.35",
+            "Mean Wall Thickness (mm) - Min": "3.2",
+            "Mean Wall Thickness (mm) - Max": "3.5"
+          },
+          {
+            "Nominal Size (Inch)": "4\"",
+            "Mean Outside Dia. (mm) - Min": "110.00",
+            "Mean Outside Dia. (mm) - Max": "110.32",
+            "Mean Wall Thickness (mm) - Min": "3.2",
+            "Mean Wall Thickness (mm) - Max": "3.8"
+          },
+          {
+            "Nominal Size (Inch)": "6\"",
+            "Mean Outside Dia. (mm) - Min": "160.00",
+            "Mean Outside Dia. (mm) - Max": "160.45",
+            "Mean Wall Thickness (mm) - Min": "3.2",
+            "Mean Wall Thickness (mm) - Max": "3.8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Payload 2: UPVC Drainage Pipes BS EN 1401-1",
+    "tables": [
+      {
+        "tableName": "Under Ground drainage & Sewerage: BS EN 1401-1 (BS 4660 & BS 5481)",
+        "columns": [
+          "Nominal Size (Inch)",
+          "Mean Outside Dia. (mm) - Min",
+          "Mean Outside Dia. (mm) - Max",
+          "Mean Wall Thickness (mm) - Min",
+          "Mean Wall Thickness (mm) - Max"
+        ],
+        "rows": [
+          {
+            "Nominal Size (Inch)": "3\"",
+            "Mean Outside Dia. (mm) - Min": "82.00",
+            "Mean Outside Dia. (mm) - Max": "82.35",
+            "Mean Wall Thickness (mm) - Min": "3.2",
+            "Mean Wall Thickness (mm) - Max": "3.5"
+          },
+          {
+            "Nominal Size (Inch)": "4\"",
+            "Mean Outside Dia. (mm) - Min": "110.00",
+            "Mean Outside Dia. (mm) - Max": "110.32",
+            "Mean Wall Thickness (mm) - Min": "3.2",
+            "Mean Wall Thickness (mm) - Max": "3.8"
+          },
+          {
+            "Nominal Size (Inch)": "6\"",
+            "Mean Outside Dia. (mm) - Min": "160.00",
+            "Mean Outside Dia. (mm) - Max": "160.45",
+            "Mean Wall Thickness (mm) - Min": "4.0",
+            "Mean Wall Thickness (mm) - Max": "4.8"
+          },
+          {
+            "Nominal Size (Inch)": "8\"",
+            "Mean Outside Dia. (mm) - Min": "200.00",
+            "Mean Outside Dia. (mm) - Max": "200.65",
+            "Mean Wall Thickness (mm) - Min": "4.9",
+            "Mean Wall Thickness (mm) - Max": "5.9"
+          },
+          {
+            "Nominal Size (Inch)": "10\"",
+            "Mean Outside Dia. (mm) - Min": "250.00",
+            "Mean Outside Dia. (mm) - Max": "250.75",
+            "Mean Wall Thickness (mm) - Min": "6.1",
+            "Mean Wall Thickness (mm) - Max": "7.5"
+          },
+          {
+            "Nominal Size (Inch)": "12\"",
+            "Mean Outside Dia. (mm) - Min": "315.00",
+            "Mean Outside Dia. (mm) - Max": "315.90",
+            "Mean Wall Thickness (mm) - Min": "7.7",
+            "Mean Wall Thickness (mm) - Max": "8.8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Payload 3: UPVC Drainage Non-Standard Pipes",
+    "tables": [
+      {
+        "tableName": "Non-Standard Pipes for Drainage Applications",
+        "columns": [
+          "Nominal Size (Inch)",
+          "Mean Outside Dia. (mm) - Min",
+          "Mean Outside Dia. (mm) - Max",
+          "Mean Wall Thickness (mm) - Min",
+          "Mean Wall Thickness (mm) - Max"
+        ],
+        "rows": [
+          {
+            "Nominal Size (Inch)": "1 1/4\"",
+            "Mean Outside Dia. (mm) - Min": "36.15",
+            "Mean Outside Dia. (mm) - Max": "36.45",
+            "Mean Wall Thickness (mm) - Min": "1.5",
+            "Mean Wall Thickness (mm) - Max": "2.0"
+          },
+          {
+            "Nominal Size (Inch)": "1 1/2\"",
+            "Mean Outside Dia. (mm) - Min": "42.75",
+            "Mean Outside Dia. (mm) - Max": "43.05",
+            "Mean Wall Thickness (mm) - Min": "1.5",
+            "Mean Wall Thickness (mm) - Max": "2.0"
+          },
+          {
+            "Nominal Size (Inch)": "2\"",
+            "Mean Outside Dia. (mm) - Min": "55.85",
+            "Mean Outside Dia. (mm) - Max": "56.05",
+            "Mean Wall Thickness (mm) - Min": "1.5",
+            "Mean Wall Thickness (mm) - Max": "2.0"
+          },
+          {
+            "Nominal Size (Inch)": "3\"",
+            "Mean Outside Dia. (mm) - Min": "82.00",
+            "Mean Outside Dia. (mm) - Max": "82.35",
+            "Mean Wall Thickness (mm) - Min": "2.2",
+            "Mean Wall Thickness (mm) - Max": "2.5"
+          },
+          {
+            "Nominal Size (Inch)": "4\"",
+            "Mean Outside Dia. (mm) - Min": "110.00",
+            "Mean Outside Dia. (mm) - Max": "110.32",
+            "Mean Wall Thickness (mm) - Min": "2.5",
+            "Mean Wall Thickness (mm) - Max": "3.5"
+          },
+          {
+            "Nominal Size (Inch)": "6\"",
+            "Mean Outside Dia. (mm) - Min": "160.00",
+            "Mean Outside Dia. (mm) - Max": "160.45",
+            "Mean Wall Thickness (mm) - Min": "3.0",
+            "Mean Wall Thickness (mm) - Max": "4.0"
+          },
+          {
+            "Nominal Size (Inch)": "8\"",
+            "Mean Outside Dia. (mm) - Min": "200.00",
+            "Mean Outside Dia. (mm) - Max": "200.65",
+            "Mean Wall Thickness (mm) - Min": "3.5",
+            "Mean Wall Thickness (mm) - Max": "4.0"
+          },
+          {
+            "Nominal Size (Inch)": "10\"",
+            "Mean Outside Dia. (mm) - Min": "250.00",
+            "Mean Outside Dia. (mm) - Max": "250.75",
+            "Mean Wall Thickness (mm) - Min": "4.0",
+            "Mean Wall Thickness (mm) - Max": "4.6"
+          },
+          {
+            "Nominal Size (Inch)": "12\"",
+            "Mean Outside Dia. (mm) - Min": "315.00",
+            "Mean Outside Dia. (mm) - Max": "315.90",
+            "Mean Wall Thickness (mm) - Min": "6.1",
+            "Mean Wall Thickness (mm) - Max": "7.0"
+          }
+        ]
+      }
+    ]
+  }
+]

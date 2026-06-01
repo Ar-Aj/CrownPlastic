@@ -1,8 +1,8 @@
 // LocalBusiness Schema Component for Crown Plastic Pipes
 // Generates location-specific JSON-LD for service area pages
 
-import Script from 'next/script';
 import { ServiceArea, getLocalBusinessSchemaData, companyInfo } from '@/config/schemas';
+import { useLanguage } from '@/context/LanguageContext';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -11,10 +11,11 @@ interface LocalBusinessSchemaProps {
 }
 
 export function LocalBusinessSchema({ serviceArea }: LocalBusinessSchemaProps) {
-  const schemaData = getLocalBusinessSchemaData(serviceArea, baseUrl);
+  const { language } = useLanguage();
+  const schemaData = getLocalBusinessSchemaData(serviceArea, baseUrl, language);
 
   return (
-    <Script
+    <script
       id={`localbusiness-schema-${serviceArea.slug}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -24,11 +25,14 @@ export function LocalBusinessSchema({ serviceArea }: LocalBusinessSchemaProps) {
 
 // Enhanced LocalBusiness schema with full details (for contact page)
 export function LocalBusinessDetailSchema() {
+  const { language } = useLanguage();
+  const isAr = language === 'ar';
+
   const detailSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${baseUrl}/#localbusiness`,
-    name: companyInfo.name,
+    name: isAr ? 'مصنع كراون لأنابيب البلاستيك ذ.م.م' : companyInfo.name,
     alternateName: companyInfo.alternateName,
     description: companyInfo.description,
     url: baseUrl,
@@ -53,7 +57,7 @@ export function LocalBusinessDetailSchema() {
       latitude: companyInfo.geo.latitude,
       longitude: companyInfo.geo.longitude,
     },
-    hasMap: `https://maps.google.com/?q=${companyInfo.geo.latitude},${companyInfo.geo.longitude}`,
+    hasMap: companyInfo.hasMap,
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -76,11 +80,11 @@ export function LocalBusinessDetailSchema() {
     ],
     areaServed: [
       { '@type': 'Country', name: 'United Arab Emirates' },
-      { '@type': 'Country', name: 'Saudi Arabia' },
-      { '@type': 'Country', name: 'Kuwait' },
-      { '@type': 'Country', name: 'Qatar' },
-      { '@type': 'Country', name: 'Bahrain' },
-      { '@type': 'Country', name: 'Oman' },
+      { '@type': 'City', name: 'Dubai' },
+      { '@type': 'City', name: 'Abu Dhabi' },
+      { '@type': 'City', name: 'Sharjah' },
+      { '@type': 'Region', name: 'GCC' },
+      { '@type': 'Region', name: 'Middle East' }
     ],
     serviceType: [
       'Pipe Manufacturer',
@@ -101,16 +105,10 @@ export function LocalBusinessDetailSchema() {
         { '@type': 'OfferCatalog', name: 'PPR Pipes', description: 'DIN 8077/78' },
         { '@type': 'OfferCatalog', name: 'HDPE Pipes', description: 'ISO 4427' },
         { '@type': 'OfferCatalog', name: 'PVC Conduits', description: 'Electrical conduits' },
-        { '@type': 'OfferCatalog', name: 'UPVC Duct Pipes', description: 'Telecom ducts' },
+        { '@type': 'OfferCatalog', name: 'PVC Duct Pipes', description: 'Telecom ducts' },
       ],
     },
-    sameAs: [
-      companyInfo.social.linkedin,
-      companyInfo.social.facebook,
-      companyInfo.social.twitter,
-      companyInfo.social.youtube,
-      companyInfo.social.instagram,
-    ],
+    sameAs: [],
     // NOTE: Aggregate rating intentionally removed until real customer reviews are collected
     // Google requires authentic reviews - do not use fabricated ratings
     // Re-enable after collecting minimum 5-10 genuine customer reviews
@@ -145,7 +143,7 @@ export function LocalBusinessDetailSchema() {
   };
 
   return (
-    <Script
+    <script
       id="localbusiness-detail-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(detailSchema) }}

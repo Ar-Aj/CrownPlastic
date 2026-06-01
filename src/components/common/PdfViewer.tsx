@@ -1,17 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import Icon from '@/components/ui/Icon';
 import { useT } from '@/i18n';
 
 interface PdfViewerProps {
-  /** Path to PDF in /public/pdfs/... e.g. '/pdfs/UPVC%20PRESSURE%20PIPES_compressed.pdf' */
+  /** Path to PDF in /public/pdfs/... e.g. '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' */
   src: string;
   /** Display title for the document */
   title: string;
   /** Optional description/subtitle */
   description?: string;
+  /** If provided, the viewer is controlled externally (no built-in trigger button) */
+  isOpenExternal?: boolean;
+  /** Called when the externally-controlled viewer should close */
+  onCloseExternal?: () => void;
 }
 
 /**
@@ -26,23 +30,31 @@ interface PdfViewerProps {
  * or DevTools. True "no download at all" is technically impossible for HTTP-served PDFs.
  * This component provides view-only UX without encouraging downloads.
  */
-export default function PdfViewer({ src, title, description }: PdfViewerProps) {
+export default function PdfViewer({ src, title, description, isOpenExternal, onCloseExternal }: PdfViewerProps) {
   const t = useT();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenInternal, setIsOpenInternal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // PDF viewer URL with toolbar and navigation enabled, fit to horizontal width
-  const pdfUrl = `${src}#toolbar=1&navpanes=1&view=FitH`;
+  // Support both self-contained mode (with trigger button) and external control mode
+  const isExternallyControlled = isOpenExternal !== undefined;
+  const isOpen = isExternallyControlled ? isOpenExternal : isOpenInternal;
+
+  // PDF viewer URL with toolbar enabled, navpanes closed, fit to screen
+  const pdfUrl = `${src}#toolbar=1&navpanes=0&view=Fit`;
 
   const handleOpen = () => {
     setIsLoading(true);
-    setIsOpen(true);
+    setIsOpenInternal(true);
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
+  const handleClose = useCallback(() => {
+    if (isExternallyControlled && onCloseExternal) {
+      onCloseExternal();
+    } else {
+      setIsOpenInternal(false);
+    }
     setIsLoading(true); // Reset for next open
-  };
+  }, [isExternallyControlled, onCloseExternal]);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -65,11 +77,12 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
     };
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
-  }, [isOpen]);
+  }, [isOpen, handleClose]);
 
   return (
     <>
-      {/* Trigger Card/Button */}
+      {/* Trigger Card/Button - only render in self-contained mode */}
+      {!isExternallyControlled && (
       <button
         onClick={handleOpen}
         className="group w-full text-left p-4 bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-200"
@@ -94,11 +107,12 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
           </div>
         </div>
       </button>
+      )}
 
       {/* Full-Screen Overlay - Rendered via Portal to document.body to escape all stacking contexts */}
       {isOpen && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-[9999] flex flex-col bg-black/80"
+          className="fixed inset-0 z-[9999] flex flex-col bg-black/70 backdrop-blur-sm"
           onClick={handleClose}
           role="dialog"
           aria-modal="true"
@@ -128,20 +142,20 @@ export default function PdfViewer({ src, title, description }: PdfViewerProps) {
             </button>
           </div>
 
-          {/* PDF Container - fills remaining viewport, only scrollable element */}
+          {/* PDF Container */}
           <div
             className="flex-1 bg-gray-100 relative min-h-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Loading Spinner */}
             {isLoading && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-10">
                 <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4" />
                 <p className="text-gray-600 text-sm font-medium">{t('products.detail.loading_doc')}</p>
               </div>
             )}
 
-            {/* PDF iframe - fills entire remaining space */}
+            {/* PDF iframe */}
             <iframe
               src={pdfUrl}
               className="w-full h-full border-0"

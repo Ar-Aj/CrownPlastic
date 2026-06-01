@@ -1,7 +1,7 @@
 'use client';
 
 import { ButtonHTMLAttributes, forwardRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/common/LocaleLink';
 import { cn } from '@/lib/utils';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -20,12 +20,12 @@ interface CrownButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const CrownButton = forwardRef<HTMLButtonElement, CrownButtonProps>(
   ({ variant = 'primary', size = 'md', href, children, className, ...props }, ref) => {
     const baseStyles = 'inline-flex items-center justify-center gap-2 font-semibold transition-colors duration-200 rounded-lg';
-    
+
     const variants = {
       primary: 'bg-primary hover:bg-primary-dark text-white',
       secondary: 'bg-white hover:bg-gray-50 text-primary border-2 border-primary',
     };
-    
+
     const sizes = {
       sm: 'px-4 py-2 text-sm',
       md: 'px-6 py-3 text-base',

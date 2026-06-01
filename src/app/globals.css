@@ -16,6 +16,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-inter), 'Inter', 'Segoe UI', system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Smooth scrolling */

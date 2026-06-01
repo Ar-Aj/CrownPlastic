@@ -90,13 +90,13 @@ export function useHeroVideo({ scenes, defaultSceneId = 'main' }: UseHeroVideoOp
     // Delay video loading to ensure poster LCP completes first
     const loadTimer = setTimeout(() => {
       video.load();
-      
+
       const playVideo = async () => {
         try {
           await video.play();
         } catch {
           // Autoplay blocked - will show poster instead
-          console.log('Autoplay blocked, showing poster');
+          // Autoplay blocked — silently fall back to poster
         }
       };
 

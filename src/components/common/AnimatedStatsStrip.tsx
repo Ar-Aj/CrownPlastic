@@ -41,7 +41,7 @@ export default function AnimatedStatsStrip({
 
     const scroller = scrollerRef.current;
     const totalWidth = scroller.scrollWidth / 2; // Half because we have 2 copies
-    
+
     // Calculate speed: pixels per frame (assuming 60fps)
     // totalWidth pixels in loopDurationMs milliseconds
     const pixelsPerMs = totalWidth / loopDurationMs;
@@ -77,7 +77,7 @@ export default function AnimatedStatsStrip({
   };
 
   return (
-    <section className="relative py-6 md:py-8 overflow-hidden bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative py-6 md:py-8 overflow-hidden bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900" dir="ltr">
       {/* Gradient edge fades */}
       <div className="absolute inset-y-0 left-0 w-20 md:w-32 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-20 md:w-32 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />

@@ -17,6 +17,7 @@ export type BlogArticle = {
   targetPersona: string;
   funnelStage: 'awareness' | 'consideration' | 'decision';
   relatedRoutes?: string[];
+  coverImage?: string; // Path relative to /public for Next.js Image
   // Content sections for the article body
   sections: {
     heading: string;
@@ -38,6 +39,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'How do I select the right UPVC pressure pipes for a water network project in the UAE or GCC?',
     targetPersona: 'MEP consultant',
     funnelStage: 'consideration',
+    coverImage: '/images/blogs/upvc-pressure-pipes-gcc.jpg',
     relatedRoutes: ['/products/upvc-pressure', '/technical/bs-en-1452-complete-guide'],
     sections: [
       {
@@ -45,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
         content: [
           'UPVC pressure pipes used in GCC water networks must comply with international standards such as BS EN 1452 (European) or DIN 8062 (German).',
           'These standards define material requirements, dimensions, pressure ratings, and testing methods.',
-          'For UAE and Saudi projects, GSO and SASO compliance is typically required alongside European standards.',
+          'For UAE and Saudi projects, compliance with international standards like ISO, BS EN, and ASTM is typically required alongside European standards.',
         ],
       },
       {
@@ -87,27 +89,29 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
   {
-    slug: 'gso-saso-compliance-checklist-plastic-pipes',
-    title: 'GSO & SASO Compliance Checklist for Plastic Piping Projects',
-    shortExcerpt: 'Complete verification checklist for ensuring your UPVC, PPR, and HDPE piping materials meet Gulf Standards Organization and Saudi Standards requirements on construction projects.',
-    fullDescription: 'Comprehensive GSO and SASO compliance checklist for plastic pipes in GCC construction. Covers certification requirements, testing standards, and documentation for UPVC, PPR, and HDPE systems.',
+    slug: 'international-standards-compliance-checklist-plastic-pipes',
+    title: 'International Standards Compliance Checklist for Plastic Piping Projects',
+    shortExcerpt: 'Complete verification checklist for ensuring your UPVC, PPR, and HDPE piping materials meet ISO, BS EN, ASTM, and DIN requirements on construction projects.',
+    fullDescription: 'Comprehensive international standards compliance checklist for plastic pipes in GCC construction. Covers ISO 9001:2015, BS EN 1452, ASTM, DIN certification requirements, testing standards, and documentation for UPVC, PPR, and HDPE systems.',
     tag: 'Compliance',
     estimatedReadTime: '7 min read',
     publishedDate: 'Jan 2025',
-    primaryKeyword: 'GSO SASO compliance plastic pipes',
-    secondaryKeywords: ['GCC pipe standards', 'Saudi pipe certification', 'UPVC compliance UAE', 'plastic pipe testing standards'],
-    aeoQuestion: 'How do I verify GSO and SASO compliance for plastic pipes on a GCC construction project?',
+    primaryKeyword: 'international standards compliance plastic pipes',
+    secondaryKeywords: ['GCC pipe standards', 'ISO certification pipes', 'UPVC compliance UAE', 'plastic pipe testing standards'],
+    aeoQuestion: 'How do I verify international standards compliance for plastic pipes on a GCC construction project?',
     targetPersona: 'QA/QC engineer',
     funnelStage: 'decision',
-    relatedRoutes: ['/technical/gso-saso-compliance-guide', '/about-us'],
+    coverImage: '/images/blogs/standards-compliance.jpg',
+    relatedRoutes: ['/technical/certifications-compliance-guide', '/about-us'],
     sections: [
       {
-        heading: 'What Are GSO and SASO Standards?',
+        heading: 'Key International Standards for Plastic Pipes',
         content: [
-          'GSO (Gulf Standards Organization) sets unified standards for all GCC member states.',
-          'SASO (Saudi Standards, Metrology and Quality Organization) governs standards in Saudi Arabia.',
-          'For plastic pipes, these bodies reference international standards like BS EN 1452, ISO 4427, and DIN 8062.',
-          'Compliance ensures product quality, safety, and cross-border acceptance within the GCC.',
+          'ISO 9001:2015 establishes quality management system requirements for manufacturers.',
+          'BS EN 1452 is the European standard for UPVC pressure pipes for water supply.',
+          'ASTM D1785 covers PVC pipe schedules widely used in American-specification projects.',
+          'DIN 8062 provides German industrial specifications for UPVC pipe dimensions.',
+          'Compliance ensures product quality, safety, and international market acceptance.',
         ],
       },
       {
@@ -134,8 +138,8 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: 'Third-Party Certifications to Look For',
         content: [
-          'Kitemark (BSI) certification indicates compliance with British standards.',
-          'NSF certification confirms suitability for potable water applications.',
+          'ISO 9001:2015 certification indicates a certified quality management system.',
+          'BS EN 1452 compliance confirms suitability for potable water pressure pipe applications.',
           'ISO 14001:2015 demonstrates environmental management compliance.',
           'These certifications are not mandatory but add credibility for major projects.',
         ],
@@ -165,6 +169,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'Should I use UPVC, PPR, or HDPE pipes for my construction project in the Gulf?',
     targetPersona: 'MEP consultant',
     funnelStage: 'consideration',
+    coverImage: '/images/blogs/upvc-ppr-hdpe-comparison.jpg',
     relatedRoutes: ['/products/upvc-pressure', '/products/ppr', '/products/polyethylene', '/technical/upvc-vs-pvc-vs-ppr-comparison'],
     sections: [
       {
@@ -230,6 +235,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'How do I design a UPVC drainage system for a high-rise building in Dubai?',
     targetPersona: 'MEP consultant',
     funnelStage: 'consideration',
+    coverImage: '/images/blogs/upvc-drainage-highrise.jpg',
     relatedRoutes: ['/products/upvc-drainage', '/technical/upvc-installation-best-practices'],
     sections: [
       {
@@ -292,6 +298,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'What HDPE pipe grade should I use for agricultural irrigation in the UAE?',
     targetPersona: 'Irrigation consultant',
     funnelStage: 'consideration',
+    coverImage: '/images/blogs/hdpe-irrigation-uae.jpg',
     relatedRoutes: ['/products/polyethylene'],
     sections: [
       {
@@ -354,6 +361,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'Why are PPR pipes preferred for hot water systems in Gulf commercial buildings?',
     targetPersona: 'MEP consultant',
     funnelStage: 'consideration',
+    coverImage: '/images/blogs/ppr-hot-water-gcc.jpg',
     relatedRoutes: ['/products/ppr'],
     sections: [
       {
@@ -416,6 +424,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'How do I install UPVC pipes correctly in hot Gulf climates?',
     targetPersona: 'Plumbing contractor',
     funnelStage: 'decision',
+    coverImage: '/images/blogs/upvc-installation-hot-climate.jpg',
     relatedRoutes: ['/technical/upvc-installation-best-practices', '/support/faqs'],
     sections: [
       {
@@ -479,6 +488,7 @@ export const blogArticles: BlogArticle[] = [
     aeoQuestion: 'How do I choose a reliable pipe supplier for my UAE or GCC construction project?',
     targetPersona: 'Procurement manager',
     funnelStage: 'decision',
+    coverImage: '/images/blogs/pipe-supplier-uae-gcc.jpg',
     relatedRoutes: ['/about-us', '/contact-us'],
     sections: [
       {
@@ -487,7 +497,7 @@ export const blogArticles: BlogArticle[] = [
           'ISO 9001:2015 certification demonstrates quality management systems.',
           'ISO 14001:2015 shows environmental responsibility.',
           'Product certifications: Look for BS EN 1452, BS EN 1401, DIN, ISO 4427 compliance.',
-          'Third-party certifications like Kitemark or NSF add credibility.',
+          'Third-party certifications and accredited laboratory test reports add credibility.',
         ],
       },
       {

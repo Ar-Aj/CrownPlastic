@@ -1,7 +1,6 @@
 // FAQPage Schema Component for Crown Plastic Pipes - Phase 2 AEO
 // Generates FAQPage JSON-LD for featured snippet optimization
 
-import Script from 'next/script';
 import { FAQItem } from '@/config/faqs';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -29,7 +28,7 @@ export function FAQPageSchema({ faqs, pageUrl }: FAQPageSchemaProps) {
   };
 
   return (
-    <Script
+    <script
       id="faqpage-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
@@ -76,7 +75,7 @@ export function ClusterFAQSchema({ faqs, clusterName, pageUrl }: ClusterFAQSchem
   };
 
   return (
-    <Script
+    <script
       id={`cluster-faq-schema-${clusterName.toLowerCase().replace(/\s+/g, '-')}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(clusterFaqSchema) }}
@@ -110,7 +109,7 @@ export function SingleFAQSchema({ question, answer, pageUrl, faqId }: SingleFAQS
   };
 
   return (
-    <Script
+    <script
       id={`single-faq-${faqId}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(singleFaqSchema) }}

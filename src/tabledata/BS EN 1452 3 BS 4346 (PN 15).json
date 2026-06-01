@@ -1,0 +1,1103 @@
+[
+    {
+        "fitting_type": "ELBOW 90°",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS (mm) - d": "16.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS (mm) - d": "19.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS (mm) - d": "22.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS (mm) - d": "26.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS (mm) - d": "31.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS (mm) - d": "36.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS (mm) - d": "51",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS (mm) - d": "63.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS (mm) - d": "91",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "ELBOW 45°",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS (mm) - d": "16.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS (mm) - d": "19.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS (mm) - d": "22.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS (mm) - d": "26.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS (mm) - d": "31.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS (mm) - d": "36.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS (mm) - d": "51",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS (mm) - d": "63.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS (mm) - d": "91",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE ELBOW 90°",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS - G": "1 1/4\"",
+                "DIMENSIONS - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS - G": "1 1/2\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS - G": "2\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "SOCKET/COUPLER",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS (mm) - d": "16.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS (mm) - d": "19.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS (mm) - d": "22.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS (mm) - d": "26.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS (mm) - d": "31.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS (mm) - d": "36.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS (mm) - d": "51",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS (mm) - d": "63.5",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS (mm) - d": "91",
+                "DIMENSIONS (mm) - L": "15",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCER BUSH/SOCKET",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (mm) - Inch": "3/4 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "26.67",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "33.4",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 x 3/4\"",
+                "NOMINAL SIZE (mm) - D": "33.4",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/4 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/4 x 3/4\"",
+                "NOMINAL SIZE (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/4 x 1\"",
+                "NOMINAL SIZE (mm) - D": "42.16",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/2 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/2 x 3/4\"",
+                "NOMINAL SIZE (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "1 1/2 x 1\"",
+                "NOMINAL SIZE (mm) - D": "48.26",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "2 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "2 x 3/4\"",
+                "NOMINAL SIZE (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "2 x 1\"",
+                "NOMINAL SIZE (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "2 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - D": "60.33",
+                "DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "3 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - D": "88.9",
+                "DIMENSIONS (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "3 x 2\"",
+                "NOMINAL SIZE (mm) - D": "88.9",
+                "DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "4 x 2\"",
+                "NOMINAL SIZE (mm) - D": "114.3",
+                "DIMENSIONS (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "4 x 3\"",
+                "NOMINAL SIZE (mm) - D": "114.3",
+                "DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "6 x 3\"",
+                "NOMINAL SIZE (mm) - D": "168.3",
+                "DIMENSIONS (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "60.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (mm) - Inch": "6 x 4\"",
+                "NOMINAL SIZE (mm) - D": "168.3",
+                "DIMENSIONS (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS - G": "1 1/4\"",
+                "DIMENSIONS - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS - G": "1 1/2\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS - G": "2\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS - G": "3\"",
+                "DIMENSIONS - L": "51",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS - G": "4\"",
+                "DIMENSIONS - L": "63.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS - G": "6\"",
+                "DIMENSIONS - L": "91",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED ADAPTOR/SOCKET",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS - G": "1 1/4\"",
+                "DIMENSIONS - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS - G": "1 1/2\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS - G": "2\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS - G": "3\"",
+                "DIMENSIONS - L": "51",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS - G": "4\"",
+                "DIMENSIONS - L": "63.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS - G": "6\"",
+                "DIMENSIONS - L": "91",
+                "PN": "null"
+            }
+        ]
+    },
+    {
+        "fitting_type": "EQUAL TEE",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm)": "21.34",
+                "DIMENSIONS - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm)": "26.67",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm)": "33.4",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\"",
+                "NOMINAL SIZE (mm)": "42.16",
+                "DIMENSIONS - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm)": "48.26",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm)": "60.33",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm)": "88.9",
+                "DIMENSIONS - L": "51",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm)": "114.3",
+                "DIMENSIONS - L": "63.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm)": "168.3",
+                "DIMENSIONS - L": "91",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REDUCING TEE",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 x 1/2 x 3/4\"",
+                "NOMINAL SIZE (mm) - d": "26.67",
+                "DIMENSIONS - di": "21.34",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 1/2 x 1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS - di": "21.34",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 3/4 x 1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS - di": "26.67",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1/2 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - di": "21.34",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 3/4 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - di": "26.67",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - di": "33.4",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1/2 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - di": "21.34",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 3/4 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - di": "26.67",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - di": "33.4",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1 1/2 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - di": "48.26",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED REDUCING TEE",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 x 1/2 x 3/4\"",
+                "NOMINAL SIZE (mm) - d": "21.34",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 1/2 x 1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 3/4 x 1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1/2 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - G": "1 1/2\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 3/4 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1/2 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 3/4 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED EQUAL TEE",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2 x 1/2 x 1/2\"",
+                "NOMINAL SIZE (mm) - d": "21.34",
+                "DIMENSIONS (mm) - G": "1/2\"",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4 x 3/4 x 3/4\"",
+                "NOMINAL SIZE (mm) - d": "26.67",
+                "DIMENSIONS (mm) - G": "3/4\"",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 1 x 1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS (mm) - G": "1\"",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4 x 1 1/4 x 1 1/4\"",
+                "NOMINAL SIZE (mm) - d": "42.16",
+                "DIMENSIONS (mm) - G": "1 1/4\"",
+                "DIMENSIONS (mm) - L": "26.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1 1/2 x 1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS (mm) - G": "1 1/2\"",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 2 x 2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS (mm) - G": "2\"",
+                "DIMENSIONS (mm) - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FEMALE THREADED REDUCER BUSH",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "3/4 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "21.34",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "32.4",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "33.4",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "35.6",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 x 3/4\"",
+                "NOMINAL SIZE (mm) - D": "33.4",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "35.6",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "48.26",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "43.0",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 x 1/2\"",
+                "NOMINAL SIZE (mm) - D": "60.33",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "47.4",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "UNION",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "FLANGES WITH STUB",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm) - D1": "91.8",
+                "NOMINAL SIZE (mm) - D2": "60",
+                "NOMINAL SIZE (mm) - h": "43.5",
+                "DIMENSIONS (mm) - D1": "92.5",
+                "DIMENSIONS (mm) - D2": "120",
+                "DIMENSIONS (mm) - D3": "152.4",
+                "DIMENSIONS (mm) - D4": "77.6",
+                "DIMENSIONS (mm) - H": "20.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 1/2\"",
+                "NOMINAL SIZE (mm) - D1": "107.2",
+                "NOMINAL SIZE (mm) - D2": "73.4",
+                "NOMINAL SIZE (mm) - h": "49",
+                "DIMENSIONS (mm) - D1": "107.6",
+                "DIMENSIONS (mm) - D2": "140",
+                "DIMENSIONS (mm) - D3": "177.6",
+                "DIMENSIONS (mm) - D4": "92.6",
+                "DIMENSIONS (mm) - H": "24.8",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm) - D1": "119.9",
+                "NOMINAL SIZE (mm) - D2": "89.4",
+                "NOMINAL SIZE (mm) - h": "54.9",
+                "DIMENSIONS (mm) - D1": "120.6",
+                "DIMENSIONS (mm) - D2": "152.5",
+                "DIMENSIONS (mm) - D3": "191.4",
+                "DIMENSIONS (mm) - D4": "109.4",
+                "DIMENSIONS (mm) - H": "26.4",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm) - D1": "152.5",
+                "NOMINAL SIZE (mm) - D2": "110.4",
+                "NOMINAL SIZE (mm) - h": "64.8",
+                "DIMENSIONS (mm) - D1": "153.0",
+                "DIMENSIONS (mm) - D2": "191",
+                "DIMENSIONS (mm) - D3": "229.7",
+                "DIMENSIONS (mm) - D4": "134",
+                "DIMENSIONS (mm) - H": "28.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm) - D1": "206",
+                "NOMINAL SIZE (mm) - D2": "160.5",
+                "NOMINAL SIZE (mm) - h": "85",
+                "DIMENSIONS (mm) - D1": "207.5",
+                "DIMENSIONS (mm) - D2": "241",
+                "DIMENSIONS (mm) - D3": "284",
+                "DIMENSIONS (mm) - D4": "192.5",
+                "DIMENSIONS (mm) - H": "32",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "HEX NIPPLE",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "DIMENSIONS - G": "1/2\"",
+                "DIMENSIONS - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "DIMENSIONS - G": "3/4\"",
+                "DIMENSIONS - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "DIMENSIONS - G": "1\"",
+                "DIMENSIONS - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "DIMENSIONS - G": "1 1/2\"",
+                "DIMENSIONS - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "DIMENSIONS - G": "2\"",
+                "DIMENSIONS - L": "36.5",
+                "PN": "15"
+            }
+        ]
+    },
+    {
+        "fitting_type": "REPAIR SOCKET/ CONVERTABLE SOCKET",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\" x 20",
+                "NOMINAL SIZE (mm) - d": "21.34",
+                "DIMENSIONS (mm) - d1": "20",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\" x 25",
+                "NOMINAL SIZE (mm) - d": "26.67",
+                "DIMENSIONS (mm) - d1": "25",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\" x 32",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS (mm) - d1": "32",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/4\" x 40",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\" x 50",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS (mm) - d1": "50",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\" x 63",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS (mm) - d1": "63",
+                "DIMENSIONS (mm) - L": "38",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2 1/2\" x 75",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\" x 90",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\" x 110",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\" x 160",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "8\" x 200",
+                "NOMINAL SIZE (mm) - d": "null",
+                "DIMENSIONS (mm) - d1": "null",
+                "DIMENSIONS (mm) - L": "null",
+                "PN": "null"
+            }
+        ]
+    },
+    {
+        "fitting_type": "END CAP",
+        "standard": "BS EN 1452:3/BS 4346 (PN 15)",
+        "table_data": [
+            {
+                "NOMINAL SIZE (Inch)": "1/2\"",
+                "NOMINAL SIZE (mm) - d": "21.34",
+                "DIMENSIONS (mm) - L": "16.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3/4\"",
+                "NOMINAL SIZE (mm) - d": "26.67",
+                "DIMENSIONS (mm) - L": "19.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1\"",
+                "NOMINAL SIZE (mm) - d": "33.4",
+                "DIMENSIONS (mm) - L": "22.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "1 1/2\"",
+                "NOMINAL SIZE (mm) - d": "48.26",
+                "DIMENSIONS (mm) - L": "31.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "2\"",
+                "NOMINAL SIZE (mm) - d": "60.33",
+                "DIMENSIONS (mm) - L": "36.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "3\"",
+                "NOMINAL SIZE (mm) - d": "88.9",
+                "DIMENSIONS (mm) - L": "51.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "4\"",
+                "NOMINAL SIZE (mm) - d": "114.3",
+                "DIMENSIONS (mm) - L": "63.5",
+                "PN": "15"
+            },
+            {
+                "NOMINAL SIZE (Inch)": "6\"",
+                "NOMINAL SIZE (mm) - d": "168.3",
+                "DIMENSIONS (mm) - L": "91",
+                "PN": "15"
+            }
+        ]
+    }
+]

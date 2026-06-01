@@ -9,6 +9,7 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, useInView } from 'framer-motion';
 import { scaleIn, fadeUp, noiseTexture } from '@/lib/design-system';
+import LocaleLink from '@/components/common/LocaleLink';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // GRADIENT MESH BACKGROUND
@@ -335,6 +336,27 @@ export function MagneticButton({
   };
 
   if (href) {
+    // Internal paths use LocaleLink for client-side navigation
+    const isInternal = href.startsWith('/') && !href.startsWith('tel:') && !href.startsWith('mailto:') && !href.startsWith('http');
+
+    if (isInternal) {
+      return (
+        <LocaleLink href={href} className={baseStyles} style={{ display: 'inline-flex' }}>
+          <motion.span
+            ref={ref}
+            style={{ x, y, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            {children}
+            {icon}
+          </motion.span>
+        </LocaleLink>
+      );
+    }
+
     return (
       <motion.a {...motionProps} href={href}>
         {children}

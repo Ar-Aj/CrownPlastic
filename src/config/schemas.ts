@@ -22,9 +22,10 @@ export const companyInfo = {
     streetAddress: 'New Industrial Area',
     addressLocality: 'Umm Al Quwain',
     addressRegion: 'Umm Al Quwain',
-    postalCode: '7069',
+    postalCode: 'P.O. Box 7069',
     addressCountry: 'AE',
   },
+  hasMap: 'https://maps.app.goo.gl/NC5nxeE6rKicxabE7',
 
   geo: {
     latitude: 25.2867,
@@ -57,11 +58,10 @@ export const certifications = [
   { name: 'OHSAS 18001:2007', description: 'Occupational Health & Safety' },
   { name: 'BS EN 1452', description: 'UPVC Pressure Pipes for Water Supply' },
   { name: 'DIN 8062', description: 'UPVC Pipes - Dimensions' },
-  { name: 'GSO EN 805', description: 'GCC Water Supply Requirements' },
-  { name: 'SASO TR-BM-5', description: 'Saudi Standards Organization' },
+  { name: 'BS EN 805', description: 'Water Supply Requirements' },
+  { name: 'ASTM D1785', description: 'Standard for PVC Plastic Pipe' },
   { name: 'ISO 1452', description: 'Plastics Piping Systems for Water Supply' },
-  { name: 'NSF/ANSI 61', description: 'Drinking Water System Components' },
-  { name: 'BSI Kitemark', description: 'British Standards Quality Mark' },
+
 ];
 
 // Product standards
@@ -212,8 +212,8 @@ export const serviceAreas: ServiceArea[] = [
       { dayOfWeek: ['Friday'], opens: '08:00', closes: '11:30' },
       { dayOfWeek: ['Friday'], opens: '13:00', closes: '19:00' },
     ],
-    description: 'Crown Plastic Pipes Saudi Arabia - SASO certified UPVC pipe supplier for KSA construction projects. BS EN 1452, DIN 8062 compliant. Export to Riyadh, Jeddah, Dammam, and all Saudi cities.',
-    descriptionAr: 'Crown Plastic Pipes المملكة العربية السعودية - مورد أنابيب UPVC معتمد من SASO لمشاريع البناء في المملكة. متوافق مع BS EN 1452 و DIN 8062. التصدير إلى الرياض وجدة والدمام وجميع المدن السعودية.',
+    description: 'Crown Plastic Pipes Saudi Arabia - ISO 9001:2015 certified UPVC pipe supplier for KSA construction projects. BS EN 1452, DIN 8062 compliant. Manufactured to international quality standards. Export to Riyadh, Jeddah, Dammam, and all Saudi cities.',
+    descriptionAr: 'Crown Plastic Pipes المملكة العربية السعودية - مورد أنابيب UPVC معتمد ISO 9001:2015 لمشاريع البناء في المملكة. متوافق مع BS EN 1452 و DIN 8062. مصنع وفق المعايير الدولية. التصدير إلى الرياض وجدة والدمام وجميع المدن السعودية.',
   },
   {
     slug: 'upvc-pipes-kuwait',
@@ -228,8 +228,8 @@ export const serviceAreas: ServiceArea[] = [
       { dayOfWeek: ['Friday'], opens: '08:00', closes: '11:30' },
       { dayOfWeek: ['Friday'], opens: '13:00', closes: '19:00' },
     ],
-    description: 'Crown Plastic Pipes Kuwait - GSO certified UPVC, PPR, HDPE pipe exporter for Kuwait infrastructure and construction. ISO 9001:2015 quality. Container shipments to Kuwait ports.',
-    descriptionAr: 'Crown Plastic Pipes الكويت - مصدر أنابيب UPVC و PPR و HDPE معتمد من GSO للبنية التحتية والبناء في الكويت. جودة ISO 9001:2015. شحنات حاويات إلى موانئ الكويت.',
+    description: 'Crown Plastic Pipes Kuwait - ISO 9001:2015 certified UPVC, PPR, HDPE pipe exporter for Kuwait infrastructure and construction. Manufactured to BS EN and ASTM standards. Container shipments to Kuwait ports.',
+    descriptionAr: 'Crown Plastic Pipes الكويت - مصدر أنابيب UPVC و PPR و HDPE معتمد ISO 9001:2015 للبنية التحتية والبناء في الكويت. مصنع وفق معايير BS EN و ASTM. شحنات حاويات إلى موانئ الكويت.',
   },
   {
     slug: 'upvc-pipes-qatar',
@@ -283,7 +283,8 @@ export function getProductSchemaData(spec: ProductSpecification, baseUrl: string
       '@type': 'Offer',
       url: `${baseUrl}/products/upvc-pressure/${spec.sku.toLowerCase()}`,
       priceCurrency: 'AED',
-      price: '0',
+      // Price intentionally omitted — B2B request-a-quote model.
+      // Setting price: '0' caused Google to interpret products as free.
       priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       availability: `https://schema.org/${spec.availability}`,
       itemCondition: 'https://schema.org/NewCondition',
@@ -300,35 +301,20 @@ export function getProductSchemaData(spec: ProductSpecification, baseUrl: string
         },
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '87',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'BSI Kitemark Certification',
-      },
-      reviewBody: 'Certified to BS EN 1452 standards for potable water applications.',
-    },
+    // NOTE: aggregateRating and review intentionally removed.
+    // Previous values were fabricated (4.9★/87 count, "QC Lab" as reviewer).
+    // Re-enable only after collecting genuine customer reviews to avoid Google manual action.
   };
 }
 
-export function getLocalBusinessSchemaData(area: ServiceArea, baseUrl: string) {
+export function getLocalBusinessSchemaData(area: ServiceArea, baseUrl: string, language: string = 'en') {
+  const isAr = language === 'ar';
+  
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${baseUrl}/${area.slug}#localbusiness`,
-    name: `Crown Plastic Pipes - ${area.city}`,
+    name: isAr ? 'مصنع كراون لأنابيب البلاستيك ذ.م.م' : `Crown Plastic Pipes - ${area.city}`,
     alternateName: companyInfo.alternateName,
     description: area.description,
     url: `${baseUrl}/${area.slug}`,
@@ -345,24 +331,19 @@ export function getLocalBusinessSchemaData(area: ServiceArea, baseUrl: string) {
       postalCode: companyInfo.address.postalCode,
       addressCountry: companyInfo.address.addressCountry,
     },
+    hasMap: companyInfo.hasMap,
     geo: {
       '@type': 'GeoCoordinates',
       latitude: companyInfo.geo.latitude,
       longitude: companyInfo.geo.longitude,
     },
     areaServed: [
-      {
-        '@type': 'City',
-        name: area.city,
-        containedInPlace: {
-          '@type': 'Country',
-          name: area.country,
-        },
-      },
-      ...area.districts.map(district => ({
-        '@type': 'Place',
-        name: district,
-      })),
+      { '@type': 'Country', name: 'United Arab Emirates' },
+      { '@type': 'City', name: 'Dubai' },
+      { '@type': 'City', name: 'Abu Dhabi' },
+      { '@type': 'City', name: 'Sharjah' },
+      { '@type': 'Region', name: 'GCC' },
+      { '@type': 'Region', name: 'Middle East' }
     ],
     serviceType: ['Pipe Supplier', 'Plumbing Materials', 'Construction Materials', 'UPVC Pipes', 'PPR Pipes', 'HDPE Pipes'],
     openingHoursSpecification: area.openingHours.map(hours => ({

@@ -26,6 +26,12 @@ export type PipeTableColumn = {
   key: string;        // e.g., "size", "class", "standard"
   label: string;      // e.g., "Size (mm)", "Class", "Standard"
   align?: 'left' | 'center' | 'right';
+  groupLabel?: string; // optional parent grouped header label (raw string or i18n key)
+  colSpan?: number;    // how many columns this group spans; only on the FIRST column of the group
+  superGroupLabel?: string; // optional grandparent grouped header label
+  superColSpan?: number; // how many columns this grandparent group spans; only on the FIRST column of the group
+  megaGroupLabel?: string; // optional great-grandparent grouped header label for 4-tier nesting
+  megaColSpan?: number; // how many columns this great-grandparent group spans; only on the FIRST column of the group
 };
 
 /**
@@ -34,8 +40,9 @@ export type PipeTableColumn = {
 export type PipeTable = {
   id: string;                     // e.g., "din-8063-pipes"
   title: string;                  // e.g., "PVC Pressure Pipes DIN 8063"
+  sectionLabel?: string;          // optional full-width divider label above the data rows
   columns: PipeTableColumn[];
-  rows: Record<string, string>[]; // each key matches a column.key
+  rows: Record<string, string | null>[]; // each key matches a column.key
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -50,6 +57,7 @@ export type FittingFamily =
   | 'fabricated'
   | 'brass-insert'
   | 'solvent-cement'
+  | 'pushfit'
   | 'other';
 
 /**
@@ -60,6 +68,7 @@ export const FITTING_FAMILY_LABELS: Record<FittingFamily, string> = {
   'fabricated': 'Fabricated Fittings',
   'brass-insert': 'Brass Inserts',
   'solvent-cement': 'Solvent Cement',
+  'pushfit': 'Pushfit Fittings',
   'other': 'Other Fittings',
 };
 
@@ -67,8 +76,10 @@ export const FITTING_FAMILY_LABELS: Record<FittingFamily, string> = {
  * Column definition for fitting specification tables
  */
 export type FittingSpecColumn = {
-  key: string;   // normalised key used in rows, e.g., "nominal_size_mm"
-  label: string; // original header text from PDF/JSON, e.g., "NOMINAL SIZE (mm)"
+  key: string;        // normalised key used in rows, e.g., "nominal_size_mm"
+  label: string;      // original header text from PDF/JSON, e.g., "NOMINAL SIZE (mm)"
+  groupLabel?: string; // optional i18n key or raw string for the parent grouped header row, e.g., "products.tables.dimensions_mm"
+  colSpan?: number;    // how many columns this group spans; only needed on the FIRST column of the group
 };
 
 /**
@@ -90,9 +101,12 @@ export type Fitting = {
   name: string;               // e.g., "Ball Valve With Rubberized Gripper Handle"
   family: FittingFamily;
   image: string;              // path for Next/Image
+  colorVariants?: Record<string, string>; // e.g., { grey: '/path.png', olive: '/path2.png' }
   sizes: SizeRow[];           // quick size list for modal header (NO part column)
+  sizeHeaderOverride?: string; // optional override for the sizes table header translation key
   tags?: string[];            // e.g., ["NEW"]
   table?: FittingSpecTable;   // full specification table with all columns
+  isDisplayOnly?: boolean;    // when true, disables click interaction and data tables
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -102,6 +116,22 @@ export type Fitting = {
 export type DosDonts = {
   dos: string[];
   donts: string[];
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// HAND-AUTHORED FAQs (AEO — Answer Engine Optimisation)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+/**
+ * A single hand-authored FAQ entry with bilingual support.
+ * Used on both product detail pages and category hub pages
+ * to surface search-intent Q&As for Google Featured Snippets.
+ */
+export type ProductFAQ = {
+  q: string;    // English question
+  qAr: string;  // Arabic question
+  a: string;    // English answer
+  aAr: string;  // Arabic answer
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -140,17 +170,28 @@ export type ProductDetailConfig = {
   overviewAr?: string;
   features: string[];
   featuresAr?: string[];
+  image?: string;             // Optional product hero image override
+  renderImage?: string;       // 3D/Product render
+  diagramImage?: string;      // Technical/Schematic diagram
   applications: string[];
   applicationsAr?: string[];
   pipesTables: PipeTable[];
   fittings: Fitting[];
+  fittingsTabLabelKey?: string;          // optional translation key for the sticky nav label (e.g., 'products.solvent.nav_label')
+  colorLabel?: string;                   // e.g. 'orange' | 'dark-grey' | 'white' | 'black' — drives the color tab in FittingsGallery for single-color product lines
   variants?: ProductVariant[];           // optional product variants/configurations
   variantsSectionTitle?: string;         // e.g., "Grease Trap Configurations"
   variantsSectionTitleAr?: string;
   downloads?: { label: string; href: string }[];
   videoUrl?: string;
+  technicalProperties?: { property: string; value: string }[];
+  technicalPropertiesAr?: { property: string; value: string }[];
+  systemAdvantages?: string[];
+  systemAdvantagesAr?: string[];
   dosDonts?: DosDonts;
   dosDontsAr?: DosDonts;
+  accessoriesGallery?: { name: string; imageSrc: string }[];
+  faqs?: ProductFAQ[];       // Hand-authored AEO FAQs (overrides auto-generated when present)
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -169,10 +210,13 @@ export type NavSection = {
 export const PRODUCT_DETAIL_SECTIONS: NavSection[] = [
   { id: 'overview', label: 'Overview', labelAr: 'نظرة عامة' },
   { id: 'features', label: 'Features', labelAr: 'المميزات' },
+  { id: 'technical-properties', label: 'Technical Properties', labelAr: 'الخصائص الفنية' },
+  { id: 'system-advantages', label: 'System Advantages', labelAr: 'مزايا النظام' },
   { id: 'applications', label: 'Applications', labelAr: 'التطبيقات' },
   { id: 'variants', label: 'Configurations', labelAr: 'التكوينات' },
   { id: 'pipes', label: 'Pipes', labelAr: 'الأنابيب' },
   { id: 'fittings', label: 'Fittings', labelAr: 'التوصيلات' },
   { id: 'video', label: 'Video', labelAr: 'فيديو' },
   { id: 'dos-donts', label: "Do's & Don'ts", labelAr: 'افعل ولا تفعل' },
+  { id: 'frequently-asked-questions', label: 'Technical FAQs', labelAr: 'الأسئلة الشائعة التقنية' },
 ];

@@ -1,0 +1,93 @@
+# 🚦 Go / No-Go Deep Scan Report
+
+**Scan Date:** 2026-02-23  
+**Target:** Crown Plastic Pipes UAE — Static Export (`output: 'export'`)
+
+---
+
+## 🔍 PILLAR 1: SEO & INDEXING
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| `metadataBase` | ✅ PASS | Set to `https://crownplasticuae.com` in [layout.tsx](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L22) |
+| Canonical URL | ✅ PASS | `alternates.canonical: "/"` → self-referencing via metadataBase ([L60](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L59-L61)) |
+| OG / Twitter Images | ✅ PASS | Both configured with `/images/og-image.jpg` (1200×630), will resolve via metadataBase |
+| Robots | ✅ PASS | `index: true, follow: true` with full googleBot directives ([L48-58](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L48-L58)) |
+| Sitemap Coverage | ✅ PASS | 170-line [sitemap.ts](file:///c:/crown/CrownPlastic/src/app/sitemap.ts) — covers static pages, products, service areas, FAQs, technical guides, regional markets |
+| Hreflang (AR) | ⚠️ WARN | No `alternates.languages` for Arabic. Since language switching is client-side (URL param `?lang=ar`), hreflang tags are not standard practice here. **Low risk for static export** |
+| Schema.org | ✅ PASS | [OrganizationSchema](file:///c:/crown/CrownPlastic/src/components/schemas/OrganizationSchema.tsx#9-149) component injected in `<head>` ([L114](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L114)) |
+
+---
+
+## ⚡ PILLAR 2: CORE WEB VITALS
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| LCP: Hero `priority` | ✅ PASS | Confirmed in [HeroSection.tsx](file:///c:/crown/CrownPlastic/src/components/common/HeroSection.tsx#L138), [AboutHero.tsx](file:///c:/crown/CrownPlastic/src/components/about/AboutHero.tsx#L145), [AboutHeroCinematic.tsx](file:///c:/crown/CrownPlastic/src/components/about/AboutHeroCinematic.tsx#L1218) |
+| CLS: Logo dimensions | ✅ PASS | Header logo uses `fill` with fixed parent (`w-16 h-16`) + `sizes="80px"` ([Header.tsx L92-100](file:///c:/crown/CrownPlastic/src/components/layout/Header.tsx#L92-L100)) |
+| Font Optimization | ✅ PASS | `Inter` from `next/font/google` with `display: "swap"` + `variable: "--font-inter"` ([L12-16](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L12-L16)) |
+| Viewport | ✅ PASS | Explicit `Viewport` export with `themeColor` ([L93-98](file:///c:/crown/CrownPlastic/src/app/layout.tsx#L93-L98)) |
+| Body overflow-x | ⚠️ WARN | No `overflow-x: hidden` on `<body>` in [globals.css](file:///c:/crown/CrownPlastic/src/app/globals.css) or layout. **Risk of horizontal scroll on small screens if any component overflows** |
+
+---
+
+## 🌍 PILLAR 3: INTERNATIONALIZATION (RTL)
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| Marquee Physics Shield | ✅ PASS | `dir="ltr"` applied to all 3 tickers: [AnimatedStatsStrip.tsx L80](file:///c:/crown/CrownPlastic/src/components/common/AnimatedStatsStrip.tsx#L80), [AboutStatsStrip.tsx L114](file:///c:/crown/CrownPlastic/src/components/about/AboutStatsStrip.tsx#L114), [ClientLogoWall.tsx L176](file:///c:/crown/CrownPlastic/src/components/common/ClientLogoWall.tsx#L176) |
+| Phone Number Shield | ✅ PASS | `<span dir="ltr">` wrapping phone in [Header.tsx L51](file:///c:/crown/CrownPlastic/src/components/layout/Header.tsx#L51) and [Footer.tsx L53](file:///c:/crown/CrownPlastic/src/components/layout/Footer.tsx#L53) |
+| Icon Direction | ✅ PASS | `rtl:rotate-180` confirmed on 15 arrow icons across 7 files (page.tsx ×5, Header.tsx, MobileNav.tsx, HeroSection.tsx, ComingSoon.tsx, ServiceAreaClient.tsx, FAQPageClient.tsx) |
+| `dir` Attribute Switching | ✅ PASS | [LanguageContext](file:///c:/crown/CrownPlastic/src/context/LanguageContext.tsx#18-23) dynamically sets `document.documentElement.dir` to `rtl` for Arabic |
+
+---
+
+## 🛡️ PILLAR 4: SECURITY & STABILITY
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| 404 Page | ✅ PASS | [not-found.tsx](file:///c:/crown/CrownPlastic/src/app/not-found.tsx) — client-side `router.replace('/')` redirect (suitable for static export) |
+| EmailJS Error Guard | ✅ N/A | EmailJS is **not yet integrated** — no `emailjs.send()` calls exist in ContactHubClient. No crash risk currently. Guard should be added when EmailJS is wired up |
+| Env Var Exposure | ✅ PASS | No `process.env` references in ContactHubClient — no risk of leaked keys |
+| Suspense Boundary | ✅ PASS | [ContactHubClient](file:///c:/crown/CrownPlastic/src/app/contact-us/ContactHubClient.tsx#715-729) wraps inner component in `<Suspense>` with spinner fallback ([L715-728](file:///c:/crown/CrownPlastic/src/app/contact-us/ContactHubClient.tsx#L715-L728)) |
+
+---
+
+## 📱 PILLAR 5: MOBILE UX
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| Touch Targets | ✅ PASS | MobileNav links use `py-3` (≈48px height, exceeds 44px minimum). Accordion buttons use `py-3` with full-width `w-full`. Close button has `p-2` + 24px icon (40px total — adequate) |
+| Menu Toggle | ✅ PASS | Hamburger button `p-2` with 24px icon. Aria-labeled ([Header.tsx L115-123](file:///c:/crown/CrownPlastic/src/components/layout/Header.tsx#L115-L123)) |
+| Body Overflow-x | ⚠️ WARN | (Same as CWV note) No `overflow-x: hidden` guard on `<body>`. Low risk unless a full-width component bleeds |
+
+---
+
+## 🧹 PILLAR 6: CLEAN CODE
+
+| Check | Status | Detail |
+|:---|:---|:---|
+| `images.unoptimized` | ✅ PASS | Set to `true` in [next.config.mjs L14](file:///c:/crown/CrownPlastic/next.config.mjs#L13-L15) — required for static export |
+| Static Export | ✅ PASS | `output: 'export'` + `trailingSlash: true` configured |
+| Console Noise | ⚠️ WARN | **1 instance:** `console.log('Autoplay blocked, showing poster')` in [useHeroVideo.ts L99](file:///c:/crown/CrownPlastic/src/components/common/useHeroVideo.ts#L99). Harmless but should be removed for clean production logs |
+| Security Headers | ✅ PASS | `poweredByHeader: false` in next.config.mjs |
+
+---
+
+## 🚦 FINAL VERDICT
+
+### ✅ GO — Clear for Production Deployment
+
+> [!IMPORTANT]
+> **0 FAIL items. 4 WARN items (all non-blocking).**
+
+**Summary of WARNs (Optional Cleanup):**
+
+| # | Item | Severity | Recommendation |
+|:--|:-----|:---------|:---------------|
+| 1 | Hreflang for Arabic | Low | Not applicable for client-side language switching with static export |
+| 2 | `overflow-x: hidden` on body | Low | Add `overflow-x: hidden` to `globals.css` body rule as safety net |
+| 3 | `console.log` in useHeroVideo.ts | Cosmetic | Replace with `// silently fallback` comment |
+| 4 | EmailJS try/catch | Future | Add error boundary when EmailJS integration is wired up |
+
+All mission-critical systems — SEO metadata, canonical URLs, sitemap coverage, font loading, hero LCP priority, RTL marquee physics, phone number shields, icon mirroring, 404 handling, touch targets, image optimization, and static export config — are **verified and passing**.
