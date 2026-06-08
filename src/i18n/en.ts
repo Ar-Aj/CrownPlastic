@@ -119,7 +119,7 @@ export const en = {
           cta: 'See Drainage Systems',
         },
         pressure: {
-          title: 'PVC High Pressure Pipes',
+          title: 'uPVC High Pressure Pipes',
           description: 'Engineered for critical water distribution networks, our High Pressure PVC pipes sustain up to PN16/25 ratings. Manufactured from top-tier raw material compounds for superior hydraulic flow and corrosion resistance in municipal grids.',
           cta: 'Explore Pressure Pipes',
         },
@@ -135,7 +135,7 @@ export const en = {
         },
         conduit: {
           title: 'Electrical Conduits',
-          description: 'Protecting your power and data networks. Our heavy-duty PVC conduits and ducts provide robust impact protection and flame retardancy, meeting strict NEMA and IEC standards for electrical infrastructure.',
+          description: 'Protecting your power and data networks. Our heavy-duty uPVC conduits and ducts provide robust impact protection and flame retardancy, meeting strict NEMA and IEC standards for electrical infrastructure.',
           cta: 'View Cable Management',
         },
       },
@@ -189,8 +189,8 @@ export const en = {
       subtitle: 'ISO-certified manufacturing excellence since 1995, serving GCC infrastructure with 5,000+ piping solutions.',
       media_card_title: 'Featured',
       video_titles: {
-        choose_us: 'Premium UPVC Conduit Pipes',
-        choose_us_desc: 'Protect electrical wiring with our highly durable, fire-retardant PVC conduit systems.',
+        choose_us: 'Premium uPVC Conduit Pipes',
+        choose_us_desc: 'Protect electrical wiring with our highly durable, fire-retardant uPVC conduit systems.',
         factory: 'Reliable UPVC Drainage Pipes',
         factory_desc: 'Ensure leak-proof and efficient wastewater management with our advanced drainage solutions.',
       },
@@ -202,7 +202,7 @@ export const en = {
         },
         range: {
           title: 'Comprehensive Product Range',
-          description: 'Over 5,000 product variants across 7 families: UPVC Pressure, Drainage, Conduit, Duct, PPR, HDPE, and custom fabrications.',
+          description: 'Over 5,000 product variants across 7 families: uPVC Pressure, Drainage, Conduit, Duct, PPR, HDPE, and custom fabrications.',
           stat_label: 'SKUs',
         },
         certifications: {
@@ -887,9 +887,9 @@ export const en = {
             },
           },
         },
-        // 3. PVC High Pressure Pipes
+        // 3. uPVC High Pressure Pipes
         pvc_high_pressure_pipes: {
-          name: 'PVC High Pressure Pipes',
+          name: 'uPVC High Pressure Pipes',
           description: 'High pressure PVC pipes in ISO, DIN, BS, and ASTM standards for potable water and industrial applications.',
           items: {
             iso_4422: {
@@ -929,9 +929,9 @@ export const en = {
             },
           },
         },
-        // 4. PVC High Pressure Fittings
+        // 4. uPVC High Pressure Fittings
         pvc_high_pressure_fittings: {
-          name: 'PVC High Pressure Fittings',
+          name: 'uPVC High Pressure Fittings',
           description: 'High pressure PVC fittings and valves in DIN 8063 and BS EN 1452:3/BS 4346 standards.',
           items: {
             din_8063: {
@@ -945,7 +945,7 @@ export const en = {
               btn: 'Know More',
             },
             valves: {
-              name: 'PVC High Pressure Valves',
+              name: 'uPVC High Pressure Valves',
               info: 'PVC-U industrial valves — unions, compact ball, true union, and single union types.',
               btn: 'Know More',
             },
@@ -963,97 +963,97 @@ export const en = {
             },
           },
         },
-        // 6. PVC Duct Pipes
+        // 6. uPVC Duct Pipes
         pvc_duct_pipes: {
-          name: 'PVC Duct Pipes',
+          name: 'uPVC Duct Pipes',
           description: 'Underground cable protection duct systems in NEMA, DIN, and BS standards, including Etisalat & DU approved.',
           items: {
             nema_tc_2: {
-              name: 'PVC Duct Pipes NEMA TC 2:2003',
+              name: 'uPVC Duct Pipes NEMA TC 2:2003',
               info: 'EPC 40/80 cable duct pipes to NEMA TC 2:2003 — ½″–8″.',
               btn: 'Know More',
             },
             nema_tc_6_8: {
-              name: 'PVC Duct Pipes NEMA TC 6 & 8',
+              name: 'uPVC Duct Pipes NEMA TC 6 & 8',
               info: 'EB/DB duct pipes to NEMA TC 6 & 8 / ASTM F 512 — 1″–6″.',
               btn: 'Know More',
             },
             din_8062: {
-              name: 'PVC Duct Pipes DIN 8062',
+              name: 'uPVC Duct Pipes DIN 8062',
               info: 'Metric duct pipes to DIN 8062 — PN 4 to PN 16, 20–315 mm.',
               btn: 'Know More',
             },
             etisalat_du: {
-              name: 'PVC Duct Pipes For Etisalat & DU',
+              name: 'uPVC Duct Pipes For Etisalat & DU',
               info: 'Telecom duct pipes approved for Etisalat & DU — D54/D56/D57.',
               btn: 'Know More',
             },
             bs_3505_06: {
-              name: 'PVC Duct Pipes BS 3505/06',
+              name: 'uPVC Duct Pipes BS 3505/06',
               info: 'Imperial duct pipes to BS 3505/06 — PN 6 to PN 15, ½″–12″.',
               btn: 'Know More',
             },
             duct_non_standard: {
-              name: 'PVC Duct Non-Standard Pipes',
+              name: 'uPVC Duct Non-Standard Pipes',
               info: 'Non-standard duct pipes for specialized projects — 75–160 mm.',
               btn: 'Know More',
             },
           },
         },
-        // 7. PVC Duct Fittings
+        // 7. uPVC Duct Fittings
         pvc_duct_fittings: {
-          name: 'PVC Duct Fittings',
+          name: 'uPVC Duct Fittings',
           description: 'Duct fittings for underground cable protection systems.',
           items: {
             socket: {
-              name: 'PVC Duct Socket / Coupler',
-              info: 'Standard PVC duct socket for connecting duct pipe sections — Etisalat & DU compliant.',
+              name: 'uPVC Duct Socket / Coupler',
+              info: 'Standard uPVC duct socket for connecting duct pipe sections — Etisalat & DU compliant.',
               btn: 'Know More',
             },
             bellmouth: {
-              name: 'PVC Duct Bellmouth',
-              info: 'PVC duct bellmouth for smooth cable entry — prevents abrasion in Etisalat & DU systems.',
+              name: 'uPVC Duct Bellmouth',
+              info: 'uPVC duct bellmouth for smooth cable entry — prevents abrasion in Etisalat & DU systems.',
               btn: 'Know More',
             },
             end_caps: {
-              name: 'PVC Duct End Caps',
+              name: 'uPVC Duct End Caps',
               info: 'Weatherproof end caps for sealing and protecting open duct ends on UAE sites.',
               btn: 'Know More',
             },
             lr_bends_90_45: {
-              name: 'PVC Duct 90°/45° LR Bends',
+              name: 'uPVC Duct 90°/45° LR Bends',
               info: 'Long radius 90° and 45° bends for smooth directional changes in underground duct runs.',
               btn: 'Know More',
             },
             street_lighting_bends: {
-              name: 'PVC Duct 90° Street Lighting LR Bends',
+              name: 'uPVC Duct 90° Street Lighting LR Bends',
               info: '90° long radius bends for street lighting conduit — UAE Roads Authority compliant.',
               btn: 'Know More',
             },
             lightning_bends: {
-              name: 'PVC Duct 90° Lightning LR Bends',
+              name: 'uPVC Duct 90° Lightning LR Bends',
               info: '90° long radius bends for lightning protection and earthing conduit systems.',
               btn: 'Know More',
             },
           },
         },
-        // 8. PVC Conduit Pipes
+        // 8. uPVC Conduit Pipes
         pvc_conduit_pipes: {
-          name: 'PVC Conduit Pipes',
+          name: 'uPVC Conduit Pipes',
           description: 'Rigid PVC electrical conduit pipes for building wiring systems. Available in compression force ratings and Schedule 40/80.',
           items: {
             compression_force: {
-              name: 'PVC Conduit Pipes 1250N/750N/320N',
-              info: 'Fire-retardant PVC conduit pipes — Heavy (1250N), Medium (750N) & Light (320N) grades.',
+              name: 'uPVC Conduit Pipes 1250N/750N/320N',
+              info: 'Fire-retardant uPVC conduit pipes — Heavy (1250N), Medium (750N) & Light (320N) grades.',
               btn: 'Know More',
             },
             sch_40: {
-              name: 'PVC Conduit Pipes SCH 40',
+              name: 'uPVC Conduit Pipes SCH 40',
               info: 'Schedule 40 PVC electrical conduit — ½″ to 6″, US standard.',
               btn: 'Know More',
             },
             sch_80: {
-              name: 'PVC Conduit Pipes SCH 80',
+              name: 'uPVC Conduit Pipes SCH 80',
               info: 'Heavy-duty Schedule 80 PVC electrical conduit — ½″ to 6″, US standard.',
               btn: 'Know More',
             },
@@ -1786,10 +1786,10 @@ export const en = {
     about_crown: 'About Crown',
     about_us: 'About Us',
     quality_certs: 'Quality & Certifications',
-    upvc_pressure: 'UPVC Pressure',
+    upvc_pressure: 'uPVC Pressure',
     upvc_drainage: 'UPVC Drainage',
-    upvc_duct: 'UPVC Duct',
-    pvc_conduit: 'PVC Conduit',
+    upvc_duct: 'uPVC Duct',
+    pvc_conduit: 'uPVC Conduit',
     ppr_pipes: 'PPR Pipes',
     polyethylene: 'Polyethylene',
     contact_us: 'Contact Us',
@@ -1875,21 +1875,21 @@ export const en = {
         view_details: 'View Details',
         items: {
           // â”€â”€ Legacy keys (kept for backward compatibility) â”€â”€
-          upvc_pressure: { name: 'UPVC Pressure Pipes', desc: 'BS EN 1452 certified' },
+          upvc_pressure: { name: 'uPVC Pressure Pipes', desc: 'BS EN 1452 certified' },
           upvc_drainage: { name: 'UPVC Drainage Pipes & Fittings', desc: 'BS EN 1401 compliant' },
           ppr: { name: 'PPR Hot & Cold Pipes', desc: 'DIN 8077/8078 standard' },
           hdpe: { name: 'HDPE Pipes', desc: 'ISO 4427 certified' },
-          pvc_conduit: { name: 'PVC Conduit Pipes', desc: 'Electrical applications' },
-          upvc_duct: { name: 'PVC Duct Pipes', desc: 'Telecom & cable ducting' },
+          pvc_conduit: { name: 'uPVC Conduit Pipes', desc: 'Electrical applications' },
+          upvc_duct: { name: 'uPVC Duct Pipes', desc: 'Telecom & cable ducting' },
           // â”€â”€ Full 13-category galaxy (aligned to PRODUCT_MAP IDs) â”€â”€
           upvc_drainage_pipes: { name: 'UPVC Drainage Pipes', desc: 'BS EN 1329-1 / BS EN 1401 certified above & underground systems' },
           upvc_drainage_fittings: { name: 'UPVC Drainage Fittings', desc: 'Push-fit & solvent-weld fittings — BS EN 1329-1 / BS EN 1401' },
-          pvc_high_pressure_pipes: { name: 'PVC High Pressure Pipes', desc: 'ISO, DIN, BS & ASTM standards — potable water & industrial' },
-          pvc_high_pressure_fittings: { name: 'PVC High Pressure Fittings', desc: 'DIN 8063 & BS EN 1452:3 pressure-rated fittings & valves' },
+          pvc_high_pressure_pipes: { name: 'uPVC High Pressure Pipes', desc: 'ISO, DIN, BS & ASTM standards — potable water & industrial' },
+          pvc_high_pressure_fittings: { name: 'uPVC High Pressure Fittings', desc: 'DIN 8063 & BS EN 1452:3 pressure-rated fittings & valves' },
           pvc_sch_40_fittings: { name: 'PVC SCH 40 Fittings', desc: 'ASTM D 2466 schedule 40 pressure fittings' },
-          pvc_duct_pipes: { name: 'PVC Duct Pipes', desc: 'NEMA, DIN & BS standards — Etisalat & DU telecom approved' },
-          pvc_duct_fittings: { name: 'PVC Duct Fittings', desc: 'Underground cable protection fittings' },
-          pvc_conduit_pipes: { name: 'PVC Conduit Pipes', desc: '1250N / 750N / 320N compression rated — SCH 40 & SCH 80' },
+          pvc_duct_pipes: { name: 'uPVC Duct Pipes', desc: 'NEMA, DIN & BS standards — Etisalat & DU telecom approved' },
+          pvc_duct_fittings: { name: 'uPVC Duct Fittings', desc: 'Underground cable protection fittings' },
+          pvc_conduit_pipes: { name: 'uPVC Conduit Pipes', desc: '1250N / 750N / 320N compression rated — SCH 40 & SCH 80' },
           ppr_pipes: { name: 'PP-R Pipes', desc: 'DIN 8077/78 — PN10 to PN25 hot & cold potable water' },
           hdpe_pipes: { name: 'HDPE Pipes', desc: 'PE63 / PE80 / PE100 — irrigation, water distribution & industrial' },
           pex_pipes: { name: 'PEX Pipes', desc: 'PN 12.5 & PN 20 cross-linked polyethylene for hot & cold systems' },
@@ -1977,7 +1977,7 @@ export const en = {
         description: 'Internationally recognized quality, environmental, and safety standards.',
       },
       pressure: {
-        title: 'UPVC Pressure Systems',
+        title: 'uPVC Pressure Systems',
         description: 'High-performance pipes and fittings for potable water supply.',
       },
       drainage: {
@@ -1997,10 +1997,10 @@ export const en = {
       iso_9001: 'CERTIFICATE ISO 9001:2015',
       iso_14001: 'CERTIFICATE ISO 14001:2015',
       iso_45001: 'CERTIFICATE ISO 45001:2018',
-      pressure_pipes: 'UPVC PRESSURE PIPES',
-      pressure_fittings_astm: 'UPVC PRESSURE FITTINGS ASTM D 2466 SCH-40',
-      pressure_fittings_bs: 'UPVC PRESSURE FITTINGS BS EN 1452:23 - BS 4346 PN 15',
-      pressure_fittings_din: 'UPVC PRESSURE FITTINGS DIN 8063',
+      pressure_pipes: 'uPVC PRESSURE PIPES',
+      pressure_fittings_astm: 'uPVC PRESSURE FITTINGS ASTM D 2466 SCH-40',
+      pressure_fittings_bs: 'uPVC PRESSURE FITTINGS BS EN 1452:23 - BS 4346 PN 15',
+      pressure_fittings_din: 'uPVC PRESSURE FITTINGS DIN 8063',
       drainage_pipes: 'UPVC DRAINAGE PIPES',
       drainage_fittings_1329: 'UPVC DRAINAGE FITTING BS EN 1329-1:2014',
       drainage_fittings_1401: 'UPVC DRAINAGE FITTINGS BS EN 1401',
@@ -2022,12 +2022,12 @@ export const en = {
     category_names: {
       upvc_drainage_pipes: 'UPVC Drainage Pipes',
       upvc_drainage_fittings: 'UPVC Drainage Fittings',
-      pvc_high_pressure_pipes: 'PVC High Pressure Pipes',
-      pvc_high_pressure_fittings: 'PVC High Pressure Fittings',
+      pvc_high_pressure_pipes: 'uPVC High Pressure Pipes',
+      pvc_high_pressure_fittings: 'uPVC High Pressure Fittings',
       pvc_sch_40_fittings: 'PVC SCH 40 Fittings',
-      pvc_duct_pipes: 'PVC Duct Pipes',
-      pvc_duct_fittings: 'PVC Duct Fittings',
-      pvc_conduit_pipes: 'PVC Conduit Pipes',
+      pvc_duct_pipes: 'uPVC Duct Pipes',
+      pvc_duct_fittings: 'uPVC Duct Fittings',
+      pvc_conduit_pipes: 'uPVC Conduit Pipes',
       ppr_pipes: 'PP-R Pipes',
       hdpe_pipes: 'HDPE Pipes',
       pex_pipes: 'PEX Pipes',
@@ -2048,8 +2048,8 @@ export const en = {
       // Each key maps a category slug to meta_title, h1, hero_subtext, and optional AEO faqs.
       category_overrides: {
         'pvc-high-pressure-pipes': {
-          meta_title: 'PVC Pressure Pipes / Fittings in UAE | Crown Plastic Manufacturer',
-          h1: 'PVC Pressure Pipes / Fittings in UAE',
+          meta_title: 'uPVC Pressure Pipes / Fittings in UAE | Crown Plastic Manufacturer',
+          h1: 'uPVC Pressure Pipes / Fittings in UAE',
           hero_subtext: 'Leading manufacturer of high-pressure PVC fluid distribution systems serving Dubai, Sharjah, Abu Dhabi, and the GCC.',
           faqs: [
             {
@@ -2122,8 +2122,8 @@ export const en = {
           hero_subtext: 'Durable electrical and telecom conduit systems compliant with local and international standards.',
           faqs: [
             {
-              q: 'What standards do Crown Plastic PVC duct Pipes / Fittings meet?',
-              a: 'Crown Plastic PVC duct Pipes / Fittings comply with NEMA TC 2, NEMA TC 6/8, DIN 8062, and Etisalat/du specifications. This ensures compatibility with all major UAE telecom and electrical infrastructure projects.',
+              q: 'What standards do Crown Plastic uPVC duct Pipes / Fittings meet?',
+              a: 'Crown Plastic uPVC duct Pipes / Fittings comply with NEMA TC 2, NEMA TC 6/8, DIN 8062, and Etisalat/du specifications. This ensures compatibility with all major UAE telecom and electrical infrastructure projects.',
             },
           ],
         },

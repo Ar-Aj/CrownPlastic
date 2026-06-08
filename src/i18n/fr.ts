@@ -122,7 +122,7 @@ export const fr = {
           cta: 'Voir les Systèmes d\'Évacuation',
         },
         pressure: {
-          title: 'Tuyaux PVC Haute Pression',
+          title: 'Tuyaux uPVC Haute Pression',
           description: 'Conçus pour les réseaux critiques de distribution d\'eau, nos tuyaux PVC haute pression supportent des pressions nominales jusqu\'à PN16/25. Fabriqués à partir de composés de matières premières de premier choix pour un débit hydraulique supérieur et une résistance à la corrosion dans les réseaux municipaux.',
           cta: 'Explorer les Tuyaux Pression',
         },
@@ -890,9 +890,9 @@ export const fr = {
             },
           },
         },
-        // 3. PVC High Pressure Pipes
+        // 3. uPVC High Pressure Pipes
         pvc_high_pressure_pipes: {
-          name: 'Tuyaux PVC Haute Pression',
+          name: 'Tuyaux uPVC Haute Pression',
           description: 'Tuyaux PVC haute pression selon les normes ISO, DIN, BS et ASTM pour l\'eau potable et les applications industrielles.',
           items: {
             iso_4422: {
@@ -932,9 +932,9 @@ export const fr = {
             },
           },
         },
-        // 4. PVC High Pressure Fittings
+        // 4. uPVC High Pressure Fittings
         pvc_high_pressure_fittings: {
-          name: 'Raccords PVC Haute Pression',
+          name: 'Raccords uPVC Haute Pression',
           description: 'Raccords et vannes PVC haute pression selon les normes DIN 8063 et BS EN 1452:3/BS 4346.',
           items: {
             din_8063: {
@@ -948,7 +948,7 @@ export const fr = {
               btn: 'En Savoir Plus',
             },
             valves: {
-              name: 'PVC High Pressure Valves',
+              name: 'uPVC High Pressure Valves',
               info: 'PVC-U industrial valves — unions, compact ball, true union, and single union types.',
               btn: 'En Savoir Plus',
             },
@@ -966,97 +966,97 @@ export const fr = {
             },
           },
         },
-        // 6. PVC Duct Pipes
+        // 6. uPVC Duct Pipes
         pvc_duct_pipes: {
-          name: 'PVC Duct Pipes',
+          name: 'uPVC Duct Pipes',
           description: 'Systèmes de gaines enterrées pour protection de câbles selon les normes NEMA, DIN et BS, y compris homologation Etisalat et DU.',
           items: {
             nema_tc_2: {
-              name: 'PVC Duct Pipes NEMA TC 2:2003',
+              name: 'uPVC Duct Pipes NEMA TC 2:2003',
               info: 'Tuyaux de gaine câbles EPC 40/80 selon NEMA TC 2:2003 — ½″–8″.',
               btn: 'En Savoir Plus',
             },
             nema_tc_6_8: {
-              name: 'PVC Duct Pipes NEMA TC 6 & 8',
+              name: 'uPVC Duct Pipes NEMA TC 6 & 8',
               info: 'Tuyaux de gaine EB/DB selon NEMA TC 6 et 8 / ASTM F 512 — 1″–6″.',
               btn: 'En Savoir Plus',
             },
             din_8062: {
-              name: 'PVC Duct Pipes DIN 8062',
+              name: 'uPVC Duct Pipes DIN 8062',
               info: 'Tuyaux de gaine métriques selon DIN 8062 — PN 4 à PN 16, 20–315 mm.',
               btn: 'En Savoir Plus',
             },
             etisalat_du: {
-              name: 'PVC Duct Pipes For Etisalat & DU',
+              name: 'uPVC Duct Pipes For Etisalat & DU',
               info: 'Tuyaux de gaine télécom homologués Etisalat et DU — D54/D56/D57.',
               btn: 'En Savoir Plus',
             },
             bs_3505_06: {
-              name: 'PVC Duct Pipes BS 3505/06',
+              name: 'uPVC Duct Pipes BS 3505/06',
               info: 'Tuyaux de gaine impériaux selon BS 3505/06 — PN 6 à PN 15, ½″–12″.',
               btn: 'En Savoir Plus',
             },
             duct_non_standard: {
-              name: 'PVC Duct Non-Standard Pipes',
+              name: 'uPVC Duct Non-Standard Pipes',
               info: 'Tuyaux de gaine non standard pour projets spécialisés — 75–160 mm.',
               btn: 'En Savoir Plus',
             },
           },
         },
-        // 7. PVC Duct Fittings
+        // 7. uPVC Duct Fittings
         pvc_duct_fittings: {
-          name: 'PVC Duct Fittings',
+          name: 'uPVC Duct Fittings',
           description: 'Raccords de gaine pour systèmes enterrés de protection de câbles.',
           items: {
             socket: {
-              name: 'PVC Duct Socket / Coupler',
+              name: 'uPVC Duct Socket / Coupler',
               info: 'Manchon de gaine PVC standard pour raccorder les sections de tuyaux — Etisalat & DU compliant.',
               btn: 'En Savoir Plus',
             },
             bellmouth: {
-              name: 'PVC Duct Bellmouth',
-              info: 'PVC duct bellmouth for smooth cable entry — prevents abrasion in Etisalat & DU systems.',
+              name: 'uPVC Duct Bellmouth',
+              info: 'uPVC duct bellmouth for smooth cable entry — prevents abrasion in Etisalat & DU systems.',
               btn: 'En Savoir Plus',
             },
             end_caps: {
-              name: 'PVC Duct End Caps',
+              name: 'uPVC Duct End Caps',
               info: 'Bouchons étanches pour sceller et protéger les extrémités de gaine ouvertes sur les chantiers EAU.',
               btn: 'En Savoir Plus',
             },
             lr_bends_90_45: {
-              name: 'PVC Duct 90°/45° LR Bends',
+              name: 'uPVC Duct 90°/45° LR Bends',
               info: 'Coudes à grand rayon 90° et 45° pour des changements de direction fluides dans les parcours de gaines enterrées.',
               btn: 'En Savoir Plus',
             },
             street_lighting_bends: {
-              name: 'PVC Duct 90° Street Lighting LR Bends',
+              name: 'uPVC Duct 90° Street Lighting LR Bends',
               info: 'Coudes à grand rayon 90° pour conduits d\'éclairage public — UAE Roads Authority compliant.',
               btn: 'En Savoir Plus',
             },
             lightning_bends: {
-              name: 'PVC Duct 90° Lightning LR Bends',
+              name: 'uPVC Duct 90° Lightning LR Bends',
               info: 'Coudes à grand rayon 90° pour les systèmes de conduits de protection foudre et mise à la terre.',
               btn: 'En Savoir Plus',
             },
           },
         },
-        // 8. PVC Conduit Pipes
+        // 8. uPVC Conduit Pipes
         pvc_conduit_pipes: {
-          name: 'PVC Conduit Pipes',
+          name: 'uPVC Conduit Pipes',
           description: 'Tuyaux conduit PVC rigides pour systèmes de câblage de bâtiments. Disponibles en classes de résistance à la compression et Schedule 40/80.',
           items: {
             compression_force: {
-              name: 'PVC Conduit Pipes 1250N/750N/320N',
+              name: 'uPVC Conduit Pipes 1250N/750N/320N',
               info: 'Tuyaux conduit PVC ignifuges — grades Lourd (1250N), Moyen (750N) et Léger (320N).',
               btn: 'En Savoir Plus',
             },
             sch_40: {
-              name: 'PVC Conduit Pipes SCH 40',
+              name: 'uPVC Conduit Pipes SCH 40',
               info: 'Conduit électrique PVC Schedule 40 — ½″ to 6″, US standard.',
               btn: 'En Savoir Plus',
             },
             sch_80: {
-              name: 'PVC Conduit Pipes SCH 80',
+              name: 'uPVC Conduit Pipes SCH 80',
               info: 'Conduit électrique PVC Schedule 80 haute résistance — ½″ to 6″, US standard.',
               btn: 'En Savoir Plus',
             },
@@ -1792,7 +1792,7 @@ export const fr = {
     upvc_pressure: 'UPVC Pression',
     upvc_drainage: 'UPVC Évacuation',
     upvc_duct: 'UPVC Gaine',
-    pvc_conduit: 'PVC Conduit',
+    pvc_conduit: 'uPVC Conduit',
     ppr_pipes: 'Tuyaux PPR',
     polyethylene: 'Polyéthylène',
     contact_us: 'Contactez-nous',
@@ -1878,21 +1878,21 @@ export const fr = {
         view_details: 'Voir les Détails',
         items: {
           // â”€â”€ Legacy keys (kept for backward compatibility) â”€â”€
-          upvc_pressure: { name: 'UPVC Pressure Pipes', desc: 'BS EN 1452 certified' },
+          upvc_pressure: { name: 'uPVC Pressure Pipes', desc: 'BS EN 1452 certified' },
           upvc_drainage: { name: 'UPVC Drainage Pipes & Fittings', desc: 'BS EN 1401 compliant' },
           ppr: { name: 'PPR Hot & Cold Pipes', desc: 'DIN 8077/8078 standard' },
           hdpe: { name: 'HDPE Pipes', desc: 'ISO 4427 certified' },
-          pvc_conduit: { name: 'PVC Conduit Pipes', desc: 'Electrical applications' },
-          upvc_duct: { name: 'PVC Duct Pipes', desc: 'Telecom & cable ducting' },
+          pvc_conduit: { name: 'uPVC Conduit Pipes', desc: 'Electrical applications' },
+          upvc_duct: { name: 'uPVC Duct Pipes', desc: 'Telecom & cable ducting' },
           // â”€â”€ Full 13-category galaxy (aligned to PRODUCT_MAP IDs) â”€â”€
           upvc_drainage_pipes: { name: 'UPVC Drainage Pipes', desc: 'BS EN 1329-1 / BS EN 1401 certified above & underground systems' },
           upvc_drainage_fittings: { name: 'UPVC Drainage Fittings', desc: 'Push-fit & solvent-weld fittings — BS EN 1329-1 / BS EN 1401' },
-          pvc_high_pressure_pipes: { name: 'PVC High Pressure Pipes', desc: 'ISO, DIN, BS & ASTM standards — potable water & industrial' },
-          pvc_high_pressure_fittings: { name: 'PVC High Pressure Fittings', desc: 'DIN 8063 & BS EN 1452:3 pressure-rated fittings & valves' },
+          pvc_high_pressure_pipes: { name: 'uPVC High Pressure Pipes', desc: 'ISO, DIN, BS & ASTM standards — potable water & industrial' },
+          pvc_high_pressure_fittings: { name: 'uPVC High Pressure Fittings', desc: 'DIN 8063 & BS EN 1452:3 pressure-rated fittings & valves' },
           pvc_sch_40_fittings: { name: 'PVC SCH 40 Fittings', desc: 'ASTM D 2466 schedule 40 pressure fittings' },
-          pvc_duct_pipes: { name: 'PVC Duct Pipes', desc: 'NEMA, DIN & BS standards — Etisalat & DU telecom approved' },
-          pvc_duct_fittings: { name: 'PVC Duct Fittings', desc: 'Underground cable protection fittings' },
-          pvc_conduit_pipes: { name: 'PVC Conduit Pipes', desc: '1250N / 750N / 320N compression rated — SCH 40 & SCH 80' },
+          pvc_duct_pipes: { name: 'uPVC Duct Pipes', desc: 'NEMA, DIN & BS standards — Etisalat & DU telecom approved' },
+          pvc_duct_fittings: { name: 'uPVC Duct Fittings', desc: 'Underground cable protection fittings' },
+          pvc_conduit_pipes: { name: 'uPVC Conduit Pipes', desc: '1250N / 750N / 320N compression rated — SCH 40 & SCH 80' },
           ppr_pipes: { name: 'PP-R Pipes', desc: 'DIN 8077/78 — PN10 to PN25 hot & cold potable water' },
           hdpe_pipes: { name: 'HDPE Pipes', desc: 'PE63 / PE80 / PE100 — irrigation, water distribution & industrial' },
           pex_pipes: { name: 'PEX Pipes', desc: 'PN 12.5 & PN 20 cross-linked polyethylene for hot & cold systems' },
@@ -2025,12 +2025,12 @@ export const fr = {
     category_names: {
       upvc_drainage_pipes: 'Tuyaux d\'Évacuation UPVC',
       upvc_drainage_fittings: 'Raccords d\'Évacuation UPVC',
-      pvc_high_pressure_pipes: 'Tuyaux PVC Haute Pression',
-      pvc_high_pressure_fittings: 'Raccords PVC Haute Pression',
+      pvc_high_pressure_pipes: 'Tuyaux uPVC Haute Pression',
+      pvc_high_pressure_fittings: 'Raccords uPVC Haute Pression',
       pvc_sch_40_fittings: 'Raccords PVC SCH 40',
-      pvc_duct_pipes: 'Tuyaux de Gaine PVC',
-      pvc_duct_fittings: 'Raccords de Gaine PVC',
-      pvc_conduit_pipes: 'Tuyaux Conduit PVC',
+      pvc_duct_pipes: 'Tuyaux de Gaine uPVC',
+      pvc_duct_fittings: 'Raccords de Gaine uPVC',
+      pvc_conduit_pipes: 'Tuyaux Conduit uPVC',
       ppr_pipes: 'Tuyaux PP-R',
       hdpe_pipes: 'Tuyaux HDPE',
       pex_pipes: 'Tuyaux PEX',
