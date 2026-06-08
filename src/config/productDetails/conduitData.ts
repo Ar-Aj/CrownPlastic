@@ -23,6 +23,12 @@ const sharedApplications = [
   'Underground electrical conduit installations',
   'Communication cable protection systems',
 ];
+const sharedApplicationsFr = [
+  'Protection of electrical wiring in commercial and residential projects',
+  'Cable routing in industrial plants and infrastructure',
+  'Underground electrical conduit installations',
+  'Communication cable protection systems',
+];
 
 // Features reference (kept for documentation)
 // const sharedFeatures = [
@@ -157,11 +163,11 @@ export const upvcConduitSch40: ProductDetailConfig = {
 
   title: 'PVC Conduit Pipes – SCH 40',
   titleAr: 'أنابيب قنوات UPVC – SCH 40',
-
-  shortDescription: 'Schedule 40 PVC conduit pipes for US market applications. Designed for electrical conduit installations with standard wall thickness, available in trade sizes from 1/2" to 6".',
+    titleFr: `PVC Conduit Tuyaux – SCH 40`,
+    shortDescription: 'Schedule 40 PVC conduit pipes for US market applications. Designed for electrical conduit installations with standard wall thickness, available in trade sizes from 1/2" to 6".',
   shortDescriptionAr: 'أنابيب قنوات PVC جدول 40 لتطبيقات السوق الأمريكي. مصممة لتركيبات القنوات الكهربائية بسماكة جدار قياسية.',
-
-  overview: `The SCHEDULE 40 CONDUIT is a type of PVC conduit pipe listed for the US market, indicated by the 'US' designation and the use of Trade Dimensions (e.g., 1/2", 3/4", 1").
+    shortDescriptionFr: `Schémadule 40 PVC conduit tuyaux pour les applications du marché américain. Conçu pour les installations électriques avec une épaisseur de paroi standard, disponible dans les tailles commerciales de 1/2" à 6".`,
+    overview: `The SCHEDULE 40 CONDUIT is a type of PVC conduit pipe listed for the US market, indicated by the 'US' designation and the use of Trade Dimensions (e.g., 1/2", 3/4", 1").
 
 This document primarily covers PVC Conduit Pipes, including both heavy-duty and light-duty round conduits based on compression force (1250N, 750N, 320N) and the US-standard SCHEDULE 40 and SCHEDULE 80 conduits.
 
@@ -178,8 +184,17 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 • الجدول: SCH 40 (جدار قياسي)
 • النظام: نظام قنوات ثقيل/خفيف (مقاسات تجارية أمريكية)
 • المعايير: ISO 9001:2015، ISO 18001`,
+    overviewFr: `Le SCHEDULE 40 CONDUIT est un type de tuyau PVC conduit répertorié pour le marché américain, indiqué par la désignation « US » et l'utilisation de dimensions commerciales (par exemple, 1/2", 3/4", 1").
 
-  features: [
+Ce document couvre principalement les tuyaux PVC Conduit, y compris les tuyaux ronds duty lourds et légers duty basés sur la force de compression (1250N, 750N, 320N) et la norme américaine SCHEDULE 40 et SCHEDULE 80 conduits.
+
+**Spécifications clés :**
+• Matériel : PVC
+• Duty / Schedule : SCH 40 (Mur standard)
+• Système : Système lourd/léger duty conduit (tailles commerciales américaines)
+• Tailles commerciales : 1/2" à 6"
+• Normes/Certifications : ISO 9001:2015, ISO 18001`,
+    features: [
     'Designed for electrical conduit applications in US trade sizes',
     'Consistent dimensional control for reliable installations',
     'Compatible with SCH 40 PVC fittings and accessories',
@@ -196,22 +211,45 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'مقاوم للتآكل ولا يحتاج صيانة',
     'خفيف الوزن لسهولة المناولة والتركيب',
   ],
-
-  applications: sharedApplications,
+    featuresFr: [
+            `Conçu pour les applications de conduit électriques dans les tailles commerciales américaines`,
+            `Contrôle dimensionnel cohérent pour des installations fiables`,
+            `Compatible avec les raccords et accessoires SCH 40 PVC`,
+            `Excellentes propriétés d'isolation électrique`,
+            `Résistant à la corrosion et sans entretien`,
+            `Léger pour une manipulation et une installation faciles`,
+            `Intérieur lisse pour tirer facilement le câble`
+          ],
+    applications: sharedApplications,
   applicationsAr: [
     'حماية الأسلاك الكهربائية في المشاريع التجارية والسكنية',
     'توجيه الكابلات في المصانع والبنية التحتية',
     'تركيبات القنوات الكهربائية تحت الأرض',
     'أنظمة حماية كابلات الاتصالات',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: sharedApplicationsFr,
+    // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from PVC CONDUIT PIPE.txt JSON)
   // 4 tables: Schedule 40, Heavy Grade, Medium Grade, Light Grade
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch40PipesTables,
-
-  // ───────────────────────────────────────────────────────────────────────────
+    dosDontsFr: {
+          dos: [
+            `Utilisez une colle à solvant appropriée pour assembler les tuyaux conduit`,
+            `Assurer un support et un serrage appropriés aux intervalles recommandés`,
+            `Permet la dilatation thermique sur de longues distances`,
+            `Utilisez des boîtes de tirage à intervalles appropriés pour les longs câbles.`,
+            `Suivez les codes électriques locaux pour l'installation`
+          ],
+          donts: [
+            `Ne pas exposer directement au soleil pendant de longues périodes sans protection UV.`,
+            `Ne dépassez pas la capacité de remplissage maximale avec les câbles`,
+            `N'utilisez pas de conduit endommagé ou fissuré`,
+            `Ne pas mélanger avec des systèmes conduit incompatibles`,
+            `Ne pas utiliser pour le transport d’air comprimé ou de fluide`
+          ]
+        },
+    // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (conduit is pipe-only for now)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
@@ -264,11 +302,11 @@ export const upvcConduitSch80: ProductDetailConfig = {
 
   title: 'PVC Conduit Pipes – SCH 80',
   titleAr: 'أنابيب قنوات UPVC – SCH 80',
-
-  shortDescription: 'Schedule 80 heavy-duty PVC conduit pipes for US market applications. Features thicker walls compared to SCH 40 for demanding installations requiring extra protection.',
+    titleFr: `PVC Conduit Tuyaux – SCH 80`,
+    shortDescription: 'Schedule 80 heavy-duty PVC conduit pipes for US market applications. Features thicker walls compared to SCH 40 for demanding installations requiring extra protection.',
   shortDescriptionAr: 'أنابيب قنوات PVC جدول 80 ثقيلة الاستخدام لتطبيقات السوق الأمريكي. تتميز بجدران أكثر سماكة مقارنة بجدول 40.',
-
-  overview: `The SCHEDULE 80 CONDUIT is a heavy-duty PVC conduit pipe for the US market, featuring thicker walls compared to SCH 40 for demanding installations requiring extra protection and mechanical strength.
+    shortDescriptionFr: `Schémadule 80 tuyaux lourds-duty PVC conduit pour les applications du marché américain. Présente des parois plus épaisses par rapport au SCH 40 pour les installations exigeantes nécessitant une protection supplémentaire.`,
+    overview: `The SCHEDULE 80 CONDUIT is a heavy-duty PVC conduit pipe for the US market, featuring thicker walls compared to SCH 40 for demanding installations requiring extra protection and mechanical strength.
 
 This document primarily covers PVC Conduit Pipes, including both heavy-duty and light-duty round conduits based on compression force (1250N, 750N, 320N) and the US-standard SCHEDULE 40 and SCHEDULE 80 conduits.
 
@@ -285,8 +323,17 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
 • الجدول: SCH 80 (استخدام ثقيل / جدار سميك إضافي)
 • النظام: نظام قنوات ثقيل (مقاسات تجارية أمريكية)
 • المعايير: ISO 9001:2015، ISO 18001`,
+    overviewFr: `Le SCHEDULE 80 CONDUIT est un tuyau lourd duty PVC conduit destiné au marché américain, doté de parois plus épaisses que le SCH 40 pour les installations exigeantes nécessitant une protection et une résistance mécanique supplémentaires.
 
-  features: [
+Ce document couvre principalement les tuyaux PVC Conduit, y compris les tuyaux ronds duty lourds et légers duty basés sur la force de compression (1250N, 750N, 320N) et les normes américaines SCHEDULE 40 et SCHEDULE 80 conduits.
+
+**Spécifications clés :**
+• Matériel : PVC
+• Duty / Schedule : SCH 80 (Lourd Duty / Paroi très épaisse)
+• Système : système lourd duty conduit (tailles commerciales américaines)
+• Tailles commerciales : 1/2" à 6"
+• Normes/Certifications : ISO 9001:2015, ISO 18001`,
+    features: [
     'Heavy-duty construction with thicker walls than SCH 40',
     'Enhanced mechanical protection for demanding environments',
     'Designed for electrical conduit applications in US trade sizes',
@@ -305,8 +352,17 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'خصائص عزل كهربائي ممتازة',
     'مقاوم للتآكل ولا يحتاج صيانة',
   ],
-
-  applications: [
+    featuresFr: [
+            `Construction lourde-duty avec des murs plus épais que SCH 40`,
+            `Protection mécanique améliorée pour les environnements exigeants`,
+            `Conçu pour les applications de conduit électriques dans les tailles commerciales américaines`,
+            `Convient pour un enterrement direct et un enrobage de béton`,
+            `Compatible avec les raccords et accessoires SCH 80 PVC`,
+            `Excellentes propriétés d'isolation électrique`,
+            `Résistant à la corrosion et sans entretien`,
+            `Résistance à l'écrasement plus élevée pour les applications industrielles`
+          ],
+    applications: [
     'Protection of electrical wiring in commercial and industrial facilities',
     'Underground and direct burial electrical installations',
     'Cable routing in heavy industrial plants',
@@ -321,14 +377,37 @@ This document primarily covers PVC Conduit Pipes, including both heavy-duty and 
     'المناطق التي تتطلب حماية ميكانيكية عالية',
     'مسارات القنوات الكهربائية المغلفة بالخرسانة',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: [
+            `Protection du câblage électrique dans les installations commerciales et industrielles`,
+            `Installations électriques souterraines et enterrées directement`,
+            `Acheminement des câbles dans les installations industrielles lourdes`,
+            `Zones nécessitant une haute protection mécanique`,
+            `Connexion électrique sous bétonduelle fonctionne`,
+            `Infrastructure de communication dans des environnements exigeants`
+          ],
+    // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from PVC CONDUIT PIPE.txt JSON)
   // 1 table: Schedule 80
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: sch80PipesTables,
-
-  // ───────────────────────────────────────────────────────────────────────────
+    dosDontsFr: {
+          dos: [
+            `Utilisez une colle à solvant appropriée pour assembler les tuyaux conduit`,
+            `Assurer un support et un serrage appropriés aux intervalles recommandés`,
+            `Permet la dilatation thermique sur de longues distances`,
+            `Utilisez des boîtes de tirage à intervalles appropriés pour les longs câbles.`,
+            `Suivez les codes électriques locaux pour l'installation`,
+            `Utilisez les raccords SCH 80 avec SCH 80 conduit pour une épaisseur de paroi constante`
+          ],
+          donts: [
+            `Ne pas exposer directement au soleil pendant de longues périodes sans protection UV.`,
+            `Ne dépassez pas la capacité de remplissage maximale avec les câbles`,
+            `N'utilisez pas de conduit endommagé ou fissuré`,
+            `Ne mélangez pas SCH 80 avec SCH 40 dans le même passage sans transitions appropriées`,
+            `Ne pas utiliser pour le transport d’air comprimé ou de fluide`
+          ]
+        },
+    // ───────────────────────────────────────────────────────────────────────────
   // Fittings Section (conduit is pipe-only for now)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],

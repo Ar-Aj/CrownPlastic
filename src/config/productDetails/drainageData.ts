@@ -1098,14 +1098,14 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
 
   title: 'UPVC Drainage Fittings BS EN 1329-1:2014 (Supersedes BS 5255 & BS 4514)',
   titleAr: 'توصيلات الصرف UPVC بمعيار BS EN 1329-1:2014 (يحل محل BS 5255 و BS 4514)',
-
-  shortDescription: 'PVC-U drainage fittings for above-ground soil and waste discharge systems. Light grey/olive colour for internal and external installations.',
+    titleFr: `UPVC Raccords de drainage BS EN 1329-1:2014 (remplace BS 5255 et BS 4514)`,
+    shortDescription: 'PVC-U drainage fittings for above-ground soil and waste discharge systems. Light grey/olive colour for internal and external installations.',
   shortDescriptionAr: 'توصيلات صرف PVC-U لأنظمة تصريف التربة والنفايات الأرضية. لون رمادي فاتح/زيتوني للتركيبات الداخلية والخارجية.',
-
-  overview: `Crown Plastic Pipes / Fittings manufactures a comprehensive range of PVC-U drainage fittings complying with BS EN 1329-1:2014, which supersedes the legacy British standards BS 5255 and BS 4514. These fittings are designed for above-ground soil and waste discharge applications in residential, commercial, and industrial buildings. The product range includes elbows, tees, couplers, access fittings, floor drains, roof drains, and specialized components for complete drainage system solutions.`,
+    shortDescriptionFr: `PVC-U Raccords de drainage pour systèmes d'évacuation des sols et des déchets hors sol. Couleur gris clair/olive pour installations internes et externes.`,
+    overview: `Crown Plastic Pipes / Fittings manufactures a comprehensive range of PVC-U drainage fittings complying with BS EN 1329-1:2014, which supersedes the legacy British standards BS 5255 and BS 4514. These fittings are designed for above-ground soil and waste discharge applications in residential, commercial, and industrial buildings. The product range includes elbows, tees, couplers, access fittings, floor drains, roof drains, and specialized components for complete drainage system solutions.`,
   overviewAr: `تصنع كراون للأنابيب والوصلات البلاستيكية مجموعة شاملة من توصيلات الصرف PVC-U المطابقة لمعيار BS EN 1329-1:2014، الذي يحل محل المعايير البريطانية القديمة BS 5255 و BS 4514. هذه التوصيلات مصممة لتطبيقات تصريف التربة والنفايات الأرضية في المباني السكنية والتجارية والصناعية.`,
-
-  // TODO: Extract specific features from PDF when available
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique une gamme complète de raccords de drainage PVC-U conformes à BS EN 1329-1:2014, qui remplace les anciennes normes britanniques BS 5255 et BS 4514. Ces raccords sont conçus pour les applications de décharge de sol et de déchets en surface dans les bâtiments résidentiels, commerciaux et industriels. La gamme product comprend des coudes, des tés, des coupleurs, des raccords d'accès, des siphons de sol, des siphons de toit et des composants spécialisés pour des solutions complètes de système de drainage.`,
+    // TODO: Extract specific features from PDF when available
   features: [
     'Conforms to BS EN 1329-1:2014 standard',
     'Supersedes BS 5255 & BS 4514',
@@ -1116,7 +1116,17 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
     'ISO 9001:2015 certified production',
     'Comprehensive range of 24+ fitting types',
   ],
-  featuresAr: [
+    featuresFr: [
+            `Conforme à la norme BS EN 1329-1:2014`,
+            `Remplace BS 5255 et BS 4514`,
+            `Joints à emboîtement à joint annulaire pour un assemblage rapide`,
+            `Propriétés d'insonorisation`,
+            `Compatibilité complète du système`,
+            `Couleur gris clair/olive pour identification`,
+            `ISO 9001:2015 production certifiée`,
+            `Gamme complète de plus de 24 types de raccords`
+          ],
+    featuresAr: [
     'مطابق لمعيار BS EN 1329-1:2014',
     'يحل محل BS 5255 و BS 4514',
     'وصلات بالحلقة المانعة للتجميع السريع',
@@ -1128,7 +1138,17 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
   ],
 
   // TODO: Add specific applications when available
-  applications: [
+    applicationsFr: [
+            `Systèmes internes d’évacuation des sols et des déchets`,
+            `Drainage extérieur hors sol`,
+            `Drainage de salle de bains et de cuisine résidentielle`,
+            `Systèmes de gestion des déchets des bâtiments commerciaux`,
+            `Drainage des installations industriales`,
+            `Raccordements de drainage du toit`,
+            `Installations de siphons de sol`,
+            `Drainage balcon et terrasse`
+          ],
+    applications: [
     'Internal soil and waste discharge systems',
     'External above-ground drainage',
     'Residential bathroom and kitchen drainage',
@@ -1152,7 +1172,23 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (Note: This catalogue focuses on fittings)
   // ───────────────────────────────────────────────────────────────────────────
-  pipesTables: [
+    dosDontsFr: {
+          dos: [
+            `Utiliser des joints à bague d'étanchéité avec une lubrification appropriée`,
+            `Assurer une pente correcte du tuyau pour un drainage adéquat`,
+            `Supporter les tuyaux aux intervalles recommandés par le fabricant`,
+            `Utilisez les raccords appropriés pour les applications internes et externes`,
+            `Fournir des points d’accès adéquats pour la maintenance`
+          ],
+          donts: [
+            `Ne pas utiliser pour les applications sous pression`,
+            `Ne pas exposer à des températures supérieures à 60°C en continu`,
+            `Ne pas utiliser de lubrifiants incompatibles sur les joints annulaires`,
+            `Ne pas mélanger avec d'autres systèmes de drainage sans adaptateurs`,
+            `Ne pas installer sans chute/dégradé approprié`
+          ]
+        },
+    pipesTables: [
     {
       id: 'bs-en-1329-pipes-note',
       title: 'Pipes Information',
@@ -1219,14 +1255,14 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
 
   title: 'UPVC Drainage Fittings BS EN 1401 (Supersedes BS 4660 & BS 5481)',
   titleAr: 'توصيلات الصرف UPVC بمعيار BS EN 1401 (يحل محل BS 4660 و BS 5481)',
-
-  shortDescription: 'Heavy-duty PVC-U drainage fittings for underground sewerage and stormwater systems. Orange colour for below-ground identification.',
+    titleFr: `UPVC Raccords de drainage BS EN 1401 (remplace BS 4660 et BS 5481)`,
+    shortDescription: 'Heavy-duty PVC-U drainage fittings for underground sewerage and stormwater systems. Orange colour for below-ground identification.',
   shortDescriptionAr: 'توصيلات صرف PVC-U للخدمة الشاقة لأنظمة الصرف الصحي ومياه الأمطار تحت الأرض. لون برتقالي للتعرف تحت الأرض.',
-
-  overview: `Crown Plastic Pipes / Fittings manufactures a complete range of PVC-U drainage fittings conforming to BS EN 1401, which supersedes the British standards BS 4660 and BS 5481. These heavy-duty fittings are specifically designed for underground sewerage and stormwater drainage applications. The orange colour provides easy identification for below-ground installations, distinguishing them from above-ground systems.`,
+    shortDescriptionFr: `Raccords de drainage lourds duty PVC-U pour réseaux souterrains d'égouts et d'eaux pluviales. Couleur orange pour une identification souterraine.`,
+    overview: `Crown Plastic Pipes / Fittings manufactures a complete range of PVC-U drainage fittings conforming to BS EN 1401, which supersedes the British standards BS 4660 and BS 5481. These heavy-duty fittings are specifically designed for underground sewerage and stormwater drainage applications. The orange colour provides easy identification for below-ground installations, distinguishing them from above-ground systems.`,
   overviewAr: `تصنع كراون للأنابيب والوصلات البلاستيكية مجموعة كاملة من توصيلات الصرف PVC-U المطابقة لمعيار BS EN 1401، الذي يحل محل المعايير البريطانية BS 4660 و BS 5481. هذه التوصيلات للخدمة الشاقة مصممة خصيصاً لتطبيقات الصرف الصحي ومياه الأمطار تحت الأرض.`,
-
-  // TODO: Extract specific features from PDF when available
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique une gamme complète de raccords de drainage PVC-U conformes à BS EN 1401, qui remplace les normes britanniques BS 4660 et BS 5481. Ces raccords lourds duty sont spécialement conçus pour les applications d'assainissement souterrain et de drainage des eaux pluviales. La couleur orange permet une identification facile des installations souterraines, les distinguant des systèmes hors sol.`,
+    // TODO: Extract specific features from PDF when available
   features: [
     'Conforms to BS EN 1401 standard',
     'Supersedes BS 4660 & BS 5481',
@@ -1237,7 +1273,17 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
     'ISO 9001:2015 certified production',
     'Ring-seal joints for watertight connections',
   ],
-  featuresAr: [
+    featuresFr: [
+            `Conforme à la norme BS EN 1401`,
+            `Remplace BS 4660 et BS 5481`,
+            `Haute résistance aux chocs pour une installation souterraine`,
+            `Construction résistante aux racines`,
+            `durabilité à long terme (durée de vie prévue de plus de 50 ans)`,
+            `Couleur orange pour l'identification souterraine`,
+            `ISO 9001:2015 production certifiée`,
+            `Joints à bague d'étanchéité pour connexions étanches`
+          ],
+    featuresAr: [
     'مطابق لمعيار BS EN 1401',
     'يحل محل BS 4660 و BS 5481',
     'مقاومة صدم عالية للتركيب تحت الأرض',
@@ -1249,7 +1295,17 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
   ],
 
   // TODO: Add specific applications when available
-  applications: [
+    applicationsFr: [
+            `Systèmes d'égouts souterrains`,
+            `Réseaux de drainage des eaux pluviales`,
+            `Raccordements de drainage des bâtiments`,
+            `Conduites d'égouts de propriété`,
+            `Évacuation des eaux usées`,
+            `Drainage des eaux de surface`,
+            `Systèmes de drainage routier`,
+            `Drainage des effluents industriels`
+          ],
+    applications: [
     'Underground sewerage systems',
     'Stormwater drainage networks',
     'Building drainage connections',
@@ -1273,7 +1329,23 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
   // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (Note: This catalogue focuses on fittings)
   // ───────────────────────────────────────────────────────────────────────────
-  pipesTables: [
+    dosDontsFr: {
+          dos: [
+            `Assurer un litage et un remblai appropriés pour les conduites souterraines`,
+            `Utiliser des joints à bague d'étanchéité avec le lubrifiant approprié`,
+            `Respecter les exigences minimales de profondeur de couverture`,
+            `Remblai compacté en couches pour éviter d’endommager les canalisations`,
+            `Conduct analyse de l’eau avant le remblayage`
+          ],
+          donts: [
+            `Ne pas utiliser pour les applications sous pression`,
+            `Ne pas installer sans un support de tuyau approprié`,
+            `Ne remblayez pas avec de grosses pierres ou des débris`,
+            `Ne pas connecter à des systèmes sous pression`,
+            `Ne pas exposer les tuyaux orange au-dessus du sol en permanence`
+          ]
+        },
+    pipesTables: [
     {
       id: 'bs-en-1401-pipes-note',
       title: 'Pipes Information',

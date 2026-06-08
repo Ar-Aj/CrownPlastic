@@ -1,3 +1,4 @@
+const seoOverviewFr = (standard: string, description: string) => `<p><b>Standard: ${standard}</b></p><p>${description}</p>`;
 /**
  * PVC High Pressure Pipes - Product Detail Configurations
  *
@@ -29,7 +30,17 @@ const HP_FEATURES = [
   'UV-stabilised formulation suited to Middle East outdoor exposure',
   'ISO 9001:2015 certified production in the UAE',
 ];
-const HP_FEATURES_AR = [
+const HP_FEATURESFr = [
+  'High-pressure tolerance up to PN 16 and Schedule 80 ratings',
+  'Excellent chemical resistance against corrosive industrial fluids',
+  'Full compliance with ISO, DIN, BS, and ASTM international standards',
+  'Corrosion-resistant PVC-U ensures long service life in Gulf climate conditions',
+  'Smooth internal bore for optimised flow rates and reduced scale build-up',
+  'Lightweight construction for easy handling and efficient installation',
+  'UV-stabilised formulation suited to Middle East outdoor exposure',
+  'ISO 9001:2015 certified production in the UAE',
+];
+const HP_FEATURESAr = [
   'تحمل ضغط عالٍ يصل إلى PN 16 وتصنيف جدول 80',
   'مقاومة كيميائية ممتازة ضد السوائل الصناعية المسببة للتآكل',
   'مطابقة كاملة للمعايير الدولية ISO و DIN و BS و ASTM',
@@ -50,7 +61,17 @@ const HP_APPLICATIONS = [
   'Swimming pool and water feature installations',
   'Desalination plant auxiliary piping',
 ];
-const HP_APPLICATIONS_AR = [
+const HP_APPLICATIONSFr = [
+  'Potable water supply and distribution networks across the UAE',
+  'Industrial chemical processing and fluid transport',
+  'Municipal sewerage and wastewater management systems',
+  'Agricultural irrigation and high-pressure water delivery in GCC',
+  'Electrical and telecommunications ducting applications',
+  'HVAC systems and cooling water circulation',
+  'Swimming pool and water feature installations',
+  'Desalination plant auxiliary piping',
+];
+const HP_APPLICATIONSAr = [
   'شبكات إمداد وتوزيع مياه الشرب في الإمارات',
   'المعالجة الكيميائية الصناعية ونقل السوائل',
   'أنظمة الصرف الصحي البلدية وإدارة المياه العادمة',
@@ -75,7 +96,21 @@ const HP_DOS_DONTS = {
     'Avoid prolonged UV exposure without adequate protection',
   ],
 };
-const HP_DOS_DONTS_AR = {
+const HP_DOS_DONTSFr = {
+  dos: [
+    'Follow standard solvent welding or mechanical joining procedures',
+    'Ensure pipes are supported at recommended intervals to prevent sagging',
+    'Verify that the chosen pressure rating exceeds maximum system pressure',
+    'Conduct pressure testing before full commissioning',
+  ],
+  donts: [
+    'Do not exceed the maximum sustained working pressure for the temperature',
+    'Avoid dropping or dragging pipes on rough surfaces',
+    'Do not use for compressed air or gas transport unless specifically rated',
+    'Avoid prolonged UV exposure without adequate protection',
+  ],
+};
+const HP_DOS_DONTSAr = {
   dos: [
     'اتبع إجراءات اللحام بالمذيب أو الوصل الميكانيكي القياسية',
     'تأكد من دعم الأنابيب على فترات موصى بها لمنع الترهل',
@@ -108,13 +143,18 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes ISO 4422-2:1996',
   titleAr: 'أنابيب الضغط العالي PVC وفق ISO 4422-2:1996',
-  shortDescription: 'PVC-U pressure pipes to ISO 4422-2:1996 — sizes 20 mm to 400 mm, PN 6/10/16.',
+    titleFr: `PVC Tuyaux haute pression ISO 4422-2:1996`,
+    shortDescription: 'PVC-U pressure pipes to ISO 4422-2:1996 — sizes 20 mm to 400 mm, PN 6/10/16.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق ISO 4422-2:1996 — مقاسات 20 مم إلى 400 مم، PN 6/10/16.',
-  overview: seoOverview('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Engineered for potable water supply, irrigation, and industrial fluid transport, these metric pipes are available in sizes from 20 mm to 400 mm with pressure classes PN 6, PN 10, and PN 16.'),
+    shortDescriptionFr: `Conduites sous pression PVC-U vers ISO 4422-2:1996 — tailles 20 mm à 400 mm, PN 6/10/16.`,
+    overview: seoOverview('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Engineered for potable water supply, irrigation, and industrial fluid transport, these metric pipes are available in sizes from 20 mm to 400 mm with pressure classes PN 6, PN 10, and PN 16.'),
   overviewAr: seoOverviewAr('ISO 4422-2:1996', 'مصممة لإمداد مياه الشرب والري ونقل السوائل الصناعية، هذه الأنابيب المترية متوفرة بمقاسات من 20 مم إلى 400 مم بفئات ضغط PN 6 و PN 10 و PN 16.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [
+    overviewFr: seoOverviewFr('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Conçus pour l\'approvisionnement en eau potable, l\'irrigation et le transport de fluides industriels, ces tuyaux métriques sont disponibles dans des tailles allant de 20 mm à 400 mm avec des classes de pression PN 6, PN 10 et PN 16..'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [
     // ── Table 1: Coefficient C = 2.5 (4-tier header) ──
     {
       id: 'pvcHpPipesIso4422-c25',
@@ -170,7 +210,8 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -183,13 +224,18 @@ export const pvcHpPipesDin806162: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes DIN 8061/62:2009',
   titleAr: 'أنابيب الضغط العالي PVC وفق DIN 8061/62:2009',
-  shortDescription: 'PVC-U pressure pipes to DIN 8061/62:2009, equivalent to SASO 14-15:1998.',
+    titleFr: `PVC Tuyaux haute pression DIN 8061/62:2009`,
+    shortDescription: 'PVC-U pressure pipes to DIN 8061/62:2009, equivalent to SASO 14-15:1998.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق DIN 8061/62:2009 المكافئ لـ SASO 14-15:1998.',
-  overview: seoOverview('DIN 8061/62:2009 (equivalent to SASO 14-15:1998)', 'Widely specified across the GCC and Saudi Arabian markets, these metric pipes are available from 20 mm to 315 mm with pressure classes PN 4, PN 6, PN 10, and PN 16 — ideal for potable water and industrial applications in the Gulf climate.'),
+    shortDescriptionFr: `Conduites sous pression PVC-U vers DIN 8061/62:2009, équivalent à SASO 14-15:1998.`,
+    overview: seoOverview('DIN 8061/62:2009 (equivalent to SASO 14-15:1998)', 'Widely specified across the GCC and Saudi Arabian markets, these metric pipes are available from 20 mm to 315 mm with pressure classes PN 4, PN 6, PN 10, and PN 16 — ideal for potable water and industrial applications in the Gulf climate.'),
   overviewAr: seoOverviewAr('DIN 8061/62:2009 (المكافئ لـ SASO 14-15:1998)', 'مواصفة شائعة في أسواق الخليج والسعودية، هذه الأنابيب المترية متوفرة من 20 مم إلى 315 مم بفئات ضغط PN 4 و PN 6 و PN 10 و PN 16 — مثالية لمياه الشرب والتطبيقات الصناعية في مناخ الخليج.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('DIN 8061/62:2009 (equivalent to SASO 14-15:1998)', 'Largement spécifiés sur les marchés GCC et saoudien, ces tuyaux métriques sont disponibles de 20 mm à 315 mm avec des classes de pression PN 4, PN 6, PN 10 et PN 16 — idéaux pour l\'eau potable et les applications industrielles du dans le climat du Golfe.'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesDin806162-pipes',
     title: 'Metric size Pressure Pipes',
     columns: [
@@ -228,7 +274,8 @@ export const pvcHpPipesDin806162: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -241,13 +288,18 @@ export const pvcHpPipesBsEnIso14522: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes BS EN ISO 1452-2:2009 (Inch)',
   titleAr: 'أنابيب الضغط العالي PVC وفق BS EN ISO 1452-2:2009 (إنش)',
-  shortDescription: 'PVC-U pressure pipes to BS EN ISO 1452-2:2009 — imperial sizes ½″ to 12″.',
+    titleFr: `PVC Tuyaux haute pression BS EN ISO 1452-2:2009 (pouces)`,
+    shortDescription: 'PVC-U pressure pipes to BS EN ISO 1452-2:2009 — imperial sizes ½″ to 12″.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق BS EN ISO 1452-2:2009 — مقاسات إنشية من ½″ إلى 12″.',
-  overview: seoOverview('BS EN ISO 1452-2:2009', 'The modern European standard for PVC-U pressure pipe systems, these imperial-sized pipes are available from ½″ to 12″ with pressure classes PN 9, PN 12, and PN 15 — widely specified by Dubai Municipality and Abu Dhabi utility authorities.'),
+    shortDescriptionFr: `Tuyaux sous pression PVC-U à BS EN ISO 1452-2:2009 — tailles impériales ½″ à 12″.`,
+    overview: seoOverview('BS EN ISO 1452-2:2009', 'The modern European standard for PVC-U pressure pipe systems, these imperial-sized pipes are available from ½″ to 12″ with pressure classes PN 9, PN 12, and PN 15 — widely specified by Dubai Municipality and Abu Dhabi utility authorities.'),
   overviewAr: seoOverviewAr('BS EN ISO 1452-2:2009', 'المعيار الأوروبي الحديث لأنظمة أنابيب الضغط PVC-U، هذه الأنابيب بمقاسات إنشية متوفرة من ½″ إلى 12″ بفئات ضغط PN 9 و PN 12 و PN 15 — مواصفة شائعة لدى بلدية دبي وهيئات المرافق في أبوظبي.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('BS EN ISO 1452-2:2009', 'Norme européenne moderne pour les systèmes de canalisations sous pression PVC-U, ces canalisations de taille impériale sont disponibles de ½″ à 12″ avec les classes de pression PN 9, PN 12 et PN 15 — largement spécifiées par la municipalité de Dubai et les autorités des services publics d\'Abu Dhabi.'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesBsEnIso14522-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
@@ -278,7 +330,8 @@ export const pvcHpPipesBsEnIso14522: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -291,13 +344,18 @@ export const pvcHpPipesBs3505: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes BS 3505:1986 — Cold Potable Water',
   titleAr: 'أنابيب الضغط العالي PVC وفق BS 3505:1986 — مياه الشرب الباردة',
-  shortDescription: 'PVC-U pressure pipes to BS 3505:1986 for cold potable water — ½″ to 12″.',
+    titleFr: `PVC Tuyaux haute pression BS 3505:1986 — Eau potable froide`,
+    shortDescription: 'PVC-U pressure pipes to BS 3505:1986 for cold potable water — ½″ to 12″.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق BS 3505:1986 لمياه الشرب الباردة — ½″ إلى 12″.',
-  overview: seoOverview('BS 3505:1986', 'Specifically designed and approved for cold potable water supply, these imperial-sized pipes meet the stringent hygiene and safety requirements demanded by water authorities across the UAE and GCC. Available from ½″ to 12″ with pressure classes up to PN 15 (Class E).'),
+    shortDescriptionFr: `Tuyaux sous pression PVC-U vers BS 3505:1986 pour l'eau potable froide — ½″ vers 12″.`,
+    overview: seoOverview('BS 3505:1986', 'Specifically designed and approved for cold potable water supply, these imperial-sized pipes meet the stringent hygiene and safety requirements demanded by water authorities across the UAE and GCC. Available from ½″ to 12″ with pressure classes up to PN 15 (Class E).'),
   overviewAr: seoOverviewAr('BS 3505:1986', 'مصممة ومعتمدة خصيصاً لإمداد مياه الشرب الباردة، تلبي هذه الأنابيب بمقاسات إنشية متطلبات النظافة والسلامة الصارمة لهيئات المياه في الإمارات والخليج. متوفرة من ½″ إلى 12″ بفئات ضغط حتى PN 15 (فئة E).'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('BS 3505:1986', 'Spécialement conçus et approuvés pour l\'approvisionnement en eau potable froide, ces tuyaux de taille impériale répondent aux exigences strictes d\'hygiène et de sécurité exigées par les autorités des eaux des UAE et GCC. Disponible de ½″ à 12″ avec des classes de pression jusqu\'à PN 15 (Classe E).'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesBs3505-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
@@ -328,7 +386,8 @@ export const pvcHpPipesBs3505: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -341,13 +400,18 @@ export const pvcHpPipesBs3506: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes BS 3506:1969 — Industrial Uses',
   titleAr: 'أنابيب الضغط العالي PVC وفق BS 3506:1969 — الاستخدامات الصناعية',
-  shortDescription: 'PVC-U pressure pipes to BS 3506:1969 for industrial applications — ½″ to 12″.',
+    titleFr: `PVC Tuyaux haute pression BS 3506:1969 — Utilisations industriellesdu`,
+    shortDescription: 'PVC-U pressure pipes to BS 3506:1969 for industrial applications — ½″ to 12″.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق BS 3506:1969 للتطبيقات الصناعية — ½″ إلى 12″.',
-  overview: seoOverview('BS 3506:1969', 'Engineered for industrial fluid transport, chemical processing plants, and non-potable water systems, these pipes withstand aggressive media commonly encountered in UAE industrial zones such as JAFZA, KIZAD, and Ras Al Khaimah. Available from ½″ to 12″ with classes up to PN 15.'),
+    shortDescriptionFr: `Tuyaux sous pression PVC-U vers BS 3506:1969 pour les applications industrielles du – ½″ vers 12″.`,
+    overview: seoOverview('BS 3506:1969', 'Engineered for industrial fluid transport, chemical processing plants, and non-potable water systems, these pipes withstand aggressive media commonly encountered in UAE industrial zones such as JAFZA, KIZAD, and Ras Al Khaimah. Available from ½″ to 12″ with classes up to PN 15.'),
   overviewAr: seoOverviewAr('BS 3506:1969', 'مصممة لنقل السوائل الصناعية ومحطات المعالجة الكيميائية وأنظمة المياه غير الصالحة للشرب، تتحمل هذه الأنابيب الوسائط العدوانية الشائعة في المناطق الصناعية الإماراتية مثل جافزا وكيزاد ورأس الخيمة. متوفرة من ½″ إلى 12″ بفئات حتى PN 15.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('BS 3506:1969', 'Conçus pour le transport de fluides industriels, les usines de traitement chimique et les systèmes d\'eau non potable, ces tuyaux résistent aux fluides agressifs couramment rencontrés dans les zones industrielles UAE indu telles que JAFZA, KIZAD et Ras Al Khaimah. Disponible de ½″ à 12″ avec des classes jusqu\'à PN 15.'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesBs3506-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
@@ -382,7 +446,8 @@ export const pvcHpPipesBs3506: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -395,13 +460,18 @@ export const pvcHpPipesAstmD1785: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes ASTM D 1785 SCH 40 / SCH 80',
   titleAr: 'أنابيب الضغط العالي PVC وفق ASTM D 1785 جدول 40 / جدول 80',
-  shortDescription: 'PVC-U pressure pipes to ASTM D 1785 — Schedule 40 & Schedule 80.',
+    titleFr: `PVC Tuyaux haute pression ASTM D 1785 SCH 40 / SCH 80`,
+    shortDescription: 'PVC-U pressure pipes to ASTM D 1785 — Schedule 40 & Schedule 80.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق ASTM D 1785 — جدول 40 وجدول 80.',
-  overview: seoOverview('ASTM D 1785', 'The American standard for rigid PVC pressure pipes in Schedule 40 (standard wall) and Schedule 80 (extra heavy wall) ratings. Widely used across UAE industrial zones, oil & gas auxiliary systems, and American-specification projects throughout the GCC.'),
+    shortDescriptionFr: `Conduites sous pression PVC-U vers ASTM D 1785 — Schedule 40 et Schedule 80.`,
+    overview: seoOverview('ASTM D 1785', 'The American standard for rigid PVC pressure pipes in Schedule 40 (standard wall) and Schedule 80 (extra heavy wall) ratings. Widely used across UAE industrial zones, oil & gas auxiliary systems, and American-specification projects throughout the GCC.'),
   overviewAr: seoOverviewAr('ASTM D 1785', 'المعيار الأمريكي لأنابيب الضغط PVC الصلبة بتصنيف جدول 40 (جدار قياسي) وجدول 80 (جدار سميك إضافي). مستخدمة على نطاق واسع في المناطق الصناعية الإماراتية والأنظمة المساعدة للنفط والغاز والمشاريع ذات المواصفات الأمريكية في الخليج.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('ASTM D 1785', 'La norme américaine pour les conduites sous pression rigides PVC dans les classifications Schedule 40 (paroi standard) et Schedule 80 (paroi extra épaisse). Largement utilisé dans les zones industrielles UAE dans du, les systèmes auxiliaires pétroliers et gaziers et les projets de spécifications américaines dans l\'ensemble du GCC.'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesAstmD1785-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
@@ -432,7 +502,8 @@ export const pvcHpPipesAstmD1785: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };
 
 
@@ -445,13 +516,18 @@ export const pvcHpPipesAstmD2241: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-pipes',
   title: 'PVC High Pressure Pipes ASTM D 2241',
   titleAr: 'أنابيب الضغط العالي PVC وفق ASTM D 2241',
-  shortDescription: 'PVC-U pressure pipes to ASTM D 2241 — SDR-rated for multiple pressure classes.',
+    titleFr: `PVC Tuyaux haute pression ASTM D 2241`,
+    shortDescription: 'PVC-U pressure pipes to ASTM D 2241 — SDR-rated for multiple pressure classes.',
   shortDescriptionAr: 'أنابيب ضغط PVC-U وفق ASTM D 2241 — مصنفة SDR لفئات ضغط متعددة.',
-  overview: seoOverview('ASTM D 2241', 'SDR (Standard Dimension Ratio) rated PVC-U pipes offering a wide spectrum of pressure classes from SDR 64 through SDR 13.5. This flexible rating system allows engineers to optimise wall thickness precisely to project pressure requirements — a preferred specification for cost-effective high-pressure installations in the UAE.'),
+    shortDescriptionFr: `Tuyaux sous pression PVC-U vers ASTM D 2241 — classés SDR pour plusieurs classes de pression.`,
+    overview: seoOverview('ASTM D 2241', 'SDR (Standard Dimension Ratio) rated PVC-U pipes offering a wide spectrum of pressure classes from SDR 64 through SDR 13.5. This flexible rating system allows engineers to optimise wall thickness precisely to project pressure requirements — a preferred specification for cost-effective high-pressure installations in the UAE.'),
   overviewAr: seoOverviewAr('ASTM D 2241', 'أنابيب PVC-U مصنفة SDR (نسبة البعد القياسي) تقدم طيفاً واسعاً من فئات الضغط من SDR 64 إلى SDR 13.5. يتيح نظام التصنيف المرن هذا للمهندسين تحسين سماكة الجدار بدقة وفقاً لمتطلبات ضغط المشروع — مواصفة مفضلة للتركيبات عالية الضغط الفعالة من حيث التكلفة في الإمارات.'),
-  features: HP_FEATURES, featuresAr: HP_FEATURES_AR,
-  applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONS_AR,
-  pipesTables: [{
+    overviewFr: seoOverviewFr('ASTM D 2241', 'Tuyaux classés PVC-U SDR (Standard Dimension Ratio) offrant un large éventail de classes de pression de SDR 64 à SDR 13.5.. Ce système de notation flexible permet aux ingénieurs d\'optimiser l\'épaisseur de paroi avec précision pour projeter les exigences de pression - une spécification privilégiée pour les installations haute pression rentables dans le UAE.'),
+  features: HP_FEATURES, featuresAr: HP_FEATURESAr,
+    featuresFr: HP_FEATURESFr,
+    applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
+    applicationsFr: HP_APPLICATIONSFr,
+    pipesTables: [{
     id: 'pvcHpPipesAstmD2241-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
@@ -490,5 +566,6 @@ export const pvcHpPipesAstmD2241: ProductDetailConfig = {
   }],
   fittings: [],
   downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
-  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTS_AR,
+  dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
+    dosDontsFr: HP_DOS_DONTSFr
 };

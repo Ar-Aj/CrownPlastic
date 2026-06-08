@@ -364,11 +364,8 @@ export function getLocalBusinessSchemaData(area: ServiceArea, baseUrl: string, l
       ],
     },
     sameAs: Object.values(companyInfo.social),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '156',
-      bestRating: '5',
-    },
+    // NOTE: aggregateRating intentionally removed.
+    // Previous values were fabricated (4.8★/156 count) with zero actual reviews.
+    // Re-enable only after collecting genuine customer reviews to avoid Google manual action.
   };
 }

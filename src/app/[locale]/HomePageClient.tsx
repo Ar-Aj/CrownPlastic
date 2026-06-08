@@ -42,6 +42,7 @@ import { productCategories } from '@/config/products';
 import { clientLogos } from '@/config/clients';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 // Design System
 import {
@@ -218,8 +219,8 @@ function ProductCategoriesSection() {
     const images = subImages.length > 0 ? subImages : (cat.image ? [cat.image] : []);
 
     return {
-      title: language === 'ar' ? (cat.nameAr || cat.name) : cat.name,
-      description: language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription,
+      title: localizedValue(language, cat.name, cat.nameAr, cat.nameFr),
+      description: localizedValue(language, cat.shortDescription, cat.shortDescriptionAr, cat.shortDescriptionFr),
       href: `/products/${cat.slug}`,
       icon: cat.icon,
       image: cat.image,

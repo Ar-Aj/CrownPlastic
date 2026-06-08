@@ -3,11 +3,12 @@
 import { useLanguage } from '@/context/LanguageContext';
 import { en, TranslationPath } from './en';
 import { ar } from './ar';
+import { fr } from './fr';
 
 // ─────────────────────────────────────────────────────────────
 // Dictionary mapping
 // ─────────────────────────────────────────────────────────────
-const dictionaries = { en, ar } as const;
+const dictionaries = { en, ar, fr } as const;
 
 // ─────────────────────────────────────────────────────────────
 // Helper: Get nested value by dot-notation path
@@ -54,4 +55,5 @@ export function useT() {
 // ─────────────────────────────────────────────────────────────
 export { en } from './en';
 export { ar } from './ar';
+export { fr } from './fr';
 export type { TranslationPath } from './en';

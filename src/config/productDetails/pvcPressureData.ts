@@ -635,14 +635,14 @@ export const pvcPressureDin8063: ProductDetailConfig = {
 
   title: 'PVC Pressure Pipes & Fittings DIN 8063',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار DIN 8063',
-
-  shortDescription: 'German standard PVC pressure pipes and fittings for potable water supply systems. Complete range of moulded, fabricated, and brass insert fittings.',
+    titleFr: `PVC Tuyaux et raccords sous pression DIN 8063`,
+    shortDescription: 'German standard PVC pressure pipes and fittings for potable water supply systems. Complete range of moulded, fabricated, and brass insert fittings.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الألماني لأنظمة إمداد المياه الصالحة للشرب.',
-
-  overview: 'Crown Plastic Pipes / Fittings manufactures a comprehensive range of PVC-U pressure pipes and fittings conforming to DIN 8063 standards. These products are designed for potable water supply, irrigation systems, and industrial applications where reliability and longevity are paramount. Our DIN 8063 range includes solvent weld joints ensuring leak-free connections and long service life exceeding 50 years.',
+    shortDescriptionFr: `Tuyaux et raccords sous pression selon la norme allemande PVC pour les systèmes d'approvisionnement en eau potable. Gamme complète de raccords moulés, fabriqués et à insert en laiton.`,
+    overview: 'Crown Plastic Pipes / Fittings manufactures a comprehensive range of PVC-U pressure pipes and fittings conforming to DIN 8063 standards. These products are designed for potable water supply, irrigation systems, and industrial applications where reliability and longevity are paramount. Our DIN 8063 range includes solvent weld joints ensuring leak-free connections and long service life exceeding 50 years.',
   overviewAr: 'تصنع كراون للأنابيب والوصلات البلاستيكية مجموعة شاملة من أنابيب وتوصيلات الضغط PVC-U المطابقة لمعايير DIN 8063.',
-
-  features: [
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique une gamme complète de tuyaux et raccords sous pression PVC-U conformes aux normes DIN 8063. Ces products sont conçus pour l'approvisionnement en eau potable, les systèmes d'irrigation et les applications industrielles où la fiabilité et la longévité sont primordiales. Notre gamme DIN 8063 comprend des joints soudés au solvant garantissant des connexions sans fuite et une longue durée de vie supérieure à 50 ans.`,
+    features: [
     'Conforms to DIN 8063 standard',
     'Lead-free material for potable water safety',
     'Corrosion and chemical resistant',
@@ -662,8 +662,17 @@ export const pvcPressureDin8063: ProductDetailConfig = {
     'سهولة التوصيل بالإسمنت المذيب',
     'مجموعة كاملة من 20 مم إلى 400 مم',
   ],
-
-  applications: [
+    featuresFr: [
+            `Conforme à la norme DIN 8063`,
+            `Matériau sans plomb pour la sécurité de l'eau potable`,
+            `Résistant à la corrosion et aux produits chimiques`,
+            `Surface interne lisse pour un débit optimal`,
+            `Composé stabilisé aux UV`,
+            `Durée de vie prévue de plus de 50 ans`,
+            `Jointoiement facile avec du ciment à solvant`,
+            `Gamme complète de 20mm à 400mm`
+          ],
+    applications: [
     'Potable water distribution networks',
     'Agricultural irrigation systems',
     'Swimming pool installations',
@@ -683,8 +692,17 @@ export const pvcPressureDin8063: ProductDetailConfig = {
     'خدمات المباني التجارية',
     'مرافق معالجة المياه',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: [
+            `Réseaux de distribution d'eau potable`,
+            `Systèmes d'irrigation agricole`,
+            `Installations de piscine`,
+            `Transport fluvial industrial`,
+            `Usines de traitement chimique`,
+            `Plomberie résidentielle`,
+            `Services de construction commerciale`,
+            `Installations de traitement de l'eau`
+          ],
+    // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from DIN 8063 catalogue
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -719,7 +737,23 @@ export const pvcPressureDin8063: ProductDetailConfig = {
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // DIN 8063 Fittings - extracted from PDF JSON
+    dosDontsFr: {
+          dos: [
+            `Utiliser une colle à solvant spécialement conçue pour PVC-U`,
+            `Nettoyer et dégraisser toutes les surfaces avant le jointoiement`,
+            `Prévoir un temps de durcissement adéquat avant les tests de pression`,
+            `Soutenir les tuyaux à intervalles réguliers selon les directives`,
+            `Stockez les tuyaux sur des surfaces planes à l'abri de la lumière directe du soleil`
+          ],
+          donts: [
+            `Ne pas utiliser de tuyaux pour des applications d'air comprimé ou de gaz`,
+            `Ne pas exposer à des températures supérieures à 60°C`,
+            `Ne pas utiliser de solvants ou d'adhésifs incompatibles`,
+            `Ne serrez pas trop les connexions filetées`,
+            `Ne faites pas glisser les tuyaux sur des surfaces rugueuses`
+          ]
+        },
+    // DIN 8063 Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: din8063Fittings,
 
@@ -1434,14 +1468,14 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
 
   title: 'PVC Pressure Pipes & Fittings BS EN 1452:23 / BS 4346 (PN 15)',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار BS EN 1452:23 / BS 4346 (PN 15)',
-
-  shortDescription: 'British standard PVC pressure pipes and fittings rated at PN 15 for water supply networks. Certified to BS EN 1452:23 and BS 4346.',
+    titleFr: `PVC Tuyaux et raccords sous pression BS EN 1452:23 / BS 4346 (PN 15)`,
+    shortDescription: 'British standard PVC pressure pipes and fittings rated at PN 15 for water supply networks. Certified to BS EN 1452:23 and BS 4346.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار البريطاني بتصنيف PN 15 لشبكات إمداد المياه.',
-
-  overview: 'Our BS EN 1452 range represents the British standard for PVC-U pressure piping systems. These products are independently certified and widely specified for municipal water distribution, building services, and infrastructure projects across the GCC and Middle East. The PN 15 pressure rating provides a reliable safety margin for demanding applications.',
+    shortDescriptionFr: `Tuyaux et raccords sous pression conformes à la norme britannique PVC évalués à PN 15 pour les réseaux d'approvisionnement en eau. Certifié BS EN 1452:23 et BS 4346.`,
+    overview: 'Our BS EN 1452 range represents the British standard for PVC-U pressure piping systems. These products are independently certified and widely specified for municipal water distribution, building services, and infrastructure projects across the GCC and Middle East. The PN 15 pressure rating provides a reliable safety margin for demanding applications.',
   overviewAr: 'تمثل مجموعة BS EN 1452 لدينا المعيار البريطاني لأنظمة أنابيب الضغط PVC-U.',
-
-  features: [
+    overviewFr: `Notre gamme BS EN 1452 représente la norme britannique pour les systèmes de tuyauterie sous pression PVC-U. Ces products sont certifiés de manière indépendante et largement spécifiés pour la distribution d'eau municipale, les services de construction et les projets d'infrastructure à travers le GCC et le Moyen-Orient. La pression nominale PN 15 offre une marge de sécurité fiable pour les applications exigeantes.`,
+    features: [
     'Conforms to BS EN 1452:23 and BS 4346',
     'PN 15 pressure rating',
     'Independently tested and certified',
@@ -1461,8 +1495,17 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
     'توافق تام مع النظام',
     'مقاومة الزحف طويلة المدى',
   ],
-
-  applications: [
+    featuresFr: [
+            `Conforme à BS EN 1452:23 et BS 4346`,
+            `PN 15 pression nominale`,
+            `Testé et certifié indépendamment`,
+            `Approuvé pour les applications d'eau potable`,
+            `Haute résistance aux chocs`,
+            `Raccords moulés avec précision`,
+            `Compatibilité complète du système`,
+            `Résistance au fluage à long terme`
+          ],
+    applications: [
     'Municipal water supply',
     'High-rise building services',
     'Underground water mains',
@@ -1482,8 +1525,17 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
     'توزيع محطات تحلية المياه',
     'أنظمة التبريد المركزي',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: [
+            `Approvisionnement en eau municipal`,
+            `Services pour immeubles de grande hauteur`,
+            `Conduites d'eau souterraines`,
+            `Stations de pompage`,
+            `Pose de compteurs d'eau`,
+            `Systèmes de gicleurs d'incendie`,
+            `Distribution d'usines de dessalement`,
+            `Systèmes de refroidissement urbain`
+          ],
+    // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from BS EN 1452 catalogue
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -1503,7 +1555,23 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // BS EN 1452:3/BS 4346 (PN 15) Fittings - extracted from PDF JSON
+    dosDontsFr: {
+          dos: [
+            `Suivez le code de bonne pratique d'installation BS 8558`,
+            `Utilisez uniquement des composés à joints approuvés`,
+            `Conduct tests de pression selon BS EN 805`,
+            `Prévoir des butées dans les virages et les tés`,
+            `Permet la dilatation thermique sur de longues distances`
+          ],
+          donts: [
+            `Ne pas utiliser pour de l'eau chaude supérieure à 25°C`,
+            `Ne pas installer sans une literie appropriée`,
+            `N'utilisez pas de force excessive lors du jointoiement`,
+            `Ne pas mélanger avec des matériaux de tuyauterie incompatibles`,
+            `N'ignorez pas les guides d'installation du fabricant`
+          ]
+        },
+    // BS EN 1452:3/BS 4346 (PN 15) Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: bsEn1452Fittings,
 
@@ -2212,14 +2280,14 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
 
   title: 'PVC Pressure Pipes & Fittings ASTM D 2466 SCH-40',
   titleAr: 'أنابيب وتوصيلات الضغط PVC بمعيار ASTM D 2466 SCH-40',
-
-  shortDescription: 'American standard Schedule 40 PVC pressure pipes and fittings. Socket-type fittings with solvent cement joints for industrial and commercial applications.',
+    titleFr: `PVC Tuyaux et raccords sous pression ASTM D 2466 SCH-40`,
+    shortDescription: 'American standard Schedule 40 PVC pressure pipes and fittings. Socket-type fittings with solvent cement joints for industrial and commercial applications.',
   shortDescriptionAr: 'أنابيب وتوصيلات الضغط PVC بالمعيار الأمريكي Schedule 40.',
-
-  overview: 'Crown Plastic Pipes / Fittings offers a complete range of Schedule 40 PVC pipes and fittings manufactured to ASTM D 2466 specifications. The Schedule 40 wall thickness provides excellent pressure ratings while maintaining economical installation costs. Ideal for industrial process piping, chemical handling, and high-demand commercial applications.',
+    shortDescriptionFr: `Norme américaine Schedule 40 PVC tuyaux et raccords sous pression. Raccords à douille avec joints en colle à solvant pour applications industrielles et commerciales.`,
+    overview: 'Crown Plastic Pipes / Fittings offers a complete range of Schedule 40 PVC pipes and fittings manufactured to ASTM D 2466 specifications. The Schedule 40 wall thickness provides excellent pressure ratings while maintaining economical installation costs. Ideal for industrial process piping, chemical handling, and high-demand commercial applications.',
   overviewAr: 'تقدم كراون للأنابيب والوصلات البلاستيكية مجموعة كاملة من أنابيب وتوصيلات PVC بمواصفات Schedule 40 المصنعة وفقاً لمواصفات ASTM D 2466.',
-
-  features: [
+    overviewFr: `Crown Plastic Pipes/Raccords propose une gamme complète de tuyaux et raccords Schedule 40 PVC fabriqués selon ASTM D 2466 specifications. L'épaisseur de paroi Schedule 40 offre d'excellentes pressions nominales tout en maintenant des coûts d'installation économiques. Idéal pour la tuyauterie de processus industriels, la manipulation de produits chimiques et les applications commerciales à forte demande.`,
+    features: [
     'Conforms to ASTM D 2466 standard',
     'Schedule 40 wall thickness',
     'Socket-type solvent weld joints',
@@ -2239,8 +2307,17 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
     'لون رمادي لسهولة التعرف',
     'متوفر بمقاسات البوصة',
   ],
-
-  applications: [
+    featuresFr: [
+            `Conforme à ASTM D 2466 standard`,
+            `Schedule 40 épaisseur de paroi`,
+            `Joints à souder au solvant de type douille`,
+            `Approuvé pour les applications d'eau potable`,
+            `Excellente résistance chimique`,
+            `Précision dimensionnelle constante`,
+            `Couleur grise pour une identification facile`,
+            `Disponible en tailles en pouces`
+          ],
+    applications: [
     'Industrial process piping',
     'Chemical handling systems',
     'Laboratory installations',
@@ -2260,8 +2337,17 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
     'تعويض أبراج التبريد',
     'مرافق التصنيع',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: [
+            `Tuyauterie de process Industrial`,
+            `Systèmes de manipulation de produits chimiques`,
+            `Installations de laboratoire`,
+            `Plomberie de piscine`,
+            `Traitement des eaux usées`,
+            `Systèmes aquacoles`,
+            `Maquillage de tour de refroidissement`,
+            `Installations de fabrication`
+          ],
+    // ───────────────────────────────────────────────────────────────────────────
   // TODO: Populate pipesTables from ASTM D 2466 catalogue
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -2282,7 +2368,23 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // ASTM D 2466 Fittings - extracted from PDF JSON
+    dosDontsFr: {
+          dos: [
+            `Utilisez ASTM D 2564 PVC solvent cement`,
+            `Apprêter les joints avec un apprêt violet selon le code`,
+            `Prévoir un temps de durcissement approprié par température`,
+            `Suivre ASTM F 402 handling procedures`,
+            `Utilisez Schedule 80 pour les connexions filetées`
+          ],
+          donts: [
+            `Ne pas utiliser pour les gaz comprimés`,
+            `Ne pas enfiler les raccords Schedule 40`,
+            `Ne pas exposer à une flamme directe ou à des pistolets thermiques`,
+            `N'utilisez pas de lubrifiants à base de pétrole`,
+            `Ne pas soumettre à des coups de bélier soudains`
+          ]
+        },
+    // ASTM D 2466 Fittings - extracted from PDF JSON
   // ───────────────────────────────────────────────────────────────────────────
   fittings: astmD2466Fittings,
 

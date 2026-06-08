@@ -4,6 +4,7 @@
  * Shared type definitions for the reusable product detail experience.
  * These types define the data shape for pipe tables, fittings galleries,
  * and full product detail page configurations.
+ * Trilingual support: English (default), Arabic (*Ar), French (*Fr).
  */
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -116,6 +117,8 @@ export type Fitting = {
 export type DosDonts = {
   dos: string[];
   donts: string[];
+  dosFr?: string[];
+  dontsFr?: string[];
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -123,15 +126,17 @@ export type DosDonts = {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 /**
- * A single hand-authored FAQ entry with bilingual support.
+ * A single hand-authored FAQ entry with trilingual support.
  * Used on both product detail pages and category hub pages
  * to surface search-intent Q&As for Google Featured Snippets.
  */
 export type ProductFAQ = {
   q: string;    // English question
   qAr: string;  // Arabic question
+  qFr?: string; // French question
   a: string;    // English answer
   aAr: string;  // Arabic answer
+  aFr?: string; // French answer
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -145,10 +150,13 @@ export type ProductVariant = {
   id: string;           // e.g., "typeA"
   title: string;        // e.g., "Type A – Single Bucket Grease Trap"
   titleAr?: string;
+  titleFr?: string;
   description: string;  // 1-2 line summary
   descriptionAr?: string;
+  descriptionFr?: string;
   features: string[];   // 2-3 key features/bullets
   featuresAr?: string[];
+  featuresFr?: string[];
   image?: string;       // optional image path
 };
 
@@ -164,17 +172,22 @@ export type ProductDetailConfig = {
   categorySlug: string;       // existing category slug (e.g., "upvc-pressure")
   title: string;              // full H1 title
   titleAr?: string;           // Arabic title
+  titleFr?: string;           // French title
   shortDescription: string;
   shortDescriptionAr?: string;
+  shortDescriptionFr?: string;
   overview: string;
   overviewAr?: string;
+  overviewFr?: string;
   features: string[];
   featuresAr?: string[];
+  featuresFr?: string[];
   image?: string;             // Optional product hero image override
   renderImage?: string;       // 3D/Product render
   diagramImage?: string;      // Technical/Schematic diagram
   applications: string[];
   applicationsAr?: string[];
+  applicationsFr?: string[];
   pipesTables: PipeTable[];
   fittings: Fitting[];
   fittingsTabLabelKey?: string;          // optional translation key for the sticky nav label (e.g., 'products.solvent.nav_label')
@@ -182,14 +195,18 @@ export type ProductDetailConfig = {
   variants?: ProductVariant[];           // optional product variants/configurations
   variantsSectionTitle?: string;         // e.g., "Grease Trap Configurations"
   variantsSectionTitleAr?: string;
+  variantsSectionTitleFr?: string;
   downloads?: { label: string; href: string }[];
   videoUrl?: string;
   technicalProperties?: { property: string; value: string }[];
   technicalPropertiesAr?: { property: string; value: string }[];
+  technicalPropertiesFr?: { property: string; value: string }[];
   systemAdvantages?: string[];
   systemAdvantagesAr?: string[];
+  systemAdvantagesFr?: string[];
   dosDonts?: DosDonts;
   dosDontsAr?: DosDonts;
+  dosDontsFr?: DosDonts;
   accessoriesGallery?: { name: string; imageSrc: string }[];
   faqs?: ProductFAQ[];       // Hand-authored AEO FAQs (overrides auto-generated when present)
 };
@@ -202,21 +219,22 @@ export type NavSection = {
   id: string;
   label: string;
   labelAr?: string;
+  labelFr?: string;
 };
 
 /**
  * All possible sections in product detail page
  */
 export const PRODUCT_DETAIL_SECTIONS: NavSection[] = [
-  { id: 'overview', label: 'Overview', labelAr: 'نظرة عامة' },
-  { id: 'features', label: 'Features', labelAr: 'المميزات' },
-  { id: 'technical-properties', label: 'Technical Properties', labelAr: 'الخصائص الفنية' },
-  { id: 'system-advantages', label: 'System Advantages', labelAr: 'مزايا النظام' },
-  { id: 'applications', label: 'Applications', labelAr: 'التطبيقات' },
-  { id: 'variants', label: 'Configurations', labelAr: 'التكوينات' },
-  { id: 'pipes', label: 'Pipes', labelAr: 'الأنابيب' },
-  { id: 'fittings', label: 'Fittings', labelAr: 'التوصيلات' },
-  { id: 'video', label: 'Video', labelAr: 'فيديو' },
-  { id: 'dos-donts', label: "Do's & Don'ts", labelAr: 'افعل ولا تفعل' },
-  { id: 'frequently-asked-questions', label: 'Technical FAQs', labelAr: 'الأسئلة الشائعة التقنية' },
+  { id: 'overview', label: 'Overview', labelAr: 'نظرة عامة', labelFr: 'Aperçu' },
+  { id: 'features', label: 'Features', labelAr: 'المميزات', labelFr: 'Caractéristiques' },
+  { id: 'technical-properties', label: 'Technical Properties', labelAr: 'الخصائص الفنية', labelFr: 'Propriétés Techniques' },
+  { id: 'system-advantages', label: 'System Advantages', labelAr: 'مزايا النظام', labelFr: 'Avantages du Système' },
+  { id: 'applications', label: 'Applications', labelAr: 'التطبيقات', labelFr: 'Applications' },
+  { id: 'variants', label: 'Configurations', labelAr: 'التكوينات', labelFr: 'Configurations' },
+  { id: 'pipes', label: 'Pipes', labelAr: 'الأنابيب', labelFr: 'Tuyaux' },
+  { id: 'fittings', label: 'Fittings', labelAr: 'التوصيلات', labelFr: 'Raccords' },
+  { id: 'video', label: 'Video', labelAr: 'فيديو', labelFr: 'Vidéo' },
+  { id: 'dos-donts', label: "Do's & Don'ts", labelAr: 'افعل ولا تفعل', labelFr: 'À Faire / À Éviter' },
+  { id: 'frequently-asked-questions', label: 'Technical FAQs', labelAr: 'الأسئلة الشائعة التقنية', labelFr: 'FAQ Techniques' },
 ];

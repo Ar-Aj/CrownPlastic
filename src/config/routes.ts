@@ -1,19 +1,22 @@
 // Navigation and routes configuration for Crown Plastic Pipes
-// Bilingual structure - English labels with Arabic translations
+// Trilingual structure - English labels with Arabic & French translations
 
 export interface NavItem {
   label: string;
   labelAr?: string;
+  labelFr?: string;
   href: string;
   children?: NavItem[];
   description?: string;
   descriptionAr?: string;
+  descriptionFr?: string;
 }
 
 export interface FooterColumn {
   title: string;
   titleAr?: string;
-  links: { label: string; labelAr?: string; href: string }[];
+  titleFr?: string;
+  links: { label: string; labelAr?: string; labelFr?: string; href: string }[];
 }
 
 // Main navigation items

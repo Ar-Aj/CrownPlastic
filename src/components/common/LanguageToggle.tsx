@@ -12,11 +12,18 @@ interface LanguageToggleProps {
   className?: string;
 }
 
+// Language display names for aria-labels
+const LANGUAGE_NAMES: Record<Language, string> = {
+  en: 'English',
+  ar: 'Arabic',
+  fr: 'French',
+};
+
 // ─────────────────────────────────────────────────────────────
 // Component
 // ─────────────────────────────────────────────────────────────
 /**
- * Language toggle component for switching between English and Arabic.
+ * Language toggle component for switching between English, Arabic, and French.
  * Rewritten without Framer Motion — uses pure CSS transitions for performance.
  * 
  * - `header` variant: Pill-shaped toggle switch for the navbar
@@ -31,6 +38,7 @@ export default function LanguageToggle({
   const languages: { code: Language; label: string }[] = [
     { code: 'en', label: 'English' },
     { code: 'ar', label: 'العربية' },
+    { code: 'fr', label: 'Français' },
   ];
 
   if (variant === 'mobile') {
@@ -42,8 +50,8 @@ export default function LanguageToggle({
             <button
               key={code}
               onClick={() => setLanguage(code)}
-              className="relative z-10 px-5 py-2 text-sm font-semibold transition-colors duration-200"
-              aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
+              className="relative z-10 px-4 py-2 text-sm font-semibold transition-colors duration-200"
+              aria-label={`Switch to ${LANGUAGE_NAMES[code]}`}
               aria-pressed={language === code}
             >
               {/* Active pill background — CSS transition */}
@@ -71,8 +79,8 @@ export default function LanguageToggle({
         <button
           key={code}
           onClick={() => setLanguage(code)}
-          className="relative z-10 px-4 py-1.5 text-sm font-semibold transition-colors duration-200"
-          aria-label={`Switch to ${code === 'en' ? 'English' : 'Arabic'}`}
+          className="relative z-10 px-3 py-1.5 text-sm font-semibold transition-colors duration-200"
+          aria-label={`Switch to ${LANGUAGE_NAMES[code]}`}
           aria-pressed={language === code}
         >
           {/* Active pill background — CSS transition */}
@@ -91,3 +99,4 @@ export default function LanguageToggle({
     </div>
   );
 }
+

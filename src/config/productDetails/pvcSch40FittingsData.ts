@@ -11,11 +11,14 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
   categorySlug: 'pvc-sch-40-fittings',
   title: 'PVC SCH 40 Fittings — ASTM D 2466',
   titleAr: 'وصلات PVC جدول 40 — ASTM D 2466',
-  shortDescription: 'ASTM D 2466 Schedule 40 PVC-U pressure fittings — imperial ½″–8″.',
+    titleFr: `PVC Raccords SCH 40 — ASTM D 2466`,
+    shortDescription: 'ASTM D 2466 Schedule 40 PVC-U pressure fittings — imperial ½″–8″.',
   shortDescriptionAr: 'وصلات ضغط PVC-U جدول 40 وفق ASTM D 2466 — إنشي ½″–8″.',
-  overview: `Crown Plastic Pipes / Fittings, a leading PVC Schedule 40 fittings manufacturer in the UAE, produces high-performance SCH 40 pressure fittings engineered to ASTM D 2466 standards. These fittings are the preferred choice for swimming pool installations, industrial cooling systems, and large-scale irrigation projects across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility, the range spans ½″ to 8″ and includes elbows, tees, reducers, adaptors, unions, flanges, hex nipples, repair sockets, and end caps — providing cost-effective, corrosion-resistant solutions for modern Middle East infrastructure.`,
+    shortDescriptionFr: `ASTM D 2466 Schedule 40 PVC-U pressure fittings — impérial ½″–8″.`,
+    overview: `Crown Plastic Pipes / Fittings, a leading PVC Schedule 40 fittings manufacturer in the UAE, produces high-performance SCH 40 pressure fittings engineered to ASTM D 2466 standards. These fittings are the preferred choice for swimming pool installations, industrial cooling systems, and large-scale irrigation projects across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility, the range spans ½″ to 8″ and includes elbows, tees, reducers, adaptors, unions, flanges, hex nipples, repair sockets, and end caps — providing cost-effective, corrosion-resistant solutions for modern Middle East infrastructure.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع وصلات PVC جدول 40 في الإمارات، وصلات ضغط SCH 40 عالية الأداء وفق معايير ASTM D 2466. هذه الوصلات هي الخيار المفضل لتركيبات حمامات السباحة وأنظمة التبريد الصناعية ومشاريع الري واسعة النطاق في دبي وأبوظبي والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين، يمتد النطاق من ½″ إلى 8″ ويشمل الأكواع والتيات والمخفضات والمحولات والاتحادات والفلنجات وأغطية النهايات — حلول اقتصادية ومقاومة للتآكل للبنية التحتية الحديثة في الشرق الأوسط.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes/Raccords, l'un des principaux fabricants de raccords PVC Schedule 40 dans le UAE, fabrique des raccords à pression SCH 40 hautes performances conçus selon ASTM D 2466 standards. Ces raccords sont le choix préféré pour les installations de piscine, les systèmes de refroidissement industriels et les projets d'irrigation à grande échelle dans les UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain, la gamme s'étend de ½″ à 8″ et comprend des coudes, des tés, des reducers, des adaptateurs, des raccords, des brides, des raccords hexagonaux, des douilles de réparation et embouts — fournissant des solutions rentables et résistantes à la corrosion pour les infrastructures modernes du Moyen-Orient.`,
+    features: [
     'Full compliance with ASTM D 2466 standards for Schedule 40 PVC fittings — UAE manufactured',
     'High chemical and corrosion resistance suitable for UAE soil and water conditions',
     'Manufactured in ISO 9001:2015 certified facility in Umm Al Quwain, UAE',
@@ -31,7 +34,15 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     'بناء خفيف الوزن لسهولة المناولة والتركيب السريع في الموقع',
     'تجويف داخلي أملس فائق لتقليل فقدان الضغط وتحسين التدفق',
   ],
-  applications: [
+    featuresFr: [
+            `Conformité totale avec ASTM D 2466 standards for Schedule 40 PVC fittings — UAE fabriqué`,
+            `Haute résistance aux produits chimiques et à la corrosion, adaptée aux conditions de sol et d'eau UAE`,
+            `Fabriqué dans une usine certifiée ISO 9001:2015 à Umm Al Quwain, UAE`,
+            `Dimensions moulées avec précision pour des joints de colle à solvant étanches`,
+            `Construction légère pour une manipulation facile et une installation rapide sur site`,
+            `Alésage interne lisse supérieur pour minimiser la perte de pression et optimiser le débit`
+          ],
+    applications: [
     'Potable cold-water pressure distribution systems across the UAE',
     'Commercial and residential swimming pool and spa plumbing in Dubai and Abu Dhabi',
     'Landscaping, turf, and agricultural irrigation networks in the GCC',
@@ -43,7 +54,13 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     'شبكات الري والتنسيق والزراعة في الخليج',
     'حلقات مياه التبريد الصناعية وأنظمة المياه المبردة',
   ],
-  pipesTables: [],
+    applicationsFr: [
+            `Systèmes de distribution d’eau froide sous pression sur l’ensemble du UAE`,
+            `Plomberie pour piscines et spas commerciaux et résidentiels à Dubai et Abu Dhabi`,
+            `Réseaux d’aménagement paysager, de gazon et d’irrigation agricole dans le GCC`,
+            `Boucles d'eau de refroidissement industrielles et systèmes d'eau glacée`
+          ],
+    pipesTables: [],
   fittings: [
     {
       id: "elbow-90-astm-d-2466-sch-40",
@@ -716,4 +733,18 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       'لا تفرط في شد التوصيلات الملولبة لمنع التشقق الإجهادي',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `À utiliser uniquement avec des applications d'eau froide sous pression`,
+            `Assurez-vous que le tuyau coupé est d'équerre et ébavuré avant le soudage au solvant.`,
+            `Appliquer l'apprêt PVC et la colle à solvant appropriés pour une liaison sécurisée`,
+            `Prévoyez un temps de durcissement suffisant en fonction des températures ambiantes UAE avant de tester`
+          ],
+          donts: [
+            `Ne pas utiliser pour les systèmes d’air comprimé ou de gaz à haute pression`,
+            `Ne dépassez pas les températures nominales des matériaux standard PVC`,
+            `Ne pas utiliser avec des substances chimiques incompatibles`,
+            `Ne serrez pas trop les raccords filetés pour éviter les fissures sous contrainte.`
+          ]
+        }
 };

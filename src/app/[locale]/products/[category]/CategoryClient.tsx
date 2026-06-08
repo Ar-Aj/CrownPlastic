@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { en } from '@/i18n/en';
 import { ar } from '@/i18n/ar';
+import { fr } from '@/i18n/fr';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT CATEGORY PAGE - Enhanced with Crown Design System
@@ -17,6 +18,7 @@ import { getCategoryBySlug } from '@/config/products';
 import { getDocsByCategory } from '@/config/docs';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
+import { localizedValue } from '@/lib/i18n-utils';
 import { ProductCategoryBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import { ProductListSchema } from '@/components/schemas/ProductSchema';
 import { upvcPressurePipeSpecs } from '@/config/schemas';
@@ -45,7 +47,7 @@ export default function CategoryClient({ params }: CategoryPageProps) {
   const cat = getCategoryBySlug(category);
 
   // ── GA4: track category page view ─────────────────────────────────────────
-  const catNameForTracking = cat ? (language === 'ar' ? (cat.nameAr || cat.name) : cat.name) : category;
+  const catNameForTracking = cat ? localizedValue(language, cat.name, cat.nameAr, cat.nameFr) : category;
   useEffect(() => {
     trackProductView(category, catNameForTracking);
   }, [category, catNameForTracking]);
@@ -54,12 +56,12 @@ export default function CategoryClient({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
-  const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
+  const catName = localizedValue(language, cat.name, cat.nameAr, cat.nameFr);
+  const catDesc = localizedValue(language, cat.shortDescription, cat.shortDescriptionAr, cat.shortDescriptionFr);
 
   // ─── Per-category commercial SEO overrides (H1 + hero subtext + FAQs) ─────
   const categoryOverride = useMemo(() => {
-    const translations = language === 'ar' ? ar : en;
+    const translations = language === 'ar' ? ar : language === 'fr' ? fr : en;
     const overrides = (translations.products.seo.category_overrides as unknown) as
       Record<string, { meta_title: string; h1: string; hero_subtext: string; faqs?: { q: string; a: string }[] }> | undefined;
     return overrides?.[category];
@@ -213,8 +215,8 @@ export default function CategoryClient({ params }: CategoryPageProps) {
         {/* Product cards grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cat.subProducts.map((product, index) => {
-            const prodName = language === 'ar' ? (product.nameAr || product.name) : product.name;
-            const prodDesc = language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription;
+            const prodName = localizedValue(language, product.name, product.nameAr, product.nameFr);
+            const prodDesc = localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr);
 
             return (
               <AnimateOnScroll key={product.slug} animation="fade-up" delay={index * 80}>
@@ -377,8 +379,8 @@ export default function CategoryClient({ params }: CategoryPageProps) {
           <SectionDivider variant="light" />
           <ProductSection background="white" size="md">
             <ProductSectionHeader
-              title={language === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
-              subtitle={language === 'ar' ? 'إجابات على الأسئلة الشائعة حول هذه الفئة من المنتجات' : 'Expert answers to common questions about this product category'}
+              title={language === 'ar' ? 'الأسئلة الشائعة' : language === 'fr' ? 'Questions Fréquentes' : 'Frequently Asked Questions'}
+              subtitle={language === 'ar' ? 'إجابات على الأسئلة الشائعة حول هذه الفئة من المنتجات' : language === 'fr' ? `Réponses d'experts aux questions courantes sur cette catégorie de produits` : 'Expert answers to common questions about this product category'}
               align="center"
             />
 

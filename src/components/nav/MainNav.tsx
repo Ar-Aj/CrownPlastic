@@ -6,6 +6,7 @@ import { NavItem } from '@/config/routes';
 import { productCategories } from '@/config/products';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 import type { TranslationPath } from '@/i18n/en';
 
 interface MainNavProps {
@@ -122,7 +123,7 @@ export default function MainNav({ items }: MainNavProps) {
                 {/* ── Masonry layout via CSS columns ── */}
                 <div className="columns-2 lg:columns-3 xl:columns-4 2xl:columns-5 gap-x-8 [column-fill:balance]">
                   {productCategories.map((cat) => {
-                    const catName = language === 'ar' ? (cat.nameAr && cat.nameAr !== 'TBD' ? cat.nameAr : cat.name) : cat.name;
+                    const catName = localizedValue(language, cat.name, cat.nameAr && cat.nameAr !== 'TBD' ? cat.nameAr : undefined, cat.nameFr);
                     return (
                       <div
                         key={cat.slug}
@@ -141,16 +142,18 @@ export default function MainNav({ items }: MainNavProps) {
                         {/* ALL sub-products — no slice, no truncation */}
                         <ul className="space-y-[3px] border-l-2 border-gray-100 ml-[7px] pl-3">
                           {cat.subProducts.map((sub) => {
-                            const subName = language === 'ar'
-                              ? (sub.nameAr && sub.nameAr !== 'TBD' ? sub.nameAr : (sub.shortLabel || sub.name))
-                              : (sub.shortLabel || sub.name);
+                            const subName = language === 'fr'
+                              ? (sub.shortLabelFr || sub.nameFr || sub.shortLabel || sub.name)
+                              : language === 'ar'
+                                ? (sub.nameAr && sub.nameAr !== 'TBD' ? sub.nameAr : (sub.shortLabel || sub.name))
+                                : (sub.shortLabel || sub.name);
                             return (
                               <li key={sub.slug}>
-                                <Link
-                                  href={`/products/${cat.slug}/${sub.slug}`}
-                                  className="block text-[14.5px] leading-relaxed text-slate-600 hover:text-blue-600 transition-colors py-[2px]"
-                                  title={sub.name}
-                                >
+                                  <Link
+                                    href={`/products/${cat.slug}/${sub.slug}`}
+                                    className="block text-[14.5px] leading-relaxed text-slate-600 hover:text-blue-600 transition-colors py-[2px] break-words hyphens-auto"
+                                    title={sub.name}
+                                  >
                                   {subName}
                                 </Link>
                               </li>
@@ -191,8 +194,8 @@ export default function MainNav({ items }: MainNavProps) {
               <div className="w-64 xl:w-72 2xl:w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
                 {item.children.map((child) => {
                   const childPath = navLabelToPath[child.label];
-                  const childLabel = childPath ? t(childPath) : language === 'ar' ? (child.labelAr || child.label) : child.label;
-                  const childDesc = language === 'ar' ? (child.descriptionAr || child.description) : child.description;
+                  const childLabel = childPath ? t(childPath) : localizedValue(language, child.label, child.labelAr, child.labelFr);
+                  const childDesc = localizedValue(language, child.description || '', child.descriptionAr, child.descriptionFr);
                   return (
                     <Link
                       key={child.href}

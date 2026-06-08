@@ -11,11 +11,14 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
   categorySlug: 'pvc-duct-fittings',
   title: 'PVC Duct Fittings — Telecom & Electrical Infrastructure',
   titleAr: 'وصلات مجاري PVC — البنية التحتية للاتصالات والكهرباء',
-  shortDescription: 'PVC-U duct fittings — end caps, sockets, bellmouths, and LR bends for Etisalat & DU.',
+    titleFr: `PVC Duct Raccords — Infrastructure télécom et électrique`,
+    shortDescription: 'PVC-U duct fittings — end caps, sockets, bellmouths, and LR bends for Etisalat & DU.',
   shortDescriptionAr: 'وصلات مجاري PVC-U — أغطية نهايات، مقابس، أبواق، وانحناءات LR لاتصالات ودو.',
-  overview: `Crown Plastic Pipes / Fittings, the leading PVC duct fittings manufacturer in the UAE, produces premium fittings engineered for the structural integrity and longevity of critical underground telecom and electrical infrastructure. Specifically designed for Etisalat and DU network compliance, our end caps, sockets, bellmouths, and long-radius bends facilitate seamless transitions and watertight seals in conduit networks across the UAE. Manufactured at our ISO 9001:2015 certified facility with precision-engineered dimensions for secure solvent-welded joints.`,
+    shortDescriptionFr: `Raccords PVC-U duct — embouts, douilles, embouchures et coudes LR pour Etisalat et DU.`,
+    overview: `Crown Plastic Pipes / Fittings, the leading PVC duct fittings manufacturer in the UAE, produces premium fittings engineered for the structural integrity and longevity of critical underground telecom and electrical infrastructure. Specifically designed for Etisalat and DU network compliance, our end caps, sockets, bellmouths, and long-radius bends facilitate seamless transitions and watertight seals in conduit networks across the UAE. Manufactured at our ISO 9001:2015 certified facility with precision-engineered dimensions for secure solvent-welded joints.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع وصلات مجاري PVC في الإمارات، وصلات فاخرة مصممة لضمان السلامة الهيكلية والعمر الطويل للبنية التحتية الحرجة للاتصالات والكهرباء تحت الأرض. مصممة خصيصاً للامتثال لمعايير شبكات اتصالات ودو، توفر أغطية النهايات والمقابس والأبواق والانحناءات طويلة نصف القطر انتقالات سلسة وأختام مانعة للتسرب في شبكات المجاري في دبي وأبوظبي والشارقة والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأبعاد مهندسة بدقة لوصلات لحام بالمذيب آمنة.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes/Raccords, le principal fabricant de raccords PVC duct dans le UAE, produit des raccords haut de gamme conçus pour l'intégrité structurelle et la longévité des infrastructures souterraines critiques de télécommunications et électriques. Spécialement conçus pour la conformité des réseaux Etisalat et DU, nos embouts, douilles, embouchures et coudes à long rayon facilitent les transitions sans couture et les joints étanches dans les réseaux conduit à travers les UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 avec des dimensions conçues avec précision pour des joints soudés au solvant sécurisés.`,
+    features: [
     "Full compliance with Etisalat and DU specifications for network infrastructure.",
     "High-impact resistance suitable for direct burial and concrete encasement.",
     "Precision-engineered dimensions for watertight, leak-proof solvent-welded joints.",
@@ -31,7 +34,15 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     'استقرار حراري واسع لأداء متسق في حرارة الخليج القصوى',
     'تجويفات داخلية ملساء لتسهيل سحب الكابلات وتقليل الاحتكاك',
   ],
-  applications: [
+    featuresFr: [
+            `Conformité totale aux spécifications Etisalat et DU pour l'infrastructure réseau.`,
+            `Résistance élevée aux chocs adaptée à l’enfouissement direct et à l’enrobage de béton.`,
+            `Dimensions conçues avec précision pour des joints soudés au solvant étanches et étanches.`,
+            `Matériau résistant à la corrosion, idéal pour les conditions de sol UAE et une salinité élevée.`,
+            `Grande stabilité de température pour des performances constantes dans des températures extrêmes GCC.`,
+            `Alésages internes lisses pour faciliter le tirage du câble sans effort et réduire la friction.`
+          ],
+    applications: [
     "Telecommunication network expansions (Etisalat/DU infrastructure).",
     "Underground electrical power distribution conduits.",
     "Street and pole lighting cable protection systems.",
@@ -43,7 +54,13 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     'أنظمة حماية كابلات إنارة الشوارع والأعمدة',
     'مجاري المرافق المدفونة مباشرة والمغلفة بالخرسانة',
   ],
-  pipesTables: [],
+    applicationsFr: [
+            `Extensions du réseau de télécommunication (infrastructure Etisalat/DU).`,
+            `Conduits de distribution d'énergie électrique souterraine.`,
+            `Systèmes de protection des câbles d’éclairage public et sur poteaux.`,
+            `Enfouissement direct et service public enrobé de béton ducting.`
+          ],
+    pipesTables: [],
   fittings: [
     {
       id: "duct-duct-end-caps",
@@ -255,4 +272,18 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       'لا تخلط معايير أنابيب غير متوافقة (مثل المتري والإنشي) بدون محولات',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que toutes les surfaces sont propres et exemptes de débris avant d’appliquer la colle à solvant.`,
+            `Utilisez uniquement des colles à solvant approuvées pour les applications UPVC afin de garantir une liaison permanente.`,
+            `Alignez les raccords avec précision avant l'assemblage final pour éviter toute contrainte sur les joints.`,
+            `Vérifier la conformité de la taille et des spécifications avec les normes du projet (par exemple, DIN 8062, BS 3505).`
+          ],
+          donts: [
+            `N'utilisez pas de raccords endommagés ou fissurés pour des installations souterraines.`,
+            `Évitez d'appliquer trop de colle à solvant car elle peut affaiblir la paroi du tuyau si elle est coincée.`,
+            `Ne soumettez pas les raccords nouvellement assemblés à une pression élevée avant que le ciment n'ait complètement durci.`,
+            `Ne mélangez jamais et ne faites jamais correspondre des normes de tuyaux incompatibles (par exemple, métriques et impériales) sans adaptateurs.`
+          ]
+        }
 };

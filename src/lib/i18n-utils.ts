@@ -3,7 +3,7 @@
 // Used by LocaleLink, LanguageContext, layouts, and metadata
 // ─────────────────────────────────────────────────────────────
 
-export const locales = ['en', 'ar'] as const;
+export const locales = ['en', 'ar', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
@@ -40,4 +40,39 @@ export function getLocaleFromPath(pathname: string): Locale {
     if (pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)) return loc;
   }
   return defaultLocale;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Trilingual Product Data Helpers
+// Centralized fallback: Fr → En, Ar → En, default En
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Resolve a localized string field with English fallback.
+ * Usage: localizedValue(language, product.title, product.titleAr, product.titleFr)
+ */
+export function localizedValue(
+  language: string,
+  en: string,
+  ar?: string,
+  fr?: string,
+): string {
+  if (language === 'fr') return fr || en;
+  if (language === 'ar') return ar || en;
+  return en;
+}
+
+/**
+ * Resolve a localized string array field with English fallback.
+ * Usage: localizedArray(language, product.features, product.featuresAr, product.featuresFr)
+ */
+export function localizedArray(
+  language: string,
+  en: string[],
+  ar?: string[],
+  fr?: string[],
+): string[] {
+  if (language === 'fr') return fr || en;
+  if (language === 'ar') return ar || en;
+  return en;
 }

@@ -6,6 +6,7 @@ import { brand } from '@/config/brand';
 import { footerColumns } from '@/config/routes';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -64,7 +65,7 @@ export default function Footer() {
           {/* Footer columns */}
           {footerColumns.map((column) => {
             if (column.title === 'Service Areas') return null; // Remove Service Areas from viewing
-            const colTitle = language === 'ar' ? (column.titleAr || column.title) : column.title;
+            const colTitle = localizedValue(language, column.title, column.titleAr, column.titleFr);
             return (
               <div key={column.title} className={column.title === 'Products' ? 'lg:col-span-2 lg:mx-auto max-w-sm w-full' : ''}>
                 <h4 className={`font-bold text-base xl:text-xl text-white mb-4 xl:mb-6 ${column.title === 'Products' ? 'text-center w-full' : ''}`}>
@@ -72,7 +73,7 @@ export default function Footer() {
                 </h4>
                 <ul className={column.title === 'Products' ? "grid grid-cols-2 gap-x-4 gap-y-2.5 xl:gap-y-3" : "space-y-2.5 xl:space-y-3"}>
                   {column.links.map((link) => {
-                    const linkLabel = language === 'ar' ? (link.labelAr || link.label) : link.label;
+                    const linkLabel = localizedValue(language, link.label, link.labelAr, link.labelFr);
                     return (
                       <li key={link.href}>
                         <Link

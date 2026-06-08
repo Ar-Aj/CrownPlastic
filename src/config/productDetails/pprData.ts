@@ -39,8 +39,26 @@ const sharedApplications = [
   'Pipe networks for swimming pool facilities',
   'Pipe networks for aggressive fluids (acidic, alkaline & corrosive chemicals etc.)',
 ];
+const sharedApplicationsFr = [
+  'Hot & Cold potable water supply in residential and commercial buildings',
+  'HVAC and compressed air system',
+  'Pipe networks for rainwater utilization system',
+  'Pipe networks for agricultural & horticultural use',
+  'Pipe networks for swimming pool facilities',
+  'Pipe networks for aggressive fluids (acidic, alkaline & corrosive chemicals etc.)',
+];
 
 const sharedFeatures = [
+  'Very long life time with a guaranteed service life of 50 years',
+  'High impact strength & flexibility',
+  'Damage resistance',
+  'Damped vibrations and sounds are absorbed resulting to noise reduction',
+  'Light weight, easy to install and low labour cost of installations',
+  'Resistant to corrosion as compared to metal products',
+  'Environment-friendly as it takes less energy to manufacture PPR pipes and are recyclable compared to its metal counterparts',
+  'Hygienic and non-toxic compared to metal or other plastic products',
+];
+const sharedFeaturesFr = [
   'Very long life time with a guaranteed service life of 50 years',
   'High impact strength & flexibility',
   'Damage resistance',
@@ -70,11 +88,11 @@ export const pprSdr11Pn10: ProductDetailConfig = {
 
   title: 'CROWN PPR PIPES – SDR11 / PN 10',
   titleAr: 'أنابيب كراون PPR – SDR11 / PN 10',
-
-  shortDescription: 'CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable for various applications including hot and cold water supply, HVAC, and aggressive fluids.',
+    titleFr: `TUYAUX PPR COURONNE – SDR11 / PN 10`,
+    shortDescription: 'CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable for various applications including hot and cold water supply, HVAC, and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR11/PN10 مطابقة لمعيار DIN 8077/78. مناسبة لتطبيقات متعددة بما في ذلك إمداد المياه الساخنة والباردة.',
-
-  overview: `Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78.
+    shortDescriptionFr: `Le tuyau CROWN PPR SDR11/PN10 est spécifié selon DIN 8077/78. Il convient à diverses applications, notamment l’approvisionnement en eau chaude et froide, le CVC et les fluides agressifs.`,
+    overview: `Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable for various applications including hot and cold water supply, HVAC, and aggressive fluids.
 
@@ -88,8 +106,18 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
   overviewAr: `معايير أنابيب PPR SDR11/PN10 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR11/PN10 مطابقة لمعيار DIN 8077/78. مناسبة لتطبيقات متعددة بما في ذلك إمداد المياه الساخنة والباردة ونظام التدفئة والتهوية والتكييف والسوائل العدوانية.`,
+    overviewFr: `Paramètres du tuyau PPR SDR11/PN10 conformément à DIN 8077/78.
 
-  features: sharedFeatures,
+Le tuyau CROWN PPR SDR11/PN10 est spécifié selon DIN 8077/78. Il convient à diverses applications, notamment l’approvisionnement en eau chaude et froide, le CVC et les fluides agressifs.
+
+**Spécifications clés :**
+• Matériau : PPR
+• Classe de pression : SDR11 / PN 10
+• Gamme de tailles : 20 à 110 (Dimensions en mm)
+• Options de longueur : 8 Mtrs à 100 Mtrs (par unité d'emballage)
+• Norme : DIN 8077/78
+• Couleur : Disponible selon normes et couleur sur mesure`,
+    features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
     'قوة تحمل عالية ومرونة',
@@ -100,8 +128,8 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-
-  applications: sharedApplications,
+    featuresFr: sharedFeaturesFr,
+    applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
     'نظام التدفئة والتهوية والتكييف والهواء المضغوط',
@@ -110,8 +138,8 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: sharedApplicationsFr,
+    // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -140,7 +168,23 @@ CROWN PPR Pipe SDR11/PN10 is specified according to DIN 8077/78. It is suitable 
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
+    dosDontsFr: {
+          dos: [
+            `Utiliser le soudage par fusion thermique pour assembler les tuyaux et raccords PPR`,
+            `Assurer une température de fusion correcte (généralement 260°C pour PPR)`,
+            `Prévoir un temps de refroidissement adéquat avant les tests de pression`,
+            `Tuyaux de support aux intervalles recommandés`,
+            `Rangez les tuyaux à l’abri de la lumière directe du soleil et des sources de chaleur`
+          ],
+          donts: [
+            `Ne pas utiliser de colle à solvant – le PPR nécessite une fusion thermique`,
+            `Ne pas exposer à des températures supérieures à la limite nominale`,
+            `N'utilisez pas de raccords incompatibles provenant d'autres systèmes de matériaux`,
+            `Ne serrez pas trop les connexions filetées`,
+            `Ne pas utiliser de tuyaux endommagés ou déformés`
+          ]
+        },
+    // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
 
@@ -192,11 +236,11 @@ export const pprSdr7_4Pn16: ProductDetailConfig = {
 
   title: 'CROWN PPR PIPES – SDR7.4 / PN 16',
   titleAr: 'أنابيب كراون PPR – SDR7.4 / PN 16',
-
-  shortDescription: 'CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher pressure class suitable for a wide range of applications including potable water and aggressive fluids.',
+    titleFr: `TUYAUX PPR COURONNE – SDR7.4 / PN 16`,
+    shortDescription: 'CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher pressure class suitable for a wide range of applications including potable water and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR7.4/PN16 مطابقة لمعيار DIN 8077/78. فئة ضغط أعلى مناسبة لمجموعة واسعة من التطبيقات.',
-
-  overview: `Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78.
+    shortDescriptionFr: `Le tuyau CROWN PPR SDR7.4/PN16 est spécifié selon DIN 8077/78. Il s'agit d'une classe de pression plus élevée adaptée à une large gamme d'applications, notamment l'eau potable et les fluides agressifs.`,
+    overview: `Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher pressure class suitable for a wide range of applications including potable water and aggressive fluids.
 
@@ -210,8 +254,18 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
   overviewAr: `معايير أنابيب PPR SDR7.4/PN16 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR7.4/PN16 مطابقة لمعيار DIN 8077/78. فئة ضغط أعلى مناسبة لمجموعة واسعة من التطبيقات بما في ذلك مياه الشرب والسوائل العدوانية.`,
+    overviewFr: `Paramètres du tuyau PPR SDR7.4/PN16 conformément à DIN 8077/78.
 
-  features: sharedFeatures,
+Le tuyau CROWN PPR SDR7.4/PN16 est spécifié selon DIN 8077/78. Il s'agit d'une classe de pression plus élevée adaptée à une large gamme d'applications, notamment l'eau potable et les fluides agressifs.
+
+**Spécifications clés :**
+• Matériau : PPR
+• Classe de pression : SDR7.4 / PN 16
+• Gamme de tailles : 20 à 110 (Dimensions en mm)
+• Options de longueur : 8 Mtrs à 100 Mtrs (par unité d'emballage)
+• Norme : DIN 8077/78
+• Couleur : Disponible selon normes et couleur sur mesure`,
+    features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
     'قوة تحمل عالية ومرونة',
@@ -222,8 +276,8 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-
-  applications: sharedApplications,
+    featuresFr: sharedFeaturesFr,
+    applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
     'نظام التدفئة والتهوية والتكييف والهواء المضغوط',
@@ -232,8 +286,8 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: sharedApplicationsFr,
+    // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -262,7 +316,23 @@ CROWN PPR Pipe SDR7.4/PN16 is specified according to DIN 8077/78. It is a higher
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
+    dosDontsFr: {
+          dos: [
+            `Utiliser le soudage par fusion thermique pour assembler les tuyaux et raccords PPR`,
+            `Assurer une température de fusion correcte (généralement 260°C pour PPR)`,
+            `Prévoir un temps de refroidissement adéquat avant les tests de pression`,
+            `Tuyaux de support aux intervalles recommandés`,
+            `Rangez les tuyaux à l’abri de la lumière directe du soleil et des sources de chaleur`
+          ],
+          donts: [
+            `Ne pas utiliser de colle à solvant – le PPR nécessite une fusion thermique`,
+            `Ne pas exposer à des températures supérieures à la limite nominale`,
+            `N'utilisez pas de raccords incompatibles provenant d'autres systèmes de matériaux`,
+            `Ne serrez pas trop les connexions filetées`,
+            `Ne pas utiliser de tuyaux endommagés ou déformés`
+          ]
+        },
+    // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
 
@@ -314,11 +384,11 @@ export const pprSdr6Pn20: ProductDetailConfig = {
 
   title: 'CROWN PPR PIPES – SDR6 / PN 20',
   titleAr: 'أنابيب كراون PPR – SDR6 / PN 20',
-
-  shortDescription: 'CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the highest pressure class presented, suitable for demanding applications including hot and cold water supply and aggressive fluids.',
+    titleFr: `TUYAUX PPR COURONNE – SDR6 / PN 20`,
+    shortDescription: 'CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the highest pressure class presented, suitable for demanding applications including hot and cold water supply and aggressive fluids.',
   shortDescriptionAr: 'أنابيب كراون PPR SDR6/PN20 مطابقة لمعيار DIN 8077/78. هذه أعلى فئة ضغط مناسبة للتطبيقات المتطلبة.',
-
-  overview: `Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78.
+    shortDescriptionFr: `Le tuyau CROWN PPR SDR6/PN20 est spécifié selon DIN 8077/78. Il s'agit de la classe de pression la plus élevée présentée, adaptée aux applications exigeantes, notamment l'alimentation en eau chaude et froide et les fluides agressifs.`,
+    overview: `Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78.
 
 CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the highest pressure class presented, suitable for demanding applications including hot and cold water supply and aggressive fluids.
 
@@ -332,8 +402,18 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
   overviewAr: `معايير أنابيب PPR SDR6/PN20 وفقاً لمعيار DIN 8077/78.
 
 أنابيب كراون PPR SDR6/PN20 مطابقة لمعيار DIN 8077/78. هذه أعلى فئة ضغط مقدمة، مناسبة للتطبيقات المتطلبة بما في ذلك إمداد المياه الساخنة والباردة والسوائل العدوانية.`,
+    overviewFr: `Paramètres du tuyau PPR SDR6/PN20 conformément à DIN 8077/78.
 
-  features: sharedFeatures,
+Le tuyau CROWN PPR SDR6/PN20 est spécifié selon DIN 8077/78. Il s'agit de la classe de pression la plus élevée présentée, adaptée aux applications exigeantes, notamment l'alimentation en eau chaude et froide et les fluides agressifs.
+
+**Spécifications clés :**
+• Matériau : PPR
+• Classe de pression : SDR6 / PN 20
+• Gamme de tailles : 20 à 110 (Dimensions en mm)
+• Options de longueur : 8 Mtrs à 100 Mtrs (par unité d'emballage)
+• Norme : DIN 8077/78
+• Couleur : Disponible selon normes et couleur sur mesure`,
+    features: sharedFeatures,
   featuresAr: [
     'عمر خدمة طويل جداً مع ضمان 50 سنة',
     'قوة تحمل عالية ومرونة',
@@ -344,8 +424,8 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
     'صديق للبيئة حيث يتطلب طاقة أقل للتصنيع وقابل لإعادة التدوير',
     'صحي وغير سام مقارنة بالمنتجات المعدنية أو البلاستيكية الأخرى',
   ],
-
-  applications: sharedApplications,
+    featuresFr: sharedFeaturesFr,
+    applications: sharedApplications,
   applicationsAr: [
     'إمداد مياه الشرب الساخنة والباردة في المباني السكنية والتجارية',
     'نظام التدفئة والتهوية والتكييف والهواء المضغوط',
@@ -354,8 +434,8 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
     'شبكات الأنابيب لمرافق حمامات السباحة',
     'شبكات الأنابيب للسوائل العدوانية (الأحماض والقلويات والمواد الكيميائية المسببة للتآكل)',
   ],
-
-  // ───────────────────────────────────────────────────────────────────────────
+    applicationsFr: sharedApplicationsFr,
+    // ───────────────────────────────────────────────────────────────────────────
   // Pipes Section (populated from src/PPR PIPES.txt)
   // ───────────────────────────────────────────────────────────────────────────
   pipesTables: [
@@ -383,7 +463,23 @@ CROWN PPR Pipe SDR6/PN20 is specified according to DIN 8077/78. This is the high
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
+    dosDontsFr: {
+          dos: [
+            `Utiliser le soudage par fusion thermique pour assembler les tuyaux et raccords PPR`,
+            `Assurer une température de fusion correcte (généralement 260°C pour PPR)`,
+            `Prévoir un temps de refroidissement adéquat avant les tests de pression`,
+            `Tuyaux de support aux intervalles recommandés`,
+            `Rangez les tuyaux à l’abri de la lumière directe du soleil et des sources de chaleur`
+          ],
+          donts: [
+            `Ne pas utiliser de colle à solvant – le PPR nécessite une fusion thermique`,
+            `Ne pas exposer à des températures supérieures à la limite nominale`,
+            `N'utilisez pas de raccords incompatibles provenant d'autres systèmes de matériaux`,
+            `Ne serrez pas trop les connexions filetées`,
+            `Ne pas utiliser de tuyaux endommagés ou déformés`
+          ]
+        },
+    // Fittings Section (placeholder - to be populated from PPR fittings JSON later)
   // ───────────────────────────────────────────────────────────────────────────
   fittings: [],
 

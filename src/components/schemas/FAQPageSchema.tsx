@@ -4,6 +4,12 @@
 import { FAQItem } from '@/config/faqs';
 
 const baseUrl = 'https://crownplasticuae.com';
+const publisherOrg = {
+  '@type': 'Organization' as const,
+  name: 'Crown Plastic Pipes Factory L.L.C.',
+  url: baseUrl,
+  logo: `${baseUrl}/images/logo.png`,
+};
 
 interface FAQPageSchemaProps {
   faqs: FAQItem[];
@@ -15,6 +21,8 @@ export function FAQPageSchema({ faqs, pageUrl }: FAQPageSchemaProps) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${pageUrl || baseUrl + '/support/faqs'}#faqpage`,
+    inLanguage: 'en',
+    publisher: publisherOrg,
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       '@id': `${baseUrl}/support/faqs#${faq.id}`,
@@ -23,6 +31,7 @@ export function FAQPageSchema({ faqs, pageUrl }: FAQPageSchemaProps) {
         '@type': 'Answer',
         text: faq.answer,
         url: `${baseUrl}/support/faqs#${faq.id}`,
+        author: publisherOrg,
       },
     })),
   };
@@ -50,6 +59,12 @@ export function ClusterFAQSchema({ faqs, clusterName, pageUrl }: ClusterFAQSchem
     '@id': `${pageUrl}#faqpage`,
     name: `${clusterName} - Frequently Asked Questions`,
     description: `Expert answers to common questions about ${clusterName.toLowerCase()} from Crown Plastic Pipes.`,
+    inLanguage: 'en',
+    about: {
+      '@type': 'Thing',
+      name: clusterName,
+    },
+    publisher: publisherOrg,
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       '@id': `${pageUrl}#${faq.id}`,
@@ -58,20 +73,9 @@ export function ClusterFAQSchema({ faqs, clusterName, pageUrl }: ClusterFAQSchem
         '@type': 'Answer',
         text: faq.answer,
         url: `${pageUrl}#${faq.id}`,
-        dateCreated: new Date().toISOString().split('T')[0],
-        author: {
-          '@type': 'Organization',
-          name: 'Crown Plastic Pipes Technical Team',
-          url: baseUrl,
-        },
+        author: publisherOrg,
       },
     })),
-    publisher: {
-      '@type': 'Organization',
-      name: 'Crown Plastic Pipes Factory L.L.C.',
-      url: baseUrl,
-      logo: `${baseUrl}/images/logo.png`,
-    },
   };
 
   return (
@@ -94,18 +98,20 @@ interface SingleFAQSchemaProps {
 export function SingleFAQSchema({ question, answer, pageUrl, faqId }: SingleFAQSchemaProps) {
   const singleFaqSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Question',
-    '@id': `${pageUrl}#${faqId}`,
-    name: question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: answer,
-      url: `${pageUrl}#${faqId}`,
-      author: {
-        '@type': 'Organization',
-        name: 'Crown Plastic Pipes Technical Team',
+    '@type': 'FAQPage',
+    '@id': `${pageUrl}#faq-${faqId}`,
+    inLanguage: 'en',
+    mainEntity: [{
+      '@type': 'Question',
+      '@id': `${pageUrl}#${faqId}`,
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+        url: `${pageUrl}#${faqId}`,
+        author: publisherOrg,
       },
-    },
+    }],
   };
 
   return (

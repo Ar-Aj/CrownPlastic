@@ -12,11 +12,14 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
   categorySlug: 'pex-pipes',
   title: 'Crown PEX Pipes — PN 12.5 & PN 20 (DIN 16892/16893)',
   titleAr: 'أنابيب Crown PEX — PN 12.5 و PN 20 (DIN 16892/16893)',
-  shortDescription: 'Cross-linked polyethylene PEX pipes — PN 12.5 (SDR 11.08) & PN 20 (SDR 7.4) for underfloor heating and hot water.',
+    titleFr: `Couronne PEX Tuyaux — PN 12.5 et PN 20 (DIN 16892/16893)`,
+    shortDescription: 'Cross-linked polyethylene PEX pipes — PN 12.5 (SDR 11.08) & PN 20 (SDR 7.4) for underfloor heating and hot water.',
   shortDescriptionAr: 'أنابيب بولي إيثيلين متشابك PEX — PN 12.5 (SDR 11.08) و PN 20 (SDR 7.4) للتدفئة تحت الأرضية والمياه الساخنة.',
-  overview: `Crown Plastic Pipes / Fittings, a leading PEX pipe manufacturer in the UAE, produces premium Crown PEX cross-linked polyethylene piping systems to DIN 16892/16893 standards. Engineered for high-performance hot and cold water installations in luxury villa developments across the UAE, these pipes provide superior flexibility and thermal stability up to 95°C. Available in PN 12.5 (SDR 11.08) and PN 20 (SDR 7.4) pressure ratings with sizes from 16–32 mm. By integrating PP-R chemical resistance with advanced manifold configurations, Crown PEX ensures leak-free, scale-resistant, and highly hygienic distribution networks for underfloor, wall, and ceiling heating systems. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility with a guaranteed 50-year service life.`,
+    shortDescriptionFr: `Tuyaux PEX en polyéthylène réticulé — PN 12.5 (SDR 11.08) & PN 20 (SDR 7.4) pour chauffage par le sol et eau chaude.`,
+    overview: `Crown Plastic Pipes / Fittings, a leading PEX pipe manufacturer in the UAE, produces premium Crown PEX cross-linked polyethylene piping systems to DIN 16892/16893 standards. Engineered for high-performance hot and cold water installations in luxury villa developments across the UAE, these pipes provide superior flexibility and thermal stability up to 95°C. Available in PN 12.5 (SDR 11.08) and PN 20 (SDR 7.4) pressure ratings with sizes from 16–32 mm. By integrating PP-R chemical resistance with advanced manifold configurations, Crown PEX ensures leak-free, scale-resistant, and highly hygienic distribution networks for underfloor, wall, and ceiling heating systems. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility with a guaranteed 50-year service life.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب PEX في الإمارات، أنظمة أنابيب Crown PEX الفاخرة من البولي إيثيلين المتشابك وفق معايير DIN 16892/16893. مصممة لتركيبات المياه الساخنة والباردة عالية الأداء في مشاريع فلل فاخرة في دبي وأبوظبي والخليج، توفر هذه الأنابيب مرونة فائقة واستقراراً حرارياً حتى 95°C. متوفرة بتصنيفات ضغط PN 12.5 (SDR 11.08) و PN 20 (SDR 7.4) بمقاسات من 16–32 مم. من خلال دمج مقاومة PP-R الكيميائية مع تكوينات المشعب المتقدمة، تضمن Crown PEX شبكات توزيع مانعة للتسرب ومقاومة للترسبات وعالية النظافة لأنظمة التدفئة تحت الأرضية والجدارية والسقفية. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين بعمر خدمة مضمون 50 عاماً.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de tuyaux PEX dans le UAE, fabrique des systèmes de tuyauterie en polyéthylène réticulé haut de gamme Crown PEX selon les normes DIN 16892/16893. Conçus pour les installations d'eau chaude et froide haute performance dans les développements de villas de luxe à travers le UAE, ces tuyaux offrent une flexibilité et une stabilité thermique supérieures jusqu'au 95°C. Disponible en pressions nominales PN 12.5 (SDR 11.08) et PN 20 (SDR 7.4) avec des tailles de 16 à 32 mm. En intégrant la résistance chimique PP-R à des configurations de collecteurs avancées, Crown PEX garantit des réseaux de distribution sans fuite, résistants au tartre et hautement hygiéniques pour les systèmes de chauffage par le sol, les murs et les plafonds. Mfabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain avec une durée de vie garantie de 50 ans.`,
+    features: [
     'High Temperature Resistance: Engineered to maintain structural integrity in hot water applications up to 95°C.',
     'Superior Flexibility: Designed for easy routing in floor and wall structures across complex flexible layouts.',
     'German Standard Compliance: Fully manufactured in accordance with DIN 16892 and DIN 16893 requirements.',
@@ -32,7 +35,15 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
     'استقرار فيزيائي عالي: تضمن أداءً متسقاً واحتفاظاً بالضغط في ظروف مناخ الخليج القصوى.',
     'تكامل نظام المشعب: محسّنة للتركيبات المتنقلة لاختيار مخارج دقيقة لدوائر الماء الساخن والبارد.',
   ],
-  technicalProperties: [
+    featuresFr: [
+            `Résistance aux températures élevées : conçu pour maintenir l’intégrité structurelle dans les applications d’eau chaude jusqu’à 95°C.`,
+            `Flexibilité supérieure : Conçu pour un routage facile dans les structures de sol et de murs dans des configurations flexibles complexes.`,
+            `Conformité aux normes allemandes : entièrement fabriqué conformément aux exigences DIN 16892 et DIN 16893.`,
+            `Sans tartre ni corrosion : les matériaux avancés empêchent l’accumulation interne et la corrosion environnementale.`,
+            `Haute stabilité physique : garantit des performances constantes et une rétention de pression dans des conditions climatiques extrêmes GCC.`,
+            `Intégration du système de collecteur : optimisé pour les installations mobiles afin de sélectionner avec précision les sorties pour les circuits chauds et froids.`
+          ],
+    technicalProperties: [
     { property: 'Base Material', value: 'PE-X (Cross Linked Polyethylene)' },
     { property: 'Manufacturing Standard', value: 'DIN 16892 and DIN 16893' },
     { property: 'Maximum Operating Temperature', value: '95°C' },
@@ -52,7 +63,17 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
     { property: 'ملف التآكل', value: 'خالي من التآكل' },
     { property: 'نطاق التطبيق', value: 'مياه صالحة للشرب، تدفئة تحت أرضية، أنظمة جدارية/سقفية' },
   ],
-  systemAdvantages: [
+    technicalPropertiesFr: [
+            { property: 'Base Material', value: 'PE-X (Cross Linked Polyethylene)' },
+            { property: 'Manufacturing Standard', value: 'DIN 16892 and DIN 16893' },
+            { property: 'Maximum Operating Temperature', value: '95°C' },
+            { property: 'Pressure Ratings', value: 'PN 12.5 & PN 20' },
+            { property: 'SDR Ratings', value: 'SDR 11.08 and SDR 7.4' },
+            { property: 'Estimated Service Life', value: 'Minimum 50 years at rated conditions' },
+            { property: 'Corrosion Profile', value: 'Corrosion Free' },
+            { property: 'Application Range', value: 'Potable water, Underfloor heating, Wall/Ceiling systems' }
+          ],
+    systemAdvantages: [
     'Rapid and simple installation process reducing overall MEP labor costs in Dubai and Abu Dhabi.',
     'Memory effect technology allows the piping to adapt to flexible structures and mobile radiator systems.',
     'Exceptional longevity with a documented service life of up to 50 years at rated operating conditions.',
@@ -64,7 +85,13 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
     'عمر استثنائي طويل مع عمر خدمة موثق يصل إلى 50 عاماً في ظروف التشغيل المصنفة.',
     'مقاومة كيميائية تمنع التدهور عند التلامس مع مواد البناء مثل الأسمنت والجير.',
   ],
-  applications: [
+    systemAdvantagesFr: [
+            `Processus d'installation rapide et simple reducing coûts globaux de main-d'œuvre MEP à Dubai et Abu Dhabi.`,
+            `La technologie à effet mémoire permet à la tuyauterie de s'adapter aux structures flexibles et aux systèmes de radiateurs mobiles.`,
+            `Longévité exceptionnelle avec une durée de vie documentée allant jusqu'à 50 ans dans des conditions de fonctionnement nominales.`,
+            `Résistance chimique qui évite la détérioration au contact de matériaux de construction comme le ciment et la chaux.`
+          ],
+    applications: [
     'Under-floor, wall, and ceiling heating systems for residential luxury villas.',
     'Hot and cold potable water transportation networks in commercial business centers.',
     'Mobile radiator installation systems for schools, hospitals, and high-rise developments.',
@@ -76,7 +103,13 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
     'أنظمة تركيب المشعاع المتنقلة للمدارس والمستشفيات والأبراج.',
     'شبكات سباكة متخصصة للمختبرات ودور السينما والصالات الرياضية الكبيرة.',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Systèmes de chauffage au sol, aux murs et au plafond pour villas résidentielles de luxe.`,
+            `Réseaux de transport d'eau potable chaude et froide dans les centres d'affaires commerciaux.`,
+            `Systèmes d'installation de radiateurs mobiles pour les écoles, les hôpitaux et les immeubles de grande hauteur.`,
+            `Réseaux de plomberie spécialisés pour laboratoires, cinémas et grandes salles de sport.`
+          ],
+    pipesTables: [
         {
       id: "pex-pn-12-5-pn-20-table",
       title: "Dimensions of Crown PEX Pipes",
@@ -123,4 +156,18 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
       'لا تغفل حسابات الاستطالة الناتجة عن فروقات درجات الحرارة بين التركيب والتشغيل.',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Sélectionnez les sorties collecteurs en fonction précisément du nombre de dessus d'eau chaude et froide dans chaque circuit.`,
+            `Assurez-vous que toutes les installations PEX suivent la méthode d'installation mobile pour une efficacité maximale du radiateur.`,
+            `Référez-vous aux tableaux des conditions de travail DIN 16893 pour déterminer la pression admissible pour des températures de fonctionnement spécifiques.`,
+            `Utilisez des manchons de protection dédiés rouges et bleus pour différencier clairement les conduites d'eau chaude et froide.`
+          ],
+          donts: [
+            `Ne dépassez pas la pression de service maximale autorisée pour un service à température maximale (par exemple, 5.5 bar à 95°C pour PN 12.5).`,
+            `Évitez d'utiliser une tuyauterie PEX qui ne répond pas aux exigences générales de qualité de DIN 16892.`,
+            `Ne pas ignorer les temps de refroidissement obligatoires et ne pas faire pivoter les joints during associés au soudage par fusion pour les connexions de montage.`,
+            `Ne négligez pas les calculs d'allongement provoqués par les différences de température entre l'installation et le fonctionnement.`
+          ]
+        }
 };

@@ -200,9 +200,9 @@ export function ProductCardHeader({
       )}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <h3 className="text-lg font-bold text-slate-900 truncate">{title}</h3>
+          <h3 className="text-lg font-bold text-slate-900 break-words">{title}</h3>
           {badge && (
-            <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-semibold rounded-full">
+            <span className="shrink-0 px-2 py-0.5 bg-primary/10 text-primary text-xs font-semibold rounded-full whitespace-nowrap">
               {badge}
             </span>
           )}

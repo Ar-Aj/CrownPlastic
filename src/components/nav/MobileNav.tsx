@@ -9,6 +9,7 @@ import { usePrefersReducedMotion } from '@/components/common/useAnimations';
 import { LanguageToggle } from '@/components/common';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 import type { TranslationPath } from '@/i18n/en';
 
 interface MobileNavProps {
@@ -136,7 +137,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                     onClick={() => toggleExpand(item.label)}
                     className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-primary transition-colors"
                   >
-                    <span className="font-medium">{translateLabel(item.label)}</span>
+                    <span className="font-medium break-words">{translateLabel(item.label)}</span>
                     <svg
                       className={`w-5 h-5 transition-transform ${expandedItems.includes(item.label) ? 'rotate-180' : ''
                         }`}
@@ -158,13 +159,13 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
                       </Link>
                       {item.children.map((child) => {
                         const childPath = navLabelToPath[child.label];
-                        const childLabel = childPath ? t(childPath) : language === 'ar' ? (child.labelAr || child.label) : child.label;
+                        const childLabel = childPath ? t(childPath) : localizedValue(language, child.label, child.labelAr, child.labelFr);
                         return (
                           <Link
                             key={child.href}
                             href={child.href}
                             onClick={onClose}
-                            className="block py-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                            className="block py-2 text-sm text-gray-600 hover:text-primary transition-colors break-words"
                           >
                             {childLabel}
                           </Link>
@@ -191,7 +192,7 @@ export default function MobileNav({ items, isOpen, onClose }: MobileNavProps) {
           <Link
             href="/contact-us?tab=quote"
             onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors rtl:flex-row-reverse"
+            className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-lg font-medium transition-colors rtl:flex-row-reverse text-center"
           >
             {t('common.get_a_quote')}
             <svg className="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">

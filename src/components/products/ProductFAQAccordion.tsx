@@ -5,6 +5,7 @@ import { ChevronDown, MessageSquare } from 'lucide-react';
 import { type ProductDetailConfig } from '@/types/productDetail';
 import { ProductSection, ProductSectionHeader, ProductCardSurface } from '@/components/products/design-system';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue, localizedArray } from '@/lib/i18n-utils';
 
 interface ProductFAQAccordionProps {
   product: ProductDetailConfig;
@@ -13,43 +14,49 @@ interface ProductFAQAccordionProps {
 export function ProductFAQAccordion({ product }: ProductFAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const { language } = useLanguage();
-  const isAr = language === 'ar';
 
   // Generate Q&A pairs — hand-authored take priority over auto-generated
   const qaPairs: { question: string; answerLines: string[] }[] = [];
 
   if (product.faqs && product.faqs.length > 0) {
-    // ── PRIORITY: Hand-authored AEO FAQs with bilingual support ────────
+    // ── PRIORITY: Hand-authored AEO FAQs with trilingual support ────────
     for (const faq of product.faqs) {
       qaPairs.push({
-        question: isAr ? faq.qAr : faq.q,
-        answerLines: [(isAr ? faq.aAr : faq.a)],
+        question: language === 'fr' ? (faq.qFr || faq.q) : language === 'ar' ? faq.qAr : faq.q,
+        answerLines: [language === 'fr' ? (faq.aFr || faq.a) : language === 'ar' ? faq.aAr : faq.a],
       });
     }
   } else {
     // ── FALLBACK: Auto-generated from features + dosDonts ─────────────
-    const title = isAr ? (product.titleAr || product.title) : product.title;
-    const features = isAr ? (product.featuresAr || product.features) : product.features;
-    const dos = isAr ? (product.dosDontsAr?.dos || product.dosDonts?.dos) : product.dosDonts?.dos;
-    const donts = isAr ? (product.dosDontsAr?.donts || product.dosDonts?.donts) : product.dosDonts?.donts;
+    const title = localizedValue(language, product.title, product.titleAr, product.titleFr);
+    const features = localizedArray(language, product.features, product.featuresAr, product.featuresFr);
+    const dosDontsResolved = language === 'fr' ? (product.dosDontsFr || product.dosDonts) : language === 'ar' ? (product.dosDontsAr || product.dosDonts) : product.dosDonts;
+    const dos = dosDontsResolved?.dos;
+    const donts = dosDontsResolved?.donts;
 
     if (features && features.length > 0) {
       qaPairs.push({
-        question: isAr ? `ما هي الميزات الرئيسية لـ ${title}؟` : `What are the key features of ${title}?`,
+        question: language === 'ar' ? `ما هي الميزات الرئيسية لـ ${title}؟`
+          : language === 'fr' ? `Quelles sont les caractéristiques principales de ${title} ?`
+          : `What are the key features of ${title}?`,
         answerLines: features,
       });
     }
 
     if (dos && dos.length > 0) {
       qaPairs.push({
-        question: isAr ? `ما هي أفضل ممارسات التركيب لـ ${title}؟` : `What are the installation best practices for ${title}?`,
+        question: language === 'ar' ? `ما هي أفضل ممارسات التركيب لـ ${title}؟`
+          : language === 'fr' ? `Quelles sont les bonnes pratiques d'installation pour ${title} ?`
+          : `What are the installation best practices for ${title}?`,
         answerLines: dos,
       });
     }
 
     if (donts && donts.length > 0) {
       qaPairs.push({
-        question: isAr ? `ما الأخطاء التي يجب تجنبها عند استخدام ${title}؟` : `What mistakes should be avoided when using ${title}?`,
+        question: language === 'ar' ? `ما الأخطاء التي يجب تجنبها عند استخدام ${title}؟`
+          : language === 'fr' ? `Quelles erreurs faut-il éviter lors de l'utilisation de ${title} ?`
+          : `What mistakes should be avoided when using ${title}?`,
         answerLines: donts,
       });
     }
@@ -60,8 +67,8 @@ export function ProductFAQAccordion({ product }: ProductFAQAccordionProps) {
   return (
     <ProductSection id="frequently-asked-questions" background="white" size="md">
       <ProductSectionHeader 
-        title={isAr ? 'الأسئلة الشائعة التقنية' : 'Technical FAQs'} 
-        subtitle={isAr ? 'إجابات على الأسئلة الشائعة حول هذا المنتج' : 'Answers to common questions about this product'}
+        title={language === 'ar' ? 'الأسئلة الشائعة التقنية' : language === 'fr' ? 'FAQ Techniques' : 'Technical FAQs'} 
+        subtitle={language === 'ar' ? 'إجابات على الأسئلة الشائعة حول هذا المنتج' : language === 'fr' ? 'Réponses aux questions fréquentes sur ce produit' : 'Answers to common questions about this product'}
       />
       
       <div className="w-full space-y-4">

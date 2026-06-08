@@ -215,7 +215,7 @@ function DesktopPinnedStrip({ t, journeyStories, translatedEvents }: { t: Return
         className="sticky overflow-hidden bg-white"
         style={{
           top: '100px',
-          height: 'min(calc(100vh - 100px), 850px)',
+          height: 'min(calc(100vh - 100px), 900px)',
         }}
       >
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-40 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
@@ -296,7 +296,7 @@ function DesktopPinnedStrip({ t, journeyStories, translatedEvents }: { t: Return
                     </div>
 
                     {/* Tagline */}
-                    <p className="text-gray-600 text-xs lg:text-sm 2xl:text-xl 2xl:leading-relaxed mb-2">{activeStory.tagline}</p>
+                    <p className="text-gray-600 text-xs lg:text-sm 2xl:text-xl 2xl:leading-relaxed mb-2 line-clamp-3">{activeStory.tagline}</p>
 
                     {/* Milestones as inline chips */}
                     <div className="flex flex-wrap gap-1.5 lg:gap-2">
@@ -308,7 +308,7 @@ function DesktopPinnedStrip({ t, journeyStories, translatedEvents }: { t: Return
                           <span className="px-1.5 lg:px-2 2xl:px-3 py-0.5 2xl:py-1 bg-primary text-white text-[10px] lg:text-xs 2xl:text-lg font-bold rounded">
                             {event.year}
                           </span>
-                          <span className="text-xs lg:text-sm 2xl:text-lg text-gray-700">{event.title}</span>
+                          <span className="text-xs lg:text-sm 2xl:text-lg text-gray-700 min-w-0 break-words">{event.title}</span>
                           {event.highlight && (
                             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                           )}
@@ -567,7 +567,7 @@ function MobileStoryCard({ story, events, isActive }: MobileStoryCardProps) {
       </div>
 
       {/* Tagline */}
-      <p className="text-gray-600 text-xs mb-2.5">{story.tagline}</p>
+      <p className="text-gray-600 text-xs mb-2.5 line-clamp-2">{story.tagline}</p>
 
       {/* Milestones */}
       <div className="space-y-1.5">
@@ -579,7 +579,7 @@ function MobileStoryCard({ story, events, isActive }: MobileStoryCardProps) {
             <span className="px-1.5 py-0.5 bg-primary text-white text-[10px] font-bold rounded flex-shrink-0">
               {event.year}
             </span>
-            <p className="text-xs text-gray-700 line-clamp-1">{event.title}</p>
+            <p className="text-xs text-gray-700 line-clamp-1 min-w-0 break-words">{event.title}</p>
           </div>
         ))}
       </div>

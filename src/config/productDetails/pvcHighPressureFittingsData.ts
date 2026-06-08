@@ -15,11 +15,14 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-fittings',
   title: 'PVC High Pressure Fittings DIN 8063',
   titleAr: 'وصلات الضغط العالي PVC وفق DIN 8063',
-  shortDescription: 'PVC-U pressure fittings to DIN 8063 — PN 10/16, metric 20–200 mm.',
+    titleFr: `PVC Raccords haute pression DIN 8063`,
+    shortDescription: 'PVC-U pressure fittings to DIN 8063 — PN 10/16, metric 20–200 mm.',
   shortDescriptionAr: 'وصلات ضغط PVC-U وفق DIN 8063 — PN 10/16، متري 20–200 مم.',
-  overview: `Crown Plastic Pipes / Fittings, a leading PVC-U pressure fittings manufacturer in the UAE, produces a comprehensive range of DIN 8063 metric fittings engineered for the demanding industrial environments of the Gulf region. Rated PN 10 and PN 16, these fittings offer superior chemical resistance and high-pressure tolerance — the preferred choice for contractors across the UAE. Manufactured at our ISO 9001:2015 certified facility in Umm Al Quwain, the range spans 20 mm to 200 mm and includes elbows, tees, reducers, adaptors, unions, and end caps.`,
+    shortDescriptionFr: `Raccords à pression PVC-U selon DIN 8063 — PN 10/16, métrique 20–200 mm.`,
+    overview: `Crown Plastic Pipes / Fittings, a leading PVC-U pressure fittings manufacturer in the UAE, produces a comprehensive range of DIN 8063 metric fittings engineered for the demanding industrial environments of the Gulf region. Rated PN 10 and PN 16, these fittings offer superior chemical resistance and high-pressure tolerance — the preferred choice for contractors across the UAE. Manufactured at our ISO 9001:2015 certified facility in Umm Al Quwain, the range spans 20 mm to 200 mm and includes elbows, tees, reducers, adaptors, unions, and end caps.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع وصلات الضغط PVC-U في الإمارات، مجموعة شاملة من وصلات DIN 8063 المترية المصممة للبيئات الصناعية الصعبة في منطقة الخليج. مصنفة PN 10 و PN 16، توفر هذه الوصلات مقاومة كيميائية فائقة وتحمل ضغط عالٍ — الخيار المفضل للمقاولين في دبي وأبوظبي والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين، يتراوح النطاق من 20 مم إلى 200 مم.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de raccords à pression PVC-U dans le UAE, produit une gamme complète de raccords métriques DIN 8063 conçus pour les environnements industriels exigeants de la région du Golfe. Classés PN 10 et PN 16, ces raccords offrent une résistance chimique supérieure et une tolérance à haute pression - le choix préféré des entrepreneurs du UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 à Umm Al Quwain, la gamme s'étend du 20 mm au 200 mm et comprend des coudes, des tés, des raccords, des adaptateurs, des raccords et des extrémités. casquettes.`,
+    features: [
     'Manufactured to strict DIN 8063 standards for metric pressure piping — leading UAE producer',
     'High-pressure tolerance ratings of PN16 and PN10 for industrial reliability',
     'Premium PVC-U material ensures excellent chemical and corrosion resistance',
@@ -35,7 +38,15 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
     'إدارة جودة معتمدة ISO 9001:2015 في منشأتنا بأم القيوين',
     'مصممة لمناخات الخليج القاسية مع وصلات لحام بالمذيب المتينة',
   ],
-  applications: [
+    featuresFr: [
+            `Fabriqué selon les normes strictes DIN 8063 pour les canalisations à pression métrique — leader UAE producer`,
+            `Tolérances haute pression de PN16 et PN10 pour une fiabilité industrielle du`,
+            `Le matériau premium PVC-U assure une excellente résistance aux produits chimiques et à la corrosion`,
+            `Gamme complète de tailles allant de 20 mm à 200 mm diamètres nominaux`,
+            `Gestion de la qualité certifiée ISO 9001:2015 dans notre usine d'Umm Al Quwain`,
+            `Conçu pour les climats extrêmes GCC avec des joints de ciment à solvant durables`
+          ],
+    applications: [
     'Potable water distribution and municipal water supply systems in the UAE',
     'Industrial chemical processing and fluid handling',
     'High-pressure irrigation and landscaping networks in UAE/GCC',
@@ -47,7 +58,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
     'شبكات الري والتنسيق عالية الضغط في الإمارات والخليج',
     'محطات معالجة المياه وأنظمة التبريد الصناعية',
   ],
-  pipesTables: [],
+    applicationsFr: [
+            `Réseaux de distribution d’eau potable et d’approvisionnement en eau municipale dans le UAE`,
+            `Traitement chimique industriel et manipulation des fluides`,
+            `Réseaux d'irrigation et d'aménagement paysager à haute pression en UAE/GCC`,
+            `Installations de traitement des eaux et systèmes de refroidissement industriels`
+          ],
+    pipesTables: [],
   fittings: [
     {
       id: 'elbow-90--din-8063',
@@ -454,7 +471,22 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       'لا تستخدم هذه الوصلات مع الهواء المضغوط أو الغازات عالية الضغط',
       'تجنب خلط معايير مختلفة؛ تأكد أن الأنابيب والوصلات تتبع DIN 8063 المتري',
       'لا تعرّض الوصلات لمواد كيميائية غير متوافقة قد تتلف مادة PVC-U',
-    ]}};
+    ]},
+    dosDontsFr: {
+          dos: [
+            `Vérifiez que la valeur nominale PN (PN16 ou PN10) correspond à la pression de fonctionnement de votre système.`,
+            `Assurez-vous que toutes les extrémités des tuyaux sont propres et chanfreinées avant le soudage au solvant.`,
+            `Utilisez uniquement des colles à solvant approuvées et compatibles avec les matériaux PVC-U`,
+            `Prévoyez un temps de durcissement adéquat pour les joints avant de tester la pression du système.`
+          ],
+          donts: [
+            `Ne dépassez pas la pression nominale PN maximale spécifiée pour chaque taille de raccord.`,
+            `N'utilisez pas ces raccords avec de l'air comprimé ou des gaz à haute pression`,
+            `Évitez de mélanger différentes normes ; assurez-vous que les tuyaux et les raccords suivent tous deux le système métrique DIN 8063`,
+            `N'exposez pas les raccords à des produits chimiques incompatibles qui pourraient dégrader le matériau PVC-U`
+          ]
+        }
+};
 // ═══════════════════════════════════════════════════════════════════════════════
 // 2) BS EN 1452:3 / BS 4346 Fittings (PN 15)
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -463,11 +495,14 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-fittings',
   title: 'PVC High Pressure Fittings BS EN 1452:3 / BS 4346 (PN 15)',
   titleAr: 'وصلات الضغط العالي PVC وفق BS EN 1452:3 / BS 4346 (PN 15)',
-  shortDescription: 'PVC-U pressure fittings to BS EN 1452:3/BS 4346 — Class E / PN 15, imperial 1/2\"–8\".',
+    titleFr: `PVC Raccords haute pression BS EN 1452:3 / BS 4346 (PN 15)`,
+    shortDescription: 'PVC-U pressure fittings to BS EN 1452:3/BS 4346 — Class E / PN 15, imperial 1/2\"–8\".',
   shortDescriptionAr: 'وصلات ضغط PVC-U وفق BS EN 1452:3/BS 4346 — فئة E / PN 15، إنشي ½″–8″.',
-  overview: `Crown Plastic Pipes / Fittings, a trusted PVC pressure fittings supplier in Dubai and Abu Dhabi, manufactures the definitive range of BS EN 1452:3 and BS 4346 high-pressure fittings — the benchmark for fluid handling across the UAE and wider GCC. Rated Class E / PN 15, these imperial-sized fittings (½″ to 8″) ensure leak-proof reliability in water mains, industrial transport, and high-rise building distribution. Manufactured at our Umm Al Quwain facility with ISO 9001:2015 certification.`,
+    shortDescriptionFr: `Raccords à pression PVC-U à BS EN 1452:3/BS 4346 — Classe E / PN 15, impérial 1/2"–8".`,
+    overview: `Crown Plastic Pipes / Fittings, a trusted PVC pressure fittings supplier in Dubai and Abu Dhabi, manufactures the definitive range of BS EN 1452:3 and BS 4346 high-pressure fittings — the benchmark for fluid handling across the UAE and wider GCC. Rated Class E / PN 15, these imperial-sized fittings (½″ to 8″) ensure leak-proof reliability in water mains, industrial transport, and high-rise building distribution. Manufactured at our Umm Al Quwain facility with ISO 9001:2015 certification.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، المورد الموثوق لوصلات الضغط PVC في دبي وأبوظبي، المجموعة المرجعية لوصلات الضغط العالي وفق BS EN 1452:3 و BS 4346 — المعيار الأساسي لمناولة السوائل في الإمارات والخليج. مصنفة فئة E / PN 15، هذه الوصلات بمقاسات إنشية (½″ إلى 8″) تضمن موثوقية مانعة للتسرب. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes / Fittings, un fournisseur de raccords à pression PVC de confiance à Dubai et à Abu Dhabi, fabrique la gamme définitive de raccords haute pression BS EN 1452:3 et BS 4346 - la référence pour la manipulation des fluides à travers le UAE et le GCC plus large. Classés Classe E / PN 15, ces raccords de taille impériale (½″ à 8″) garantissent une fiabilité étanche dans les conduites d'eau, le transport industrial et la distribution dans les immeubles de grande hauteur. Mfabriqués dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: [
     'Manufactured to strict BS EN 1452:3 and BS 4346 standards — leading UAE supplier',
     'High-pressure rating of PN 15 for demanding applications',
     'Precision-engineered for Class E high-pressure fluid transport',
@@ -483,7 +518,15 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
     'نطاق مقاسات شامل من ½″ حتى 8″',
     'أنظمة إدارة جودة معتمدة ISO 9001:2015',
   ],
-  applications: [
+    featuresFr: [
+            `Fabriqué selon les normes strictes BS EN 1452:3 et BS 4346 — principal fournisseur UAE`,
+            `Haute pression nominale de PN 15 pour les applications exigeantes`,
+            `Conçu avec précision pour le transport de fluides à haute pression de classe E`,
+            `Résistance supérieure aux produits chimiques et à la corrosion pour la longévité`,
+            `Gamme complète de tailles de 1/2" à 8"`,
+            `Systèmes de gestion de la qualité certifiés, y compris ISO 9001:2015`
+          ],
+    applications: [
     'High-pressure municipal water mains and utility networks in the UAE',
     'Industrial chemical and fluid transport systems',
     'Commercial plumbing and high-rise building water distribution',
@@ -495,7 +538,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
     'السباكة التجارية وتوزيع المياه في المباني الشاهقة',
     'مشاريع البنية التحتية والري في الإمارات والخليج',
   ],
-  pipesTables: [],
+    applicationsFr: [
+            `Conduites d’eau municipales à haute pression et réseaux de services publics dans le UAE`,
+            `Systèmes de transport de produits chimiques et de fluides industriels`,
+            `Plomberie commerciale et distribution d'eau dans les immeubles de grande hauteur`,
+            `Projets d’infrastructures et d’irrigation UAE et GCC`
+          ],
+    pipesTables: [],
   fittings: [
     {
       id: 'elbow-90--bs-en-1452-3',
@@ -987,7 +1036,22 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       'لا تتجاوز حدود الضغط الاسمي (PN) المحددة',
       'لا تركّب وصلات تظهر عليها علامات تلف فيزيائي أو تشققات',
       'لا تعرّض الوصلات لدرجات حرارة تتجاوز الحدود الموصى بها لـ PVC-U',
-    ]}};
+    ]},
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que tous les joints sont correctement nettoyés avant le soudage au solvant.`,
+            `Utilisez uniquement des colles à solvant compatibles conçues pour les systèmes sous pression PVC-U`,
+            `Vérifiez que la pression du système ne dépasse pas la valeur nominale PN 15`,
+            `Suivez les codes du bâtiment locaux UAE/GCC pour l'installation.`
+          ],
+          donts: [
+            `N'utilisez pas ces raccords pour le transport d'air comprimé ou de gaz`,
+            `Ne dépassez pas les limites de pression nominale (PN) spécifiées.`,
+            `N'installez pas de raccords présentant des signes de dommages physiques ou de fissures.`,
+            `Ne pas soumettre les raccords à des températures supérieures aux limites recommandées PVC-U`
+          ]
+        }
+};
 // ═══════════════════════════════════════════════════════════════════════════════
 // 3) Valves
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -996,11 +1060,14 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
   categorySlug: 'pvc-high-pressure-fittings',
   title: 'PVC High Pressure Industrial Valves',
   titleAr: 'صمامات الضغط العالي الصناعية PVC',
-  shortDescription: 'PVC-U industrial valves — unions, compact ball, true union, single union.',
+    titleFr: `PVC Vannes d'entrée haute pressiondustrial`,
+    shortDescription: 'PVC-U industrial valves — unions, compact ball, true union, single union.',
   shortDescriptionAr: 'صمامات PVC-U صناعية — اتحادات، كرة مدمجة، اتحاد حقيقي، اتحاد فردي.',
-  overview: `Crown Plastic Pipes / Fittings, a premium valve manufacturer in the UAE, delivers PVC-U high pressure industrial valves engineered for maximum operational safety and longevity. Trusted by contractors across the UAE for critical flow control applications, these valves feature precision-machined internals, true union and compact designs for easy maintenance, and UV-resistant materials suited to harsh desert and coastal climates. Available in both metric (mm) and imperial (inch) sizes from our ISO 9001:2015 certified Umm Al Quwain facility.`,
+    shortDescriptionFr: `PVC-U vannes industrial — raccords-unions, bille compacte, véritable raccord-union, raccord simple.`,
+    overview: `Crown Plastic Pipes / Fittings, a premium valve manufacturer in the UAE, delivers PVC-U high pressure industrial valves engineered for maximum operational safety and longevity. Trusted by contractors across the UAE for critical flow control applications, these valves feature precision-machined internals, true union and compact designs for easy maintenance, and UV-resistant materials suited to harsh desert and coastal climates. Available in both metric (mm) and imperial (inch) sizes from our ISO 9001:2015 certified Umm Al Quwain facility.`,
   overviewAr: `تصنّع كراون للأنابيب والوصلات البلاستيكية، مصنع الصمامات المتميز في الإمارات، صمامات ضغط عالي صناعية PVC-U مصممة لأقصى درجات السلامة التشغيلية والمتانة. موثوقة من المقاولين في دبي وأبوظبي والخليج لتطبيقات التحكم في التدفق الحرجة. متوفرة بمقاسات مترية وإنشية من منشأتنا المعتمدة ISO 9001:2015 بأم القيوين.`,
-  features: [
+    overviewFr: `Crown Plastic Pipes / Fittings, un fabricant de vannes haut de gamme dans le UAE, propose des vannes industrielles haute pression PVC-U du conçues pour une sécurité opérationnelle et une longévité maximales. Approuvées par les entrepreneurs du UAE pour les applications critiques de contrôle de débit, ces vannes sont dotées de composants internes usinés avec précision, d'un véritable raccord et de conceptions compactes pour un entretien facile, ainsi que de matériaux résistants aux UV adaptés aux climats désertiques et côtiers rigoureux. Disponible en tailles métriques (mm) et impériales (pouces) dans notre usine d'Umm Al Quwain certifiée ISO 9001:2015.`,
+    features: [
     'Superior PVC-U composition for exceptional corrosion resistance — UAE manufactured',
     'Pressure-rated design ensures leak-proof performance in high-head systems',
     'Precision-machined internal components for smooth, controlled flow regulation',
@@ -1016,7 +1083,15 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     'مواد مقاومة للأشعة فوق البنفسجية مناسبة لمناخات صحراء الخليج',
     'نطاق مقاسات شامل بالمتري والإنشي لتكامل سلس مع المشاريع',
   ],
-  applications: [
+    featuresFr: [
+            `Composition PVC-U supérieure pour une résistance exceptionnelle à la corrosion — fabriqué UAE`,
+            `La conception résistante à la pression garantit des performances étanches dans les systèmes à haute pression`,
+            `Composants internes usinés avec précision pour une régulation du débit fluide et contrôlée`,
+            `Véritable union et conceptions compactes pour une installation et une maintenance en ligne faciles`,
+            `Matériaux résistants aux UV adaptés aux climats rigoureux du désert du Golfe et aux installations extérieures`,
+            `Gamme complète de tailles en mesures métriques (mm) et impériales (pouces) pour une intégration transparente au projet`
+          ],
+    applications: [
     'Water treatment plants (desalination, filtration, distribution) in the UAE',
     'Chemical processing and aggressive fluid handling',
     'Industrial cooling and heating circulation systems',
@@ -1028,7 +1103,13 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     'أنظمة تدوير التبريد والتسخين الصناعية',
     'عمليات التعدين واستخراج المعادن في البيئات الصعبة',
   ],
-  pipesTables: [],
+    applicationsFr: [
+            `Stations de traitement d'eau (dessalement, filtration, distribution) dans le UAE`,
+            `Traitement chimique et manipulation de fluides agressifs`,
+            `Systèmes de circulation de refroidissement et de chauffage industriels`,
+            `Opérations minières et d’extraction de minéraux dans des environnements difficiles`
+          ],
+    pipesTables: [],
   fittings: [
     {
       id: "pvc-high-pressure-union",
@@ -1168,4 +1249,19 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
       'لا تستخدم مع وسائط غير متوافقة مع مواد PVC-U',
       'لا تفرط في شد صواميل الاتحاد مما قد يتلف الأختام',
       'لا تعرّض للهب المباشر أو مصادر حرارة شديدة',
-    ]}};
+    ]},
+    dosDontsFr: {
+          dos: [
+            `Vérifier les pressions nominales par rapport aux spécifications du système avant l'installation`,
+            `Utiliser la colle à solvant PVC-U et les techniques d'application appropriées pour sécuriser les joints.`,
+            `Effectuer des inspections visuelles périodiques pour vérifier l'intégrité des matériaux et les performances des joints.`,
+            `Installer dans un emplacement qui permet un accès complet pour la maintenance et l'exploitation`
+          ],
+          donts: [
+            `Ne dépassez pas la température ou la pression de fonctionnement nominale maximale de la vanne.`,
+            `Ne pas utiliser avec des supports incompatibles avec les matériaux PVC-U`,
+            `Ne serrez pas trop les écrous-raccords, car cela pourrait endommager les joints et compromettre la connexion.`,
+            `Ne pas exposer aux flammes directes ou aux sources de chaleur extrême`
+          ]
+        }
+};

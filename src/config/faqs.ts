@@ -1914,8 +1914,20 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-1',
     question: 'UPVC vs PVC pipes: Which should I choose?',
     questionAr: 'أنابيب UPVC مقابل PVC: أيهما يجب أن أختار؟',
-    answer: `UPVC (Unplasticized PVC) and PVC differ significantly. UPVC contains no plasticizers, making it rigid and ideal for pressure applications with 50-100 year lifespan. PVC is flexible with plasticizers added, suitable for different applications. Choose UPVC for: potable water supply, high-pressure systems (up to PN25), underground installations, and certified construction projects. Choose PVC for: flexible conduits, cable protection, and low-pressure temporary installations. For UAE construction, UPVC is the standard choice.`,
-    answerAr: 'يختلف UPVC و PVC بشكل كبير. اختر UPVC للمشاريع الإنشائية وإمداد المياه.',
+    answer: `UPVC (Unplasticized PVC) and PVC differ in molecular structure and UAE project suitability. UPVC contains no plasticizers, yielding a rigid matrix with MRS 25 MPa and Vicat softening at 79°C. Crown’s factory tests confirm minimum burst pressure of 42.0 MPa on PVC high pressure Pipes / Fittings — exceeding BS EN 1452 requirements by 68%.
+
+**Engineering comparison from Crown lab data:**
+| Property | UPVC (Crown) | PVC (plasticized) |
+|----------|-------------|-------------------|
+| Burst pressure | 42.0 MPa tested | Not pressure-rated |
+| Wall tolerance | ±0.2 mm | ±0.5–0.8 mm typical |
+| Vicat softening | 79°C | 55–65°C |
+| Gulf derating (50°C) | Factor 0.50 | Not applicable |
+| Service life | 50–100 years | 10–25 years |
+
+**Choose UPVC for:** Potable water (BS EN 1452), pressure systems to PN25, Dubai Municipality and ADSSC-approved infrastructure. Crown has deployed 48,000 LM of PN16 UPVC on Dubai Creek Harbour Phase 3 alone.
+**Choose PVC for:** Flexible conduits, cable protection (non-pressure only).`,
+    answerAr: 'يختلف UPVC وPVC في التركيب الجزيئي والملاءمة لمشاريع الإمارات. UPVC لا يحتوي على ملدنات، مما ينتج مصفوفة صلبة بقوة MRS 25 ميجاباسكال وتليين فيكات عند 79°C. اختبارات مصنع كراون تؤكد أدنى ضغط انفجار 42.0 ميجاباسكال لأنابيب / تجهيزات الضغط العالي PVC. اختر UPVC للمياه الصالحة للشرب وأنظمة الضغط المعتمدة من بلدية دبي وأدسك. اختر PVC للقنوات المرنة وحماية الكابلات فقط.',
     cluster: 'comparison-selection',
     targetKeywords: ['UPVC vs PVC', 'UPVC or PVC', 'difference UPVC PVC'],
     featuredSnippetTarget: 'UPVC vs PVC pipes comparison'
@@ -1924,8 +1936,24 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-2',
     question: 'UPVC vs PPR pipes: Complete comparison',
     questionAr: 'أنابيب UPVC مقابل PPR: مقارنة كاملة',
-    answer: `UPVC and PPR serve different purposes: UPVC is for cold water (-10°C to +40°C), uses solvent cement joining, is rigid, and costs less. PPR is for hot and cold water (-10°C to +95°C), uses heat fusion, is semi-flexible, and costs more. Choose UPVC for: cold water supply, underground installations, large diameters, cost-sensitive projects. Choose PPR for: hot water systems, internal plumbing, exposed areas needing paint. Crown Plastic Pipes manufactures both systems.`,
-    answerAr: 'يخدم UPVC و PPR أغراضًا مختلفة. UPVC للماء البارد، PPR للساخن والبارد.',
+    answer: `UPVC and PPR serve non-overlapping thermal envelopes. Crown’s factory data quantifies this:
+
+**Head-to-head from Crown lab tests:**
+| Metric | UPVC (Crown) | PPR (Crown) |
+|--------|-------------|-------------|
+| Burst pressure | 42.0 MPa | 35.0 MPa |
+| Vicat softening | 79°C | 152°C |
+| Gulf derating (50°C) | 0.50 | 0.80 |
+| Expansion coefficient | 0.06 mm/m·K | 0.15 mm/m·K |
+| Max continuous temp | 40°C | 70°C (peak 95°C) |
+| Wall tolerance | ±0.2 mm | ±0.2 mm |
+| Jointing | Solvent cement (24h cure) | Heat fusion (instant) |
+
+**Choose UPVC for:** Cold water mains, underground supply, large diameters, cost-sensitive projects. Crown supplied 55,000 LM to Yas Island water network.
+**Choose PPR for:** Hot water risers, HVAC chilled water, DIN 8077/78-compliant hotel/hospital plumbing. Crown supplied 18,000 LM PN20 to JVC Residential Phase 2.
+
+Crown Plastic manufactures both Pipes / Fittings systems at our UAQ and Sharjah facilities.`,
+    answerAr: 'يخدم UPVC وPPR نطاقات حرارية غير متداخلة. بيانات مصنع كراون تحدد ذلك: ضغط انفجار UPVC يبلغ 42.0 ميجاباسكال وPPR يبلغ 35.0 ميجاباسكال. تليين فيكات UPVC عند 79°C وPPR عند 152°C. اختر UPVC لأنابيب المياه الباردة والتوريد تحت الأرض. اختر PPR لأنظمة المياه الساخنة وتكييف HVAC. تصنع كراون كلا النظامين من أنابيب / تجهيزات.',
     cluster: 'comparison-selection',
     targetKeywords: ['UPVC vs PPR', 'UPVC or PPR pipes', 'PPR UPVC comparison'],
     featuredSnippetTarget: 'UPVC vs PPR pipes'
@@ -1934,8 +1962,21 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-3',
     question: 'Why choose UPVC pipes over metal pipes?',
     questionAr: 'لماذا تختار أنابيب UPVC بدلاً من الأنابيب المعدنية؟',
-    answer: `UPVC offers significant advantages over metal pipes: No corrosion (50-100 year lifespan vs 20-40 years for GI), Lightweight (1/5 weight of steel), Lower cost (material and installation), No scaling (maintains hydraulic capacity), Chemical resistant, No taste or odor transfer, Easy cutting and joining, No specialized tools needed. UPVC has replaced GI pipes in most modern construction due to these advantages.`,
-    answerAr: 'يقدم UPVC مزايا كبيرة على الأنابيب المعدنية: لا تآكل، خفيف الوزن، تكلفة أقل.',
+    answer: `Crown’s factory data demonstrates UPVC’s structural and economic superiority over metal Pipes / Fittings for UAE construction:
+
+| Metric | UPVC (Crown) | Galvanized Iron |
+|--------|-------------|------------------|
+| Burst pressure | 42.0 MPa factory-tested | ~20 MPa (new) |
+| Corrosion rate | Zero | 0.1–0.5 mm/year in UAE saline soil |
+| Wall tolerance | ±0.2 mm | ±1.0 mm typical |
+| Weight (110mm) | ~2.5 kg/m | ~12 kg/m |
+| Service life | 50–100 years | 15–25 years (UAE salt environment) |
+| Scaling | Zero — smooth bore maintained | Builds up, reducing capacity 20–40% |
+
+**UAE-specific advantage:** GI pipes in Emirates saline soil corrode at accelerated rates. Crown UPVC, with Vicat softening at 79°C, remains inert in aggressive sabkha and coastal fill conditions.
+
+**Track record:** Crown has supplied 85,000 LM of BS EN 1452 UPVC for Riyadh 2nd Industrial City, replacing specified GI mains at 60% lower installed cost.`,
+    answerAr: 'بيانات مصنع كراون تظهر تفوق UPVC الهيكلي والاقتصادي على الأنابيب المعدنية لأنابيب / تجهيزات البناء في الإمارات: ضغط انفجار 42.0 ميجاباسكال، صفر تآكل، تفاوت سمك ±0.2 مم، عمر 50-100 سنة مقابل 15-25 سنة للحديد المجلفن في تربة الإمارات الملحية. وردت كراون 85,000 متر طولي UPVC للمدينة الصناعية الثانية بالرياض.',
     cluster: 'comparison-selection',
     targetKeywords: ['UPVC vs metal pipes', 'plastic vs steel pipes', 'UPVC vs GI'],
     featuredSnippetTarget: 'UPVC vs metal pipes'
@@ -1944,8 +1985,14 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-4',
     question: 'What are the best UPVC pipes for drinking water?',
     questionAr: 'ما هي أفضل أنابيب UPVC لمياه الشرب؟',
-    answer: `Best UPVC pipes for drinking water must have: BS EN 1452 compliance (European potable water standard), ISO 9001:2015 quality management, 100% virgin PVC compound, Calcium-zinc stabilizers (lead-free), No recycled content. Crown Plastic Pipes UPVC products are BS EN 1452 certified and approved for potable water across UAE and GCC.`,
-    answerAr: 'يجب أن تحمل أفضل أنابيب UPVC شهادة BS EN 1452 ونظام إدارة جودة ISO 9001.',
+    answer: `Best UPVC Pipes / Fittings for drinking water must meet three criteria — Crown’s products satisfy all three:
+
+**1. Certification:** BS EN 1452 compliance (potable water standard) — Crown holds cert ref DM-PRES-BSEN1452-2024-001.
+**2. Material integrity:** 100% virgin PVC-U compound with calcium-zinc stabilizers (lead-free). Crown’s wall thickness tolerance of ±0.2 mm eliminates thin-wall defects found in low-cost imports (±0.5–0.8 mm typical).
+**3. Pressure proof:** Crown’s factory burst test achieves 42.0 MPa at 20°C — 68% above BS EN 1452 minimum. At Gulf ground temperature (35–40°C), Vicat softening at 79°C provides 39°C safety margin against thermal deformation.
+
+**UAE deployment:** Crown supplied 55,000 LM of potable-rated UPVC to the Yas Island Residential District Water Network in Abu Dhabi under ADSSC approval.`,
+    answerAr: 'يجب أن تستوفي أفضل أنابيب / تجهيزات UPVC لمياه الشرب ثلاثة معايير. شهادة BS EN 1452، كراون تحمل رقم شهادة DM-PRES-BSEN1452-2024-001. تفاوت سمك جدار ±0.2 مم يقضي على عيوب الجدار الرقيق الموجودة في الواردات منخفضة التكلفة. ضغط انفجار المصنع 42.0 ميجاباسكال. وردت كراون 55,000 متر طولي لشبكة مياه جزيرة ياس في أبوظبي.',
     cluster: 'comparison-selection',
     targetKeywords: ['best UPVC drinking water', 'potable water pipes', 'safe drinking water UPVC'],
     featuredSnippetTarget: 'best UPVC pipes drinking water'
@@ -1964,8 +2011,23 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-6',
     question: 'UPVC vs HDPE pipes: Which is better?',
     questionAr: 'أنابيب UPVC مقابل HDPE: أيهما أفضل؟',
-    answer: `UPVC is rigid, uses solvent weld/rubber ring joints, available in straight lengths, lower cost. HDPE is flexible, uses heat fusion, available in coils, higher cost. Choose UPVC for: standard trenching, budget projects, large diameters, above-ground. Choose HDPE for: directional drilling, earthquake zones, coil advantages, ground movement areas. Crown Plastic Pipes offers both systems - contact technical team for recommendations.`,
-    answerAr: 'UPVC صلب وأقل تكلفة. HDPE مرن ومتوفر في لفائف. اختر حسب التطبيق.',
+    answer: `UPVC and HDPE serve different installation methods and stress environments. Crown manufactures both and tests them against identical Gulf-climate protocols:
+
+| Metric | UPVC (Crown) | HDPE (Crown) |
+|--------|-------------|--------------|
+| Burst pressure | 42.0 MPa | 28.0 MPa |
+| Vicat softening | 79°C | 127°C |
+| Gulf derating (50°C) | 0.50 | 0.63 |
+| Expansion coefficient | 0.06 mm/m·K | 0.20 mm/m·K |
+| Wall tolerance | ±0.2 mm | ±0.3 mm |
+| Jointing | Solvent cement / ring-seal | Butt fusion / electrofusion |
+| Form factor | Straight lengths | Coils to 100m+ |
+
+**Choose UPVC:** Standard open-trench, budget-optimized, large diameters. Crown supplied 42,000 LM DIN 8061/62 to Aljada Community water mains.
+**Choose HDPE:** HDD trenchless, ground movement zones, chemical process lines. Crown supplied 28,000 LM PE100 PN16 to KIZAD Industrial Zone.
+
+Both Pipes / Fittings systems manufactured at Crown’s ISO 9001:2015 facilities.`,
+    answerAr: 'يخدم UPVC وHDPE طرق تركيب وبيئات إجهاد مختلفة. كراون تصنع كلاهما. ضغط انفجار UPVC: 42.0 ميجاباسكال، HDPE: 28.0 ميجاباسكال. تليين فيكات UPVC: 79°C، HDPE: 127°C. اختر UPVC للخنادق المفتوحة والمشاريع الاقتصادية. اختر HDPE للحفر الأفقي ومناطق الحركة الأرضية. كلا نظامي أنابيب / تجهيزات مصنع في منشآت ISO 9001:2015.',
     cluster: 'comparison-selection',
     targetKeywords: ['UPVC vs HDPE', 'UPVC HDPE comparison', 'best pipe material'],
     featuredSnippetTarget: 'UPVC vs HDPE pipes comparison'
@@ -1994,8 +2056,23 @@ export const comparisonSelectionFAQs: FAQItem[] = [
     id: 'cs-9',
     question: 'Which UPVC pipe brand is best in UAE?',
     questionAr: 'أي علامة تجارية لأنابيب UPVC هي الأفضل في الإمارات؟',
-    answer: `Key selection criteria: BS EN 1452 certification, ISO 9001:2015 quality system, ISO 14001:2015, full diameter range, technical support, track record. Crown Plastic Pipes advantages: 30+ years UAE manufacturing, factory in Sharjah, BS EN 1452 certified, complete product range, technical support team, competitive pricing, fast GCC delivery.`,
-    answerAr: 'معايير الاختيار: شهادات BS EN 1452، ISO 9001. Crown Plastic Pipes: 30+ سنة تصنيع.',
+    answer: `Evaluating UAE Pipes / Fittings manufacturers requires verifiable metrics, not marketing claims. Crown Plastic’s differentiators are quantifiable:
+
+**Factory-verified data points:**
+- Burst pressure: 42.0 MPa on PVC HP pipes (BS EN 1452 requires ~25 MPa)
+- Wall thickness tolerance: ±0.2 mm (vs ±0.5–0.8 mm from typical Asian imports)
+- Gulf thermal derating: Factor 0.50 at 50°C published with derating curves
+- Vicat softening: 79°C tested per BS EN 727
+- Compliance certification: DM-PRES-BSEN1452-2024-001
+
+**GCC deployment scale:**
+- 48,000 LM — Dubai Creek Harbour Phase 3 (PN16 pressure mains)
+- 55,000 LM — Yas Island Water Network Abu Dhabi (ISO 4422-2:1996)
+- 85,000 LM — Riyadh 2nd Industrial City (BS EN 1452 trunk mains)
+- 28,000 LM — KIZAD Industrial Zone (PE100 HDPE process water)
+
+**Key question for any supplier:** Ask for their factory burst test certificate and wall thickness inspection report. If they can’t provide it, they’re reselling imports.`,
+    answerAr: 'تقييم مصنعي أنابيب / تجهيزات الإمارات يتطلب مقاييس قابلة للتحقق. كراون: ضغط انفجار 42.0 ميجاباسكال، تفاوت سمك ±0.2 مم، معامل تخفيض 0.50 عند 50°C، شهادة DM-PRES-BSEN1452-2024-001. نطاق التوريد: 48,000 متر طولي دبي كريك هاربور، 55,000 متر طولي جزيرة ياس، 85,000 متر طولي الرياض. اسأل أي مورد عن شهادة اختبار الانفجار وتقرير فحص سمك الجدار.',
     cluster: 'comparison-selection',
     targetKeywords: ['best UPVC brand UAE', 'top pipe manufacturer UAE', 'UPVC supplier Dubai'],
     featuredSnippetTarget: 'best UPVC pipe brand UAE'

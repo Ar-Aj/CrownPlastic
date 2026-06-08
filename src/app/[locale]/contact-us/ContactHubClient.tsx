@@ -353,13 +353,16 @@ function ContactHubInner() {
                                             </a>
                                         </div>
                                         {/* Hours */}
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                 </svg>
                                             </div>
-                                            <p className="text-slate-900 font-bold text-base sm:text-lg">{t('contact_hub.info.hours')}</p>
+                                            <div className="flex flex-col gap-1">
+                                                <p className="text-slate-900 font-bold text-base sm:text-lg">{t('contact_hub.info.hours_weekday')}</p>
+                                                <p className="text-slate-900 font-bold text-base sm:text-lg">{t('contact_hub.info.hours_friday')}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

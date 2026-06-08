@@ -381,8 +381,24 @@ const ductFeatures = [
   'Duct 90° Street Lighting LR Bends available for 3" Class C duct pipe, in various pole sizes',
   'Manufactured by Crown Plastic Pipes / Fittings Factory L.L.C.',
 ];
+const ductFeaturesFr = [
+  'Available in standard length of 5.8 meters or as required',
+  'PN ratings indicate working pressure at 20°C',
+  'Duct 90/45° LR Bends include one solvent socket end',
+  'Duct 90° Lighting LR Bends available for 4" Class C duct pipe, in various pole sizes',
+  'Duct 90° Street Lighting LR Bends available for 3" Class C duct pipe, in various pole sizes',
+  'Manufactured by Crown Plastic Pipes / Fittings Factory L.L.C.',
+];
 
 const ductApplications = [
+  'Above ground electrical applications (EPC 40 PVC and EPC 80 PVC)',
+  'Concrete encased applications (EPC 40 PVC, EPC 80 PVC, EB-20, EB-35, Type DB products)',
+  'Direct Burial (EPC 40 PVC, EPC 80 PVC, DB-60, DB-100, DB-120)',
+  'Underground installations for communications and electrical wire & cable',
+  'Electrical and telephone cable (D54, D56, D57 DUCT PIPE)',
+  'Duct applications for fabricated accessories',
+];
+const ductApplicationsFr = [
   'Above ground electrical applications (EPC 40 PVC and EPC 80 PVC)',
   'Concrete encased applications (EPC 40 PVC, EPC 80 PVC, EB-20, EB-35, Type DB products)',
   'Direct Burial (EPC 40 PVC, EPC 80 PVC, DB-60, DB-100, DB-120)',
@@ -401,11 +417,11 @@ export const upvcDuctPipesAndAccessories: ProductDetailConfig = {
 
   title: 'PVC Duct Pipes & Accessories Black Pipes / Fittings',
   titleAr: 'أنابيب وملحقات قنوات UPVC',
-
-  shortDescription: 'Black/Dark Grey PVC duct pipes and accessories manufactured to NEMA, DIN, BS, and Etisalat/DU specifications for electrical, communication, and cable protection applications.',
+    titleFr: `PVC Duct Tuyaux et accessoires Tuyaux / raccords noirs`,
+    shortDescription: 'Black/Dark Grey PVC duct pipes and accessories manufactured to NEMA, DIN, BS, and Etisalat/DU specifications for electrical, communication, and cable protection applications.',
   shortDescriptionAr: 'أنابيب وملحقات قنوات UPVC باللون الأسود/الرمادي الداكن مصنعة وفقاً لمعايير NEMA وDIN وBS ومواصفات اتصالات/دو لتطبيقات الكهرباء والاتصالات وحماية الكابلات.',
-
-  overview: `The document provides a product catalogue for UPVC/PVC Duct Pipes and associated accessories, manufactured to various international standards for electrical, communication, and pressure applications.
+    shortDescriptionFr: `Tuyaux et accessoires PVC duct noir/gris foncé fabriqués selon les spécifications NEMA, DIN, BS et Etisalat/DU pour les applications électriques, de communication et de protection des câbles.`,
+    overview: `The document provides a product catalogue for UPVC/PVC Duct Pipes and associated accessories, manufactured to various international standards for electrical, communication, and pressure applications.
 
 **Pipes Range:**
 The catalogue details UPVC duct pipes manufactured according to various standards, including Metric size Pressure Pipes (DIN 8062) and Imperial size Pressure Pipes (BS 3505/06) and non-pressure pipe (Class-O). The pipes are also manufactured for electrical and telephone cable applications based on Etisalat & DU specifications, and for underground installations based on NEMA standards.
@@ -426,8 +442,20 @@ The catalogue includes a range of fabricated products for duct applications, spe
 
 **نطاق الملحقات:**
 يتضمن الكتالوج مجموعة من المنتجات المصنعة لتطبيقات القنوات، وتحديداً أغطية نهاية القناة، وموصلات القناة، وفوهات القناة، ومنحنيات القناة 90/45°.`,
+    overviewFr: `Le document fournit un catalogue de produits duct pour les tuyaux UPVC/PVC Duct et les accessoires associés, fabriqués selon diverses normes internationales pour les applications électriques, de communication et de pression.
 
-  features: ductFeatures,
+**Gamme de tuyaux :**
+Le catalogue détaille les tuyaux UPVC duct fabriqués selon diverses normes, y compris les tuyaux sous pression de taille métrique (DIN 8062) et les tuyaux sous pression de taille impériale (BS 3505/06) et les tuyaux sans pression (Classe O). Les tuyaux sont également fabriqués pour les applications de câbles électriques et téléphoniques selon les spécifications Etisalat et DU, ainsi que pour les installations souterraines basées sur les normes NEMA.
+
+**Gamme d'accessoires :**
+Le catalogue comprend une gamme de produits fabriqués pour les applications duct, en particulier les embouts Duct, les douilles Duct, les cloches Duct et les coudes Duct 90/45° LR. Ces accessoires sont répertoriés avec des données dimensionnelles.
+
+**Spécifications clés :**
+• Matériau : chlorure de polyvinyle (PVC) / chlorure de polyvinyle non plastifié (UPVC/PVC)
+• Couleur : Noir/Gris foncé ou selon les besoins
+• Classes de pression : Schedule 40, Schedule 80, PN-4 à PN-16, classe B à classe E, série DB/EB
+• Normes : NEMA TC 2 : 2003, NEMA TC 6 & 8/ASTM F 512, DIN 8062, BS 3505/06, Etisalat & DU spécifications`,
+    features: ductFeatures,
   featuresAr: [
     'متوفر بطول قياسي 5.8 متر أو حسب الطلب',
     'تشير تصنيفات PN إلى ضغط العمل عند 20 درجة مئوية',
@@ -436,8 +464,8 @@ The catalogue includes a range of fabricated products for duct applications, spe
     'منحنيات إضاءة الشوارع 90° متوفرة لأنابيب 3 بوصة فئة C',
     'مصنعة بواسطة مصنع كراون للأنابيب والوصلات البلاستيكية ذ.م.م.',
   ],
-
-  applications: ductApplications,
+    featuresFr: ductFeaturesFr,
+    applications: ductApplications,
   applicationsAr: [
     'التطبيقات الكهربائية فوق الأرض (EPC 40 PVC و EPC 80 PVC)',
     'التطبيقات المغلفة بالخرسانة (EPC 40 PVC, EPC 80 PVC, EB-20, EB-35, منتجات DB)',
@@ -446,8 +474,8 @@ The catalogue includes a range of fabricated products for duct applications, spe
     'كابلات الكهرباء والهاتف (D54, D56, D57 DUCT PIPE)',
     'تطبيقات القنوات للملحقات المصنعة',
   ],
-
-  pipesTables: ductPipesTables,
+    applicationsFr: ductApplicationsFr,
+    pipesTables: ductPipesTables,
 
   fittings: ductFittings,
 
@@ -491,4 +519,22 @@ The catalogue includes a range of fabricated products for duct applications, spe
       'لا تستخدم أنابيب تالفة أو مشوهة',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utiliser une colle à solvant appropriée pour les joints PVC/UPVC`,
+            `Assurer une profondeur d'insertion appropriée dans les joints de douille`,
+            `Prévoir un temps de durcissement adéquat avant les tests de pression`,
+            `Utilisez les accessoires et raccords recommandés par le fabricant`,
+            `Suivre les spécifications Etisalat/DU pour les installations de télécommunications`,
+            `Stockez les tuyaux dans des endroits couverts à l'abri de la lumière directe du soleil`
+          ],
+          donts: [
+            `N'utilisez pas de tuyaux au-delà de leur classe de pression nominale`,
+            `Ne pas exposer à des températures supérieures à la limite nominale`,
+            `N'utilisez pas de raccords incompatibles provenant d'autres systèmes de matériaux`,
+            `Ne pas installer sans lit de pose approprié pour les applications souterraines`,
+            `Ne faites pas glisser les tuyaux sur des surfaces rugueuses dumanipulation des anneaux`,
+            `Ne pas utiliser de tuyaux endommagés ou déformés`
+          ]
+        }
 };

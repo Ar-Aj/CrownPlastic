@@ -69,10 +69,10 @@ interface TestimonialCardProps {
 export function TestimonialCard({ testimonial, variant = 'default' }: TestimonialCardProps) {
   const { language } = useLanguage();
   
-  const quote = language === 'ar' && testimonial.quoteAr ? testimonial.quoteAr : testimonial.quote;
-  const author = language === 'ar' && testimonial.authorAr ? testimonial.authorAr : testimonial.author;
-  const role = language === 'ar' && testimonial.roleAr ? testimonial.roleAr : testimonial.role;
-  const company = language === 'ar' && testimonial.companyAr ? testimonial.companyAr : testimonial.company;
+  const quote = language === 'fr' && testimonial.quoteFr ? testimonial.quoteFr : language === 'ar' && testimonial.quoteAr ? testimonial.quoteAr : testimonial.quote;
+  const author = language === 'fr' && testimonial.authorFr ? testimonial.authorFr : language === 'ar' && testimonial.authorAr ? testimonial.authorAr : testimonial.author;
+  const role = language === 'fr' && testimonial.roleFr ? testimonial.roleFr : language === 'ar' && testimonial.roleAr ? testimonial.roleAr : testimonial.role;
+  const company = language === 'fr' && testimonial.companyFr ? testimonial.companyFr : language === 'ar' && testimonial.companyAr ? testimonial.companyAr : testimonial.company;
 
   const variantStyles = {
     default: 'bg-white border border-gray-100 shadow-sm hover:shadow-lg',

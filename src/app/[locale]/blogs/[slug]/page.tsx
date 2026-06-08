@@ -5,6 +5,7 @@ import { PageHeader, AnimateOnScroll } from '@/components/common';
 import { blogArticles, getArticleBySlug, getAllSlugs } from '@/content/blogs';
 import { BreadcrumbSchema } from '@/components/schemas/BreadcrumbSchema';
 import { TechnicalGuideSchema } from '@/components/schemas/ArticleSchema';
+import { getRelatedSolutions } from '@/lib/linkingEngine';
 
 const baseUrl = 'https://crownplasticuae.com';
 
@@ -91,6 +92,9 @@ export default function BlogArticlePage({
   const relatedArticles = blogArticles
     .filter((a) => a.slug !== article.slug && a.tag === article.tag)
     .slice(0, 3);
+
+  // Get algorithmically matched zipper page solutions
+  const relatedSolutions = getRelatedSolutions(article);
 
   return (
     <>
@@ -201,6 +205,37 @@ export default function BlogArticlePage({
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </AnimateOnScroll>
+            )}
+
+            {/* ── Related Solutions CTA (Algorithmic Link Equity) ────────── */}
+            {relatedSolutions.length > 0 && (
+              <AnimateOnScroll animation="fade-up">
+                <div className="mt-10 bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-8 border border-blue-100">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Regional Pipes / Fittings Solutions
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-5">
+                    Explore location-specific product data, compliance details, and project references.
+                  </p>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {relatedSolutions.map((sol) => (
+                      <Link
+                        key={sol.href}
+                        href={sol.href}
+                        className="group flex items-center gap-3 bg-white border border-gray-200 px-4 py-3 rounded-xl text-sm font-medium text-gray-700 hover:border-blue-300 hover:bg-blue-50/50 hover:text-blue-700 transition-all shadow-sm"
+                      >
+                        <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </span>
+                        <span className="line-clamp-2">{sol.label}</span>
                       </Link>
                     ))}
                   </div>

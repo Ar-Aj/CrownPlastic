@@ -15,11 +15,14 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
   categorySlug: 'ppr-pipes',
   title: "PP-R Pipes — SDR11 / PN10 (DIN 8077/78)",
   titleAr: "أنابيب PP-R — SDR11 / PN10 (DIN 8077/78)",
-  shortDescription: "PP-R pipes SDR11/PN10 — 10 bar cold water, 20–110 mm (DIN 8077/78).",
+    titleFr: `PP-R Tuyaux — SDR11 / PN10 (DIN 8077/78)`,
+    shortDescription: "PP-R pipes SDR11/PN10 — 10 bar cold water, 20–110 mm (DIN 8077/78).",
   shortDescriptionAr: "أنابيب PP-R وفق SDR11/PN10 — 10 بار مياه باردة، 20–110 مم (DIN 8077/78).",
-  overview: "Crown Plastic Pipes / Fittings, a leading PP-R pipe manufacturer in the UAE, produces premium SDR11/PN10 polypropylene pipes to DIN 8077/78 standards. Rated at 10 bar for cold water distribution, these pipes feature thermo-fusion welding for 100% leak-proof connections. Available in 20–110 mm sizes, they are the preferred choice for residential and commercial plumbing across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility with a guaranteed 50-year service life.",
+    shortDescriptionFr: `PP-R tuyaux SDR11/PN10 — 10 bar eau froide, 20–110 mm (DIN 8077/78).`,
+    overview: "Crown Plastic Pipes / Fittings, a leading PP-R pipe manufacturer in the UAE, produces premium SDR11/PN10 polypropylene pipes to DIN 8077/78 standards. Rated at 10 bar for cold water distribution, these pipes feature thermo-fusion welding for 100% leak-proof connections. Available in 20–110 mm sizes, they are the preferred choice for residential and commercial plumbing across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility with a guaranteed 50-year service life.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب PP-R في الإمارات، أنابيب بولي بروبيلين SDR11/PN10 فاخرة وفق معايير DIN 8077/78. بتصنيف 10 بار لتوزيع المياه الباردة، تتميز بلحام حراري لوصلات مانعة للتسرب بنسبة 100%. متوفرة بمقاسات 20–110 مم، الخيار المفضل للسباكة السكنية والتجارية في دبي وأبوظبي والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين بعمر خدمة مضمون 50 عاماً.",
-  features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de tuyaux PP-R dans le UAE, produit des tuyaux en polypropylène SDR11/PN10 de qualité supérieure selon les normes DIN 8077/78. Classés 10 bar pour la distribution d'eau froide, ces tuyaux sont dotés d'un soudage par thermofusion pour des connexions étanches 100%. Disponibles en tailles 20–110 mm, ​​ils constituent le choix préféré pour la plomberie résidentielle et commerciale dans toute la gamme UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain avec une durée de vie garantie de 50 ans.`,
+    features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
   featuresAr: [
     'عمر خدمة مضمون 50 عاماً',
     'قوة صدم عالية ومرونة',
@@ -28,14 +31,28 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
     'موصلية حرارية منخفضة (0.24 W/mk)',
     'تقليل الضوضاء من خلال تخميد الاهتزازات وامتصاص الصوت',
   ],
-  applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
+    featuresFr: [
+            `Durée de vie garantie de 50 ans`,
+            `Résistance aux chocs et flexibilité élevées`,
+            `Résistant à la corrosion par rapport aux produits métalliques`,
+            `Propriétés hygiéniques, non toxiques et de qualité alimentaire`,
+            `Faible conductivité thermique (0.24 W/mk)`,
+            `Réflexion du bruit grâce à l'amortissement des vibrations et à l'absorption acoustique`
+          ],
+    applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
   applicationsAr: [
     'إمداد المياه الساخنة والباردة الصالحة للشرب في المباني السكنية والتجارية',
     'أنظمة التدفئة والتكييف والهواء المضغوط',
     'شبكات أنابيب حمامات السباحة واستخدام مياه الأمطار',
     'نقل السوائل العدوانية صناعياً بما في ذلك الكيماويات الحمضية والقلوية',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Approvisionnement en eau potable chaude et froide dans les bâtiments résidentiels et commerciaux`,
+            `Systèmes CVC et air comprimé`,
+            `Réseaux de canalisations pour installations de piscine et utilisation des eaux pluviales`,
+            `Transport industrial de fluides agressifs, notamment de produits chimiques acides et alcalins`
+          ],
+    pipesTables: [
     {
       id: "sdr11-pn10-table",
       title: "SDR11 / PN10",
@@ -82,6 +99,20 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
       'تجنب التركيب دون التحقق من ملاءمة ظروف مناخ الخليج المحددة',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Garantir l'utilisation de systèmes de gestion de la qualité certifiés ISO 9001:2015 pour la surveillance de l'installation`,
+            `Utiliser le soudage par thermofusion pour des joints sécurisés et sans fuite`,
+            `Appliquer dans des environnements à haute pression jusqu'à PN25 là où spécifié`,
+            `Vérifier la compatibilité des réseaux de canalisations agricoles et horticoles`
+          ],
+          donts: [
+            `Ne dépassez pas les pressions nominales (PN) désignées pour des catégories SDR spécifiques.`,
+            `Évitez d'utiliser des matériaux ne répondant pas aux normes DIN 8077/78 pour l'eau potable.`,
+            `N'ignorez pas l'impact des températures élevées sur la dilatation linéaire`,
+            `Évitez l'installation sans vérifier l'adéquation spécifique aux conditions climatiques GCC`
+          ]
+        }
 };
 
 
@@ -94,11 +125,14 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
   categorySlug: 'ppr-pipes',
   title: "PP-R Pipes — SDR7.4 / PN16 (DIN 8077/78)",
   titleAr: "أنابيب PP-R — SDR7.4 / PN16 (DIN 8077/78)",
-  shortDescription: "PP-R pipes SDR7.4/PN16 — 16 bar hot & cold water, 20–110 mm (DIN 8077/78).",
+    titleFr: `PP-R Tuyaux — SDR7.4 / PN16 (DIN 8077/78)`,
+    shortDescription: "PP-R pipes SDR7.4/PN16 — 16 bar hot & cold water, 20–110 mm (DIN 8077/78).",
   shortDescriptionAr: "أنابيب PP-R وفق SDR7.4/PN16 — 16 بار مياه ساخنة وباردة، 20–110 مم (DIN 8077/78).",
-  overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR7.4/PN16 pipes to DIN 8077/78 standards, rated at 16 bar for both hot and cold potable water systems. Engineered for UAE's demanding MEP infrastructure, these pipes feature enhanced wall thickness for high-temperature applications in HVAC and plumbing across the UAE. Available in 20–110 mm with thermo-fusion welding for permanent, leak-free joints. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
+    shortDescriptionFr: `PP-R tuyaux SDR7.4/PN16 — 16 bar eau chaude et froide, 20–110 mm (DIN 8077/78).`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR7.4/PN16 pipes to DIN 8077/78 standards, rated at 16 bar for both hot and cold potable water systems. Engineered for UAE's demanding MEP infrastructure, these pipes feature enhanced wall thickness for high-temperature applications in HVAC and plumbing across the UAE. Available in 20–110 mm with thermo-fusion welding for permanent, leak-free joints. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب PP-R وفق SDR7.4/PN16 بمعايير DIN 8077/78، بتصنيف 16 بار لأنظمة المياه الساخنة والباردة. مصممة للبنية التحتية MEP المتطلبة في الإمارات، بسمك جدار محسّن لتطبيقات درجات الحرارة العالية في التدفئة والتكييف والسباكة في دبي وأبوظبي والخليج. متوفرة بمقاسات 20–110 مم بلحام حراري لوصلات دائمة مانعة للتسرب.",
-  features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux PP-R SDR7.4/PN16 selon les normes DIN 8077/78, évalués à 16 bar pour les systèmes d'eau potable chaude et froide. Conçus pour l'infrastructure exigeante MEP de UAE, ces tuyaux présentent une épaisseur de paroi améliorée pour les applications à haute température dans les domaines du CVC et de la plomberie à travers le UAE. Disponible en 20–110 mm avec soudage par thermofusion pour des joints permanents et sans fuite. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015 et une garantie de durée de vie de 50 ans.`,
+    features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
   featuresAr: [
     'عمر خدمة مضمون 50 عاماً',
     'قوة صدم عالية ومرونة',
@@ -107,14 +141,28 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
     'موصلية حرارية منخفضة (0.24 W/mk)',
     'تقليل الضوضاء من خلال تخميد الاهتزازات وامتصاص الصوت',
   ],
-  applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
+    featuresFr: [
+            `Durée de vie garantie de 50 ans`,
+            `Résistance aux chocs et flexibilité élevées`,
+            `Résistant à la corrosion par rapport aux produits métalliques`,
+            `Propriétés hygiéniques, non toxiques et de qualité alimentaire`,
+            `Faible conductivité thermique (0.24 W/mk)`,
+            `Réflexion du bruit grâce à l'amortissement des vibrations et à l'absorption acoustique`
+          ],
+    applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
   applicationsAr: [
     'إمداد المياه الساخنة والباردة الصالحة للشرب في المباني السكنية والتجارية',
     'أنظمة التدفئة والتكييف والهواء المضغوط',
     'شبكات أنابيب حمامات السباحة واستخدام مياه الأمطار',
     'نقل السوائل العدوانية صناعياً بما في ذلك الكيماويات الحمضية والقلوية',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Approvisionnement en eau potable chaude et froide dans les bâtiments résidentiels et commerciaux`,
+            `Systèmes CVC et air comprimé`,
+            `Réseaux de canalisations pour installations de piscine et utilisation des eaux pluviales`,
+            `Transport industrial de fluides agressifs, notamment de produits chimiques acides et alcalins`
+          ],
+    pipesTables: [
     {
       id: "sdr7-4-pn16-table",
       title: "SDR7.4 / PN16",
@@ -161,6 +209,20 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
       'تجنب التركيب دون التحقق من ملاءمة ظروف مناخ الخليج المحددة',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Garantir l'utilisation de systèmes de gestion de la qualité certifiés ISO 9001:2015 pour la surveillance de l'installation`,
+            `Utiliser le soudage par thermofusion pour des joints sécurisés et sans fuite`,
+            `Appliquer dans des environnements à haute pression jusqu'à PN25 là où spécifié`,
+            `Vérifier la compatibilité des réseaux de canalisations agricoles et horticoles`
+          ],
+          donts: [
+            `Ne dépassez pas les pressions nominales (PN) désignées pour des catégories SDR spécifiques.`,
+            `Évitez d'utiliser des matériaux ne répondant pas aux normes DIN 8077/78 pour l'eau potable.`,
+            `N'ignorez pas l'impact des températures élevées sur la dilatation linéaire`,
+            `Évitez l'installation sans vérifier l'adéquation spécifique aux conditions climatiques GCC`
+          ]
+        }
 };
 
 
@@ -173,11 +235,14 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
   categorySlug: 'ppr-pipes',
   title: "PP-R Pipes — SDR6 / PN20 (DIN 8077/78)",
   titleAr: "أنابيب PP-R — SDR6 / PN20 (DIN 8077/78)",
-  shortDescription: "PP-R pipes SDR6/PN20 — 20 bar high-pressure hot & cold, 20–110 mm (DIN 8077/78).",
+    titleFr: `PP-R Tuyaux — SDR6 / PN20 (DIN 8077/78)`,
+    shortDescription: "PP-R pipes SDR6/PN20 — 20 bar high-pressure hot & cold, 20–110 mm (DIN 8077/78).",
   shortDescriptionAr: "أنابيب PP-R وفق SDR6/PN20 — 20 بار ضغط عالي ساخن وبارد، 20–110 مم (DIN 8077/78).",
-  overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR6/PN20 pipes to DIN 8077/78 standards, rated at 20 bar for high-pressure hot and cold water applications. These heavy-duty pipes are engineered for demanding MEP projects including HVAC systems, industrial facilities, and high-rise buildings across the UAE. Available in 20–110 mm with thermo-fusion welding. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
+    shortDescriptionFr: `Tuyaux PP-R SDR6/PN20 — 20 bar haute pression chaud et froid, 20–110 mm (DIN 8077/78).`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR6/PN20 pipes to DIN 8077/78 standards, rated at 20 bar for high-pressure hot and cold water applications. These heavy-duty pipes are engineered for demanding MEP projects including HVAC systems, industrial facilities, and high-rise buildings across the UAE. Available in 20–110 mm with thermo-fusion welding. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب PP-R وفق SDR6/PN20 بمعايير DIN 8077/78، بتصنيف 20 بار لتطبيقات المياه الساخنة والباردة عالية الضغط. أنابيب شاقة مصممة لمشاريع MEP المتطلبة بما في ذلك أنظمة التدفئة والتكييف والمنشآت الصناعية والأبراج في دبي وأبوظبي والخليج. متوفرة بمقاسات 20–110 مم.",
-  features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux PP-R SDR6/PN20 selon les normes DIN 8077/78, évalués à 20 bar pour les applications d'eau chaude et froide à haute pression. Ces tuyaux lourds duty sont conçus pour les projets MEP exigeants, notamment les systèmes CVC, les installations industrielles du et les immeubles de grande hauteur à travers le UAE. Disponible en 20–110 mm avec soudage par thermofusion. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015 et une garantie de durée de vie de 50 ans.`,
+    features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
   featuresAr: [
     'عمر خدمة مضمون 50 عاماً',
     'قوة صدم عالية ومرونة',
@@ -186,14 +251,28 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
     'موصلية حرارية منخفضة (0.24 W/mk)',
     'تقليل الضوضاء من خلال تخميد الاهتزازات وامتصاص الصوت',
   ],
-  applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
+    featuresFr: [
+            `Durée de vie garantie de 50 ans`,
+            `Résistance aux chocs et flexibilité élevées`,
+            `Résistant à la corrosion par rapport aux produits métalliques`,
+            `Propriétés hygiéniques, non toxiques et de qualité alimentaire`,
+            `Faible conductivité thermique (0.24 W/mk)`,
+            `Réflexion du bruit grâce à l'amortissement des vibrations et à l'absorption acoustique`
+          ],
+    applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
   applicationsAr: [
     'إمداد المياه الساخنة والباردة الصالحة للشرب في المباني السكنية والتجارية',
     'أنظمة التدفئة والتكييف والهواء المضغوط',
     'شبكات أنابيب حمامات السباحة واستخدام مياه الأمطار',
     'نقل السوائل العدوانية صناعياً بما في ذلك الكيماويات الحمضية والقلوية',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Approvisionnement en eau potable chaude et froide dans les bâtiments résidentiels et commerciaux`,
+            `Systèmes CVC et air comprimé`,
+            `Réseaux de canalisations pour installations de piscine et utilisation des eaux pluviales`,
+            `Transport industrial de fluides agressifs, notamment de produits chimiques acides et alcalins`
+          ],
+    pipesTables: [
     {
       id: "sdr6-pn20-table",
       title: "SDR6 / PN20",
@@ -240,6 +319,20 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
       'تجنب التركيب دون التحقق من ملاءمة ظروف مناخ الخليج المحددة',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Garantir l'utilisation de systèmes de gestion de la qualité certifiés ISO 9001:2015 pour la surveillance de l'installation`,
+            `Utiliser le soudage par thermofusion pour des joints sécurisés et sans fuite`,
+            `Appliquer dans des environnements à haute pression jusqu'à PN25 là où spécifié`,
+            `Vérifier la compatibilité des réseaux de canalisations agricoles et horticoles`
+          ],
+          donts: [
+            `Ne dépassez pas les pressions nominales (PN) désignées pour des catégories SDR spécifiques.`,
+            `Évitez d'utiliser des matériaux ne répondant pas aux normes DIN 8077/78 pour l'eau potable.`,
+            `N'ignorez pas l'impact des températures élevées sur la dilatation linéaire`,
+            `Évitez l'installation sans vérifier l'adéquation spécifique aux conditions climatiques GCC`
+          ]
+        }
 };
 
 
@@ -252,11 +345,14 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
   categorySlug: 'ppr-pipes',
   title: "PP-R Pipes — SDR5 / PN25 (DIN 8077/78)",
   titleAr: "أنابيب PP-R — SDR5 / PN25 (DIN 8077/78)",
-  shortDescription: "PP-R pipes SDR5/PN25 — 25 bar maximum pressure rating (DIN 8077/78).",
+    titleFr: `PP-R Tuyaux — SDR5 / PN25 (DIN 8077/78)`,
+    shortDescription: "PP-R pipes SDR5/PN25 — 25 bar maximum pressure rating (DIN 8077/78).",
   shortDescriptionAr: "أنابيب PP-R وفق SDR5/PN25 — 25 بار تصنيف ضغط أقصى (DIN 8077/78).",
-  overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR5/PN25 pipes to DIN 8077/78 standards, delivering the highest pressure rating in the PP-R range at 25 bar. Designed for the most demanding industrial and commercial high-pressure applications across the UAE and GCC, these pipes represent the ultimate solution for critical MEP infrastructure. Contact our technical team for detailed specifications and availability. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyaux PP-R SDR5/PN25 — 25 bar pression nominale maximale (DIN 8077/78).`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PP-R SDR5/PN25 pipes to DIN 8077/78 standards, delivering the highest pressure rating in the PP-R range at 25 bar. Designed for the most demanding industrial and commercial high-pressure applications across the UAE and GCC, these pipes represent the ultimate solution for critical MEP infrastructure. Contact our technical team for detailed specifications and availability. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب PP-R وفق SDR5/PN25 بمعايير DIN 8077/78، بأعلى تصنيف ضغط في نطاق PP-R عند 25 بار. مصممة لأكثر التطبيقات الصناعية والتجارية تطلباً في الإمارات والخليج. تواصل مع فريقنا الفني للمواصفات التفصيلية والتوفر. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux PP-R SDR5/PN25 selon les normes DIN 8077/78, offrant la pression nominale la plus élevée de la gamme PP-R à 25 bar. Conçus pour les applications haute pression industrielles et commerciales les plus exigeantes sur les réseaux UAE et GCC, ​​ces tuyaux représentent la solution ultime pour les infrastructures critiques MEP. Contactez notre équipe technique pour les spécifications détaillées et la disponibilité. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Guaranteed service life of 50 years","High impact strength and flexibility","Resistant to corrosion compared to metal products","Hygienic, non-toxic, and food-grade properties","Low thermal conductivity (0.24 W/mk)","Noise reduction through damped vibrations and sound absorption"],
   featuresAr: [
     'عمر خدمة مضمون 50 عاماً',
     'قوة صدم عالية ومرونة',
@@ -265,14 +361,28 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
     'موصلية حرارية منخفضة (0.24 W/mk)',
     'تقليل الضوضاء من خلال تخميد الاهتزازات وامتصاص الصوت',
   ],
-  applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
+    featuresFr: [
+            `Durée de vie garantie de 50 ans`,
+            `Résistance aux chocs et flexibilité élevées`,
+            `Résistant à la corrosion par rapport aux produits métalliques`,
+            `Propriétés hygiéniques, non toxiques et de qualité alimentaire`,
+            `Faible conductivité thermique (0.24 W/mk)`,
+            `Réflexion du bruit grâce à l'amortissement des vibrations et à l'absorption acoustique`
+          ],
+    applications: ["Hot & Cold potable water supply in residential and commercial buildings","HVAC and compressed air systems","Pipe networks for swimming pool facilities and rainwater utilization","Industrial transport of aggressive fluids, including acidic and alkaline chemicals"],
   applicationsAr: [
     'إمداد المياه الساخنة والباردة الصالحة للشرب في المباني السكنية والتجارية',
     'أنظمة التدفئة والتكييف والهواء المضغوط',
     'شبكات أنابيب حمامات السباحة واستخدام مياه الأمطار',
     'نقل السوائل العدوانية صناعياً بما في ذلك الكيماويات الحمضية والقلوية',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Approvisionnement en eau potable chaude et froide dans les bâtiments résidentiels et commerciaux`,
+            `Systèmes CVC et air comprimé`,
+            `Réseaux de canalisations pour installations de piscine et utilisation des eaux pluviales`,
+            `Transport industrial de fluides agressifs, notamment de produits chimiques acides et alcalins`
+          ],
+    pipesTables: [
     {
       id: 'sdr5-pn25-table',
       title: "SDR5 / PN25",
@@ -320,4 +430,18 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
       'تجنب التركيب دون التحقق من ملاءمة ظروف مناخ الخليج المحددة',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Garantir l'utilisation de systèmes de gestion de la qualité certifiés ISO 9001:2015 pour la surveillance de l'installation`,
+            `Utiliser le soudage par thermofusion pour des joints sécurisés et sans fuite`,
+            `Appliquer dans des environnements à haute pression jusqu'à PN25 là où spécifié`,
+            `Vérifier la compatibilité des réseaux de canalisations agricoles et horticoles`
+          ],
+          donts: [
+            `Ne dépassez pas les pressions nominales (PN) désignées pour des catégories SDR spécifiques.`,
+            `Évitez d'utiliser des matériaux ne répondant pas aux normes DIN 8077/78 pour l'eau potable.`,
+            `N'ignorez pas l'impact des températures élevées sur la dilatation linéaire`,
+            `Évitez l'installation sans vérifier l'adéquation spécifique aux conditions climatiques GCC`
+          ]
+        }
 };

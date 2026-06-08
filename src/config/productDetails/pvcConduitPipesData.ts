@@ -15,11 +15,14 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
   categorySlug: 'pvc-conduit-pipes',
   title: "PVC Conduit Pipes — 1250N / 750N / 320N Compression Force",
   titleAr: "أنابيب القنوات PVC — قوة ضغط 1250N / 750N / 320N",
-  shortDescription: "Fire-retardant PVC conduit pipes — Heavy (1250N), Medium (750N) & Light (320N) grades.",
+    titleFr: `PVC Conduit Tuyaux — 1250N / 750N / 320N Force de compression`,
+    shortDescription: "Fire-retardant PVC conduit pipes — Heavy (1250N), Medium (750N) & Light (320N) grades.",
   shortDescriptionAr: "أنابيب قنوات PVC مقاومة للحريق — شاقة (1250N) ومتوسطة (750N) وخفيفة (320N).",
-  overview: "Crown Plastic Pipes / Fittings, a leading PVC conduit pipe manufacturer in the UAE, produces high-performance fire-retardant electrical conduits in Heavy (1250N), Medium (750N), and Light (320N) compression force grades. Designed for superior cable protection across residential, commercial, and industrial MEP infrastructure in the UAE, these conduits are manufactured at our ISO 9001:2015 certified Umm Al Quwain facility in standard 2.9 m lengths. Available in 20–50 mm sizes with precision-engineered internal diameters for effortless cable pulling.",
+    shortDescriptionFr: `Tuyaux ignifuges PVC conduit — Qualités lourdes (1250N), moyennes (750N) et légères (320N).`,
+    overview: "Crown Plastic Pipes / Fittings, a leading PVC conduit pipe manufacturer in the UAE, produces high-performance fire-retardant electrical conduits in Heavy (1250N), Medium (750N), and Light (320N) compression force grades. Designed for superior cable protection across residential, commercial, and industrial MEP infrastructure in the UAE, these conduits are manufactured at our ISO 9001:2015 certified Umm Al Quwain facility in standard 2.9 m lengths. Available in 20–50 mm sizes with precision-engineered internal diameters for effortless cable pulling.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب القنوات PVC في الإمارات، قنوات كهربائية مقاومة للحريق عالية الأداء بدرجات قوة ضغط شاقة (1250N) ومتوسطة (750N) وخفيفة (320N). مصممة لحماية الكابلات الفائقة في البنية التحتية للتمديدات الميكانيكية والكهربائية والسباكة في دبي وأبوظبي والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين بأطوال 2.9 م.",
-  features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de tuyaux PVC conduit dans le UAE, produit des conduits électriques ignifuges haute performance dans les niveaux de force de compression lourde (1250N), moyenne (750N) et légère (320N). Conçus pour une protection supérieure des câbles dans les infrastructures MEP résidentielles, commerciales et industrielles du UAE, ces conduits sont fabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain dans des longueurs standard 2.9 m. Disponible en tailles 20–50 mm avec des diamètres internes conçus avec précision pour un tirage de câble sans effort.`,
+    features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
   featuresAr: [
     'مقاومة صدمات عالية لتطبيقات MEP الشاقة',
     'خصائص مادة مقاومة للحريق لسلامة محسّنة',
@@ -28,14 +31,28 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
     'جودة تصنيع معتمدة ISO 9001:2015 و OHSAS 18001',
     'بناء UPVC متين لإدارة الكابلات طويلة الأمد',
   ],
-  applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
+    featuresFr: [
+            `Résistance élevée aux chocs pour les applications lourdes duty MEP`,
+            `Propriétés des matériaux ignifuges pour une sécurité renforcée`,
+            `Disponible en niveaux de force de compression lourde, moyenne et légère`,
+            `Conformité totale aux normes américaines Schedule 40 et Schedule 80`,
+            `Qualité de fabrication certifiée ISO 9001:2015 et OHSAS 18001`,
+            `Construction Durable UPVC pour une gestion des câbles à long terme`
+          ],
+    applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
   applicationsAr: [
     'أنظمة التمديدات الكهربائية السكنية والتجارية',
     'مشاريع البنية التحتية الصناعية MEP في الخليج',
     'مشاريع التطوير العمراني في دبي وأبوظبي',
     'حلول إدارة الكابلات تحت الأرض والمكشوفة',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Systèmes de câblage électrique résidentiels et commerciaux`,
+            `Projets d'infrastructure dustrial MEP à travers le GCC`,
+            `Projets de développement urbain à Dubai et Abu Dhabi`,
+            `Solutions de gestion des câbles souterrains et exposés`
+          ],
+    pipesTables: [
     {
       id: "heavy-grade-round-conduit-1250n-compression-force-table",
       title: "HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE",
@@ -116,6 +133,20 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
       'لا تتجاهل متطلبات القطر الداخلي الأدنى لسحب الكابلات',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Sélectionnez la force de compression correcte (1250N, 750N ou 320N) en fonction des exigences de charge`,
+            `Utilisez Schedule 80 conduits pour les applications nécessitant une protection murale plus épaisse`,
+            `Assurez-vous que toutes les installations sont conformes aux normes de sécurité électrique UAE`,
+            `Vérifiez les numéros de pièces par rapport aux dimensions commerciales pour un ajustement précis`
+          ],
+          donts: [
+            `N'utilisez pas de matériaux de qualité légère lorsqu'une résistance aux chocs élevée est requise.`,
+            `Évitez de dépasser le nombre de pièces recommandé par paquet pour une manipulation en toute sécurité`,
+            `Ne remplacez pas Schedule 40 par Schedule 80 dans des environnements à haute pression.`,
+            `N'ignorez jamais les exigences minimales en matière d'identification pour le tirage de câbles`
+          ]
+        }
 };
 
 
@@ -128,11 +159,14 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
   categorySlug: 'pvc-conduit-pipes',
   title: "PVC Conduit Pipes — Schedule 40 (US Standard)",
   titleAr: "أنابيب القنوات PVC — جدول 40 (معيار أمريكي)",
-  shortDescription: "Schedule 40 PVC electrical conduit — ½″ to 6″ (US standard).",
+    titleFr: `PVC Conduit Pipes — Schémadule 40 (norme américaine)`,
+    shortDescription: "Schedule 40 PVC electrical conduit — ½″ to 6″ (US standard).",
   shortDescriptionAr: "قنوات كهربائية PVC جدول 40 — ½″ إلى 6″ (معيار أمريكي).",
-  overview: "Crown Plastic Pipes / Fittings manufactures Schedule 40 PVC electrical conduit pipes to US standards, providing reliable cable protection for MEP infrastructure across the UAE and GCC. Available from ½″ to 6″ in standard 3 m lengths, these conduits offer optimal wall thickness for general-purpose electrical installations in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Schémadule 40 PVC conduit — ½″ à 6″ (norme américaine).`,
+    overview: "Crown Plastic Pipes / Fittings manufactures Schedule 40 PVC electrical conduit pipes to US standards, providing reliable cable protection for MEP infrastructure across the UAE and GCC. Available from ½″ to 6″ in standard 3 m lengths, these conduits offer optimal wall thickness for general-purpose electrical installations in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب قنوات كهربائية PVC جدول 40 وفق المعايير الأمريكية، لحماية موثوقة للكابلات في البنية التحتية MEP في الإمارات والخليج. متوفرة من ½″ إلى 6″ بأطوال 3 م. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux de conduit électriques Schedule 40 PVC selon les normes américaines, offrant une protection fiable des câbles pour l'infrastructure MEP à travers les UAE et GCC. Disponibles de ½″ à 6″ dans les longueurs standard 3 m, ces conduits offrent une épaisseur de paroi optimale pour les installations électriques à usage général dans le UAE. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
   featuresAr: [
     'مقاومة صدمات عالية لتطبيقات MEP الشاقة',
     'خصائص مادة مقاومة للحريق لسلامة محسّنة',
@@ -141,14 +175,28 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
     'جودة تصنيع معتمدة ISO 9001:2015 و OHSAS 18001',
     'بناء UPVC متين لإدارة الكابلات طويلة الأمد',
   ],
-  applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
+    featuresFr: [
+            `Résistance élevée aux chocs pour les applications lourdes duty MEP`,
+            `Propriétés des matériaux ignifuges pour une sécurité renforcée`,
+            `Disponible en niveaux de force de compression lourde, moyenne et légère`,
+            `Conformité totale aux normes américaines Schedule 40 et Schedule 80`,
+            `Qualité de fabrication certifiée ISO 9001:2015 et OHSAS 18001`,
+            `Construction Durable UPVC pour une gestion des câbles à long terme`
+          ],
+    applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
   applicationsAr: [
     'أنظمة التمديدات الكهربائية السكنية والتجارية',
     'مشاريع البنية التحتية الصناعية MEP في الخليج',
     'مشاريع التطوير العمراني في دبي وأبوظبي',
     'حلول إدارة الكابلات تحت الأرض والمكشوفة',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Systèmes de câblage électrique résidentiels et commerciaux`,
+            `Projets d'infrastructure dustrial MEP à travers le GCC`,
+            `Projets de développement urbain à Dubai et Abu Dhabi`,
+            `Solutions de gestion des câbles souterrains et exposés`
+          ],
+    pipesTables: [
     {
       id: "schedule-40-conduit-us-table",
       title: "SCHEDULE 40 CONDUIT - US",
@@ -195,6 +243,20 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
       'لا تتجاهل متطلبات القطر الداخلي الأدنى لسحب الكابلات',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Sélectionnez la force de compression correcte (1250N, 750N ou 320N) en fonction des exigences de charge`,
+            `Utilisez Schedule 80 conduits pour les applications nécessitant une protection murale plus épaisse`,
+            `Assurez-vous que toutes les installations sont conformes aux normes de sécurité électrique UAE`,
+            `Vérifiez les numéros de pièces par rapport aux dimensions commerciales pour un ajustement précis`
+          ],
+          donts: [
+            `N'utilisez pas de matériaux de qualité légère lorsqu'une résistance aux chocs élevée est requise.`,
+            `Évitez de dépasser le nombre de pièces recommandé par paquet pour une manipulation en toute sécurité`,
+            `Ne remplacez pas Schedule 40 par Schedule 80 dans des environnements à haute pression.`,
+            `N'ignorez jamais les exigences minimales en matière d'identification pour le tirage de câbles`
+          ]
+        }
 };
 
 
@@ -207,11 +269,14 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
   categorySlug: 'pvc-conduit-pipes',
   title: "PVC Conduit Pipes — Schedule 80 (US Standard)",
   titleAr: "أنابيب القنوات PVC — جدول 80 (معيار أمريكي)",
-  shortDescription: "Heavy-duty Schedule 80 PVC electrical conduit — ½″ to 6″ (US standard).",
+    titleFr: `PVC Conduit Pipes — Schémadule 80 (norme américaine)`,
+    shortDescription: "Heavy-duty Schedule 80 PVC electrical conduit — ½″ to 6″ (US standard).",
   shortDescriptionAr: "قنوات كهربائية PVC جدول 80 شاقة — ½″ إلى 6″ (معيار أمريكي).",
-  overview: "Crown Plastic Pipes / Fittings manufactures heavy-duty Schedule 80 PVC electrical conduit pipes to US standards, delivering enhanced wall thickness and impact resistance for demanding MEP applications across the UAE and GCC. Available from ½″ to 6″ in standard 3 m lengths, these conduits are the preferred choice for high-traffic areas, industrial facilities, and critical infrastructure in Dubai and Abu Dhabi. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Heavy-duty Schedule 80 PVC conduit — ½″ à 6″ (norme américaine).`,
+    overview: "Crown Plastic Pipes / Fittings manufactures heavy-duty Schedule 80 PVC electrical conduit pipes to US standards, delivering enhanced wall thickness and impact resistance for demanding MEP applications across the UAE and GCC. Available from ½″ to 6″ in standard 3 m lengths, these conduits are the preferred choice for high-traffic areas, industrial facilities, and critical infrastructure in Dubai and Abu Dhabi. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب قنوات كهربائية PVC جدول 80 للخدمة الشاقة وفق المعايير الأمريكية، بسمك جدار محسّن ومقاومة صدمات لتطبيقات MEP المتطلبة في الإمارات والخليج. متوفرة من ½″ إلى 6″ بأطوال 3 م. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux de conduit électriques lourds-duty Schedule 80 PVC selon les normes américaines, offrant une épaisseur de paroi et une résistance aux chocs améliorées pour les applications MEP exigeantes dans les UAE et GCC. Disponibles de ½″ à 6″ dans des longueurs standard 3 m, ​​ces conduits sont le choix préféré pour les zones à fort trafic, les installations industrielles du et les infrastructures critiques à Dubai et Abu Dhabi. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["High-impact resistance for heavy-duty MEP applications","Fire-retardant material properties for enhanced safety","Available in Heavy, Medium, and Light compression force grades","Full compliance with US Schedule 40 and Schedule 80 standards","ISO 9001:2015 and OHSAS 18001 certified manufacturing quality","Durable UPVC construction for long-term cable management"],
   featuresAr: [
     'مقاومة صدمات عالية لتطبيقات MEP الشاقة',
     'خصائص مادة مقاومة للحريق لسلامة محسّنة',
@@ -220,14 +285,28 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
     'جودة تصنيع معتمدة ISO 9001:2015 و OHSAS 18001',
     'بناء UPVC متين لإدارة الكابلات طويلة الأمد',
   ],
-  applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
+    featuresFr: [
+            `Résistance élevée aux chocs pour les applications lourdes duty MEP`,
+            `Propriétés des matériaux ignifuges pour une sécurité renforcée`,
+            `Disponible en niveaux de force de compression lourde, moyenne et légère`,
+            `Conformité totale aux normes américaines Schedule 40 et Schedule 80`,
+            `Qualité de fabrication certifiée ISO 9001:2015 et OHSAS 18001`,
+            `Construction Durable UPVC pour une gestion des câbles à long terme`
+          ],
+    applications: ["Residential and commercial electrical wiring systems","Industrial MEP infrastructure projects across the GCC","Urban development projects in Dubai and Abu Dhabi","Underground and exposed cable management solutions"],
   applicationsAr: [
     'أنظمة التمديدات الكهربائية السكنية والتجارية',
     'مشاريع البنية التحتية الصناعية MEP في الخليج',
     'مشاريع التطوير العمراني في دبي وأبوظبي',
     'حلول إدارة الكابلات تحت الأرض والمكشوفة',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Systèmes de câblage électrique résidentiels et commerciaux`,
+            `Projets d'infrastructure dustrial MEP à travers le GCC`,
+            `Projets de développement urbain à Dubai et Abu Dhabi`,
+            `Solutions de gestion des câbles souterrains et exposés`
+          ],
+    pipesTables: [
     {
       id: "schedule-80-conduit-us-table",
       title: "SCHEDULE 80 CONDUIT - US",
@@ -274,4 +353,18 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
       'لا تتجاهل متطلبات القطر الداخلي الأدنى لسحب الكابلات',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Sélectionnez la force de compression correcte (1250N, 750N ou 320N) en fonction des exigences de charge`,
+            `Utilisez Schedule 80 conduits pour les applications nécessitant une protection murale plus épaisse`,
+            `Assurez-vous que toutes les installations sont conformes aux normes de sécurité électrique UAE`,
+            `Vérifiez les numéros de pièces par rapport aux dimensions commerciales pour un ajustement précis`
+          ],
+          donts: [
+            `N'utilisez pas de matériaux de qualité légère lorsqu'une résistance aux chocs élevée est requise.`,
+            `Évitez de dépasser le nombre de pièces recommandé par paquet pour une manipulation en toute sécurité`,
+            `Ne remplacez pas Schedule 40 par Schedule 80 dans des environnements à haute pression.`,
+            `N'ignorez jamais les exigences minimales en matière d'identification pour le tirage de câbles`
+          ]
+        }
 };

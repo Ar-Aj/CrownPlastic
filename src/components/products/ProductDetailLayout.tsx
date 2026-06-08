@@ -10,6 +10,7 @@ import { ProductFAQSchema } from '@/components/schemas/ProductFAQSchema';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
 import { getCategoryBySlug } from '@/config/products';
+import { localizedValue, localizedArray } from '@/lib/i18n-utils';
 import { createPortal } from 'react-dom';
 
 // ── Dynamic Imports (below-fold components — reduce initial JS payload) ──────
@@ -50,21 +51,17 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
   const [viewerPdf, setViewerPdf] = useState<{ src: string; title: string; description?: string } | null>(null);
   const category = getCategoryBySlug(product.categorySlug);
 
-  // Get localized content
-  const title = language === 'ar' ? (product.titleAr || product.title) : product.title;
-  const shortDesc = language === 'ar'
-    ? (product.shortDescriptionAr || product.shortDescription)
-    : product.shortDescription;
-  const overview = language === 'ar' ? (product.overviewAr || product.overview) : product.overview;
-  const features = language === 'ar' ? (product.featuresAr || product.features) : product.features;
-  const applications = language === 'ar'
-    ? (product.applicationsAr || product.applications)
-    : product.applications;
-  const dosDonts = language === 'ar' ? (product.dosDontsAr || product.dosDonts) : product.dosDonts;
-  const techProps = language === 'ar' ? (product.technicalPropertiesAr || product.technicalProperties) : product.technicalProperties;
-  const sysAdvs = language === 'ar' ? (product.systemAdvantagesAr || product.systemAdvantages) : product.systemAdvantages;
+  // Get localized content (trilingual: fr → en, ar → en, default en)
+  const title = localizedValue(language, product.title, product.titleAr, product.titleFr);
+  const shortDesc = localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr);
+  const overview = localizedValue(language, product.overview, product.overviewAr, product.overviewFr);
+  const features = localizedArray(language, product.features, product.featuresAr, product.featuresFr);
+  const applications = localizedArray(language, product.applications, product.applicationsAr, product.applicationsFr);
+  const dosDonts = language === 'fr' ? (product.dosDontsFr || product.dosDonts) : language === 'ar' ? (product.dosDontsAr || product.dosDonts) : product.dosDonts;
+  const techProps = language === 'fr' ? (product.technicalPropertiesFr || product.technicalProperties) : language === 'ar' ? (product.technicalPropertiesAr || product.technicalProperties) : product.technicalProperties;
+  const sysAdvs = language === 'fr' ? (product.systemAdvantagesFr || product.systemAdvantages) : language === 'ar' ? (product.systemAdvantagesAr || product.systemAdvantages) : product.systemAdvantages;
   const categoryName = category
-    ? (language === 'ar' ? (category.nameAr || category.name) : category.name)
+    ? localizedValue(language, category.name, category.nameAr, category.nameFr)
     : '';
 
   // Deduplicate features and applications
@@ -214,7 +211,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
 
               {/* Commercial Intent Subtitle */}
               <h2 className="text-lg font-medium text-primary mb-4">
-                {language === 'ar' ? 'المصنع والمورد الرائد في الإمارات' : 'Premium Manufacturer & Supplier in the UAE'}
+                {language === 'ar' ? 'المصنع والمورد الرائد في الإمارات' : language === 'fr' ? 'Fabricant & Fournisseur Premium aux EAU' : 'Premium Manufacturer & Supplier in the UAE'}
               </h2>
 
               {/* Short description */}
@@ -343,7 +340,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <div className="overflow-x-auto -mx-4 px-4">
             <div className="flex gap-1 min-w-max py-3">
               {visibleSections.map((section) => {
-                const rawLabel = language === 'ar' ? (section.labelAr || section.label) : section.label;
+                const rawLabel = localizedValue(language, section.label, section.labelAr, section.labelFr);
                 
                 // Force 'Visual Breakdown' instead of 'Pipes' for fabrications category
                 const isFabrications = product.categorySlug === 'fabrications' || product.categorySlug === 'fabrications-accessories';
@@ -437,8 +434,8 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       {techProps && techProps.length > 0 && (
         <ProductSection id="technical-properties" background="white" size="md">
           <ProductSectionHeader
-            title={language === 'ar' ? 'الخصائص الفنية' : 'Technical Properties'}
-            subtitle={language === 'ar' ? 'المواصفات الفنية التفصيلية' : 'Detailed technical specifications'}
+            title={language === 'ar' ? 'الخصائص الفنية' : language === 'fr' ? 'Propriétés Techniques' : 'Technical Properties'}
+            subtitle={language === 'ar' ? 'المواصفات الفنية التفصيلية' : language === 'fr' ? 'Spécifications techniques détaillées' : 'Detailed technical specifications'}
           />
           <ProductCardSurface variant="elevated" padding="none">
             <div className="overflow-x-auto rounded-xl">
@@ -446,10 +443,10 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                 <thead className="bg-slate-50">
                   <tr>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                      {language === 'ar' ? 'الخاصية' : 'Property'}
+                      {language === 'ar' ? 'الخاصية' : language === 'fr' ? 'Propriété' : 'Property'}
                     </th>
                     <th scope="col" className="px-6 py-3 text-left pl-6 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                      {language === 'ar' ? 'القيمة' : 'Value'}
+                      {language === 'ar' ? 'القيمة' : language === 'fr' ? 'Valeur' : 'Value'}
                     </th>
                   </tr>
                 </thead>
@@ -479,8 +476,8 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
       {sysAdvs && sysAdvs.length > 0 && (
         <ProductSection id="system-advantages" background="soft-blue" size="md" showGlow>
           <ProductSectionHeader
-            title={language === 'ar' ? 'مزايا النظام' : 'System Advantages'}
-            subtitle={language === 'ar' ? 'الفوائد الرئيسية لاستخدام هذا النظام' : 'Key benefits of using this system'}
+            title={language === 'ar' ? 'مزايا النظام' : language === 'fr' ? 'Avantages du Système' : 'System Advantages'}
+            subtitle={language === 'ar' ? 'الفوائد الرئيسية لاستخدام هذا النظام' : language === 'fr' ? 'Principaux avantages de ce système' : 'Key benefits of using this system'}
           />
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 m-0 p-0 list-none">
             {sysAdvs.map((adv, idx) => (
@@ -530,14 +527,16 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
           <ProductSectionHeader
             title={language === 'ar'
               ? (product.variantsSectionTitleAr || product.variantsSectionTitle || 'التكوينات')
-              : (product.variantsSectionTitle || t('products.detail_layout.configurations_default'))}
+              : language === 'fr'
+                ? (product.variantsSectionTitleFr || product.variantsSectionTitle || 'Configurations')
+                : (product.variantsSectionTitle || t('products.detail_layout.configurations_default'))}
             subtitle={t('products.detail_layout.configurations_subtitle')}
           />
           <div className="grid md:grid-cols-2 gap-6">
             {product.variants.map((variant) => {
-              const variantTitle = language === 'ar' ? (variant.titleAr || variant.title) : variant.title;
-              const variantDesc = language === 'ar' ? (variant.descriptionAr || variant.description) : variant.description;
-              const variantFeatures = language === 'ar' ? (variant.featuresAr || variant.features) : variant.features;
+              const variantTitle = localizedValue(language, variant.title, variant.titleAr, variant.titleFr);
+              const variantDesc = localizedValue(language, variant.description, variant.descriptionAr, variant.descriptionFr);
+              const variantFeatures = localizedArray(language, variant.features, variant.featuresAr, variant.featuresFr);
 
               return (
                 <ProductCardSurface key={variant.id} variant="elevated" padding="lg" hoverable>

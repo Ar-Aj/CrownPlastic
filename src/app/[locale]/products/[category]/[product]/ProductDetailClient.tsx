@@ -11,6 +11,7 @@ import { getCategoryBySlug, getSubProductBySlugs } from '@/config/products';
 import { getDocsByProduct } from '@/config/docs';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
+import { localizedValue, localizedArray } from '@/lib/i18n-utils';
 import { ProductDetailBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import { ProductDetailSchema, EnhancedProductSchema } from '@/components/schemas/ProductSchema';
 import { upvcPressurePipeSpecs, type ProductSpecification } from '@/config/schemas';
@@ -50,7 +51,7 @@ export default function ProductDetailClient({ params }: ProductPageProps) {
 
   // ── GA4: track product detail view (must be above all early returns) ───────
   const prodNameForTracking = product
-    ? (language === 'ar' ? (product.nameAr || product.name) : product.name)
+    ? localizedValue(language, product.name, product.nameAr, product.nameFr)
     : productSlug;
   useEffect(() => {
     trackProductView(category, prodNameForTracking);
@@ -64,8 +65,8 @@ export default function ProductDetailClient({ params }: ProductPageProps) {
   // Check if this product has an enhanced detail page configuration
   // If so, render the new ProductDetailLayout instead of the basic layout
   // ═══════════════════════════════════════════════════════════════════════════
-  const catName = language === 'ar' ? (category_data.nameAr || category_data.name) : category_data.name;
-  const prodName = language === 'ar' ? (product.nameAr || product.name) : product.name;
+  const catName = localizedValue(language, category_data.name, category_data.nameAr, category_data.nameFr);
+  const prodName = localizedValue(language, product.name, product.nameAr, product.nameFr);
 
   if (hasProductDetail(productSlug)) {
     const detailConfig = getProductDetail(productSlug);
@@ -92,8 +93,8 @@ export default function ProductDetailClient({ params }: ProductPageProps) {
 
   // Get technical documents for this specific product (fallback logic)
   const productDocuments = getDocsByProduct(category, productSlug);
-  const prodDesc = language === 'ar' ? (product.shortDescriptionAr || product.shortDescription) : product.shortDescription;
-  const prodFeatures = language === 'ar' ? (product.featuresAr || product.features || []) : (product.features || []);
+  const prodDesc = localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr);
+  const prodFeatures = localizedArray(language, product.features || [], product.featuresAr, product.featuresFr);
 
   // Image fallback logic: product.image → category_data.image → null (show icon)
   const productImage = product.image || category_data.image;
@@ -341,8 +342,8 @@ export default function ProductDetailClient({ params }: ProductPageProps) {
                 .filter((p) => p.slug !== product.slug)
                 .slice(0, 3)
                 .map((p, index) => {
-                  const relProdName = language === 'ar' ? (p.nameAr || p.name) : p.name;
-                  const relProdDesc = language === 'ar' ? (p.shortDescriptionAr || p.shortDescription) : p.shortDescription;
+                  const relProdName = localizedValue(language, p.name, p.nameAr, p.nameFr);
+                  const relProdDesc = localizedValue(language, p.shortDescription, p.shortDescriptionAr, p.shortDescriptionFr);
 
                   return (
                     <AnimateOnScroll key={p.slug} animation="fade-up" delay={index * 80}>

@@ -20,6 +20,7 @@ const baseUrl = "https://crownplasticuae.com";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const isAr = params.locale === 'ar';
+  const isFr = params.locale === 'fr';
 
   return {
     metadataBase: new URL(baseUrl),
@@ -60,16 +61,18 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       },
     },
     alternates: {
-      canonical: `/${params.locale}`,
+      canonical: `${baseUrl}/${params.locale}/`,
       languages: {
-        'en': '/en',
-        'ar': '/ar',
+        'en': `${baseUrl}/en/`,
+        'ar': `${baseUrl}/ar/`,
+        'fr': `${baseUrl}/fr/`,
+        'x-default': `${baseUrl}/en/`,
       },
     },
     openGraph: {
       type: "website",
-      locale: isAr ? "ar_AE" : "en_AE",
-      alternateLocale: [isAr ? "en_AE" : "ar_AE"],
+      locale: isAr ? 'ar_AE' : isFr ? 'fr_FR' : 'en_AE',
+      alternateLocale: isAr ? ['en_AE', 'fr_FR'] : isFr ? ['en_AE', 'ar_AE'] : ['ar_AE', 'fr_FR'],
       url: `${baseUrl}/${params.locale}`,
       siteName: brand.shortName,
       title: `${brand.shortName} | UPVC PPR HDPE Pipes & Fittings Manufacturer UAE`,

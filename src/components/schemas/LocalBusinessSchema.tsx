@@ -27,12 +27,13 @@ export function LocalBusinessSchema({ serviceArea }: LocalBusinessSchemaProps) {
 export function LocalBusinessDetailSchema() {
   const { language } = useLanguage();
   const isAr = language === 'ar';
+  const isFr = language === 'fr';
 
   const detailSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${baseUrl}/#localbusiness`,
-    name: isAr ? 'مصنع كراون لأنابيب البلاستيك ذ.م.م' : companyInfo.name,
+    name: isAr ? 'مصنع كراون لأنابيب البلاستيك ذ.م.م' : isFr ? 'Crown Plastic Pipes Factory LLC' : companyInfo.name,
     alternateName: companyInfo.alternateName,
     description: companyInfo.description,
     url: baseUrl,

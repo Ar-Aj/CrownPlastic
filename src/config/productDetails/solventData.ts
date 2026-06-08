@@ -50,17 +50,30 @@ const solventDosDontsAr: DosDonts = {
     'لا تستخدم على الأنابيب المبللة',
   ],
 };
-
+const solventDosDontsFr: DosDonts = {
+      dos: [
+        `Remuer avant utilisation`,
+        `Utilisez la bonne taille d’applicateur`,
+        `Appliquer un apprêt avant de cimenter`
+      ],
+      donts: [
+        `Ne pas diluer avec un apprêt ou d'autres solvants`,
+        `Ne pas utiliser sur des canalisations humides`
+      ]
+    };
 export const pvcSolventDetailConfig: ProductDetailConfig = {
   slug: 'pvc-solvents',
   categorySlug: 'solvents',
   title: 'Crown Weld Heavy Duty PVC Solvent Cement',
   titleAr: 'الأسمنت المذيب PVC فائق القوة من كراون ويلد',
-  shortDescription: 'PVC solvent cements for secure and durable pipe joints.',
+    titleFr: `Crown Weld Heavy Duty PVC Ciment à solvant`,
+    shortDescription: 'PVC solvent cements for secure and durable pipe joints.',
   shortDescriptionAr: 'أسمنت مذيب PVC للوصلات الآمنة والمتينة.',
-  overview: 'A premium, high-strength, clear, heavy-body PVC solvent cement formulated for secure and durable pipe joints. Exceeds ASTM D 2564 standards. Suitable for pipes up to 8 inches in diameter.',
+    shortDescriptionFr: `Colles à solvant PVC pour des joints de tuyaux sûrs et durables.`,
+    overview: 'A premium, high-strength, clear, heavy-body PVC solvent cement formulated for secure and durable pipe joints. Exceeds ASTM D 2564 standards. Suitable for pipes up to 8 inches in diameter.',
   overviewAr: 'أسمنت مذيب PVC شديد القوة وشفاف وكثيف القوام، مركب للحصول على وصلات أنابيب آمنة ومتينة. يتجاوز معايير ASTM D 2564. مناسب للأنابيب بقطر يصل إلى 8 بوصات.',
-  features: [
+    overviewFr: `Une colle à solvant PVC de qualité supérieure, à haute résistance, transparente et épaisse, formulée pour des joints de tuyaux sûrs et durables. Dépasse ASTM D 2564 standards. Convient aux tuyaux jusqu'à 8 inches de diamètre.`,
+    features: [
     'Heavy Body Viscosity',
     'Fast Setting Time',
     'High-Strength Bond',
@@ -74,7 +87,14 @@ export const pvcSolventDetailConfig: ProductDetailConfig = {
     'معتمد حسب معيار ASTM D 2564',
     'مواد خام من الولايات المتحدة الأمريكية',
   ],
-  applications: [
+    featuresFr: [
+            `Viscosité des corps lourds`,
+            `Temps de prise rapide`,
+            `Liaison à haute résistance`,
+            `ASTM D 2564 Certified`,
+            `Matières premières provenant des États-Unis`
+          ],
+    applications: [
     'Industrial piping',
     'Irrigation systems',
     'Electrical conduits',
@@ -88,9 +108,17 @@ export const pvcSolventDetailConfig: ProductDetailConfig = {
     'السباكة وحمامات السباحة',
     'أنابيب PVC ذات القلب الرغوي',
   ],
-  dosDonts: solventDosDonts,
+    applicationsFr: [
+            `Dansdutuyauterie d'essai`,
+            `Systèmes d'irrigation`,
+            `Conduits électriques`,
+            `Piscine et plomberie`,
+            `PVC tuyaux à âme en mousse`
+          ],
+    dosDonts: solventDosDonts,
   dosDontsAr: solventDosDontsAr,
-  fittings: solventsList,
+    dosDontsFr: solventDosDontsFr,
+    fittings: solventsList,
   fittingsTabLabelKey: 'products.solvent.nav_label',
   pipesTables: [],
   image: '/images/products/cover/solvent/Solventcover.png',

@@ -23,7 +23,9 @@ export const en = {
     lang_en: 'EN',
     lang_ar: 'AR',
     lang_english: 'English',
-    lang_arabic: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©',
+    lang_arabic: 'العربية',
+    lang_fr: 'FR',
+    lang_french: 'Français',
     join_us: 'Join Us!',
     markets: {
       all: 'All Markets',
@@ -1406,7 +1408,8 @@ export const en = {
       address: 'New Industrial Area, P.O. Box 7069, Umm Al Quwain, UAE',
       phone: '+971 6 543 6781',
       email: 'info@crownplasticuae.com',
-      hours: 'Mon - Thu, Sat: 8:00 AM - 7:00 PM',
+      hours_weekday: 'Mon - Thu, Sat: 8:00 AM - 7:00 PM',
+      hours_friday: 'Fri: 8:00 AM - 11:30 AM, 1:00 PM - 7:00 PM',
     },
     form: {
       name: 'Full Name',

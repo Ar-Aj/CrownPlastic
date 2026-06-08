@@ -37,14 +37,14 @@ export const greaseTrapTypeA: ProductDetailConfig = {
 
   title: 'PVC/UPVC Grease Trap – Type A',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع A',
-
-  renderImage: '/images/fabrications/typea_main.png',
+    titleFr: `PVC/UPVC Piège à graisse – Type A`,
+    renderImage: '/images/fabrications/typea_main.png',
   diagramImage: '/images/fabrications/typea_diagram.png',
 
   shortDescription: 'Type A Grease Trap featuring a single 450 x 280 x 450 deep removable PVC perforated bucket with 25 holes in four rows on each side. Uses a 670x670x15mm GRP sealed cover.',
   shortDescriptionAr: 'مصيدة شحوم النوع A مع دلو PVC مثقب قابل للإزالة بعمق 450 مم وغطاء GRP محكم.',
-
-  overview: `Type A is a Grease Trap design featuring a single 450 x 280 x 450 deep removable PVC perforated bucket for solid waste collection. It securely fastens with a 670x670x15mm GRP sealed cover.
+    shortDescriptionFr: `Piège à graisse de type A comprenant un seul seau perforé amovible PVC de 450 x 280 x 450 de profondeur avec 25 trous répartis sur quatre rangées de chaque côté. Utilise un couvercle scellé GRP 670x670x15mm.`,
+    overview: `Type A is a Grease Trap design featuring a single 450 x 280 x 450 deep removable PVC perforated bucket for solid waste collection. It securely fastens with a 670x670x15mm GRP sealed cover.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
@@ -112,6 +112,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Installer selon les dessins approuvés par la municipalité Dubai`,
+            `Nettoyer et entretenir régulièrement le seau unique perforé`,
+            `Assurer une bonne étanchéité du joint en néoprène duremontage de l'anneau`,
+            `Utiliser un équipement de levage approprié pour la couverture en PRV (1070×820mm)`,
+            `Planifier les inspections périodiques pour l'accumulation de graisse`
+          ],
+          donts: [
+            `Ne surchargez pas avec des déchets solides au-delà de la capacité nominale.`,
+            `N'utilisez pas de produits chimiques incompatibles qui pourraient endommager PVC/UPVC`,
+            `Ne négligez pas les programmes d'entretien et de nettoyage réguliers`,
+            `Ne modifiez pas la conception sans l'approbation de l'ingénierie`,
+            `Ne jetez pas de matières dangereuses dans les bacs à graisse`
+          ]
+        }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -142,14 +158,14 @@ export const greaseTrapTypeB: ProductDetailConfig = {
 
   title: 'PVC/UPVC Grease Trap – Type B',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع B',
-
-  renderImage: '/images/fabrications/typeb_main.png',
+    titleFr: `PVC/UPVC Piège à graisse – Type B`,
+    renderImage: '/images/fabrications/typeb_main.png',
   diagramImage: '/images/fabrications/typeb_diagram.png',
 
   shortDescription: 'Type B Grease Trap featuring two removable PVC perforated buckets (260mm deep) with 250 holes in four rows on each side.',
   shortDescriptionAr: 'مصيدة شحوم النوع B بدلوين PVC مثقبين قابلين للإزالة بعمق 260 مم مع مقابض رفع.',
-
-  overview: `Type B is a Grease Trap design featuring two removable PVC perforated buckets (260mm deep) with 250 holes in four rows on each side. The system includes a Lifting Handle and components like a 5mm THICK GASKET and GRP COVER.
+    shortDescriptionFr: `Piège à graisse de type B comprenant deux seaux perforés amovibles PVC (260mm de profondeur) avec 250 trous répartis sur quatre rangées de chaque côté.`,
+    overview: `Type B is a Grease Trap design featuring two removable PVC perforated buckets (260mm deep) with 250 holes in four rows on each side. The system includes a Lifting Handle and components like a 5mm THICK GASKET and GRP COVER.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
@@ -220,6 +236,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Installer selon les dessins approuvés par la municipalité Dubai`,
+            `Nettoyer et entretenir régulièrement les deux seaux perforés`,
+            `Utiliser les poignées de levage lors du retrait des seaux pour le nettoyage`,
+            `S’assurer d’une bonne étanchéité du joint 5mm et du remontage de l’anneau du`,
+            `Planifier des inspections périodiques pour détecter l'accumulation de graisse dans les deux godets`
+          ],
+          donts: [
+            `Ne surchargez pas les seaux avec des déchets solides au-delà de la capacité nominale.`,
+            `N'utilisez pas de produits chimiques incompatibles qui pourraient endommager PVC/UPVC`,
+            `Ne négligez pas l’entretien régulier du système de godets dual`,
+            `Ne modifiez pas la conception sans l'approbation de l'ingénierie`,
+            `Ne jetez pas de matières dangereuses dans les bacs à graisse`
+          ]
+        }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -251,14 +283,14 @@ export const greaseTrapTypeC: ProductDetailConfig = {
 
   title: 'PVC/UPVC Grease Trap – Type C',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع C',
-
-  renderImage: '/images/fabrications/typec_main.png',
+    titleFr: `PVC/UPVC Piège à graisse – Type C`,
+    renderImage: '/images/fabrications/typec_main.png',
   diagramImage: '/images/fabrications/typec_diagram.png',
 
   shortDescription: 'Type C Grease Trap featuring three removable PVC perforated buckets with 15 holes in five rows. Notable for its large size (1980mm length) and internal baffle.',
   shortDescriptionAr: 'مصيدة شحوم النوع C كبيرة الحجم بطول 1980 مم مع جدار حاجز داخلي لفصل الشحوم المحسن.',
-
-  overview: `Type C is a Grease Trap design notable for its large size (1980mm overall length) and inclusion of a BAFFLE. It features three removable PVC perforated buckets with 15 holes in five rows for enhanced solid waste filtration.
+    shortDescriptionFr: `Piège à graisse de type C comprenant trois seaux perforés PVC amovibles avec 15 trous sur cinq rangées. Notable pour sa grande taille (longueur 1980mm) et son déflecteur interne.`,
+    overview: `Type C is a Grease Trap design notable for its large size (1980mm overall length) and inclusion of a BAFFLE. It features three removable PVC perforated buckets with 15 holes in five rows for enhanced solid waste filtration.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
@@ -331,6 +363,22 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Installer selon les dessins approuvés par la municipalité Dubai`,
+            `Nettoyer et entretenir régulièrement le seau perforé et la paroi du déflecteur`,
+            `Assurer une bonne étanchéité du joint en néoprène duremontage de l'anneau`,
+            `Prévoyez un espace suffisant pour l'installation de l'anneau 1980mm de longueur totale du.`,
+            `Planifier des inspections périodiques pour déceler l'accumulation de graisse derrière le déflecteur`
+          ],
+          donts: [
+            `Ne surchargez pas avec des déchets solides au-delà de la capacité nominale.`,
+            `N'utilisez pas de produits chimiques incompatibles qui pourraient endommager PVC/UPVC ou le déflecteur`,
+            `Ne négligez pas le nettoyage de la zone du déflecteur`,
+            `Ne modifiez pas la conception du déflecteur sans l'approbation de l'ingénierie`,
+            `Ne jetez pas de matières dangereuses dans les bacs à graisse`
+          ]
+        }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -362,14 +410,14 @@ export const greaseTrapTypeD: ProductDetailConfig = {
 
   title: 'PVC/UPVC Grease Trap – Type D',
   titleAr: 'مصيدة الشحوم PVC/UPVC – النوع D',
-
-  renderImage: '/images/fabrications/typed_main.png',
+    titleFr: `PVC/UPVC Piège à graisse – Type D`,
+    renderImage: '/images/fabrications/typed_main.png',
   diagramImage: '/images/fabrications/typed_diagram.png',
 
   shortDescription: 'Type D Grease Trap featuring a single 360 x 360 x 300 deep removable PVC perforated bucket with 12mm holes in 3 rows each. Uses a 600x450mm PVC 8mm top cover.',
   shortDescriptionAr: 'مصيدة شحوم النوع D بغطاء GRP محكم 670×670×15 مم مثبت بـ 24 صامولة جناحية.',
-
-  overview: `Type D is a Grease Trap design utilizing a 600x450mm PVC 8mm top cover secured by WING NUTS. It features a single compact 360 x 360 x 300 deep removable PVC perforated bucket with 12mm holes in 3 rows each.
+    shortDescriptionFr: `Piège à graisse de type D comprenant un seul seau perforé PVC amovible de 360 ​​x 360 x 300 de profondeur avec des trous 12mm sur 3 rangées chacun. Utilise un capot supérieur 600x450mm PVC 8mm.`,
+    overview: `Type D is a Grease Trap design utilizing a 600x450mm PVC 8mm top cover secured by WING NUTS. It features a single compact 360 x 360 x 300 deep removable PVC perforated bucket with 12mm holes in 3 rows each.
 
 The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PVC/UPVC fabricated products, including various designs of Grease Traps and Interceptors, as well as duct accessories and other miscellaneous fittings.
 
@@ -441,4 +489,20 @@ The CROWN PLASTIC Fabrication and Accessories catalogue presents custom-built PV
       'لا تتخلص من المواد الخطرة عبر مصايد الشحوم',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Installer selon les dessins approuvés par la municipalité Dubai`,
+            `Nettoyer et entretenir régulièrement le seau perforé compact`,
+            `Fixez correctement les 24 écrous à oreilles duremontage de l'anneau`,
+            `Assurez-vous que la bouche d'aération de 2" n'est pas obstruée.`,
+            `Planifier les inspections périodiques pour l'accumulation de graisse`
+          ],
+          donts: [
+            `Ne surchargez pas le godet compact au-delà de sa capacité nominale.`,
+            `N'utilisez pas de produits chimiques incompatibles qui pourraient endommager PVC/UPVC`,
+            `Ne serrez pas trop les écrous à oreilles sur le couvercle en PRV.`,
+            `Ne modifiez pas la conception sans l'approbation de l'ingénierie`,
+            `Ne jetez pas de matières dangereuses dans les bacs à graisse`
+          ]
+        }
 };

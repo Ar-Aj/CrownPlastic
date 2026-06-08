@@ -11,6 +11,7 @@ import { AnimateOnScroll } from '@/components/common';
 import { productCategories } from '@/config/products';
 import { useLanguage } from '@/context/LanguageContext';
 import { useT } from '@/i18n';
+import { localizedValue } from '@/lib/i18n-utils';
 import { ProductsBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import { ProductListSchema } from '@/components/schemas/ProductSchema';
 import { CategoryCardCarousel } from '@/components/products/CategoryCardCarousel';
@@ -171,8 +172,8 @@ export default function ProductsHubClient() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {productCategories.map((cat, index) => {
-            const catName = language === 'ar' ? (cat.nameAr || cat.name) : cat.name;
-            const catDesc = language === 'ar' ? (cat.shortDescriptionAr || cat.shortDescription) : cat.shortDescription;
+            const catName = localizedValue(language, cat.name, cat.nameAr, cat.nameFr);
+            const catDesc = localizedValue(language, cat.shortDescription, cat.shortDescriptionAr, cat.shortDescriptionFr);
 
             return (
               <AnimateOnScroll key={cat.slug} animation="fade-up" delay={index * 100}>

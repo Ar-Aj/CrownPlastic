@@ -1,0 +1,80 @@
+1: choose keyword from below:
+
+[
+  {
+    "targetCategory": "UPVC Drainage Pipes (BS 5255 / BS EN 1329-1:2014) vs. UPVC Drainage Fittings",
+    "goldenKeyword": "upvc drainage pipe and fitting sizing bs en 1329 uae",
+    "reason": "Combines the exact standard (BS EN 1329) with sizing intent and UAE geo, while most local suppliers only mention this inside PDFs, not as optimized FAQ or content pages. Because few pages use this full phrase in titles or headings, a clear explainer with DN/OD vs application tables can rank easily while targeting very high-intent design work."
+  },
+  {
+    "targetCategory": "PVC High Pressure Pipes (ISO 4422-2, DIN 8061) vs. PVC High Pressure Fittings (DIN 8063)",
+    "goldenKeyword": "pvc high pressure pipe class vs pn rating iso 4422 din 8061 uae",
+    "reason": "Engineers often search around class versus PN confusion when selecting PVC pressure systems, but existing content is mostly generic pressure-rating explainers and manufacturer catalogues rather than UAE-specific guides tying ISO 4422 and DIN 8061/8063 to PN classes and local applications. A UAE-focused article mapping DN, class, PN, and standards faces light competition and attracts serious design/specification traffic."
+  },
+  {
+    "targetCategory": "PVC SCH 40 Fittings (ASTM D 2466)",
+    "goldenKeyword": "astm d2466 pvc sch 40 fitting pressure rating chart",
+    "reason": "Most pages simply state compliance with ASTM D2466 and bury pressure and temperature tables in PDFs instead of optimized HTML. A single page that surfaces an easy-to-scan pressure-rating chart and derating guidance for Schedule 40 fittings will outperform thin product listings on this specific code-driven query."
+  },
+  {
+    "targetCategory": "PVC Duct Pipes (NEMA TC 2, Etisalat & DU approved) vs. PVC Duct Fittings",
+    "goldenKeyword": "etisalat approved nema tc 2 pvc duct pipe specification uae",
+    "reason": "Etisalat and DU approval is critical for telecom ducts, but specifications usually live inside long technical PDFs and approval lists rather than focused SEO pages. A page explicitly targeting “Etisalat approved” plus “NEMA TC 2” and “specification” is highly niche, has low organic competition, and matches consultant or procurement due-diligence queries directly."
+  },
+  {
+    "targetCategory": "PVC Conduit Pipes (1250N / 750N / 320N)",
+    "goldenKeyword": "pvc conduit 1250n vs 750n load rating selection uae",
+    "reason": "Local conduit producers list 1250N and 750N ratings but rarely explain selection rules in plain language, and most content is limited to standard references such as NEMA TC2 or generic product blurbs. An educational piece comparing 1250N, 750N, and 320N for slab and underground runs faces minimal SEO competition while answering a common consultant question."
+  },
+  {
+    "targetCategory": "PP-R Pipes (SDR11/PN10 to SDR5/PN25)",
+    "goldenKeyword": "ppr pipe sdr vs pn selection chart for hot water uae",
+    "reason": "Global content explains SDR versus PN and temperature derating, but very little is localized to UAE or framed around building hot-water design for PN20 and PN25. A UAE-specific chart that links SDR and PN to real service conditions such as tower hot water, circulation, and solar systems will stand out against generic manufacturer datasheets."
+  },
+  {
+    "targetCategory": "HDPE Pipes (PE63, PE80, PE100)",
+    "goldenKeyword": "hdpe pe100 sdr11 vs sdr17 pipe selection for water mains uae",
+    "reason": "Engineers already search for SDR11 versus SDR17 versus SDR26 for HDPE, but most strong content is global technical guidance or vendor blogs, not UAE-focused municipal water main sizing material. Optimizing this exact comparison keyword with local pressure and municipal examples will face relatively weak direct keyword competition."
+  },
+  {
+    "targetCategory": "PEX Pipes (PN 12.5 & PN 20)",
+    "goldenKeyword": "pex pipe pn20 vs pn12 5 for hot water installation uae",
+    "reason": "There is abundant DIY and global PEX installation advice, but little that discusses PN classes and temperature or pressure selection under UAE high-ambient conditions and local codes. A technical article comparing PN 12.5 and PN 20 for villa and apartment hot water can easily outrank generic PEX installation content on this more specific engineering phrase."
+  },
+  {
+    "targetCategory": "Fabrications & Accessories (e.g., Grease Traps)",
+    "goldenKeyword": "grease trap sizing for restaurant drainage dubai uae",
+    "reason": "Grease trap sizing is a recurring pain point for consultants and contractors on F&B projects, and search results are mostly international code notes and vendor brochures with few UAE-specific calculators or worked examples. A guide covering flow-based sizing, local authority expectations, and connection details for uPVC systems in Dubai will capture niche, high-intent traffic with low SEO competition."
+  },
+  {
+    "targetCategory": "Solvents (PVC Solvents)",
+    "goldenKeyword": "pvc solvent cement curing time in uae temperature",
+    "reason": "Most technical sheets list curing times at around 20–23°C, while actual UAE site conditions are much hotter, so installers often search informally for curing and setting time guidance. Because existing content is global and generic, a page explicitly addressing curing behaviour at UAE summer temperatures with safety margins can rank quickly on this long-tail, problem-driven query."
+  }
+]
+
+
+
+2: use below prompt and change the  **KEYWORD:** "upvc drainage pipe and fitting sizing bs en 1329 uae"
+- **TARGET_CATEGORY_ID:** "upvc-drainage-pipes" from step 1
+
+
+Act as a Principal Full-Stack Engineer and Elite B2B SEO Content Director. We are going to execute a highly structured, non-commodity programmatic blog generation. 
+
+### PRE-EXECUTION AUDIT (UI & Styling Context)
+1. Locate and inspect the project configuration files to identify our exact UI color themes and structural tokens (check files like `tailwind.config.js`, `src/app/globals.css`, or main layout components). 
+2. Match all code blocks, tables, or callout cards generated in this blog post to align perfectly with these identified theme colors (e.g., specific blues, oranges, or brand accents).
+
+### SYSTEM EXECUTION RULES
+- **Variable Injection Moat:** Open `src/data/proprietary/climateMetrics.ts`, `labTests.ts`, and `projectReferences.ts`. You must extract our real engineering metrics (Vicat softening points, burst pressure, wall tolerances) for the target category. If a value is missing, use an explicit, strict technical baseline calculation specific to Gulf ambient conditions (45°C–50°C). Never write generic summaries.
+- **Zero-Slop Content:** Completely ban phrases like "In today's fast-paced world", "delve into", "durable solutions", or introductory fluff. Start directly with technical parameters, standards compliance, or engineering data.
+- **Bilingual & Routing Rigour:** Maintain perfect data object structures in `src/data/blogs.ts`. Every English string must have a symmetrical localized Arabic string counterpart.
+- **Link Equity Mandate:** Ensure the article body or its automatic rendering wrapper triggers `linkingEngine.ts` to cleanly pass link equity back to our specific `/[locale]/solutions/[category]/[region]` zipper pages and our root category catalog route.
+
+### PIPELINE INSTRUCTIONS
+Read `.claude/commands/generate-blog.md` to map our 7-step compilation process. Execute the script payload using these exact inputs:
+
+- **KEYWORD:** "upvc drainage pipe and fitting sizing bs en 1329 uae"
+- **TARGET_CATEGORY_ID:** "upvc-drainage-pipes"
+
+Write the code inline, append the parsed data directly to `src/data/blogs.ts` without formatting errors, and run `npm run build` to guarantee zero static export compilation errors.

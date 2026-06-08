@@ -4,14 +4,15 @@ import { serviceAreas } from '@/config/schemas';
 import { allRegionalMarkets } from '@/config/markets';
 import { regionalProductCatalogs } from '@/config/regional-products';
 import { blogArticles } from '@/content/blogs';
+import { ALL_CATEGORY_IDS, ALL_REGION_SLUGS } from '@/data/zipperContent';
 
 // ─────────────────────────────────────────────────────────────
-// Bilingual Sitemap Generator
-// Every URL has both /en/ and /ar/ variants with hreflang alternates
+// Trilingual Sitemap Generator
+// Every URL has /en/, /ar/, and /fr/ variants with hreflang alternates
 // ─────────────────────────────────────────────────────────────
 
 const baseUrl = 'https://crownplasticuae.com';
-const locales = ['en', 'ar'] as const;
+const locales = ['en', 'ar', 'fr'] as const;
 
 /**
  * Generate sitemap entries for both locales with hreflang alternates.
@@ -100,6 +101,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   ];
 
+  // ── Programmatic Zipper Pages (Product × Location) ────────
+  // 13 categories × 6 regions = 78 paths × 2 locales = 156 URLs
+  const solutionsPages = ALL_CATEGORY_IDS.flatMap((categoryId) =>
+    ALL_REGION_SLUGS.flatMap((regionSlug) =>
+      bilingualEntries(`/solutions/${categoryId}/${regionSlug}`, { priority: 0.9, changeFrequency: 'weekly' })
+    )
+  );
+
   return [
     ...staticPages,
     ...categoryPages,
@@ -110,5 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...marketPages,
     ...regionalProductPages,
     ...blogPages,
+    ...solutionsPages,
   ];
 }
+

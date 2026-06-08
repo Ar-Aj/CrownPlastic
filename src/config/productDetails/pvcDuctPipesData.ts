@@ -15,11 +15,14 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Pipes — NEMA TC 2:2003",
   titleAr: "أنابيب مجاري PVC — NEMA TC 2:2003",
-  shortDescription: "EPC 40/80 cable duct pipes to NEMA TC 2:2003 — ½″–8″.",
+    titleFr: `PVC Duct Tuyaux — NEMA TC 2:2003`,
+    shortDescription: "EPC 40/80 cable duct pipes to NEMA TC 2:2003 — ½″–8″.",
   shortDescriptionAr: "أنابيب مجاري كابلات EPC 40/80 وفق NEMA TC 2:2003 — ½″–8″.",
-  overview: "Crown Plastic Pipes / Fittings, a leading cable duct pipe manufacturer in the UAE, produces premium PVC-U duct pipes to NEMA TC 2:2003 standards. Available in EPC 40 (normal duty) and EPC 80 (heavy duty) grades from ½″ to 8″, these pipes are engineered for the critical protection of underground electrical and telecommunications cables across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility in standard 5.8 m lengths.",
+    shortDescriptionFr: `Câble EPC 40/80 duct tuyaux vers NEMA TC 2:2003 — ½″–8″.`,
+    overview: "Crown Plastic Pipes / Fittings, a leading cable duct pipe manufacturer in the UAE, produces premium PVC-U duct pipes to NEMA TC 2:2003 standards. Available in EPC 40 (normal duty) and EPC 80 (heavy duty) grades from ½″ to 8″, these pipes are engineered for the critical protection of underground electrical and telecommunications cables across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility in standard 5.8 m lengths.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب حماية الكابلات في الإمارات، أنابيب مجاري PVC-U فاخرة وفق معايير NEMA TC 2:2003. متوفرة بدرجتي EPC 40 (عادية) و EPC 80 (شاقة) من ½″ إلى 8″، مصممة لحماية الكابلات الكهربائية والاتصالات تحت الأرض في دبي وأبوظبي والخليج. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين بأطوال 5.8 م.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de tuyaux de câble duct dans le UAE, produit des tuyaux PVC-U duct haut de gamme selon les normes NEMA TC 2:2003. Disponibles en qualités EPC 40 (duty normal) et EPC 80 (duty lourd) de ½″ à 8″, ​​ces tuyaux sont conçus pour la protection critique des câbles électriques et de télécommunications souterrains à travers le UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain dans des longueurs standard 5.8 m.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -28,14 +31,28 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-nema-tc-2-2003-electrical-pvc-u-tubing-conduits-table",
       title: "NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS",
@@ -84,6 +101,20 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };
 
 
@@ -96,11 +127,14 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Pipes — NEMA TC 6 & 8 / ASTM F 512",
   titleAr: "أنابيب مجاري PVC — NEMA TC 6 و 8 / ASTM F 512",
-  shortDescription: "EB/DB duct pipes to NEMA TC 6 & 8 / ASTM F 512 — 1″–6″.",
+    titleFr: `PVC Duct Tuyaux — NEMA TC 6 & 8 / ASTM F 512`,
+    shortDescription: "EB/DB duct pipes to NEMA TC 6 & 8 / ASTM F 512 — 1″–6″.",
   shortDescriptionAr: "أنابيب مجاري EB/DB وفق NEMA TC 6 و 8 / ASTM F 512 — 1″–6″.",
-  overview: "Crown Plastic Pipes / Fittings manufactures PVC-U duct pipes to NEMA TC 6 & 8 / ASTM F 512 standards, designed for both Encased Burial (EB) and Direct Burial (DB) applications across the UAE and GCC. Available in ratings from EB-20 to DB-120, these pipes provide reliable protection for underground cables in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `EB/DB duct conduits vers NEMA TC 6 & 8 / ASTM F 512 — 1″–6″.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PVC-U duct pipes to NEMA TC 6 & 8 / ASTM F 512 standards, designed for both Encased Burial (EB) and Direct Burial (DB) applications across the UAE and GCC. Available in ratings from EB-20 to DB-120, these pipes provide reliable protection for underground cables in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب مجاري PVC-U وفق معايير NEMA TC 6 و 8 / ASTM F 512، مصممة للدفن المغلف (EB) والدفن المباشر (DB) في الإمارات والخليج. متوفرة بتصنيفات من EB-20 إلى DB-120، توفر حماية موثوقة للكابلات تحت الأرض في دبي وأبوظبي ومشاريع البنية التحتية الكبرى.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux PVC-U duct selon NEMA TC 6 et 8 / ASTM F 512 standards, conçus pour les applications d'enfouissement enfermé (EB) et d'enfouissement direct (DB) à travers les UAE et GCC. Disponibles dans les calibres EB-20 à DB-120, ces tuyaux offrent une protection fiable aux câbles souterrains dans le UAE. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -109,14 +143,28 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-nema-tc-6-8-table",
       title: "NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS",
@@ -162,6 +210,20 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };
 
 
@@ -174,11 +236,14 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Pipes — DIN 8062",
   titleAr: "أنابيب مجاري PVC — DIN 8062",
-  shortDescription: "Metric duct pipes to DIN 8062 — PN 4 to PN 16, 20–315 mm.",
+    titleFr: `PVC Duct Tuyaux — DIN 8062`,
+    shortDescription: "Metric duct pipes to DIN 8062 — PN 4 to PN 16, 20–315 mm.",
   shortDescriptionAr: "أنابيب مجاري مترية وفق DIN 8062 — PN 4 إلى PN 16، 20–315 مم.",
-  overview: "Crown Plastic Pipes / Fittings, a trusted metric duct pipe supplier in the UAE, produces PVC-U duct pipes to DIN 8062 standards. Available in pressure classes from PN 4 to PN 16 with sizes from 20 mm to 315 mm, these pipes serve the demanding cable protection requirements of industrial, commercial, and municipal projects across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility.",
+    shortDescriptionFr: `Tuyaux métriques duct vers DIN 8062 — PN 4 vers PN 16, 20–315 mm.`,
+    overview: "Crown Plastic Pipes / Fittings, a trusted metric duct pipe supplier in the UAE, produces PVC-U duct pipes to DIN 8062 standards. Available in pressure classes from PN 4 to PN 16 with sizes from 20 mm to 315 mm, these pipes serve the demanding cable protection requirements of industrial, commercial, and municipal projects across the UAE. Manufactured at our ISO 9001:2015 certified Umm Al Quwain facility.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، المورد الموثوق لأنابيب المجاري المترية في الإمارات، أنابيب مجاري PVC-U وفق معايير DIN 8062. متوفرة بفئات ضغط من PN 4 إلى PN 16 بمقاسات من 20 مم إلى 315 مم. مصنعة في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes / Fittings, un fournisseur de tuyaux métriques duct de confiance dans le UAE, fabrique des tuyaux PVC-U duct selon les normes DIN 8062. Disponibles dans les classes de pression de PN 4 à PN 16 avec des tailles de 20 mm à 315 mm, ces tuyaux répondent aux exigences exigeantes de protection des câbles des projets industriels, commerciaux et municipaux du à travers le UAE. Mfabriqués dans notre usine certifiée ISO 9001:2015 d'Umm Al Quwain.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -187,14 +252,28 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-din-8062-metric-size-pressure-pipes-table",
       title: "DIN 8062 Metric size Pressure Pipes",
@@ -255,6 +334,20 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };
 
 
@@ -267,11 +360,14 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Pipes for Etisalat & DU",
   titleAr: "أنابيب مجاري PVC لاتصالات ودو",
-  shortDescription: "Telecom duct pipes approved for Etisalat & DU — D54/D56/D57.",
+    titleFr: `PVC Duct Tuyaux pour Etisalat & DU`,
+    shortDescription: "Telecom duct pipes approved for Etisalat & DU — D54/D56/D57.",
   shortDescriptionAr: "أنابيب مجاري اتصالات معتمدة من اتصالات ودو — D54/D56/D57.",
-  overview: "Crown Plastic Pipes, the leading telecom duct pipe manufacturer in the UAE, produces PVC-U duct pipes specifically designed and approved for Etisalat and DU telecommunications infrastructure. Our D54, D56, and D57 duct pipes meet the stringent specifications required by UAE's premier telecom operators, ensuring reliable underground cable protection across the UAE. Manufactured at our ISO 9001:2015 certified facility.",
+    shortDescriptionFr: `Tuyaux Telecom duct approuvés pour Etisalat & DU — D54/D56/D57.`,
+    overview: "Crown Plastic Pipes, the leading telecom duct pipe manufacturer in the UAE, produces PVC-U duct pipes specifically designed and approved for Etisalat and DU telecommunications infrastructure. Our D54, D56, and D57 duct pipes meet the stringent specifications required by UAE's premier telecom operators, ensuring reliable underground cable protection across the UAE. Manufactured at our ISO 9001:2015 certified facility.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب مجاري الاتصالات في الإمارات، أنابيب مجاري PVC-U مصممة ومعتمدة خصيصاً للبنية التحتية لاتصالات ودو. تلبي أنابيب D54 و D56 و D57 المواصفات الصارمة المطلوبة من مشغلي الاتصالات الرائدين في الإمارات، لضمان حماية موثوقة للكابلات تحت الأرض في دبي وأبوظبي والشارقة وكل الإمارات.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes, le principal fabricant de tuyaux de télécommunications duct dans le UAE, fabrique des tuyaux duces PVC-U duct spécifiquement conçus et approuvés pour les infrastructures de télécommunications Etisalat et DU. Nos tuyaux D54, D56 et D57 duct répondent aux spécifications strictes requises par les principaux opérateurs de télécommunications de UAE, ​​garantissant une protection fiable des câbles souterrains à travers le UAE. Mfabriqués dans notre installation certifiée ISO 9001:2015.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -280,14 +376,28 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-etisalat-du-specifications-table",
       title: "Etisalat & DU specifications",
@@ -327,6 +437,20 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };
 
 
@@ -339,11 +463,14 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Pipes — BS 3505/06",
   titleAr: "أنابيب مجاري PVC — BS 3505/06",
-  shortDescription: "Imperial duct pipes to BS 3505/06 — PN 6 to PN 15, ½″–12″.",
+    titleFr: `PVC Duct Tuyaux — BS 3505/06`,
+    shortDescription: "Imperial duct pipes to BS 3505/06 — PN 6 to PN 15, ½″–12″.",
   shortDescriptionAr: "أنابيب مجاري إنشية وفق BS 3505/06 — PN 6 إلى PN 15، ½″–12″.",
-  overview: "Crown Plastic Pipes / Fittings manufactures PVC-U duct pipes to BS 3505/06 British Standards, offering a comprehensive range from ½″ to 12″ in pressure classes from non-pressure (Class-O) to PN 15 (Class-E). Trusted by contractors across the UAE for underground cable protection in residential, commercial, and infrastructure projects. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyaux impériaux duct à BS 3505/06 — PN 6 à PN 15, ½″–12″.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PVC-U duct pipes to BS 3505/06 British Standards, offering a comprehensive range from ½″ to 12″ in pressure classes from non-pressure (Class-O) to PN 15 (Class-E). Trusted by contractors across the UAE for underground cable protection in residential, commercial, and infrastructure projects. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب مجاري PVC-U وفق المعايير البريطانية BS 3505/06، بنطاق شامل من ½″ إلى 12″ بفئات ضغط من غير ضغط (Class-O) إلى PN 15 (Class-E). موثوقة من المقاولين في دبي وأبوظبي والخليج لحماية الكابلات تحت الأرض.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux PVC-U duct selon les normes britanniques BS 3505/06, offrant une gamme complète de ½″ à 12″ dans des classes de pression allant de sans pression (Classe-O) à PN 15 (Classe-E). Approuvé par les entrepreneurs du UAE pour la protection des câbles souterrains dans les projets résidentiels, commerciaux et d'infrastructure. Producé dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -352,14 +479,28 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-bs-3505-table",
       title: "BS 3505/06 Imperial size Pressure Pipes",
@@ -416,6 +557,20 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };
 
 
@@ -428,11 +583,14 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
   categorySlug: 'pvc-duct-pipes',
   title: "PVC Duct Non-Standard Pipes",
   titleAr: "أنابيب مجاري PVC غير القياسية",
-  shortDescription: "Non-standard duct pipes for specialized projects — 75–160 mm.",
+    titleFr: `PVC Duct Tuyaux non standards`,
+    shortDescription: "Non-standard duct pipes for specialized projects — 75–160 mm.",
   shortDescriptionAr: "أنابيب مجاري غير قياسية للمشاريع المتخصصة — 75–160 مم.",
-  overview: "Crown Plastic Pipes / Fittings manufactures non-standard PVC-U duct pipes for specialized project requirements across the UAE and GCC. Available in 75 mm, 90 mm, 110 mm, and 160 mm sizes, these pipes cater to unique cable protection needs that fall outside conventional standards. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyaux duct non standard pour projets spécialisés — 75–160 mm.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures non-standard PVC-U duct pipes for specialized project requirements across the UAE and GCC. Available in 75 mm, 90 mm, 110 mm, and 160 mm sizes, these pipes cater to unique cable protection needs that fall outside conventional standards. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب مجاري PVC-U غير قياسية لمتطلبات المشاريع المتخصصة في الإمارات والخليج. متوفرة بمقاسات 75 مم و 90 مم و 110 مم و 160 مم. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux PVC-U duct non standard pour les exigences de projets spécialisés dans les UAE et GCC. Disponibles dans les tailles 75 mm, 90 mm, 110 mm et 160 mm, ces tuyaux répondent à des besoins uniques en matière de protection des câbles qui dépassent les normes conventionnelles. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Compliance with NEMA TC 2, TC 6 & 8, and ASTM F 512 standards","Standard sizes available in both Metric (DIN 8062) and Imperial (BS 3505/06) dimensions","Specific formulations for normal duty (EPC 40) and heavy-duty (EPC 80) applications","Specialized designs for Encased Burial (EB) and Direct Burial (DB) requirements","Available in standard lengths of 5.8 meters or customized to project requirements","Manufactured in standard colors including Black and Dark Grey"],
   featuresAr: [
     'مطابقة لمعايير NEMA TC 2 و TC 6 و 8 و ASTM F 512 — مصنع رائد في الإمارات',
     'مقاسات قياسية متوفرة بالمتري (DIN 8062) والإنشي (BS 3505/06)',
@@ -441,14 +599,28 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
     'متوفرة بأطوال قياسية 5.8 متر أو مخصصة حسب متطلبات المشروع',
     'مصنعة بألوان قياسية تشمل الأسود والرمادي الداكن',
   ],
-  applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
+    featuresFr: [
+            `Conformité avec NEMA TC 2, TC 6 & 8 et ASTM F 512 standards`,
+            `Tailles standard disponibles en dimensions métriques (DIN 8062) et impériales (BS 3505/06)`,
+            `Formulations spécifiques pour les applications normales à duty (EPC 40) et lourdes à duty (EPC 80)`,
+            `Conceptions spécialisées pour les exigences d’enfouissement enfermé (EB) et d’enfouissement direct (DB)`,
+            `Disponible en longueurs standard de 5.8 meters ou personnalisé selon les exigences du projet`,
+            `Fabriqué dans des couleurs standard, notamment le noir et le gris foncé`
+          ],
+    applications: ["Underground telecommunications infrastructure following Etisalat & DU specifications","Electrical wire and cable protection for underground installations","Concrete-encased and direct burial electrical tubing and conduits","Street lighting and utility network ducting for major urban developments"],
   applicationsAr: [
     'البنية التحتية للاتصالات تحت الأرض وفق مواصفات اتصالات ودو',
     'حماية الأسلاك والكابلات الكهربائية للتركيبات تحت الأرض',
     'أنابيب ومجاري كهربائية مغلفة بالخرسانة ومدفونة مباشرة',
     'إنارة الشوارع ومجاري شبكات المرافق للتطويرات العمرانية الكبرى',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Infrastructure de télécommunications souterraine suivant les spécifications Etisalat & DU`,
+            `Protection des fils et câbles électriques pour installations souterraines`,
+            `Tubes et conduits électriques enrobés de béton et enterrés directement`,
+            `Éclairage public et réseau électrique du adapté aux grands développements urbains`
+          ],
+    pipesTables: [
     {
       id: "pvc-duct-pipes-non-standard-duct-pipe-table",
       title: "NON-STANDARD DUCT PIPE",
@@ -489,4 +661,18 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
       'تجنب الملحقات غير المتطابقة؛ استخدم مقابس ومجاري وأغطية قياسية',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Utilisez EPC 40 pour les applications normales au-dessus du sol ou enrobées de béton.`,
+            `Sélectionnez EPC 80 pour les applications lourdes nécessitant une épaisseur de paroi plus élevée`,
+            `Assurez-vous que les ducts de type EB sont encastrés dans une installation en béton during.`,
+            `Utiliser le type DB ducts pour un enterrement direct sans avoir besoin d'un enrobage en béton`
+          ],
+          donts: [
+            `Ne pas utiliser la série EB ducts pour des applications enfouies directement sans enrobage de béton.`,
+            `Évitez d'utiliser des tuyaux de classe O (sans pression) pour les applications nécessitant des pressions de service spécifiées.`,
+            `Ne dépassez pas les pressions nominales de service spécifiées pour les tuyaux de la série PN à 20°C`,
+            `Évitez les accessoires dépareillés ; utilisez des douilles, des embouts et des embouchures standard duct pour des connexions sécurisées`
+          ]
+        }
 };

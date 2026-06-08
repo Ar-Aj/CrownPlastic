@@ -7,7 +7,7 @@ import { useState, useMemo } from 'react';
 import Link from '@/components/common/LocaleLink';
 import { PageHeader, AnimateOnScroll } from '@/components/common';
 import Icon from '@/components/ui/Icon';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage, type Language } from '@/context/LanguageContext';
 import { FAQPageSchema } from '@/components/schemas/FAQPageSchema';
 import { BreadcrumbSchema } from '@/components/schemas/BreadcrumbSchema';
 import { FAQItem } from '@/config/faqs';
@@ -254,7 +254,7 @@ interface FAQAccordionProps {
   faq: FAQItem;
   isExpanded: boolean;
   onToggle: () => void;
-  language: 'en' | 'ar';
+  language: Language;
 }
 
 function FAQAccordion({ faq, isExpanded, onToggle, language }: FAQAccordionProps) {

@@ -14,7 +14,9 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Produce /route/index.html instead of /route.html for clean URLs on Apache
+  // Produce /route/index.html instead of /route.html for clean URLs on Apache.
+  // IMPORTANT: All canonical URLs MUST include a trailing slash to match this setting.
+  // If changed, update ALL canonical/alternates URLs in layout.tsx and page metadata.
   trailingSlash: true,
 };
 

@@ -15,11 +15,14 @@ export const hdpePipes5mpaPe63: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — 5 MPa (PE63) — ISO 4427 / DIN 8074",
   titleAr: "أنابيب HDPE — 5 ميجاباسكال (PE63) — ISO 4427 / DIN 8074",
-  shortDescription: "PE63 HDPE pipes — SDR 7.4 to SDR 33, PN 3.2–16, dn 16–400 mm.",
+    titleFr: `HDPE Tuyaux — 5 MPa (PE63) — ISO 4427 / DIN 8074`,
+    shortDescription: "PE63 HDPE pipes — SDR 7.4 to SDR 33, PN 3.2–16, dn 16–400 mm.",
   shortDescriptionAr: "أنابيب HDPE درجة PE63 — SDR 7.4 إلى SDR 33، PN 3.2–16، قطر 16–400 مم.",
-  overview: "Crown Plastic Pipes / Fittings, a leading HDPE pipe manufacturer in the UAE, produces PE63 grade high-density polyethylene pipes to ISO 4427 / DIN 8074 / EN 12201 standards. Rated at 5 MPa with wall thicknesses spanning SDR 7.4 (PN16) to SDR 33 (PN3.2), these pipes serve municipal water distribution, agricultural irrigation, and underground infrastructure across the UAE. Manufactured from 100% virgin polyethylene with 2.5% carbon black for superior UV resistance at our ISO 9001:2015 certified Umm Al Quwain facility.",
+    shortDescriptionFr: `Tuyaux PE63 HDPE — SDR 7.4 à SDR 33, PN 3.2–16, dn 16–400 mm.`,
+    overview: "Crown Plastic Pipes / Fittings, a leading HDPE pipe manufacturer in the UAE, produces PE63 grade high-density polyethylene pipes to ISO 4427 / DIN 8074 / EN 12201 standards. Rated at 5 MPa with wall thicknesses spanning SDR 7.4 (PN16) to SDR 33 (PN3.2), these pipes serve municipal water distribution, agricultural irrigation, and underground infrastructure across the UAE. Manufactured from 100% virgin polyethylene with 2.5% carbon black for superior UV resistance at our ISO 9001:2015 certified Umm Al Quwain facility.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية، الشركة الرائدة في تصنيع أنابيب HDPE في الإمارات، أنابيب بولي إيثيلين عالي الكثافة درجة PE63 وفق معايير ISO 4427 / DIN 8074 / EN 12201. بتصنيف 5 ميجاباسكال بسمك جدار يمتد من SDR 7.4 (PN16) إلى SDR 33 (PN3.2). مصنعة من بولي إيثيلين خام 100% مع 2.5% كربون أسود لمقاومة فائقة للأشعة فوق البنفسجية في منشأتنا المعتمدة ISO 9001:2015 بأم القيوين.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes / Fittings, l'un des principaux fabricants de tuyaux HDPE dans le UAE, fabrique des tuyaux en polyéthylène haute densité de qualité PE63 selon les normes ISO 4427 / DIN 8074 / EN 12201. Évalués à 5 MPa avec des épaisseurs de paroi allant de SDR 7.4 (PN16) à SDR 33 (PN3.2), ces tuyaux desservent la distribution d'eau municipale, l'irrigation agricole et les infrastructures souterraines à travers le UAE. M, fabriqués à partir de polyéthylène vierge 100% avec du noir de carbone 2.5% pour une résistance supérieure aux UV dans notre Umm Al Quwain certifié ISO 9001:2015. installation.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -28,14 +31,28 @@ export const hdpePipes5mpaPe63: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-5mpa-pe63-table",
       title: "5 MPa (PE63)",
@@ -97,6 +114,20 @@ export const hdpePipes5mpaPe63: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -109,11 +140,14 @@ export const hdpePipes63mpaPe80: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — 6.3 MPa (PE80) — ISO 4427 / DIN 8074",
   titleAr: "أنابيب HDPE — 6.3 ميجاباسكال (PE80) — ISO 4427 / DIN 8074",
-  shortDescription: "PE80 HDPE pipes — SDR 9 to SDR 21, PN 6–16, dn 16–400 mm.",
+    titleFr: `HDPE Tuyaux — 6.3 MPa (PE80) — ISO 4427 / DIN 8074`,
+    shortDescription: "PE80 HDPE pipes — SDR 9 to SDR 21, PN 6–16, dn 16–400 mm.",
   shortDescriptionAr: "أنابيب HDPE درجة PE80 — SDR 9 إلى SDR 21، PN 6–16، قطر 16–400 مم.",
-  overview: "Crown Plastic Pipes / Fittings manufactures PE80 grade HDPE pipes to ISO 4427 / DIN 8074 / EN 12201 standards, rated at 6.3 MPa. Ideal for main water distribution networks, gas pipelines, and heavy-duty industrial applications across the UAE and GCC. Available in dn 16–400 mm with butt-fusion and HDD trenchless installation compatibility. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
+    shortDescriptionFr: `Tuyaux PE80 HDPE — SDR 9 à SDR 21, PN 6–16, dn 16–400 mm.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures PE80 grade HDPE pipes to ISO 4427 / DIN 8074 / EN 12201 standards, rated at 6.3 MPa. Ideal for main water distribution networks, gas pipelines, and heavy-duty industrial applications across the UAE and GCC. Available in dn 16–400 mm with butt-fusion and HDD trenchless installation compatibility. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification and a 50-year service life guarantee.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب HDPE درجة PE80 وفق معايير ISO 4427 / DIN 8074 / EN 12201، بتصنيف 6.3 ميجاباسكال. مثالية لشبكات توزيع المياه الرئيسية وخطوط الغاز والتطبيقات الصناعية الشاقة في الإمارات والخليج. متوفرة بأقطار dn 16–400 مم مع توافق اللحام التناكبي والحفر الأفقي الموجه HDD.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux de qualité PE80 HDPE selon les normes ISO 4427 / DIN 8074 / EN 12201, évalués à 6.3 MPa. Idéal pour les principaux réseaux de distribution d'eau, les gazoducs et les applications industrielles lourdes duty dans les UAE et GCC. Disponible en dn 16–400 mm avec compatibilité avec fusion bout à bout et installation sans tranchée HDD. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015 et une garantie de durée de vie de 50 ans.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -122,14 +156,28 @@ export const hdpePipes63mpaPe80: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-6-3mpa-pe80-table",
       title: "6.3 MPa (PE80)",
@@ -188,6 +236,20 @@ export const hdpePipes63mpaPe80: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -200,11 +262,14 @@ export const hdpePipes8mpaPe100: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — 8 MPa (PE100) — ISO 4427 / DIN 8074",
   titleAr: "أنابيب HDPE — 8 ميجاباسكال (PE100) — ISO 4427 / DIN 8074",
-  shortDescription: "PE100 HDPE pipes — SDR 11 to SDR 17, PN 10–16, dn 32–400 mm.",
+    titleFr: `HDPE Tuyaux — 8 MPa (PE100) — ISO 4427 / DIN 8074`,
+    shortDescription: "PE100 HDPE pipes — SDR 11 to SDR 17, PN 10–16, dn 32–400 mm.",
   shortDescriptionAr: "أنابيب HDPE درجة PE100 — SDR 11 إلى SDR 17، PN 10–16، قطر 32–400 مم.",
-  overview: "Crown Plastic Pipes / Fittings manufactures the highest-grade PE100 HDPE pipes to ISO 4427 / DIN 8074 / EN 12201 standards, rated at 8 MPa. These premium pipes deliver maximum design stress for the most demanding infrastructure projects including main water supply, high-pressure gas, and HDD trenchless installations across the UAE. Available in dn 32–400 mm. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyaux PE100 HDPE — SDR 11 à SDR 17, PN 10–16, dn 32–400 mm.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures the highest-grade PE100 HDPE pipes to ISO 4427 / DIN 8074 / EN 12201 standards, rated at 8 MPa. These premium pipes deliver maximum design stress for the most demanding infrastructure projects including main water supply, high-pressure gas, and HDD trenchless installations across the UAE. Available in dn 32–400 mm. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب HDPE الأعلى درجة PE100 وفق معايير ISO 4427 / DIN 8074 / EN 12201، بتصنيف 8 ميجاباسكال. توفر أقصى إجهاد تصميم لأكثر مشاريع البنية التحتية تطلباً بما في ذلك الإمداد الرئيسي بالمياه والغاز عالي الضغط والحفر الأفقي الموجه في دبي وأبوظبي والخليج.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux PE100 HDPE de la plus haute qualité selon les normes ISO 4427 / DIN 8074 / EN 12201, évalués à 8 MPa. Ces tuyaux haut de gamme offrent une contrainte de conception maximale pour les projets d'infrastructure les plus exigeants, notamment les installations principales d'approvisionnement en eau, de gaz à haute pression et de FDH sans tranchée dans le UAE. Disponible en dn 32–400 mm. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -213,14 +278,28 @@ export const hdpePipes8mpaPe100: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-8mpa-pe100-table",
       title: "8 MPa (PE100)",
@@ -274,6 +353,20 @@ export const hdpePipes8mpaPe100: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -286,11 +379,14 @@ export const hdpePipesDin8072: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — DIN 8072 (LLDPE)",
   titleAr: "أنابيب HDPE — DIN 8072 (LLDPE)",
-  shortDescription: "LLDPE pipes to DIN 8072 — 2.5 to 10 bar, 10–110 mm.",
+    titleFr: `HDPE Tuyaux — DIN 8072 (LLDPE)`,
+    shortDescription: "LLDPE pipes to DIN 8072 — 2.5 to 10 bar, 10–110 mm.",
   shortDescriptionAr: "أنابيب LLDPE وفق DIN 8072 — 2.5 إلى 10 بار، 10–110 مم.",
-  overview: "Crown Plastic Pipes / Fittings manufactures LLDPE pipes to DIN 8072 standards for agricultural irrigation and low-pressure water distribution across the UAE and GCC. Available in 10–110 mm with pressure ratings from 2.5 to 10 bar, these flexible pipes are ideal for drip irrigation systems and landscape watering in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `LLDPE conduit à DIN 8072 — 2,5 à 10 bar, 10–110 mm.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures LLDPE pipes to DIN 8072 standards for agricultural irrigation and low-pressure water distribution across the UAE and GCC. Available in 10–110 mm with pressure ratings from 2.5 to 10 bar, these flexible pipes are ideal for drip irrigation systems and landscape watering in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب LLDPE وفق معايير DIN 8072 للري الزراعي وتوزيع المياه منخفض الضغط في الإمارات والخليج. متوفرة بمقاسات 10–110 مم بتصنيفات ضغط من 2.5 إلى 10 بار. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tuyaux LLDPE selon les normes DIN 8072 pour l'irrigation agricole et la distribution d'eau à basse pression à travers les UAE et GCC. Disponibles en 10–110 mm avec des pressions nominales de 2,5 à 10 bar, ces tuyaux flexibles sont idéaux pour les systèmes d'irrigation goutte à goutte et l'arrosage paysager dans le UAE. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -299,14 +395,28 @@ export const hdpePipesDin8072: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-din-8072-table",
       title: "DIN 8072",
@@ -354,6 +464,20 @@ export const hdpePipesDin8072: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -366,11 +490,14 @@ export const hdpePipesAsaeS435: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — ASAE S435 (Drip Tubing)",
   titleAr: "أنابيب HDPE — ASAE S435 (أنابيب التنقيط)",
-  shortDescription: "LLDPE drip tubing to ASAE S435 — ½″ to 1″ for precision irrigation.",
+    titleFr: `HDPE Tuyaux — ASAE S435 (tuyaux goutte à goutte)`,
+    shortDescription: "LLDPE drip tubing to ASAE S435 — ½″ to 1″ for precision irrigation.",
   shortDescriptionAr: "أنابيب تنقيط LLDPE وفق ASAE S435 — ½″ إلى 1″ للري الدقيق.",
-  overview: "Crown Plastic Pipes / Fittings manufactures LLDPE drip tubing to ASAE S435 standards for precision agricultural irrigation across the UAE and GCC. Available in ½″ to 1″ sizes with working pressures up to 4.8 bar, these pipes are engineered for drip irrigation systems in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tube goutte à goutte LLDPE conforme à ASAE S435 — ½″ à 1″ pour une irrigation de précision.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures LLDPE drip tubing to ASAE S435 standards for precision agricultural irrigation across the UAE and GCC. Available in ½″ to 1″ sizes with working pressures up to 4.8 bar, these pipes are engineered for drip irrigation systems in the UAE. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب تنقيط LLDPE وفق معايير ASAE S435 للري الزراعي الدقيق في الإمارات والخليج. متوفرة بمقاسات ½″ إلى 1″ بضغط تشغيل حتى 4.8 بار. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tubes d'égouttement LLDPE conformes aux normes ASAE S435 pour l'irrigation agricole de précision sur les UAE et GCC. Disponibles en tailles ½″ à 1″ avec des pressions de service jusqu'à 4.8 bar, ces tuyaux sont conçus pour les systèmes d'irrigation goutte à goutte dans le UAE. Producé dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -379,14 +506,28 @@ export const hdpePipesAsaeS435: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-asae-s435-table",
       title: "ASAE S435",
@@ -432,6 +573,20 @@ export const hdpePipesAsaeS435: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -444,11 +599,14 @@ export const hdpePipesAustStd2698: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — AUST STD 2698-1:1984 (Drip Tubing)",
   titleAr: "أنابيب HDPE — المعيار الأسترالي 2698-1:1984 (أنابيب التنقيط)",
-  shortDescription: "LLDPE drip tubing to Australian Standard 2698-1:1984.",
+    titleFr: `HDPE Tuyaux — AUST STD 2698-1:1984 (tuyaux goutte à goutte)`,
+    shortDescription: "LLDPE drip tubing to Australian Standard 2698-1:1984.",
   shortDescriptionAr: "أنابيب تنقيط LLDPE وفق المعيار الأسترالي 2698-1:1984.",
-  overview: "Crown Plastic Pipes / Fittings manufactures LLDPE drip tubing to Australian Standard 2698-1:1984 for agricultural applications across the UAE and GCC. Available in coil sizes of 250 meters with working pressures of 3–4 bar, these pipes are perfect for large-scale drip irrigation systems. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyau d'égouttement LLDPE conforme à la norme australienne 2698-1:1984.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures LLDPE drip tubing to Australian Standard 2698-1:1984 for agricultural applications across the UAE and GCC. Available in coil sizes of 250 meters with working pressures of 3–4 bar, these pipes are perfect for large-scale drip irrigation systems. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب تنقيط LLDPE وفق المعيار الأسترالي 2698-1:1984 للتطبيقات الزراعية في الإمارات والخليج. متوفرة بلفات 250 متر بضغط تشغيل 3–4 بار. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes / Fittings fabrique des tubes d'égouttement LLDPE conformes à la norme australienne 2698-1:1984 pour les applications agricoles dans les domaines UAE et GCC. Disponibles en tailles de serpentins de 250 meters avec des pressions de service de 3 à 4 bar, ces tuyaux sont parfaits pour les systèmes d'irrigation goutte à goutte à grande échelle. Produced dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -457,14 +615,28 @@ export const hdpePipesAustStd2698: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-aust-std-2698-table",
       title: "AUST STD 2698-1",
@@ -512,6 +684,20 @@ export const hdpePipesAustStd2698: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 
@@ -524,11 +710,14 @@ export const hdpePipesBs197267: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "HDPE Pipes — BS 1972/67 (LDPE)",
   titleAr: "أنابيب HDPE — BS 1972/67 (LDPE)",
-  shortDescription: "LDPE pipes to BS 1972/67 — Class B, C, D — ⅜″ to 4″.",
+    titleFr: `HDPE Tuyaux — BS 1972/67 (LDPE)`,
+    shortDescription: "LDPE pipes to BS 1972/67 — Class B, C, D — ⅜″ to 4″.",
   shortDescriptionAr: "أنابيب LDPE وفق BS 1972/67 — فئة B و C و D — ⅜″ إلى 4″.",
-  overview: "Crown Plastic Pipes / Fittings manufactures LDPE pipes to BS 1972/67 British Standards in Class B, C, and D pressure ratings. Available in ⅜″ to 4″ (17–114 mm OD), these pipes serve low-to-medium pressure water distribution and irrigation applications across the UAE and GCC. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
+    shortDescriptionFr: `Tuyaux LDPE vers BS 1972/67 — Classe B, C, D — ⅜″ vers 4″.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures LDPE pipes to BS 1972/67 British Standards in Class B, C, and D pressure ratings. Available in ⅜″ to 4″ (17–114 mm OD), these pipes serve low-to-medium pressure water distribution and irrigation applications across the UAE and GCC. Produced at our Umm Al Quwain facility with ISO 9001:2015 certification.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية أنابيب LDPE وفق المعايير البريطانية BS 1972/67 بتصنيفات ضغط فئة B و C و D. متوفرة بمقاسات ⅜″ إلى 4″. مصنعة في منشأتنا بأم القيوين بشهادة ISO 9001:2015.",
-  features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des tuyaux LDPE selon les normes britanniques BS 1972/67 dans les classes de pression nominales B, C et D. Disponibles en ⅜″ à 4″ (17–114 mm OD), ces tuyaux servent aux applications de distribution d'eau et d'irrigation à basse à moyenne pression dans les UAE et GCC. Producé dans notre usine d'Umm Al Quwain avec la certification ISO 9001:2015.`,
+    features: ["Produced from 100% virgin polyethylene for maximum reliability.","Contains a minimum of 2.5% carbon black for superior UV resistance.","Excellent design stress capabilities ranging from PE63 to PE100 material grades.","Compliance with international standards including ISO 4427, DIN 8074, and EN 12201.","Safe for potable water supplies and drinking water distribution.","High design coefficient 'C' of no less than 1.25 for enhanced safety margins."],
   featuresAr: [
     'مصنعة من بولي إيثيلين خام 100% لأقصى موثوقية',
     'تحتوي على 2.5% كربون أسود كحد أدنى لمقاومة فائقة للأشعة فوق البنفسجية',
@@ -537,14 +726,28 @@ export const hdpePipesBs197267: ProductDetailConfig = {
     'آمنة لإمدادات المياه الصالحة للشرب وتوزيع مياه الشرب',
     'معامل تصميم C عالي لا يقل عن 1.25 لهوامش سلامة محسّنة',
   ],
-  applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
+    featuresFr: [
+            `Producé à partir de polyéthylène vierge 100% pour une fiabilité maximale.`,
+            `Contient un minimum de noir de carbone 2.5% pour une résistance supérieure aux UV.`,
+            `Excellentes capacités de contrainte de conception allant des qualités de matériaux PE63 à PE100.`,
+            `Conformité aux normes internationales, notamment ISO 4427, DIN 8074 et EN 12201.`,
+            `Sans danger pour l'approvisionnement en eau potable et la distribution d'eau potable.`,
+            `Coefficient de conception élevé « C » d'au moins 1,25 pour des marges de sécurité améliorées.`
+          ],
+    applications: ["Municipal water distribution and potable water supply networks.","Agricultural irrigation systems, including drip tubing and drip irrigation.","High-pressure gas network distribution and industrial piping.","Underground infrastructure requiring trenchless (HDD) installation."],
   applicationsAr: [
     'توزيع المياه البلدية وشبكات إمداد المياه الصالحة للشرب',
     'أنظمة الري الزراعي بما في ذلك أنابيب التنقيط والري بالتنقيط',
     'توزيع شبكات الغاز عالي الضغط والأنابيب الصناعية',
     'البنية التحتية تحت الأرض التي تتطلب تركيب بدون خنادق (HDD)',
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux municipaux de distribution d’eau et d’approvisionnement en eau potable.`,
+            `Systèmes d'irrigation agricole, y compris les tubes goutte à goutte et l'irrigation goutte à goutte.`,
+            `Réseau de distribution de gaz haute pression et tuyauterie industrielle.`,
+            `Infrastructure souterraine nécessitant une installation sans tranchée (HDD).`
+          ],
+    pipesTables: [
     {
       id: "hdpe-pipes-bs-1972-67-table",
       title: "BS 1972/67",
@@ -602,6 +805,20 @@ export const hdpePipesBs197267: ProductDetailConfig = {
       'تجنب استخدام مواد لا تتوافق مع معامل التصميم C المطلوب لسلامة الضغط',
     ],
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le soudage par fusion bout à bout est effectué à des températures correctes pour la qualité de PE spécifique.`,
+            `Vérifiez que les valeurs SDR et PN correspondent à la contrainte de conception hydrostatique de l'application prévue.`,
+            `Utilisez des tuyaux contenant suffisamment de noir de carbone pour une exposition prolongée aux UV en extérieur.`,
+            `Suivez les directives MRS pour vous assurer que le tuyau atteint sa durée de vie nominale de 50 ans à 20°C.`
+          ],
+          donts: [
+            `N'utilisez pas de canalisations non potables pour la distribution d'eau potable.`,
+            `Évitez de dépasser la contrainte de conception hydrostatique maximale autorisée spécifiée pour le matériau.`,
+            `N'installez pas de tuyaux présentant des rayures profondes ou des dommages physiques dépassant les tolérances standard.`,
+            `Évitez d'utiliser des matériaux qui ne sont pas conformes au coefficient de conception « C » requis pour la sécurité de la pression.`
+          ]
+        }
 };
 
 // ═════════════════════════════════════════════════════════════════════════════
@@ -613,11 +830,14 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
   categorySlug: 'hdpe-pipes',
   title: "Polyethylene Pipe Rolls (Class C / HD)",
   titleAr: "لفات أنابيب البولي إيثيلين (الفئة C / HD)",
-  shortDescription: "High-density polythene (HDPE) pipe rolls designed for flexible, long-distance agricultural, irrigation, and industrial fluid distribution.",
+    titleFr: `Rouleaux de tuyaux en polyéthylène (Classe C / HD)`,
+    shortDescription: "High-density polythene (HDPE) pipe rolls designed for flexible, long-distance agricultural, irrigation, and industrial fluid distribution.",
   shortDescriptionAr: "لفات أنابيب بولي إيثيلين عالي الكثافة (HDPE) مصممة للتوزيع المرن للسوائل لمسافات طويلة في الزراعة والري والصناعة.",
-  overview: "Crown Plastic Pipes / Fittings manufactures high-quality Polyethylene Pipe Rolls (Class C / HD) designed for robust and flexible fluid transportation. Ideal for agricultural irrigation, industrial fluid distribution, and long-distance water supply networks across the UAE and GCC. These continuous length rolls minimize the need for jointing, ensuring leak-free performance over vast distances.",
+    shortDescriptionFr: `Rouleaux de tuyaux en polyéthylène haute densité (HDPE) conçus pour la distribution flexible et longue distance de fluides agricoles, d'irrigation et industriels.`,
+    overview: "Crown Plastic Pipes / Fittings manufactures high-quality Polyethylene Pipe Rolls (Class C / HD) designed for robust and flexible fluid transportation. Ideal for agricultural irrigation, industrial fluid distribution, and long-distance water supply networks across the UAE and GCC. These continuous length rolls minimize the need for jointing, ensuring leak-free performance over vast distances.",
   overviewAr: "تصنّع كراون للأنابيب والوصلات البلاستيكية لفات أنابيب بولي إيثيلين عالية الجودة (الفئة C / HD) مصممة لنقل السوائل بمرونة وقوة. مثالية للري الزراعي وتوزيع السوائل الصناعية وشبكات إمداد المياه لمسافات طويلة في الإمارات والخليج.",
-  features: [
+    overviewFr: `Crown Plastic Pipes/Raccords fabrique des rouleaux de tuyaux en polyéthylène de haute qualité (classe C/HD) conçus pour le transport de fluides robustes et flexibles. Idéal pour l'irrigation agricole, la distribution de fluides industriels et les réseaux d'approvisionnement en eau longue distance à travers les UAE et GCC. Ces rouleaux de longueur continue minimisent le besoin de jointage, garantissant ainsi des performances sans fuite sur de grandes distances.`,
+    features: [
     "High flexibility for easy installation",
     "Excellent resistance to environmental stress cracking",
     "UV stabilized for outdoor deployment",
@@ -629,7 +849,13 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
     "مثبتة ضد الأشعة فوق البنفسجية للاستخدام الخارجي",
     "متوفرة بأطوال مستمرة لتقليل الوصلات"
   ],
-  applications: [
+    featuresFr: [
+            `Grande flexibilité pour une installation facile`,
+            `Excellente résistance à la fissuration sous contrainte environnementale`,
+            `Stabilisé aux UV pour un déploiement en extérieur`,
+            `Disponible en longueurs continues pour minimiser les joints`
+          ],
+    applications: [
     "Agricultural and landscape irrigation networks",
     "Long-distance water supply lines",
     "Industrial fluid distribution",
@@ -641,7 +867,13 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
     "توزيع السوائل الصناعية",
     "أنظمة تحويل المياه المؤقتة"
   ],
-  pipesTables: [
+    applicationsFr: [
+            `Réseaux d'irrigation agricole et paysagère`,
+            `Conduites d'approvisionnement en eau longue distance`,
+            `Distribution du liquide industrial`,
+            `Systèmes de dérivation d'eau temporaires`
+          ],
+    pipesTables: [
     {
       id: "polyethylene-pipe-rolls-table",
       title: "Polyethylene Pipe Rolls",
@@ -694,4 +926,14 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
     dos: ["تأكد من فك اللفات بعناية لتجنب الالتواء.", "استخدم وصلات ضغط أو لحام تناكبي مناسبة."],
     donts: ["لا تتجاوز تصنيفات الضغط المحددة.", "تجنب سحب اللفات فوق الأسطح الصخرية الحادة."]
   },
+    dosDontsFr: {
+          dos: [
+            `Assurez-vous que le déroulement est effectué avec soin pour éviter les torsions.`,
+            `Utilisez des raccords à compression ou à fusion bout à bout appropriés.`
+          ],
+          donts: [
+            `Ne dépassez pas les pressions nominales indiquées.`,
+            `Évitez de faire glisser les rouleaux sur des surfaces rocheuses pointues.`
+          ]
+        }
 };

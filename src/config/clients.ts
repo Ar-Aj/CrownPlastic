@@ -164,12 +164,16 @@ export interface Testimonial {
   id: string;
   quote: string;
   quoteAr?: string;
+  quoteFr?: string;
   author: string;
   authorAr?: string;
+  authorFr?: string;
   role: string;
   roleAr?: string;
+  roleFr?: string;
   company: string;
   companyAr?: string;
+  companyFr?: string;
   rating: number;
   project?: string;
   image?: string;
