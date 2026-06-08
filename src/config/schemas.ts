@@ -56,7 +56,7 @@ export const certifications = [
   { name: 'ISO 9001:2015', description: 'Quality Management System' },
   { name: 'ISO 14001:2015', description: 'Environmental Management System' },
   { name: 'OHSAS 18001:2007', description: 'Occupational Health & Safety' },
-  { name: 'BS EN 1452', description: 'UPVC Pressure Pipes for Water Supply' },
+  { name: 'BS EN 1452', description: 'PVC Pressure Pipes for Water Supply' },
   { name: 'DIN 8062', description: 'UPVC Pipes - Dimensions' },
   { name: 'BS EN 805', description: 'Water Supply Requirements' },
   { name: 'ASTM D1785', description: 'Standard for PVC Plastic Pipe' },
@@ -74,7 +74,7 @@ export const productStandards = {
   duct: ['DIN 8062', 'NEMA TC-2', 'Etisalat/DU Specifications'],
 };
 
-// UPVC Pressure Pipe specifications for Product schemas
+// PVC Pressure Pipe specifications for Product schemas
 export interface ProductSpecification {
   sku: string;
   name: string;
@@ -91,41 +91,41 @@ export interface ProductSpecification {
   availability: 'InStock' | 'OutOfStock' | 'PreOrder';
 }
 
-// Generate UPVC Pressure Pipe product variants
+// Generate PVC Pressure Pipe product variants
 export const upvcPressurePipeSpecs: ProductSpecification[] = [
   // 20mm variants
-  { sku: 'UPVC-BS1452-20-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 20mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 20مم PN10', diameter: '20mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Irrigation', 'Industrial water transport'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-20-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 20mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 20مم PN16', diameter: '20mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'High-pressure systems'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-20-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 20mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 20مم PN10', diameter: '20mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Irrigation', 'Industrial water transport'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-20-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 20mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 20مم PN16', diameter: '20mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'High-pressure systems'], availability: 'InStock' },
 
   // 25mm variants
-  { sku: 'UPVC-BS1452-25-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 25mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 25مم PN10', diameter: '25mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Irrigation'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-25-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 25mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 25مم PN16', diameter: '25mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'High-pressure systems'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-25-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 25mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 25مم PN10', diameter: '25mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Irrigation'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-25-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 25mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 25مم PN16', diameter: '25mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'High-pressure systems'], availability: 'InStock' },
 
   // 32mm variants
-  { sku: 'UPVC-BS1452-32-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 32mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 32مم PN10', diameter: '32mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Residential plumbing'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-32-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 32mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 32مم PN16', diameter: '32mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Commercial buildings'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-32-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 32mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 32مم PN10', diameter: '32mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Residential plumbing'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-32-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 32mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 32مم PN16', diameter: '32mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Potable water supply', 'Commercial buildings'], availability: 'InStock' },
 
   // 50mm variants
-  { sku: 'UPVC-BS1452-50-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 50mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 50مم PN10', diameter: '50mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Water distribution', 'Industrial piping'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-50-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 50mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 50مم PN16', diameter: '50mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['High-pressure water supply', 'Municipal systems'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-50-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 50mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 50مم PN10', diameter: '50mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Water distribution', 'Industrial piping'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-50-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 50mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 50مم PN16', diameter: '50mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['High-pressure water supply', 'Municipal systems'], availability: 'InStock' },
 
   // 63mm variants
-  { sku: 'UPVC-BS1452-63-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 63mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 63مم PN10', diameter: '63mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Water distribution', 'Agriculture irrigation'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-63-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 63mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 63مم PN16', diameter: '63mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['High-pressure systems', 'Infrastructure projects'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-63-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 63mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 63مم PN10', diameter: '63mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['Water distribution', 'Agriculture irrigation'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-63-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 63mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 63مم PN16', diameter: '63mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '3m, 5m, 6m', application: ['High-pressure systems', 'Infrastructure projects'], availability: 'InStock' },
 
   // 110mm variants
-  { sku: 'UPVC-BS1452-110-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 110mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 110مم PN10', diameter: '110mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Municipal water supply', 'Large-scale irrigation'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-110-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 110mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 110مم PN16', diameter: '110mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['High-pressure mains', 'Commercial projects'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-110-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 110mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 110مم PN10', diameter: '110mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Municipal water supply', 'Large-scale irrigation'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-110-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 110mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 110مم PN16', diameter: '110mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['High-pressure mains', 'Commercial projects'], availability: 'InStock' },
 
   // 160mm variants
-  { sku: 'UPVC-BS1452-160-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 160mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 160مم PN10', diameter: '160mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Water transmission', 'Infrastructure'], availability: 'InStock' },
-  { sku: 'UPVC-BS1452-160-PN16', name: 'UPVC Pressure Pipe BS EN 1452 - 160mm PN16', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 160مم PN16', diameter: '160mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['High-pressure transmission', 'Industrial'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-160-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 160mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 160مم PN10', diameter: '160mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Water transmission', 'Infrastructure'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-160-PN16', name: 'PVC Pressure Pipe BS EN 1452 - 160mm PN16', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 160مم PN16', diameter: '160mm', pressureRating: 'PN16', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['High-pressure transmission', 'Industrial'], availability: 'InStock' },
 
   // 200mm variant
-  { sku: 'UPVC-BS1452-200-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 200mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 200مم PN10', diameter: '200mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Main distribution', 'Municipal projects'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-200-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 200mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 200مم PN10', diameter: '200mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Main distribution', 'Municipal projects'], availability: 'InStock' },
 
   // 250mm variant
-  { sku: 'UPVC-BS1452-250-PN10', name: 'UPVC Pressure Pipe BS EN 1452 - 250mm PN10', nameAr: 'أنبوب ضغط UPVC بمعيار BS EN 1452 - 250مم PN10', diameter: '250mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (UPVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Trunk mains', 'Large infrastructure'], availability: 'InStock' },
+  { sku: 'UPVC-BS1452-250-PN10', name: 'PVC Pressure Pipe BS EN 1452 - 250mm PN10', nameAr: 'أنبوب ضغط PVC بمعيار BS EN 1452 - 250مم PN10', diameter: '250mm', pressureRating: 'PN10', material: 'Unplasticized Polyvinyl Chloride (PVC)', standards: ['BS EN 1452', 'DIN 8062', 'ISO 1452'], temperatureRange: '-10°C to +40°C', color: 'Grey', length: '5m, 6m', application: ['Trunk mains', 'Large infrastructure'], availability: 'InStock' },
 ];
 
 // Service area configurations for LocalBusiness schemas
@@ -179,8 +179,8 @@ export const serviceAreas: ServiceArea[] = [
       { dayOfWeek: ['Friday'], opens: '08:00', closes: '11:30' },
       { dayOfWeek: ['Friday'], opens: '13:00', closes: '19:00' },
     ],
-    description: 'Crown Plastic Pipes Abu Dhabi - Premium UPVC pressure pipes and fittings supplier for Abu Dhabi construction and infrastructure projects. ISO 9001:2015 certified manufacturer. Delivering to Mussafah, Al Ain, and all Emirates.',
-    descriptionAr: 'Crown Plastic Pipes أبوظبي - مورد أنابيب وتوصيلات الضغط UPVC الممتازة لمشاريع البناء والبنية التحتية في أبوظبي. مصنع معتمد ISO 9001:2015. التوصيل إلى مصفح والعين وجميع الإمارات.',
+    description: 'Crown Plastic Pipes Abu Dhabi - Premium PVC Pressure pipes and fittings supplier for Abu Dhabi construction and infrastructure projects. ISO 9001:2015 certified manufacturer. Delivering to Mussafah, Al Ain, and all Emirates.',
+    descriptionAr: 'Crown Plastic Pipes أبوظبي - مورد أنابيب وتوصيلات الضغط PVC الممتازة لمشاريع البناء والبنية التحتية في أبوظبي. مصنع معتمد ISO 9001:2015. التوصيل إلى مصفح والعين وجميع الإمارات.',
   },
   {
     slug: 'upvc-pipes-sharjah',
@@ -268,7 +268,7 @@ export function getProductSchemaData(spec: ProductSpecification, baseUrl: string
       name: companyInfo.name,
       url: companyInfo.url,
     },
-    category: 'Plumbing Pipes > UPVC Pressure Pipes',
+    category: 'Plumbing Pipes > PVC Pressure Pipes',
     material: spec.material,
     color: spec.color,
     additionalProperty: [
@@ -356,7 +356,7 @@ export function getLocalBusinessSchemaData(area: ServiceArea, baseUrl: string, l
       '@type': 'OfferCatalog',
       name: 'Plastic Pipes & Fittings Catalog',
       itemListElement: [
-        { '@type': 'OfferCatalog', name: 'UPVC Pressure Pipes' },
+        { '@type': 'OfferCatalog', name: 'PVC Pressure Pipes' },
         { '@type': 'OfferCatalog', name: 'UPVC Drainage Pipes' },
         { '@type': 'OfferCatalog', name: 'PPR Hot & Cold Water Pipes' },
         { '@type': 'OfferCatalog', name: 'HDPE Pipes' },

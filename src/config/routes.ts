@@ -46,12 +46,12 @@ export const mainNavItems: NavItem[] = [
     children: [
       { label: 'UPVC Drainage Pipes', labelAr: 'أنابيب الصرف UPVC', href: '/products/upvc-drainage-pipes', description: 'BS 5255 / BS EN 1329 | BS EN 1401' },
       { label: 'UPVC Drainage Fittings', labelAr: 'وصلات الصرف UPVC', href: '/products/upvc-drainage-fittings', description: 'BS EN 1329 | BS EN 1401 | Pushfit' },
-      { label: 'uPVC High Pressure Pipes', labelAr: 'أنابيب الضغط العالي PVC', href: '/products/pvc-high-pressure-pipes', description: 'ISO 4422 | DIN 8061/62 | BS EN ISO 1452 | ASTM' },
-      { label: 'uPVC High Pressure Fittings', labelAr: 'وصلات الضغط العالي PVC', href: '/products/pvc-high-pressure-fittings', description: 'DIN 8063 | BS EN 1452:3 | Valves' },
+      { label: 'PVC High Pressure Pipes', labelAr: 'أنابيب الضغط العالي PVC', href: '/products/pvc-high-pressure-pipes', description: 'ISO 4422 | DIN 8061/62 | BS EN ISO 1452 | ASTM' },
+      { label: 'PVC High Pressure Fittings', labelAr: 'وصلات الضغط العالي PVC', href: '/products/pvc-high-pressure-fittings', description: 'DIN 8063 | BS EN 1452:3 | Valves' },
       { label: 'PVC SCH 40 Fittings', labelAr: 'وصلات PVC جدول 40', href: '/products/pvc-sch-40-fittings', description: 'ASTM D 2466' },
-      { label: 'uPVC Duct Pipes', labelAr: 'أنابيب مجاري PVC', href: '/products/pvc-duct-pipes', description: 'NEMA TC | DIN 8062 | Etisalat & DU' },
-      { label: 'uPVC Duct Fittings', labelAr: 'وصلات مجاري PVC', href: '/products/pvc-duct-fittings', description: 'Cable protection fittings' },
-      { label: 'uPVC Conduit Pipes', labelAr: 'أنابيب القنوات PVC', href: '/products/pvc-conduit-pipes', description: '1250N/750N/320N | SCH 40 | SCH 80' },
+      { label: 'PVC Duct Pipes', labelAr: 'أنابيب مجاري PVC', href: '/products/pvc-duct-pipes', description: 'NEMA TC | DIN 8062 | Etisalat & DU' },
+      { label: 'PVC Duct Fittings', labelAr: 'وصلات مجاري PVC', href: '/products/pvc-duct-fittings', description: 'Cable protection fittings' },
+      { label: 'PVC Conduit Pipes', labelAr: 'أنابيب القنوات PVC', href: '/products/pvc-conduit-pipes', description: '1250N/750N/320N | SCH 40 | SCH 80' },
       { label: 'PP-R Pipes', labelAr: 'أنابيب PP-R', href: '/products/ppr-pipes', description: 'PN10 | PN16 | PN20 | PN25' },
       { label: 'HDPE Pipes', labelAr: 'أنابيب HDPE', href: '/products/hdpe-pipes', description: 'PE63 | PE80 | PE100 | DIN 8072' },
       { label: 'PEX Pipes', labelAr: 'أنابيب PEX', href: '/products/pex-pipes', description: 'PN 12.5 & PN 20' },
@@ -135,12 +135,12 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: 'UPVC Drainage Pipes', labelAr: 'أنابيب الصرف UPVC', href: '/products/upvc-drainage-pipes' },
       { label: 'UPVC Drainage Fittings', labelAr: 'وصلات الصرف UPVC', href: '/products/upvc-drainage-fittings' },
-      { label: 'uPVC High Pressure Pipes', labelAr: 'أنابيب الضغط العالي PVC', href: '/products/pvc-high-pressure-pipes' },
-      { label: 'uPVC High Pressure Fittings', labelAr: 'وصلات الضغط العالي PVC', href: '/products/pvc-high-pressure-fittings' },
+      { label: 'PVC High Pressure Pipes', labelAr: 'أنابيب الضغط العالي PVC', href: '/products/pvc-high-pressure-pipes' },
+      { label: 'PVC High Pressure Fittings', labelAr: 'وصلات الضغط العالي PVC', href: '/products/pvc-high-pressure-fittings' },
       { label: 'PVC SCH 40 Fittings', labelAr: 'وصلات PVC جدول 40', href: '/products/pvc-sch-40-fittings' },
-      { label: 'uPVC Duct Pipes', labelAr: 'أنابيب مجاري PVC', href: '/products/pvc-duct-pipes' },
-      { label: 'uPVC Duct Fittings', labelAr: 'وصلات مجاري PVC', href: '/products/pvc-duct-fittings' },
-      { label: 'uPVC Conduit Pipes', labelAr: 'أنابيب القنوات PVC', href: '/products/pvc-conduit-pipes' },
+      { label: 'PVC Duct Pipes', labelAr: 'أنابيب مجاري PVC', href: '/products/pvc-duct-pipes' },
+      { label: 'PVC Duct Fittings', labelAr: 'وصلات مجاري PVC', href: '/products/pvc-duct-fittings' },
+      { label: 'PVC Conduit Pipes', labelAr: 'أنابيب القنوات PVC', href: '/products/pvc-conduit-pipes' },
       { label: 'PP-R Pipes', labelAr: 'أنابيب PP-R', href: '/products/ppr-pipes' },
       { label: 'HDPE Pipes', labelAr: 'أنابيب HDPE', href: '/products/hdpe-pipes' },
       { label: 'PEX Pipes', labelAr: 'أنابيب PEX', href: '/products/pex-pipes' },
@@ -221,8 +221,8 @@ export const allRoutes = [
   { path: '/products/upvc-drainage-fittings/upvc-drainage-fittings-bs-en-1401', label: 'UPVC Drainage Fittings BS EN 1401', description: 'Underground drainage fittings' },
   { path: '/products/upvc-drainage-fittings/upvc-drainage-fittings-pushfit', label: 'UPVC Drainage Pushfit Fittings', description: 'Push-fit drainage fittings' },
 
-  // 3) uPVC High Pressure Pipes
-  { path: '/products/pvc-high-pressure-pipes', label: 'uPVC High Pressure Pipes', description: 'ISO 4422-2 | DIN 8061/62 | BS EN ISO 1452-2 | BS 3505 | ASTM' },
+  // 3) PVC High Pressure Pipes
+  { path: '/products/pvc-high-pressure-pipes', label: 'PVC High Pressure Pipes', description: 'ISO 4422-2 | DIN 8061/62 | BS EN ISO 1452-2 | BS 3505 | ASTM' },
   { path: '/products/pvc-high-pressure-pipes/pvc-hp-pipes-iso-4422', label: 'PVC HP Pipes ISO 4422-2', description: 'ISO 4422-2:1996 pressure pipes' },
   { path: '/products/pvc-high-pressure-pipes/pvc-hp-pipes-din-8061-62', label: 'PVC HP Pipes DIN 8061/62', description: 'DIN 8061/62 pressure pipes' },
   { path: '/products/pvc-high-pressure-pipes/pvc-hp-pipes-bs-en-iso-1452-2', label: 'PVC HP Pipes BS EN ISO 1452-2', description: 'BS EN ISO 1452-2 pressure pipes' },
@@ -231,8 +231,8 @@ export const allRoutes = [
   { path: '/products/pvc-high-pressure-pipes/pvc-hp-pipes-astm-d1785', label: 'PVC HP Pipes ASTM D 1785', description: 'ASTM D 1785 SCH40/SCH80 pipes' },
   { path: '/products/pvc-high-pressure-pipes/pvc-hp-pipes-astm-d2241', label: 'PVC HP Pipes ASTM D 2241', description: 'ASTM D 2241 pipes' },
 
-  // 4) uPVC High Pressure Fittings
-  { path: '/products/pvc-high-pressure-fittings', label: 'uPVC High Pressure Fittings', description: 'DIN 8063 | BS EN 1452:3/BS 4346 | Valves' },
+  // 4) PVC High Pressure Fittings
+  { path: '/products/pvc-high-pressure-fittings', label: 'PVC High Pressure Fittings', description: 'DIN 8063 | BS EN 1452:3/BS 4346 | Valves' },
   { path: '/products/pvc-high-pressure-fittings/pvc-hp-fittings-din-8063', label: 'PVC HP Fittings DIN 8063', description: 'DIN 8063 fittings' },
   { path: '/products/pvc-high-pressure-fittings/pvc-hp-fittings-bs-en-1452-3', label: 'PVC HP Fittings BS EN 1452:3', description: 'BS EN 1452:3/BS 4346 fittings' },
   { path: '/products/pvc-high-pressure-fittings/pvc-hp-fittings-valves', label: 'PVC HP Valves', description: 'PVC high pressure valves' },
@@ -241,24 +241,24 @@ export const allRoutes = [
   { path: '/products/pvc-sch-40-fittings', label: 'PVC SCH 40 Fittings', description: 'ASTM D 2466 Schedule 40 fittings' },
   { path: '/products/pvc-sch-40-fittings/pvc-sch-40-fittings-astm-d2466', label: 'PVC SCH 40 Fittings ASTM D 2466', description: 'ASTM D 2466 SCH 40 fittings' },
 
-  // 6) uPVC Duct Pipes
-  { path: '/products/pvc-duct-pipes', label: 'uPVC Duct Pipes', description: 'NEMA TC | DIN 8062 | Etisalat & DU cable ducting' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-nema-tc-2', label: 'uPVC Duct Pipes NEMA TC 2', description: 'NEMA TC 2:2003 duct pipes' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-nema-tc-6-8', label: 'uPVC Duct Pipes NEMA TC 6 & 8', description: 'NEMA TC 6 & 8/ASTM F 512 duct pipes' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-din-8062', label: 'uPVC Duct Pipes DIN 8062', description: 'DIN 8062 duct pipes' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-etisalat-du', label: 'uPVC Duct Pipes Etisalat & DU', description: 'Etisalat & DU approved duct pipes' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-bs-3505-06', label: 'uPVC Duct Pipes BS 3505/06', description: 'BS 3505/06 duct pipes' },
-  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-non-standard', label: 'uPVC Duct Non-Standard Pipes', description: 'Non-standard duct pipes' },
+  // 6) PVC Duct Pipes
+  { path: '/products/pvc-duct-pipes', label: 'PVC Duct Pipes', description: 'NEMA TC | DIN 8062 | Etisalat & DU cable ducting' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-nema-tc-2', label: 'PVC Duct Pipes NEMA TC 2', description: 'NEMA TC 2:2003 duct pipes' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-nema-tc-6-8', label: 'PVC Duct Pipes NEMA TC 6 & 8', description: 'NEMA TC 6 & 8/ASTM F 512 duct pipes' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-din-8062', label: 'PVC Duct Pipes DIN 8062', description: 'DIN 8062 duct pipes' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-etisalat-du', label: 'PVC Duct Pipes Etisalat & DU', description: 'Etisalat & DU approved duct pipes' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-bs-3505-06', label: 'PVC Duct Pipes BS 3505/06', description: 'BS 3505/06 duct pipes' },
+  { path: '/products/pvc-duct-pipes/pvc-duct-pipes-non-standard', label: 'PVC Duct Non-Standard Pipes', description: 'Non-standard duct pipes' },
 
-  // 7) uPVC Duct Fittings
-  { path: '/products/pvc-duct-fittings', label: 'uPVC Duct Fittings', description: 'Duct fittings for cable protection' },
-  { path: '/products/pvc-duct-fittings/pvc-duct-fittings-standard', label: 'uPVC Duct Fittings', description: 'uPVC duct fittings' },
+  // 7) PVC Duct Fittings
+  { path: '/products/pvc-duct-fittings', label: 'PVC Duct Fittings', description: 'Duct fittings for cable protection' },
+  { path: '/products/pvc-duct-fittings/pvc-duct-fittings-standard', label: 'PVC Duct Fittings', description: 'PVC Duct fittings' },
 
-  // 8) uPVC Conduit Pipes
-  { path: '/products/pvc-conduit-pipes', label: 'uPVC Conduit Pipes', description: '1250N/750N/320N | SCH 40 | SCH 80 conduit' },
-  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-compression-force', label: 'uPVC Conduit 1250N/750N/320N', description: 'Compression force rated conduit' },
-  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-sch-40', label: 'uPVC Conduit SCH 40', description: 'Schedule 40 conduit pipes' },
-  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-sch-80', label: 'uPVC Conduit SCH 80', description: 'Schedule 80 conduit pipes' },
+  // 8) PVC Conduit Pipes
+  { path: '/products/pvc-conduit-pipes', label: 'PVC Conduit Pipes', description: '1250N/750N/320N | SCH 40 | SCH 80 conduit' },
+  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-compression-force', label: 'PVC Conduit 1250N/750N/320N', description: 'Compression force rated conduit' },
+  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-sch-40', label: 'PVC Conduit SCH 40', description: 'Schedule 40 conduit pipes' },
+  { path: '/products/pvc-conduit-pipes/pvc-conduit-pipes-sch-80', label: 'PVC Conduit SCH 80', description: 'Schedule 80 conduit pipes' },
 
   // 9) PP-R Pipes
   { path: '/products/ppr-pipes', label: 'PP-R Pipes', description: 'PN10 | PN16 | PN20 | PN25 hot & cold water systems' },

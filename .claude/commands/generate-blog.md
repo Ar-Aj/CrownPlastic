@@ -44,6 +44,7 @@ Generate a new `BlogArticle` object for `src/content/blogs.ts` with **exactly 5 
 > - This applies to ALL sections, headings, meta descriptions, FAQ answers, and CTA text.
 > - The ONLY exception is inside fixed heading templates where the phrase would be unnaturally long (e.g., "Crown Lab Data" heading remains unchanged as it references an internal facility label, not the brand identity).
 
+- **Strict Nomenclature**: Never use 'uPVC'. Use 'UPVC' strictly for Drainage categories. Use 'PVC' for High Pressure, Duct, Conduit, and SCH 40 categories.
 - **ZERO generic marketing phrases.** No "high quality", "durable solutions", "in today's fast-paced infrastructure", "trusted partner", "innovative solutions". Every sentence must contain at least one specific number, standard reference, or measurable claim.
 - **"Pipes / Fittings" mandate**: Wherever the word "pipes" appears generically to describe the product category, use "Pipes / Fittings" (paired phrasing per brand rules).
 - **Technical standards are LOCKED**: Never alter, abbreviate, or rephrase standards like BS EN 1452, ISO 4422-2:1996, DIN 8061/62, ASTM D 1785, SDR11, PN10, NEMA TC 2, etc. Use them exactly as written.

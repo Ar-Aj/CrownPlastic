@@ -238,7 +238,7 @@ export const standards: Standard[] = [
   { code: 'DIN 8062: 2009', description: 'Unplasticized polyvinyl chloride (PVC-U) pipes - Dimensions' },
   { code: 'SASO 14', description: 'Pipes for Potable Water of Unplasticized Plastic (Poly Vinyl Chloride)' },
   { code: 'SASO 15', description: 'Methods of Testing of Unplasticized Polyvinyl Chloride (UPVC) Pipes for Potable Water' },
-  { code: 'ISO 4422-2', description: 'uPVC Pipes and fittings for water supply Superseded by ISO 1452-2/ BS EN ISO 1452' },
+  { code: 'ISO 4422-2', description: 'PVC Pipes and fittings for water supply Superseded by ISO 1452-2/ BS EN ISO 1452' },
   { code: 'ASTM D 1785', description: 'Standard Specification for Poly(Vinyl Chloride) (PVC) Plastic Pipe, Schedules 40, 80, and 120' },
   { code: 'ASTM D 2241', description: 'Standard Specification for Poly(Vinyl Chloride) (PVC) Pressure-Rated Pipe (SDR Series)' },
   { code: 'ASTM D 2467', description: 'Standard Specification for Poly(Vinyl Chloride) (PVC) Plastic Pipe Fittings, Schedule 80' },
@@ -258,7 +258,7 @@ export const innovationPillars: InnovationPillar[] = [
   {
     id: 'virgin-material',
     title: 'Top-tier Raw Material',
-    description: 'All pipes manufactured from premium virgin uPVC compound, ensuring maximum strength, durability, and chemical resistance.',
+    description: 'All pipes manufactured from premium virgin PVC compound, ensuring maximum strength, durability, and chemical resistance.',
     icon: 'certified',
     specs: [
       { property: 'Material Grade', value: 'Top-tier' },
