@@ -552,7 +552,6 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
   const marketCity = localizedValue(language, market.city || market.country, market.cityAr || market.countryAr, market.cityFr || market.countryFr);
   const marketCtaText = localizedValue(language, market.cta.text, market.cta.textAr, market.cta.textFr);
   const marketDeliveryTime = localizedValue(language, market.deliveryTime, market.deliveryTimeAr, market.deliveryTimeFr);
-  const marketFocus = localizedValue(language, market.focus, market.focusAr, market.focusFr);
 
   const breadcrumbItems = [
     { name: t('markets.regional.breadcrumb_home'), url: baseUrl },

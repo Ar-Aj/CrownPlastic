@@ -3,7 +3,7 @@
 import Link from '@/components/common/LocaleLink';
 import { AnimateOnScroll, PageHeader } from '@/components/common';
 import { blogArticles } from '@/content/blogs';
-import { useT } from '@/i18n';
+import { useT, type TranslationPath } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
 import { localizedValue, localizedArray } from '@/lib/i18n-utils';
 import { getRelatedSolutions } from '@/lib/linkingEngine';
@@ -30,7 +30,7 @@ export default function BlogArticleClient({ article }: { article: (typeof blogAr
   const title = localizedValue(language, article.title, article.titleAr, article.titleFr);
   const excerpt = localizedValue(language, article.shortExcerpt, article.shortExcerptAr, article.shortExcerptFr);
   const aeoQuestion = localizedValue(language, article.aeoQuestion, article.aeoQuestionAr, article.aeoQuestionFr);
-  const localizedTag = t(`blogs.tags.${article.tag}` as any) || article.tag;
+  const localizedTag = t(`blogs.tags.${article.tag}` as TranslationPath) || article.tag;
   const tagColorClass = tagColors[article.tag] || 'bg-gray-100 text-gray-800';
 
   // Get related articles (exclude current)
@@ -197,7 +197,7 @@ export default function BlogArticleClient({ article }: { article: (typeof blogAr
                     className="block bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
                   >
                     <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${tagColors[related.tag] || 'bg-gray-100 text-gray-800'}`}>
-                      {t(`blogs.tags.${related.tag}` as any) || related.tag}
+                      {t(`blogs.tags.${related.tag}` as TranslationPath) || related.tag}
                     </span>
                     <h3 className="font-bold text-gray-900 mb-2 line-clamp-2">
                       {relatedTitle}

@@ -20,7 +20,7 @@ function getBlogPostsData(language: string, t: (key: TranslationPath) => string)
     title: localizedValue(language, article.title, article.titleAr, article.titleFr),
     shortExcerpt: localizedValue(language, article.shortExcerpt, article.shortExcerptAr, article.shortExcerptFr),
     estimatedReadTime: article.estimatedReadTime,
-    tag: t(`blogs.tags.${article.tag}` as any) || article.tag,
+    tag: t(`blogs.tags.${article.tag}` as TranslationPath) || article.tag,
     slug: `/blogs/${article.slug}`,
     publishedDate: article.publishedDate,
     thumbnailSrc: article.coverImage || '',

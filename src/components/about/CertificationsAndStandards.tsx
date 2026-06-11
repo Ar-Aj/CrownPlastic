@@ -72,7 +72,7 @@ export default function CertificationsAndStandards() {
       issuingBody: t(`about.certifications.items.${c.id}.issuing_body` as TranslationPath),
       benefit: t(`about.certifications.items.${c.id}.benefit` as TranslationPath),
     })),
-    [t]);
+    [t, language]);
 
 
   // Translate standard descriptions
@@ -86,7 +86,7 @@ export default function CertificationsAndStandards() {
         description: t(`about.certifications.standards_table.items.${key}.description` as TranslationPath),
       };
     }),
-    [t]);
+    [t, language]);
 
   useEffect(() => {
     if (!isAutoPlaying || !isInView || translatedCerts.length === 0) return;

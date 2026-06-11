@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils';
 import { PvcPipeProgress } from './PvcPipeProgress';
 import { useT, TranslationPath } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
-import { localizedValue } from '@/lib/i18n-utils';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -80,7 +79,7 @@ export default function PipingJourney() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = useState(false);
   const t = useT();
-  const { language } = useLanguage();
+
 
   // Build translated stories
   const journeyStories: JourneyStory[] = useMemo(() =>
@@ -89,7 +88,7 @@ export default function PipingJourney() {
       title: t(`about.journey.stories.${s.id}.title` as TranslationPath),
       tagline: t(`about.journey.stories.${s.id}.tagline` as TranslationPath),
     })),
-    [t, language]);
+    [t]);
 
   // Build translated events (year, title, highlight)
   const translatedEvents = useMemo(() =>

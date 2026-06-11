@@ -604,7 +604,7 @@ function ItemChip({
     const hasImage = !!item.image && !imgError;
     
     const catData = getCategoryBySlug(categorySlug);
-    const product = catData?.subProducts.find((p: any) => p.slug === item.id);
+    const product = catData?.subProducts.find((p: { slug: string }) => p.slug === item.id);
 
     return (
         <Link href={detailHref} className="block group">

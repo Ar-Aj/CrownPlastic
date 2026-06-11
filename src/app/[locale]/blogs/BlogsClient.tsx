@@ -37,7 +37,7 @@ function BlogCard({
   const tagColorClass = tagColors[article.tag] || 'bg-gray-100 text-gray-800';
   const title = localizedValue(language, article.title, article.titleAr, article.titleFr);
   const excerpt = localizedValue(language, article.shortExcerpt, article.shortExcerptAr, article.shortExcerptFr);
-  const localizedTag = t(`blogs.tags.${article.tag}` as any) || article.tag;
+  const localizedTag = t(`blogs.tags.${article.tag}` as TranslationPath) || article.tag;
 
   return (
     <article className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow group h-full flex flex-col">
