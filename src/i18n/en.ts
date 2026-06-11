@@ -328,6 +328,7 @@ export const en = {
     },
   },
 
+
   // About Page
   about: {
     hero: {
