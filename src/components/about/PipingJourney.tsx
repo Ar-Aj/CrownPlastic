@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { PvcPipeProgress } from './PvcPipeProgress';
 import { useT, TranslationPath } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PIPING JOURNEY - Scroll-Pinned Story Strip
@@ -79,6 +80,7 @@ export default function PipingJourney() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = useState(false);
   const t = useT();
+  const { language } = useLanguage();
 
   // Build translated stories
   const journeyStories: JourneyStory[] = useMemo(() =>
@@ -87,7 +89,7 @@ export default function PipingJourney() {
       title: t(`about.journey.stories.${s.id}.title` as TranslationPath),
       tagline: t(`about.journey.stories.${s.id}.tagline` as TranslationPath),
     })),
-    [t]);
+    [t, language]);
 
   // Build translated events (year, title, highlight)
   const translatedEvents = useMemo(() =>
@@ -236,23 +238,6 @@ function DesktopPinnedStrip({ t, journeyStories, translatedEvents }: { t: Return
 
           {/* Story Content - Vertically centered in remaining space */}
           <div className="flex-1 flex flex-col justify-center 2xl:justify-start 2xl:pt-10 pb-8">
-            {/* Story Title */}
-            <div className="text-center mb-3">
-              <AnimatePresence mode="wait">
-                <motion.h3
-                  key={activeIndex}
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="text-lg lg:text-xl font-bold text-gray-900"
-                >
-                  {activeStory.title}
-                </motion.h3>
-              </AnimatePresence>
-              <p className="text-primary font-medium text-sm">{activeStory.yearRange}</p>
-            </div>
-
             {/* Horizontal 3D PVC Pipe with Story Nodes */}
             <div className="relative py-6 mb-3 lg:mb-4 2xl:py-8 2xl:mb-6">
               <div className="absolute inset-x-4 lg:inset-x-12 top-1/2 -translate-y-1/2">

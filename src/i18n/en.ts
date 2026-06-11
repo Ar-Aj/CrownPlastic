@@ -144,6 +144,13 @@ export const en = {
     logo_carousel: {
       title: 'Trusted by Industry Leaders',
       subtitle: 'Partnering with the most prestigious developers and contractors across the Gulf region',
+      categories: {
+        developer: 'Developer',
+        contractor: 'Contractor',
+        government: 'Government',
+        distributor: 'Distributor',
+        certification: 'Certification',
+      },
     },
     products_section: {
       label: 'Our Products',
@@ -199,34 +206,48 @@ export const en = {
           title: 'Three Decades of Excellence',
           description: 'Established in 1995, Crown Plastic has grown to become a leading manufacturer and distributor of UPVC, PVC, PP-R, PEX & HDPE Pipes / Fittings Systems in the GCC & Beyond',
           stat_label: 'Years',
+          short_title: 'Experience',
         },
         range: {
           title: 'Comprehensive Product Range',
           description: 'Over 5,000 product variants across 7 families: PVC Pressure, Drainage, Conduit, Duct, PPR, HDPE, and custom fabrications.',
           stat_label: 'SKUs',
+          short_title: 'Products',
         },
         certifications: {
           title: 'Triple ISO Certified',
           description: 'ISO 9001:2015 (Quality), ISO 14001:2015 (Environmental), and OHSAS 18001:2007 (Safety) certified manufacturing.',
           stat_label: 'ISO',
+          short_title: 'Certifications',
         },
         exports: {
           title: 'Global Export Network',
           description: 'Serving all 6 GCC nations and exporting to 52+ countries across the Middle East, Asia, and Africa.',
           stat_label: 'Countries',
+          short_title: 'Exports',
         },
         materials: {
           title: 'Top-tier Raw Materials',
           description: 'Pipes and fittings manufactured from top-tier raw material compounds for clean surfaces, stable dimensions and reliable long-term service.',
+          short_title: 'Materials',
         },
         standards: {
           title: 'Standards',
           description: 'Pipes / Fittings Systems designed and tested to recognised international standards for quality, safety and long-term performance across infrastructure and building projects.',
+          short_title: 'Standards',
         },
         technology: {
           title: 'Technology',
           description: 'Modern extrusion lines, in-house tooling and automated checks ensure consistent UPVC, PVC, PP-R, PEX & HDPE Pipes / Fittings production for demanding GCC & Beyond Projects.',
+          short_title: 'Technology',
         },
+      },
+      tags: {
+        Catalogue: 'Catalogue',
+        ISO: 'ISO',
+        Exports: 'Exports',
+        Manufacturing: 'Manufacturing',
+        Standards: 'Standards',
       },
     },
     // HeroSection component (standalone hero, used outside main homepage)
@@ -272,11 +293,42 @@ export const en = {
     mediaContactTitle: 'Media Contact',
     mediaContactSubtitle: 'For press inquiries, interviews, and media requests:',
     mediaContactEmail: 'info@crownplasticuae.com',
+    featured_videos_badge: 'Featured Videos',
+    watch_on_youtube: 'Watch on YouTube',
+    no_videos: 'No videos available.',
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // Blogs Hub & Article Detail Pages
+  blogs: {
+    pageTitle: 'Piping Solutions Blog',
+    pageSubtitle: 'Expert guides, technical articles, and best practices for UPVC, PPR, and HDPE piping systems in UAE and GCC construction projects.',
+    breadcrumb: 'Blog',
+    readArticle: 'Read Article',
+    ctaTitle: 'Need Technical Support for Your Project?',
+    ctaSubtitle: 'Our engineering team is ready to help with product selection, specifications, and technical queries.',
+    ctaButton: 'Contact Our Team',
+    articleAnswers: 'This article answers:',
+    relatedTopics: 'Related Topics:',
+    exploreRelated: 'Explore Related Products & Resources',
+    regionalSolutions: 'Regional Pipes / Fittings Solutions',
+    regionalSolutionsSubtitle: 'Explore location-specific product data, compliance details, and project references.',
+    relatedArticles: 'Related Articles',
+    detailCtaTitle: 'Need Help Selecting the Right Piping System?',
+    detailCtaSubtitle: 'Our engineering team has 30+ years of experience helping GCC projects succeed.',
+    detailCtaContact: 'Contact Our Team',
+    detailCtaBrowse: 'Browse Products',
+    forPersona: 'For',
+    tags: {
+      'Technical Guide': 'Technical Guide',
+      'Project Insight': 'Project Insight',
+      'Compliance': 'Compliance',
+      'Product Comparison': 'Product Comparison',
+      'Installation': 'Installation',
+      'Industry News': 'Industry News',
+    },
+  },
+
   // About Page
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   about: {
     hero: {
       breadcrumbs: {
@@ -842,6 +894,7 @@ export const en = {
       stats_systems: 'Systems',
       stats_products: 'Products',
       know_more: 'Know More',
+      hub_label: 'Product Range',
       products: {
         // 1. UPVC Drainage Pipes
         upvc_drainage_pipes: {

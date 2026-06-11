@@ -242,7 +242,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
   ],
   colorLabel: 'black',
   downloads: [
-    { label: 'PVC Duct Fittings Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Fittings Catalogue (PDF)', labelAr: 'كتالوج وصلات مجاري PVC (PDF)', labelFr: 'Catalogue Raccords de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: [

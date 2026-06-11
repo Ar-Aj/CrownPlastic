@@ -144,6 +144,13 @@ export const ar = {
     logo_carousel: {
       title: 'موثوق به من قبل قادة الصناعة',
       subtitle: 'شراكة مع أرقى المطورين والمقاولين في جميع أنحاء منطقة الخليج',
+      categories: {
+        developer: 'مطور',
+        contractor: 'مقاول',
+        government: 'حكومة',
+        distributor: 'موزع',
+        certification: 'شهادة',
+      },
     },
     products_section: {
       label: 'منتجاتنا',
@@ -199,34 +206,48 @@ export const ar = {
           title: 'ثلاثة عقود من التميز',
           description: 'تأسست عام 1995، ونمت كراون بلاستيك لتصبح شركة رائدة في تصنيع وتوزيع أنظمة أنابيب / تجهيزات UPVC و PVC و PP-R و PEX و HDPE في دول الخليج وما بعدها',
           stat_label: 'عاماً',
+          short_title: 'خبرة',
         },
         range: {
           title: 'مجموعة منتجات شاملة',
           description: 'أكثر من 5000 متغير منتج عبر 7 عائلات: ضغط PVC، الصرف، القنوات، المجاري، PPR، HDPE، والتصنيع المخصص.',
           stat_label: 'SKUs',
+          short_title: 'منتجات',
         },
         certifications: {
           title: 'حاصل على 3 شهادات ISO',
           description: 'تصنيع معتمد حسب ISO 9001:2015 (الجودة)، و ISO 14001:2015 (البيئة)، و OHSAS 18001:2007 (السلامة).',
           stat_label: 'ISO',
+          short_title: 'شهادات',
         },
         exports: {
           title: 'شبكة تصدير عالمية',
           description: 'نخدم جميع دول GCC الست ونصدر إلى أكثر من 52 دولة في جميع أنحاء الشرق الأوسط وآسيا وإفريقيا.',
           stat_label: 'دولة',
+          short_title: 'صادرات',
         },
         materials: {
           title: 'مادة خام من الطراز الأول',
           description: 'يتم تصنيع الأنابيب والوصلات من مواد خام من الطراز الأول من مركبات PVC والبوليمر للحصول على أسطح نظيفة وأبعاد مستقرة وخدمة موثوقة طويلة الأجل.',
+          short_title: 'مواد',
         },
         standards: {
           title: 'المعايير',
           description: 'أنظمة الأنابيب / التجهيزات المصممة والمختبرة وفقاً للمعايير الدولية المعترف بها للجودة والسلامة والأداء طويل الأجل عبر مشاريع البنية التحتية والمباني.',
+          short_title: 'معايير',
         },
         technology: {
           title: 'التكنولوجيا',
           description: 'تضمن خطوط البثق الحديثة والأدوات الداخلية والفحوصات الآلية إنتاجاً متسقاً لأنابيب / تجهيزات UPVC و PVC و PP-R و PEX و HDPE لمشاريع دول الخليج وما بعدها المتطلبة.',
+          short_title: 'تكنولوجيا',
         },
+      },
+      tags: {
+        Catalogue: 'كتالوج',
+        ISO: 'ISO',
+        Exports: 'صادرات',
+        Manufacturing: 'تصنيع',
+        Standards: 'معايير',
       },
     },
     // HeroSection component (standalone hero, used outside main homepage)
@@ -272,6 +293,39 @@ export const ar = {
     mediaContactTitle: 'التواصل الإعلامي',
     mediaContactSubtitle: 'للاستفسارات الصحفية والمقابلات وطلبات الإعلام:',
     mediaContactEmail: 'info@crownplasticuae.com',
+    featured_videos_badge: 'فيديوهات مميزة',
+    watch_on_youtube: 'شاهد على يوتيوب',
+    no_videos: 'لا توجد فيديوهات متاحة.',
+  },
+
+  // Blogs Hub & Article Detail Pages
+  blogs: {
+    pageTitle: 'مدونة حلول الأنابيب',
+    pageSubtitle: 'أدلة متخصصة ومقالات تقنية وأفضل الممارسات لأنظمة أنابيب UPVC و PPR و HDPE في مشاريع البناء في الإمارات ودول مجلس التعاون الخليجي.',
+    breadcrumb: 'المدونة',
+    readArticle: 'قراءة المقالة',
+    ctaTitle: 'هل تحتاج دعمًا فنيًا لمشروعك؟',
+    ctaSubtitle: 'فريقنا الهندسي جاهز لمساعدتك في اختيار المنتجات والمواصفات والاستفسارات الفنية.',
+    ctaButton: 'تواصل مع فريقنا',
+    articleAnswers: 'هذا المقال يجيب عن:',
+    relatedTopics: 'مواضيع ذات صلة:',
+    exploreRelated: 'استكشف المنتجات والموارد ذات الصلة',
+    regionalSolutions: 'حلول الأنابيب / التجهيزات الإقليمية',
+    regionalSolutionsSubtitle: 'استكشف بيانات المنتجات الخاصة بالموقع وتفاصيل الامتثال ومراجع المشاريع.',
+    relatedArticles: 'مقالات ذات صلة',
+    detailCtaTitle: 'هل تحتاج مساعدة في اختيار نظام الأنابيب المناسب؟',
+    detailCtaSubtitle: 'فريقنا الهندسي يتمتع بخبرة أكثر من 30 عامًا في مساعدة مشاريع دول مجلس التعاون الخليجي على النجاح.',
+    detailCtaContact: 'تواصل مع فريقنا',
+    detailCtaBrowse: 'تصفح المنتجات',
+    forPersona: 'لـ',
+    tags: {
+      'Technical Guide': 'دليل فني',
+      'Project Insight': 'رؤية المشروع',
+      'Compliance': 'الامتثال',
+      'Product Comparison': 'مقارنة المنتجات',
+      'Installation': 'التركيب',
+      'Industry News': 'أخبار الصناعة',
+    },
   },
 
   // ─────────────────────────────────────────────────────────────
@@ -830,6 +884,7 @@ export const ar = {
       stats_systems: 'أنظمة',
       stats_products: 'منتجات',
       know_more: 'اعرف المزيد',
+      hub_label: 'مجموعة المنتجات',
       products: {
         // 1. UPVC Drainage Pipes
         upvc_drainage_pipes: {

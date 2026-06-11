@@ -720,7 +720,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
               {product.downloads.map((download, index) => (
                 <button
                   key={index}
-                  onClick={() => setViewerPdf({ src: download.href, title: download.label })}
+                  onClick={() => setViewerPdf({ src: download.href, title: localizedValue(language, download.label, download.labelAr, download.labelFr) })}
                   className="group w-full flex items-center gap-4 bg-white hover:shadow-lg hover:border-primary/30 px-6 py-5 rounded-xl font-medium transition-all border border-slate-200 text-left cursor-pointer"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -728,7 +728,7 @@ export default function ProductDetailLayout({ product }: ProductDetailLayoutProp
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-slate-900 group-hover:text-primary transition-colors mb-0.5">
-                      {download.label}
+                      {localizedValue(language, download.label, download.labelAr, download.labelFr)}
                     </h4>
                     <p className="text-xs text-primary flex items-center gap-1">
                       {t('products.detail_layout.downloads_view_document')}

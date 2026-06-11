@@ -5,13 +5,13 @@ import { allRegionalMarkets, saudiMarkets, uaeMarkets, gccMarkets } from '@/conf
 import { BreadcrumbSchema } from '@/components/schemas';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 const baseUrl = 'https://crownplasticuae.com';
 
 export default function MarketsLandingClient() {
     const t = useT();
     const { language } = useLanguage();
-    const isAr = language === 'ar';
 
     const breadcrumbItems = [
         { name: t('markets.landing.breadcrumb_home'), url: baseUrl },
@@ -92,17 +92,17 @@ export default function MarketsLandingClient() {
                                         >
                                             <div className="flex justify-between items-start mb-3">
                                                 <h3 className="font-bold text-gray-900 group-hover:text-blue-600">
-                                                    {isAr ? (market.cityAr || market.countryAr) : (market.city || market.country)}
+                                                    {localizedValue(language, market.city || market.country, market.cityAr || market.countryAr, market.cityFr || market.countryFr)}
                                                 </h3>
                                                 <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                                                     {market.certifications[0]}
                                                 </span>
                                             </div>
                                             <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                                                {isAr ? market.focusAr : market.focus}
+                                                {localizedValue(language, market.focus, market.focusAr, market.focusFr)}
                                             </p>
                                             <div className="flex justify-between items-center text-sm">
-                                                <span className="text-gray-500">{isAr ? market.deliveryTimeAr : market.deliveryTime}</span>
+                                                <span className="text-gray-500">{localizedValue(language, market.deliveryTime, market.deliveryTimeAr, market.deliveryTimeFr)}</span>
                                                 <span className="text-blue-600 group-hover:underline">
                                                     {t('markets.landing.learn_more')}
                                                 </span>

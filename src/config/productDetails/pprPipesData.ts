@@ -58,11 +58,11 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
       title: "SDR11 / PN10",
       columns: [
       { key: "part", label: "PART" },
-      { key: "dimensions", label: "DIMENSIONS" },
-      { key: "wall_thickness", label: "WALL THICKNESS" },
-      { key: "inner_diameter", label: "INNER DIAMETER" },
-      { key: "packing_unit", label: "PACKING UNIT" },
-      { key: "kg_mtr", label: "Kg/Mtr." }
+      { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
+      { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
+      { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
+      { key: "packing_unit", label: "PACKING UNIT", labelFr: 'UNITE D EMBALLAGE' },
+      { key: "kg_mtr", label: "Kg/Mtr.", labelFr: 'Kg/Mtr.' }
       ],
       rows: [
       { "part": "CPPR1020", "dimensions": "20", "wall_thickness": "1.9", "inner_diameter": "16.0", "packing_unit": "100 Mtrs", "kg_mtr": "0.107" },
@@ -79,7 +79,7 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PP-R Pipes Catalogue (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PP-R Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PP-R (PDF)', labelFr: 'Catalogue Tuyaux PP-R (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure use of ISO 9001:2015 certified quality management systems for installation oversight","Utilize thermo-fusion welding for secure, leak-free joints","Apply in high-pressure environments up to PN25 where specified","Check compatibility for agricultural and horticultural pipe networks"],
@@ -168,11 +168,11 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
       title: "SDR7.4 / PN16",
       columns: [
       { key: "part", label: "PART" },
-      { key: "dimensions", label: "DIMENSIONS" },
-      { key: "wall_thickness", label: "WALL THICKNESS" },
-      { key: "inner_diameter", label: "INNER DIAMETER" },
-      { key: "packing_unit", label: "PACKING UNIT" },
-      { key: "kg_mtr", label: "Kg/Mtr." }
+      { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
+      { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
+      { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
+      { key: "packing_unit", label: "PACKING UNIT", labelFr: 'UNITE D EMBALLAGE' },
+      { key: "kg_mtr", label: "Kg/Mtr.", labelFr: 'Kg/Mtr.' }
       ],
       rows: [
       { "part": "CPPR1620", "dimensions": "20", "wall_thickness": "2.8", "inner_diameter": "14.4", "packing_unit": "100 Mtrs", "kg_mtr": "0.147" },
@@ -189,7 +189,7 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PP-R Pipes Catalogue (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PP-R Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PP-R (PDF)', labelFr: 'Catalogue Tuyaux PP-R (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure use of ISO 9001:2015 certified quality management systems for installation oversight","Utilize thermo-fusion welding for secure, leak-free joints","Apply in high-pressure environments up to PN25 where specified","Check compatibility for agricultural and horticultural pipe networks"],
@@ -278,11 +278,11 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
       title: "SDR6 / PN20",
       columns: [
       { key: "part", label: "PART" },
-      { key: "dimensions", label: "DIMENSIONS" },
-      { key: "wall_thickness", label: "WALL THICKNESS" },
-      { key: "inner_diameter", label: "INNER DIAMETER" },
-      { key: "packing_unit", label: "PACKING UNIT" },
-      { key: "kg_mtr", label: "Kg/Mtr." }
+      { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
+      { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
+      { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
+      { key: "packing_unit", label: "PACKING UNIT", labelFr: 'UNITE D EMBALLAGE' },
+      { key: "kg_mtr", label: "Kg/Mtr.", labelFr: 'Kg/Mtr.' }
       ],
       rows: [
       { "part": "CPPR2020", "dimensions": "20", "wall_thickness": "3.4", "inner_diameter": "13.2", "packing_unit": "100 Mtrs", "kg_mtr": "0.172" },
@@ -299,7 +299,7 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PP-R Pipes Catalogue (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PP-R Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PP-R (PDF)', labelFr: 'Catalogue Tuyaux PP-R (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure use of ISO 9001:2015 certified quality management systems for installation oversight","Utilize thermo-fusion welding for secure, leak-free joints","Apply in high-pressure environments up to PN25 where specified","Check compatibility for agricultural and horticultural pipe networks"],
@@ -388,12 +388,12 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
       title: "SDR5 / PN25",
       columns: [
         { key: "part", label: "PART" },
-        { key: "dimensions", label: "DIMENSIONS" },
-        { key: "wall_thickness", label: "WALL THICKNESS" },
-        { key: "inner_diameter", label: "INNER DIAMETER" },
+        { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
+        { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
+        { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
         { key: "water_content", label: "WATER CONTENT (l/mtr)" },
-        { key: "packing_unit", label: "PACKING UNIT" },
-        { key: "kg_mtr", label: "Kg/Mtr." },
+        { key: "packing_unit", label: "PACKING UNIT", labelFr: 'UNITE D EMBALLAGE' },
+        { key: "kg_mtr", label: "Kg/Mtr.", labelFr: 'Kg/Mtr.' },
       ],
       rows: [
         { "part": "CPPR2520", "dimensions": "20", "wall_thickness": "4.1", "inner_diameter": "11.8", "water_content": "0.111", "packing_unit": "100 Mtrs", "kg_mtr": "0.198" },
@@ -410,7 +410,7 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PP-R Pipes Catalogue (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PP-R Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PP-R (PDF)', labelFr: 'Catalogue Tuyaux PP-R (PDF)', href: '/pdfs/PPR%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure use of ISO 9001:2015 certified quality management systems for installation oversight","Utilize thermo-fusion welding for secure, leak-free joints","Apply in high-pressure environments up to PN25 where specified","Check compatibility for agricultural and horticultural pipe networks"],

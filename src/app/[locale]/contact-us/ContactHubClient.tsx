@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useT } from '@/i18n';
 import { productCategories } from '@/config/products';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 import { LocalBusinessDetailSchema } from '@/components/schemas/LocalBusinessSchema';
 import { ContactBreadcrumb } from '@/components/schemas/BreadcrumbSchema';
 import dynamic from 'next/dynamic';
@@ -108,9 +109,9 @@ function ContactHubInner() {
     const categoryOptions = useMemo(() =>
         productCategories.map((c) => ({
             slug: c.slug,
-            label: isAr && c.nameAr ? c.nameAr : c.name,
+            label: localizedValue(language, c.name, c.nameAr, c.nameFr),
         })),
-        [isAr]
+        [language]
     );
 
     const subcategoryOptions = useMemo(() => {
@@ -119,9 +120,9 @@ function ContactHubInner() {
         if (!cat) return [];
         return cat.subProducts.map((sp) => ({
             slug: sp.slug,
-            label: isAr && sp.nameAr ? sp.nameAr : sp.name,
+            label: localizedValue(language, sp.name, sp.nameAr, sp.nameFr),
         }));
-    }, [quoteForm.category, isAr]);
+    }, [quoteForm.category, language]);
 
     // Auto-set category from ?product= query param
     useEffect(() => {

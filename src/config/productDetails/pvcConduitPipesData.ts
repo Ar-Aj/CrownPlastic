@@ -58,11 +58,11 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
       title: "HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE",
       columns: [
         { key: "partno", label: "Part No#" },
-        { key: "dimension", label: "Dimension" },
-        { key: "minid", label: "Min. ID" },
-        { key: "pscpack", label: "Psc/Pack" },
-        { key: "mtrspack", label: "Mtrs/Pack" },
-        { key: "lengthpc", label: "Length/Pc" }
+        { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
+        { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
+        { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
+        { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
+        { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
       rows: [
       { "partno": "CPHD20", "dimension": "20 mm", "minid": "16.0 mm", "pscpack": "20", "mtrspack": "58", "lengthpc": "2.9 Mtr" },
@@ -77,11 +77,11 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
       title: "MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE",
       columns: [
         { key: "partno", label: "Part No#" },
-        { key: "dimension", label: "Dimension" },
-        { key: "minid", label: "Min. ID" },
-        { key: "pscpack", label: "Psc/Pack" },
-        { key: "mtrspack", label: "Mtrs/Pack" },
-        { key: "lengthpc", label: "Length/Pc" }
+        { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
+        { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
+        { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
+        { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
+        { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
       rows: [
       { "partno": "CPMD20", "dimension": "20 mm", "minid": "16.5 mm", "pscpack": "20", "mtrspack": "58", "lengthpc": "2.9 Mtr" },
@@ -96,11 +96,11 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
       title: "LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE",
       columns: [
         { key: "partno", label: "Part No#" },
-        { key: "dimension", label: "Dimension" },
-        { key: "minid", label: "Min. ID" },
-        { key: "pscpack", label: "Psc/Pack" },
-        { key: "mtrspack", label: "Mtrs/Pack" },
-        { key: "lengthpc", label: "Length/Pc" }
+        { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
+        { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
+        { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
+        { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
+        { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
       rows: [
       { "partno": "CPLD20", "dimension": "20 mm", "minid": "16.5 mm", "pscpack": "20", "mtrspack": "58", "lengthpc": "2.9 Mtr" },
@@ -113,7 +113,7 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب كوندويت PVC (PDF)', labelFr: 'Catalogue Tuyaux Conduit PVC (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Select the correct compression force (1250N, 750N, or 320N) based on load requirements","Use Schedule 80 conduits for applications requiring thicker wall protection","Ensure all installations comply with UAE electrical safety standards","Verify part numbers against trade dimensions for precise fit"],
@@ -202,11 +202,11 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
       title: "SCHEDULE 40 CONDUIT - US",
       columns: [
         { key: "partno", label: "Part No#" },
-        { key: "tradedimension", label: "Trade Dimension" },
-        { key: "wallthicknessmm", label: "Wall Thickness (mm)" },
+        { key: "tradedimension", label: "Trade Dimension", labelFr: 'Dimension Commerciale' },
+        { key: "wallthicknessmm", label: "Wall Thickness (mm)", labelFr: 'Epaisseur de Paroi (mm)' },
         { key: "pscpack", label: "Pcs/Pack" },
-        { key: "mtrspack", label: "Mtrs/Pack" },
-        { key: "lengthpc", label: "Length/Pc" }
+        { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
+        { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
       rows: [
       { "partno": "CPUS 01240", "tradedimension": "1½\" (16 mm)", "wallthicknessmm": "2.77", "pscpack": "20", "mtrspack": "60", "lengthpc": "3 Mtr" },
@@ -223,7 +223,7 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب كوندويت PVC (PDF)', labelFr: 'Catalogue Tuyaux Conduit PVC (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Select the correct compression force (1250N, 750N, or 320N) based on load requirements","Use Schedule 80 conduits for applications requiring thicker wall protection","Ensure all installations comply with UAE electrical safety standards","Verify part numbers against trade dimensions for precise fit"],
@@ -312,11 +312,11 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
       title: "SCHEDULE 80 CONDUIT - US",
       columns: [
         { key: "partno", label: "Part No#" },
-        { key: "tradedimension", label: "Trade Dimension" },
-        { key: "wallthicknessmm", label: "Wall Thickness (mm)" },
+        { key: "tradedimension", label: "Trade Dimension", labelFr: 'Dimension Commerciale' },
+        { key: "wallthicknessmm", label: "Wall Thickness (mm)", labelFr: 'Epaisseur de Paroi (mm)' },
         { key: "pscpack", label: "Pcs/Pack" },
-        { key: "mtrspack", label: "Mtrs/Pack" },
-        { key: "lengthpc", label: "Length/Pc" }
+        { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
+        { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
       rows: [
       { "partno": "CPUS 01280", "tradedimension": "1½\" (16 mm)", "wallthicknessmm": "3.73", "pscpack": "20", "mtrspack": "60", "lengthpc": "3 Mtr" },
@@ -333,7 +333,7 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب كوندويت PVC (PDF)', labelFr: 'Catalogue Tuyaux Conduit PVC (PDF)', href: '/pdfs/PVC%20CONDUIT%20PIPES%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: ["Select the correct compression force (1250N, 750N, or 320N) based on load requirements","Use Schedule 80 conduits for applications requiring thicker wall protection","Ensure all installations comply with UAE electrical safety standards","Verify part numbers against trade dimensions for precise fit"],

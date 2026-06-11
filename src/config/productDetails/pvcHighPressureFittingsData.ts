@@ -39,8 +39,8 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
     'مصممة لمناخات الخليج القاسية مع وصلات لحام بالمذيب المتينة',
   ],
     featuresFr: [
-            `Fabriqué selon les normes strictes DIN 8063 pour les canalisations à pression métrique — leader UAE producer`,
-            `Tolérances haute pression de PN16 et PN10 pour une fiabilité industrielle du`,
+            `Fabriqué selon les normes strictes DIN 8063 pour les canalisations à pression métrique — principal fabricant UAE`,
+            `Tolérances haute pression de PN16 et PN10 pour une fiabilité industrielle irréprochable`,
             `Le matériau premium PVC-U assure une excellente résistance aux produits chimiques et à la corrosion`,
             `Gamme complète de tailles allant de 20 mm à 200 mm diamètres nominaux`,
             `Gestion de la qualité certifiée ISO 9001:2015 dans notre usine d'Umm Al Quwain`,
@@ -193,7 +193,7 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
         id: 'reducer-bush-socket-din-8063-table',
         title: 'REDUCER BUSH/SOCKET DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'Nominal Size (mm x mm)' },
+{ key: 'hp_fit_nominal_size_mm', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
           { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
           { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' },
           { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
@@ -444,7 +444,7 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
   ],
   colorLabel: 'dark-grey',
   downloads: [
-    { label: 'PVC HP Fittings DIN 8063 Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063.pdf' },
+    { label: 'PVC HP Fittings DIN 8063 Catalogue (PDF)', labelAr: 'كتالوج وصلات PVC ضغط عالي DIN 8063 (PDF)', labelFr: 'Catalogue Raccords PVC HP DIN 8063 (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20DIN%208063.pdf' },
   ],
   dosDonts: {
     dos: [
@@ -1009,7 +1009,7 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
   ],
   colorLabel: 'dark-grey',
   downloads: [
-    { label: 'PVC HP Fittings BS EN 1452:3/BS 4346 Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015.pdf' },
+    { label: 'PVC HP Fittings BS EN 1452:3/BS 4346 Catalogue (PDF)', labelAr: 'كتالوج وصلات PVC ضغط عالي BS EN 1452:3/BS 4346 (PDF)', labelFr: 'Catalogue Raccords PVC HP BS EN 1452:3/BS 4346 (PDF)', href: '/pdfs/UPVC%20PRESSURE%20FITTINGS%20BS%20EN%2014523%20-%20BS%204346%20PN%2015.pdf' },
   ],
   dosDonts: {
     dos: [
@@ -1222,7 +1222,7 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
   ],
   colorLabel: 'dark-grey',
   downloads: [
-    { label: 'PVC HP Valves Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' },
+    { label: 'PVC HP Valves Catalogue (PDF)', labelAr: 'كتالوج صمامات PVC ضغط عالي (PDF)', labelFr: 'Catalogue Vannes PVC HP (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' },
   ],
   dosDonts: {
     dos: [

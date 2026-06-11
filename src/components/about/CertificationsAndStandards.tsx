@@ -7,6 +7,7 @@ import { certifications, standards, type Certification, type Standard } from './
 import Icon from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
 import { useT, TranslationPath } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Dynamic import — Three.js requires browser APIs (no SSR)
 const CertPipeline3D = dynamic(() => import('./CertPipeline3D'), {
@@ -59,11 +60,13 @@ export default function CertificationsAndStandards() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const prefersReducedMotion = useReducedMotion();
   const t = useT();
+  const { language } = useLanguage();
 
   // Translate certification names/scope/body/benefit
   const translatedCerts = useMemo(() =>
     certifications.map((c) => ({
       ...c,
+      code: c.code === 'NSF Certified' ? (language === 'fr' ? 'Certifié NSF' : language === 'ar' ? 'معتمد من NSF' : c.code) : c.code,
       name: t(`about.certifications.items.${c.id}.name` as TranslationPath),
       scope: t(`about.certifications.items.${c.id}.scope` as TranslationPath),
       issuingBody: t(`about.certifications.items.${c.id}.issuing_body` as TranslationPath),
@@ -79,6 +82,7 @@ export default function CertificationsAndStandards() {
       if (!key) return s;
       return {
         ...s,
+        code: s.code === 'NSF Certified' ? (language === 'fr' ? 'Certifié NSF' : language === 'ar' ? 'معتمد من NSF' : s.code) : s.code,
         description: t(`about.certifications.standards_table.items.${key}.description` as TranslationPath),
       };
     }),

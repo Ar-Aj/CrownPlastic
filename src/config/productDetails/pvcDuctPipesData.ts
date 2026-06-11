@@ -57,7 +57,7 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
       id: "pvc-duct-pipes-nema-tc-2-2003-electrical-pvc-u-tubing-conduits-table",
       title: "NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS",
       columns: [
-        { key: "size_inch", label: "Nominal Size (Inch)" },
+        { key: "size_inch", label: "Nominal Size (Inch)", labelFr: 'Taille Nominale (Inch)' },
         { key: "mean-outside-dia-mm-min", label: "Min", superGroupLabel: "Mean Outside Dia. (mm)", superColSpan: 2 },
         { key: "mean-outside-dia-mm-max", label: "Max", superGroupLabel: "Mean Outside Dia. (mm)" },
         { key: "minimum-wall-thickness-mm-epc-40-min", label: "Min", groupLabel: "EPC 40", colSpan: 2, superGroupLabel: "Minimum Wall Thickness (mm)", superColSpan: 4 },
@@ -81,7 +81,7 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],
@@ -169,9 +169,9 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
       id: "pvc-duct-pipes-nema-tc-6-8-table",
       title: "NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS",
       columns: [
-        { key: "size_inch", label: "Nominal Size (Inch)" },
-        { key: "mean-outside-dia-mm-min", label: "Min", groupLabel: "Mean Outside Dia. (mm)", colSpan: 2 },
-        { key: "mean-outside-dia-mm-max", label: "Max", groupLabel: "Mean Outside Dia. (mm)" },
+        { key: "size_inch", label: "Nominal Size (Inch)", labelFr: 'Taille Nominale (Inch)' },
+        { key: "mean-outside-dia-mm-min", label: "Min", groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: "mean-outside-dia-mm-max", label: "Max", groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)' },
         { key: "minimum-wall-thickness-mm-eb-20", label: "EB-20", groupLabel: "Minimum Wall Thickness (mm)", colSpan: 5 },
         { key: "minimum-wall-thickness-mm-eb-35", label: "EB-35", groupLabel: "Minimum Wall Thickness (mm)" },
         { key: "minimum-wall-thickness-mm-db-60", label: "DB-60", groupLabel: "Minimum Wall Thickness (mm)" },
@@ -190,7 +190,7 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],
@@ -278,17 +278,17 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
       id: "pvc-duct-pipes-din-8062-metric-size-pressure-pipes-table",
       title: "DIN 8062 Metric size Pressure Pipes",
       columns: [
-        { key: "sizeMm", label: "Nominal Size mm" },
-        { key: "mean-outside-dia-min", label: "Min", superGroupLabel: "Mean Outside Dia.", superColSpan: 2 },
-        { key: "mean-outside-dia-max", label: "Max", superGroupLabel: "Mean Outside Dia." },
-        { key: "mean-wall-thickness-pn-16-class-16-min", label: "Min", groupLabel: "PN-16 (CLASS-16)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superColSpan: 8 },
-        { key: "mean-wall-thickness-pn-16-class-16-max", label: "Max", groupLabel: "PN-16 (CLASS-16)", superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-10-class-10-min", label: "Min", groupLabel: "PN-10 (CLASS-10)", colSpan: 2, superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-10-class-10-max", label: "Max", groupLabel: "PN-10 (CLASS-10)", superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-6-class-6-min", label: "Min", groupLabel: "PN-6 (CLASS-6)", colSpan: 2, superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-6-class-6-max", label: "Max", groupLabel: "PN-6 (CLASS-6)", superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-4-class-4-min", label: "Min", groupLabel: "PN-4 (CLASS-4)", colSpan: 2, superGroupLabel: "Mean Wall Thickness" },
-        { key: "mean-wall-thickness-pn-4-class-4-max", label: "Max", groupLabel: "PN-4 (CLASS-4)", superGroupLabel: "Mean Wall Thickness" }
+        { key: "sizeMm", label: "Nominal Size mm", labelFr: 'Taille Nominale mm' },
+        { key: "mean-outside-dia-min", label: "Min", superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+        { key: "mean-outside-dia-max", label: "Max", superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen' },
+        { key: "mean-wall-thickness-pn-16-class-16-min", label: "Min", groupLabel: "PN-16 (CLASS-16)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 8 },
+        { key: "mean-wall-thickness-pn-16-class-16-max", label: "Max", groupLabel: "PN-16 (CLASS-16)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-10-class-10-min", label: "Min", groupLabel: "PN-10 (CLASS-10)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-10-class-10-max", label: "Max", groupLabel: "PN-10 (CLASS-10)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-6-class-6-min", label: "Min", groupLabel: "PN-6 (CLASS-6)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-6-class-6-max", label: "Max", groupLabel: "PN-6 (CLASS-6)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-4-class-4-min", label: "Min", groupLabel: "PN-4 (CLASS-4)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-4-class-4-max", label: "Max", groupLabel: "PN-4 (CLASS-4)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
       ],
       rows: [
         { "sizeMm": "20 mm", "mean-outside-dia-min": "20.0", "mean-outside-dia-max": "20.2", "mean-wall-thickness-pn-16-class-16-min": "1.5", "mean-wall-thickness-pn-16-class-16-max": "1.9", "mean-wall-thickness-pn-10-class-10-min": "", "mean-wall-thickness-pn-10-class-10-max": "", "mean-wall-thickness-pn-6-class-6-min": "", "mean-wall-thickness-pn-6-class-6-max": "", "mean-wall-thickness-pn-4-class-4-min": "", "mean-wall-thickness-pn-4-class-4-max": "" },
@@ -314,7 +314,7 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],
@@ -402,7 +402,7 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
       id: "pvc-duct-pipes-etisalat-du-specifications-table",
       title: "Etisalat & DU specifications",
       columns: [
-        { key: "product", label: "Product" },
+        { key: "product", label: "Product", labelFr: 'Produit' },
         { key: "outside-diameter-min", label: "Min", groupLabel: "Outside Diameter", colSpan: 2 },
         { key: "outside-diameter-max", label: "Max", groupLabel: "Outside Diameter" },
         { key: "wall-thickness-min", label: "Min", groupLabel: "Wall Thickness", colSpan: 2 },
@@ -417,7 +417,7 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],
@@ -505,7 +505,7 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
       id: "pvc-duct-pipes-bs-3505-table",
       title: "BS 3505/06 Imperial size Pressure Pipes",
       columns: [
-        { key: "size_inch", label: "Nominal Size inch" },
+        { key: "size_inch", label: "Nominal Size inch", labelFr: 'Taille Nominale inch' },
         { key: "mean-outside-dia-min", label: "Min", superGroupLabel: "Mean Outside Dia", superColSpan: 2 },
         { key: "mean-outside-dia-max", label: "Max", superGroupLabel: "Mean Outside Dia" },
         { key: "nominal-wall-thickness-pn-15-class-e-min", label: "Min", groupLabel: "PN-15(Class-E)", colSpan: 2, superGroupLabel: "Nominal Wall thickness", superColSpan: 10 },
@@ -537,7 +537,7 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],
@@ -625,7 +625,7 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
       id: "pvc-duct-pipes-non-standard-duct-pipe-table",
       title: "NON-STANDARD DUCT PIPE",
       columns: [
-        { key: "product", label: "Product" },
+        { key: "product", label: "Product", labelFr: 'Produit' },
         { key: "outside-diameter-min", label: "Min", groupLabel: "Outside Diameter", colSpan: 2 },
         { key: "outside-diameter-max", label: "Max", groupLabel: "Outside Diameter" },
         { key: "wall-thickness-min", label: "Min", groupLabel: "Wall Thickness", colSpan: 2 },
@@ -641,7 +641,7 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Use EPC 40 for normal duty above ground or concrete-encased applications","Select EPC 80 for heavy-duty applications requiring higher wall thickness","Ensure EB type ducts are encased in concrete during installation","Utilize DB type ducts for direct burial without the need for concrete encasement"],

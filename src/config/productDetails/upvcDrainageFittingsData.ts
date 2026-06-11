@@ -94,7 +94,7 @@ export const upvcDrainageFittingsBsEn1329: ProductDetailConfig = {
   fittings: bsEn1329Fittings,
 
   downloads: [
-    { label: 'BS EN 1329-1:2014 Drainage Fittings Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%202014%20-%20SUPERSEDED%20BS%205255%20%26%20BS%204514.pdf' },
+    { label: 'BS EN 1329-1:2014 Drainage Fittings Catalogue (PDF)', labelAr: 'كتالوج وصلات الصرف BS EN 1329-1:2014 (PDF)', labelFr: 'Catalogue Raccords de Drainage BS EN 1329-1:2014 (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%202014%20-%20SUPERSEDED%20BS%205255%20%26%20BS%204514.pdf' },
   ],
 
   dosDonts: {
@@ -181,11 +181,11 @@ export const upvcDrainageFittingsBsEn1401: ProductDetailConfig = {
   ],
     featuresFr: [
             `Conformité totale aux exigences BS EN 1401`,
-            `Haute résistance chimique aux substances domestiques sewage`,
+            `Haute résistance chimique aux substances des eaux usées domestiques`,
             `Alésage interne lisse pour un débit hydraulique supérieur`,
             `Construction robuste adaptée à l'enfouissement souterrain`,
             `Tolérances dimensionnelles serrées pour un assemblage cohérent`,
-            `Installation en anneau du légère et facile à manipuler`,
+            `Légèreté et facilité de manipulation lors de l'installation`,
             `Production certifiée ISO 9001:2015 dans notre établissement d'Umm Al Quwain, UAE`,
             `Code couleur orange pour l'identification souterraine — norme GCC`
           ],
@@ -213,7 +213,7 @@ export const upvcDrainageFittingsBsEn1401: ProductDetailConfig = {
             `Systèmes de drainage domestique souterrains sur toute la UAE`,
             `Principaux réseaux publics d'assainissement à Dubai et Abu Dhabi`,
             `Gestion des eaux pluviales et des eaux de surface dans le GCC`,
-            `Drainage des déchets industrielsduen zones franches UAE`,
+            `Drainage des déchets industriels dans les zones franches UAE`,
             `Raccordements latéraux bâtiment-égout`,
             `Infrastructures d’autoroutes et de drainage routier`,
             `Réseaux d'évacuation des eaux usées`,
@@ -223,7 +223,7 @@ export const upvcDrainageFittingsBsEn1401: ProductDetailConfig = {
   fittings: bsEn1401Fittings,
 
   downloads: [
-    { label: 'BS EN 1401 Drainage Fittings Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20%26%20BS%205481.pdf' },
+    { label: 'BS EN 1401 Drainage Fittings Catalogue (PDF)', labelAr: 'كتالوج وصلات الصرف BS EN 1401 (PDF)', labelFr: 'Catalogue Raccords de Drainage BS EN 1401 (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20%26%20BS%205481.pdf' },
   ],
 
   dosDonts: {

@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 text-sm xl:text-base mb-6 leading-relaxed max-w-xs">
-              {brand.tagline}
+              {localizedValue(language, brand.tagline, brand.taglineAr, brand.taglineFr)}
             </p>
             <div className="space-y-3 text-sm xl:text-base text-gray-400">
               <p className="flex items-start gap-3">

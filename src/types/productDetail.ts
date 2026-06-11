@@ -26,12 +26,16 @@ export type SizeRow = {
 export type PipeTableColumn = {
   key: string;        // e.g., "size", "class", "standard"
   label: string;      // e.g., "Size (mm)", "Class", "Standard"
+  labelFr?: string;   // French equivalent of label
   align?: 'left' | 'center' | 'right';
   groupLabel?: string; // optional parent grouped header label (raw string or i18n key)
+  groupLabelFr?: string; // French equivalent of groupLabel
   colSpan?: number;    // how many columns this group spans; only on the FIRST column of the group
   superGroupLabel?: string; // optional grandparent grouped header label
+  superGroupLabelFr?: string; // French equivalent of superGroupLabel
   superColSpan?: number; // how many columns this grandparent group spans; only on the FIRST column of the group
   megaGroupLabel?: string; // optional great-grandparent grouped header label for 4-tier nesting
+  megaGroupLabelFr?: string; // French equivalent of megaGroupLabel
   megaColSpan?: number; // how many columns this great-grandparent group spans; only on the FIRST column of the group
 };
 
@@ -79,9 +83,12 @@ export const FITTING_FAMILY_LABELS: Record<FittingFamily, string> = {
 export type FittingSpecColumn = {
   key: string;        // normalised key used in rows, e.g., "nominal_size_mm"
   label: string;      // original header text from PDF/JSON, e.g., "NOMINAL SIZE (mm)"
+  labelFr?: string;   // French equivalent of label
   groupLabel?: string; // optional i18n key or raw string for the parent grouped header row, e.g., "products.tables.dimensions_mm"
+  groupLabelFr?: string; // French equivalent of groupLabel
   colSpan?: number;    // how many columns this group spans; only needed on the FIRST column of the group
 };
+
 
 /**
  * Full specification table for a fitting
@@ -196,7 +203,7 @@ export type ProductDetailConfig = {
   variantsSectionTitle?: string;         // e.g., "Grease Trap Configurations"
   variantsSectionTitleAr?: string;
   variantsSectionTitleFr?: string;
-  downloads?: { label: string; href: string }[];
+  downloads?: { label: string; labelAr?: string; labelFr?: string; href: string }[];
   videoUrl?: string;
   technicalProperties?: { property: string; value: string }[];
   technicalPropertiesAr?: { property: string; value: string }[];

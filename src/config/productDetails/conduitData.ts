@@ -24,10 +24,10 @@ const sharedApplications = [
   'Communication cable protection systems',
 ];
 const sharedApplicationsFr = [
-  'Protection of electrical wiring in commercial and residential projects',
-  'Cable routing in industrial plants and infrastructure',
-  'Underground electrical conduit installations',
-  'Communication cable protection systems',
+  'Protection du câblage électrique dans les projets commerciaux et résidentiels',
+  'Acheminement des câbles dans les installations industrielles et les infrastructures',
+  'Installations de conduits électriques souterraines',
+  'Systèmes de protection des câbles de communication',
 ];
 
 // Features reference (kept for documentation)
@@ -51,10 +51,10 @@ const sch40PipesTables: PipeTable[] = [
     id: 'schedule_40_conduit_us',
     title: 'SCHEDULE 40 CONDUIT - US',
     columns: [
-      { key: 'trade_dimension', label: 'Trade Dimension' },
-      { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)' },
-      { key: 'mtrs_pack', label: 'Mtrs/Pack' },
-      { key: 'length_pc', label: 'Length/Pc' },
+      { key: 'trade_dimension', label: 'Trade Dimension', labelFr: 'Dimension Commerciale' },
+      { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)' },
+      { key: 'mtrs_pack', label: 'Mtrs/Pack', labelFr: 'Metres/Paquet' },
+      { key: 'length_pc', label: 'Length/Pc', labelFr: 'Longueur/Piece' },
     ],
     rows: [
       { trade_dimension: '1½" (16 mm)', wall_thickness_mm: '2.77', mtrs_pack: '20', length_pc: '3 Mtr' },
@@ -73,11 +73,11 @@ const sch40PipesTables: PipeTable[] = [
     id: 'heavy_grade_round_conduit_1250n_compression_force',
     title: 'HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE',
     columns: [
-      { key: 'dimension', label: 'Dimension' },
-      { key: 'min_id', label: 'Min. ID' },
-      { key: 'psc_pack', label: 'Psc/Pack' },
-      { key: 'mtrs_pack', label: 'Mtrs/Pack' },
-      { key: 'length_pc', label: 'Length/Pc' },
+      { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
+      { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
+      { key: 'psc_pack', label: 'Psc/Pack', labelFr: 'Pcs/Paquet' },
+      { key: 'mtrs_pack', label: 'Mtrs/Pack', labelFr: 'Metres/Paquet' },
+      { key: 'length_pc', label: 'Length/Pc', labelFr: 'Longueur/Piece' },
     ],
     rows: [
       { dimension: '20 mm', min_id: '16.0 mm', psc_pack: '20', mtrs_pack: '58', length_pc: '2.9 Mtr' },
@@ -92,11 +92,11 @@ const sch40PipesTables: PipeTable[] = [
     id: 'medium_grade_round_conduit_750n_compression_force',
     title: 'MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE',
     columns: [
-      { key: 'dimension', label: 'Dimension' },
-      { key: 'min_id', label: 'Min. ID' },
-      { key: 'psc_pack', label: 'Psc/Pack' },
-      { key: 'mtrs_pack', label: 'Mtrs/Pack' },
-      { key: 'length_pc', label: 'Length/Pc' },
+      { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
+      { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
+      { key: 'psc_pack', label: 'Psc/Pack', labelFr: 'Pcs/Paquet' },
+      { key: 'mtrs_pack', label: 'Mtrs/Pack', labelFr: 'Metres/Paquet' },
+      { key: 'length_pc', label: 'Length/Pc', labelFr: 'Longueur/Piece' },
     ],
     rows: [
       { dimension: '20 mm', min_id: '16.5 mm', psc_pack: '20', mtrs_pack: '58', length_pc: '2.9 Mtr' },
@@ -111,11 +111,11 @@ const sch40PipesTables: PipeTable[] = [
     id: 'light_grade_round_conduit_320n_compression_force',
     title: 'LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE',
     columns: [
-      { key: 'dimension', label: 'Dimension' },
-      { key: 'min_id', label: 'Min. ID' },
-      { key: 'psc_pack', label: 'Psc/Pack' },
-      { key: 'mtrs_pack', label: 'Mtrs/Pack' },
-      { key: 'length_pc', label: 'Length/Pc' },
+      { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
+      { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
+      { key: 'psc_pack', label: 'Psc/Pack', labelFr: 'Pcs/Paquet' },
+      { key: 'mtrs_pack', label: 'Mtrs/Pack', labelFr: 'Metres/Paquet' },
+      { key: 'length_pc', label: 'Length/Pc', labelFr: 'Longueur/Piece' },
     ],
     rows: [
       { dimension: '20 mm', min_id: '16.5 mm', psc_pack: '20', mtrs_pack: '58', length_pc: '2.9 Mtr' },
@@ -134,10 +134,10 @@ const sch80PipesTables: PipeTable[] = [
     id: 'schedule_80_conduit_us',
     title: 'SCHEDULE 80 CONDUIT - US',
     columns: [
-      { key: 'trade_dimension', label: 'Trade Dimension' },
-      { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)' },
-      { key: 'mtrs_pack', label: 'Mtrs/Pack' },
-      { key: 'length_pc', label: 'Length/Pc' },
+      { key: 'trade_dimension', label: 'Trade Dimension', labelFr: 'Dimension Commerciale' },
+      { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)' },
+      { key: 'mtrs_pack', label: 'Mtrs/Pack', labelFr: 'Metres/Paquet' },
+      { key: 'length_pc', label: 'Length/Pc', labelFr: 'Longueur/Piece' },
     ],
     rows: [
       { trade_dimension: '1½" (16 mm)', wall_thickness_mm: '3.73', mtrs_pack: '20', length_pc: '3 Mtr' },
@@ -255,7 +255,7 @@ Ce document couvre principalement les tuyaux PVC Conduit, y compris les tuyaux r
   fittings: [],
 
   downloads: [
-    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب كوندويت PVC (PDF)', labelFr: 'Catalogue Tuyaux Conduit PVC (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
 
   dosDonts: {
@@ -413,7 +413,7 @@ Ce document couvre principalement les tuyaux PVC Conduit, y compris les tuyaux r
   fittings: [],
 
   downloads: [
-    { label: 'PVC Conduit Pipes Catalogue (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
+    { label: 'PVC Conduit Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب كوندويت PVC (PDF)', labelFr: 'Catalogue Tuyaux Conduit PVC (PDF)', href: '/pdfs/UPVC-CONDUIT-PIPES-CATALOGUE.pdf' },
   ],
 
   dosDonts: {

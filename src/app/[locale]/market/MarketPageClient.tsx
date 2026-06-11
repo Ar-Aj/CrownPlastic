@@ -19,6 +19,7 @@ import { LocalBusinessRatingSchema } from '@/components/schemas/ReviewSchema';
 import { TechnicalGuideSchema } from '@/components/schemas/ArticleSchema';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 import { PRODUCT_MAP } from '@/data/productMap';
 
 const baseUrl = 'https://crownplasticuae.com';
@@ -538,7 +539,6 @@ interface MarketPageClientProps {
 export default function MarketPageClient({ market }: MarketPageClientProps) {
   const t = useT();
   const { language } = useLanguage();
-  const isAr = language === 'ar';
   const pageUrl = `${baseUrl}/market/${market.slug}`;
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
@@ -546,17 +546,19 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   // Language-aware config fields
-  const marketTitle = isAr ? market.titleAr : market.title;
-  const marketDescription = isAr ? market.descriptionAr : market.description;
-  const marketCountry = isAr ? market.countryAr : market.country;
-  const marketCity = isAr ? (market.cityAr || market.countryAr) : (market.city || market.country);
-  const marketCtaText = isAr ? market.cta.textAr : market.cta.text;
+  const marketTitle = localizedValue(language, market.title, market.titleAr, market.titleFr);
+  const marketDescription = localizedValue(language, market.description, market.descriptionAr, market.descriptionFr);
+  const marketCountry = localizedValue(language, market.country, market.countryAr, market.countryFr);
+  const marketCity = localizedValue(language, market.city || market.country, market.cityAr || market.countryAr, market.cityFr || market.countryFr);
+  const marketCtaText = localizedValue(language, market.cta.text, market.cta.textAr, market.cta.textFr);
+  const marketDeliveryTime = localizedValue(language, market.deliveryTime, market.deliveryTimeAr, market.deliveryTimeFr);
+  const marketFocus = localizedValue(language, market.focus, market.focusAr, market.focusFr);
 
   const breadcrumbItems = [
     { name: t('markets.regional.breadcrumb_home'), url: baseUrl },
     { name: t('markets.regional.breadcrumb_markets'), url: `${baseUrl}/market` },
     { name: marketCountry, url: `${baseUrl}/market/${market.countryCode.toLowerCase()}` },
-    ...(market.city ? [{ name: isAr ? (market.cityAr || market.city) : market.city, url: pageUrl }] : []),
+    ...(market.city ? [{ name: localizedValue(language, market.city, market.cityAr, market.cityFr), url: pageUrl }] : []),
     { name: marketTitle.split(' - ')[0], url: pageUrl },
   ];
 
@@ -599,7 +601,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
     {
       iconKey: 'fast_delivery',
       title: t('markets.regional.features.fast_delivery'),
-      description: t('markets.regional.features.fast_delivery_tpl').replace('{deliveryTime}', market.deliveryTime).replace('{location}', marketCity),
+      description: t('markets.regional.features.fast_delivery_tpl').replace('{deliveryTime}', marketDeliveryTime).replace('{location}', marketCity),
     },
     {
       iconKey: 'competitive_pricing',
@@ -665,7 +667,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                 {market.city && (
                   <>
                     <li className="text-blue-300/40">/</li>
-                    <li className="text-white font-medium">{isAr ? (market.cityAr || market.city) : market.city}</li>
+                    <li className="text-white font-medium">{localizedValue(language, market.city, market.cityAr, market.cityFr) || marketCountry}</li>
                   </>
                 )}
               </ol>
@@ -689,7 +691,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   </span>
                   <span className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm text-blue-300 text-sm px-4 py-2 rounded-full border border-blue-500/30">
                     <Zap className="w-4 h-4" />
-                    {isAr ? market.deliveryTimeAr : market.deliveryTime}
+                    {marketDeliveryTime}
                   </span>
                 </motion.div>
 
@@ -699,11 +701,19 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   variants={fadeUpVariant}
                 >
                   <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                    {marketTitle.split(isAr ? ' لـ' : ' for ')[0]}
+                    {(() => {
+                      const sep = language === 'ar' ? ' لـ' : language === 'fr' ? ' pour ' : ' for ';
+                      return marketTitle.split(sep)[0];
+                    })()}
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">
-                    {marketTitle.includes(isAr ? ' لـ' : ' for ') ? (isAr ? `لـ${marketTitle.split(' لـ')[1]}` : `for ${marketTitle.split(' for ')[1]}`) : ''}
+                    {(() => {
+                      const sep = language === 'ar' ? ' لـ' : language === 'fr' ? ' pour ' : ' for ';
+                      if (!marketTitle.includes(sep)) return '';
+                      const suffix = marketTitle.split(sep).slice(1).join(sep);
+                      return language === 'ar' ? `لـ${suffix}` : language === 'fr' ? `pour ${suffix}` : `for ${suffix}`;
+                    })()}
                   </span>
                 </motion.h1>
 
@@ -924,7 +934,7 @@ export default function MarketPageClient({ market }: MarketPageClientProps) {
                   </div>
 
                   <ul className="space-y-4">
-                    <AnimatedCheck delay={0}>{t('markets.regional.sidebar.delivery_prefix')} {market.deliveryTime}</AnimatedCheck>
+                    <AnimatedCheck delay={0}>{t('markets.regional.sidebar.delivery_prefix')} {marketDeliveryTime}</AnimatedCheck>
                     <AnimatedCheck delay={0.1}>{t('markets.regional.sidebar.currency_prefix')} {market.currency}</AnimatedCheck>
                     <AnimatedCheck delay={0.2}>{t('markets.regional.sidebar.free_shipping')}</AnimatedCheck>
                     <AnimatedCheck delay={0.3}>{t('markets.regional.sidebar.full_documentation')}</AnimatedCheck>

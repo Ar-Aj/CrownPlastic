@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ClientLogo } from '@/config/clients';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // 3D LOGO CAROUSEL COMPONENT
@@ -17,6 +18,7 @@ interface LogoCarousel3DProps {
 }
 
 export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3DProps) {
+  const t = useT();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -407,7 +409,7 @@ export default function LogoCarousel3D({ logos, title, subtitle }: LogoCarousel3
                       </p>
                       {logo.category && (
                         <p className="text-xs text-gray-400 capitalize mt-1">
-                          {logo.category}
+                          {t(`home.logo_carousel.categories.${logo.category}`)}
                         </p>
                       )}
                     </div>

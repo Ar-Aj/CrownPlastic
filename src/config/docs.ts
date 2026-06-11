@@ -13,8 +13,10 @@ export interface PdfDocument {
   src: string;
   title: string;
   titleAr?: string;
+  titleFr?: string;
   description: string;
   descriptionAr?: string;
+  descriptionFr?: string;
 }
 
 // ============================================================================
@@ -58,6 +60,8 @@ const DOCS = {
     titleAr: 'أنابيب الضغط UPVC',
     description: 'Metric & Inch series pipes | PN6-16 pressure ratings',
     descriptionAr: 'أنابيب بالسلسلة المترية والبوصة | تصنيفات ضغط PN6-16',
+    titleFr: 'Tuyaux UPVC sous Pression',
+    descriptionFr: 'Tuyaux séries métrique et pouce | Classes de pression PN6-16',
   },
   upvcPressureFittingsBsEn: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_BS_EN,
@@ -65,6 +69,8 @@ const DOCS = {
     titleAr: 'توصيلات الضغط - معيار BS EN',
     description: 'BS EN 14523 & BS 4346 PN15 fittings specifications',
     descriptionAr: 'مواصفات توصيلات BS EN 14523 و BS 4346 PN15',
+    titleFr: 'Raccords Pression - Norme BS EN',
+    descriptionFr: 'Spécifications raccords BS EN 14523 et BS 4346 PN15',
   },
   upvcPressureFittingsDin: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_DIN,
@@ -72,6 +78,8 @@ const DOCS = {
     titleAr: 'توصيلات الضغط - معيار DIN',
     description: 'DIN 8063 fittings for metric pressure systems',
     descriptionAr: 'توصيلات DIN 8063 لأنظمة الضغط المترية',
+    titleFr: 'Raccords Pression - Norme DIN',
+    descriptionFr: 'Raccords DIN 8063 pour systèmes pression métriques',
   },
   upvcPressureFittingsAstm: {
     src: PDF_PATHS.UPVC_PRESSURE_FITTINGS_ASTM,
@@ -79,6 +87,8 @@ const DOCS = {
     titleAr: 'توصيلات الضغط - معيار ASTM',
     description: 'ASTM D2466 Schedule 40 fittings for inch series',
     descriptionAr: 'توصيلات ASTM D2466 جدول 40 لسلسلة البوصة',
+    titleFr: 'Raccords Pression - Norme ASTM',
+    descriptionFr: 'Raccords ASTM D2466 Schedule 40 pour séries en pouces',
   },
 
   // UPVC Drainage
@@ -88,6 +98,8 @@ const DOCS = {
     titleAr: 'أنابيب الصرف UPVC',
     description: 'Above & underground drainage pipe systems',
     descriptionAr: 'أنظمة أنابيب الصرف الأرضية وتحت الأرض',
+    titleFr: 'Tuyaux de Drainage UPVC',
+    descriptionFr: 'Systèmes de tuyaux de drainage aérien et souterrain',
   },
   upvcDrainageFittings1329: {
     src: PDF_PATHS.UPVC_DRAINAGE_FITTINGS_1329,
@@ -95,6 +107,8 @@ const DOCS = {
     titleAr: 'توصيلات الصرف - BS EN 1329',
     description: 'Above ground fittings (supersedes BS 5255 & BS 4514)',
     descriptionAr: 'توصيلات أرضية (تحل محل BS 5255 و BS 4514)',
+    titleFr: 'Raccords de Drainage - BS EN 1329',
+    descriptionFr: 'Raccords aériens (remplace BS 5255 et BS 4514)',
   },
   upvcDrainageFittings1401: {
     src: PDF_PATHS.UPVC_DRAINAGE_FITTINGS_1401,
@@ -102,6 +116,8 @@ const DOCS = {
     titleAr: 'توصيلات الصرف - BS EN 1401',
     description: 'Underground fittings (supersedes BS 4660 & BS 5481)',
     descriptionAr: 'توصيلات تحت الأرض (تحل محل BS 4660 و BS 5481)',
+    titleFr: 'Raccords de Drainage - BS EN 1401',
+    descriptionFr: 'Raccords souterrains (remplace BS 4660 et BS 5481)',
   },
 
   // UPVC Duct & Fabrication
@@ -111,6 +127,8 @@ const DOCS = {
     titleAr: 'أنابيب وملحقات قنوات UPVC',
     description: 'Telecom & electrical cable protection systems',
     descriptionAr: 'أنظمة حماية كابلات الاتصالات والكهرباء',
+    titleFr: 'Tuyaux et Accessoires de Gaine PVC',
+    descriptionFr: 'Systèmes de protection de câbles télécom et électriques',
   },
   upvcFabrication: {
     src: PDF_PATHS.UPVC_FABRICATION,
@@ -118,6 +136,8 @@ const DOCS = {
     titleAr: 'التصنيع والملحقات',
     description: 'Custom fabrication options & system accessories',
     descriptionAr: 'خيارات التصنيع المخصصة وملحقات النظام',
+    titleFr: 'Fabrications et Accessoires',
+    descriptionFr: 'Options de fabrication sur mesure et accessoires de système',
   },
 
   // PVC Conduit
@@ -127,6 +147,8 @@ const DOCS = {
     titleAr: 'أنابيب قنوات PVC',
     description: 'Schedule 40/80 | 320N/750N/1250N crush resistance',
     descriptionAr: 'جدول 40/80 | مقاومة سحق 320N/750N/1250N',
+    titleFr: 'Tuyaux Conduit PVC',
+    descriptionFr: 'Schedule 40/80 | Résistance à l\'écrasement 320N/750N/1250N',
   },
 
   // Common UPVC References
@@ -136,6 +158,8 @@ const DOCS = {
     titleAr: 'نظرة عامة على المعايير',
     description: 'Complete standards reference for UPVC systems',
     descriptionAr: 'مرجع المعايير الكامل لأنظمة UPVC',
+    titleFr: 'Aperçu des Normes',
+    descriptionFr: 'Référence complète des normes pour les systèmes UPVC',
   },
   upvcTechSpecs: {
     src: PDF_PATHS.UPVC_TECH_SPECS,
@@ -143,6 +167,8 @@ const DOCS = {
     titleAr: 'المواصفات الفنية',
     description: 'Material properties, chemical resistance & testing data',
     descriptionAr: 'خصائص المواد ومقاومة المواد الكيميائية وبيانات الاختبار',
+    titleFr: 'Spécifications Techniques',
+    descriptionFr: 'Propriétés des matériaux, résistance chimique et données d\'essai',
   },
 
   // PPR
@@ -152,6 +178,8 @@ const DOCS = {
     titleAr: 'أنابيب PPR',
     description: 'Hot & cold water systems | PN10/16/20 | DIN 8077/78',
     descriptionAr: 'أنظمة المياه الساخنة والباردة | PN10/16/20 | DIN 8077/78',
+    titleFr: 'Tuyaux PPR',
+    descriptionFr: 'Systèmes eau chaude et froide | PN10/16/20 | DIN 8077/78',
   },
 
   // Polyethylene
@@ -161,6 +189,8 @@ const DOCS = {
     titleAr: 'أنظمة أنابيب البولي إيثيلين',
     description: 'HDPE PE63/80/100 | Irrigation & water distribution',
     descriptionAr: 'HDPE PE63/80/100 | الري وتوزيع المياه',
+    titleFr: 'Systèmes de Tuyaux en Polyéthylène',
+    descriptionFr: 'HDPE PE63/80/100 | Irrigation et distribution d\'eau',
   },
 } as const;
 

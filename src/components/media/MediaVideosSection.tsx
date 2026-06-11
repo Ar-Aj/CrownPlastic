@@ -2,6 +2,9 @@
 
 import dynamic from 'next/dynamic';
 import type { YoutubeShort } from '@/config/media';
+import { useT } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 // ─────────────────────────────────────────────────────────────
 // Legacy VideoItem type — kept so MediaBlogsClient import still works
@@ -33,9 +36,12 @@ interface MediaVideosSectionProps {
 import YouTubeFacade from '@/components/common/YouTubeFacade';
 
 function ShortsGrid({ shorts }: { shorts: YoutubeShort[] }) {
+  const { language } = useLanguage();
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {shorts.map((short) => (
+      {shorts.map((short) => {
+        const title = localizedValue(language, short.title, short.titleAr, short.titleFr);
+        return (
         <div
           key={short.id}
           className="group flex flex-col gap-4"
@@ -61,7 +67,7 @@ function ShortsGrid({ shorts }: { shorts: YoutubeShort[] }) {
             <YouTubeFacade
               videoId=""
               embedUrl={short.embedUrl}
-              title={short.title}
+              title={title}
               iframeParams="autoplay=1&rel=0&modestbranding=1&playsinline=1"
               className="z-10"
             />
@@ -84,10 +90,11 @@ function ShortsGrid({ shorts }: { shorts: YoutubeShort[] }) {
 
           {/* Caption */}
           <p className="text-sm font-medium text-slate-300 text-center leading-snug px-2 group-hover:text-white transition-colors duration-300">
-            {short.title}
+            {title}
           </p>
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -117,6 +124,7 @@ export default function MediaVideosSection({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   videos: _videos,
 }: MediaVideosSectionProps) {
+  const t = useT();
   const hasShorts = shorts && shorts.length > 0;
 
   return (
@@ -138,7 +146,7 @@ export default function MediaVideosSection({
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="inline-block px-4 py-1 mb-4 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-widest">
-            Featured Videos
+            {t('media_blogs.featured_videos_badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
           {subtitle && (
@@ -151,7 +159,7 @@ export default function MediaVideosSection({
           <ShortsGridClient shorts={shorts!} />
         ) : (
           /* Fallback: no videos at all */
-          <p className="text-center text-slate-500">No videos available.</p>
+          <p className="text-center text-slate-500">{t('media_blogs.no_videos')}</p>
         )}
       </div>
     </section>

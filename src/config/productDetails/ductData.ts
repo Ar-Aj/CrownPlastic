@@ -20,9 +20,9 @@ const ductPipesTables: PipeTable[] = [
     id: 'nema_tc_2_2003_electrical',
     title: 'NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS:',
     columns: [
-      { key: 'nominal_size_inch', label: 'Nominal Size (Inch)' },
-      { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min' },
-      { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max' },
+      { key: 'nominal_size_inch', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+      { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min', labelFr: 'Diam. Ext. Moyen (mm) Min' },
+      { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max', labelFr: 'Diam. Ext. Moyen (mm) Max' },
       { key: 'epc_40_min', label: 'EPC 40 Min' },
       { key: 'epc_40_max', label: 'EPC 40 Max' },
       { key: 'epc_80_min', label: 'EPC 80 Min' },
@@ -46,9 +46,9 @@ const ductPipesTables: PipeTable[] = [
     id: 'nema_tc_6_8_astm_f512_underground',
     title: 'NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS',
     columns: [
-      { key: 'nominal_size_inch', label: 'Nominal Size (Inch)' },
-      { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min' },
-      { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max' },
+      { key: 'nominal_size_inch', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+      { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min', labelFr: 'Diam. Ext. Moyen (mm) Min' },
+      { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max', labelFr: 'Diam. Ext. Moyen (mm) Max' },
       { key: 'eb_20', label: 'EB-20' },
       { key: 'eb_35', label: 'EB-35' },
       { key: 'db_60', label: 'DB-60' },
@@ -69,9 +69,9 @@ const ductPipesTables: PipeTable[] = [
     id: 'metric_pressure_pipes_din_8062',
     title: 'Metric size Pressure Pipes: DIN 8062',
     columns: [
-      { key: 'nominal_size_mm', label: 'Nominal Size mm' },
-      { key: 'mean_od_min', label: 'Mean Outside Dia. Min' },
-      { key: 'mean_od_max', label: 'Mean Outside Dia. Max' },
+      { key: 'nominal_size_mm', label: 'Nominal Size mm', labelFr: 'Taille Nominale mm' },
+      { key: 'mean_od_min', label: 'Mean Outside Dia. Min', labelFr: 'Diam. Ext. Moyen Min' },
+      { key: 'mean_od_max', label: 'Mean Outside Dia. Max', labelFr: 'Diam. Ext. Moyen Max' },
       { key: 'pn16_min', label: 'PN-16 Min' },
       { key: 'pn16_max', label: 'PN-16 Max' },
       { key: 'pn10_min', label: 'PN-10 Min' },
@@ -107,11 +107,11 @@ const ductPipesTables: PipeTable[] = [
     id: 'etisalat_du_duct_pipe',
     title: 'DUCT PIPE FOR ELECTRICAL AND TELEPHONE CABLE Dimensions as per Etisalat & DU specifications',
     columns: [
-      { key: 'product', label: 'Product' },
-      { key: 'od_min', label: 'Outside Diameter Min' },
-      { key: 'od_max', label: 'Outside Diameter Max' },
-      { key: 'wt_min', label: 'Wall Thickness Min' },
-      { key: 'wt_max', label: 'Wall Thickness Max' },
+      { key: 'product', label: 'Product', labelFr: 'Produit' },
+      { key: 'od_min', label: 'Outside Diameter Min', labelFr: 'Diametre Exterieur Min' },
+      { key: 'od_max', label: 'Outside Diameter Max', labelFr: 'Diametre Exterieur Max' },
+      { key: 'wt_min', label: 'Wall Thickness Min', labelFr: 'Epaisseur de Paroi Min' },
+      { key: 'wt_max', label: 'Wall Thickness Max', labelFr: 'Epaisseur de Paroi Max' },
     ],
     rows: [
       { product: 'D54 DUCT PIPE', od_min: '96.30', od_max: '96.70', wt_min: '3.25', wt_max: '3.65' },
@@ -124,13 +124,13 @@ const ductPipesTables: PipeTable[] = [
     id: 'imperial_pressure_pipes_bs_3505_06',
     title: 'Imperial size Pressure Pipes: BS 3505/06',
     columns: [
-      { key: 'nominal_size_inch', label: 'Nominal Size inch' },
-      { key: 'mean_od', label: 'Mean Outside Dia Min Max' },
-      { key: 'pn15_class_e', label: 'PN-15 (Class-E)' },
-      { key: 'pn12_class_d', label: 'PN-12 (Class-D)' },
-      { key: 'pn9_class_c', label: 'PN-9 (Class-C)' },
-      { key: 'pn6_class_b', label: 'PN-6 (Class-B)' },
-      { key: 'non_pressure_class_o', label: 'Non Pressure (Class-O)' },
+      { key: 'nominal_size_inch', label: 'Nominal Size inch', labelFr: 'Taille Nominale inch' },
+      { key: 'mean_od', label: 'Mean Outside Dia Min Max', labelFr: 'Diam. Ext. Moyen Min Max' },
+      { key: 'pn15_class_e', label: 'PN-15 (Class-E)', labelFr: 'PN-15 (Classe-E)' },
+      { key: 'pn12_class_d', label: 'PN-12 (Class-D)', labelFr: 'PN-12 (Classe-D)' },
+      { key: 'pn9_class_c', label: 'PN-9 (Class-C)', labelFr: 'PN-9 (Classe-C)' },
+      { key: 'pn6_class_b', label: 'PN-6 (Class-B)', labelFr: 'PN-6 (Classe-B)' },
+      { key: 'non_pressure_class_o', label: 'Non Pressure (Class-O)', labelFr: 'Sans Pression (Classe-O)' },
     ],
     rows: [
       { nominal_size_inch: '1/2"', mean_od: '21.2 21.5', pn15_class_e: '1.7 2.1', pn12_class_d: '', pn9_class_c: '', pn6_class_b: '', non_pressure_class_o: '' },
@@ -152,10 +152,10 @@ const ductPipesTables: PipeTable[] = [
     id: 'non_standard_duct_pipe',
     title: 'NON-STANDARD DUCT PIPE',
     columns: [
-      { key: 'product', label: 'Product' },
-      { key: 'od_min', label: 'Outside Min' },
+      { key: 'product', label: 'Product', labelFr: 'Produit' },
+      { key: 'od_min', label: 'Outside Min', labelFr: 'Exterieur Min' },
       { key: 'od_max', label: 'Diameter Max' },
-      { key: 'wt', label: 'Min Wall Thickness Max' },
+      { key: 'wt', label: 'Min Wall Thickness Max', labelFr: 'Epaisseur de Paroi Min Max' },
     ],
     rows: [
       { product: '75 DUCT PIPE', od_min: '75.00', od_max: '75.30', wt: '1.70 2.00' },
@@ -321,8 +321,8 @@ const ductFittings: Fitting[] = [
       title: 'DUCT 90° LIGHTING LR BENDS 4"',
       columns: [
         { key: 'size', label: 'Ø/SIZE' },
-        { key: 'poles', label: 'POLES' },
-        { key: 'radius', label: 'RADIUS (mm)' },
+        { key: 'poles', label: 'POLES', labelFr: 'POLES' },
+        { key: 'radius', label: 'RADIUS (mm)', labelFr: 'RAYON (mm)' },
         { key: 'h', label: 'H(mm)' },
         { key: 'w', label: 'W(mm)' },
       ],
@@ -353,8 +353,8 @@ const ductFittings: Fitting[] = [
       title: 'DUCT 90° STREET LIGHTING L R BENDS 3"',
       columns: [
         { key: 'size', label: 'Ø/SIZE' },
-        { key: 'poles', label: 'POLES' },
-        { key: 'radius', label: 'RADIUS (mm)' },
+        { key: 'poles', label: 'POLES', labelFr: 'POLES' },
+        { key: 'radius', label: 'RADIUS (mm)', labelFr: 'RAYON (mm)' },
         { key: 'h', label: 'H(mm)' },
         { key: 'w', label: 'W(mm)' },
       ],
@@ -480,7 +480,7 @@ Le catalogue comprend une gamme de produits fabriqués pour les applications duc
   fittings: ductFittings,
 
   downloads: [
-    { label: 'PVC Duct Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
+    { label: 'PVC Duct Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب مجاري PVC (PDF)', labelFr: 'Catalogue Tuyaux de Gaine PVC (PDF)', href: '/pdfs/UPVC%20DUCT%20PIPES%20AND%20ACCESSORIES.pdf' },
   ],
 
   dosDonts: {

@@ -175,7 +175,7 @@ function YouTubeShortEmbed({
             <div className="absolute inset-0 bg-gradient-to-b from-blue-800/30 via-slate-800/50 to-slate-900/70" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-9 h-9 md:w-11 md:h-11 bg-white/25 rounded-full flex items-center justify-center shadow-lg">
-                <Play className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" />
+                <Play className="w-4 h-4 md:w-5 md:h-5 text-white ms-0.5" fill="currentColor" />
               </div>
             </div>
           </>
@@ -245,6 +245,7 @@ interface DataTileProps {
 }
 
 function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: DataTileProps) {
+  const t = useT();
   const Icon = iconMap[item.iconKey];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
@@ -284,8 +285,8 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
 
         {/* Source badge */}
-        <div className={`absolute top-2 right-2 px-2 py-0.5 text-[10px] font-medium rounded border ${tagColors[item.sourceTag]}`}>
-          {item.sourceTag}
+        <div className={`absolute top-2 end-2 px-2 py-0.5 text-[10px] font-medium rounded border ${tagColors[item.sourceTag]}`}>
+          {t(`home.advantage.tags.${item.sourceTag}` as TranslationPath)}
         </div>
 
         <div className="relative z-10 flex flex-col h-full">
@@ -307,7 +308,7 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
                 {item.highlightStat}
               </span>
               {item.statLabel && (
-                <span className="ml-1.5 text-xs text-slate-400 uppercase tracking-wider">{item.statLabel}</span>
+                <span className="ms-1.5 text-xs text-slate-400 uppercase tracking-wider">{item.statLabel}</span>
               )}
             </div>
           )}
@@ -334,6 +335,7 @@ function DataTile({ item, size = 'md', showDescription = false, delay = 0 }: Dat
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact?: boolean }) {
+  const t = useT();
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const animatedValue = useCountUp(item.highlightStat || '0', isInView, 2500);
@@ -357,8 +359,8 @@ function HeroStatBlock({ item, compact = false }: { item: AdvantageItem; compact
         ${compact ? 'aspect-[5/4]' : 'aspect-[4/5] lg:aspect-auto lg:min-h-0'}
       `}>
         {/* Source badge */}
-        <div className={`absolute top-3 right-3 lg:top-4 lg:right-4 z-20 px-2 py-0.5 lg:px-2.5 lg:py-1 text-[10px] lg:text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
-          {item.sourceTag}
+        <div className={`absolute top-3 end-3 lg:top-4 lg:end-4 z-20 px-2 py-0.5 lg:px-2.5 lg:py-1 text-[10px] lg:text-xs font-medium rounded-full border backdrop-blur-sm ${tagColors[item.sourceTag]}`}>
+          {t(`home.advantage.tags.${item.sourceTag}` as TranslationPath)}
         </div>
 
         {/* Full-cover background image */}
@@ -432,6 +434,7 @@ interface VideoPanelProps {
 }
 
 function VideoPanel({ videos, inline = false }: VideoPanelProps) {
+  const t = useT();
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
@@ -455,12 +458,12 @@ function VideoPanel({ videos, inline = false }: VideoPanelProps) {
                 <YouTubeShortEmbed video={video} hideOverlayTitle />
               </div>
               {/* Text content — fills remaining width, vertically centered */}
-              <div className="flex-1 flex flex-col justify-center py-3 pr-3 min-w-0">
+              <div className="flex-1 flex flex-col justify-center py-3 pe-3 min-w-0">
                 <h5 className="text-sm font-semibold text-white leading-snug mb-1 line-clamp-2">
                   {video.title}
                 </h5>
                 <Link href="/media-blogs" className="inline-flex items-center gap-1 text-xs text-sky-400 hover:text-sky-300 transition-colors mt-1">
-                  Watch on YouTube →
+                  {t('media_blogs.watch_on_youtube')} →
                 </Link>
               </div>
             </div>
@@ -492,7 +495,7 @@ function VideoPanel({ videos, inline = false }: VideoPanelProps) {
             {crownAdvantageConfig.mediaCardTitle}
           </h4>
           <Link href="/media-blogs" className="text-xs text-sky-400 hover:text-sky-300 transition-colors">
-            View All →
+            {t('nav.view_all')} →
           </Link>
         </div>
 
@@ -583,6 +586,7 @@ export default function CrownAdvantageSection() {
       title: t(`home.advantage.items.${key}.title` as TranslationPath),
       description: t(`home.advantage.items.${key}.description` as TranslationPath),
       statLabel: item.statLabel ? t(`home.advantage.items.${key}.stat_label` as TranslationPath) : item.statLabel,
+      shortTitle: t(`home.advantage.items.${key}.short_title` as TranslationPath) || item.shortTitle,
     };
   };
 

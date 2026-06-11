@@ -34,6 +34,8 @@ export type ProductItem = {
 };
 
 export type ProductCategory = {
+  nameAr?: string;
+  nameFr?: string;
   id: string;
   name: string;
   description: string;
@@ -49,6 +51,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'upvc-drainage-pipes',
     name: 'UPVC Drainage Pipes',
+    nameAr: 'أنابيب الصرف UPVC',
+    nameFr: "Tuyaux d'Évacuation UPVC",
     description: 'Above-ground and underground drainage pipe systems certified to BS EN 1329-1:2014 and BS EN 1401-1.',
     icon: '🔧',
     image: '/images/products/cover/upvc-drainage/pipes/upvcdrainagepipesbs5255.png',
@@ -65,6 +69,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'upvc-drainage-fittings',
     name: 'UPVC Drainage Fittings',
+    nameAr: 'وصلات الصرف UPVC',
+    nameFr: "Raccords d'Évacuation UPVC",
     description: 'Drainage fittings certified to BS EN 1329-1:2014 and BS EN 1401, including push-fit solutions.',
     icon: '🔩',
     image: '/images/products/cover/upvc-drainage/fittings/BS EN 1329-12014.png',
@@ -81,6 +87,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-high-pressure-pipes',
     name: 'PVC High Pressure Pipes',
+    nameAr: 'أنابيب الضغط العالي PVC',
+    nameFr: "Tuyaux Haute Pression PVC",
     description: 'High pressure PVC pipes available in ISO, DIN, BS, and ASTM standards for potable water and industrial applications.',
     icon: '💧',
     image: '/images/products/cover/pvc high pressure/CROWN PLASTIC PVC HIGH PRESSURE PIPE ISO 4422-21996.png',
@@ -101,6 +109,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-high-pressure-fittings',
     name: 'PVC High Pressure Fittings',
+    nameAr: 'وصلات الضغط العالي PVC',
+    nameFr: "Raccords Haute Pression PVC",
     description: 'High pressure PVC fittings and valves in DIN 8063 and BS EN 1452:3/BS 4346 standards.',
     icon: '💧',
     image: '/images/products/cover/pvc high pressure/fittings/DIN 8063.png',
@@ -117,6 +127,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-sch-40-fittings',
     name: 'PVC SCH 40 Fittings',
+    nameAr: 'وصلات PVC جدول 40',
+    nameFr: "Raccords PVC SCH 40",
     description: 'Schedule 40 PVC pressure fittings to ASTM D 2466 standard.',
     icon: '🔩',
     image: '/images/products/cover/pvc high pressure/fittings/PVC SCH 40 Fittings.png',
@@ -131,6 +143,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-duct-pipes',
     name: 'PVC Duct Pipes',
+    nameAr: 'أنابيب مجاري PVC',
+    nameFr: "Tuyaux de Gaines PVC",
     description: 'Underground cable protection duct systems in NEMA, DIN, and BS standards, including Etisalat & DU approved.',
     icon: '⚡',
     image: '/images/products/cover/upvs duct/pipes/CROWN PLASTIC PVC DUCT PIPE NEMA TC 22003.png',
@@ -150,6 +164,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-duct-fittings',
     name: 'PVC Duct Fittings',
+    nameAr: 'وصلات مجاري PVC',
+    nameFr: "Raccords de Gaines PVC",
     description: 'Duct fittings for underground cable protection systems.',
     icon: '⚡',
     image: '/images/products/cover/upvs duct/fittings/duct-socketa.png',
@@ -169,6 +185,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pvc-conduit-pipes',
     name: 'PVC Conduit Pipes',
+    nameAr: 'أنابيب قنوات PVC',
+    nameFr: "Tuyaux de Conduits PVC",
     description: 'Rigid PVC electrical conduit pipes for building wiring systems. Available in compression force ratings and Schedule 40/80.',
     icon: '🔌',
     image: '/images/products/cover/conduits/pipes/CROWN PLASTIC PVC CONDUIT PIPE 1250N.png',
@@ -185,6 +203,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'ppr-pipes',
     name: 'PP-R Pipes',
+    nameAr: 'أنابيب PP-R',
+    nameFr: "Tuyaux PP-R",
     description: 'Polypropylene Random pipes for hot and cold potable water. PN10-PN25 rated, DIN 8077/78 certified.',
     icon: '🛃',
     image: '/images/products/cover/ppr/pipes/CROWN PLASTIC PPR PIPE SDR11 PN10.png',
@@ -202,6 +222,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'hdpe-pipes',
     name: 'HDPE Pipes',
+    nameAr: 'أنابيب HDPE',
+    nameFr: "Tuyaux HDPE",
     description: 'High-density polyethylene pipes for irrigation, water distribution, and agricultural applications. PE63/80/100 grades.',
     icon: '🌊',
     image: '/images/products/cover/hdpe/pipes/CROWN PLASTIC HDPE PIPE PE63.png',
@@ -223,6 +245,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'pex-pipes',
     name: 'PEX Pipes',
+    nameAr: 'أنابيب PEX',
+    nameFr: "Tuyaux PEX",
     description: 'Cross-linked polyethylene pipes for hot and cold water distribution. PN 12.5 & PN 20 rated.',
     icon: '🔴',
     image: '/images/products/cover/pex/pipes/pex.png',
@@ -237,6 +261,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'fabrications-accessories',
     name: 'Fabrications & Accessories',
+    nameAr: 'التصنيع والملحقات',
+    nameFr: "Fabrications & Accessoires",
     description: 'Custom PVC/UPVC fabrications including Dubai Municipality approved grease traps and specialty accessories.',
     icon: '🏭',
     items: [
@@ -254,6 +280,8 @@ export const PRODUCT_MAP: ProductCategory[] = [
   {
     id: 'solvents',
     name: 'Solvents',
+    nameAr: 'المذيبات',
+    nameFr: "Solvants",
     description: 'PVC solvent cements for secure and durable pipe joints.',
     icon: '🧴',
     image: '/images/products/cover/solvent/Solventcover.png',

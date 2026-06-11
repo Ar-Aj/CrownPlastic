@@ -1,4 +1,4 @@
-const seoOverviewFr = (standard: string, description: string) => `<p><b>Standard: ${standard}</b></p><p>${description}</p>`;
+const seoOverviewFr = (standard: string, description: string) => `Crown Plastic Pipes / Fittings, fabricant leader de PVC-U dans le UAE, produit une gamme complète de tuyaux haute pression conformes à ${standard}. ${description} Fabriqués dans notre usine certifiée ISO 9001:2015 à Umm Al Quwain, ces tuyaux sont approuvés par les entrepreneurs, consultants et autorités gouvernementales dans tout le UAE.`;
 /**
  * PVC High Pressure Pipes - Product Detail Configurations
  *
@@ -31,14 +31,14 @@ const HP_FEATURES = [
   'ISO 9001:2015 certified production in the UAE',
 ];
 const HP_FEATURESFr = [
-  'High-pressure tolerance up to PN 16 and Schedule 80 ratings',
-  'Excellent chemical resistance against corrosive industrial fluids',
-  'Full compliance with ISO, DIN, BS, and ASTM international standards',
-  'Corrosion-resistant PVC-U ensures long service life in Gulf climate conditions',
-  'Smooth internal bore for optimised flow rates and reduced scale build-up',
-  'Lightweight construction for easy handling and efficient installation',
-  'UV-stabilised formulation suited to Middle East outdoor exposure',
-  'ISO 9001:2015 certified production in the UAE',
+  'Tolérance haute pression jusqu\'à PN 16 et aux cotes Schedule 80',
+  'Excellente résistance chimique contre les fluides industriels corrosifs',
+  'Conformité totale aux normes internationales ISO, DIN, BS et ASTM',
+  'Le PVC-U résistant à la corrosion garantit une longue durée de service dans le climat du Golfe',
+  'Alésage interne lisse pour des débits optimisés et une réduction des dépôts calcaires',
+  'Construction légère pour une manutention facile et une installation efficace',
+  'Formulation stabilisée aux UV adaptée à l\'exposition extérieure au Moyen-Orient',
+  'Production certifiée ISO 9001:2015 dans le UAE',
 ];
 const HP_FEATURESAr = [
   'تحمل ضغط عالٍ يصل إلى PN 16 وتصنيف جدول 80',
@@ -62,14 +62,14 @@ const HP_APPLICATIONS = [
   'Desalination plant auxiliary piping',
 ];
 const HP_APPLICATIONSFr = [
-  'Potable water supply and distribution networks across the UAE',
-  'Industrial chemical processing and fluid transport',
-  'Municipal sewerage and wastewater management systems',
-  'Agricultural irrigation and high-pressure water delivery in GCC',
-  'Electrical and telecommunications ducting applications',
-  'HVAC systems and cooling water circulation',
-  'Swimming pool and water feature installations',
-  'Desalination plant auxiliary piping',
+  'Réseaux d\'alimentation et de distribution d\'eau potable dans tout le UAE',
+  'Traitement chimique industriel et transport de fluides',
+  'Systèmes municipaux d\'assainissement et de gestion des eaux usées',
+  'Irrigation agricole et acheminement d\'eau à haute pression dans le GCC',
+  'Applications de canalisations électriques et de télécommunications',
+  'Systèmes HVAC et circulation des eaux de refroidissement',
+  'Installations de piscines et de fontaines',
+  'Canalisations auxiliaires de centrales de dessalement',
 ];
 const HP_APPLICATIONSAr = [
   'شبكات إمداد وتوزيع مياه الشرب في الإمارات',
@@ -98,16 +98,16 @@ const HP_DOS_DONTS = {
 };
 const HP_DOS_DONTSFr = {
   dos: [
-    'Follow standard solvent welding or mechanical joining procedures',
-    'Ensure pipes are supported at recommended intervals to prevent sagging',
-    'Verify that the chosen pressure rating exceeds maximum system pressure',
-    'Conduct pressure testing before full commissioning',
+    'Suivre les procédures standard de soudage au solvant ou d\'assemblage mécanique',
+    'S\'assurer que les tuyaux sont supportés aux intervalles recommandés pour éviter l\'affaissement',
+    'Vérifier que la valeur nominale de pression choisie dépasse la pression maximale du système',
+    'Effectuer des tests de pression avant la mise en service complète',
   ],
   donts: [
-    'Do not exceed the maximum sustained working pressure for the temperature',
-    'Avoid dropping or dragging pipes on rough surfaces',
-    'Do not use for compressed air or gas transport unless specifically rated',
-    'Avoid prolonged UV exposure without adequate protection',
+    'Ne pas dépasser la pression de travail maximale soutenue pour la température donnée',
+    'Éviter de laisser tomber ou de traîner les tuyaux sur des surfaces rugueuses',
+    'Ne pas utiliser pour le transport d\'air comprimé ou de gaz sauf si spécifiquement homologué',
+    'Éviter l\'exposition prolongée aux UV sans protection adéquate',
   ],
 };
 const HP_DOS_DONTSAr = {
@@ -149,7 +149,7 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
     shortDescriptionFr: `Conduites sous pression PVC-U vers ISO 4422-2:1996 — tailles 20 mm à 400 mm, PN 6/10/16.`,
     overview: seoOverview('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Engineered for potable water supply, irrigation, and industrial fluid transport, these metric pipes are available in sizes from 20 mm to 400 mm with pressure classes PN 6, PN 10, and PN 16.'),
   overviewAr: seoOverviewAr('ISO 4422-2:1996', 'مصممة لإمداد مياه الشرب والري ونقل السوائل الصناعية، هذه الأنابيب المترية متوفرة بمقاسات من 20 مم إلى 400 مم بفئات ضغط PN 6 و PN 10 و PN 16.'),
-    overviewFr: seoOverviewFr('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Conçus pour l\'approvisionnement en eau potable, l\'irrigation et le transport de fluides industriels, ces tuyaux métriques sont disponibles dans des tailles allant de 20 mm à 400 mm avec des classes de pression PN 6, PN 10 et PN 16..'),
+    overviewFr: seoOverviewFr('ISO 4422-2:1996 (superseded by ISO 1452-2/BS EN 1452:2009)', 'Conçus pour l\'approvisionnement en eau potable, l\'irrigation et le transport de fluides industriels, ces tuyaux métriques sont disponibles dans des tailles allant de 20 mm à 400 mm avec des classes de pression PN 6, PN 10 et PN 16.'),
   features: HP_FEATURES, featuresAr: HP_FEATURESAr,
     featuresFr: HP_FEATURESFr,
     applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
@@ -160,13 +160,13 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
       id: 'pvcHpPipesIso4422-c25',
       title: 'Metric size Pressure Pipes — ISO 4422-2:1996',
       columns: [
-        { key: 'nominal_od', label: 'Nominal Outside Diameter' },
-        { key: 's20_sdr41',   label: '-',      groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', colSpan: 6, superGroupLabel: 'S 20 (SDR 41)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaColSpan: 6 },
-        { key: 's16_sdr33',   label: 'PN 6',   groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5',             superGroupLabel: 'S 16 (SDR 33)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)' },
-        { key: 's125_sdr26',  label: '-',       groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5',             superGroupLabel: 'S 12.5 (SDR 26)',  superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)' },
-        { key: 's10_sdr21',   label: 'PN 10',   groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5',             superGroupLabel: 'S 10 (SDR 21)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)' },
-        { key: 's8_sdr17',    label: '-',        groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5',             superGroupLabel: 'S 8 (SDR 17)',     superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)' },
-        { key: 's63_sdr136',  label: 'PN 16',    groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5',             superGroupLabel: 'S 6.3 (SDR 13.6)', superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)' },
+        { key: 'nominal_od', label: 'Nominal Outside Diameter', labelFr: 'Diametre Exterieur Nominal' },
+        { key: 's20_sdr41',   label: '-',      groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5', colSpan: 6, superGroupLabel: 'S 20 (SDR 41)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)', megaColSpan: 6 },
+        { key: 's16_sdr33',   label: 'PN 6',   groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5',             superGroupLabel: 'S 16 (SDR 33)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)' },
+        { key: 's125_sdr26',  label: '-',       groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5',             superGroupLabel: 'S 12.5 (SDR 26)',  superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)' },
+        { key: 's10_sdr21',   label: 'PN 10',   groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5',             superGroupLabel: 'S 10 (SDR 21)',    superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)' },
+        { key: 's8_sdr17',    label: '-',        groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5',             superGroupLabel: 'S 8 (SDR 17)',     superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)' },
+        { key: 's63_sdr136',  label: 'PN 16',    groupLabel: 'Nominal pressure PN based on service (design) coefficient C = 2.5', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.5',             superGroupLabel: 'S 6.3 (SDR 13.6)', superColSpan: 1, megaGroupLabel: 'Nominal Wall Thickness (Minimum)', megaGroupLabelFr: 'Epaisseur Nominale de Paroi (Minimum)' },
       ],
       rows: [
         { nominal_od: '20 mm',  s20_sdr41: '-', s16_sdr33: '-',   s125_sdr26: '-', s10_sdr21: '-',   s8_sdr17: '-',   s63_sdr136: '1.5' },
@@ -184,13 +184,13 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
       id: 'pvcHpPipesIso4422-c20',
       title: 'Metric size Pressure Pipes — ISO 4422-2:1996',
       columns: [
-        { key: 'nominal_od', label: 'Nominal Outside Diameter' },
-        { key: 's20_sdr41',   label: 'PN 6',  groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', colSpan: 6 },
-        { key: 's16_sdr33',   label: '-',      groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0' },
-        { key: 's125_sdr26',  label: 'PN 10',  groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0' },
-        { key: 's10_sdr21',   label: '-',       groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0' },
-        { key: 's8_sdr17',    label: 'PN 16',   groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0' },
-        { key: 's63_sdr136',  label: '-',        groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0' },
+        { key: 'nominal_od', label: 'Nominal Outside Diameter', labelFr: 'Diametre Exterieur Nominal' },
+        { key: 's20_sdr41',   label: 'PN 6',  groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0', colSpan: 6 },
+        { key: 's16_sdr33',   label: '-',      groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0' },
+        { key: 's125_sdr26',  label: 'PN 10',  groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0' },
+        { key: 's10_sdr21',   label: '-',       groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0' },
+        { key: 's8_sdr17',    label: 'PN 16',   groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0' },
+        { key: 's63_sdr136',  label: '-',        groupLabel: 'Nominal pressure PN Base on service (design) coefficient C=2.0', groupLabelFr: 'Pression Nominale PN basee sur le coeff. de service C=2.0' },
       ],
       rows: [
         { nominal_od: '110 mm', s20_sdr41: '2.7', s16_sdr33: '-', s125_sdr26: '4.2',  s10_sdr21: '-', s8_sdr17: '6.6',  s63_sdr136: '-' },
@@ -209,7 +209,7 @@ export const pvcHpPipesIso4422: ProductDetailConfig = {
     },
   ],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -239,17 +239,17 @@ export const pvcHpPipesDin806162: ProductDetailConfig = {
     id: 'pvcHpPipesDin806162-pipes',
     title: 'Metric size Pressure Pipes',
     columns: [
-      { key: 'hp_size', label: 'Size' },
-      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superColSpan: 2 },
-      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.' },
-      { key: 'hp_mean_wall_thickness_mm_pn_16_class_16_min', label: 'Min', groupLabel: 'PN-16(CLASS-16)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superColSpan: 8 },
-      { key: 'hp_mean_wall_thickness_mm_pn_16_class_16_max', label: 'Max', groupLabel: 'PN-16(CLASS-16)', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_10_class_10_min', label: 'Min', groupLabel: 'PN-10(CLASS-10)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_10_class_10_max', label: 'Max', groupLabel: 'PN-10(CLASS-10)', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_6_class_6_min', label: 'Min', groupLabel: 'PN-6(CLASS-6)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_6_class_6_max', label: 'Max', groupLabel: 'PN-6(CLASS-6)', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_4_class_4_min', label: 'Min', groupLabel: 'PN-4(CLASS-4)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_4_class_4_max', label: 'Max', groupLabel: 'PN-4(CLASS-4)', superGroupLabel: 'Mean Wall Thickness' }
+      { key: 'hp_size', label: 'Size', labelFr: 'Taille' },
+      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen' },
+      { key: 'hp_mean_wall_thickness_mm_pn_16_class_16_min', label: 'Min', groupLabel: 'PN-16(CLASS-16)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 8 },
+      { key: 'hp_mean_wall_thickness_mm_pn_16_class_16_max', label: 'Max', groupLabel: 'PN-16(CLASS-16)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_10_class_10_min', label: 'Min', groupLabel: 'PN-10(CLASS-10)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_10_class_10_max', label: 'Max', groupLabel: 'PN-10(CLASS-10)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_6_class_6_min', label: 'Min', groupLabel: 'PN-6(CLASS-6)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_6_class_6_max', label: 'Max', groupLabel: 'PN-6(CLASS-6)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_4_class_4_min', label: 'Min', groupLabel: 'PN-4(CLASS-4)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_4_class_4_max', label: 'Max', groupLabel: 'PN-4(CLASS-4)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
     ],
     rows: [
       { hp_size: '20 mm', hp_mean_outside_dia_min: '20.0', hp_mean_outside_dia_max: '20.2', hp_mean_wall_thickness_mm_pn_16_class_16_min: '1.5', hp_mean_wall_thickness_mm_pn_16_class_16_max: '1.9', hp_mean_wall_thickness_mm_pn_10_class_10_min: null, hp_mean_wall_thickness_mm_pn_10_class_10_max: null, hp_mean_wall_thickness_mm_pn_6_class_6_min: null, hp_mean_wall_thickness_mm_pn_6_class_6_max: null, hp_mean_wall_thickness_mm_pn_4_class_4_min: null, hp_mean_wall_thickness_mm_pn_4_class_4_max: null },
@@ -273,7 +273,7 @@ export const pvcHpPipesDin806162: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -303,15 +303,15 @@ export const pvcHpPipesBsEnIso14522: ProductDetailConfig = {
     id: 'pvcHpPipesBsEnIso14522-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
-      { key: 'hp_size', label: 'Size' },
-      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superColSpan: 2 },
-      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.' },
-      { key: 'hp_wall_thickness_mm_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Wall Thickness', superColSpan: 2 },
-      { key: 'hp_wall_thickness_mm_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Wall Thickness', superColSpan: 2 },
-      { key: 'hp_wall_thickness_mm_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Wall Thickness', superColSpan: 2 },
-      { key: 'hp_wall_thickness_mm_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Wall Thickness' }
+      { key: 'hp_size', label: 'Size', labelFr: 'Taille' },
+      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen' },
+      { key: 'hp_wall_thickness_mm_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi', superColSpan: 2 },
+      { key: 'hp_wall_thickness_mm_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi', superColSpan: 2 },
+      { key: 'hp_wall_thickness_mm_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi', superColSpan: 2 },
+      { key: 'hp_wall_thickness_mm_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Wall Thickness', superGroupLabelFr: 'Epaisseur de Paroi' }
     ],
     rows: [
       { hp_size: '1/2"', hp_mean_outside_dia_min: '21.2', hp_mean_outside_dia_max: '21.5', hp_wall_thickness_mm_pn_15_class_e_min: '1.7', hp_wall_thickness_mm_pn_15_class_e_max: '2.1', hp_wall_thickness_mm_pn_12_class_d_min: null, hp_wall_thickness_mm_pn_12_class_d_max: null, hp_wall_thickness_mm_pn_9_class_c_min: null, hp_wall_thickness_mm_pn_9_class_c_max: null },
@@ -329,7 +329,7 @@ export const pvcHpPipesBsEnIso14522: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -359,15 +359,15 @@ export const pvcHpPipesBs3505: ProductDetailConfig = {
     id: 'pvcHpPipesBs3505-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
-      { key: 'hp_size', label: 'Size' },
-      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superColSpan: 2 },
-      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.' },
-      { key: 'hp_wall_thickness_mm_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superColSpan: 6 },
-      { key: 'hp_wall_thickness_mm_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_wall_thickness_mm_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Mean Wall Thickness' }
+      { key: 'hp_size', label: 'Size', labelFr: 'Taille' },
+      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen' },
+      { key: 'hp_wall_thickness_mm_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 6 },
+      { key: 'hp_wall_thickness_mm_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_wall_thickness_mm_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
     ],
     rows: [
       { hp_size: '1/2"', hp_mean_outside_dia_min: '21.2', hp_mean_outside_dia_max: '21.5', hp_wall_thickness_mm_pn_15_class_e_min: '1.7', hp_wall_thickness_mm_pn_15_class_e_max: '2.1', hp_wall_thickness_mm_pn_12_class_d_min: null, hp_wall_thickness_mm_pn_12_class_d_max: null, hp_wall_thickness_mm_pn_9_class_c_min: null, hp_wall_thickness_mm_pn_9_class_c_max: null },
@@ -385,7 +385,7 @@ export const pvcHpPipesBs3505: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -406,7 +406,7 @@ export const pvcHpPipesBs3506: ProductDetailConfig = {
     shortDescriptionFr: `Tuyaux sous pression PVC-U vers BS 3506:1969 pour les applications industrielles du – ½″ vers 12″.`,
     overview: seoOverview('BS 3506:1969', 'Engineered for industrial fluid transport, chemical processing plants, and non-potable water systems, these pipes withstand aggressive media commonly encountered in UAE industrial zones such as JAFZA, KIZAD, and Ras Al Khaimah. Available from ½″ to 12″ with classes up to PN 15.'),
   overviewAr: seoOverviewAr('BS 3506:1969', 'مصممة لنقل السوائل الصناعية ومحطات المعالجة الكيميائية وأنظمة المياه غير الصالحة للشرب، تتحمل هذه الأنابيب الوسائط العدوانية الشائعة في المناطق الصناعية الإماراتية مثل جافزا وكيزاد ورأس الخيمة. متوفرة من ½″ إلى 12″ بفئات حتى PN 15.'),
-    overviewFr: seoOverviewFr('BS 3506:1969', 'Conçus pour le transport de fluides industriels, les usines de traitement chimique et les systèmes d\'eau non potable, ces tuyaux résistent aux fluides agressifs couramment rencontrés dans les zones industrielles UAE indu telles que JAFZA, KIZAD et Ras Al Khaimah. Disponible de ½″ à 12″ avec des classes jusqu\'à PN 15.'),
+    overviewFr: seoOverviewFr('BS 3506:1969', 'Conçus pour le transport de fluides industriels, les usines de traitement chimique et les systèmes d\'eau non potable, ces tuyaux résistent aux fluides agressifs couramment rencontrés dans les zones industrielles UAE telles que JAFZA, KIZAD et Ras Al Khaimah. Disponible de ½″ à 12″ avec des classes jusqu\'à PN 15.'),
   features: HP_FEATURES, featuresAr: HP_FEATURESAr,
     featuresFr: HP_FEATURESFr,
     applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
@@ -415,19 +415,19 @@ export const pvcHpPipesBs3506: ProductDetailConfig = {
     id: 'pvcHpPipesBs3506-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
-      { key: 'hp_nominal_size', label: 'Nominal Size' },
-      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superColSpan: 2 },
-      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.' },
-      { key: 'hp_nominal_wall_thickness_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superColSpan: 10 },
-      { key: 'hp_nominal_wall_thickness_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_6_class_b_min', label: 'Min', groupLabel: 'PN-6(CLASS-B)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_pn_6_class_b_max', label: 'Max', groupLabel: 'PN-6(CLASS-B)', superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_non_pressure_class_o_min', label: 'Min', groupLabel: 'Non Pressure (CLASS-O)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness' },
-      { key: 'hp_nominal_wall_thickness_non_pressure_class_o_max', label: 'Max', groupLabel: 'Non Pressure (CLASS-O)', superGroupLabel: 'Nominal Wall Thickness' }
+      { key: 'hp_nominal_size', label: 'Nominal Size', labelFr: 'Taille Nominale' },
+      { key: 'hp_mean_outside_dia_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+      { key: 'hp_mean_outside_dia_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen' },
+      { key: 'hp_nominal_wall_thickness_pn_15_class_e_min', label: 'Min', groupLabel: 'PN-15(CLASS-E)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi', superColSpan: 10 },
+      { key: 'hp_nominal_wall_thickness_pn_15_class_e_max', label: 'Max', groupLabel: 'PN-15(CLASS-E)', superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_12_class_d_min', label: 'Min', groupLabel: 'PN-12(CLASS-D)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_12_class_d_max', label: 'Max', groupLabel: 'PN-12(CLASS-D)', superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_9_class_c_min', label: 'Min', groupLabel: 'PN-9(CLASS-C)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_9_class_c_max', label: 'Max', groupLabel: 'PN-9(CLASS-C)', superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_6_class_b_min', label: 'Min', groupLabel: 'PN-6(CLASS-B)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_pn_6_class_b_max', label: 'Max', groupLabel: 'PN-6(CLASS-B)', superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_non_pressure_class_o_min', label: 'Min', groupLabel: 'Non Pressure (CLASS-O)', groupLabelFr: 'Sans Pression (CLASSE-O)', colSpan: 2, superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' },
+      { key: 'hp_nominal_wall_thickness_non_pressure_class_o_max', label: 'Max', groupLabel: 'Non Pressure (CLASS-O)', groupLabelFr: 'Sans Pression (CLASSE-O)', superGroupLabel: 'Nominal Wall Thickness', superGroupLabelFr: 'Epaisseur Nominale de Paroi' }
     ],
     rows: [
       { hp_nominal_size: '1/2"', hp_mean_outside_dia_min: '21.2', hp_mean_outside_dia_max: '21.5', hp_nominal_wall_thickness_pn_15_class_e_min: '1.7', hp_nominal_wall_thickness_pn_15_class_e_max: '2.1', hp_nominal_wall_thickness_pn_12_class_d_min: null, hp_nominal_wall_thickness_pn_12_class_d_max: null, hp_nominal_wall_thickness_pn_9_class_c_min: null, hp_nominal_wall_thickness_pn_9_class_c_max: null, hp_nominal_wall_thickness_pn_6_class_b_min: null, hp_nominal_wall_thickness_pn_6_class_b_max: null, hp_nominal_wall_thickness_non_pressure_class_o_min: null, hp_nominal_wall_thickness_non_pressure_class_o_max: null },
@@ -445,7 +445,7 @@ export const pvcHpPipesBs3506: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -466,7 +466,7 @@ export const pvcHpPipesAstmD1785: ProductDetailConfig = {
     shortDescriptionFr: `Conduites sous pression PVC-U vers ASTM D 1785 — Schedule 40 et Schedule 80.`,
     overview: seoOverview('ASTM D 1785', 'The American standard for rigid PVC pressure pipes in Schedule 40 (standard wall) and Schedule 80 (extra heavy wall) ratings. Widely used across UAE industrial zones, oil & gas auxiliary systems, and American-specification projects throughout the GCC.'),
   overviewAr: seoOverviewAr('ASTM D 1785', 'المعيار الأمريكي لأنابيب الضغط PVC الصلبة بتصنيف جدول 40 (جدار قياسي) وجدول 80 (جدار سميك إضافي). مستخدمة على نطاق واسع في المناطق الصناعية الإماراتية والأنظمة المساعدة للنفط والغاز والمشاريع ذات المواصفات الأمريكية في الخليج.'),
-    overviewFr: seoOverviewFr('ASTM D 1785', 'La norme américaine pour les conduites sous pression rigides PVC dans les classifications Schedule 40 (paroi standard) et Schedule 80 (paroi extra épaisse). Largement utilisé dans les zones industrielles UAE dans du, les systèmes auxiliaires pétroliers et gaziers et les projets de spécifications américaines dans l\'ensemble du GCC.'),
+    overviewFr: seoOverviewFr('ASTM D 1785', 'La norme américaine pour les conduites sous pression rigides PVC dans les classifications Schedule 40 (paroi standard) et Schedule 80 (paroi extra épaisse). Largement utilisé dans les zones industrielles UAE, les systèmes auxiliaires pétroliers et gaziers et les projets de spécifications américaines dans l\'ensemble du GCC.'),
   features: HP_FEATURES, featuresAr: HP_FEATURESAr,
     featuresFr: HP_FEATURESFr,
     applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
@@ -475,15 +475,15 @@ export const pvcHpPipesAstmD1785: ProductDetailConfig = {
     id: 'pvcHpPipesAstmD1785-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
-      { key: 'hp_nominal_size_inch', label: 'Nominal Size Inch' },
-      { key: 'hp_min_outside_dia_mm', label: 'Min', superGroupLabel: 'Outside Dia. (mm)', superColSpan: 2 },
-      { key: 'hp_max_outside_dia_mm', label: 'Max', superGroupLabel: 'Outside Dia. (mm)' },
-      { key: 'hp_wall_thickness_mm_sch_40_min', label: 'Min', groupLabel: 'Wall Thickness (mm)', colSpan: 2, superGroupLabel: 'SCH 40', superColSpan: 3 },
-      { key: 'hp_wall_thickness_mm_sch_40_max', label: 'Max', groupLabel: 'Wall Thickness (mm)', superGroupLabel: 'SCH 40' },
-      { key: 'hp_pressure_rating_bar_sch_40', label: 'Pressure Rating (BAR)', superGroupLabel: 'SCH 40' },
-      { key: 'hp_wall_thickness_mm_sch_80_min', label: 'Min', groupLabel: 'Wall Thickness (mm)', colSpan: 2, superGroupLabel: 'SCH 80', superColSpan: 3 },
-      { key: 'hp_wall_thickness_mm_sch_80_max', label: 'Max', groupLabel: 'Wall Thickness (mm)', superGroupLabel: 'SCH 80' },
-      { key: 'hp_pressure_rating_bar_sch_80', label: 'Pressure Rating (BAR)', superGroupLabel: 'SCH 80' }
+      { key: 'hp_nominal_size_inch', label: 'Nominal Size Inch', labelFr: 'Taille Nominale Inch' },
+      { key: 'hp_min_outside_dia_mm', label: 'Min', superGroupLabel: 'Outside Dia. (mm)', superGroupLabelFr: 'Diam. Ext. (mm)', superColSpan: 2 },
+      { key: 'hp_max_outside_dia_mm', label: 'Max', superGroupLabel: 'Outside Dia. (mm)', superGroupLabelFr: 'Diam. Ext. (mm)' },
+      { key: 'hp_wall_thickness_mm_sch_40_min', label: 'Min', groupLabel: 'Wall Thickness (mm)', groupLabelFr: 'Epaisseur de Paroi (mm)', colSpan: 2, superGroupLabel: 'SCH 40', superColSpan: 3 },
+      { key: 'hp_wall_thickness_mm_sch_40_max', label: 'Max', groupLabel: 'Wall Thickness (mm)', groupLabelFr: 'Epaisseur de Paroi (mm)', superGroupLabel: 'SCH 40' },
+      { key: 'hp_pressure_rating_bar_sch_40', label: 'Pressure Rating (BAR)', labelFr: 'Pression Nominale (BAR)', superGroupLabel: 'SCH 40' },
+      { key: 'hp_wall_thickness_mm_sch_80_min', label: 'Min', groupLabel: 'Wall Thickness (mm)', groupLabelFr: 'Epaisseur de Paroi (mm)', colSpan: 2, superGroupLabel: 'SCH 80', superColSpan: 3 },
+      { key: 'hp_wall_thickness_mm_sch_80_max', label: 'Max', groupLabel: 'Wall Thickness (mm)', groupLabelFr: 'Epaisseur de Paroi (mm)', superGroupLabel: 'SCH 80' },
+      { key: 'hp_pressure_rating_bar_sch_80', label: 'Pressure Rating (BAR)', labelFr: 'Pression Nominale (BAR)', superGroupLabel: 'SCH 80' }
     ],
     rows: [
       { hp_nominal_size_inch: '1/2"', hp_min_outside_dia_mm: '21.24', hp_max_outside_dia_mm: '21.44', hp_wall_thickness_mm_sch_40_min: '2.77', hp_wall_thickness_mm_sch_40_max: '3.28', hp_pressure_rating_bar_sch_40: '41.40', hp_wall_thickness_mm_sch_80_min: '3.73', hp_wall_thickness_mm_sch_80_max: '4.24', hp_pressure_rating_bar_sch_80: '58.60' },
@@ -501,7 +501,7 @@ export const pvcHpPipesAstmD1785: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };
@@ -522,7 +522,7 @@ export const pvcHpPipesAstmD2241: ProductDetailConfig = {
     shortDescriptionFr: `Tuyaux sous pression PVC-U vers ASTM D 2241 — classés SDR pour plusieurs classes de pression.`,
     overview: seoOverview('ASTM D 2241', 'SDR (Standard Dimension Ratio) rated PVC-U pipes offering a wide spectrum of pressure classes from SDR 64 through SDR 13.5. This flexible rating system allows engineers to optimise wall thickness precisely to project pressure requirements — a preferred specification for cost-effective high-pressure installations in the UAE.'),
   overviewAr: seoOverviewAr('ASTM D 2241', 'أنابيب PVC-U مصنفة SDR (نسبة البعد القياسي) تقدم طيفاً واسعاً من فئات الضغط من SDR 64 إلى SDR 13.5. يتيح نظام التصنيف المرن هذا للمهندسين تحسين سماكة الجدار بدقة وفقاً لمتطلبات ضغط المشروع — مواصفة مفضلة للتركيبات عالية الضغط الفعالة من حيث التكلفة في الإمارات.'),
-    overviewFr: seoOverviewFr('ASTM D 2241', 'Tuyaux classés PVC-U SDR (Standard Dimension Ratio) offrant un large éventail de classes de pression de SDR 64 à SDR 13.5.. Ce système de notation flexible permet aux ingénieurs d\'optimiser l\'épaisseur de paroi avec précision pour projeter les exigences de pression - une spécification privilégiée pour les installations haute pression rentables dans le UAE.'),
+    overviewFr: seoOverviewFr('ASTM D 2241', 'Tuyaux classés PVC-U SDR (Standard Dimension Ratio) offrant un large éventail de classes de pression de SDR 64 à SDR 13.5. Ce système de notation flexible permet aux ingénieurs d\'optimiser l\'épaisseur de paroi avec précision pour projeter les exigences de pression - une spécification privilégiée pour les installations haute pression rentables dans le UAE.'),
   features: HP_FEATURES, featuresAr: HP_FEATURESAr,
     featuresFr: HP_FEATURESFr,
     applications: HP_APPLICATIONS, applicationsAr: HP_APPLICATIONSAr,
@@ -531,23 +531,23 @@ export const pvcHpPipesAstmD2241: ProductDetailConfig = {
     id: 'pvcHpPipesAstmD2241-pipes',
     title: 'Inch size Pressure Pipes',
     columns: [
-      { key: 'hp_nominal_outside_dia', label: 'Nominal Size Inch' },
-      { key: 'hp_outside_dia_mm_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superColSpan: 2 },
-      { key: 'hp_outside_dia_mm_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.' },
-      { key: 'hp_mean_wall_thickness_mm_pn_4_3_sdr_64_min', label: 'Min', groupLabel: 'PN-4.3 SDR 64', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superColSpan: 14 },
-      { key: 'hp_mean_wall_thickness_mm_pn_4_3_sdr_64_max', label: 'Max', groupLabel: 'PN-4.3 SDR 64', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_6_9_sdr_41_min', label: 'Min', groupLabel: 'PN-6.9 SDR 41', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_6_9_sdr_41_max', label: 'Max', groupLabel: 'PN-6.9 SDR 41', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_min', label: 'Min', groupLabel: 'PN-8.6 SDR 32.5', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_max', label: 'Max', groupLabel: 'PN-8.6 SDR 32.5', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_11_sdr_26_min', label: 'Min', groupLabel: 'PN-11 SDR 26', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_11_sdr_26_max', label: 'Max', groupLabel: 'PN-11 SDR 26', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_13_8_sdr_21_min', label: 'Min', groupLabel: 'PN-13.8 SDR 21', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_13_8_sdr_21_max', label: 'Max', groupLabel: 'PN-13.8 SDR 21', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_17_2_sdr_17_min', label: 'Min', groupLabel: 'PN-17.2 SDR 17', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_17_2_sdr_17_max', label: 'Max', groupLabel: 'PN-17.2 SDR 17', superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_min', label: 'Min', groupLabel: 'PN 21.7 SDR 13.5', colSpan: 2, superGroupLabel: 'Mean Wall Thickness' },
-      { key: 'hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_max', label: 'Max', groupLabel: 'PN 21.7 SDR 13.5', superGroupLabel: 'Mean Wall Thickness' }
+      { key: 'hp_nominal_outside_dia', label: 'Nominal Size Inch', labelFr: 'Taille Nominale Inch' },
+      { key: 'hp_outside_dia_mm_min', label: 'Min', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+      { key: 'hp_outside_dia_mm_max', label: 'Max', superGroupLabel: 'Mean Outside Dia.', superGroupLabelFr: 'Diam. Ext. Moyen' },
+      { key: 'hp_mean_wall_thickness_mm_pn_4_3_sdr_64_min', label: 'Min', groupLabel: 'PN-4.3 SDR 64', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 14 },
+      { key: 'hp_mean_wall_thickness_mm_pn_4_3_sdr_64_max', label: 'Max', groupLabel: 'PN-4.3 SDR 64', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_6_9_sdr_41_min', label: 'Min', groupLabel: 'PN-6.9 SDR 41', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_6_9_sdr_41_max', label: 'Max', groupLabel: 'PN-6.9 SDR 41', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_min', label: 'Min', groupLabel: 'PN-8.6 SDR 32.5', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_max', label: 'Max', groupLabel: 'PN-8.6 SDR 32.5', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_11_sdr_26_min', label: 'Min', groupLabel: 'PN-11 SDR 26', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_11_sdr_26_max', label: 'Max', groupLabel: 'PN-11 SDR 26', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_13_8_sdr_21_min', label: 'Min', groupLabel: 'PN-13.8 SDR 21', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_13_8_sdr_21_max', label: 'Max', groupLabel: 'PN-13.8 SDR 21', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_17_2_sdr_17_min', label: 'Min', groupLabel: 'PN-17.2 SDR 17', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_17_2_sdr_17_max', label: 'Max', groupLabel: 'PN-17.2 SDR 17', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_min', label: 'Min', groupLabel: 'PN 21.7 SDR 13.5', colSpan: 2, superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+      { key: 'hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_max', label: 'Max', groupLabel: 'PN 21.7 SDR 13.5', superGroupLabel: 'Mean Wall Thickness', superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
     ],
     rows: [
       { hp_nominal_outside_dia: '1/2"', hp_outside_dia_mm_min: '21.24', hp_outside_dia_mm_max: '21.44', hp_mean_wall_thickness_mm_pn_4_3_sdr_64_min: null, hp_mean_wall_thickness_mm_pn_4_3_sdr_64_max: null, hp_mean_wall_thickness_mm_pn_6_9_sdr_41_min: null, hp_mean_wall_thickness_mm_pn_6_9_sdr_41_max: null, hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_min: null, hp_mean_wall_thickness_mm_pn_8_6_sdr_32_5_max: null, hp_mean_wall_thickness_mm_pn_11_sdr_26_min: null, hp_mean_wall_thickness_mm_pn_11_sdr_26_max: null, hp_mean_wall_thickness_mm_pn_13_8_sdr_21_min: null, hp_mean_wall_thickness_mm_pn_13_8_sdr_21_max: null, hp_mean_wall_thickness_mm_pn_17_2_sdr_17_min: null, hp_mean_wall_thickness_mm_pn_17_2_sdr_17_max: null, hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_min: '1.57', hp_mean_wall_thickness_mm_pn_21_7_sdr_13_5_max: '2.08' },
@@ -565,7 +565,7 @@ export const pvcHpPipesAstmD2241: ProductDetailConfig = {
     ]
   }],
   fittings: [],
-  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
+  downloads: [{ label: 'PVC High Pressure Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب PVC عالية الضغط (PDF)', labelFr: 'Catalogue Tuyaux PVC Haute Pression (PDF)', href: '/pdfs/UPVC%20PRESSURE%20PIPES.pdf' }],
   dosDonts: HP_DOS_DONTS, dosDontsAr: HP_DOS_DONTSAr,
     dosDontsFr: HP_DOS_DONTSFr
 };

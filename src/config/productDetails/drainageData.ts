@@ -34,7 +34,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'elbow-90',
       title: 'ELBOW 90°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -69,7 +69,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'elbow-45',
       title: 'ELBOW 45°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -104,7 +104,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'socket-coupler',
       title: 'SOCKET/COUPLER',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -140,7 +140,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'reducer-bush-socket',
       title: 'REDUCER BUSH/SOCKET',
       columns: [
-        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch)' },
+        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch)', labelFr: 'Taille Nominale (Inch x Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -176,7 +176,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'tee-87-5',
       title: 'TEE 87.5°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -211,7 +211,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'y-45-skew-tee',
       title: 'Y - 45°/SKEW TEE',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -246,7 +246,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'elbow-90-male-female',
       title: 'ELBOW 90° MALE/FEMALE',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -282,7 +282,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'tee-87-5-male-female',
       title: 'TEE 87.5° MALE/FEMALE',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -318,7 +318,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'access-cap-clean-out',
       title: 'ACCESS CAP/CLEAN OUT',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 2 },
         { key: 'h', label: 'H', groupLabel: 'products.tables.dimensions_mm' },
       ],
@@ -349,7 +349,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'access-door-elbow-90',
       title: 'ACCESS/DOOR ELBOW 90°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 5 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l_tr', label: 'L Tr', groupLabel: 'products.tables.dimensions_mm' },
@@ -383,7 +383,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'access-door-tee-87-5',
       title: 'ACCESS/DOOR TEE 87.5°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l1', label: 'L1', groupLabel: 'products.tables.dimensions_mm' },
@@ -419,7 +419,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'female-threaded-elbow',
       title: 'FEMALE THREADED ELBOW',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'g', label: 'G', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -454,7 +454,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'inspection-port-door-sooket',
       title: 'INSPECTION PORT/ DOOR SOCKET',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -490,7 +490,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'vent-cowl',
       title: 'VENT COWL',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 2 },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
       ],
@@ -524,7 +524,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'female-threaded-socket',
       title: 'FEMALE THREADED SOCKET',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'g', label: 'G', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'h', label: 'H', groupLabel: 'products.tables.dimensions_mm' },
@@ -554,7 +554,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'parapet-roof-drain',
       title: 'PARAPET ROOF DRAIN',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'h1', label: 'H1', groupLabel: 'products.tables.dimensions_mm', colSpan: 7 },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -583,7 +583,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'roof-drain',
       title: 'ROOF DRAIN',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm', colSpan: 7 },
         { key: 'd2', label: 'd2', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1_upper', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
@@ -617,7 +617,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'floor-drain-trap-type-a',
       title: 'FLOOR DRAIN/TRAP TYPE - A',
       columns: [
-        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch x Inch x Inch)' },
+        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch x Inch x Inch)', labelFr: 'Taille Nominale (Inch x Inch x Inch x Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 6 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
@@ -650,7 +650,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'floor-drain-trap-type-c',
       title: 'FLOOR DRAIN/TRAP TYPE - C',
       columns: [
-        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch x Inch)' },
+        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch x Inch)', labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
         { key: 'd', label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 5 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1x3', label: 'd1x3', groupLabel: 'products.tables.dimensions_mm' },
@@ -681,7 +681,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'floor-drain-trap-cover-type-a-i',
       title: 'FLOOR DRAIN/TRAP COVER TYPE - A I',
       columns: [
-        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'h', label: 'H', groupLabel: 'products.tables.dimensions_mm' },
@@ -710,7 +710,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'floor-drain-trap-cover-type-a-ii',
       title: 'FLOOR DRAIN/TRAP COVER TYPE - A II',
       columns: [
-        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd1', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'h', label: 'H', groupLabel: 'products.tables.dimensions_mm' },
@@ -739,7 +739,7 @@ export const bsEn1329Fittings: Fitting[] = [
       id: 'floor-drain-trap-cover-type-b',
       title: 'FLOOR DRAIN/TRAP COVER TYPE - B',
       columns: [
-        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size_mm_lxw', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'h', label: 'H', groupLabel: 'products.tables.dimensions_mm' },
@@ -774,7 +774,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'elbow-90',
       title: 'ELBOW 90°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -804,7 +804,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'elbow-45',
       title: 'ELBOW 45°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -834,7 +834,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'socket-coupler',
       title: 'SOCKET/COUPLER',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -864,7 +864,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'reducer-bush-socket',
       title: 'REDUCER BUSH/SOCKET',
       columns: [
-        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch)' },
+        { key: 'nominal_size_inch', label: 'Nominal Size (Inch x Inch)', labelFr: 'Taille Nominale (Inch x Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -894,7 +894,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'tee-87-5',
       title: 'ΤΕΕ 87.5°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l',   label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -925,7 +925,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'y-45-skew-tee',
       title: 'Y - 45°/SKEW TEE',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_l', label: 'd L', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'h',   label: 'H', groupLabel: 'products.tables.dimensions_mm' },
@@ -955,7 +955,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'access-cap-clean-out',
       title: 'ACCESS CAP/CLEAN OUT',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'd', groupLabel: 'products.tables.dimensions_mm', colSpan: 2 },
         { key: 'h',   label: 'H', groupLabel: 'products.tables.dimensions_mm' },
       ],
@@ -984,7 +984,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'access-door-elbow-90',
       title: 'ACCESS/DOOR ELBOW 90°',
       columns: [
-        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)' },
+        { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
         { key: 'd',   label: 'D', groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
         { key: 'd_1', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1_h_l_tr', label: 'D1 H L Tr', groupLabel: 'products.tables.dimensions_mm' },
@@ -1011,7 +1011,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'gully-trap-a',
       title: 'GULLY TRAP A',
       columns: [
-        { key: 'size', label: 'Size / Dimensions' },
+        { key: 'size', label: 'Size / Dimensions', labelFr: 'Taille / Dimensions' },
         { key: 'action', label: 'Action' },
       ],
       rows: [
@@ -1033,7 +1033,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'gully-trap-b',
       title: 'GULLY TRAP B',
       columns: [
-        { key: 'size', label: 'Size / Dimensions' },
+        { key: 'size', label: 'Size / Dimensions', labelFr: 'Taille / Dimensions' },
         { key: 'action', label: 'Action' },
       ],
       rows: [
@@ -1055,7 +1055,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'hopper-trap',
       title: 'HOPPER TRAP',
       columns: [
-        { key: 'size', label: 'Size / Dimensions' },
+        { key: 'size', label: 'Size / Dimensions', labelFr: 'Taille / Dimensions' },
         { key: 'action', label: 'Action' },
       ],
       rows: [
@@ -1077,7 +1077,7 @@ export const bsEn1401Fittings: Fitting[] = [
       id: 'p-trap',
       title: 'P TRAP',
       columns: [
-        { key: 'size', label: 'Size / Dimensions' },
+        { key: 'size', label: 'Size / Dimensions', labelFr: 'Taille / Dimensions' },
         { key: 'action', label: 'Action' },
       ],
       rows: [
@@ -1193,7 +1193,7 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
       id: 'bs-en-1329-pipes-note',
       title: 'Pipes Information',
       columns: [
-        { key: 'note', label: 'Note', align: 'left' },
+        { key: 'note', label: 'Note', labelFr: 'Remarque', align: 'left' },
       ],
       rows: [
         { note: 'This catalogue focuses on drainage fittings. For pipe specifications, please refer to the separate UPVC Drainage Pipes catalogue or contact our technical team.' },
@@ -1207,7 +1207,7 @@ export const upvcDrainageBsEn1329: ProductDetailConfig = {
   fittings: bsEn1329Fittings,
 
   downloads: [
-    { label: 'BS EN 1329-1:2014 Drainage Fittings Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%2C2014%20-%20SUPERSEDED%20BS%205255%20AND%20BS4514.pdf' },
+    { label: 'BS EN 1329-1:2014 Drainage Fittings Catalogue (PDF)', labelAr: 'كتالوج وصلات الصرف BS EN 1329-1:2014 (PDF)', labelFr: 'Catalogue Raccords de Drainage BS EN 1329-1:2014 (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTING%20BS%20EN%201329-1%2C2014%20-%20SUPERSEDED%20BS%205255%20AND%20BS4514.pdf' },
   ],
 
   dosDonts: {
@@ -1350,7 +1350,7 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
       id: 'bs-en-1401-pipes-note',
       title: 'Pipes Information',
       columns: [
-        { key: 'note', label: 'Note', align: 'left' },
+        { key: 'note', label: 'Note', labelFr: 'Remarque', align: 'left' },
       ],
       rows: [
         { note: 'This catalogue focuses on drainage fittings. For underground pipe specifications, please refer to the separate UPVC Underground Drainage Pipes catalogue or contact our technical team.' },
@@ -1364,7 +1364,7 @@ export const upvcDrainageBsEn1401: ProductDetailConfig = {
   fittings: bsEn1401Fittings,
 
   downloads: [
-    { label: 'BS EN 1401 Drainage Fittings Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20AND%20BS%205481.pdf' },
+    { label: 'BS EN 1401 Drainage Fittings Catalogue (PDF)', labelAr: 'كتالوج وصلات الصرف BS EN 1401 (PDF)', labelFr: 'Catalogue Raccords de Drainage BS EN 1401 (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20FITTINGS%20BS%20EN%201401%20-%20SUPERSEDED%20BS%204660%20AND%20BS%205481.pdf' },
   ],
 
   dosDonts: {
@@ -1426,7 +1426,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-45-elbow-with-two-rubber-rings',
       title: '45° ELBOW WITH TWO RUBBER RINGS',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -1462,7 +1462,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-90-elbow-m-f',
       title: '90° ELBOW M/F',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
@@ -1511,7 +1511,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-reducing-skew-tee-m-f',
       title: 'REDUCING SKEW TEE M/F',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd2', label: 'd2', groupLabel: 'products.tables.dimensions_mm' },
@@ -1565,7 +1565,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-skew-tee-m-f',
       title: 'SKEW TEE M/F',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
@@ -1611,7 +1611,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-tee-m-f-with-gasket',
       title: 'TEE M/F WITH GASKET',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
@@ -1657,7 +1657,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-reducing-coupler',
       title: 'REDUCING COUPLER',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
@@ -1702,7 +1702,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-coupling',
       title: 'COUPLING',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1_upper', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
@@ -1738,7 +1738,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-30-sweep-with-single-rubber-sockets',
       title: '30° SWEEP WITH SINGLE RUBBER SOCKETS',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd2_upper', label: 'D2', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -1773,7 +1773,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-90-sweep-with-double-socket-rings',
       title: '90° SWEEP WITH DOUBLE SOCKET RINGS',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd1_upper', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -1806,7 +1806,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-90-sweep-with-single-socket-rings',
       title: '90° SWEEP WITH SINGLE SOCKET RINGS',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd2_upper', label: 'D2', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -1849,7 +1849,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-reducing-tee-m-f',
       title: 'REDUCING TEE M/F',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd2', label: 'd2', groupLabel: 'products.tables.dimensions_mm' },
@@ -1898,7 +1898,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-90-saddle-branch',
       title: '90° SADDLE BRANCH',
       columns: [
-        { key: 'nominal_size', label: 'Nominal Size (mm x mm)' },
+        { key: 'nominal_size', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },
@@ -1927,7 +1927,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-inspection-elbow-m-f',
       title: 'INSPECTION ELBOW M/F',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
@@ -1963,7 +1963,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-inspection-port-m-f',
       title: 'INSPECTION PORT M/F',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1', label: 'd1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd2', label: 'd2', groupLabel: 'products.tables.dimensions_mm' },
@@ -2003,7 +2003,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-tee-with-3-socket-rubber-equal-tee',
       title: 'TEE WITH 3 SOCKET RUBBER (EQUAL TEE)',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd1_upper', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -2038,7 +2038,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-pvc-door-elbow',
       title: 'PVC DOOR ELBOW',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd1_upper', label: 'D1', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
@@ -2071,7 +2071,7 @@ export const pushfitFittings: Fitting[] = [
       id: 'pushfit-skew-tee-with-three-rubber-rings',
       title: 'SKEW TEE WITH THREE RUBBER RINGS',
       columns: [
-        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)' },
+        { key: 'nominal_size', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
         { key: 'd_upper', label: 'D', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'd', label: 'd', groupLabel: 'products.tables.dimensions_mm' },
         { key: 'l', label: 'L', groupLabel: 'products.tables.dimensions_mm' },

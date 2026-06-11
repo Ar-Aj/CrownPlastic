@@ -8,6 +8,8 @@ import { PRODUCT_MAP, type ProductCategory, type ProductItem } from '@/data/prod
 import { PRODUCT_WHEEL_IMAGE_MAP, getCategoryAcronym } from '@/data/productWheelMap';
 import { useT } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
+import { getCategoryBySlug } from '@/config/products';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT RANGE WHEEL SELECTOR - Perfectly Centered Circular Layout
@@ -220,10 +222,12 @@ function CentralHub({
     hubSize: _hubSize, // Kept for backwards compatibility but not strictly used for sizing anymore
     activeCategoryId,
     reducedMotion,
+    hubLabel,
 }: {
     hubSize: number;
     activeCategoryId: string;
     reducedMotion: boolean;
+    hubLabel?: string;
 }) {
     const [imageError, setImageError] = useState(false);
     const imageSrc = PRODUCT_WHEEL_IMAGE_MAP[activeCategoryId];
@@ -280,7 +284,7 @@ function CentralHub({
                 {!hasImage && (
                     <div className="flex flex-col items-center justify-center text-center p-4">
                         <span className="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">Crown</span>
-                        <span className="text-white/70 text-[10px] sm:text-xs lg:text-sm leading-tight mt-0.5">Product Range</span>
+                        <span className="text-white/70 text-[10px] sm:text-xs lg:text-sm leading-tight mt-0.5">{hubLabel || 'Product Range'}</span>
                     </div>
                 )}
 
@@ -371,6 +375,7 @@ function WheelNode({
     onMouseEnter,
     onMouseLeave,
     reducedMotion,
+    language,
 }: {
     category: ProductCategory;
     position: { x: number; y: number; angle: number };
@@ -382,6 +387,7 @@ function WheelNode({
     onMouseEnter: () => void;
     onMouseLeave: () => void;
     reducedMotion: boolean;
+    language: 'en' | 'ar' | 'fr';
 }) {
     const [imageError, setImageError] = useState(false);
     const imageSrc = PRODUCT_WHEEL_IMAGE_MAP[category.id];
@@ -459,7 +465,7 @@ function WheelNode({
                         textWrap: 'balance',
                     }}
                 >
-                    {category.name}
+                    {localizedValue(language, category.name, category.nameAr, category.nameFr)}
                 </div>
             </div>
 
@@ -472,10 +478,12 @@ function DetailPanelMobile({
     category,
     reducedMotion,
     t,
+    language,
 }: {
     category: ProductCategory;
     reducedMotion: boolean;
     t: (key: string) => string;
+    language: 'en' | 'ar' | 'fr';
 }) {
     const catKey = CATEGORY_KEY_MAP[category.id] || category.id;
     return (
@@ -488,7 +496,7 @@ function DetailPanelMobile({
             className="w-full"
         >
             <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 text-center mb-2">
-                {t(`about.galaxy.products.${catKey}.name`)}
+                {localizedValue(language, category.name, category.nameAr, category.nameFr)}
             </h3>
 
             <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto text-center">
@@ -497,7 +505,7 @@ function DetailPanelMobile({
 
             <div className="mt-4 grid gap-3 sm:grid-cols-2 max-w-xl mx-auto">
                 {category.items.map((item) => (
-                    <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} t={t} />
+                    <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} language={language} t={t} />
                 ))}
             </div>
         </motion.div>
@@ -509,10 +517,12 @@ function DetailPanelDesktop({
     category,
     reducedMotion,
     t,
+    language,
 }: {
     category: ProductCategory;
     reducedMotion: boolean;
     t: (key: string) => string;
+    language: 'en' | 'ar' | 'fr';
 }) {
     const catKey = CATEGORY_KEY_MAP[category.id] || category.id;
     return (
@@ -531,7 +541,7 @@ function DetailPanelDesktop({
             {/* Header section */}
             <div>
                 <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900 text-center lg:text-left mb-2">
-                    {t(`about.galaxy.products.${catKey}.name`)}
+                    {localizedValue(language, category.name, category.nameAr, category.nameFr)}
                 </h3>
 
                 <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl text-center lg:text-left">
@@ -543,7 +553,7 @@ function DetailPanelDesktop({
             <div className="mt-4">
                 <div className="grid gap-3 grid-cols-2 xl:grid-cols-3">
                     {category.items.map((item) => (
-                        <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} t={t} />
+                        <ItemChip key={item.id} item={item} categoryId={category.id} reducedMotion={reducedMotion} language={language} t={t} />
                     ))}
                 </div>
             </div>
@@ -556,11 +566,13 @@ function ItemChip({
     item,
     categoryId,
     reducedMotion,
+    language,
     t,
 }: {
     item: ProductItem;
     categoryId: string;
     reducedMotion: boolean;
+    language: 'en' | 'ar' | 'fr';
     t: (key: string) => string;
 }) {
     const [imgError, setImgError] = useState(false);
@@ -590,6 +602,9 @@ function ItemChip({
     const detailHref = `/products/${categorySlug}/${item.id}`;
 
     const hasImage = !!item.image && !imgError;
+    
+    const catData = getCategoryBySlug(categorySlug);
+    const product = catData?.subProducts.find((p: any) => p.slug === item.id);
 
     return (
         <Link href={detailHref} className="block group">
@@ -619,10 +634,10 @@ function ItemChip({
                     <div className="flex-1 min-w-0 px-3 py-2.5 flex flex-col justify-between gap-1.5">
                         <div>
                             <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug line-clamp-2">
-                                {t(`about.galaxy.products.${catKey}.items.${itemKey}.name`)}
+                                {product ? localizedValue(language, product.name, product.nameAr, product.nameFr) : item.name}
                             </h4>
                             <p className="text-[10px] sm:text-[11px] text-slate-500 leading-relaxed mt-0.5 line-clamp-2">
-                                {t(`about.galaxy.products.${catKey}.items.${itemKey}.info`)}
+                                {product ? localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr) : item.shortInfo}
                             </p>
                         </div>
 
@@ -651,7 +666,7 @@ export default function AboutProductRangeMap() {
     const [hoveredCategoryId, setHoveredCategoryId] = useState<string | null>(null);
     const reducedMotion = useReducedMotion();
     const t = useT();
-    const { isRTL } = useLanguage();
+    const { isRTL, language } = useLanguage();
 
     const activeCategory = PRODUCT_MAP.find((c) => c.id === activeCategoryId) ?? PRODUCT_MAP[0];
 
@@ -748,6 +763,7 @@ export default function AboutProductRangeMap() {
                                 hubSize={wheelConfig.mobile.hubSize}
                                 activeCategoryId={activeCategoryId}
                                 reducedMotion={reducedMotion}
+                                hubLabel={t('about.galaxy.hub_label')}
                             />
                             {PRODUCT_MAP.map((category, index) => {
                                 const position = getNodePosition(index, PRODUCT_MAP.length, wheelConfig.mobile.orbitRadius);
@@ -764,6 +780,7 @@ export default function AboutProductRangeMap() {
                                         onMouseEnter={() => setHoveredCategoryId(category.id)}
                                         onMouseLeave={() => setHoveredCategoryId(null)}
                                         reducedMotion={reducedMotion}
+                                        language={language}
                                     />
                                 );
                             })}
@@ -785,6 +802,7 @@ export default function AboutProductRangeMap() {
                                     category={activeCategory}
                                     reducedMotion={reducedMotion}
                                     t={t as (key: string) => string}
+                                    language={language}
                                 />
                             )}
                         </AnimatePresence>
@@ -807,6 +825,7 @@ export default function AboutProductRangeMap() {
                                 hubSize={wheelConfig.lg.hubSize}
                                 activeCategoryId={activeCategoryId}
                                 reducedMotion={reducedMotion}
+                                hubLabel={t('about.galaxy.hub_label')}
                             />
                             {PRODUCT_MAP.map((category, index) => {
                                 const position = getNodePosition(index, PRODUCT_MAP.length, wheelConfig.lg.orbitRadius);
@@ -823,6 +842,7 @@ export default function AboutProductRangeMap() {
                                         onMouseEnter={() => setHoveredCategoryId(category.id)}
                                         onMouseLeave={() => setHoveredCategoryId(null)}
                                         reducedMotion={reducedMotion}
+                                        language={language}
                                     />
                                 );
                             })}
@@ -849,6 +869,7 @@ export default function AboutProductRangeMap() {
                                     category={activeCategory}
                                     reducedMotion={reducedMotion}
                                     t={t as (key: string) => string}
+                                    language={language}
                                 />
                             )}
                         </AnimatePresence>

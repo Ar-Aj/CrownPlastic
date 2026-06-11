@@ -94,7 +94,7 @@ export const hdpePipes5mpaPe63: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -216,7 +216,7 @@ export const hdpePipes63mpaPe80: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -333,7 +333,7 @@ export const hdpePipes8mpaPe100: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -444,7 +444,7 @@ export const hdpePipesDin8072: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -553,7 +553,7 @@ export const hdpePipesAsaeS435: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -664,7 +664,7 @@ export const hdpePipesAustStd2698: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -785,7 +785,7 @@ export const hdpePipesBs197267: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure butt-fusion welding is performed using correct temperatures for the specific PE grade.","Verify the SDR and PN ratings match the intended application's hydrostatic design stress.","Use pipes with sufficient carbon black content for long-term outdoor UV exposure.","Follow the MRS guidelines to ensure the pipe meets its 50-year design life at 20°C."],
@@ -878,7 +878,7 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
       id: "polyethylene-pipe-rolls-table",
       title: "Polyethylene Pipe Rolls",
       columns: [
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "rollLength", label: "Roll Length" }
       ],
       rows: [
@@ -916,7 +916,7 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'HDPE Pipes Catalogue (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
+    { label: 'HDPE Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب HDPE (PDF)', labelFr: 'Catalogue Tuyaux HDPE (PDF)', href: '/pdfs/POLYETHYLENE%20PIPE%20SYSTEM.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure unrolling is done carefully to avoid kinking.", "Use appropriate compression or butt-fusion fittings."],

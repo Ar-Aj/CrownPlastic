@@ -59,7 +59,7 @@ export const fabricationGreaseTrapTypeA: ProductDetailConfig = {
       id: "fabrication-grease-trap-type-a-specs",
       title: "Type A",
       columns: [
-      { key: "component", label: "Component" },
+      { key: "component", label: "Component", labelFr: 'Composant' },
       { key: "details", label: "Details" }
       ],
       rows: [
@@ -72,7 +72,7 @@ export const fabricationGreaseTrapTypeA: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'Fabrications & Accessories Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
+    { label: 'Fabrications & Accessories Catalogue (PDF)', labelAr: 'كتالوج التصنيعات والملحقات (PDF)', labelFr: 'Catalogue Fabrications et Accessoires (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure size and capacity are judged according to the amount of waste water processed per minute","Verify site conditions before manufacturing custom-build units","Use specified brass wing nuts and neoprene gaskets for a sealed GRP cover","Consult approved Dubai Municipality drawings for grease trap installations"],
@@ -162,7 +162,7 @@ export const fabricationGreaseTrapTypeB: ProductDetailConfig = {
       id: "fabrication-grease-trap-type-b-specs",
       title: "Type B",
       columns: [
-      { key: "component", label: "Component" },
+      { key: "component", label: "Component", labelFr: 'Composant' },
       { key: "details", label: "Details" }
       ],
       rows: [
@@ -175,7 +175,7 @@ export const fabricationGreaseTrapTypeB: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'Fabrications & Accessories Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
+    { label: 'Fabrications & Accessories Catalogue (PDF)', labelAr: 'كتالوج التصنيعات والملحقات (PDF)', labelFr: 'Catalogue Fabrications et Accessoires (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure size and capacity are judged according to the amount of waste water processed per minute","Verify site conditions before manufacturing custom-build units","Use specified brass wing nuts and neoprene gaskets for a sealed GRP cover","Consult approved Dubai Municipality drawings for grease trap installations"],
@@ -265,7 +265,7 @@ export const fabricationGreaseTrapTypeC: ProductDetailConfig = {
       id: "fabrication-grease-trap-type-c-specs",
       title: "Type C",
       columns: [
-      { key: "component", label: "Component" },
+      { key: "component", label: "Component", labelFr: 'Composant' },
       { key: "details", label: "Details" }
       ],
       rows: [
@@ -277,7 +277,7 @@ export const fabricationGreaseTrapTypeC: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'Fabrications & Accessories Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
+    { label: 'Fabrications & Accessories Catalogue (PDF)', labelAr: 'كتالوج التصنيعات والملحقات (PDF)', labelFr: 'Catalogue Fabrications et Accessoires (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure size and capacity are judged according to the amount of waste water processed per minute","Verify site conditions before manufacturing custom-build units","Use specified brass wing nuts and neoprene gaskets for a sealed GRP cover","Consult approved Dubai Municipality drawings for grease trap installations"],
@@ -367,7 +367,7 @@ export const fabricationGreaseTrapTypeD: ProductDetailConfig = {
       id: "fabrication-grease-trap-type-d-specs",
       title: "Type D",
       columns: [
-      { key: "component", label: "Component" },
+      { key: "component", label: "Component", labelFr: 'Composant' },
       { key: "details", label: "Details" }
       ],
       rows: [
@@ -379,7 +379,7 @@ export const fabricationGreaseTrapTypeD: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'Fabrications & Accessories Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
+    { label: 'Fabrications & Accessories Catalogue (PDF)', labelAr: 'كتالوج التصنيعات والملحقات (PDF)', labelFr: 'Catalogue Fabrications et Accessoires (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure size and capacity are judged according to the amount of waste water processed per minute","Verify site conditions before manufacturing custom-build units","Use specified brass wing nuts and neoprene gaskets for a sealed GRP cover","Consult approved Dubai Municipality drawings for grease trap installations"],
@@ -483,7 +483,7 @@ export const fabricationAccessories: ProductDetailConfig = {
   ],
   fittings: [],
   downloads: [
-    { label: 'Fabrications & Accessories Catalogue (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
+    { label: 'Fabrications & Accessories Catalogue (PDF)', labelAr: 'كتالوج التصنيعات والملحقات (PDF)', labelFr: 'Catalogue Fabrications et Accessoires (PDF)', href: '/pdfs/UPVC%20FABRICATION%20AND%20ACCESSORIES.pdf' },
   ],
   dosDonts: {
     dos: ["Ensure size and capacity are judged according to the amount of waste water processed per minute","Verify site conditions before manufacturing custom-build units","Use specified brass wing nuts and neoprene gaskets for a sealed GRP cover","Consult approved Dubai Municipality drawings for grease trap installations"],

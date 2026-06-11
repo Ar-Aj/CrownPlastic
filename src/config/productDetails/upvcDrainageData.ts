@@ -27,22 +27,22 @@ import { type ProductDetailConfig } from '@/types/productDetail';
 const SHARED_FEATURES = [
   'High impact resistance for long-service installations in extreme Gulf temperatures',
   'Smooth internal bore prevents scaling and blockages',
-  'Chemical and corrosion resistant — unaffected by UAE soil and groundwater conditions',
+  'Chemical and corrosion resistant \u2014 unaffected by UAE soil and groundwater conditions',
   'Lightweight yet rigid for easy handling and installation',
   'Solvent cement and ring-seal jointing options',
   'UV stabilised formulation for Middle East outdoor exposure',
   'ISO 9001:2015 certified production at our Umm Al Quwain, UAE facility',
-  '50+ year expected service life — trusted by GCC contractors',
+  '50+ year expected service life \u2014 trusted by GCC contractors',
 ];
 const SHARED_FEATURESFr = [
-  'High impact resistance for long-service installations in extreme Gulf temperatures',
-  'Smooth internal bore prevents scaling and blockages',
-  'Chemical and corrosion resistant — unaffected by UAE soil and groundwater conditions',
-  'Lightweight yet rigid for easy handling and installation',
-  'Solvent cement and ring-seal jointing options',
-  'UV stabilised formulation for Middle East outdoor exposure',
-  'ISO 9001:2015 certified production at our Umm Al Quwain, UAE facility',
-  '50+ year expected service life — trusted by GCC contractors',
+  'Haute résistance aux chocs pour des installations de longue durée dans les températures extrêmes du Golfe',
+  'Alésage interne lisse empêchant le tartre et les obstructions',
+  'Résistant aux produits chimiques et à la corrosion — insensible aux conditions de sol et d\'eaux souterraines UAE',
+  'Léger mais rigide pour une manutention et une installation aisées',
+  'Options de jointoiement par colle solvant et joint annulaire',
+  'Formulation stabilisée aux UV pour l\'exposition extérieure au Moyen-Orient',
+  'Production certifiée ISO 9001:2015 dans notre usine d\'Umm Al Quwain, UAE',
+  'Durée de vie prévue supérieure à 50 ans — approuvée par les entrepreneurs GCC',
 ];
 
 const SHARED_FEATURESAr = [
@@ -67,14 +67,14 @@ const SHARED_APPLICATIONS = [
   'Town planning and municipal infrastructure projects',
 ];
 const SHARED_APPLICATIONSFr = [
-  'Above-ground soil and waste discharge systems across the UAE',
-  'Underground sewerage networks for Dubai and Abu Dhabi developments',
-  'Rainwater drainage systems suited to Gulf climate conditions',
-  'Building internal drainage stacks',
-  'Commercial and residential plumbing in the GCC',
-  'Hospital and hotel sanitary systems',
-  'Industrial effluent disposal in UAE free zones',
-  'Town planning and municipal infrastructure projects',
+  'Systèmes de décharge des sols et des déchets en surface dans tout le UAE',
+  'Réseaux d\'égouts souterrains pour les projets de développement de Dubai et Abu Dhabi',
+  'Systèmes de drainage des eaux pluviales adaptés aux conditions climatiques du Golfe',
+  'Colonnes de chute internes des bâtiments',
+  'Plomberie commerciale et résidentielle dans le GCC',
+  'Systèmes sanitaires hospitaliers et hôteliers',
+  'Évacuation des effluents industriels dans les zones franches UAE',
+  'Projets d\'urbanisme et d\'infrastructure municipale',
 ];
 
 const SHARED_APPLICATIONSAr = [
@@ -104,19 +104,18 @@ const SHARED_DOS_DONTS = {
 };
 const SHARED_DOS_DONTSFr = {
   dos: [
-    'Use appropriate solvent cement grade for the pipe class',
-    'Allow for thermal expansion in long horizontal runs',
-    'Use correct chamfering tools before jointing',
-    'Support pipes at manufacturer-recommended intervals',
+    'Utiliser la qualité de colle solvant appropriée pour la classe de tuyau',
+    'Prévoir la dilatation thermique dans les longs parcours horizontaux',
+    'Utiliser les outils de chanfreinage corrects avant l\'assemblage',
+    'Supporter les tuyaux aux intervalles recommandés par le fabricant',
   ],
   donts: [
-    'Do not drop pipes from heights — impact damage may be invisible',
-    'Do not use incompatible solvents or adhesives',
-    'Do not expose stored pipes to prolonged direct sunlight',
-    'Do not exceed the recommended temperature limit of 60 °C',
+    'Ne pas laisser tomber les tuyaux de hauteur — les dommages par choc peuvent être invisibles',
+    'Ne pas utiliser de solvants ou d\'adhésifs incompatibles',
+    'Ne pas exposer les tuyaux stockés à la lumière directe du soleil de manière prolongée',
+    'Ne pas dépasser la limite de température recommandée de 60 °C',
   ],
 };
-
 const SHARED_DOS_DONTSAr = {
   dos: [
     'استخدم الدرجة المناسبة من أسمنت المذيب لفئة الأنبوب',
@@ -165,11 +164,11 @@ export const upvcDrainagePipesBs5255BsEn1329: ProductDetailConfig = {
       id: 'bs-5255-bs-en-1329-pipes',
       title: 'Above Ground Soil & Waste Pipes: BS 5255/BS EN 1329-1:2014',
       columns: [
-        { key: 'size', label: 'Nominal Size (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)' },
+        { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '1 1/4"', odMin: '36.15', odMax: '36.45', wtMin: '1.8', wtMax: '2.2' },
@@ -182,11 +181,11 @@ export const upvcDrainagePipesBs5255BsEn1329: ProductDetailConfig = {
       id: 'bs-4514-bs-en-1329-pipes',
       title: 'Above Ground Soil & Waste Pipes: BS 4514/BS EN 1329-1:2014',
       columns: [
-        { key: 'size', label: 'Nominal Size (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)' },
+        { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '3"', odMin: '82.00',  odMax: '82.35',  wtMin: '3.2', wtMax: '3.5' },
@@ -201,7 +200,7 @@ export const upvcDrainagePipesBs5255BsEn1329: ProductDetailConfig = {
     fittings: [],
 
   downloads: [
-    { label: 'UPVC Drainage Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
+    { label: 'UPVC Drainage Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب الصرف UPVC (PDF)', labelFr: 'Catalogue Tuyaux de Drainage UPVC (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
   ],
 
   dosDonts: SHARED_DOS_DONTS,
@@ -294,11 +293,11 @@ export const upvcDrainagePipesBsEn1401: ProductDetailConfig = {
       id: 'bs-en-1401-underground-pipes',
       title: 'Underground Drainage & Sewerage: BS EN 1401-1 (BS 4660 & BS 5481)',
       columns: [
-        { key: 'size', label: 'Nominal Size (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)' },
+        { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '3"',  odMin: '82.00',  odMax: '82.35',  wtMin: '3.2', wtMax: '3.5' },
@@ -327,7 +326,7 @@ export const upvcDrainagePipesBsEn1401: ProductDetailConfig = {
           ]
         },
     downloads: [
-    { label: 'UPVC Underground Drainage Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
+    { label: 'UPVC Underground Drainage Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب الصرف UPVC تحت الأرض (PDF)', labelFr: 'Catalogue Tuyaux de Drainage Souterrain UPVC (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
   ],
 
   dosDonts: {
@@ -392,11 +391,11 @@ export const upvcDrainagePipesNonStandard: ProductDetailConfig = {
       id: 'non-standard-drainage-pipes',
       title: 'Non-Standard Pipes for Drainage Applications',
       columns: [
-        { key: 'size', label: 'Nominal Size (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)' },
+        { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
+        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '1 1/4"', odMin: '36.15',  odMax: '36.45',  wtMin: '1.5', wtMax: '2.0' },
@@ -415,7 +414,7 @@ export const upvcDrainagePipesNonStandard: ProductDetailConfig = {
   fittings: [],
     dosDontsFr: SHARED_DOS_DONTSFr,
     downloads: [
-    { label: 'UPVC Drainage Non-Standard Pipes Catalogue (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
+    { label: 'UPVC Drainage Non-Standard Pipes Catalogue (PDF)', labelAr: 'كتالوج أنابيب الصرف UPVC غير القياسية (PDF)', labelFr: 'Catalogue Tuyaux de Drainage Non Standard UPVC (PDF)', href: '/pdfs/UPVC%20DRAINAGE%20PIPES.pdf' },
   ],
 
   dosDonts: SHARED_DOS_DONTS,

@@ -3,6 +3,8 @@ export const brand = {
   name: 'Crown Plastic Pipes Factory L.L.C.',
   shortName: 'Crown Plastic Pipes',
   tagline: 'Excellence in Every Pipe',
+  taglineAr: 'التميّز في كل أنبوب',
+  taglineFr: 'L\'Excellence dans Chaque Tuyau',
   description: 'Leading manufacturer of high-quality plastic pipes and fittings in the UAE',
 
   // Colors inspired by the crown logo

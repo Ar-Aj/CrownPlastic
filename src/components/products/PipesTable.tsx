@@ -1,26 +1,62 @@
 'use client';
 
-import { type PipeTable } from '@/types/productDetail';
+import { type PipeTable, type PipeTableColumn } from '@/types/productDetail';
 import { PDTableShell } from '@/components/productDetail';
 import { ProductSection, ProductSectionHeader } from '@/components/products/design-system';
 import { useT, type TranslationPath } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
 import { formatFraction } from '@/utils/formatters';
 
 interface PipesTableProps {
   table: PipeTable;
 }
 
+/** Resolves the correct label/groupLabel/superGroupLabel/megaGroupLabel for the active locale.
+ *  Falls back to the English field when a Fr variant is absent. */
+function useLocalizeCol() {
+  const { language } = useLanguage();
+  const isFr = language === 'fr';
+  return {
+    label:          (col: PipeTableColumn) => (isFr && col.labelFr)          ? col.labelFr          : col.label,
+    groupLabel:     (col: PipeTableColumn) => (isFr && col.groupLabelFr)     ? col.groupLabelFr     : (col.groupLabel     ?? ''),
+    superGroupLabel:(col: PipeTableColumn) => (isFr && col.superGroupLabelFr)? col.superGroupLabelFr: (col.superGroupLabel?? ''),
+    megaGroupLabel: (col: PipeTableColumn) => (isFr && col.megaGroupLabelFr) ? col.megaGroupLabelFr : (col.megaGroupLabel ?? ''),
+  };
+}
+
 /**
  * Renders a single pipe specification table with responsive scrolling on mobile.
  * Supports optional grouped column headers (groupLabel/colSpan) and
  * an optional section label divider row (sectionLabel).
+ * Header strings are locale-aware: uses *Fr fields when language === 'fr'.
  */
 export default function PipesTable({ table }: PipesTableProps) {
   const t = useT();
+  const loc = useLocalizeCol();
   const hasMegaGroupedHeaders = table.columns.some(c => c.megaGroupLabel);
   const hasSuperGroupedHeaders = table.columns.some(c => c.superGroupLabel);
   const hasGroupedHeaders = table.columns.some(c => c.groupLabel);
   const maxDepth = hasMegaGroupedHeaders ? 4 : hasSuperGroupedHeaders ? 3 : hasGroupedHeaders ? 2 : 1;
+
+  /** Render a header cell value: i18n key → t(), Fr override → loc.*(), else raw string */
+  const hdr = {
+    label:          (col: PipeTableColumn) => {
+      const v = loc.label(col);
+      return v.startsWith('products.tables') ? (t(v as TranslationPath) as string) : v;
+    },
+    groupLabel:     (col: PipeTableColumn) => {
+      const v = loc.groupLabel(col);
+      return v.startsWith('products.tables') ? (t(v as TranslationPath) as string) : v;
+    },
+    superGroupLabel:(col: PipeTableColumn) => {
+      const v = loc.superGroupLabel(col);
+      return v.startsWith('products.tables') ? (t(v as TranslationPath) as string) : v;
+    },
+    megaGroupLabel: (col: PipeTableColumn) => {
+      const v = loc.megaGroupLabel(col);
+      return v.startsWith('products.tables') ? (t(v as TranslationPath) as string) : v;
+    },
+  };
 
   return (
     <PDTableShell title={table.title} className="mb-8 last:mb-0">
@@ -42,14 +78,14 @@ export default function PipesTable({ table }: PipesTableProps) {
                         const span = col.megaColSpan ?? 1;
                         cells.push(
                           <th key={`mega-${col.key}`} colSpan={span} rowSpan={1} scope="col" className="px-5 py-3 text-center text-base md:text-lg font-bold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                            {col.megaGroupLabel.startsWith('products.tables') ? (t(col.megaGroupLabel as TranslationPath) as string) : col.megaGroupLabel}
+                            {hdr.megaGroupLabel(col)}
                           </th>
                         );
                         i += span;
                       } else {
                         cells.push(
                           <th key={`std-${col.key}`} colSpan={1} rowSpan={4} scope="col" className="px-5 py-4 text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap text-center align-middle border-r border-[#C2D6FF]">
-                            {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                            {hdr.label(col)}
                           </th>
                         );
                         i++;
@@ -70,7 +106,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                           const span = col.superColSpan ?? 1;
                           cells.push(
                             <th key={`super-${col.key}`} colSpan={span} rowSpan={1} scope="col" className="px-5 py-3 text-center text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                              {col.superGroupLabel.startsWith('products.tables') ? (t(col.superGroupLabel as TranslationPath) as string) : col.superGroupLabel}
+                              {hdr.superGroupLabel(col)}
                             </th>
                           );
                           i += span;
@@ -78,7 +114,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                           // No superGroup, but has megaGroup - might just be a column spanning 3 rows down
                           cells.push(
                             <th key={`sub2-${col.key}`} colSpan={1} rowSpan={3} scope="col" className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF] align-middle">
-                              {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                              {hdr.label(col)}
                             </th>
                           );
                           i++;
@@ -102,14 +138,14 @@ export default function PipesTable({ table }: PipesTableProps) {
                           const span = col.colSpan ?? 1;
                           cells.push(
                             <th key={`grp-${col.key}`} colSpan={span} rowSpan={1} scope="col" className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                              {col.groupLabel.startsWith('products.tables') ? (t(col.groupLabel as TranslationPath) as string) : col.groupLabel}
+                              {hdr.groupLabel(col)}
                             </th>
                           );
                           i += span;
                         } else {
                           cells.push(
                             <th key={`sub3-${col.key}`} colSpan={1} rowSpan={2} scope="col" className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF] align-middle">
-                              {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                              {hdr.label(col)}
                             </th>
                           );
                           i++;
@@ -135,7 +171,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                       if (col.groupLabel) {
                         cells.push(
                           <th key={`sub4-${col.key}`} colSpan={1} rowSpan={1} scope="col" className="px-5 py-3 text-center text-xs md:text-sm font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF]">
-                            {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                            {hdr.label(col)}
                           </th>
                         );
                         i++;
@@ -160,7 +196,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                         const span = col.superColSpan ?? 1;
                         cells.push(
                           <th key={`super-${col.key}`} colSpan={span} rowSpan={1} scope="col" className="px-5 py-3 text-center text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                            {col.superGroupLabel.startsWith('products.tables') ? (t(col.superGroupLabel as TranslationPath) as string) : col.superGroupLabel}
+                            {hdr.superGroupLabel(col)}
                           </th>
                         );
                         i += span;
@@ -168,14 +204,14 @@ export default function PipesTable({ table }: PipesTableProps) {
                         const span = col.colSpan ?? 1;
                         cells.push(
                           <th key={`grp-${col.key}`} colSpan={span} rowSpan={2} scope="col" className="px-5 py-3 text-center text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                            {col.groupLabel.startsWith('products.tables') ? (t(col.groupLabel as TranslationPath) as string) : col.groupLabel}
+                            {hdr.groupLabel(col)}
                           </th>
                         );
                         i += span;
                       } else {
                         cells.push(
                           <th key={`std-${col.key}`} colSpan={1} rowSpan={3} scope="col" className="px-5 py-4 text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap text-center align-middle border-r border-[#C2D6FF]">
-                            {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                            {hdr.label(col)}
                           </th>
                         );
                         i++;
@@ -196,14 +232,14 @@ export default function PipesTable({ table }: PipesTableProps) {
                           const span = col.colSpan ?? 1;
                           cells.push(
                             <th key={`grp2-${col.key}`} colSpan={span} rowSpan={1} scope="col" className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]">
-                              {col.groupLabel.startsWith('products.tables') ? (t(col.groupLabel as TranslationPath) as string) : col.groupLabel}
+                              {hdr.groupLabel(col)}
                             </th>
                           );
                           i += span;
                         } else {
                           cells.push(
                             <th key={`sub2-${col.key}`} colSpan={1} rowSpan={2} scope="col" className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF] align-middle">
-                              {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                              {hdr.label(col)}
                             </th>
                           );
                           i++;
@@ -228,7 +264,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                         if (col.groupLabel) {
                           cells.push(
                             <th key={`sub3-${col.key}`} colSpan={1} rowSpan={1} scope="col" className="px-5 py-3 text-center text-xs md:text-sm font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF]">
-                              {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                              {hdr.label(col)}
                             </th>
                           );
                           i++;
@@ -238,7 +274,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                       } else if (col.groupLabel) {
                         cells.push(
                           <th key={`sub3-${col.key}`} colSpan={1} rowSpan={1} scope="col" className="px-5 py-3 text-center text-xs md:text-sm font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF]">
-                            {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                            {hdr.label(col)}
                           </th>
                         );
                         i++;
@@ -268,22 +304,21 @@ export default function PipesTable({ table }: PipesTableProps) {
                             scope="col"
                             className="px-5 py-4 text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap text-center align-middle border-r border-[#C2D6FF]"
                           >
-                            {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                            {hdr.label(col)}
                           </th>
                         );
                         i++;
                       } else {
                         // First column of a group — render the parent header spanning colSpan cols
                         const span = col.colSpan ?? 1;
-                        const groupKey = col.groupLabel;
                         cells.push(
                           <th
-                            key={`grp-${groupKey}-${i}`}
+                            key={`grp-${col.groupLabel}-${i}`}
                             colSpan={span}
                             scope="col"
                             className="px-5 py-3 text-center text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-b border-[#C2D6FF] border-r border-[#C2D6FF]"
                           >
-                            {groupKey.startsWith('products.tables') ? (t(groupKey as TranslationPath) as string) : groupKey}
+                            {hdr.groupLabel(col)}
                           </th>
                         );
                         i += span;
@@ -300,7 +335,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                       scope="col"
                       className="px-5 py-3 text-center text-sm md:text-base font-semibold tracking-wide text-[#0052CC] whitespace-nowrap border-r border-[#C2D6FF]"
                     >
-                      {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                      {hdr.label(col)}
                     </th>
                   ))}
                 </tr>
@@ -314,7 +349,7 @@ export default function PipesTable({ table }: PipesTableProps) {
                     scope="col"
                     className="px-5 py-4 text-base md:text-lg font-semibold tracking-wide text-[#0052CC] whitespace-nowrap text-center"
                   >
-                    {col.label.startsWith('products.tables') ? (t(col.label as TranslationPath) as string) : col.label}
+                    {hdr.label(col)}
                   </th>
                 ))}
               </tr>

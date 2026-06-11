@@ -301,8 +301,8 @@ export default function CategoryClient({ params }: CategoryPageProps) {
                 <AnimateOnScroll key={doc.src} animation="fade-up" delay={index * 80}>
                   <PdfViewer
                     src={doc.src}
-                    title={language === 'ar' && doc.titleAr ? doc.titleAr : doc.title}
-                    description={language === 'ar' && doc.descriptionAr ? doc.descriptionAr : doc.description}
+                    title={localizedValue(language, doc.title, doc.titleAr, doc.titleFr)}
+                    description={localizedValue(language, doc.description, doc.descriptionAr, doc.descriptionFr)}
                   />
                 </AnimateOnScroll>
               ))}

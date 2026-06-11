@@ -83,7 +83,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "ELBOW 90° - ASTM D 2466 SCH-40",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -121,7 +121,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "ELBOW 45° - ASTM D 2466 SCH-40",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -156,7 +156,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "FEMALE ELBOW 90°",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
@@ -192,7 +192,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "SOCKET/COUPLER - ASTM D 2466 SCH-40",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -240,7 +240,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         id: "reducer-bush-socket-table",
         title: "REDUCER BUSH/SOCKET",
         columns: [
-        { key: "size", label: "Nominal Size (Inch x Inch)" },
+        { key: "size", label: "Nominal Size (Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch)' },
         { key: "d", label: "D" },
         { key: "d_upper", label: "d" },
         { key: "l", label: "L" }
@@ -289,7 +289,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "MALE THREADED ADAPTOR/SOCKET/NIPPLE SOCKET",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
@@ -328,7 +328,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "FEMALE THREADED ADAPTOR/SOCKET",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
@@ -367,7 +367,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "EQUAL TEE",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -406,7 +406,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         id: "reducing-tee-table",
         title: "REDUCING TEE",
         columns: [
-        { key: "size", label: "Nominal Size (Inch x Inch x Inch)" },
+        { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
         { key: "d", label: "d" },
         { key: "di", label: "di" },
         { key: "l", label: "L" }
@@ -446,7 +446,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         id: "female-threaded-reducing-tee-table",
         title: "FEMALE THREADED REDUCING TEE",
         columns: [
-        { key: "size", label: "Nominal Size (Inch x Inch x Inch)" },
+        { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
         { key: "d", label: "d" },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
@@ -482,7 +482,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         id: "female-threaded-equal-tee-table",
         title: "FEMALE THREADED EQUAL TEE",
         columns: [
-        { key: "size", label: "Nominal Size (Inch x Inch x Inch)" },
+        { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
         { key: "d", label: "d" },
         { key: "g", label: "G" },
         { key: "l", label: "L" },
@@ -515,7 +515,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         id: "female-threaded-reducer-bush-table",
         title: "FEMALE THREADED REDUCER BUSH",
         columns: [
-        { key: "size", label: "Nominal Size (Inch x Inch)" },
+        { key: "size", label: "Nominal Size (Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch)' },
         { key: "d", label: "D" },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
@@ -546,7 +546,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "UNION",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -576,7 +576,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "FLANGES WITH STUB",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d2", label: "D2" },
         { key: "d1", label: "D1" },
         { key: "d2_stub", label: "D2_Stub" },
@@ -610,7 +610,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "HEX NIPPLE",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "g", label: "G" },
         { key: "l", label: "L" }
         ],
@@ -685,7 +685,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
         title: "END CAP",
         columns: [
         { key: "partnumber", label: "PartNumber" },
-        { key: "size", label: "Size" },
+        { key: "size", label: "Size", labelFr: 'Taille' },
         { key: "d", label: "d" },
         { key: "l", label: "L" }
         ],
@@ -703,7 +703,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     }
   ],
   downloads: [
-    { label: 'PVC SCH 40 Fittings ASTM D 2466 Catalogue (PDF)', href: '/pdfs/PVC%20SCH%2040%20FITTINGS%20(ASTM%20D%202466)%20CATALOGUE.pdf' },
+    { label: 'PVC SCH 40 Fittings ASTM D 2466 Catalogue (PDF)', labelAr: 'كتالوج وصلات PVC SCH 40 ASTM D 2466 (PDF)', labelFr: 'Catalogue Raccords PVC SCH 40 ASTM D 2466 (PDF)', href: '/pdfs/PVC%20SCH%2040%20FITTINGS%20(ASTM%20D%202466)%20CATALOGUE.pdf' },
   ],
   dosDonts: {
     dos: [

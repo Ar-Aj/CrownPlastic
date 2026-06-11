@@ -147,6 +147,13 @@ export const fr = {
     logo_carousel: {
       title: 'La Confiance des Leaders de l\'Industrie',
       subtitle: 'Partenaire des promoteurs et entrepreneurs les plus prestigieux de la région du Golfe',
+      categories: {
+        developer: 'Promoteur',
+        contractor: 'Entrepreneur',
+        government: 'Gouvernement',
+        distributor: 'Distributeur',
+        certification: 'Certification',
+      },
     },
     products_section: {
       label: 'Nos Produits',
@@ -202,34 +209,48 @@ export const fr = {
           title: 'Trois Décennies d\'Excellence',
           description: 'Fondée en 1995, Crown Plastic est devenue un fabricant et distributeur leader de systèmes de Tuyaux / Raccords UPVC, PVC, PP-R, PEX & HDPE dans le CCG et au-delà',
           stat_label: 'Ans',
+          short_title: 'Expérience',
         },
         range: {
           title: 'Gamme de Produits Complète',
           description: 'Plus de 5 000 variantes de produits réparties en 7 familles : UPVC Pression, Évacuation, Conduit, Gaine, PPR, HDPE et fabrications sur mesure.',
           stat_label: 'Références',
+          short_title: 'Produits',
         },
         certifications: {
           title: 'Triple Certification ISO',
           description: 'Fabrication certifiée ISO 9001:2015 (Qualité), ISO 14001:2015 (Environnement) et OHSAS 18001:2007 (Sécurité).',
           stat_label: 'ISO',
+          short_title: 'Certifications',
         },
         exports: {
           title: 'Réseau d\'Exportation Mondial',
           description: 'Desservant les 6 nations du CCG et exportant vers plus de 52 pays au Moyen-Orient, en Asie et en Afrique.',
           stat_label: 'Pays',
+          short_title: 'Exportations',
         },
         materials: {
           title: 'Matières Premières de Premier Choix',
           description: 'Tuyaux et raccords fabriqués à partir de composés de matières premières de premier choix pour des surfaces propres, des dimensions stables et un service fiable à long terme.',
+          short_title: 'Matériaux',
         },
         standards: {
           title: 'Normes',
           description: 'Systèmes de Tuyaux / Raccords conçus et testés selon les normes internationales reconnues pour la qualité, la sécurité et la performance à long terme dans les projets d\'infrastructure et de construction.',
+          short_title: 'Normes',
         },
         technology: {
           title: 'Technologie',
           description: 'Lignes d\'extrusion modernes, outillage interne et contrôles automatisés garantissent une production constante de Tuyaux / Raccords UPVC, PVC, PP-R, PEX & HDPE pour les projets exigeants du CCG et au-delà.',
+          short_title: 'Technologie',
         },
+      },
+      tags: {
+        Catalogue: 'Catalogue',
+        ISO: 'ISO',
+        Exports: 'Exportations',
+        Manufacturing: 'Fabrication',
+        Standards: 'Normes',
       },
     },
     // HeroSection component (standalone hero, used outside main homepage)
@@ -275,11 +296,44 @@ export const fr = {
     mediaContactTitle: 'Contact Médias',
     mediaContactSubtitle: 'Pour les demandes de presse, interviews et requêtes médias :',
     mediaContactEmail: 'info@crownplasticuae.com',
+    featured_videos_badge: 'Vidéos en Vedette',
+    watch_on_youtube: 'Regarder sur YouTube',
+    no_videos: 'Aucune vidéo disponible.',
   },
 
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // Blogs Hub & Article Detail Pages
+  blogs: {
+    pageTitle: 'Blog Solutions de Tuyauterie',
+    pageSubtitle: 'Guides d\'experts, articles techniques et meilleures pratiques pour les systèmes de tuyauterie UPVC, PPR et HDPE dans les projets de construction aux EAU et dans le CCG.',
+    breadcrumb: 'Blog',
+    readArticle: 'Lire l\'Article',
+    ctaTitle: 'Besoin d\'un Support Technique pour Votre Projet ?',
+    ctaSubtitle: 'Notre équipe d\'ingénierie est prête à vous aider pour la sélection de produits, les spécifications et les questions techniques.',
+    ctaButton: 'Contacter Notre Équipe',
+    articleAnswers: 'Cet article répond à :',
+    relatedTopics: 'Sujets Connexes :',
+    exploreRelated: 'Explorer les Produits & Ressources Connexes',
+    regionalSolutions: 'Solutions Régionales de Tuyaux / Raccords',
+    regionalSolutionsSubtitle: 'Explorez les données produits par localisation, les détails de conformité et les références de projets.',
+    relatedArticles: 'Articles Connexes',
+    detailCtaTitle: 'Besoin d\'Aide pour Choisir le Bon Système de Tuyauterie ?',
+    detailCtaSubtitle: 'Notre équipe d\'ingénierie possède plus de 30 ans d\'expérience au service des projets du CCG.',
+    detailCtaContact: 'Contacter Notre Équipe',
+    detailCtaBrowse: 'Parcourir les Produits',
+    forPersona: 'Pour',
+    tags: {
+      'Technical Guide': 'Guide Technique',
+      'Project Insight': 'Aperçu du Projet',
+      'Compliance': 'Conformité',
+      'Product Comparison': 'Comparaison de Produits',
+      'Installation': 'Installation',
+      'Industry News': 'Actualités du Secteur',
+    },
+  },
+
+  // ————————————————————————————————————————————————————————————————————————
   // About Page
-  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ————————————————————————————————————————————————————————————————————————
   about: {
     hero: {
       breadcrumbs: {
@@ -320,13 +374,13 @@ export const fr = {
     journey: {
       badge: 'Notre Parcours',
       title: '30 Années d\'Excellence',
-      subtitle: 'D\'une vision unique en 1995 au fabricant et distributeur de Tuyaux / Raccords de confiance du CCG',
+      subtitle: 'D\'une vision unique en 1995 au fabricant et distributeur de Tuyaux / Raccords de confiance du GCC',
       scroll_hint: '↓ Défiler pour en savoir plus',
       swipe_hint: '← Glisser pour explorer →',
       stories: {
         foundation: {
           title: 'Fondation & Lancement',
-          tagline: 'Établie à Charjah avec la vision de servir les infrastructures du CCG',
+          tagline: 'Établie à Charjah avec la vision de servir les infrastructures du GCC',
         },
         expansion: {
           title: 'Expansion & Innovation',
@@ -337,7 +391,7 @@ export const fr = {
           tagline: 'Technologie d\'extrusion européenne et systèmes qualité automatisés',
         },
         leadership: {
-          title: 'Leadership CCG',
+          title: 'Leadership GCC',
           tagline: 'Certifications régionales et plus de 5 000 produits au service de plus de 10 000 clients',
         },
       },
@@ -345,7 +399,7 @@ export const fr = {
         '1995': {
           year: '1995',
           title: 'Fondation à Charjah, EAU',
-          description: 'Crown Plastic Pipes Factory L.L.C. a été fondée avec la vision de fournir des solutions de tuyauterie plastique de haute qualité pour le secteur en pleine croissance des infrastructures du CCG.',
+          description: 'Crown Plastic Pipes Factory L.L.C. a été fondée avec la vision de fournir des solutions de tuyauterie plastique de haute qualité pour le secteur en pleine croissance des infrastructures du GCC.',
         },
         '1998': {
           year: '1998',
@@ -554,31 +608,31 @@ export const fr = {
         bs_en_1452_2: {
           name: 'Systèmes de Tuyaux PVC-U sous Pression',
           scope: 'Systèmes de canalisations plastiques pour l\'alimentation en eau et l\'évacuation enterrée/aérienne sous pression',
-          issuing_body: 'BSI (British Standards Institution)',
+          issuing_body: 'BSI (Institution Britannique de Normalisation)',
           benefit: 'Garantit que les tuyaux répondent aux références de performance européennes pour des réseaux d\'alimentation en eau pressurisés sûrs et durables',
         },
         din_8061: {
           name: 'Qualité & Essais des Tuyaux PVC-U',
           scope: 'Exigences générales de qualité, composition des matériaux et procédures d\'essai pour les tuyaux PVC-U',
-          issuing_body: 'DIN (Deutsches Institut für Normung)',
+          issuing_body: 'DIN (Institut Allemand de Normalisation)',
           benefit: 'Les références qualité d\'ingénierie allemande garantissent une intégrité matérielle et une consistance dimensionnelle supérieures',
         },
         din_8062: {
           name: 'Dimensions des Tuyaux PVC-U',
           scope: 'Diamètres extérieurs normalisés, épaisseurs de paroi et tolérances pour les tuyaux PVC-U sous pression',
-          issuing_body: 'DIN (Deutsches Institut für Normung)',
+          issuing_body: 'DIN (Institut Allemand de Normalisation)',
           benefit: 'Garantit une compatibilité dimensionnelle précise à travers les réseaux de tuyauterie, réduisant les erreurs d\'installation et les fuites',
         },
         saso_14: {
           name: 'Norme Saoudienne Tuyaux Eau Potable',
           scope: 'Exigences de matériau, de dimension et de performance pour les tuyaux UPVC transportant l\'eau potable en Arabie Saoudite',
-          issuing_body: 'SASO (Saudi Standards, Metrology and Quality Organization)',
+          issuing_body: 'SASO (Organisation Saoudienne de Normalisation, de Métrologie et de Qualité)',
           benefit: 'Conformité obligatoire pour les projets d\'infrastructure hydraulique saoudiens — assure l\'accès au marché et l\'approbation réglementaire',
         },
         saso_15: {
           name: 'Méthodes d\'Essai UPVC Saoudiennes',
           scope: 'Méthodologie d\'essai des propriétés mécaniques, physiques et chimiques des tuyaux UPVC pour eau potable',
-          issuing_body: 'SASO (Saudi Standards, Metrology and Quality Organization)',
+          issuing_body: 'SASO (Organisation Saoudienne de Normalisation, de Métrologie et de Qualité)',
           benefit: 'Valide la performance des tuyaux dans les conditions spécifiques à l\'Arabie Saoudite, assurant une fiabilité à long terme dans les projets KSA',
         },
         iso_4422_2: {
@@ -590,55 +644,55 @@ export const fr = {
         astm_d_1785: {
           name: 'Tuyaux PVC SCH 40/80/120',
           scope: 'Matériau, dimensions et classes de pression pour les tuyaux plastiques PVC en Schedule 40, 80 et 120',
-          issuing_body: 'ASTM International',
+          issuing_body: 'Société Américaine pour les Essais et les Matériaux (ASTM)',
           benefit: 'Spécification standard de l\'industrie pour les tuyaux PVC de type américain utilisés en plomberie, industrie et protection incendie',
         },
         astm_d_2241: {
           name: 'Tuyaux PVC SDR sous Pression',
           scope: 'Tuyaux PVC sous pression de la série Standard Dimension Ratio (SDR) pour la distribution d\'eau et l\'irrigation',
-          issuing_body: 'ASTM International',
+          issuing_body: 'Société Américaine pour les Essais et les Matériaux (ASTM)',
           benefit: 'Ratio paroi/diamètre optimisé offrant une performance de pression économique pour les réseaux hydrauliques à grande échelle',
         },
         astm_d_2467: {
           name: 'Raccords Tuyaux PVC — Schedule 80',
           scope: 'Raccords PVC à emboîtement pour systèmes de tuyauterie haute pression Schedule 80',
-          issuing_body: 'ASTM International',
+          issuing_body: 'Société Américaine pour les Essais et les Matériaux (ASTM)',
           benefit: 'Raccords haute résistance conçus pour les applications industrielles et chimiques haute pression avec une fiabilité maximale',
         },
         astm_d_2466: {
           name: 'Raccords Tuyaux PVC — Schedule 40',
           scope: 'Raccords PVC à emboîtement pour systèmes de tuyauterie sous pression Schedule 40',
-          issuing_body: 'ASTM International',
+          issuing_body: 'Société Américaine pour les Essais et les Matériaux (ASTM)',
           benefit: 'Raccords fiables et économiques pour la plomberie standard, l\'irrigation et la distribution d\'eau',
         },
         astm_d_2464: {
           name: 'Raccords PVC Filetés — Schedule 80',
           scope: 'Raccords filetés en poly(chlorure de vinyle) pour applications pression Schedule 80',
-          issuing_body: 'ASTM International',
+          issuing_body: 'Société Américaine pour les Essais et les Matériaux (ASTM)',
           benefit: 'Permet des raccordements filetés sécurisés dans les systèmes haute pression où le collage au solvant est impraticable',
         },
         bs_3505: {
           name: 'Tuyaux PVC-U Eau Potable Froide',
           scope: 'Tuyaux PVC non plastifié sous pression spécifiquement pour la distribution d\'eau potable froide',
-          issuing_body: 'BSI (British Standards Institution)',
+          issuing_body: 'BSI (Institution Britannique de Normalisation)',
           benefit: 'Assurance aux normes britanniques pour la distribution sûre d\'eau potable — largement spécifié dans les municipalités du CCG',
         },
         bs_3506: {
           name: 'Tuyaux PVC Usage Industriel',
           scope: 'Tuyaux PVC non plastifié pour le transport de produits chimiques industriels et applications de process',
-          issuing_body: 'BSI (British Standards Institution)',
+          issuing_body: 'BSI (Institution Britannique de Normalisation)',
           benefit: 'Résistance chimique certifiée pour les fluides industriels agressifs, les acides et les alcalis',
         },
         bs_4346: {
           name: 'Joints PVC & Colle Solvant',
           scope: 'Joints et raccords pour tuyaux PVC non plastifié sous pression, incluant les spécifications de colle solvant',
-          issuing_body: 'BSI (British Standards Institution)',
+          issuing_body: 'BSI (Institution Britannique de Normalisation)',
           benefit: 'Assure des joints étanches et permanents avec des procédures de soudage au solvant normalisées pour une longue durée de vie',
         },
         din_8063: {
           name: 'Raccords Pression PVC-U',
           scope: 'Assemblages de joints de tuyaux, manchons, brides et joints pour systèmes de tuyaux PVC-U sous pression',
-          issuing_body: 'DIN (Deutsches Institut für Normung)',
+          issuing_body: 'DIN (Institut Allemand de Normalisation)',
           benefit: 'Raccords de précision allemande assurant des connexions étanches et fiables dans les installations de tuyauterie métrique sous pression',
         },
         bs_en_1329_1: {
@@ -662,7 +716,7 @@ export const fr = {
         bs_4607_1: {
           name: 'Raccords de Conduits Non Métalliques',
           scope: 'Conduits et raccords non métalliques pour installations de câblage électrique — exigences de matériau et de dimension',
-          issuing_body: 'BSI (British Standards Institution)',
+          issuing_body: 'BSI (Institution Britannique de Normalisation)',
           benefit: 'Raccords de conduits légers et anticorrosion idéaux pour les environnements humides du Golfe et les installations côtières',
         },
       },
@@ -676,6 +730,7 @@ export const fr = {
         },
         items: {
           nsf_certified: {
+            code: 'Certifié NSF',
             description: 'Assure que les produits répondent aux normes strictes de santé et de sécurité publiques pour le traitement et la distribution de l\'eau.',
           },
           iso_9001_2015: {
@@ -845,6 +900,7 @@ export const fr = {
       stats_systems: 'Systèmes',
       stats_products: 'Produits',
       know_more: 'En Savoir Plus',
+      hub_label: 'Gamme de Produits',
       products: {
         // 1. UPVC Drainage Pipes
         upvc_drainage_pipes: {
@@ -1878,26 +1934,26 @@ export const fr = {
         view_details: 'Voir les Détails',
         items: {
           // â”€â”€ Legacy keys (kept for backward compatibility) â”€â”€
-          upvc_pressure: { name: 'PVC Pressure Pipes', desc: 'BS EN 1452 certified' },
-          upvc_drainage: { name: 'UPVC Drainage Pipes & Fittings', desc: 'BS EN 1401 compliant' },
-          ppr: { name: 'PPR Hot & Cold Pipes', desc: 'DIN 8077/8078 standard' },
-          hdpe: { name: 'HDPE Pipes', desc: 'ISO 4427 certified' },
-          pvc_conduit: { name: 'PVC Conduit Pipes', desc: 'Electrical applications' },
-          upvc_duct: { name: 'PVC Duct Pipes', desc: 'Telecom & cable ducting' },
+          upvc_pressure: { name: 'Tuyaux Haute Pression PVC', desc: 'Certifié BS EN 1452' },
+          upvc_drainage: { name: 'Tuyaux & Raccords d\'Évacuation UPVC', desc: 'Conforme BS EN 1401' },
+          ppr: { name: 'Tuyaux PP-R Eau Chaude & Froide', desc: 'Norme DIN 8077/8078' },
+          hdpe: { name: 'Tuyaux HDPE', desc: 'Certifié ISO 4427' },
+          pvc_conduit: { name: 'Tuyaux de Conduits PVC', desc: 'Applications électriques' },
+          upvc_duct: { name: 'Tuyaux de Gaines PVC', desc: 'Gaines télécom & câbles' },
           // â”€â”€ Full 13-category galaxy (aligned to PRODUCT_MAP IDs) â”€â”€
-          upvc_drainage_pipes: { name: 'UPVC Drainage Pipes', desc: 'BS EN 1329-1 / BS EN 1401 certified above & underground systems' },
-          upvc_drainage_fittings: { name: 'UPVC Drainage Fittings', desc: 'Push-fit & solvent-weld fittings — BS EN 1329-1 / BS EN 1401' },
-          pvc_high_pressure_pipes: { name: 'PVC High Pressure Pipes', desc: 'ISO, DIN, BS & ASTM standards — potable water & industrial' },
-          pvc_high_pressure_fittings: { name: 'PVC High Pressure Fittings', desc: 'DIN 8063 & BS EN 1452:3 pressure-rated fittings & valves' },
-          pvc_sch_40_fittings: { name: 'PVC SCH 40 Fittings', desc: 'ASTM D 2466 schedule 40 pressure fittings' },
-          pvc_duct_pipes: { name: 'PVC Duct Pipes', desc: 'NEMA, DIN & BS standards — Etisalat & DU telecom approved' },
-          pvc_duct_fittings: { name: 'PVC Duct Fittings', desc: 'Underground cable protection fittings' },
-          pvc_conduit_pipes: { name: 'PVC Conduit Pipes', desc: '1250N / 750N / 320N compression rated — SCH 40 & SCH 80' },
-          ppr_pipes: { name: 'PP-R Pipes', desc: 'DIN 8077/78 — PN10 to PN25 hot & cold potable water' },
-          hdpe_pipes: { name: 'HDPE Pipes', desc: 'PE63 / PE80 / PE100 — irrigation, water distribution & industrial' },
-          pex_pipes: { name: 'PEX Pipes', desc: 'PN 12.5 & PN 20 cross-linked polyethylene for hot & cold systems' },
-          fabrications_accessories: { name: 'Fabrications & Accessories', desc: 'Custom PVC/UPVC fabrications including Dubai Municipality approved grease traps' },
-          solvents: { name: 'Solvents', desc: 'PVC solvent cements for secure, durable pipe joints' },
+          upvc_drainage_pipes: { name: 'Tuyaux d\'Évacuation UPVC', desc: 'Systèmes aériens et enterrés certifiés BS EN 1329-1 / BS EN 1401' },
+          upvc_drainage_fittings: { name: 'Raccords d\'Évacuation UPVC', desc: 'Raccords à emboîtement & à coller — BS EN 1329-1 / BS EN 1401' },
+          pvc_high_pressure_pipes: { name: 'Tuyaux Haute Pression PVC', desc: 'Normes ISO, DIN, BS & ASTM — eau potable & industriel' },
+          pvc_high_pressure_fittings: { name: 'Raccords Haute Pression PVC', desc: 'Raccords & vannes sous pression DIN 8063 & BS EN 1452:3' },
+          pvc_sch_40_fittings: { name: 'Raccords PVC SCH 40', desc: 'Raccords sous pression ASTM D 2466 schedule 40' },
+          pvc_duct_pipes: { name: 'Tuyaux de Gaines PVC', desc: 'Normes NEMA, DIN & BS — approuvés télécom Etisalat & DU' },
+          pvc_duct_fittings: { name: 'Raccords de Gaines PVC', desc: 'Raccords de protection pour câbles enterrés' },
+          pvc_conduit_pipes: { name: 'Tuyaux de Conduits PVC', desc: 'Résistance à la compression 1250N / 750N / 320N — SCH 40 & SCH 80' },
+          ppr_pipes: { name: 'Tuyaux PP-R', desc: 'DIN 8077/78 — PN10 à PN25 eau potable chaude & froide' },
+          hdpe_pipes: { name: 'Tuyaux HDPE', desc: 'PE63 / PE80 / PE100 — irrigation, distribution d\'eau & industriel' },
+          pex_pipes: { name: 'Tuyaux PEX', desc: 'PN 12.5 & PN 20 polyéthylène réticulé pour systèmes chauds & froids' },
+          fabrications_accessories: { name: 'Fabrications & Accessoires', desc: 'Fabrications PVC/UPVC sur mesure incluant les bacs à graisse approuvés par la Municipalité de Dubaï' },
+          solvents: { name: 'Matières Solvantes', desc: 'Colles solvantes PVC pour des raccords de tuyaux sûrs et durables' },
         },
       },
       sidebar: {
@@ -2222,23 +2278,23 @@ export const fr = {
 
     // Category page (/products/[category])
     category: {
-      breadcrumb_home: 'Home',
+      breadcrumb_home: 'Accueil',
       breadcrumb_products: 'Produits',
       request_quote: 'Demander un Devis',
       download_catalogue: 'Télécharger le Catalogue',
       stat_product_families: 'Familles de Produits',
       stat_certified: 'Certifié 9001:2015',
       stat_years: 'Années d\'Excellence Manufacturière',
-      products_in_category: 'Products in',
+      products_in_category: 'Produits dans',
       explore_range: 'Explorez notre gamme complète de produits dans cette catégorie.',
-      view_details: 'View Details',
-      tech_documents: 'Technical Documents',
+      view_details: 'Voir les Détails',
+      tech_documents: 'Documents Techniques',
       tech_documents_desc: 'Téléchargez les spécifications techniques, catalogues et fiches techniques.',
-      quality_certified: 'Quality Certified',
+      quality_certified: 'Qualité Certifiée',
       quality_certified_desc: 'Tous les produits fabriqués sous les systèmes de gestion de la qualité ISO 9001:2015 avec des protocoles de tests rigoureux.',
-      built_to_last: 'Built to Last',
+      built_to_last: 'Conçu pour Durer',
       built_to_last_desc: 'Durée de vie projetée de 50+ ans avec une performance sans corrosion dans les conditions les plus rudes du Golfe.',
-      fast_delivery: 'Fast Delivery',
+      fast_delivery: 'Livraison Rapide',
       fast_delivery_desc: 'Stock disponible avec expédition dans la semaine vers tous les pays du CCG via notre réseau logistique.',
       need_assistance: 'Besoin d\'Assistance Technique ?',
       assistance_desc: 'Notre équipe d\'ingénierie est là pour vous aider dans la sélection des produits, les questions techniques et le support de projet.',
@@ -2247,25 +2303,25 @@ export const fr = {
 
     // Product detail page (/products/[category]/[product])
     detail: {
-      breadcrumb_products: 'Products',
-      standards_certifications: 'Standards & Certifications',
-      key_features: 'Key Features',
-      request_quote: 'Request Quote',
-      download_specs: 'Download Specs',
+      breadcrumb_products: 'Produits',
+      standards_certifications: 'Normes et Certifications',
+      key_features: 'Caractéristiques Clés',
+      request_quote: 'Demander un Devis',
+      download_specs: 'Télécharger les Specs',
       tech_specifications: 'Spécifications Techniques',
       tech_data_eyebrow: 'Données Techniques',
-      table_material: 'Material',
+      table_material: 'Matériau',
       table_material_value: 'Polychlorure de Vinyle Non Plastifié (UPVC)',
-      table_standards: 'Standards',
-      table_color: 'Color',
+      table_standards: 'Normes',
+      table_color: 'Couleur',
       table_color_value: 'Gris',
-      table_size_range: 'Size Range',
-      table_pressure_rating: 'Pressure Rating',
+      table_size_range: 'Gamme de Tailles',
+      table_pressure_rating: 'Classe de Pression',
       contact_for_specs: 'Contactez-nous pour les spécifications complètes',
-      tech_documents: 'Technical Documents',
+      tech_documents: 'Documents Techniques',
       tech_docs_for: 'Documentation technique pour',
-      other_products_in: 'Other Products in',
-      view_details: 'View Details',
+      other_products_in: 'Autres Produits dans',
+      view_details: 'Voir les Détails',
       need_assistance_with: 'Besoin d\'aide avec',
       cta_subtitle: 'Notre équipe technique est là pour vous aider à sélectionner les bons produits pour votre projet.',
       contact_us: 'Contactez-nous',
@@ -2506,10 +2562,10 @@ export const fr = {
 
     // ProductDetailLayout component (enhanced product pages)
     detail_layout: {
-      breadcrumb_products: 'Products',
+      breadcrumb_products: 'Produits',
       standards_certifications: 'Standards & Certifications',
-      request_quote: 'Request Quote',
-      download_catalogue: 'Download Catalogue',
+      request_quote: 'Demander un Devis',
+      download_catalogue: 'Télécharger le Catalogue',
       crown_plastic_pipes: 'Crown Plastic Pipes',
       premium_quality: 'Qualité Premium',
       iso_certified: 'Certifié ISO 9001:2015',
@@ -2532,11 +2588,11 @@ export const fr = {
       dos_heading: "À Faire",
       donts_heading: "À Éviter",
       video_title: 'Vidéo du Produit',
-      downloads_title: 'Technical Documents',
+      downloads_title: 'Documents Techniques',
       downloads_subtitle: 'Accédez aux catalogues techniques complets, spécifications dimensionnelles et documentation de conformité pour',
       downloads_view_document: 'Voir le Document',
-      need_assistance_with: 'Need assistance with',
-      cta_subtitle: 'Our technical team is here to help you select the right products for your project.',
+      need_assistance_with: 'Besoin d\'assistance avec',
+      cta_subtitle: 'Notre équipe technique est là pour vous aider à sélectionner les bons produits pour votre projet.',
       contact_us: 'Contactez-nous',
       view_all_resources: 'Voir Toutes les Ressources',
     },

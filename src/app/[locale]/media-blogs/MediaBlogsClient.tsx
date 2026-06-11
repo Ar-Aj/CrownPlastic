@@ -1,6 +1,6 @@
 'use client';
 
-import { useT } from '@/i18n';
+import { useT, type TranslationPath } from '@/i18n';
 import {
   MediaVideosSection,
   MediaBlogsSection,
@@ -11,20 +11,26 @@ import { YOUTUBE_SHORTS } from '@/config/media';
 import { blogArticles } from '@/content/blogs';
 import { AnimateOnScroll } from '@/components/common';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
-const BLOG_POSTS_DATA: BlogPost[] = blogArticles.slice(0, 6).map((article) => ({
-  id: article.slug,
-  title: article.title,
-  shortExcerpt: article.shortExcerpt,
-  estimatedReadTime: article.estimatedReadTime,
-  tag: article.tag,
-  slug: `/blogs/${article.slug}`,
-  publishedDate: article.publishedDate,
-  thumbnailSrc: article.coverImage || '',
-}));
+function getBlogPostsData(language: string, t: (key: TranslationPath) => string): BlogPost[] {
+  return blogArticles.slice(0, 6).map((article) => ({
+    id: article.slug,
+    title: localizedValue(language, article.title, article.titleAr, article.titleFr),
+    shortExcerpt: localizedValue(language, article.shortExcerpt, article.shortExcerptAr, article.shortExcerptFr),
+    estimatedReadTime: article.estimatedReadTime,
+    tag: t(`blogs.tags.${article.tag}` as any) || article.tag,
+    slug: `/blogs/${article.slug}`,
+    publishedDate: article.publishedDate,
+    thumbnailSrc: article.coverImage || '',
+  }));
+}
 
 export default function MediaBlogsClient() {
   const t = useT();
+  const { language } = useLanguage();
+  const blogPostsData = getBlogPostsData(language, t);
 
   return (
     <>
@@ -70,7 +76,7 @@ export default function MediaBlogsClient() {
       <MediaBlogsSection
         title={t('media_blogs.blogsTitle')}
         subtitle={t('media_blogs.blogsSubtitle')}
-        posts={BLOG_POSTS_DATA}
+        posts={blogPostsData}
         viewAllLink="/blogs"
         viewAllLabel={t('media_blogs.viewAllArticles')}
       />
