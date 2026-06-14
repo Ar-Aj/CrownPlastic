@@ -19,6 +19,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'elbow-90',
     code: undefined,
     name: 'ELBOW 90°',
+      nameFr: 'COUDE 90°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/grey-elbow90.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/grey-elbow90.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/olive-elbow90.png' },
@@ -54,6 +55,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'elbow-45',
     code: undefined,
     name: 'ELBOW 45°',
+      nameFr: 'COUDE 45°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/elbow45.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/elbow45.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/elbow45.png' },
@@ -89,6 +91,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'socket-coupler',
     code: undefined,
     name: 'SOCKET/COUPLER',
+      nameFr: 'MANCHON',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/socketcoupler.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/socketcoupler.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/socketcoupler.png' },
@@ -124,6 +127,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'reducer-bush-socket',
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
+      nameFr: 'RÉDUCTION',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/reducerbush.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/reducerbush.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/remove_the_side_202604082341.png' },
@@ -161,6 +165,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'tee-87-5',
     code: undefined,
     name: 'TEE 87.5°',
+      nameFr: 'TÉ 87.5°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/tee87.5.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/tee87.5.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/tee87.5.png' },
@@ -197,6 +202,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'y-45-skew-tee',
     code: undefined,
     name: 'Y - 45°/SKEW TEE',
+      nameFr: 'CULOTTE 45°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/y45skew.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/y45skew.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/y45skew.png' },
@@ -231,6 +237,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'elbow-90-male-female',
     code: undefined,
     name: 'ELBOW 90° MALE/FEMALE',
+      nameFr: 'COUDE MÂLE/FEMELLE 90°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/elbow90malefemale.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/elbow90malefemale.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/elbow90malefemale.png' },
@@ -267,6 +274,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'tee-87-5-male-female',
     code: undefined,
     name: 'TEE 87.5° MALE/FEMALE',
+      nameFr: 'TÉ MÂLE/FEMELLE 87.5°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/tee87.5malefemale.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/tee87.5malefemale.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/tee87.5malefemale.png' },
@@ -303,6 +311,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'access-cap-clean-out',
     code: undefined,
     name: 'ACCESS CAP/CLEAN OUT',
+      nameFr: 'BOUCHON DE VISITE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accesscap.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accesscap.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/accesscap3.png' },
@@ -337,6 +346,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'access-door-elbow-90',
     code: undefined,
     name: 'ACCESS/DOOR ELBOW 90°',
+      nameFr: 'COUDE AVEC BOUCHON 90°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accesselbow90.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accesselbow90.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/accesselbow90.png' },
@@ -368,6 +378,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'access-door-tee-87-5',
     code: undefined,
     name: 'ACCESS/DOOR TEE 87.5°',
+      nameFr: 'TÉ AVEC BOUCHON 87.5°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accessdoortee87.5.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/accessdoortee87.5.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/accessdoortee87.5.png' },
@@ -404,6 +415,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'female-threaded-elbow',
     code: undefined,
     name: 'FEMALE THREADED ELBOW',
+      nameFr: 'COUDE TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/femalethreadedelbow.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/femalethreadedelbow.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/femalethreadedelbow.png' },
@@ -439,6 +451,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'inspection-port-door-sooket',
     code: undefined,
     name: 'INSPECTION PORT/ DOOR SOCKET',
+      nameFr: 'TAMPON DE VISITE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/inspectiondoorsocket.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/inspectiondoorsocket.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/inspectiondoorsocket.png' },
@@ -475,6 +488,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'vent-cowl',
     code: undefined,
     name: 'VENT COWL',
+      nameFr: 'CHAPEAU DE VENTILATION',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/ventcap.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/ventcap.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/ventcap.png' },
@@ -509,6 +523,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'female-threaded-socket',
     code: undefined,
     name: 'FEMALE THREADED SOCKET',
+      nameFr: 'MANCHON TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/femalesocket.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/femalesocket.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/femalesocket.png' },
@@ -544,6 +559,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'parapet-roof-drain',
     code: undefined,
     name: 'PARAPET ROOF DRAIN',
+      nameFr: 'NAISSANCE DE BALCON',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/parapet floordrain.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/parapet floordrain.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/parapet floordrain.png' },
@@ -573,6 +589,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'roof-drain',
     code: undefined,
     name: 'ROOF DRAIN',
+      nameFr: 'NAISSANCE DE TOITURE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/roofdrain.png',
       colorVariants: { grey: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/roofdrain.png', olive: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/olive/roofdrain.png' },
@@ -603,6 +620,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'floor-drain-trap-type-a',
     code: undefined,
     name: 'FLOOR DRAIN/TRAP TYPE - A',
+      nameFr: 'SIPHON DE SOL TYPE - A',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/FLOOR DRAINTRAP TYPE - A.png',
     colorVariants: {
@@ -636,6 +654,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'floor-drain-trap-type-c',
     code: undefined,
     name: 'FLOOR DRAIN/TRAP TYPE - C',
+      nameFr: 'SIPHON DE SOL TYPE - C',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/FLOOR DRAINTRAP TYPE - C.png',
     colorVariants: {
@@ -667,6 +686,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'floor-drain-trap-cover-type-a-i',
     code: undefined,
     name: 'FLOOR DRAIN/TRAP COVER TYPE - A I',
+      nameFr: 'COUVERCLE DE SIPHON TYPE - A I',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/FLOOR DRAINTRAP COVER TYPE - A I.png',
     colorVariants: {
@@ -696,6 +716,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'floor-drain-trap-cover-type-a-ii',
     code: undefined,
     name: 'FLOOR DRAIN/TRAP COVER TYPE - A II',
+      nameFr: 'COUVERCLE DE SIPHON TYPE - A II',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/FLOOR DRAINTRAP COVER TYPE - A II.png',
     colorVariants: {
@@ -725,6 +746,7 @@ export const bsEn1329Fittings: Fitting[] = [
     id: 'floor-drain-trap-cover-type-b',
     code: undefined,
     name: 'FLOOR DRAIN/TRAP COVER TYPE - B',
+      nameFr: 'COUVERCLE DE SIPHON TYPE - B',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC-DRAINAGE-FITTING-BS-EN-1329/grey/FLOOR DRAINTRAP COVER TYPE - B.png',
     colorVariants: {
@@ -762,6 +784,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'elbow-90',
     code: undefined,
     name: 'ELBOW 90°',
+      nameFr: 'COUDE 90°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/elbow90.png',
     sizes: [
@@ -792,6 +815,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'elbow-45',
     code: undefined,
     name: 'ELBOW 45°',
+      nameFr: 'COUDE 45°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/elbow45.png',
     sizes: [
@@ -822,6 +846,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'socket-coupler',
     code: undefined,
     name: 'SOCKET/COUPLER',
+      nameFr: 'MANCHON',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/socketcoupler.png',
     sizes: [
@@ -852,6 +877,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'reducer-bush-socket',
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
+      nameFr: 'RÉDUCTION',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/reducerbush.png',
     sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch',
@@ -882,6 +908,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'tee-87-5',
     code: undefined,
     name: 'ΤΕΕ 87.5°',
+      nameFr: 'TÉ 87.5°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/tee87.5.png',
     sizes: [
@@ -913,6 +940,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'y-45-skew-tee',
     code: undefined,
     name: 'Y - 45°/SKEW TEE',
+      nameFr: 'CULOTTE 45°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/y45skew.png',
     sizes: [
@@ -943,6 +971,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'access-cap-clean-out',
     code: undefined,
     name: 'ACCESS CAP/CLEAN OUT',
+      nameFr: 'BOUCHON DE VISITE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/accesscap.png',
     sizes: [
@@ -972,6 +1001,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'access-door-elbow-90',
     code: undefined,
     name: 'ACCESS/DOOR ELBOW 90°',
+      nameFr: 'COUDE AVEC BOUCHON 90°',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/accesselbow90.png',
     sizes: [
@@ -1002,6 +1032,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'gully-trap-a',
     code: undefined,
     name: 'GULLY TRAP A',
+      nameFr: 'SIPHON DE COUR A',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/gullytrapa.jpeg',
     sizes: [
@@ -1024,6 +1055,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'gully-trap-b',
     code: undefined,
     name: 'GULLY TRAP B',
+      nameFr: 'SIPHON DE COUR B',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/gullytrapb.jpeg',
     sizes: [
@@ -1046,6 +1078,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'hopper-trap',
     code: undefined,
     name: 'HOPPER TRAP',
+      nameFr: 'SIPHON DE DESCENTE',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/hopper trap.jpeg',
     sizes: [
@@ -1068,6 +1101,7 @@ export const bsEn1401Fittings: Fitting[] = [
     id: 'p-trap',
     code: undefined,
     name: 'P TRAP',
+      nameFr: 'SIPHON P',
     family: 'moulded',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/UPVC Drainage Fittings BS EN 1401/orange/p trap.jpeg',
     sizes: [
@@ -1411,6 +1445,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-45-elbow-with-two-rubber-rings',
     code: undefined,
     name: '45° ELBOW WITH TWO RUBBER RINGS',
+      nameFr: 'COUDE 45° À DEUX JOINTS',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/45elbow.png',
     colorVariants: {
@@ -1442,6 +1477,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-90-elbow-m-f',
     code: undefined,
     name: '90° ELBOW M/F',
+      nameFr: 'COUDE 90° M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/90elbowmf.png',
     colorVariants: {
@@ -1488,6 +1524,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-reducing-skew-tee-m-f',
     code: undefined,
     name: 'REDUCING SKEW TEE M/F',
+      nameFr: 'CULOTTE RÉDUITE M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/Reducing Skew Tee Malefemale.png',
     colorVariants: {
@@ -1546,6 +1583,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-skew-tee-m-f',
     code: undefined,
     name: 'SKEW TEE M/F',
+      nameFr: 'CULOTTE M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/skew tee mf (2).png',
     colorVariants: {
@@ -1591,6 +1629,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-tee-m-f-with-gasket',
     code: undefined,
     name: 'TEE M/F WITH GASKET',
+      nameFr: 'TÉ M/F À JOINT',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/tee mf with gasket.png',
     colorVariants: {
@@ -1638,6 +1677,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-reducing-coupler',
     code: undefined,
     name: 'REDUCING COUPLER',
+      nameFr: 'MANCHON DE RÉDUCTION',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/reducingcoupler.png',
     colorVariants: {
@@ -1683,6 +1723,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-coupling',
     code: undefined,
     name: 'COUPLING',
+      nameFr: 'MANCHON',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/coupling.png',
     colorVariants: {
@@ -1724,6 +1765,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-30-sweep-with-single-rubber-sockets',
     code: undefined,
     name: '30° SWEEP WITH SINGLE RUBBER SOCKETS',
+      nameFr: 'COUDE GRAND RAYON 30° À JOINT SIMPLE',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/30sweepwithsinglerubbersockets.png',
     colorVariants: {
@@ -1758,6 +1800,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-90-sweep-with-double-socket-rings',
     code: undefined,
     name: '90° SWEEP WITH DOUBLE SOCKET RINGS',
+      nameFr: 'COUDE GRAND RAYON 90° À DEUX JOINTS',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/90sweepwithdoublesocketrings.png',
     colorVariants: {
@@ -1792,6 +1835,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-90-sweep-with-single-socket-rings',
     code: undefined,
     name: '90° SWEEP WITH SINGLE SOCKET RINGS',
+      nameFr: 'COUDE GRAND RAYON 90° À JOINT SIMPLE',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/90sweepwithsinglesocketrings.png',
     colorVariants: {
@@ -1826,6 +1870,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-reducing-tee-m-f',
     code: undefined,
     name: 'REDUCING TEE M/F',
+      nameFr: 'TÉ RÉDUIT M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/reducingteemf.png',
     colorVariants: {
@@ -1884,6 +1929,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-90-saddle-branch',
     code: undefined,
     name: '90° SADDLE BRANCH',
+      nameFr: 'SELLE DE BRANCHEMENT 90°',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/90saddlebranch.png',
     colorVariants: {
@@ -1913,6 +1959,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-inspection-elbow-m-f',
     code: undefined,
     name: 'INSPECTION ELBOW M/F',
+      nameFr: 'COUDE DE VISITE M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/Inspection_Elbow_M_F_202604110107.png',
     colorVariants: {
@@ -1948,6 +1995,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-inspection-port-m-f',
     code: undefined,
     name: 'INSPECTION PORT M/F',
+      nameFr: 'TAMPON DE VISITE M/F',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/Inspection_Port_M_F_202604110131.png',
     colorVariants: {
@@ -1988,6 +2036,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-tee-with-3-socket-rubber-equal-tee',
     code: undefined,
     name: 'TEE WITH 3 SOCKET RUBBER (EQUAL TEE)',
+      nameFr: 'TÉ ÉGAL À 3 JOINTS',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/Tee with 3 Socket Rubber (Equal Tee).png',
     colorVariants: {
@@ -2023,6 +2072,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-pvc-door-elbow',
     code: undefined,
     name: 'PVC DOOR ELBOW',
+      nameFr: 'COUDE AVEC PORTE PVC',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/PVC_Door_Elbow_202604110104.png',
     colorVariants: {
@@ -2056,6 +2106,7 @@ export const pushfitFittings: Fitting[] = [
     id: 'pushfit-skew-tee-with-three-rubber-rings',
     code: undefined,
     name: 'SKEW TEE WITH THREE RUBBER RINGS',
+      nameFr: 'CULOTTE À TROIS JOINTS',
     family: 'pushfit',
     image: '/images/fittings/UPVC DRAINAGE FITTINGS/Upvc Drainage Fittings PushFit/Skew Tee with Three Rubber Rings.png',
     colorVariants: {

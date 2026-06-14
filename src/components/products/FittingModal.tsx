@@ -5,9 +5,11 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, ChevronUp, Table2 } from 'lucide-react';
-import { type Fitting, FITTING_FAMILY_LABELS } from '@/types/productDetail';
+import { type Fitting, FITTING_FAMILY_LABELS, FITTING_FAMILY_LABELS_AR, FITTING_FAMILY_LABELS_FR } from '@/types/productDetail';
 import { useT, type TranslationPath } from '@/i18n';
 import { formatFraction } from '@/utils/formatters';
+import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 interface FittingModalProps {
   fitting: Fitting | null;
@@ -24,6 +26,7 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
   const [showSpecTable, setShowSpecTable] = useState(false);
   const [mounted, setMounted] = useState(false);
   const t = useT();
+  const { language } = useLanguage();
 
   useEffect(() => {
     setMounted(true);
@@ -141,12 +144,12 @@ export default function FittingModal({ fitting, isOpen, onClose }: FittingModalP
                         id="fitting-modal-title"
                         className="text-lg md:text-xl font-bold text-[#111827] leading-tight mb-2"
                       >
-                        {fitting.name}
+                        {localizedValue(language, fitting.name, fitting.nameAr, fitting.nameFr)}
                       </h2>
 
                       {/* Family label */}
                       <span className="text-xs font-medium text-[#6B7280] uppercase tracking-wide">
-                        {FITTING_FAMILY_LABELS[fitting.family]}
+                        {localizedValue(language, FITTING_FAMILY_LABELS[fitting.family], FITTING_FAMILY_LABELS_AR[fitting.family], FITTING_FAMILY_LABELS_FR[fitting.family])}
                       </span>
 
                       {/* Tags */}

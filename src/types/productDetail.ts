@@ -77,6 +77,24 @@ export const FITTING_FAMILY_LABELS: Record<FittingFamily, string> = {
   'other': 'Other Fittings',
 };
 
+export const FITTING_FAMILY_LABELS_AR: Record<FittingFamily, string> = {
+  'moulded': 'وصلات مصبوبة',
+  'fabricated': 'وصلات مصنعة',
+  'brass-insert': 'حشوات نحاسية',
+  'solvent-cement': 'مادة لحام',
+  'pushfit': 'وصلات ضغط',
+  'other': 'وصلات أخرى',
+};
+
+export const FITTING_FAMILY_LABELS_FR: Record<FittingFamily, string> = {
+  'moulded': 'RACCORDS MOULÉS',
+  'fabricated': 'RACCORDS FAÇONNÉS',
+  'brass-insert': 'INSERTS EN LAITON',
+  'solvent-cement': 'COLLE SOLVANT',
+  'pushfit': 'RACCORDS À EMBOÎTEMENT',
+  'other': 'AUTRES RACCORDS',
+};
+
 /**
  * Column definition for fitting specification tables
  */
@@ -107,6 +125,8 @@ export type Fitting = {
   id: string;                 // e.g., "8481-ball-valve"
   code?: string;              // e.g., "8481"
   name: string;               // e.g., "Ball Valve With Rubberized Gripper Handle"
+  nameAr?: string;
+  nameFr?: string;
   family: FittingFamily;
   image: string;              // path for Next/Image
   colorVariants?: Record<string, string>; // e.g., { grey: '/path.png', olive: '/path2.png' }
@@ -214,7 +234,7 @@ export type ProductDetailConfig = {
   dosDonts?: DosDonts;
   dosDontsAr?: DosDonts;
   dosDontsFr?: DosDonts;
-  accessoriesGallery?: { name: string; imageSrc: string }[];
+  accessoriesGallery?: { name: string; nameAr?: string; nameFr?: string; imageSrc: string }[];
   faqs?: ProductFAQ[];       // Hand-authored AEO FAQs (overrides auto-generated when present)
 };
 

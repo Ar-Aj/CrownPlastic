@@ -57,6 +57,7 @@ const din8063Fittings: Fitting[] = [
     id: 'elbow-90',
     code: undefined,
     name: 'ELBOW 90°',
+      nameFr: 'COUDE 90°',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/elbow-90.jpg',
     sizes: [
@@ -101,6 +102,7 @@ const din8063Fittings: Fitting[] = [
     id: 'elbow-45',
     code: undefined,
     name: 'ELBOW 45°',
+      nameFr: 'COUDE 45°',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/elbow-45.jpg',
     sizes: [
@@ -144,6 +146,7 @@ const din8063Fittings: Fitting[] = [
     id: 'female-elbow-90',
     code: undefined,
     name: 'FEMALE ELBOW 90°',
+      nameFr: 'COUDE TARAUDÉ FEMELLE 90°',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-elbow-90.jpg',
     sizes: [
@@ -178,6 +181,7 @@ const din8063Fittings: Fitting[] = [
     id: 'socket-coupler',
     code: undefined,
     name: 'SOCKET/COUPLER',
+      nameFr: 'MANCHON',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/socket-coupler.jpg',
     sizes: [
@@ -222,6 +226,7 @@ const din8063Fittings: Fitting[] = [
     id: 'reducer-bush-socket',
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
+      nameFr: 'RÉDUCTION',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/reducer-bush-socket.jpg',
     sizes: [
@@ -291,6 +296,7 @@ const din8063Fittings: Fitting[] = [
     id: 'male-threaded-adaptor-socket-nipple-socket',
     code: undefined,
     name: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET',
+      nameFr: 'EMBOUT FILETÉ MÂLE',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/male-threaded-adaptor-socket-nipple-socket.jpg',
     sizes: [
@@ -332,6 +338,7 @@ const din8063Fittings: Fitting[] = [
     id: 'female-threaded-adaptor-socket-g',
     code: undefined,
     name: 'FEMALE THREADED ADAPTOR/SOCKET G',
+      nameFr: 'EMBOUT TARAUDÉ FEMELLE G',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-threaded-adaptor-socket-g.jpg',
     sizes: [
@@ -373,6 +380,7 @@ const din8063Fittings: Fitting[] = [
     id: 'equal-tee',
     code: undefined,
     name: 'EQUAL TEE',
+      nameFr: 'TÉ ÉGAL',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/equal-tee.jpg',
     sizes: [
@@ -415,6 +423,7 @@ const din8063Fittings: Fitting[] = [
     id: 'female-threaded-tee',
     code: undefined,
     name: 'FEMALE THREADED TEE',
+      nameFr: 'TÉ TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-threaded-tee.jpg',
     sizes: [
@@ -459,6 +468,7 @@ const din8063Fittings: Fitting[] = [
     id: 'reducing-tee',
     code: undefined,
     name: 'REDUCING TEE',
+      nameFr: 'TÉ RÉDUIT',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/reducing-tee.jpg',
     sizes: [
@@ -522,6 +532,7 @@ const din8063Fittings: Fitting[] = [
     id: 'female-reducer-bush',
     code: undefined,
     name: 'FEMALE REDUCER BUSH',
+      nameFr: 'BOUCHON DE RÉDUCTION FEMELLE',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/female-reducer-bush.jpg',
     sizes: [
@@ -554,6 +565,7 @@ const din8063Fittings: Fitting[] = [
     id: 'union',
     code: undefined,
     name: 'UNION',
+      nameFr: 'RACCORD UNION',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/union.jpg',
     sizes: [
@@ -588,6 +600,7 @@ const din8063Fittings: Fitting[] = [
     id: 'end-cap',
     code: undefined,
     name: 'END CAP',
+      nameFr: 'BOUCHON',
     family: 'moulded',
     image: '/images/fittings/PVC PRESSURE FITTINGS DIN 8063/end-cap.jpg',
     sizes: [
@@ -806,6 +819,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'elbow-90',
     code: undefined,
     name: 'ELBOW 90°',
+      nameFr: 'COUDE 90°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/elbow-90.jpg',
     sizes: [
@@ -846,6 +860,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'elbow-45',
     code: undefined,
     name: 'ELBOW 45°',
+      nameFr: 'COUDE 45°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/elbow-45.jpg',
     sizes: [
@@ -886,6 +901,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'female-elbow-90',
     code: undefined,
     name: 'FEMALE ELBOW 90°',
+      nameFr: 'COUDE TARAUDÉ FEMELLE 90°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/female-elbow-90.jpg',
     sizes: [
@@ -920,6 +936,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'socket-coupler',
     code: undefined,
     name: 'SOCKET/COUPLER',
+      nameFr: 'MANCHON',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/socket-coupler.jpg',
     sizes: [
@@ -960,6 +977,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'reducer-bush-socket',
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
+      nameFr: 'RÉDUCTION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/reducer-bush-socket.jpg',
     sizes: [
@@ -1012,6 +1030,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'male-threaded-adaptor-socket-nipple-socket',
     code: undefined,
     name: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET',
+      nameFr: 'EMBOUT FILETÉ MÂLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/male-threaded-adaptor-socket-nipple-socket.jpg',
     sizes: [
@@ -1052,6 +1071,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'female-threaded-adaptor-socket',
     code: undefined,
     name: 'FEMALE THREADED ADAPTOR/SOCKET',
+      nameFr: 'EMBOUT TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/female-threaded-adaptor-socket.jpg',
     sizes: [
@@ -1092,6 +1112,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'equal-tee',
     code: undefined,
     name: 'EQUAL TEE',
+      nameFr: 'TÉ ÉGAL',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/equal-tee.jpg',
     sizes: [
@@ -1132,6 +1153,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'reducing-tee',
     code: undefined,
     name: 'REDUCING TEE',
+      nameFr: 'TÉ RÉDUIT',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/reducing-tee.jpg',
     sizes: [
@@ -1174,6 +1196,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'female-threaded-reducing-tee',
     code: undefined,
     name: 'FEMALE THREADED REDUCING TEE',
+      nameFr: 'TÉ RÉDUIT TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/female-threaded-reducing-tee.jpg',
     sizes: [
@@ -1214,6 +1237,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'female-threaded-equal-tee',
     code: undefined,
     name: 'FEMALE THREADED EQUAL TEE',
+      nameFr: 'TÉ ÉGAL TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/female-threaded-equal-tee.jpg',
     sizes: [
@@ -1249,6 +1273,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'female-threaded-reducer-bush',
     code: undefined,
     name: 'FEMALE THREADED REDUCER BUSH',
+      nameFr: 'BOUCHON DE RÉDUCTION TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/female-threaded-reducer-bush.jpg',
     sizes: [
@@ -1281,6 +1306,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'union',
     code: undefined,
     name: 'UNION',
+      nameFr: 'RACCORD UNION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/union.jpg',
     sizes: [
@@ -1313,6 +1339,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'flanges-with-stub',
     code: undefined,
     name: 'FLANGES WITH STUB',
+      nameFr: 'BRIDE AVEC COLLET',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/flanges-with-stub.jpg',
     sizes: [
@@ -1347,6 +1374,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'hex-nipple',
     code: undefined,
     name: 'HEX NIPPLE',
+      nameFr: 'MAMELON HEXAGONAL',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/hex-nipple.jpg',
     sizes: [
@@ -1379,6 +1407,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'repair-socket-convertable-socket',
     code: undefined,
     name: 'REPAIR SOCKET/ CONVERTABLE SOCKET',
+      nameFr: 'MANCHON DE RÉPARATION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/repair-socket-convertable-socket.jpg',
     sizes: [
@@ -1423,6 +1452,7 @@ const bsEn1452Fittings: Fitting[] = [
     id: 'end-cap',
     code: undefined,
     name: 'END CAP',
+      nameFr: 'BOUCHON',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/bs-en-1452/end-cap.jpg',
     sizes: [
@@ -1624,6 +1654,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'elbow-90',
     code: undefined,
     name: 'ELBOW 90°',
+      nameFr: 'COUDE 90°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/elbow-90.jpg',
     sizes: [
@@ -1662,6 +1693,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'elbow-45',
     code: undefined,
     name: 'ELBOW 45°',
+      nameFr: 'COUDE 45°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/elbow-45.jpg',
     sizes: [
@@ -1700,6 +1732,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'female-elbow-90',
     code: undefined,
     name: 'FEMALE ELBOW 90°',
+      nameFr: 'COUDE TARAUDÉ FEMELLE 90°',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/female-elbow-90.jpg',
     sizes: [
@@ -1734,6 +1767,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'socket-coupler',
     code: undefined,
     name: 'SOCKET/COUPLER',
+      nameFr: 'MANCHON',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/socket-coupler.jpg',
     sizes: [
@@ -1772,6 +1806,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'reducer-bush-socket',
     code: undefined,
     name: 'REDUCER BUSH/SOCKET',
+      nameFr: 'RÉDUCTION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/reducer-bush-socket.jpg',
     sizes: [
@@ -1832,6 +1867,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'male-threaded-adaptor-socket-nipple-socket',
     code: undefined,
     name: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET',
+      nameFr: 'EMBOUT FILETÉ MÂLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/male-threaded-adaptor-socket-nipple-socket.jpg',
     sizes: [
@@ -1872,6 +1908,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'female-threaded-adaptor-socket-g',
     code: undefined,
     name: 'FEMALE THREADED ADAPTOR/SOCKET G',
+      nameFr: 'EMBOUT TARAUDÉ FEMELLE G',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/female-threaded-adaptor-socket-g.jpg',
     sizes: [
@@ -1912,6 +1949,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'equal-tee',
     code: undefined,
     name: 'EQUAL TEE',
+      nameFr: 'TÉ ÉGAL',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/equal-tee.jpg',
     sizes: [
@@ -1951,6 +1989,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'reducing-tee',
     code: undefined,
     name: 'REDUCING TEE',
+      nameFr: 'TÉ RÉDUIT',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/reducing-tee.jpg',
     sizes: [
@@ -1992,6 +2031,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'female-threaded-reducing-tee',
     code: undefined,
     name: 'FEMALE THREADED REDUCING TEE',
+      nameFr: 'TÉ RÉDUIT TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/female-threaded-reducing-tee.jpg',
     sizes: [
@@ -2032,6 +2072,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'female-threaded-equal-tee',
     code: undefined,
     name: 'FEMALE THREADED EQUAL TEE',
+      nameFr: 'TÉ ÉGAL TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/female-threaded-equal-tee.jpg',
     sizes: [
@@ -2066,6 +2107,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'female-threaded-reducer-bush',
     code: undefined,
     name: 'FEMALE THREADED REDUCER BUSH',
+      nameFr: 'BOUCHON DE RÉDUCTION TARAUDÉ FEMELLE',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/female-threaded-reducer-bush.jpg',
     sizes: [
@@ -2098,6 +2140,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'union',
     code: undefined,
     name: 'UNION',
+      nameFr: 'RACCORD UNION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/union.jpg',
     sizes: [
@@ -2128,6 +2171,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'hex-nipple',
     code: undefined,
     name: 'HEX NIPPLE',
+      nameFr: 'MAMELON HEXAGONAL',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/hex-nipple.jpg',
     sizes: [
@@ -2157,6 +2201,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'flanges-with-stub',
     code: undefined,
     name: 'FLANGES WITH STUB',
+      nameFr: 'BRIDE AVEC COLLET',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/flanges-with-stub.jpg',
     sizes: [
@@ -2193,6 +2238,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'repair-socket-convertable-socket',
     code: undefined,
     name: 'REPAIR SOCKET/ CONVERTABLE SOCKET',
+      nameFr: 'MANCHON DE RÉPARATION',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/repair-socket-convertable-socket.jpg',
     sizes: [
@@ -2236,6 +2282,7 @@ const astmD2466Fittings: Fitting[] = [
     id: 'end-cap',
     code: undefined,
     name: 'END CAP',
+      nameFr: 'BOUCHON',
     family: 'moulded',
     image: '/images/fittings/pvc-pressure/astm-d2466/end-cap.jpg',
     sizes: [

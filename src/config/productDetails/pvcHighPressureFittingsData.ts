@@ -1114,6 +1114,7 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     {
       id: "pvc-high-pressure-union",
       name: "PVC High Pressure Union",
+      nameFr: "Raccord Union Haute Pression PVC",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/High_Pressure_Union.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
@@ -1142,6 +1143,7 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     {
       id: "pvc-high-pressure-compact-ball-valve",
       name: "PVC High Pressure Compact Ball Valve",
+      nameFr: "Vanne à Bille Compacte Haute Pression PVC",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/Compact_Ball_Valve.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
@@ -1174,6 +1176,7 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     {
       id: "pvc-high-pressure-true-union",
       name: "PVC High Pressure True Union",
+      nameFr: "Raccord Double Union Haute Pression PVC",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/True_Union_Ball.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
@@ -1200,6 +1203,7 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
     {
       id: "pvc-high-pressure-single-union",
       name: "PVC High Pressure Single Union",
+      nameFr: "Vanne à Simple Union Haute Pression PVC",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/Single_Union_Ball.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',

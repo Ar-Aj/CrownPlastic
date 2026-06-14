@@ -4,10 +4,12 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ZoomIn, X } from 'lucide-react';
-import { type Fitting, type FittingFamily, FITTING_FAMILY_LABELS } from '@/types/productDetail';
+import { type Fitting, type FittingFamily, FITTING_FAMILY_LABELS, FITTING_FAMILY_LABELS_AR, FITTING_FAMILY_LABELS_FR } from '@/types/productDetail';
 import FittingModal from './FittingModal';
 import { ProductSection, ProductSectionHeader, RadialGlowOverlay } from '@/components/products/design-system';
-import { useT } from '@/i18n';
+import { useT, type TranslationPath } from '@/i18n';
+import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 
 // ─── Color Dot Mapping ───────────────────────────────────────────────────────
 // Maps a colorLabel key → Tailwind background class for the dot indicator.
@@ -38,6 +40,7 @@ export default function FittingsGallery({ fittings, colorLabel }: FittingsGaller
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const t = useT();
+  const { language } = useLanguage();
 
   // Detect color variants
   const availableColors = useMemo(() => {
@@ -165,7 +168,7 @@ export default function FittingsGallery({ fittings, colorLabel }: FittingsGaller
                           : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-white border border-slate-200 shadow-sm'
                       }`}
                     >
-                      {FITTING_FAMILY_LABELS[family]} ({count})
+                      {localizedValue(language, FITTING_FAMILY_LABELS[family], FITTING_FAMILY_LABELS_AR[family], FITTING_FAMILY_LABELS_FR[family])} ({count})
                     </button>
                   );
                 })}
@@ -225,6 +228,7 @@ interface FittingCardProps {
 function FittingCard({ fitting, activeColor, onClick, onViewImage }: FittingCardProps) {
   const hasNewTag = fitting.tags?.includes('NEW');
   const t = useT();
+  const { language } = useLanguage();
   // Resolve image dynamically based on color selection
   const displayImage = activeColor && fitting.colorVariants && fitting.colorVariants[activeColor]
     ? fitting.colorVariants[activeColor]
@@ -303,18 +307,18 @@ function FittingCard({ fitting, activeColor, onClick, onViewImage }: FittingCard
       <div className="p-3">
         {/* Family label */}
         <span className="text-[10px] font-medium text-[#9CA3AF] uppercase tracking-wide block mb-1">
-          {FITTING_FAMILY_LABELS[fitting.family]}
+          {localizedValue(language, FITTING_FAMILY_LABELS[fitting.family], FITTING_FAMILY_LABELS_AR[fitting.family], FITTING_FAMILY_LABELS_FR[fitting.family])}
         </span>
 
         {/* Name */}
         <h3 className="text-xs sm:text-sm font-semibold text-[#111827] leading-tight line-clamp-2 group-hover:text-[#0052CC] transition-colors">
-          {fitting.name}
+          {localizedValue(language, fitting.name, fitting.nameAr, fitting.nameFr)}
         </h3>
 
         {/* Size count indicator */}
         {fitting.sizes.length > 0 && (
           <span className="text-[10px] text-[#6B7280] mt-1.5 block">
-            {fitting.sizes.length} size{fitting.sizes.length !== 1 ? 's' : ''} available
+            {fitting.sizes.length} {t('products.fittings.sizes_available' as TranslationPath)}
           </span>
         )}
       </div>

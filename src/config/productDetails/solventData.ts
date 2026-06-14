@@ -4,6 +4,7 @@ export const solventsList: Fitting[] = [
   {
     id: 'solvent-125ml',
     name: '125 ml / 4 Fl. Oz',
+      nameFr: '125 ml / 4 Fl. Oz',
     family: 'solvent-cement',
     image: '/images/fittings/solvent/125ml.png',
     sizes: [],
@@ -12,6 +13,7 @@ export const solventsList: Fitting[] = [
   {
     id: 'solvent-250ml',
     name: '250 ml / 8 Fl. Oz',
+      nameFr: '250 ml / 8 Fl. Oz',
     family: 'solvent-cement',
     image: '/images/fittings/solvent/250ml.png',
     sizes: [],
@@ -20,6 +22,7 @@ export const solventsList: Fitting[] = [
   {
     id: 'solvent-500ml',
     name: '500 ml / 16 Fl. Oz - 1 Pint',
+      nameFr: '500 ml / 16 Fl. Oz - 1 Pint',
     family: 'solvent-cement',
     image: '/images/fittings/solvent/500ml.png',
     sizes: [],

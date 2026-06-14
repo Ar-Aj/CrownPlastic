@@ -176,6 +176,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_end_caps',
     code: undefined,
     name: 'DUCT END CAPS',
+      nameFr: 'BOUCHON DE GAINE',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_end_caps.jpg',
     sizes: [
@@ -207,6 +208,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_sockets',
     code: undefined,
     name: 'DUCT SOCKETS',
+      nameFr: 'MANCHON DE GAINE',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_sockets.jpg',
     sizes: [
@@ -238,6 +240,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_bellmouths',
     code: undefined,
     name: 'DUCT BELLMOUTHS',
+      nameFr: 'PAVILLON DE GAINE',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_bellmouths.jpg',
     sizes: [
@@ -270,6 +273,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_90_45_lr_bends',
     code: undefined,
     name: 'DUCT 90/45° LR BENDS',
+      nameFr: 'COUDE GRAND RAYON GAINE 90/45°',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_90_45_lr_bends.jpg',
     sizes: [
@@ -308,6 +312,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_90_lighting_lr_bends_4',
     code: undefined,
     name: 'DUCT 90° LIGHTING LR BENDS 4"',
+      nameFr: 'COUDE GRAND RAYON ÉCLAIRAGE 90° 4"',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_90_lighting_lr_bends_4.jpg',
     sizes: [
@@ -339,6 +344,7 @@ const ductFittings: Fitting[] = [
     id: 'duct_90_street_lighting_lr_bends_3',
     code: undefined,
     name: 'DUCT 90° STREET LIGHTING L R BENDS 3"',
+      nameFr: 'COUDE GRAND RAYON ÉCLAIRAGE PUBLIC 90° 3"',
     family: 'fabricated',
     image: '/images/fittings/duct/duct_90_street_lighting_lr_bends_3.jpg',
     sizes: [

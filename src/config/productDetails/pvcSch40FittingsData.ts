@@ -65,6 +65,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "elbow-90-astm-d-2466-sch-40",
       name: "ELBOW 90° - ASTM D 2466 SCH-40",
+      nameFr: "COUDE 90° - ASTM D 2466 SCH-40",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/elbow907.png',
       sizes: [
@@ -103,6 +104,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "elbow-45-astm-d-2466-sch-40",
       name: "ELBOW 45° - ASTM D 2466 SCH-40",
+      nameFr: "COUDE 45° - ASTM D 2466 SCH-40",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/elbow45.png',
       sizes: [
@@ -141,6 +143,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "female-elbow-90",
       name: "FEMALE ELBOW 90°",
+      nameFr: "COUDE TARAUDÉ FEMELLE 90°",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/female-elbow90.png',
       sizes: [
@@ -174,6 +177,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "socket-coupler-astm-d-2466-sch-40",
       name: "SOCKET/COUPLER - ASTM D 2466 SCH-40",
+      nameFr: "MANCHON - ASTM D 2466 SCH-40",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/Socket.png',
       sizes: [
@@ -212,6 +216,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "reducer-bush-socket",
       name: "REDUCER BUSH/SOCKET",
+      nameFr: "RÉDUCTION",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/reducer.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch',
@@ -271,6 +276,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "male-threaded-adaptor-socket-nipple-socket",
       name: "MALE THREADED ADAPTOR/SOCKET/NIPPLE SOCKET",
+      nameFr: "EMBOUT FILETÉ MÂLE",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/Male_Threaded_Adaptor_Final.png',
       sizes: [
@@ -310,6 +316,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "female-threaded-adaptor-socket",
       name: "FEMALE THREADED ADAPTOR/SOCKET",
+      nameFr: "EMBOUT TARAUDÉ FEMELLE",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/femalethreadedadaptor.png',
       sizes: [
@@ -349,6 +356,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "equal-tee",
       name: "EQUAL TEE",
+      nameFr: "TÉ ÉGAL",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/equaltee.png',
       sizes: [
@@ -387,6 +395,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "reducing-tee",
       name: "REDUCING TEE",
+      nameFr: "TÉ RÉDUIT",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/reducingtee.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch_inch',
@@ -428,6 +437,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "female-threaded-reducing-tee",
       name: "FEMALE THREADED REDUCING TEE",
+      nameFr: "TÉ RÉDUIT TARAUDÉ FEMELLE",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/femalereducingtee.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch_inch',
@@ -467,6 +477,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "female-threaded-equal-tee",
       name: "FEMALE THREADED EQUAL TEE",
+      nameFr: "TÉ ÉGAL TARAUDÉ FEMELLE",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/femaleequaltee.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch_inch',
@@ -501,6 +512,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "female-threaded-reducer-bush",
       name: "FEMALE THREADED REDUCER BUSH",
+      nameFr: "BOUCHON DE RÉDUCTION TARAUDÉ FEMELLE",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/femalereducerbush.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_inch',
@@ -532,6 +544,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "union",
       name: "UNION",
+      nameFr: "RACCORD UNION",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/union.png',
       sizes: [
@@ -562,6 +575,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "flanges-with-stub",
       name: "FLANGES WITH STUB",
+      nameFr: "BRIDE AVEC COLLET",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/flanges-with-stub.png',
       sizes: [
@@ -597,6 +611,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "hex-nipple",
       name: "HEX NIPPLE",
+      nameFr: "MAMELON HEXAGONAL",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/hex%20nipple.png',
       sizes: [
@@ -625,6 +640,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "repair-socket-convertable-socket",
       name: "REPAIR SOCKET/ CONVERTABLE SOCKET",
+      nameFr: "MANCHON DE RÉPARATION",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/Socket.png',
       sizeHeaderOverride: 'products.tables.hp_fit_nominal_size_inch_mm',
@@ -668,6 +684,7 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
     {
       id: "end-cap",
       name: "END CAP",
+      nameFr: "BOUCHON",
       family: 'moulded' as const,
       image: '/images/fittings/PVC High PRESSURE FITTINGS/ASTM D 2466 SCH 40/end%20cap.png',
       sizes: [

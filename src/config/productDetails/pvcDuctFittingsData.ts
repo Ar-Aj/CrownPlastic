@@ -65,6 +65,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-end-caps",
       name: "DUCT END CAPS",
+      nameFr: "BOUCHONS DE GAINE",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct-end-caps.png',
       sizes: [
@@ -94,6 +95,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-sockets",
       name: "DUCT SOCKETS",
+      nameFr: "MANCHONS DE GAINE",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct-socketa.png',
       sizes: [
@@ -123,6 +125,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-bellmouths",
       name: "DUCT BELLMOUTHS",
+      nameFr: "PAVILLONS DE GAINE",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct-bellmouth.png',
       sizes: [
@@ -153,6 +156,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-90-45-lr-bends",
       name: "DUCT 90/45° LR BENDS",
+      nameFr: "COUDES GRAND RAYON GAINE 90/45°",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct 90-45 l r bends.png',
       sizes: [
@@ -189,6 +193,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-90-lighting-lr-bends-4",
       name: "DUCT 90° LIGHTING LR BENDS 4\"",
+      nameFr: "COUDES GRAND RAYON ÉCLAIRAGE 90° 4\"",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct 90 lightning l r bends 4.png',
       sizes: [
@@ -215,6 +220,7 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
     {
       id: "duct-duct-90-street-lighting-l-r-bends-3",
       name: "DUCT 90° STREET LIGHTING L R BENDS 3\"",
+      nameFr: "COUDES GRAND RAYON ÉCLAIRAGE PUBLIC 90° 3\"",
       family: 'moulded' as const,
       image: '/images/products/cover/upvs duct/fittings/duct 90 street lighting l r bends 3.png',
       sizes: [
