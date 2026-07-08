@@ -81,12 +81,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "elbow-90-astm-d-2466-sch-40-table",
-        title: "ELBOW 90° - ASTM D 2466 SCH-40",
+        title: "ELBOW 90° - ASTM D 2466 SCH-40", titleFr: 'COUDE 90° - ASTM D 2466 SCH-40',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40E90 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },
@@ -120,12 +120,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "elbow-45-astm-d-2466-sch-40-table",
-        title: "ELBOW 45° - ASTM D 2466 SCH-40",
+        title: "ELBOW 45° - ASTM D 2466 SCH-40", titleFr: 'COUDE 45° - ASTM D 2466 SCH-40',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40E45 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },
@@ -156,13 +156,13 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "female-elbow-90-table",
-        title: "FEMALE ELBOW 90°",
+        title: "FEMALE ELBOW 90°", titleFr: 'FEMELLE COUDE 90°',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40FE 0.5X0.5CR", "size": "1/2\"", "d": "21.34", "g": "1/2\"", "l": "16.5" },
@@ -193,12 +193,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "socket-coupler-astm-d-2466-sch-40-table",
-        title: "SOCKET/COUPLER - ASTM D 2466 SCH-40",
+        title: "SOCKET/COUPLER - ASTM D 2466 SCH-40", titleFr: 'MANCHON/COUPLER - ASTM D 2466 SCH-40',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40S 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },
@@ -243,12 +243,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "reducer-bush-socket-table",
-        title: "REDUCER BUSH/SOCKET",
+        title: "REDUCER BUSH/SOCKET", titleFr: 'BAGUE DE RÉDUCTION/MANCHON',
         columns: [
         { key: "size", label: "Nominal Size (Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch)' },
-        { key: "d", label: "D" },
-        { key: "d_upper", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "D", labelFr: 'D' },
+        { key: "d_upper", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "size": "3/4\" X 1/2\"", "d": "26.67", "d_upper": "21.34", "l": "32.6" },
@@ -292,13 +292,13 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "male-threaded-adaptor-socket-nipple-socket-table",
-        title: "MALE THREADED ADAPTOR/SOCKET/NIPPLE SOCKET",
+        title: "MALE THREADED ADAPTOR/SOCKET/NIPPLE SOCKET", titleFr: 'FILETÉ MÂLE ADAPTATEUR/MANCHON/NIPPLE MANCHON',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40MA 0.5X0.5CR", "size": "1/2\"", "d": "21.34", "g": "1/2\"", "l": "16.5" },
@@ -332,13 +332,13 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "female-threaded-adaptor-socket-table",
-        title: "FEMALE THREADED ADAPTOR/SOCKET",
+        title: "FEMALE THREADED ADAPTOR/SOCKET", titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40FS 0.5X0.5CR", "size": "1/2\"", "d": "21.34", "g": "1/2\"", "l": "16.5" },
@@ -372,12 +372,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "equal-tee-table",
-        title: "EQUAL TEE",
+        title: "EQUAL TEE", titleFr: 'ÉGAL TÉ',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40T 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },
@@ -413,12 +413,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "reducing-tee-table",
-        title: "REDUCING TEE",
+        title: "REDUCING TEE", titleFr: 'TÉ RÉDUIT',
         columns: [
         { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
-        { key: "d", label: "d" },
-        { key: "di", label: "di" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "di", label: "di", labelFr: 'di' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "size": "3/4\" X 1/2\" X 3/4\"", "d": "26.67", "di": "21.34", "l": "19.5" },
@@ -454,12 +454,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "female-threaded-reducing-tee-table",
-        title: "FEMALE THREADED REDUCING TEE",
+        title: "FEMALE THREADED REDUCING TEE", titleFr: 'FEFILETÉ MÂLE TÉ RÉDUIT',
         columns: [
         { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
-        { key: "d", label: "d" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "size": "3/4\" X 1/2\" X 3/4\"", "d": "21.34", "g": "1/2\"", "l": "19.5" },
@@ -491,13 +491,13 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "female-threaded-equal-tee-table",
-        title: "FEMALE THREADED EQUAL TEE",
+        title: "FEMALE THREADED EQUAL TEE", titleFr: 'FEFILETÉ MÂLE ÉGAL TÉ',
         columns: [
         { key: "size", label: "Nominal Size (Inch x Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch x Inch)' },
-        { key: "d", label: "d" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" },
-        { key: "pn", label: "PN" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' },
+        { key: "pn", label: "PN", labelFr: 'PN' }
         ],
         rows: [
         { "size": "1/2\" X 1/2\" X 1/2\"", "d": "21.34", "g": "1/2\"", "l": "16.5", "pn": "15" },
@@ -525,12 +525,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "female-threaded-reducer-bush-table",
-        title: "FEMALE THREADED REDUCER BUSH",
+        title: "FEMALE THREADED REDUCER BUSH", titleFr: 'FEFILETÉ MÂLE BAGUE DE RÉDUCTION',
         columns: [
         { key: "size", label: "Nominal Size (Inch x Inch)", labelFr: 'Taille Nominale (Inch x Inch)' },
-        { key: "d", label: "D" },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "d", label: "D", labelFr: 'D' },
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "size": "3/4\" X 1/2\"", "d": "21.34", "g": "1/2\"", "l": "32.4" },
@@ -556,12 +556,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "union-table",
-        title: "UNION",
+        title: "UNION", titleFr: 'RACCORD UNION',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40U 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },
@@ -587,17 +587,17 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "flanges-with-stub-table",
-        title: "FLANGES WITH STUB",
+        title: "FLANGES WITH STUB", titleFr: 'BRIDES AVEC STUB',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d2", label: "D2" },
-        { key: "d1", label: "D1" },
-        { key: "d2_stub", label: "D2_Stub" },
-        { key: "d3", label: "D3" },
-        { key: "d4", label: "D4" },
-        { key: "h", label: "H" },
-        { key: "h_upper", label: "h" }
+        { key: "d2", label: "D2", labelFr: 'D2' },
+        { key: "d1", label: "D1", labelFr: 'D1' },
+        { key: "d2_stub", label: "D2_Stub", labelFr: 'D2_Stub' },
+        { key: "d3", label: "D3", labelFr: 'D3' },
+        { key: "d4", label: "D4", labelFr: 'D4' },
+        { key: "h", label: "H", labelFr: 'H' },
+        { key: "h_upper", label: "h", labelFr: 'h' }
         ],
         rows: [
         { "partnumber": "SCH40FL 2CR", "size": "2\"", "d2": "60", "d1": "43.5", "d2_stub": "92.5", "d3": "120", "d4": "152.4", "h": "77.6", "h_upper": "20.5" },
@@ -622,12 +622,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "hex-nipple-table",
-        title: "HEX NIPPLE",
+        title: "HEX NIPPLE", titleFr: 'MAMELON HEXAGONAL',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "g", label: "G" },
-        { key: "l", label: "L" }
+        { key: "g", label: "G", labelFr: 'G' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40HN 0.5CR", "size": "1/2\"", "g": "1/2\"", "l": "16.5" },
@@ -659,12 +659,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "repair-socket-convertable-socket-table",
-        title: "REPAIR SOCKET/ CONVERTABLE SOCKET",
+        title: "REPAIR SOCKET/ CONVERTABLE SOCKET", titleFr: 'REPAIR MANCHON/ CONVERTABLE MANCHON',
         columns: [
-        { key: "size", label: "Nominal Size (Inch x mm)" },
-        { key: "d", label: "d" },
-        { key: "d1", label: "d1" },
-        { key: "l", label: "L" }
+        { key: "size", label: "Nominal Size (Inch x mm)", labelFr: 'Nominal Taille (Pouces x mm)' },
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "d1", label: "d1", labelFr: 'd1' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "size": "1/2\" X 20", "d": "21.34", "d1": "20", "l": "16.5" },
@@ -699,12 +699,12 @@ export const pvcSch40FittingsAstmD2466: ProductDetailConfig = {
       ],
       table: {
         id: "end-cap-table",
-        title: "END CAP",
+        title: "END CAP", titleFr: 'BOUCHON',
         columns: [
-        { key: "partnumber", label: "PartNumber" },
+        { key: "partnumber", label: "PartNumber", labelFr: 'PartNumber' },
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "d", label: "d" },
-        { key: "l", label: "L" }
+        { key: "d", label: "d", labelFr: 'd' },
+        { key: "l", label: "L", labelFr: 'L' }
         ],
         rows: [
         { "partnumber": "SCH40EC 0.5CR", "size": "1/2\"", "d": "21.34", "l": "16.5" },

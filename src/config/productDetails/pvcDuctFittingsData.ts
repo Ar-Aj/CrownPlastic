@@ -77,11 +77,11 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-end-caps-table",
-        title: "DUCT END CAPS",
+        title: "DUCT END CAPS", titleFr: 'GAINE BOUCHONS',
         columns: [
-        { key: "size", label: "products.tables.duct_fit_size" },
-        { key: "id", label: "products.tables.duct_fit_id" },
-        { key: "h", label: "products.tables.duct_fit_h" }
+        { key: "size", label: "products.tables.duct_fit_size", labelFr: 'products.tables.duct_fit_size' },
+        { key: "id", label: "products.tables.duct_fit_id", labelFr: 'products.tables.duct_fit_id' },
+        { key: "h", label: "products.tables.duct_fit_h", labelFr: 'products.tables.duct_fit_h' }
         ],
         rows: [
         { "size": "2\" C/56", "id": "60.5/54", "h": "30" },
@@ -107,11 +107,11 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-sockets-table",
-        title: "DUCT SOCKETS",
+        title: "DUCT SOCKETS", titleFr: 'GAINE SOCKETS',
         columns: [
-        { key: "size", label: "products.tables.duct_fit_size" },
-        { key: "id", label: "products.tables.duct_fit_id" },
-        { key: "l", label: "products.tables.duct_fit_l" }
+        { key: "size", label: "products.tables.duct_fit_size", labelFr: 'products.tables.duct_fit_size' },
+        { key: "id", label: "products.tables.duct_fit_id", labelFr: 'products.tables.duct_fit_id' },
+        { key: "l", label: "products.tables.duct_fit_l", labelFr: 'products.tables.duct_fit_l' }
         ],
         rows: [
         { "size": "2\" C/56", "id": "60.5/54", "l": "116.5" },
@@ -137,12 +137,12 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-bellmouths-table",
-        title: "DUCT BELLMOUTHS",
+        title: "DUCT BELLMOUTHS", titleFr: 'GAINE BELLMOUTHS',
         columns: [
-        { key: "size", label: "products.tables.duct_fit_size" },
-        { key: "id", label: "products.tables.duct_fit_id" },
-        { key: "od", label: "products.tables.duct_fit_od" },
-        { key: "wt", label: "products.tables.duct_fit_wt" }
+        { key: "size", label: "products.tables.duct_fit_size", labelFr: 'products.tables.duct_fit_size' },
+        { key: "id", label: "products.tables.duct_fit_id", labelFr: 'products.tables.duct_fit_id' },
+        { key: "od", label: "products.tables.duct_fit_od", labelFr: 'products.tables.duct_fit_od' },
+        { key: "wt", label: "products.tables.duct_fit_wt", labelFr: 'products.tables.duct_fit_wt' }
         ],
         rows: [
         { "size": "2\" C/56", "id": "110", "od": "117", "wt": "3.5/1.63" },
@@ -170,14 +170,14 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-90-45-lr-bends-table",
-        title: "DUCT 90/45° LR BENDS",
+        title: "DUCT 90/45° LR BENDS", titleFr: 'GAINE 90/45° LR BENDS',
         columns: [
-        { key: "size", label: "products.tables.duct_fit_size" },
-        { key: "l1", label: "products.tables.duct_fit_l1" },
-        { key: "l2", label: "products.tables.duct_fit_l2" },
-        { key: "l3", label: "products.tables.duct_fit_l3" },
-        { key: "l4", label: "products.tables.duct_fit_l4" },
-        { key: "r", label: "products.tables.duct_fit_r" }
+        { key: "size", label: "products.tables.duct_fit_size", labelFr: 'products.tables.duct_fit_size' },
+        { key: "l1", label: "products.tables.duct_fit_l1", labelFr: 'products.tables.duct_fit_l1' },
+        { key: "l2", label: "products.tables.duct_fit_l2", labelFr: 'products.tables.duct_fit_l2' },
+        { key: "l3", label: "products.tables.duct_fit_l3", labelFr: 'products.tables.duct_fit_l3' },
+        { key: "l4", label: "products.tables.duct_fit_l4", labelFr: 'products.tables.duct_fit_l4' },
+        { key: "r", label: "products.tables.duct_fit_r", labelFr: 'products.tables.duct_fit_r' }
         ],
         rows: [
         { "size": "1\"", "l1": "220", "l2": "220", "l3": "280", "l4": "280", "r": "200" },
@@ -201,13 +201,13 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-90-lighting-lr-bends-4-table",
-        title: "DUCT 90° LIGHTING LR BENDS 4\"",
+        title: "DUCT 90° LIGHTING LR BENDS 4\", titleFr: 'GAINE 90° LIGHTING LR BENDS 4\'",
         columns: [
-        { key: "size", label: "Ø/SIZE" },
-        { key: "poles", label: "Poles" },
-        { key: "radius-mm", label: "Radius (mm)" },
-        { key: "h-mm", label: "H (mm)" },
-        { key: "w-mm", label: "W (mm)" }
+        { key: "size", label: "Ø/SIZE", labelFr: 'Ø/TAILLE' },
+        { key: "poles", label: "Poles", labelFr: 'Poles' },
+        { key: "radius-mm", label: "Radius (mm)", labelFr: 'Rayon (mm)' },
+        { key: "h-mm", label: "H (mm)", labelFr: 'H (mm)' },
+        { key: "w-mm", label: "W (mm)", labelFr: 'W (mm)' }
         ],
         rows: [
         { "size": "4\" CLASS C", "poles": "12 Mtr.", "radius-mm": "600", "h-mm": "1050", "w-mm": "600" },
@@ -228,13 +228,13 @@ export const pvcDuctFittingsStandard: ProductDetailConfig = {
       ],
       table: {
         id: "duct-duct-90-street-lighting-l-r-bends-3-table",
-        title: "DUCT 90° STREET LIGHTING L R BENDS 3\"",
+        title: "DUCT 90° STREET LIGHTING L R BENDS 3\", titleFr: 'GAINE 90° STREET LIGHTING L R BENDS 3\'",
         columns: [
-        { key: "size", label: "Ø/SIZE" },
-        { key: "poles", label: "Poles" },
-        { key: "radius-mm", label: "Radius (mm)" },
-        { key: "h-mm", label: "H (mm)" },
-        { key: "w-mm", label: "W (mm)" }
+        { key: "size", label: "Ø/SIZE", labelFr: 'Ø/TAILLE' },
+        { key: "poles", label: "Poles", labelFr: 'Poles' },
+        { key: "radius-mm", label: "Radius (mm)", labelFr: 'Rayon (mm)' },
+        { key: "h-mm", label: "H (mm)", labelFr: 'H (mm)' },
+        { key: "w-mm", label: "W (mm)", labelFr: 'W (mm)' }
         ],
         rows: [
         { "size": "3\" CLASS C", "poles": "3.5 Mtr.", "radius-mm": "600", "h-mm": "700", "w-mm": "600" },

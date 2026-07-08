@@ -634,10 +634,10 @@ function ItemChip({
                     <div className="flex-1 min-w-0 px-3 py-2.5 flex flex-col justify-between gap-1.5">
                         <div>
                             <h4 className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug line-clamp-2">
-                                {product ? localizedValue(language, product.name, product.nameAr, product.nameFr) : item.name}
+                                {product ? localizedValue(language, product.name, product.nameAr, product.nameFr) : localizedValue(language, item.name, item.nameAr, item.nameFr)}
                             </h4>
                             <p className="text-[10px] sm:text-[11px] text-slate-500 leading-relaxed mt-0.5 line-clamp-2">
-                                {product ? localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr) : item.shortInfo}
+                                {product ? localizedValue(language, product.shortDescription, product.shortDescriptionAr, product.shortDescriptionFr) : localizedValue(language, item.shortInfo || "", item.shortInfoAr, item.shortInfoFr)}
                             </p>
                         </div>
 

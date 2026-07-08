@@ -55,9 +55,9 @@ export const pprPipesSdr11Pn10: ProductDetailConfig = {
     pipesTables: [
     {
       id: "sdr11-pn10-table",
-      title: "SDR11 / PN10",
+      title: "SDR11 / PN10", titleFr: 'SDR11 / PN10',
       columns: [
-      { key: "part", label: "PART" },
+      { key: "part", label: "PART", labelFr: 'PART' },
       { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
       { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
       { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
@@ -165,9 +165,9 @@ export const pprPipesSdr74Pn16: ProductDetailConfig = {
     pipesTables: [
     {
       id: "sdr7-4-pn16-table",
-      title: "SDR7.4 / PN16",
+      title: "SDR7.4 / PN16", titleFr: 'SDR7.4 / PN16',
       columns: [
-      { key: "part", label: "PART" },
+      { key: "part", label: "PART", labelFr: 'PART' },
       { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
       { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
       { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
@@ -275,9 +275,9 @@ export const pprPipesSdr6Pn20: ProductDetailConfig = {
     pipesTables: [
     {
       id: "sdr6-pn20-table",
-      title: "SDR6 / PN20",
+      title: "SDR6 / PN20", titleFr: 'SDR6 / PN20',
       columns: [
-      { key: "part", label: "PART" },
+      { key: "part", label: "PART", labelFr: 'PART' },
       { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
       { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
       { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
@@ -385,13 +385,13 @@ export const pprPipesSdr5Pn25: ProductDetailConfig = {
     pipesTables: [
     {
       id: 'sdr5-pn25-table',
-      title: "SDR5 / PN25",
+      title: "SDR5 / PN25", titleFr: 'SDR5 / PN25',
       columns: [
-        { key: "part", label: "PART" },
+        { key: "part", label: "PART", labelFr: 'PART' },
         { key: "dimensions", label: "DIMENSIONS", labelFr: 'DIMENSIONS' },
         { key: "wall_thickness", label: "WALL THICKNESS", labelFr: 'EPAISSEUR DE PAROI' },
         { key: "inner_diameter", label: "INNER DIAMETER", labelFr: 'DIAMETRE INTERIEUR' },
-        { key: "water_content", label: "WATER CONTENT (l/mtr)" },
+        { key: "water_content", label: "WATER CONTENT (l/mtr)", labelFr: 'EAU CONTENT (l/mtr)' },
         { key: "packing_unit", label: "PACKING UNIT", labelFr: 'UNITE D EMBALLAGE' },
         { key: "kg_mtr", label: "Kg/Mtr.", labelFr: 'Kg/Mtr.' },
       ],

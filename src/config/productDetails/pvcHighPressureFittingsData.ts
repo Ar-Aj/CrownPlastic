@@ -74,12 +74,12 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20' }, { sizeMm: '25' }, { sizeMm: '32' }, { sizeMm: '40' }, { sizeMm: '50' }, { sizeMm: '63' }, { sizeMm: '75' }, { sizeMm: '90' }, { sizeMm: '110' }, { sizeMm: '160' }, { sizeMm: '200' } ],
       table: {
         id: 'elbow-90--din-8063-table',
-        title: 'ELBOW 90° DIN 8063',
+        title: 'ELBOW 90° DIN 8063', titleFr: 'COUDE 90° DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -104,12 +104,12 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20' }, { sizeMm: '25' }, { sizeMm: '32' }, { sizeMm: '40' }, { sizeMm: '50' }, { sizeMm: '63' }, { sizeMm: '75' }, { sizeMm: '90' }, { sizeMm: '110' }, { sizeMm: '160' }, { sizeMm: '200' } ],
       table: {
         id: 'elbow-45--din-8063-table',
-        title: 'ELBOW 45° DIN 8063',
+        title: 'ELBOW 45° DIN 8063', titleFr: 'COUDE 45° DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_pn', label: 'products.tables.hp_fit_dimensions_mm_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_pn', label: 'products.tables.hp_fit_dimensions_mm_pn', labelFr: 'products.tables.hp_fit_dimensions_mm_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_dimensions_mm_pn': '16' },
@@ -134,13 +134,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20 x 1/2"', sizeInch: '20 x 1/2"' }, { sizeMm: '25 x 3/4"', sizeInch: '25 x 3/4"' }, { sizeMm: '32 x 1"', sizeInch: '32 x 1"' }, { sizeMm: '40 x 1 1/4"', sizeInch: '40 x 1 1/4"' }, { sizeMm: '50 x 1 1/2"', sizeInch: '50 x 1 1/2"' }, { sizeMm: '63 x 2"', sizeInch: '63 x 2"' } ],
       table: {
         id: 'female-elbow-90--din-8063-table',
-        title: 'FEMALE ELBOW 90° DIN 8063',
+        title: 'FEMALE ELBOW 90° DIN 8063', titleFr: 'FEMELLE COUDE 90° DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20 x 1/2"', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -160,12 +160,12 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20' }, { sizeMm: '25' }, { sizeMm: '32' }, { sizeMm: '40' }, { sizeMm: '50' }, { sizeMm: '63' }, { sizeMm: '75' }, { sizeMm: '90' }, { sizeMm: '110' }, { sizeMm: '160' }, { sizeMm: '200' } ],
       table: {
         id: 'socket-coupler-din-8063-table',
-        title: 'SOCKET/COUPLER DIN 8063',
+        title: 'SOCKET/COUPLER DIN 8063', titleFr: 'MANCHON/COUPLER DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -191,13 +191,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '25 X 20' }, { sizeMm: '32 X 20' }, { sizeMm: '32 X 25' }, { sizeMm: '40 X 20' }, { sizeMm: '40 X 25' }, { sizeMm: '40 X 32' }, { sizeMm: '50 X 20' }, { sizeMm: '50 X 25' }, { sizeMm: '50 X 32' }, { sizeMm: '50 X 40' }, { sizeMm: '63 X 25' }, { sizeMm: '63 X 32' }, { sizeMm: '63 X 40' }, { sizeMm: '63 X 50' }, { sizeMm: '75 X 50' }, { sizeMm: '75 X 63' }, { sizeMm: '90 X 63' }, { sizeMm: '90 X 75' }, { sizeMm: '110 X 63' }, { sizeMm: '110 X 75' }, { sizeMm: '110 X 90' }, { sizeMm: '160 X 90' }, { sizeMm: '160 X 110' } ],
       table: {
         id: 'reducer-bush-socket-din-8063-table',
-        title: 'REDUCER BUSH/SOCKET DIN 8063',
+        title: 'REDUCER BUSH/SOCKET DIN 8063', titleFr: 'BAGUE DE RÉDUCTION/MANCHON DIN 8063',
         columns: [
 { key: 'hp_fit_nominal_size_mm', label: 'Nominal Size (mm x mm)', labelFr: 'Taille Nominale (mm x mm)' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '25 X 20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -234,13 +234,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20 x 1/2"', sizeInch: '20 x 1/2"' }, { sizeMm: '25 x 3/4"', sizeInch: '25 x 3/4"' }, { sizeMm: '32 x 1"', sizeInch: '32 x 1"' }, { sizeMm: '40 x 1 1/4"', sizeInch: '40 x 1 1/4"' }, { sizeMm: '50 x 1 1/2"', sizeInch: '50 x 1 1/2"' }, { sizeMm: '63 x 2"', sizeInch: '63 x 2"' }, { sizeMm: '75 x 2 1/2"', sizeInch: '75 x 2 1/2"' }, { sizeMm: '90 x 3"', sizeInch: '90 x 3"' }, { sizeMm: '110 x 4"', sizeInch: '110 x 4"' } ],
       table: {
         id: 'male-threaded-adaptor-socket-nipple-socket-din-8063-table',
-        title: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET DIN 8063',
+        title: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET DIN 8063', titleFr: 'FILETÉ MÂLE ADAPTATEUR/MANCHON/ NIPPLE MANCHON DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20 x 1/2"', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -263,13 +263,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20 x 1/2"', sizeInch: '20 x 1/2"' }, { sizeMm: '25 x 3/4"', sizeInch: '25 x 3/4"' }, { sizeMm: '32 x 1"', sizeInch: '32 x 1"' }, { sizeMm: '40 x 1 1/4"', sizeInch: '40 x 1 1/4"' }, { sizeMm: '50 x 1 1/2"', sizeInch: '50 x 1 1/2"' }, { sizeMm: '63 x 2"', sizeInch: '63 x 2"' }, { sizeMm: '75 x 2 1/2"', sizeInch: '75 x 2 1/2"' }, { sizeMm: '90 x 3"', sizeInch: '90 x 3"' }, { sizeMm: '110 x 4"', sizeInch: '110 x 4"' } ],
       table: {
         id: 'female-threaded-adaptor-socket-din-8063-table',
-        title: 'FEMALE THREADED ADAPTOR/SOCKET DIN 8063',
+        title: 'FEMALE THREADED ADAPTOR/SOCKET DIN 8063', titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d', labelFr: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20 x 1/2"', 'hp_fit_d': '20', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -292,12 +292,12 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20' }, { sizeMm: '25' }, { sizeMm: '32' }, { sizeMm: '40' }, { sizeMm: '50' }, { sizeMm: '63' }, { sizeMm: '75' }, { sizeMm: '90' }, { sizeMm: '110' }, { sizeMm: '160' } ],
       table: {
         id: 'equal-tee-din-8063-table',
-        title: 'EQUAL TEE DIN 8063',
+        title: 'EQUAL TEE DIN 8063', titleFr: 'ÉGAL TÉ DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -322,13 +322,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20 X 2 X 20' }, { sizeMm: '25 x 1/2 x 25' }, { sizeMm: '25 X 4 X 25' }, { sizeMm: '32 x 1/2 x 32' }, { sizeMm: '32 X 4 X 32' }, { sizeMm: '32 X 1 X 32' }, { sizeMm: '40 x 1 1/4 x 40' }, { sizeMm: '50 x 1 1/2 x 50' }, { sizeMm: '63 x 2 x 63' }, { sizeMm: '75 x 2 1/2 x 75' }, { sizeMm: '90 X 3 X 90' } ],
       table: {
         id: 'female-threaded-tee-din-8063-table',
-        title: 'FEMALE THREADED TEE DIN 8063',
+        title: 'FEMALE THREADED TEE DIN 8063', titleFr: 'FEFILETÉ MÂLE TÉ DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm_inch_mm' },
-          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm_inch_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm_inch_mm' },
+          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d', labelFr: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20 X 2 X 20', 'hp_fit_d': '20', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -354,13 +354,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '25 X 20 X 25' }, { sizeMm: '32 X 20 X 32' }, { sizeMm: '32 X 25 X 32' }, { sizeMm: '40 X 20 X 40' }, { sizeMm: '40 X 25 X 40' }, { sizeMm: '40 X 32 X 40' }, { sizeMm: '50 X 20 X 50' }, { sizeMm: '50 X 25 X 50' }, { sizeMm: '50 X 32 X 50' }, { sizeMm: '50 X 40 X 50' }, { sizeMm: '63 X 25 X 63' }, { sizeMm: '63 X 32 X 63' }, { sizeMm: '63 X 40 X 63' }, { sizeMm: '63 X 50 X 63' }, { sizeMm: '75 X 40 X 75' }, { sizeMm: '75 X 50 X 75' }, { sizeMm: '75 X 63 X 75' }, { sizeMm: '90 X 63 X 90' }, { sizeMm: '90 X 75 X 90' }, { sizeMm: '110 x 90 x 110' }, { sizeMm: '160 x 110 x 160' } ],
       table: {
         id: 'reducing-tee-din-8063-table',
-        title: 'REDUCING TEE DIN 8063',
+        title: 'REDUCING TEE DIN 8063', titleFr: 'TÉ RÉDUIT DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm_mm_mm' },
-          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm_mm_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm_mm_mm' },
+          { key: 'hp_fit_d', label: 'products.tables.hp_fit_d', labelFr: 'products.tables.hp_fit_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1', labelFr: 'products.tables.hp_fit_dimensions_mm_d1' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '25 X 20 X 25', 'hp_fit_d': '25', 'hp_fit_dimensions_mm_d1': '20', 'hp_fit_dimensions_mm_l': '19.5', 'hp_fit_pn': '16' },
@@ -395,13 +395,13 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '25 x 1/2"', sizeInch: '25 x 1/2"' }, { sizeMm: '32 x 1/2"', sizeInch: '32 x 1/2"' }, { sizeMm: '32 x 3/4"', sizeInch: '32 x 3/4"' }, { sizeMm: '40 x 1/2"', sizeInch: '40 x 1/2"' }, { sizeMm: '50 x 1/2"', sizeInch: '50 x 1/2"' } ],
       table: {
         id: 'female-reducer-bush-din-8063-table',
-        title: 'FEMALE REDUCER BUSH DIN 8063',
+        title: 'FEMALE REDUCER BUSH DIN 8063', titleFr: 'FEMELLE BAGUE DE RÉDUCTION DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '25 x 1/2"', 'hp_fit_dimensions_mm_d': '25', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '32.4', 'hp_fit_pn': '16' },
@@ -421,12 +421,12 @@ export const pvcHpFittingsDin8063: ProductDetailConfig = {
       sizes: [ { sizeMm: '20' }, { sizeMm: '25' }, { sizeMm: '32' }, { sizeMm: '40' }, { sizeMm: '50' }, { sizeMm: '63' }, { sizeMm: '75' }, { sizeMm: '90' }, { sizeMm: '110' } ],
       table: {
         id: 'end-cap-din-8063-table',
-        title: 'END CAP DIN 8063',
+        title: 'END CAP DIN 8063', titleFr: 'BOUCHON DIN 8063',
         columns: [
-{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm' },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm' , colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm', label: 'products.tables.hp_fit_nominal_size_mm', labelFr: 'products.tables.hp_fit_nominal_size_mm' },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' , colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn' , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm': '20', 'hp_fit_dimensions_mm_d': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '16' },
@@ -554,12 +554,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'elbow-90--bs-en-1452-3-table',
-        title: 'ELBOW 90° BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'ELBOW 90° BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'COUDE 90° BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_mm_d': '16.5', 'hp_fit_dimensions_mm_l': '15', 'hp_fit_pn': '15' },
@@ -582,12 +582,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'elbow-45--bs-en-1452-3-table',
-        title: 'ELBOW 45° BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'ELBOW 45° BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'COUDE 45° BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_mm_d': '16.5', 'hp_fit_dimensions_mm_l': '15', 'hp_fit_pn': '15' },
@@ -610,12 +610,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' } ],
       table: {
         id: 'female-elbow-90--bs-en-1452-3-table',
-        title: 'FEMALE ELBOW 90° BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FEMALE ELBOW 90° BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FEMELLE COUDE 90° BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '16.5', 'hp_fit_pn': '15' },
@@ -635,12 +635,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'socket-coupler-bs-en-1452-3-table',
-        title: 'SOCKET/COUPLER BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'SOCKET/COUPLER BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'MANCHON/COUPLER BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_mm_d': '16.5', 'hp_fit_dimensions_mm_l': '15', 'hp_fit_pn': '15' },
@@ -664,13 +664,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '3/4" x 1/2"', sizeInch: '3/4" x 1/2"' }, { sizeMm: '1" x 1/2"', sizeInch: '1" x 1/2"' }, { sizeMm: '1" x 3/4"', sizeInch: '1" x 3/4"' }, { sizeMm: '1 1/4" x 1/2"', sizeInch: '1 1/4" x 1/2"' }, { sizeMm: '1 1/4" x 3/4"', sizeInch: '1 1/4" x 3/4"' }, { sizeMm: '1 1/4" x 1"', sizeInch: '1 1/4" x 1"' }, { sizeMm: '1 1/2" x 1/2"', sizeInch: '1 1/2" x 1/2"' }, { sizeMm: '1 1/2" x 3/4"', sizeInch: '1 1/2" x 3/4"' }, { sizeMm: '1 1/2" x 1"', sizeInch: '1 1/2" x 1"' }, { sizeMm: '2" x 1/2"', sizeInch: '2" x 1/2"' }, { sizeMm: '2" x 3/4"', sizeInch: '2" x 3/4"' }, { sizeMm: '2" x 1"', sizeInch: '2" x 1"' }, { sizeMm: '2" x 1 1/2"', sizeInch: '2" x 1 1/2"' }, { sizeMm: '3" x 1 1/2"', sizeInch: '3" x 1 1/2"' }, { sizeMm: '3" x 2"', sizeInch: '3" x 2"' }, { sizeMm: '4" x 2"', sizeInch: '4" x 2"' }, { sizeMm: '4" x 3"', sizeInch: '4" x 3"' }, { sizeMm: '6" x 3"', sizeInch: '6" x 3"' }, { sizeMm: '6" x 4"', sizeInch: '6" x 4"' } ],
       table: {
         id: 'reducer-bush-socket-bs-en-1452-3-table',
-        title: 'REDUCER BUSH/SOCKET BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'REDUCER BUSH/SOCKET BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'BAGUE DE RÉDUCTION/MANCHON BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_mm_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d'     , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_mm_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_d', label: 'products.tables.hp_fit_dimensions_mm_d', labelFr: 'products.tables.hp_fit_dimensions_mm_d'     , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_mm_inch': '3/4" x 1/2"', 'hp_fit_nominal_size_mm_d': '26.67', 'hp_fit_dimensions_mm_d': '21.34', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '15' },
@@ -703,12 +703,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'male-threaded-adaptor-socket-nipple-socket-bs-en-1452-3-table',
-        title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FILETÉ MÂLE ADAPTATEUR /MANCHON/NIPPLE MANCHON BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '16.5', 'hp_fit_pn': '15' },
@@ -731,12 +731,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'female-threaded-adaptor-socket-bs-en-1452-3-table',
-        title: 'FEMALE THREADED ADAPTOR/SOCKET BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FEMALE THREADED ADAPTOR/SOCKET BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '16.5', 'hp_fit_pn': '15' },
@@ -759,11 +759,11 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/4"', sizeInch: '1 1/4"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'equal-tee-bs-en-1452-3-table',
-        title: 'EQUAL TEE BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'EQUAL TEE BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'ÉGAL TÉ BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 2 },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 2 },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_l': '16.5', 'hp_fit_pn': '15' },
@@ -787,13 +787,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '3/4" x 1/2" x 3/4"', sizeInch: '3/4" x 1/2" x 3/4"' }, { sizeMm: '1" x 1/2" x 1"', sizeInch: '1" x 1/2" x 1"' }, { sizeMm: '1" x 3/4" x 1"', sizeInch: '1" x 3/4" x 1"' }, { sizeMm: '1 1/2" x 1/2" x 1 1/2"', sizeInch: '1 1/2" x 1/2" x 1 1/2"' }, { sizeMm: '1 1/2" x 3/4" x 1 1/2"', sizeInch: '1 1/2" x 3/4" x 1 1/2"' }, { sizeMm: '1 1/2" x 1" x 1 1/2"', sizeInch: '1 1/2" x 1" x 1 1/2"' }, { sizeMm: '2" x 1/2" x 2"', sizeInch: '2" x 1/2" x 2"' }, { sizeMm: '2" x 3/4" x 2"', sizeInch: '2" x 3/4" x 2"' }, { sizeMm: '2" x 1" x 2"', sizeInch: '2" x 1" x 2"' }, { sizeMm: '2" x 1 1/2" x 2"', sizeInch: '2" x 1 1/2" x 2"' } ],
       table: {
         id: 'reducing-tee-bs-en-1452-3-table',
-        title: 'REDUCING TEE BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'REDUCING TEE BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'TÉ RÉDUIT BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_di', label: 'products.tables.hp_fit_dimensions_di'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_di', label: 'products.tables.hp_fit_dimensions_di', labelFr: 'products.tables.hp_fit_dimensions_di'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '3/4" x 1/2" x 3/4"', 'hp_fit_nominal_size_mm_d': '26.67', 'hp_fit_dimensions_di': '21.34', 'hp_fit_dimensions_l': '19.5', 'hp_fit_pn': '15' },
@@ -818,13 +818,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '3/4" x 1/2" x 3/4"', sizeInch: '3/4" x 1/2" x 3/4"' }, { sizeMm: '1" x 1/2" x 1"', sizeInch: '1" x 1/2" x 1"' }, { sizeMm: '1" x 3/4" x 1"', sizeInch: '1" x 3/4" x 1"' }, { sizeMm: '1 1/2" x 1/2" x 1 1/2"', sizeInch: '1 1/2" x 1/2" x 1 1/2"' }, { sizeMm: '1 1/2" x 3/4" x 1 1/2"', sizeInch: '1 1/2" x 3/4" x 1 1/2"' }, { sizeMm: '1 1/2" x 1" x 1 1/2"', sizeInch: '1 1/2" x 1" x 1 1/2"' }, { sizeMm: '2" x 1/2" x 2"', sizeInch: '2" x 1/2" x 2"' }, { sizeMm: '2" x 3/4" x 2"', sizeInch: '2" x 3/4" x 2"' }, { sizeMm: '2" x 1" x 2"', sizeInch: '2" x 1" x 2"' } ],
       table: {
         id: 'female-threaded-reducing-tee-bs-en-1452-3-table',
-        title: 'FEMALE THREADED REDUCING TEE BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FEMALE THREADED REDUCING TEE BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FEFILETÉ MÂLE TÉ RÉDUIT BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '3/4" x 1/2" x 3/4"', 'hp_fit_nominal_size_mm_d': '21.34', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '19.5', 'hp_fit_pn': '15' },
@@ -848,13 +848,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2" x 1/2" x 1/2"', sizeInch: '1/2" x 1/2" x 1/2"' }, { sizeMm: '3/4" x 3/4" x 3/4"', sizeInch: '3/4" x 3/4" x 3/4"' }, { sizeMm: '1" x 1" x 1"', sizeInch: '1" x 1" x 1"' }, { sizeMm: '1 1/4" x 1 1/4" x 1 1/4"', sizeInch: '1 1/4" x 1 1/4" x 1 1/4"' }, { sizeMm: '1 1/2" x 1 1/2" x 1 1/2"', sizeInch: '1 1/2" x 1 1/2" x 1 1/2"' }, { sizeMm: '2" x 2" x 2"', sizeInch: '2" x 2" x 2"' } ],
       table: {
         id: 'female-threaded-equal-tee-bs-en-1452-3-table',
-        title: 'FEMALE THREADED EQUAL TEE BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FEMALE THREADED EQUAL TEE BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FEFILETÉ MÂLE ÉGAL TÉ BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch_inch_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_g', label: 'products.tables.hp_fit_dimensions_mm_g', labelFr: 'products.tables.hp_fit_dimensions_mm_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2" x 1/2" x 1/2"', 'hp_fit_nominal_size_mm_d': '21.34', 'hp_fit_dimensions_mm_g': '1/2"', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '15' },
@@ -875,13 +875,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '3/4" x 1/2"', sizeInch: '3/4" x 1/2"' }, { sizeMm: '1" x 1/2"', sizeInch: '1" x 1/2"' }, { sizeMm: '1" x 3/4"', sizeInch: '1" x 3/4"' }, { sizeMm: '1 1/2" x 1/2"', sizeInch: '1 1/2" x 1/2"' }, { sizeMm: '2" x 1/2"', sizeInch: '2" x 1/2"' } ],
       table: {
         id: 'female-threaded-reducer-bush-bs-en-1452-3-table',
-        title: 'FEMALE THREADED REDUCER BUSH BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FEMALE THREADED REDUCER BUSH BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'FEFILETÉ MÂLE BAGUE DE RÉDUCTION BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '3/4" x 1/2"', 'hp_fit_nominal_size_mm_d': '21.34', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '32.4', 'hp_fit_pn': '15' },
@@ -901,18 +901,18 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '2 1/2"', sizeInch: '2 1/2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'flanges-with-stub-bs-en-1452-3-table',
-        title: 'FLANGES WITH STUB BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'FLANGES WITH STUB BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'BRIDES AVEC STUB BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d1', label: 'products.tables.hp_fit_nominal_size_mm_d1'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 9 },
-          { key: 'hp_fit_nominal_size_mm_d2', label: 'products.tables.hp_fit_nominal_size_mm_d2'   , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_nominal_size_mm_h', label: 'products.tables.hp_fit_nominal_size_mm_h'   , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_d2', label: 'products.tables.hp_fit_dimensions_mm_d2'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_d3', label: 'products.tables.hp_fit_dimensions_mm_d3'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_d4', label: 'products.tables.hp_fit_dimensions_mm_d4'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_h', label: 'products.tables.hp_fit_dimensions_mm_h'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d1', label: 'products.tables.hp_fit_nominal_size_mm_d1', labelFr: 'products.tables.hp_fit_nominal_size_mm_d1'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 9 },
+          { key: 'hp_fit_nominal_size_mm_d2', label: 'products.tables.hp_fit_nominal_size_mm_d2', labelFr: 'products.tables.hp_fit_nominal_size_mm_d2'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_nominal_size_mm_h', label: 'products.tables.hp_fit_nominal_size_mm_h', labelFr: 'products.tables.hp_fit_nominal_size_mm_h'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1', labelFr: 'products.tables.hp_fit_dimensions_mm_d1'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_d2', label: 'products.tables.hp_fit_dimensions_mm_d2', labelFr: 'products.tables.hp_fit_dimensions_mm_d2'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_d3', label: 'products.tables.hp_fit_dimensions_mm_d3', labelFr: 'products.tables.hp_fit_dimensions_mm_d3'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_d4', label: 'products.tables.hp_fit_dimensions_mm_d4', labelFr: 'products.tables.hp_fit_dimensions_mm_d4'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_h', label: 'products.tables.hp_fit_dimensions_mm_h', labelFr: 'products.tables.hp_fit_dimensions_mm_h'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '2"', 'hp_fit_nominal_size_mm_d1': '91.8', 'hp_fit_nominal_size_mm_d2': '60', 'hp_fit_nominal_size_mm_h': '43.5', 'hp_fit_dimensions_mm_d1': '92.5', 'hp_fit_dimensions_mm_d2': '120', 'hp_fit_dimensions_mm_d3': '152.4', 'hp_fit_dimensions_mm_d4': '77.6', 'hp_fit_dimensions_mm_h': '20.5', 'hp_fit_pn': '15' },
@@ -931,12 +931,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' } ],
       table: {
         id: 'hex-nipple-bs-en-1452-3-table',
-        title: 'HEX NIPPLE BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'HEX NIPPLE BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'MAMELON HEXAGONAL BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_dimensions_g', label: 'products.tables.hp_fit_dimensions_g', labelFr: 'products.tables.hp_fit_dimensions_g'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_l', label: 'products.tables.hp_fit_dimensions_l', labelFr: 'products.tables.hp_fit_dimensions_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_dimensions_g': '1/2"', 'hp_fit_dimensions_l': '16.5', 'hp_fit_pn': '15' },
@@ -956,13 +956,13 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2" x 20', sizeInch: '1/2" x 20' }, { sizeMm: '3/4" x 25', sizeInch: '3/4" x 25' }, { sizeMm: '1" x 32', sizeInch: '1" x 32' }, { sizeMm: '1 1/4" x 40', sizeInch: '1 1/4" x 40' }, { sizeMm: '1 1/2" x 50', sizeInch: '1 1/2" x 50' }, { sizeMm: '2" x 63', sizeInch: '2" x 63' }, { sizeMm: '2 1/2" x 75', sizeInch: '2 1/2" x 75' }, { sizeMm: '3" x 90', sizeInch: '3" x 90' }, { sizeMm: '4" x 110', sizeInch: '4" x 110' }, { sizeMm: '6" x 160', sizeInch: '6" x 160' }, { sizeMm: '8" x 200', sizeInch: '8" x 200' } ],
       table: {
         id: 'repair-socket-convertable-socket-bs-en-1452-3-table',
-        title: 'REPAIR SOCKET/ CONVERTABLE SOCKET BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'REPAIR SOCKET/ CONVERTABLE SOCKET BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'REPAIR MANCHON/ CONVERTABLE MANCHON BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_mm'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 4 },
-          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch_mm', labelFr: 'products.tables.hp_fit_nominal_size_inch_mm'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 4 },
+          { key: 'hp_fit_dimensions_mm_d1', label: 'products.tables.hp_fit_dimensions_mm_d1', labelFr: 'products.tables.hp_fit_dimensions_mm_d1'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2" x 20', 'hp_fit_nominal_size_mm_d': '21.34', 'hp_fit_dimensions_mm_d1': '20', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '15' },
@@ -987,12 +987,12 @@ export const pvcHpFittingsBsEn14523: ProductDetailConfig = {
       sizes: [ { sizeMm: '1/2"', sizeInch: '1/2"' }, { sizeMm: '3/4"', sizeInch: '3/4"' }, { sizeMm: '1"', sizeInch: '1"' }, { sizeMm: '1 1/2"', sizeInch: '1 1/2"' }, { sizeMm: '2"', sizeInch: '2"' }, { sizeMm: '3"', sizeInch: '3"' }, { sizeMm: '4"', sizeInch: '4"' }, { sizeMm: '6"', sizeInch: '6"' } ],
       table: {
         id: 'end-cap-bs-en-1452-3-table',
-        title: 'END CAP BS EN 1452:3 / BS 4346 (PN 15)',
+        title: 'END CAP BS EN 1452:3 / BS 4346 (PN 15)', titleFr: 'BOUCHON BS EN 1452:3 / BS 4346 (PN 15)',
         columns: [
-{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch'   },
-          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', colSpan: 3 },
-          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm' },
-          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm' }
+{ key: 'hp_fit_nominal_size_inch', label: 'products.tables.hp_fit_nominal_size_inch', labelFr: 'products.tables.hp_fit_nominal_size_inch'   },
+          { key: 'hp_fit_nominal_size_mm_d', label: 'products.tables.hp_fit_nominal_size_mm_d', labelFr: 'products.tables.hp_fit_nominal_size_mm_d'   , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm', colSpan: 3 },
+          { key: 'hp_fit_dimensions_mm_l', label: 'products.tables.hp_fit_dimensions_mm_l', labelFr: 'products.tables.hp_fit_dimensions_mm_l'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' },
+          { key: 'hp_fit_pn', label: 'products.tables.hp_fit_pn', labelFr: 'products.tables.hp_fit_pn'    , groupLabel: 'products.tables.dimensions_mm', groupLabelFr: 'products.tables.dimensions_mm' }
         ],
         rows: [
           { 'hp_fit_nominal_size_inch': '1/2"', 'hp_fit_nominal_size_mm_d': '21.34', 'hp_fit_dimensions_mm_l': '16.5', 'hp_fit_pn': '15' },
@@ -1119,15 +1119,17 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/High_Pressure_Union.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
       sizes: [
-        { sizeMm: '25mm' }, { sizeMm: '40mm' }, { sizeMm: '50mm' }, { sizeMm: '75mm' }, { sizeMm: '90mm' },
-        { sizeMm: '1 1/4"' }, { sizeMm: '1"' }
+        { sizeMm: '1/2"' }, { sizeMm: '3/4"' }, { sizeMm: '1"' }, { sizeMm: '1 ¼"' }, { sizeMm: '1 ½"' }, { sizeMm: '2"' }, { sizeMm: '2 ½"' }, { sizeMm: '3"' }
+      ],
+      sizesMM: [
+        { sizeMm: '20mm' }, { sizeMm: '25mm' }, { sizeMm: '32mm' }, { sizeMm: '40mm' }, { sizeMm: '50mm' }, { sizeMm: '63mm' }, { sizeMm: '75mm' }, { sizeMm: '90mm' }
       ],
       table: {
         id: "pvc-high-pressure-union-table",
-        title: "PVC High Pressure Union",
+        title: "PVC High Pressure Union", titleFr: 'PVC High Pression Union',
         columns: [
-          { key: "size", label: "NOMINAL SIZE" },
-          { key: "unit", label: "Unit" }
+          { key: "size", label: "NOMINAL SIZE", labelFr: 'NOMINAL TAILLE' },
+          { key: "unit", label: "Unit", labelFr: 'Unité' }
         ],
         rows: [
           { "size": "25", "unit": "mm" },
@@ -1148,15 +1150,17 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/Compact_Ball_Valve.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
       sizes: [
-        { sizeMm: '25mm' }, { sizeMm: '32mm' }, { sizeMm: '50mm' }, { sizeMm: '63mm' }, { sizeMm: '90mm' }, { sizeMm: '110mm' },
-        { sizeMm: '1"' }, { sizeMm: '1 1/2"' }, { sizeMm: '2"' }, { sizeMm: '3"' }, { sizeMm: '4"' }
+        { sizeMm: '1/2"' }, { sizeMm: '3/4"' }, { sizeMm: '1"' }, { sizeMm: '1 ¼"' }, { sizeMm: '1 ½"' }, { sizeMm: '2"' }, { sizeMm: '3"' }, { sizeMm: '4"' }
+      ],
+      sizesMM: [
+        { sizeMm: '20mm' }, { sizeMm: '25mm' }, { sizeMm: '32mm' }, { sizeMm: '40mm' }, { sizeMm: '50mm' }, { sizeMm: '63mm' }, { sizeMm: '90mm' }, { sizeMm: '110mm' }
       ],
       table: {
         id: "pvc-high-pressure-compact-ball-valve-table",
-        title: "PVC High Pressure Compact Ball Valve",
+        title: "PVC High Pressure Compact Ball Valve", titleFr: 'PVC High Pression Compact VANNE À BOISSEAU SPHÉRIQUE',
         columns: [
-          { key: "size", label: "NOMINAL SIZE" },
-          { key: "unit", label: "Unit" }
+          { key: "size", label: "NOMINAL SIZE", labelFr: 'NOMINAL TAILLE' },
+          { key: "unit", label: "Unit", labelFr: 'Unité' }
         ],
         rows: [
           { "size": "25", "unit": "mm" },
@@ -1181,15 +1185,17 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/True_Union_Ball.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
       sizes: [
-        { sizeMm: '63mm' }, { sizeMm: '90mm' },
-        { sizeMm: '1"' }, { sizeMm: '1 1/2"' }, { sizeMm: '3"' }
+        { sizeMm: '1/2"' }, { sizeMm: '3/4"' }, { sizeMm: '1"' }, { sizeMm: '1 ¼"' }, { sizeMm: '1 ½"' }, { sizeMm: '2"' }, { sizeMm: '3"' }, { sizeMm: '4"' }
+      ],
+      sizesMM: [
+        { sizeMm: '20mm' }, { sizeMm: '25mm' }, { sizeMm: '32mm' }, { sizeMm: '40mm' }, { sizeMm: '50mm' }, { sizeMm: '63mm' }, { sizeMm: '90mm' }, { sizeMm: '110mm' }
       ],
       table: {
         id: "pvc-high-pressure-true-union-table",
-        title: "PVC High Pressure True Union",
+        title: "PVC High Pressure True Union", titleFr: 'PVC High Pression True Union',
         columns: [
-          { key: "size", label: "NOMINAL SIZE" },
-          { key: "unit", label: "Unit" }
+          { key: "size", label: "NOMINAL SIZE", labelFr: 'NOMINAL TAILLE' },
+          { key: "unit", label: "Unit", labelFr: 'Unité' }
         ],
         rows: [
           { "size": "63", "unit": "mm" },
@@ -1208,14 +1214,17 @@ export const pvcHpFittingsValves: ProductDetailConfig = {
       image: '/images/fittings/PVC High PRESSURE FITTINGS/Valves/Single_Union_Ball.png',
       sizeHeaderOverride: 'products.tables.nominal_size_mm',
       sizes: [
-        { sizeMm: '2"' }, { sizeMm: '3"' }
+        { sizeMm: '1/2"' }, { sizeMm: '3/4"' }, { sizeMm: '1"' }, { sizeMm: '1 ¼"' }, { sizeMm: '1 ½"' }, { sizeMm: '2"' }, { sizeMm: '3"' }, { sizeMm: '4"' }
+      ],
+      sizesMM: [
+        { sizeMm: '20mm' }, { sizeMm: '25mm' }, { sizeMm: '32mm' }, { sizeMm: '40mm' }, { sizeMm: '50mm' }, { sizeMm: '63mm' }, { sizeMm: '90mm' }, { sizeMm: '110mm' }
       ],
       table: {
         id: "pvc-high-pressure-single-union-table",
-        title: "PVC High Pressure Single Union",
+        title: "PVC High Pressure Single Union", titleFr: 'PVC High Pression Simple Union',
         columns: [
-          { key: "size", label: "NOMINAL SIZE" },
-          { key: "unit", label: "Unit" }
+          { key: "size", label: "NOMINAL SIZE", labelFr: 'NOMINAL TAILLE' },
+          { key: "unit", label: "Unit", labelFr: 'Unité' }
         ],
         rows: [
           { "size": '2"', "unit": "Inch" },

@@ -14,6 +14,12 @@ export interface SubProduct {
   shortDescription: string;
   shortDescriptionAr?: string;
   shortDescriptionFr?: string;
+  heroTitle?: string;
+  heroTitleAr?: string;
+  heroTitleFr?: string;
+  heroDescription?: string;
+  heroDescriptionAr?: string;
+  heroDescriptionFr?: string;
   features?: string[];
   featuresAr?: string[];
   featuresFr?: string[];
@@ -28,6 +34,12 @@ export interface ProductCategory {
   shortDescription: string;
   shortDescriptionAr?: string;
   shortDescriptionFr?: string;
+  heroTitle?: string;
+  heroTitleAr?: string;
+  heroTitleFr?: string;
+  heroDescription?: string;
+  heroDescriptionAr?: string;
+  heroDescriptionFr?: string;
   icon: string;
   image?: string;
   subProducts: SubProduct[];
@@ -43,6 +55,12 @@ export const productCategories: ProductCategory[] = [
   // 1) UPVC DRAINAGE PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "UPVC Drainage Pipes / Fittings for UAE Projects",
+    heroTitleAr: "أنابيب / وصلات الصرف UPVC لمشاريع الإمارات",
+    heroTitleFr: "Tuyaux / Raccords d'Évacuation UPVC pour les Projets aux EAU",
+    heroDescription: "Top-tier acoustic and standard drainage solutions engineered for the UAE climate. Trusted by MEP contractors across the Middle East.",
+    heroDescriptionAr: "حلول صرف قياسية وصوتية من الدرجة الأولى مصممة لمناخ الإمارات. معتمدة من قبل مقاولي الهندسة الميكانيكية والكهربائية والسباكة في جميع أنحاء الشرق الأوسط.",
+    heroDescriptionFr: "Solutions d'évacuation standard et acoustiques de premier ordre, conçues pour le climat des EAU. Plébiscitées par les entrepreneurs MEP à travers le Moyen-Orient.",
     slug: 'upvc-drainage-pipes',
     name: 'UPVC Drainage Pipes',
     nameAr: 'أنابيب الصرف UPVC',
@@ -111,6 +129,12 @@ export const productCategories: ProductCategory[] = [
   // 2) UPVC DRAINAGE FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "UPVC Drainage Pipes / Fittings for UAE Projects",
+    heroTitleAr: "أنابيب / وصلات الصرف UPVC لمشاريع الإمارات",
+    heroTitleFr: "Tuyaux / Raccords d'Évacuation UPVC pour les Projets aux EAU",
+    heroDescription: "Top-tier acoustic and standard drainage solutions engineered for the UAE climate. Trusted by MEP contractors across the Middle East.",
+    heroDescriptionAr: "حلول صرف قياسية وصوتية من الدرجة الأولى مصممة لمناخ الإمارات. معتمدة من قبل مقاولي الهندسة الميكانيكية والكهربائية والسباكة في جميع أنحاء الشرق الأوسط.",
+    heroDescriptionFr: "Solutions d'évacuation standard et acoustiques de premier ordre, conçues pour le climat des EAU. Plébiscitées par les entrepreneurs MEP à travers le Moyen-Orient.",
     slug: 'upvc-drainage-fittings',
     name: 'UPVC Drainage Fittings',
     nameAr: 'وصلات الصرف UPVC',
@@ -179,6 +203,12 @@ export const productCategories: ProductCategory[] = [
   // 3) PVC HIGH PRESSURE PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Pressure Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات ضغط PVC في الإمارات",
+    heroTitleFr: "Tuyaux / Raccords PVC Haute Pression aux EAU",
+    heroDescription: "Leading manufacturer of high-pressure PVC fluid distribution systems serving Dubai, Sharjah, Abu Dhabi, and the GCC.",
+    heroDescriptionAr: "الشركة الرائدة في تصنيع أنظمة توزيع السوائل PVC عالية الضغط لخدمة دبي والشارقة وأبوظبي ودول مجلس التعاون الخليجي.",
+    heroDescriptionFr: "Fabricant leader de systèmes de distribution de fluides PVC haute pression desservant Dubaï, Charjah, Abou Dabi et le CCG.",
     slug: 'pvc-high-pressure-pipes',
     name: 'PVC High Pressure Pipes',
     nameAr: 'أنابيب الضغط العالي PVC',
@@ -315,6 +345,12 @@ export const productCategories: ProductCategory[] = [
   // 4) PVC HIGH PRESSURE FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Pressure Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات ضغط PVC في الإمارات",
+    heroTitleFr: "Tuyaux / Raccords PVC Haute Pression aux EAU",
+    heroDescription: "Leading manufacturer of high-pressure PVC fluid distribution systems serving Dubai, Sharjah, Abu Dhabi, and the GCC.",
+    heroDescriptionAr: "الشركة الرائدة في تصنيع أنظمة توزيع السوائل PVC عالية الضغط لخدمة دبي والشارقة وأبوظبي ودول مجلس التعاون الخليجي.",
+    heroDescriptionFr: "Fabricant leader de systèmes de distribution de fluides PVC haute pression desservant Dubaï, Charjah, Abou Dabi et le CCG.",
     slug: 'pvc-high-pressure-fittings',
     name: 'PVC High Pressure Fittings',
     nameAr: 'وصلات الضغط العالي PVC',
@@ -383,6 +419,12 @@ export const productCategories: ProductCategory[] = [
   // 5) PVC SCH 40 FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Schedule 40 Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات PVC جدول 40 في الإمارات",
+    heroTitleFr: "Raccords PVC Schedule 40 aux EAU",
+    heroDescription: "Heavy-duty SCH 40 pressure fittings for potable water and industrial fluid transport across the UAE and GCC.",
+    heroDescriptionAr: "وصلات ضغط SCH 40 للخدمة الشاقة لمياه الشرب ونقل السوائل الصناعية في جميع أنحاء الإمارات ودول مجلس التعاون الخليجي.",
+    heroDescriptionFr: "Raccords pression SCH 40 haute résistance pour le transport d'eau potable et de fluides industriels dans les EAU et le CCG.",
     slug: 'pvc-sch-40-fittings',
     name: 'PVC SCH 40 Fittings',
     nameAr: 'وصلات PVC جدول 40',
@@ -417,6 +459,12 @@ export const productCategories: ProductCategory[] = [
   // 6) PVC DUCT PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Duct Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات مجاري PVC في الإمارات",
+    heroTitleFr: "Tuyaux / Raccords de Gaines PVC aux EAU",
+    heroDescription: "Etisalat and DU-compliant underground cable protection systems for UAE infrastructure projects.",
+    heroDescriptionAr: "أنظمة حماية الكابلات تحت الأرض المعتمدة من اتصالات ودو لمشاريع البنية التحتية في الإمارات.",
+    heroDescriptionFr: "Systèmes de protection de câbles souterrains conformes aux normes Etisalat et DU pour les projets d'infrastructure aux EAU.",
     slug: 'pvc-duct-pipes',
     name: 'PVC Duct Pipes',
     nameAr: 'أنابيب مجاري PVC',
@@ -536,6 +584,12 @@ export const productCategories: ProductCategory[] = [
   // 7) PVC DUCT FITTINGS
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Duct Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات مجاري PVC في الإمارات",
+    heroTitleFr: "Tuyaux / Raccords de Gaines PVC aux EAU",
+    heroDescription: "Etisalat and DU-compliant underground cable protection systems for UAE infrastructure projects.",
+    heroDescriptionAr: "أنظمة حماية الكابلات تحت الأرض المعتمدة من اتصالات ودو لمشاريع البنية التحتية في الإمارات.",
+    heroDescriptionFr: "Systèmes de protection de câbles souterrains conformes aux normes Etisalat et DU pour les projets d'infrastructure aux EAU.",
     slug: 'pvc-duct-fittings',
     name: 'PVC Duct Fittings',
     nameAr: 'وصلات مجاري PVC',
@@ -570,6 +624,12 @@ export const productCategories: ProductCategory[] = [
   // 8) PVC CONDUIT PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Electrical Conduit Pipes in UAE",
+    heroTitleAr: "أنابيب قنوات كهربائية PVC في الإمارات",
+    heroTitleFr: "Tuyaux de Conduits Électriques PVC aux EAU",
+    heroDescription: "Civil Defense and DEWA-approved rigid PVC electrical conduits for building wiring systems.",
+    heroDescriptionAr: "أنابيب قنوات كهربائية صلبة من الـ PVC معتمدة من الدفاع المدني وهيئة كهرباء ومياه دبي (DEWA) لأنظمة الأسلاك في المباني.",
+    heroDescriptionFr: "Conduits électriques rigides en PVC approuvés par la Défense Civile et la DEWA pour les systèmes de câblage des bâtiments.",
     slug: 'pvc-conduit-pipes',
     name: 'PVC Conduit Pipes',
     nameAr: 'أنابيب القنوات PVC',
@@ -638,6 +698,12 @@ export const productCategories: ProductCategory[] = [
   // 9) PP-R PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PP-R Pipes / Fittings in UAE",
+    heroTitleAr: "أنابيب / وصلات PP-R في الإمارات",
+    heroTitleFr: "Tuyaux / Raccords PP-R aux EAU",
+    heroDescription: "DIN 8077/78 certified Polypropylene Random Pipes / Fittings for hot and cold potable water distribution.",
+    heroDescriptionAr: "أنابيب ووصلات بولي بروبيلين عشوائية معتمدة وفقاً لمعيار DIN 8077/78 لتوزيع مياه الشرب الباردة والساخنة.",
+    heroDescriptionFr: "Tuyaux en polypropylène random pour la distribution d'eau potable chaude et froide, certifiés DIN 8077/78.",
     slug: 'ppr-pipes',
     name: 'PP-R Pipes',
     nameAr: 'أنابيب PP-R',
@@ -723,6 +789,12 @@ export const productCategories: ProductCategory[] = [
   // 10) HDPE PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "HDPE Pipes in UAE",
+    heroTitleAr: "أنابيب بولي إيثيلين عالي الكثافة (HDPE) في الإمارات",
+    heroTitleFr: "Tuyaux HDPE aux EAU",
+    heroDescription: "High-density polyethylene pipes for irrigation, water distribution, and agricultural applications.",
+    heroDescriptionAr: "أنابيب بولي إيثيلين عالي الكثافة للري وتوزيع المياه والتطبيقات الزراعية.",
+    heroDescriptionFr: "Tuyaux en polyéthylène haute densité pour l'irrigation, la distribution d'eau et les applications agricoles.",
     slug: 'hdpe-pipes',
     name: 'HDPE Pipes',
     nameAr: 'أنابيب HDPE',
@@ -876,6 +948,12 @@ export const productCategories: ProductCategory[] = [
   // 11) PEX PIPES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PEX Pipes in UAE",
+    heroTitleAr: "أنابيب PEX في الإمارات",
+    heroTitleFr: "Tuyaux PEX aux EAU",
+    heroDescription: "Cross-linked polyethylene pipes for hot and cold water distribution, rated PN 12.5 and PN 20.",
+    heroDescriptionAr: "أنابيب بولي إيثيلين متشابكة لتوزيع المياه الساخنة والباردة، بتصنيف PN 12.5 و PN 20.",
+    heroDescriptionFr: "Tuyaux en polyéthylène réticulé pour la distribution d'eau chaude et froide, classés PN 12.5 et PN 20.",
     slug: 'pex-pipes',
     name: 'PEX Pipes',
     nameAr: 'أنابيب PEX',
@@ -910,6 +988,12 @@ export const productCategories: ProductCategory[] = [
   // 12) FABRICATIONS & ACCESSORIES
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC/UPVC Fabrications & Accessories in UAE",
+    heroTitleAr: "تصنيع وملحقات PVC/UPVC في الإمارات",
+    heroTitleFr: "Fabrications et Accessoires PVC/UPVC aux EAU",
+    heroDescription: "Custom PVC/UPVC fabrications including Dubai Municipality approved grease traps.",
+    heroDescriptionAr: "تصنيع PVC/UPVC مخصص يتضمن مصائد الشحوم المعتمدة من بلدية دبي.",
+    heroDescriptionFr: "Fabrications PVC/UPVC sur mesure incluant les séparateurs de graisses approuvés par la Municipalité de Dubaï.",
     slug: 'fabrications-accessories',
     name: 'Fabrications & Accessories',
     nameAr: 'التصنيعات والإكسسوارات',
@@ -1012,6 +1096,12 @@ export const productCategories: ProductCategory[] = [
   // 13) SOLVENTS
   // ─────────────────────────────────────────────────────────────────────────────
   {
+    heroTitle: "PVC Solvents & Cements in UAE",
+    heroTitleAr: "مذيبات ولواصق PVC في الإمارات",
+    heroTitleFr: "Colles Solvants PVC aux EAU",
+    heroDescription: "PVC solvent cements formulated for pipe jointing in the Gulf climate.",
+    heroDescriptionAr: "لواصق مذيبات PVC مركبة لربط الأنابيب في مناخ الخليج.",
+    heroDescriptionFr: "Colles solvants PVC formulées pour l'assemblage de tuyaux dans le climat du Golfe.",
     slug: 'solvents',
     name: 'Solvents',
     nameAr: 'المذيبات',

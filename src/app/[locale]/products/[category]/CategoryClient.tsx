@@ -67,8 +67,8 @@ export default function CategoryClient({ params }: CategoryPageProps) {
     return overrides?.[category];
   }, [language, category]);
 
-  const heroH1 = categoryOverride?.h1 ?? catName;
-  const heroSubtext = categoryOverride?.hero_subtext ?? catDesc;
+  const heroH1 = localizedValue(language, cat.heroTitle || categoryOverride?.h1 || cat.name, cat.heroTitleAr || categoryOverride?.h1 || cat.nameAr, cat.heroTitleFr || categoryOverride?.h1 || cat.nameFr);
+  const heroSubtext = localizedValue(language, cat.heroDescription || categoryOverride?.hero_subtext || cat.shortDescription, cat.heroDescriptionAr || categoryOverride?.hero_subtext || cat.shortDescriptionAr, cat.heroDescriptionFr || categoryOverride?.hero_subtext || cat.shortDescriptionFr);
 
   // ─── AEO FAQs for this category ───────────────────────────────────
   const categoryFaqs = categoryOverride?.faqs;

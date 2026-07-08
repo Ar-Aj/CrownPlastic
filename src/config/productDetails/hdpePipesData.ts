@@ -55,17 +55,17 @@ export const hdpePipes5mpaPe63: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-5mpa-pe63-table",
-      title: "5 MPa (PE63)",
+      title: "5 MPa (PE63)", titleFr: '5 MPa (PE63)',
       columns: [
-        { key: "nominal_od_dn", label: "Nominal Outside Diameter (dn)" },
-        { key: "wt_pn32", label: "PN 3.2", groupLabel: "Pipe Series S 16 (SDR 33)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superColSpan: 8 },
-        { key: "wt_pn4", label: "PN 4", groupLabel: "Pipe Series S 12.5 (SDR 26)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn6", label: "PN 6", groupLabel: "Pipe Series S 8.3 (SDR 17.6)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn63", label: "PN 6.3", groupLabel: "Pipe Series S 8 (SDR 17)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn8", label: "PN 8", groupLabel: "Pipe Series S 6.3 (SDR 13.6)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn10", label: "PN 10", groupLabel: "Pipe Series S 5 (SDR 11)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn125", label: "PN 12.5", groupLabel: "Pipe Series S 4 (SDR 9)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" },
-        { key: "wt_pn16", label: "PN 16", groupLabel: "Pipe Series S 3.2 (SDR 7.4)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)" }
+        { key: "nominal_od_dn", label: "Nominal Outside Diameter (dn)", labelFr: 'Nominal Extérieur Diamètre (dn)' },
+        { key: "wt_pn32", label: "PN 3.2", labelFr: 'PN 3.2', groupLabel: "Pipe Series S 16 (SDR 33)", groupLabelFr: 'Tuyau Series S 16 (SDR 33)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)', superColSpan: 8 },
+        { key: "wt_pn4", label: "PN 4", labelFr: 'PN 4', groupLabel: "Pipe Series S 12.5 (SDR 26)", groupLabelFr: 'Tuyau Series S 12.5 (SDR 26)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn6", label: "PN 6", labelFr: 'PN 6', groupLabel: "Pipe Series S 8.3 (SDR 17.6)", groupLabelFr: 'Tuyau Series S 8.3 (SDR 17.6)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn63", label: "PN 6.3", labelFr: 'PN 6.3', groupLabel: "Pipe Series S 8 (SDR 17)", groupLabelFr: 'Tuyau Series S 8 (SDR 17)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn8", label: "PN 8", labelFr: 'PN 8', groupLabel: "Pipe Series S 6.3 (SDR 13.6)", groupLabelFr: 'Tuyau Series S 6.3 (SDR 13.6)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn10", label: "PN 10", labelFr: 'PN 10', groupLabel: "Pipe Series S 5 (SDR 11)", groupLabelFr: 'Tuyau Series S 5 (SDR 11)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn125", label: "PN 12.5", labelFr: 'PN 12.5', groupLabel: "Pipe Series S 4 (SDR 9)", groupLabelFr: 'Tuyau Series S 4 (SDR 9)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' },
+        { key: "wt_pn16", label: "PN 16", labelFr: 'PN 16', groupLabel: "Pipe Series S 3.2 (SDR 7.4)", groupLabelFr: 'Tuyau Series S 3.2 (SDR 7.4)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 5 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 5 MPa)' }
       ],
       rows: [
       { "nominal_od_dn": "16", "wt_pn32": "", "wt_pn4": "", "wt_pn6": "", "wt_pn63": "", "wt_pn8": "2.3", "wt_pn10": "2.3", "wt_pn125": "2.3", "wt_pn16": "" },
@@ -180,14 +180,14 @@ export const hdpePipes63mpaPe80: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-6-3mpa-pe80-table",
-      title: "6.3 MPa (PE80)",
+      title: "6.3 MPa (PE80)", titleFr: '6.3 MPa (PE80)',
       columns: [
-        { key: "nominal_od_dn", label: "Nominal Outside Diameter dn" },
-        { key: "wt_pn6", label: "PN 6", groupLabel: "Pipe Series S 10 (SDR 21)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superColSpan: 5 },
-        { key: "wt_pn8", label: "PN 8", groupLabel: "Pipe Series S 8 (SDR 17)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)" },
-        { key: "wt_pn10", label: "PN 10", groupLabel: "Pipe Series S 6.3 (SDR 13.6)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)" },
-        { key: "wt_pn125", label: "PN 12.5", groupLabel: "Pipe Series S 5 (SDR 11)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)" },
-        { key: "wt_pn16", label: "PN 16", groupLabel: "Pipe Series S 4 (SDR 9)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)" }
+        { key: "nominal_od_dn", label: "Nominal Outside Diameter dn", labelFr: 'Nominal Extérieur Diamètre dn' },
+        { key: "wt_pn6", label: "PN 6", labelFr: 'PN 6', groupLabel: "Pipe Series S 10 (SDR 21)", groupLabelFr: 'Tuyau Series S 10 (SDR 21)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 6.3 MPa)', superColSpan: 5 },
+        { key: "wt_pn8", label: "PN 8", labelFr: 'PN 8', groupLabel: "Pipe Series S 8 (SDR 17)", groupLabelFr: 'Tuyau Series S 8 (SDR 17)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 6.3 MPa)' },
+        { key: "wt_pn10", label: "PN 10", labelFr: 'PN 10', groupLabel: "Pipe Series S 6.3 (SDR 13.6)", groupLabelFr: 'Tuyau Series S 6.3 (SDR 13.6)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 6.3 MPa)' },
+        { key: "wt_pn125", label: "PN 12.5", labelFr: 'PN 12.5', groupLabel: "Pipe Series S 5 (SDR 11)", groupLabelFr: 'Tuyau Series S 5 (SDR 11)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 6.3 MPa)' },
+        { key: "wt_pn16", label: "PN 16", labelFr: 'PN 16', groupLabel: "Pipe Series S 4 (SDR 9)", groupLabelFr: 'Tuyau Series S 4 (SDR 9)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 6.3 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 6.3 MPa)' }
       ],
       rows: [
       { "nominal_od_dn": "16", "wt_pn6": "", "wt_pn8": "", "wt_pn10": "", "wt_pn125": "", "wt_pn16": "2.3" },
@@ -302,12 +302,12 @@ export const hdpePipes8mpaPe100: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-8mpa-pe100-table",
-      title: "8 MPa (PE100)",
+      title: "8 MPa (PE100)", titleFr: '8 MPa (PE100)',
       columns: [
-        { key: "nominal_od_dn", label: "Nominal Outside Diameter dn" },
-        { key: "wt_pn10", label: "PN 10", groupLabel: "Pipe Series S 8 (SDR 17)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)", superColSpan: 3 },
-        { key: "wt_pn125", label: "PN 12.5", groupLabel: "Pipe Series S 6.3 (SDR 13.6)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)" },
-        { key: "wt_pn16", label: "PN 16", groupLabel: "Pipe Series S 5 (SDR 11)", superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)" }
+        { key: "nominal_od_dn", label: "Nominal Outside Diameter dn", labelFr: 'Nominal Extérieur Diamètre dn' },
+        { key: "wt_pn10", label: "PN 10", labelFr: 'PN 10', groupLabel: "Pipe Series S 8 (SDR 17)", groupLabelFr: 'Tuyau Series S 8 (SDR 17)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 8 MPa)', superColSpan: 3 },
+        { key: "wt_pn125", label: "PN 12.5", labelFr: 'PN 12.5', groupLabel: "Pipe Series S 6.3 (SDR 13.6)", groupLabelFr: 'Tuyau Series S 6.3 (SDR 13.6)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 8 MPa)' },
+        { key: "wt_pn16", label: "PN 16", labelFr: 'PN 16', groupLabel: "Pipe Series S 5 (SDR 11)", groupLabelFr: 'Tuyau Series S 5 (SDR 11)', superGroupLabel: "Nominal wall thickness, e_n (for σ_s = 8 MPa)", superGroupLabelFr: 'Nominal paroi épaisseur, e_n (pour σ_s = 8 MPa)' }
       ],
       rows: [
       { "nominal_od_dn": "32", "wt_pn10": "", "wt_pn125": "", "wt_pn16": "3.0" },
@@ -419,12 +419,12 @@ export const hdpePipesDin8072: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-din-8072-table",
-      title: "DIN 8072",
+      title: "DIN 8072", titleFr: 'DIN 8072',
       columns: [
-        { key: "od_mm", label: "Outside Diameter (mm)" },
-        { key: "wall_thickness_mm_2_5_bar_rating", label: "2.5 Bar Rating (mm)", groupLabel: "Wall Thickness", colSpan: 3 },
-        { key: "wall_thickness_mm_6_bar_rating", label: "6 Bar Rating (mm)", groupLabel: "Wall Thickness" },
-        { key: "wall_thickness_mm_10_bar_rating", label: "10 Bar Rating (mm)", groupLabel: "Wall Thickness" }
+        { key: "od_mm", label: "Outside Diameter (mm)", labelFr: 'Extérieur Diamètre (mm)' },
+        { key: "wall_thickness_mm_2_5_bar_rating", label: "2.5 Bar Rating (mm)", labelFr: '2.5 Bar Classement (mm)', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur', colSpan: 3 },
+        { key: "wall_thickness_mm_6_bar_rating", label: "6 Bar Rating (mm)", labelFr: '6 Bar Classement (mm)', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur' },
+        { key: "wall_thickness_mm_10_bar_rating", label: "10 Bar Rating (mm)", labelFr: '10 Bar Classement (mm)', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur' }
       ],
       rows: [
       { "od_mm": "10", "wall_thickness_mm_2_5_bar_rating": "", "wall_thickness_mm_6_bar_rating": "", "wall_thickness_mm_10_bar_rating": "2.0" },
@@ -530,16 +530,16 @@ export const hdpePipesAsaeS435: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-asae-s435-table",
-      title: "ASAE S435",
+      title: "ASAE S435", titleFr: 'ASAE S435',
       columns: [
-      { key: "ordering_code", label: "products.tables.ordering_code" },
-      { key: "nominal_inside_diameter_in", label: "products.tables.nominal_inside_diameter_in" },
-      { key: "nominal_inside_diameter_mm", label: "products.tables.nominal_inside_diameter_mm" },
-      { key: "minimum_inside_diameter_in", label: "products.tables.minimum_inside_diameter_in" },
-      { key: "minimum_inside_diameter_mm", label: "products.tables.minimum_inside_diameter_mm" },
-      { key: "minimum_wall_thickness_m_m", label: "products.tables.minimum_wall_thickness_m_m" },
-      { key: "nominal_working_pressure_psi", label: "products.tables.nominal_working_pressure_psi" },
-      { key: "nominal_working_pressure_bar", label: "products.tables.nominal_working_pressure_bar" }
+      { key: "ordering_code", label: "products.tables.ordering_code", labelFr: 'products.tables.ordering_code' },
+      { key: "nominal_inside_diameter_in", label: "products.tables.nominal_inside_diameter_in", labelFr: 'products.tables.nominal_inside_diameter_in' },
+      { key: "nominal_inside_diameter_mm", label: "products.tables.nominal_inside_diameter_mm", labelFr: 'products.tables.nominal_inside_diameter_mm' },
+      { key: "minimum_inside_diameter_in", label: "products.tables.minimum_inside_diameter_in", labelFr: 'products.tables.minimum_inside_diameter_in' },
+      { key: "minimum_inside_diameter_mm", label: "products.tables.minimum_inside_diameter_mm", labelFr: 'products.tables.minimum_inside_diameter_mm' },
+      { key: "minimum_wall_thickness_m_m", label: "products.tables.minimum_wall_thickness_m_m", labelFr: 'products.tables.minimum_wall_thickness_m_m' },
+      { key: "nominal_working_pressure_psi", label: "products.tables.nominal_working_pressure_psi", labelFr: 'products.tables.nominal_working_pressure_psi' },
+      { key: "nominal_working_pressure_bar", label: "products.tables.nominal_working_pressure_bar", labelFr: 'products.tables.nominal_working_pressure_bar' }
       ],
       rows: [
       { "ordering_code": "CPDP 15670D (112)", "nominal_inside_diameter_in": "1/2", "nominal_inside_diameter_mm": "13", "minimum_inside_diameter_in": "0.617", "minimum_inside_diameter_mm": "15.67", "minimum_wall_thickness_m_m": "1.12", "nominal_working_pressure_psi": "69", "nominal_working_pressure_bar": "4.8" },
@@ -639,18 +639,18 @@ export const hdpePipesAustStd2698: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-aust-std-2698-table",
-      title: "AUST STD 2698-1",
+      title: "AUST STD 2698-1", titleFr: 'AUST STD 2698-1',
       columns: [
-        { key: "ordering_code", label: "Ordering Code" },
-        { key: "nominal_inside_diameter_in", label: " ", groupLabel: "Nominal Inside Diameter", colSpan: 2 },
-        { key: "nominal_inside_diameter_mm", label: "mm", groupLabel: "Nominal Inside Diameter" },
-        { key: "minimum_inside_diameter_in", label: "in", groupLabel: "Minimum Inside Diameter", colSpan: 2 },
-        { key: "minimum_inside_diameter_mm", label: "mm", groupLabel: "Minimum Inside Diameter" },
-        { key: "minimum_wall_thickness_in", label: "in", groupLabel: "Minimum Wall Thickness", colSpan: 2 },
-        { key: "minimum_wall_thickness_m_m", label: "m.m", groupLabel: "Minimum Wall Thickness" },
-        { key: "nominal_working_pressure_psi", label: "Psi", groupLabel: "Nominal Working Pressure", colSpan: 2 },
-        { key: "nominal_working_pressure_bar", label: "Bar", groupLabel: "Nominal Working Pressure" },
-        { key: "coil_size_meters", label: "Coil Size Meters" }
+        { key: "ordering_code", label: "Ordering Code", labelFr: 'Ordering Code' },
+        { key: "nominal_inside_diameter_in", label: " ", labelFr: ' ', groupLabel: "Nominal Inside Diameter", groupLabelFr: 'Nominal Intérieur Diamètre', colSpan: 2 },
+        { key: "nominal_inside_diameter_mm", label: "mm", labelFr: 'mm', groupLabel: "Nominal Inside Diameter", groupLabelFr: 'Nominal Intérieur Diamètre' },
+        { key: "minimum_inside_diameter_in", label: "in", labelFr: 'in', groupLabel: "Minimum Inside Diameter", groupLabelFr: 'Minimum Intérieur Diamètre', colSpan: 2 },
+        { key: "minimum_inside_diameter_mm", label: "mm", labelFr: 'mm', groupLabel: "Minimum Inside Diameter", groupLabelFr: 'Minimum Intérieur Diamètre' },
+        { key: "minimum_wall_thickness_in", label: "in", labelFr: 'in', groupLabel: "Minimum Wall Thickness", groupLabelFr: 'Minimum Paroi Épaisseur', colSpan: 2 },
+        { key: "minimum_wall_thickness_m_m", label: "m.m", labelFr: 'm.m', groupLabel: "Minimum Wall Thickness", groupLabelFr: 'Minimum Paroi Épaisseur' },
+        { key: "nominal_working_pressure_psi", label: "Psi", labelFr: 'Psi', groupLabel: "Nominal Working Pressure", groupLabelFr: 'Nominal Working Pression', colSpan: 2 },
+        { key: "nominal_working_pressure_bar", label: "Bar", labelFr: 'Bar', groupLabel: "Nominal Working Pressure", groupLabelFr: 'Nominal Working Pression' },
+        { key: "coil_size_meters", label: "Coil Size Meters", labelFr: 'Coil Taille Meters' }
       ],
       rows: [
       { "ordering_code": "CPDP 15670D(112)", "nominal_inside_diameter_mm": "13", "nominal_inside_diameter_in": "0.50", "minimum_inside_diameter_mm": "12.7", "minimum_wall_thickness_in": "0.047", "minimum_wall_thickness_m_m": "1.2", "nominal_working_pressure_psi": "44", "nominal_working_pressure_bar": "3.0", "coil_size_meters": "250 mtrs." },
@@ -750,25 +750,25 @@ export const hdpePipesBs197267: ProductDetailConfig = {
     pipesTables: [
     {
       id: "hdpe-pipes-bs-1972-67-table",
-      title: "BS 1972/67",
+      title: "BS 1972/67", titleFr: 'BS 1972/67',
       columns: [
-        { key: "nominal_pipe_size_inch", label: "Nominal Pipe Size Inch" },
-        { key: "outside_diameter_minimum_inch", label: "inch", superGroupLabel: "Minimum", superColSpan: 2, megaGroupLabel: "Outside Diameter", megaColSpan: 4 },
-        { key: "outside_diameter_minimum_mm", label: "mm", superGroupLabel: "Minimum", megaGroupLabel: "Outside Diameter" },
-        { key: "outside_diameter_maximum_inch", label: "inch", superGroupLabel: "Maximum", superColSpan: 2, megaGroupLabel: "Outside Diameter" },
-        { key: "outside_diameter_maximum_mm", label: "mm", superGroupLabel: "Maximum", megaGroupLabel: "Outside Diameter" },
-        { key: "class_b_6_1_kgf_cm_wall_thickness_minimum_inch", label: "inch", groupLabel: "Minimum", colSpan: 2, superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", superColSpan: 4, megaGroupLabel: "Wall Thickness", megaColSpan: 12 },
-        { key: "class_b_6_1_kgf_cm_wall_thickness_minimum_mm", label: "mm", groupLabel: "Minimum", superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_b_6_1_kgf_cm_wall_thickness_maximum_inch", label: "inch", groupLabel: "Maximum", colSpan: 2, superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_b_6_1_kgf_cm_wall_thickness_maximum_mm", label: "mm", groupLabel: "Maximum", superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_c_9_1_kgf_cm_wall_thickness_minimum_inch", label: "inch", groupLabel: "Minimum", colSpan: 2, superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", superColSpan: 4, megaGroupLabel: "Wall Thickness" },
-        { key: "class_c_9_1_kgf_cm_wall_thickness_minimum_mm", label: "mm", groupLabel: "Minimum", superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_c_9_1_kgf_cm_wall_thickness_maximum_inch", label: "inch", groupLabel: "Maximum", colSpan: 2, superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_c_9_1_kgf_cm_wall_thickness_maximum_mm", label: "mm", groupLabel: "Maximum", superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_d_12_2_kgf_cm_wall_thickness_minimum_inch", label: "inch", groupLabel: "Minimum", colSpan: 2, superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", superColSpan: 4, megaGroupLabel: "Wall Thickness" },
-        { key: "class_d_12_2_kgf_cm_wall_thickness_minimum_mm", label: "mm", groupLabel: "Minimum", superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_d_12_2_kgf_cm_wall_thickness_maximum_inch", label: "inch", groupLabel: "Maximum", colSpan: 2, superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" },
-        { key: "class_d_12_2_kgf_cm_wall_thickness_maximum_mm", label: "mm", groupLabel: "Maximum", superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", megaGroupLabel: "Wall Thickness" }
+        { key: "nominal_pipe_size_inch", label: "Nominal Pipe Size Inch", labelFr: 'Nominal Tuyau Taille Pouces' },
+        { key: "outside_diameter_minimum_inch", label: "inch", labelFr: 'pouces', superGroupLabel: "Minimum", superGroupLabelFr: 'Minimum', superColSpan: 2, megaGroupLabel: "Outside Diameter", megaGroupLabelFr: 'Extérieur Diamètre', megaColSpan: 4 },
+        { key: "outside_diameter_minimum_mm", label: "mm", labelFr: 'mm', superGroupLabel: "Minimum", superGroupLabelFr: 'Minimum', megaGroupLabel: "Outside Diameter", megaGroupLabelFr: 'Extérieur Diamètre' },
+        { key: "outside_diameter_maximum_inch", label: "inch", labelFr: 'pouces', superGroupLabel: "Maximum", superGroupLabelFr: 'Maximum', superColSpan: 2, megaGroupLabel: "Outside Diameter", megaGroupLabelFr: 'Extérieur Diamètre' },
+        { key: "outside_diameter_maximum_mm", label: "mm", labelFr: 'mm', superGroupLabel: "Maximum", superGroupLabelFr: 'Maximum', megaGroupLabel: "Outside Diameter", megaGroupLabelFr: 'Extérieur Diamètre' },
+        { key: "class_b_6_1_kgf_cm_wall_thickness_minimum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Minimum", groupLabelFr: 'Minimum', colSpan: 2, superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe B 6.1 kgf/cm (Bar Approx)', superColSpan: 4, megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur', megaColSpan: 12 },
+        { key: "class_b_6_1_kgf_cm_wall_thickness_minimum_mm", label: "mm", labelFr: 'mm', groupLabel: "Minimum", groupLabelFr: 'Minimum', superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe B 6.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_b_6_1_kgf_cm_wall_thickness_maximum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Maximum", groupLabelFr: 'Maximum', colSpan: 2, superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe B 6.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_b_6_1_kgf_cm_wall_thickness_maximum_mm", label: "mm", labelFr: 'mm', groupLabel: "Maximum", groupLabelFr: 'Maximum', superGroupLabel: "Class B 6.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe B 6.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_c_9_1_kgf_cm_wall_thickness_minimum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Minimum", groupLabelFr: 'Minimum', colSpan: 2, superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe C 9.1 kgf/cm (Bar Approx)', superColSpan: 4, megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_c_9_1_kgf_cm_wall_thickness_minimum_mm", label: "mm", labelFr: 'mm', groupLabel: "Minimum", groupLabelFr: 'Minimum', superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe C 9.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_c_9_1_kgf_cm_wall_thickness_maximum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Maximum", groupLabelFr: 'Maximum', colSpan: 2, superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe C 9.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_c_9_1_kgf_cm_wall_thickness_maximum_mm", label: "mm", labelFr: 'mm', groupLabel: "Maximum", groupLabelFr: 'Maximum', superGroupLabel: "Class C 9.1 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe C 9.1 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_d_12_2_kgf_cm_wall_thickness_minimum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Minimum", groupLabelFr: 'Minimum', colSpan: 2, superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe D 12.2 kgf/cm (Bar Approx)', superColSpan: 4, megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_d_12_2_kgf_cm_wall_thickness_minimum_mm", label: "mm", labelFr: 'mm', groupLabel: "Minimum", groupLabelFr: 'Minimum', superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe D 12.2 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_d_12_2_kgf_cm_wall_thickness_maximum_inch", label: "inch", labelFr: 'pouces', groupLabel: "Maximum", groupLabelFr: 'Maximum', colSpan: 2, superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe D 12.2 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' },
+        { key: "class_d_12_2_kgf_cm_wall_thickness_maximum_mm", label: "mm", labelFr: 'mm', groupLabel: "Maximum", groupLabelFr: 'Maximum', superGroupLabel: "Class D 12.2 kgf/cm (Bar Approx)", superGroupLabelFr: 'Classe D 12.2 kgf/cm (Bar Approx)', megaGroupLabel: "Wall Thickness", megaGroupLabelFr: 'Paroi Épaisseur' }
       ],
       rows: [
       { "nominal_pipe_size_inch": "3/8", "outside_diameter_minimum_inch": "0.669", "outside_diameter_minimum_mm": "17.0", "outside_diameter_maximum_inch": "0.681", "outside_diameter_maximum_mm": "17.3", "class_b_6_1_kgf_cm_wall_thickness_minimum_inch": "", "class_b_6_1_kgf_cm_wall_thickness_minimum_mm": "", "class_b_6_1_kgf_cm_wall_thickness_maximum_inch": "", "class_b_6_1_kgf_cm_wall_thickness_maximum_mm": "", "class_c_9_1_kgf_cm_wall_thickness_minimum_inch": "0.087", "class_c_9_1_kgf_cm_wall_thickness_minimum_mm": "2.2", "class_c_9_1_kgf_cm_wall_thickness_maximum_inch": "0.098", "class_c_9_1_kgf_cm_wall_thickness_maximum_mm": "2.5", "class_d_12_2_kgf_cm_wall_thickness_minimum_inch": "0.110", "class_d_12_2_kgf_cm_wall_thickness_minimum_mm": "2.8", "class_d_12_2_kgf_cm_wall_thickness_maximum_inch": "0.122", "class_d_12_2_kgf_cm_wall_thickness_maximum_mm": "3.1" },
@@ -876,10 +876,10 @@ export const hdpePipesPolyethyleneRolls: ProductDetailConfig = {
     pipesTables: [
     {
       id: "polyethylene-pipe-rolls-table",
-      title: "Polyethylene Pipe Rolls",
+      title: "Polyethylene Pipe Rolls", titleFr: 'Polyethylene Tuyau Rolls',
       columns: [
         { key: "size", label: "Size", labelFr: 'Taille' },
-        { key: "rollLength", label: "Roll Length" }
+        { key: "rollLength", label: "Roll Length", labelFr: 'Roll Longueur' }
       ],
       rows: [
         { "size": "38/16mm X 250 Meter", "rollLength": "250 mtr" },

@@ -55,15 +55,15 @@ export const pvcDuctPipesNemaTc2: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-nema-tc-2-2003-electrical-pvc-u-tubing-conduits-table",
-      title: "NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS",
+      title: "NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS", titleFr: 'NEMA TC 2: 2003 ELECTRICAL PVC-U TUBES & CONDUITS',
       columns: [
         { key: "size_inch", label: "Nominal Size (Inch)", labelFr: 'Taille Nominale (Inch)' },
-        { key: "mean-outside-dia-mm-min", label: "Min", superGroupLabel: "Mean Outside Dia. (mm)", superColSpan: 2 },
-        { key: "mean-outside-dia-mm-max", label: "Max", superGroupLabel: "Mean Outside Dia. (mm)" },
-        { key: "minimum-wall-thickness-mm-epc-40-min", label: "Min", groupLabel: "EPC 40", colSpan: 2, superGroupLabel: "Minimum Wall Thickness (mm)", superColSpan: 4 },
-        { key: "minimum-wall-thickness-mm-epc-40-max", label: "Max", groupLabel: "EPC 40", superGroupLabel: "Minimum Wall Thickness (mm)" },
-        { key: "minimum-wall-thickness-mm-epc-80-min", label: "Min", groupLabel: "EPC 80", colSpan: 2, superGroupLabel: "Minimum Wall Thickness (mm)" },
-        { key: "minimum-wall-thickness-mm-epc-80-max", label: "Max", groupLabel: "EPC 80", superGroupLabel: "Minimum Wall Thickness (mm)" }
+        { key: "mean-outside-dia-mm-min", label: "Min", labelFr: 'Min', superGroupLabel: "Mean Outside Dia. (mm)", superGroupLabelFr: 'Diam. Ext. Moyen (mm)', superColSpan: 2 },
+        { key: "mean-outside-dia-mm-max", label: "Max", labelFr: 'Max', superGroupLabel: "Mean Outside Dia. (mm)", superGroupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: "minimum-wall-thickness-mm-epc-40-min", label: "Min", labelFr: 'Min', groupLabel: "EPC 40", groupLabelFr: 'EPC 40', colSpan: 2, superGroupLabel: "Minimum Wall Thickness (mm)", superGroupLabelFr: 'Épaisseur de Paroi Minimale (mm)', superColSpan: 4 },
+        { key: "minimum-wall-thickness-mm-epc-40-max", label: "Max", labelFr: 'Max', groupLabel: "EPC 40", groupLabelFr: 'EPC 40', superGroupLabel: "Minimum Wall Thickness (mm)", superGroupLabelFr: 'Épaisseur de Paroi Minimale (mm)' },
+        { key: "minimum-wall-thickness-mm-epc-80-min", label: "Min", labelFr: 'Min', groupLabel: "EPC 80", groupLabelFr: 'EPC 80', colSpan: 2, superGroupLabel: "Minimum Wall Thickness (mm)", superGroupLabelFr: 'Épaisseur de Paroi Minimale (mm)' },
+        { key: "minimum-wall-thickness-mm-epc-80-max", label: "Max", labelFr: 'Max', groupLabel: "EPC 80", groupLabelFr: 'EPC 80', superGroupLabel: "Minimum Wall Thickness (mm)", superGroupLabelFr: 'Épaisseur de Paroi Minimale (mm)' }
       ],
       rows: [
         { "size_inch": "1/2\"", "mean-outside-dia-mm-min": "21.2", "mean-outside-dia-mm-max": "21.5", "minimum-wall-thickness-mm-epc-40-min": "2.77", "minimum-wall-thickness-mm-epc-40-max": "3.25", "minimum-wall-thickness-mm-epc-80-min": "3.73", "minimum-wall-thickness-mm-epc-80-max": "4.15" },
@@ -167,16 +167,16 @@ export const pvcDuctPipesNemaTc68: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-nema-tc-6-8-table",
-      title: "NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS",
+      title: "NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS", titleFr: 'NEMA TC 6 & 8/ASTM F 512 PVC-U TUYAUX DE GAINE POUR SOUTERRAIN INSTALLATIONS',
       columns: [
         { key: "size_inch", label: "Nominal Size (Inch)", labelFr: 'Taille Nominale (Inch)' },
-        { key: "mean-outside-dia-mm-min", label: "Min", groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
-        { key: "mean-outside-dia-mm-max", label: "Max", groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)' },
-        { key: "minimum-wall-thickness-mm-eb-20", label: "EB-20", groupLabel: "Minimum Wall Thickness (mm)", colSpan: 5 },
-        { key: "minimum-wall-thickness-mm-eb-35", label: "EB-35", groupLabel: "Minimum Wall Thickness (mm)" },
-        { key: "minimum-wall-thickness-mm-db-60", label: "DB-60", groupLabel: "Minimum Wall Thickness (mm)" },
-        { key: "minimum-wall-thickness-mm-db-100", label: "DB -100", groupLabel: "Minimum Wall Thickness (mm)" },
-        { key: "minimum-wall-thickness-mm-db-120", label: "DB -120", groupLabel: "Minimum Wall Thickness (mm)" }
+        { key: "mean-outside-dia-mm-min", label: "Min", labelFr: 'Min', groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: "mean-outside-dia-mm-max", label: "Max", labelFr: 'Max', groupLabel: "Mean Outside Dia. (mm)", groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: "minimum-wall-thickness-mm-eb-20", label: "EB-20", labelFr: 'EB-20', groupLabel: "Minimum Wall Thickness (mm)", groupLabelFr: 'Épaisseur de Paroi Minimale (mm)', colSpan: 5 },
+        { key: "minimum-wall-thickness-mm-eb-35", label: "EB-35", labelFr: 'EB-35', groupLabel: "Minimum Wall Thickness (mm)", groupLabelFr: 'Épaisseur de Paroi Minimale (mm)' },
+        { key: "minimum-wall-thickness-mm-db-60", label: "DB-60", labelFr: 'DB-60', groupLabel: "Minimum Wall Thickness (mm)", groupLabelFr: 'Épaisseur de Paroi Minimale (mm)' },
+        { key: "minimum-wall-thickness-mm-db-100", label: "DB -100", labelFr: 'DB -100', groupLabel: "Minimum Wall Thickness (mm)", groupLabelFr: 'Épaisseur de Paroi Minimale (mm)' },
+        { key: "minimum-wall-thickness-mm-db-120", label: "DB -120", labelFr: 'DB -120', groupLabel: "Minimum Wall Thickness (mm)", groupLabelFr: 'Épaisseur de Paroi Minimale (mm)' }
       ],
       rows: [
         { "size_inch": "1\"", "mean-outside-dia-mm-min": "33.4", "mean-outside-dia-mm-max": "33.7", "minimum-wall-thickness-mm-eb-20": "", "minimum-wall-thickness-mm-eb-35": "", "minimum-wall-thickness-mm-db-60": "", "minimum-wall-thickness-mm-db-100": "", "minimum-wall-thickness-mm-db-120": "1.52" },
@@ -276,19 +276,19 @@ export const pvcDuctPipesDin8062: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-din-8062-metric-size-pressure-pipes-table",
-      title: "DIN 8062 Metric size Pressure Pipes",
+      title: "DIN 8062 Metric size Pressure Pipes", titleFr: 'DIN 8062 Metric taille TUYAUX SOUS PRESSION',
       columns: [
         { key: "sizeMm", label: "Nominal Size mm", labelFr: 'Taille Nominale mm' },
-        { key: "mean-outside-dia-min", label: "Min", superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
-        { key: "mean-outside-dia-max", label: "Max", superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen' },
-        { key: "mean-wall-thickness-pn-16-class-16-min", label: "Min", groupLabel: "PN-16 (CLASS-16)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 8 },
-        { key: "mean-wall-thickness-pn-16-class-16-max", label: "Max", groupLabel: "PN-16 (CLASS-16)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-10-class-10-min", label: "Min", groupLabel: "PN-10 (CLASS-10)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-10-class-10-max", label: "Max", groupLabel: "PN-10 (CLASS-10)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-6-class-6-min", label: "Min", groupLabel: "PN-6 (CLASS-6)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-6-class-6-max", label: "Max", groupLabel: "PN-6 (CLASS-6)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-4-class-4-min", label: "Min", groupLabel: "PN-4 (CLASS-4)", colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
-        { key: "mean-wall-thickness-pn-4-class-4-max", label: "Max", groupLabel: "PN-4 (CLASS-4)", superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
+        { key: "mean-outside-dia-min", label: "Min", labelFr: 'Min', superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen', superColSpan: 2 },
+        { key: "mean-outside-dia-max", label: "Max", labelFr: 'Max', superGroupLabel: "Mean Outside Dia.", superGroupLabelFr: 'Diam. Ext. Moyen' },
+        { key: "mean-wall-thickness-pn-16-class-16-min", label: "Min", labelFr: 'Min', groupLabel: "PN-16 (CLASS-16)", groupLabelFr: 'PN-16 (CLASSE-16)', colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi', superColSpan: 8 },
+        { key: "mean-wall-thickness-pn-16-class-16-max", label: "Max", labelFr: 'Max', groupLabel: "PN-16 (CLASS-16)", groupLabelFr: 'PN-16 (CLASSE-16)', superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-10-class-10-min", label: "Min", labelFr: 'Min', groupLabel: "PN-10 (CLASS-10)", groupLabelFr: 'PN-10 (CLASSE-10)', colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-10-class-10-max", label: "Max", labelFr: 'Max', groupLabel: "PN-10 (CLASS-10)", groupLabelFr: 'PN-10 (CLASSE-10)', superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-6-class-6-min", label: "Min", labelFr: 'Min', groupLabel: "PN-6 (CLASS-6)", groupLabelFr: 'PN-6 (CLASSE-6)', colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-6-class-6-max", label: "Max", labelFr: 'Max', groupLabel: "PN-6 (CLASS-6)", groupLabelFr: 'PN-6 (CLASSE-6)', superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-4-class-4-min", label: "Min", labelFr: 'Min', groupLabel: "PN-4 (CLASS-4)", groupLabelFr: 'PN-4 (CLASSE-4)', colSpan: 2, superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' },
+        { key: "mean-wall-thickness-pn-4-class-4-max", label: "Max", labelFr: 'Max', groupLabel: "PN-4 (CLASS-4)", groupLabelFr: 'PN-4 (CLASSE-4)', superGroupLabel: "Mean Wall Thickness", superGroupLabelFr: 'Epaisseur Moy. de Paroi' }
       ],
       rows: [
         { "sizeMm": "20 mm", "mean-outside-dia-min": "20.0", "mean-outside-dia-max": "20.2", "mean-wall-thickness-pn-16-class-16-min": "1.5", "mean-wall-thickness-pn-16-class-16-max": "1.9", "mean-wall-thickness-pn-10-class-10-min": "", "mean-wall-thickness-pn-10-class-10-max": "", "mean-wall-thickness-pn-6-class-6-min": "", "mean-wall-thickness-pn-6-class-6-max": "", "mean-wall-thickness-pn-4-class-4-min": "", "mean-wall-thickness-pn-4-class-4-max": "" },
@@ -400,13 +400,13 @@ export const pvcDuctPipesEtisalatDu: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-etisalat-du-specifications-table",
-      title: "Etisalat & DU specifications",
+      title: "Etisalat & DU specifications", titleFr: 'Spécifications Etisalat & DU',
       columns: [
         { key: "product", label: "Product", labelFr: 'Produit' },
-        { key: "outside-diameter-min", label: "Min", groupLabel: "Outside Diameter", colSpan: 2 },
-        { key: "outside-diameter-max", label: "Max", groupLabel: "Outside Diameter" },
-        { key: "wall-thickness-min", label: "Min", groupLabel: "Wall Thickness", colSpan: 2 },
-        { key: "wall-thickness-max", label: "Max", groupLabel: "Wall Thickness" }
+        { key: "outside-diameter-min", label: "Min", labelFr: 'Min', groupLabel: "Outside Diameter", groupLabelFr: 'Extérieur Diamètre', colSpan: 2 },
+        { key: "outside-diameter-max", label: "Max", labelFr: 'Max', groupLabel: "Outside Diameter", groupLabelFr: 'Extérieur Diamètre' },
+        { key: "wall-thickness-min", label: "Min", labelFr: 'Min', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur', colSpan: 2 },
+        { key: "wall-thickness-max", label: "Max", labelFr: 'Max', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur' }
       ],
       rows: [
         { "product": "D54 DUCT PIPE", "outside-diameter-min": "96.30", "outside-diameter-max": "96.70", "wall-thickness-min": "3.25", "wall-thickness-max": "3.65" },
@@ -503,21 +503,21 @@ export const pvcDuctPipesBs350506: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-bs-3505-table",
-      title: "BS 3505/06 Imperial size Pressure Pipes",
+      title: "BS 3505/06 Imperial size Pressure Pipes", titleFr: 'BS 3505/06 Imperial taille TUYAUX SOUS PRESSION',
       columns: [
         { key: "size_inch", label: "Nominal Size inch", labelFr: 'Taille Nominale inch' },
-        { key: "mean-outside-dia-min", label: "Min", superGroupLabel: "Mean Outside Dia", superColSpan: 2 },
-        { key: "mean-outside-dia-max", label: "Max", superGroupLabel: "Mean Outside Dia" },
-        { key: "nominal-wall-thickness-pn-15-class-e-min", label: "Min", groupLabel: "PN-15(Class-E)", colSpan: 2, superGroupLabel: "Nominal Wall thickness", superColSpan: 10 },
-        { key: "nominal-wall-thickness-pn-15-class-e-max", label: "Max", groupLabel: "PN-15(Class-E)", superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-12-class-d-min", label: "Min", groupLabel: "PN-12 (Class-D)", colSpan: 2, superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-12-class-d-max", label: "Max", groupLabel: "PN-12 (Class-D)", superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-9-class-c-min", label: "Min", groupLabel: "PN-9 (Class-C)", colSpan: 2, superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-9-class-c-max", label: "Max", groupLabel: "PN-9 (Class-C)", superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-6-class-b-min", label: "Min", groupLabel: "PN-6 (Class-B)", colSpan: 2, superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-pn-6-class-b-max", label: "Max", groupLabel: "PN-6 (Class-B)", superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-non-pressure-class-o-min", label: "Min", groupLabel: "Non Pressure (Class-O)", colSpan: 2, superGroupLabel: "Nominal Wall thickness" },
-        { key: "nominal-wall-thickness-non-pressure-class-o-max", label: "Max", groupLabel: "Non Pressure (Class-O)", superGroupLabel: "Nominal Wall thickness" }
+        { key: "mean-outside-dia-min", label: "Min", labelFr: 'Min', superGroupLabel: "Mean Outside Dia", superGroupLabelFr: 'Moyen Extérieur Dia', superColSpan: 2 },
+        { key: "mean-outside-dia-max", label: "Max", labelFr: 'Max', superGroupLabel: "Mean Outside Dia", superGroupLabelFr: 'Moyen Extérieur Dia' },
+        { key: "nominal-wall-thickness-pn-15-class-e-min", label: "Min", labelFr: 'Min', groupLabel: "PN-15(Class-E)", groupLabelFr: 'PN-15(Classe-E)', colSpan: 2, superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur', superColSpan: 10 },
+        { key: "nominal-wall-thickness-pn-15-class-e-max", label: "Max", labelFr: 'Max', groupLabel: "PN-15(Class-E)", groupLabelFr: 'PN-15(Classe-E)', superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-12-class-d-min", label: "Min", labelFr: 'Min', groupLabel: "PN-12 (Class-D)", groupLabelFr: 'PN-12 (Classe-D)', colSpan: 2, superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-12-class-d-max", label: "Max", labelFr: 'Max', groupLabel: "PN-12 (Class-D)", groupLabelFr: 'PN-12 (Classe-D)', superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-9-class-c-min", label: "Min", labelFr: 'Min', groupLabel: "PN-9 (Class-C)", groupLabelFr: 'PN-9 (Classe-C)', colSpan: 2, superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-9-class-c-max", label: "Max", labelFr: 'Max', groupLabel: "PN-9 (Class-C)", groupLabelFr: 'PN-9 (Classe-C)', superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-6-class-b-min", label: "Min", labelFr: 'Min', groupLabel: "PN-6 (Class-B)", groupLabelFr: 'PN-6 (Classe-B)', colSpan: 2, superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-pn-6-class-b-max", label: "Max", labelFr: 'Max', groupLabel: "PN-6 (Class-B)", groupLabelFr: 'PN-6 (Classe-B)', superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-non-pressure-class-o-min", label: "Min", labelFr: 'Min', groupLabel: "Non Pressure (Class-O)", groupLabelFr: 'Non Pression (Classe-O)', colSpan: 2, superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' },
+        { key: "nominal-wall-thickness-non-pressure-class-o-max", label: "Max", labelFr: 'Max', groupLabel: "Non Pressure (Class-O)", groupLabelFr: 'Non Pression (Classe-O)', superGroupLabel: "Nominal Wall thickness", superGroupLabelFr: 'Nominal Paroi épaisseur' }
       ],
       rows: [
         { "size_inch": "1/2\"", "mean-outside-dia-min": "21.2", "mean-outside-dia-max": "21.5", "nominal-wall-thickness-pn-15-class-e-min": "1.7", "nominal-wall-thickness-pn-15-class-e-max": "2.1", "nominal-wall-thickness-pn-12-class-d-min": "", "nominal-wall-thickness-pn-12-class-d-max": "", "nominal-wall-thickness-pn-9-class-c-min": "", "nominal-wall-thickness-pn-9-class-c-max": "", "nominal-wall-thickness-pn-6-class-b-min": "", "nominal-wall-thickness-pn-6-class-b-max": "", "nominal-wall-thickness-non-pressure-class-o-min": "", "nominal-wall-thickness-non-pressure-class-o-max": "" },
@@ -623,13 +623,13 @@ export const pvcDuctPipesNonStandard: ProductDetailConfig = {
     pipesTables: [
     {
       id: "pvc-duct-pipes-non-standard-duct-pipe-table",
-      title: "NON-STANDARD DUCT PIPE",
+      title: "NON-STANDARD DUCT PIPE", titleFr: 'NON-STANDARD TUYAUX DE GAINE',
       columns: [
         { key: "product", label: "Product", labelFr: 'Produit' },
-        { key: "outside-diameter-min", label: "Min", groupLabel: "Outside Diameter", colSpan: 2 },
-        { key: "outside-diameter-max", label: "Max", groupLabel: "Outside Diameter" },
-        { key: "wall-thickness-min", label: "Min", groupLabel: "Wall Thickness", colSpan: 2 },
-        { key: "wall-thickness-max", label: "Max", groupLabel: "Wall Thickness" }
+        { key: "outside-diameter-min", label: "Min", labelFr: 'Min', groupLabel: "Outside Diameter", groupLabelFr: 'Extérieur Diamètre', colSpan: 2 },
+        { key: "outside-diameter-max", label: "Max", labelFr: 'Max', groupLabel: "Outside Diameter", groupLabelFr: 'Extérieur Diamètre' },
+        { key: "wall-thickness-min", label: "Min", labelFr: 'Min', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur', colSpan: 2 },
+        { key: "wall-thickness-max", label: "Max", labelFr: 'Max', groupLabel: "Wall Thickness", groupLabelFr: 'Paroi Épaisseur' }
       ],
       rows: [
         { "product": "75 DUCT PIPE", "outside-diameter-min": "75.00", "outside-diameter-max": "75.30", "wall-thickness-min": "1.70", "wall-thickness-max": "2.00" },

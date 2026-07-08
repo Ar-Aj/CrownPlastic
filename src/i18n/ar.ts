@@ -50,6 +50,7 @@ export const ar = {
   // Common/Shared UI Elements
   // ─────────────────────────────────────────────────────────────
   common: {
+    whatsapp_chat: 'تحدث معنا عبر واتساب',
     loading: 'جارٍ التحميل...',
     contact_us: 'تواصل معنا:',
     get_a_quote: 'احصل على عرض سعر',
@@ -2388,6 +2389,19 @@ export const ar = {
       family_brass_insert: 'إدخالات نحاسية',
       family_solvent_cement: 'لاصق المذيبات',
       family_other: 'توصيلات أخرى',
+    },
+
+    // Global Modal UI Strings
+    modal: {
+      available_sizes: 'المقاسات المتاحة',
+      tech_specifications: 'المواصفات الفنية',
+      nominal_size_inch: 'المقاس الاسمي (بوصة)',
+      nominal_size_mm: 'المقاس الاسمي (مم)',
+      nominal_size_mm_x_inch: 'المقاس الاسمي (مم × بوصة)',
+      nominal_size_mm_x_mm: 'المقاس الاسمي (مم × مم)',
+      dimensions_mm: 'الأبعاد (مم)',
+      size_dimensions: 'المقاس / الأبعاد',
+      action: 'الإجراء',
     },
 
     // FittingModal component

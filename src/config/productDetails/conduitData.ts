@@ -49,7 +49,7 @@ const sch40PipesTables: PipeTable[] = [
   // Table 1: SCHEDULE 40 CONDUIT - US
   {
     id: 'schedule_40_conduit_us',
-    title: 'SCHEDULE 40 CONDUIT - US',
+    title: 'SCHEDULE 40 CONDUIT - US', titleFr: 'CONDUIT SCHEDULE 40 - US',
     columns: [
       { key: 'trade_dimension', label: 'Trade Dimension', labelFr: 'Dimension Commerciale' },
       { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)' },
@@ -71,7 +71,7 @@ const sch40PipesTables: PipeTable[] = [
   // Table 2: HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE
   {
     id: 'heavy_grade_round_conduit_1250n_compression_force',
-    title: 'HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE',
+    title: 'HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE', titleFr: 'CONDUIT ROND DE CLASSE LOURDE - FORCE DE COMPRESSION 1250N',
     columns: [
       { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
       { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
@@ -90,7 +90,7 @@ const sch40PipesTables: PipeTable[] = [
   // Table 3: MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE
   {
     id: 'medium_grade_round_conduit_750n_compression_force',
-    title: 'MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE',
+    title: 'MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE', titleFr: 'CONDUIT ROND DE CLASSE MOYENNE - FORCE DE COMPRESSION 750N',
     columns: [
       { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
       { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
@@ -109,7 +109,7 @@ const sch40PipesTables: PipeTable[] = [
   // Table 4: LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE
   {
     id: 'light_grade_round_conduit_320n_compression_force',
-    title: 'LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE',
+    title: 'LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE', titleFr: 'CONDUIT ROND DE CLASSE LÉGÈRE - FORCE DE COMPRESSION 320N',
     columns: [
       { key: 'dimension', label: 'Dimension', labelFr: 'Dimension' },
       { key: 'min_id', label: 'Min. ID', labelFr: 'DI Min.' },
@@ -132,7 +132,7 @@ const sch80PipesTables: PipeTable[] = [
   // Table 1: SCHEDULE 80 CONDUIT - US
   {
     id: 'schedule_80_conduit_us',
-    title: 'SCHEDULE 80 CONDUIT - US',
+    title: 'SCHEDULE 80 CONDUIT - US', titleFr: 'CONDUIT SCHEDULE 80 - US',
     columns: [
       { key: 'trade_dimension', label: 'Trade Dimension', labelFr: 'Dimension Commerciale' },
       { key: 'wall_thickness_mm', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)' },

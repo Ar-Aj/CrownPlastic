@@ -53,6 +53,7 @@ export const fr = {
   // Common/Shared UI Elements
   // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   common: {
+    whatsapp_chat: 'Discutez avec nous sur WhatsApp',
     loading: 'Chargement...',
     contact_us: 'Contactez-nous :',
     get_a_quote: 'Demander un Devis',
@@ -1590,7 +1591,7 @@ export const fr = {
     need_assistance: 'Besoin d\'Assistance Technique ?',
     assistance_desc: 'Notre équipe est prête à vous aider dans la sélection des produits et les spécifications.',
     // Product detail page
-    standards_certifications: 'Normes et Certifications',
+    standards_certifications: 'NORMES & CERTIFICATIONS',
     key_features: 'Caractéristiques Clés',
     request_quote: 'Demander un Devis',
     download_specs: 'Télécharger les Spécifications',
@@ -2304,7 +2305,7 @@ export const fr = {
     // Product detail page (/products/[category]/[product])
     detail: {
       breadcrumb_products: 'Produits',
-      standards_certifications: 'Normes et Certifications',
+      standards_certifications: 'NORMES & CERTIFICATIONS',
       key_features: 'Caractéristiques Clés',
       request_quote: 'Demander un Devis',
       download_specs: 'Télécharger les Specs',
@@ -2563,7 +2564,7 @@ export const fr = {
     // ProductDetailLayout component (enhanced product pages)
     detail_layout: {
       breadcrumb_products: 'Produits',
-      standards_certifications: 'Standards & Certifications',
+      standards_certifications: 'NORMES & CERTIFICATIONS',
       request_quote: 'Demander un Devis',
       download_catalogue: 'Télécharger le Catalogue',
       crown_plastic_pipes: 'Crown Plastic Pipes',
@@ -2647,6 +2648,19 @@ export const fr = {
       family_brass_insert: 'Inserts en Laiton',
       family_solvent_cement: 'Colle Solvant',
       family_other: 'Autres Raccords',
+    },
+
+    // Global Modal UI Strings
+    modal: {
+      available_sizes: 'TAILLES DISPONIBLES',
+      tech_specifications: 'SPÉCIFICATIONS TECHNIQUES',
+      nominal_size_inch: 'TAILLE NOMINALE (POUCES)',
+      nominal_size_mm: 'TAILLE NOMINALE (MM)',
+      nominal_size_mm_x_inch: 'TAILLE NOMINALE (MM X POUCES)',
+      nominal_size_mm_x_mm: 'TAILLE NOMINALE (MM X MM)',
+      dimensions_mm: 'DIMENSIONS (mm)',
+      size_dimensions: 'Taille / Dimensions',
+      action: 'Action',
     },
 
     // FittingModal component

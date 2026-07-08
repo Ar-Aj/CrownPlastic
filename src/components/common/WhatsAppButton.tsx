@@ -9,6 +9,7 @@
 import { useState, useEffect } from 'react';
 import { X, MessageCircle } from 'lucide-react';
 import { brand } from '@/config/brand';
+import { useT } from '@/i18n';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // WHATSAPP ICON SVG
@@ -42,8 +43,6 @@ export interface WhatsAppButtonProps {
   position?: 'bottom-right' | 'bottom-left';
   /** Show tooltip on hover */
   showTooltip?: boolean;
-  /** Tooltip text */
-  tooltipText?: string;
   /** Show pulse animation */
   showPulse?: boolean;
   /** Hide on specific routes */
@@ -56,13 +55,14 @@ export default function WhatsAppButton({
   showAfterScroll = 200,
   position = 'bottom-right',
   showTooltip = true,
-  tooltipText = 'Chat with us on WhatsApp',
   showPulse = true,
   hideOnRoutes = [],
 }: WhatsAppButtonProps) {
   const [isVisible, setIsVisible] = useState(showAfterScroll === 0);
   const [isHovered, setIsHovered] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const t = useT();
+  const activeTooltipText = t('common.whatsapp_chat');
 
   // Get phone number (remove spaces and special chars except +)
   const phone = (phoneNumber || brand.contact.phone).replace(/[^0-9+]/g, '');
@@ -133,7 +133,7 @@ export default function WhatsAppButton({
           <div className="bg-slate-900 text-white text-sm font-medium px-4 py-2 rounded-xl shadow-lg border border-white/10">
             <div className="flex items-center gap-2">
               <MessageCircle className="w-4 h-4 text-emerald-400" />
-              {tooltipText}
+              {activeTooltipText}
             </div>
           </div>
         </div>

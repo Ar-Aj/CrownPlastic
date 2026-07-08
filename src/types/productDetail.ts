@@ -26,6 +26,7 @@ export type SizeRow = {
 export type PipeTableColumn = {
   key: string;        // e.g., "size", "class", "standard"
   label: string;      // e.g., "Size (mm)", "Class", "Standard"
+  labelAr?: string;   // Arabic equivalent of label
   labelFr?: string;   // French equivalent of label
   align?: 'left' | 'center' | 'right';
   groupLabel?: string; // optional parent grouped header label (raw string or i18n key)
@@ -45,7 +46,11 @@ export type PipeTableColumn = {
 export type PipeTable = {
   id: string;                     // e.g., "din-8063-pipes"
   title: string;                  // e.g., "PVC Pressure Pipes DIN 8063"
+  titleAr?: string;               // Arabic equivalent of title
+  titleFr?: string;               // French equivalent of title
   sectionLabel?: string;          // optional full-width divider label above the data rows
+  sectionLabelAr?: string;
+  sectionLabelFr?: string;
   columns: PipeTableColumn[];
   rows: Record<string, string | null>[]; // each key matches a column.key
 };
@@ -101,6 +106,7 @@ export const FITTING_FAMILY_LABELS_FR: Record<FittingFamily, string> = {
 export type FittingSpecColumn = {
   key: string;        // normalised key used in rows, e.g., "nominal_size_mm"
   label: string;      // original header text from PDF/JSON, e.g., "NOMINAL SIZE (mm)"
+  labelAr?: string;   // Arabic equivalent of label
   labelFr?: string;   // French equivalent of label
   groupLabel?: string; // optional i18n key or raw string for the parent grouped header row, e.g., "products.tables.dimensions_mm"
   groupLabelFr?: string; // French equivalent of groupLabel
@@ -114,6 +120,8 @@ export type FittingSpecColumn = {
 export type FittingSpecTable = {
   id: string;    // slug, e.g., "elbow-90"
   title: string; // e.g., "ELBOW 90°"
+  titleAr?: string;
+  titleFr?: string;
   columns: FittingSpecColumn[];
   rows: Record<string, string | null>[];
 };
@@ -131,6 +139,7 @@ export type Fitting = {
   image: string;              // path for Next/Image
   colorVariants?: Record<string, string>; // e.g., { grey: '/path.png', olive: '/path2.png' }
   sizes: SizeRow[];           // quick size list for modal header (NO part column)
+  sizesMM?: SizeRow[];        // optional metric-only sizes for inch/mm toggle
   sizeHeaderOverride?: string; // optional override for the sizes table header translation key
   tags?: string[];            // e.g., ["NEW"]
   table?: FittingSpecTable;   // full specification table with all columns

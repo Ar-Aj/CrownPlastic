@@ -29,7 +29,11 @@
 export type ProductItem = {
   id: string;
   name: string;
+  nameAr?: string;
+  nameFr?: string;
   shortInfo?: string;
+  shortInfoAr?: string;
+  shortInfoFr?: string;
   image?: string;           // cover image path from products.ts (for About Us Galaxy cards)
 };
 
@@ -170,12 +174,12 @@ export const PRODUCT_MAP: ProductCategory[] = [
     icon: '⚡',
     image: '/images/products/cover/upvs duct/fittings/duct-socketa.png',
     items: [
-      { id: 'pvc-duct-fittings-socket', name: 'PVC Duct Socket / Coupler', shortInfo: 'Socket | Connecting sections', image: '/images/products/cover/upvs duct/fittings/duct-socketa.png' },
-      { id: 'pvc-duct-fittings-bellmouth', name: 'PVC Duct Bellmouth', shortInfo: 'Bellmouth | Cable entry', image: '/images/products/cover/upvs duct/fittings/duct-bellmouth.png' },
-      { id: 'pvc-duct-fittings-end-caps', name: 'PVC Duct End Caps', shortInfo: 'End Caps | Sealing open ends', image: '/images/products/cover/upvs duct/fittings/duct-end-caps.png' },
-      { id: 'pvc-duct-fittings-lr-bends-90-45', name: 'PVC Duct 90°/45° LR Bends', shortInfo: '90°/45° LR | Directional changes', image: '/images/products/cover/upvs duct/fittings/duct 90-45 l r bends.png' },
-      { id: 'pvc-duct-fittings-street-lighting-bends', name: 'PVC Duct 90° Street Lighting LR Bends', shortInfo: 'Street Lighting | 90° LR bend', image: '/images/products/cover/upvs duct/fittings/duct 90 street lighting l r bends 3.png' },
-      { id: 'pvc-duct-fittings-lightning-bends', name: 'PVC Duct 90° Lightning LR Bends', shortInfo: 'Lightning Protection | 90° LR', image: '/images/products/cover/upvs duct/fittings/duct 90 lightning l r bends 4.png' },
+      { id: 'pvc-duct-fittings-socket', name: 'PVC Duct Socket / Coupler', nameFr: 'Manchon pour Gaine PVC', shortInfo: 'Socket | Connecting sections', shortInfoFr: 'Manchon | Sections de raccordement', image: '/images/products/cover/upvs duct/fittings/duct-socketa.png' },
+      { id: 'pvc-duct-fittings-bellmouth', name: 'PVC Duct Bellmouth', nameFr: 'Pavillon pour Gaine PVC', shortInfo: 'Bellmouth | Cable entry', shortInfoFr: 'Pavillon | Entrée de câble', image: '/images/products/cover/upvs duct/fittings/duct-bellmouth.png' },
+      { id: 'pvc-duct-fittings-end-caps', name: 'PVC Duct End Caps', nameFr: 'Bouchons pour Gaine PVC', shortInfo: 'End Caps | Sealing open ends', shortInfoFr: 'Bouchons | Fermeture des extrémités', image: '/images/products/cover/upvs duct/fittings/duct-end-caps.png' },
+      { id: 'pvc-duct-fittings-lr-bends-90-45', name: 'PVC Duct 90°/45° LR Bends', nameFr: 'Coudes Grand Rayon 90°/45° Gaine PVC', shortInfo: '90°/45° LR | Directional changes', shortInfoFr: '90°/45° GR | Changements de direction', image: '/images/products/cover/upvs duct/fittings/duct 90-45 l r bends.png' },
+      { id: 'pvc-duct-fittings-street-lighting-bends', name: 'PVC Duct 90° Street Lighting LR Bends', nameFr: 'Coudes Grand Rayon Éclairage Public 90° 3"', shortInfo: 'Street Lighting | 90° LR bend', shortInfoFr: 'Éclairage Public | Coude GR 90°', image: '/images/products/cover/upvs duct/fittings/duct 90 street lighting l r bends 3.png' },
+      { id: 'pvc-duct-fittings-lightning-bends', name: 'PVC Duct 90° Lightning LR Bends', nameFr: 'Coudes Grand Rayon Éclairage 90° 4"', shortInfo: 'Lightning Protection | 90° LR', shortInfoFr: 'Protection/Éclairage | Coude GR 90°', image: '/images/products/cover/upvs duct/fittings/duct 90 lightning l r bends 4.png' },
     ],
   },
 

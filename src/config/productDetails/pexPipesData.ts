@@ -112,7 +112,7 @@ export const pexPipesPn125Pn20: ProductDetailConfig = {
     pipesTables: [
         {
       id: "pex-pn-12-5-pn-20-table",
-      title: "Dimensions of Crown PEX Pipes",
+      title: "Dimensions of Crown PEX Pipes", titleFr: 'Dimensions of Crown PEX Tuyaux',
       columns: [
         { key: "nominal_od", label: "Nominal OD (mm)", labelFr: "DE Nominal (mm)" },
         { key: "wt_pn12_5", label: "Wall Thickness PN 12.5 (mm)", labelFr: "Epaisseur de Paroi PN 12.5 (mm)" },

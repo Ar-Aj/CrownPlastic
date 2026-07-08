@@ -5,6 +5,7 @@ import { PDTableShell } from '@/components/productDetail';
 import { ProductSection, ProductSectionHeader } from '@/components/products/design-system';
 import { useT, type TranslationPath } from '@/i18n';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizedValue } from '@/lib/i18n-utils';
 import { formatFraction } from '@/utils/formatters';
 
 interface PipesTableProps {
@@ -37,6 +38,7 @@ export default function PipesTable({ table }: PipesTableProps) {
   const hasSuperGroupedHeaders = table.columns.some(c => c.superGroupLabel);
   const hasGroupedHeaders = table.columns.some(c => c.groupLabel);
   const maxDepth = hasMegaGroupedHeaders ? 4 : hasSuperGroupedHeaders ? 3 : hasGroupedHeaders ? 2 : 1;
+  const { language } = useLanguage();
 
   /** Render a header cell value: i18n key → t(), Fr override → loc.*(), else raw string */
   const hdr = {
@@ -59,7 +61,7 @@ export default function PipesTable({ table }: PipesTableProps) {
   };
 
   return (
-    <PDTableShell title={table.title} className="mb-8 last:mb-0">
+    <PDTableShell title={localizedValue(language, table.title, table.titleAr, table.titleFr)} className="mb-8 last:mb-0">
       {/* Scrollable container for mobile */}
       <div className="overflow-x-auto w-full">
         <table className="w-full min-w-full divide-y divide-gray-200">

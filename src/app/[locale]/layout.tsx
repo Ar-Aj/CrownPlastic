@@ -141,7 +141,6 @@ export default function LocaleLayout({
           <WhatsAppButton
             showAfterScroll={300}
             showPulse={true}
-            tooltipText="Chat with us on WhatsApp"
           />
         </LanguageProvider>
       </body>

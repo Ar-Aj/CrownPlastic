@@ -55,9 +55,9 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
     pipesTables: [
     {
       id: "heavy-grade-round-conduit-1250n-compression-force-table",
-      title: "HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE",
+      title: "HEAVY GRADE ROUND CONDUIT - 1250N COMPRESSION FORCE", titleFr: 'CONDUIT ROND DE CLASSE LOURDE - FORCE DE COMPRESSION 1250N',
       columns: [
-        { key: "partno", label: "Part No#" },
+        { key: "partno", label: "Part No#", labelFr: 'Part No#' },
         { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
         { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
         { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
@@ -74,9 +74,9 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
     },
     {
       id: "medium-grade-round-conduit-750n-compression-force-table",
-      title: "MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE",
+      title: "MEDIUM GRADE ROUND CONDUIT - 750N COMPRESSION FORCE", titleFr: 'CONDUIT ROND DE CLASSE MOYENNE - FORCE DE COMPRESSION 750N',
       columns: [
-        { key: "partno", label: "Part No#" },
+        { key: "partno", label: "Part No#", labelFr: 'Part No#' },
         { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
         { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
         { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
@@ -93,9 +93,9 @@ export const pvcConduitPipesCompressionForce: ProductDetailConfig = {
     },
     {
       id: "light-grade-round-conduit-320n-compression-force-table",
-      title: "LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE",
+      title: "LIGHT GRADE ROUND CONDUIT - 320N COMPRESSION FORCE", titleFr: 'CONDUIT ROND DE CLASSE LÉGÈRE - FORCE DE COMPRESSION 320N',
       columns: [
-        { key: "partno", label: "Part No#" },
+        { key: "partno", label: "Part No#", labelFr: 'Part No#' },
         { key: "dimension", label: "Dimension", labelFr: 'Dimension' },
         { key: "minid", label: "Min. ID", labelFr: 'DI Min.' },
         { key: "pscpack", label: "Psc/Pack", labelFr: 'Pcs/Paquet' },
@@ -199,12 +199,12 @@ export const pvcConduitPipesSch40: ProductDetailConfig = {
     pipesTables: [
     {
       id: "schedule-40-conduit-us-table",
-      title: "SCHEDULE 40 CONDUIT - US",
+      title: "SCHEDULE 40 CONDUIT - US", titleFr: 'CONDUIT SCHEDULE 40 - US',
       columns: [
-        { key: "partno", label: "Part No#" },
+        { key: "partno", label: "Part No#", labelFr: 'Part No#' },
         { key: "tradedimension", label: "Trade Dimension", labelFr: 'Dimension Commerciale' },
         { key: "wallthicknessmm", label: "Wall Thickness (mm)", labelFr: 'Epaisseur de Paroi (mm)' },
-        { key: "pscpack", label: "Pcs/Pack" },
+        { key: "pscpack", label: "Pcs/Pack", labelFr: 'Pcs/Pack' },
         { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
         { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],
@@ -309,12 +309,12 @@ export const pvcConduitPipesSch80: ProductDetailConfig = {
     pipesTables: [
     {
       id: "schedule-80-conduit-us-table",
-      title: "SCHEDULE 80 CONDUIT - US",
+      title: "SCHEDULE 80 CONDUIT - US", titleFr: 'CONDUIT SCHEDULE 80 - US',
       columns: [
-        { key: "partno", label: "Part No#" },
+        { key: "partno", label: "Part No#", labelFr: 'Part No#' },
         { key: "tradedimension", label: "Trade Dimension", labelFr: 'Dimension Commerciale' },
         { key: "wallthicknessmm", label: "Wall Thickness (mm)", labelFr: 'Epaisseur de Paroi (mm)' },
-        { key: "pscpack", label: "Pcs/Pack" },
+        { key: "pscpack", label: "Pcs/Pack", labelFr: 'Pcs/Pack' },
         { key: "mtrspack", label: "Mtrs/Pack", labelFr: 'Metres/Paquet' },
         { key: "lengthpc", label: "Length/Pc", labelFr: 'Longueur/Piece' }
       ],

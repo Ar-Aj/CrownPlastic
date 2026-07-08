@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PVC Pressure Pipes & Fittings - Product Detail Configurations
  * 
  * This file contains the detailed product data for the three PVC Pressure standards:
@@ -75,12 +75,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-90',
-      title: 'ELBOW 90°',
+      title: 'ELBOW 90°', titleFr: 'COUDE 90°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l: '16.5', pn: '16' },
@@ -120,11 +120,11 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-45',
-      title: 'ELBOW 45°',
+      title: 'ELBOW 45°', titleFr: 'COUDE 45°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l_pn', label: 'L PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l_pn', label: 'L PN', labelFr: 'L PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l_pn: '16.5 16' },
@@ -159,12 +159,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-elbow-90',
-      title: 'FEMALE ELBOW 90°',
+      title: 'FEMALE ELBOW 90°', titleFr: 'FEMELLE COUDE 90°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20 × 1/2"', d: '20', g_l: '1/2" 16.5', pn: '16' },
@@ -199,12 +199,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'socket-coupler',
-      title: 'SOCKET/COUPLER',
+      title: 'SOCKET/COUPLER', titleFr: 'MANCHON/COUPLER',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l: '16.5', pn: '16' },
@@ -256,13 +256,13 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducer-bush-socket',
-      title: 'REDUCER BUSH/SOCKET',
+      title: 'REDUCER BUSH/SOCKET', titleFr: 'BAGUE DE RÉDUCTION/MANCHON',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '25 X 20', d_upper: '25', d: '20', l: '16.5', pn: '16' },
@@ -312,13 +312,13 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'male-threaded-adaptor-socket-nipple-socket',
-      title: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET',
+      title: 'MALE THREADED ADAPTOR/SOCKET/ NIPPLE SOCKET', titleFr: 'FILETÉ MÂLE ADAPTATEUR/MANCHON/ NIPPLE MANCHON',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20 × 1/2"', d: '20', g: '1/2"', l: '16.5', pn: '16' },
@@ -354,13 +354,13 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-adaptor-socket-g',
-      title: 'FEMALE THREADED ADAPTOR/SOCKET G',
+      title: 'FEMALE THREADED ADAPTOR/SOCKET G', titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON G',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20 × 1/2"', d: '20', g: '1/2"', l: '16.5', pn: '16' },
@@ -397,12 +397,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'equal-tee',
-      title: 'EQUAL TEE',
+      title: 'EQUAL TEE', titleFr: 'ÉGAL TÉ',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l: '16.5', pn: '16' },
@@ -441,12 +441,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-tee',
-      title: 'FEMALE THREADED TEE',
+      title: 'FEMALE THREADED TEE', titleFr: 'FEFILETÉ MÂLE TÉ',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20 X 2 X 20', d: '20', g_l: '1/2" 16.5', pn: '16' },
@@ -496,11 +496,11 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducing-tee',
-      title: 'REDUCING TEE',
+      title: 'REDUCING TEE', titleFr: 'TÉ RÉDUIT',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'd1_l_pn', label: 'd1 L PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'd1_l_pn', label: 'd1 L PN', labelFr: 'd1 L PN' },
       ],
       rows: [
         { nominal_size_mm: '25 X 20 X 25', d: '25', d1_l_pn: '20 19.5 16' },
@@ -544,12 +544,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-reducer-bush',
-      title: 'FEMALE REDUCER BUSH',
+      title: 'FEMALE REDUCER BUSH', titleFr: 'FEMELLE BAGUE DE RÉDUCTION',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '25 × 1/2"', d_upper: '25', g_l: '1/2" 32.4', pn: '16' },
@@ -578,12 +578,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'union',
-      title: 'UNION',
+      title: 'UNION', titleFr: 'RACCORD UNION',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l: '16.5', pn: '16' },
@@ -616,12 +616,12 @@ const din8063Fittings: Fitting[] = [
     ],
     table: {
       id: 'end-cap',
-      title: 'END CAP',
+      title: 'END CAP', titleFr: 'BOUCHON',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '20', d: '20', l: '16.5', pn: '16' },
@@ -721,9 +721,9 @@ export const pvcPressureDin8063: ProductDetailConfig = {
   pipesTables: [
     {
       id: 'din-8063-pipes-pn10',
-      title: 'PVC Pressure Pipes DIN 8063 - PN10',
+      title: 'PVC Pressure Pipes DIN 8063 - PN10', titleFr: 'PVC TUYAUX SOUS PRESSION DIN 8063 - PN10',
       columns: [
-        { key: 'od', label: 'OD (mm)', align: 'center' },
+        { key: 'od', label: 'OD (mm)', labelFr: 'OD (mm)', align: 'center' },
         { key: 'wallThickness', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)', align: 'center' },
         { key: 'id', label: 'ID (mm)', labelFr: 'DI (mm)', align: 'center' },
         { key: 'length', label: 'Length (m)', labelFr: 'Longueur (m)', align: 'center' },
@@ -736,9 +736,9 @@ export const pvcPressureDin8063: ProductDetailConfig = {
     },
     {
       id: 'din-8063-pipes-pn16',
-      title: 'PVC Pressure Pipes DIN 8063 - PN16',
+      title: 'PVC Pressure Pipes DIN 8063 - PN16', titleFr: 'PVC TUYAUX SOUS PRESSION DIN 8063 - PN16',
       columns: [
-        { key: 'od', label: 'OD (mm)', align: 'center' },
+        { key: 'od', label: 'OD (mm)', labelFr: 'OD (mm)', align: 'center' },
         { key: 'wallThickness', label: 'Wall Thickness (mm)', labelFr: 'Epaisseur de Paroi (mm)', align: 'center' },
         { key: 'id', label: 'ID (mm)', labelFr: 'DI (mm)', align: 'center' },
         { key: 'length', label: 'Length (m)', labelFr: 'Longueur (m)', align: 'center' },
@@ -835,12 +835,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-90',
-      title: 'ELBOW 90°',
+      title: 'ELBOW 90°', titleFr: 'COUDE 90°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '1/2"', d: '21.34', l: '16.5', pn: '15' },
@@ -876,12 +876,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-45',
-      title: 'ELBOW 45°',
+      title: 'ELBOW 45°', titleFr: 'COUDE 45°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '1/2"', d: '21.34', l: '16.5', pn: '15' },
@@ -914,12 +914,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-elbow-90',
-      title: 'FEMALE ELBOW 90°',
+      title: 'FEMALE ELBOW 90°', titleFr: 'FEMELLE COUDE 90°',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '1/2"', d: '21.34', g_l: '1/2" 16.5', pn: '15' },
@@ -952,12 +952,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'socket-coupler',
-      title: 'SOCKET/COUPLER',
+      title: 'SOCKET/COUPLER', titleFr: 'MANCHON/COUPLER',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '1/2"', d: '21.34', l: '16.5', pn: '15' },
@@ -994,13 +994,13 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducer-bush-socket',
-      title: 'REDUCER BUSH/SOCKET',
+      title: 'REDUCER BUSH/SOCKET', titleFr: 'BAGUE DE RÉDUCTION/MANCHON',
       columns: [
         { key: 'nominal_size_mm', label: 'NOMINAL SIZE (mm)', labelFr: 'TAILLE NOMINALE (mm)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_mm: '3/4"x1/2"', d_upper: '26.67', d: '21.34', l: '16.5', pn: '15' },
@@ -1046,12 +1046,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'male-threaded-adaptor-socket-nipple-socket',
-      title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET',
+      title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET', titleFr: 'FILETÉ MÂLE ADAPTATEUR /MANCHON/NIPPLE MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', g_l: '1/2" 16.5', pn: '15' },
@@ -1087,12 +1087,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-adaptor-socket',
-      title: 'FEMALE THREADED ADAPTOR/SOCKET',
+      title: 'FEMALE THREADED ADAPTOR/SOCKET', titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', g_l: '1/2" 16.5', pn: '15' },
@@ -1128,12 +1128,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'equal-tee',
-      title: 'EQUAL TEE',
+      title: 'EQUAL TEE', titleFr: 'ÉGAL TÉ',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'dimensions_l', label: 'DIMENSIONS L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'dimensions_l', label: 'DIMENSIONS L', labelFr: 'DIMENSIONS L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', dimensions_l: '16.5', pn: '15' },
@@ -1170,12 +1170,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducing-tee',
-      title: 'REDUCING TEE',
+      title: 'REDUCING TEE', titleFr: 'TÉ RÉDUIT',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'di_l', label: 'di L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'di_l', label: 'di L', labelFr: 'di L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '3/4"x1/2"x3/4"', d: '26.67', di_l: '21.34 19.5', pn: '15' },
@@ -1212,12 +1212,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-reducing-tee',
-      title: 'FEMALE THREADED REDUCING TEE',
+      title: 'FEMALE THREADED REDUCING TEE', titleFr: 'FEFILETÉ MÂLE TÉ RÉDUIT',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '3/4"x1/2"x3/4"', d: '21.34', g_l: '1/2" 19.5', pn: '15' },
@@ -1250,13 +1250,13 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-equal-tee',
-      title: 'FEMALE THREADED EQUAL TEE',
+      title: 'FEMALE THREADED EQUAL TEE', titleFr: 'FEFILETÉ MÂLE ÉGAL TÉ',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"x1/2"x1/2"', d: '21.34', g: '1/2"', l: '16.5', pn: '15' },
@@ -1285,12 +1285,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-reducer-bush',
-      title: 'FEMALE THREADED REDUCER BUSH',
+      title: 'FEMALE THREADED REDUCER BUSH', titleFr: 'FEFILETÉ MÂLE BAGUE DE RÉDUCTION',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'g_l', label: 'G L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'g_l', label: 'G L', labelFr: 'G L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '3/4"x1/2"', d_upper: '21.34', g_l: '1/2" 32.4', pn: '15' },
@@ -1318,12 +1318,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'union',
-      title: 'UNION',
+      title: 'UNION', titleFr: 'RACCORD UNION',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', l: '16.5', pn: '15' },
@@ -1351,14 +1351,14 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'flanges-with-stub',
-      title: 'FLANGES WITH STUB',
+      title: 'FLANGES WITH STUB', titleFr: 'BRIDES AVEC STUB',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd1_d2', label: 'D1 D2' },
-        { key: 'h', label: 'h' },
-        { key: 'd3', label: 'D3' },
-        { key: 'd4', label: 'D4' },
-        { key: 'h_pn', label: 'H PN' },
+        { key: 'd1_d2', label: 'D1 D2', labelFr: 'D1 D2' },
+        { key: 'h', label: 'h', labelFr: 'h' },
+        { key: 'd3', label: 'D3', labelFr: 'D3' },
+        { key: 'd4', label: 'D4', labelFr: 'D4' },
+        { key: 'h_pn', label: 'H PN', labelFr: 'H PN' },
       ],
       rows: [
         { nominal_size_inch: '2"', d1_d2: '92.5 120', h: '43.5', d3: '152.4', d4: '77.6', h_pn: '20.5 15' },
@@ -1386,12 +1386,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'hex-nipple',
-      title: 'HEX NIPPLE',
+      title: 'HEX NIPPLE', titleFr: 'MAMELON HEXAGONAL',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', g: '1/2"', l: '16.5', pn: '15' },
@@ -1425,12 +1425,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'repair-socket-convertable-socket',
-      title: 'REPAIR SOCKET/ CONVERTABLE SOCKET',
+      title: 'REPAIR SOCKET/ CONVERTABLE SOCKET', titleFr: 'REPAIR MANCHON/ CONVERTABLE MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'd1_l', label: 'd1 L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'd1_l', label: 'd1 L', labelFr: 'd1 L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"X20', d: '21.34', d1_l: '20 16.5', pn: '15' },
@@ -1467,12 +1467,12 @@ const bsEn1452Fittings: Fitting[] = [
     ],
     table: {
       id: 'end-cap',
-      title: 'END CAP',
+      title: 'END CAP', titleFr: 'BOUCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', l: '16.5', pn: '15' },
@@ -1571,10 +1571,10 @@ export const pvcPressureBsEn1452: ProductDetailConfig = {
   pipesTables: [
     {
       id: 'bs-en-1452-pipes',
-      title: 'PVC Pressure Pipes BS EN 1452:23 - PN 15',
+      title: 'PVC Pressure Pipes BS EN 1452:23 - PN 15', titleFr: 'PVC TUYAUX SOUS PRESSION BS EN 1452:23 - PN 15',
       columns: [
         { key: 'nominalSize', label: 'Nominal Size (DN)', labelFr: 'Taille Nominale (DN)', align: 'center' },
-        { key: 'od', label: 'OD (mm)', align: 'center' },
+        { key: 'od', label: 'OD (mm)', labelFr: 'OD (mm)', align: 'center' },
         { key: 'wallThickness', label: 'Wall (mm)', labelFr: 'Paroi (mm)', align: 'center' },
         { key: 'weight', label: 'Weight (kg/m)', labelFr: 'Poids (kg/m)', align: 'center' },
       ],
@@ -1670,10 +1670,10 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-90',
-      title: 'ELBOW 90°',
+      title: 'ELBOW 90°', titleFr: 'COUDE 90°',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L' },
+        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L', labelFr: 'DIMENSIONS (mm) d L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_mm_d_l: '21.34 16.5' },
@@ -1709,10 +1709,10 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'elbow-45',
-      title: 'ELBOW 45°',
+      title: 'ELBOW 45°', titleFr: 'COUDE 45°',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L' },
+        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L', labelFr: 'DIMENSIONS (mm) d L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_mm_d_l: '21.34 16.5' },
@@ -1745,12 +1745,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-elbow-90',
-      title: 'FEMALE ELBOW 90°',
+      title: 'FEMALE ELBOW 90°', titleFr: 'FEMELLE COUDE 90°',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', g: '1/2"', l: '16.5' },
@@ -1783,10 +1783,10 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'socket-coupler',
-      title: 'SOCKET/COUPLER',
+      title: 'SOCKET/COUPLER', titleFr: 'MANCHON/COUPLER',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L' },
+        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L', labelFr: 'DIMENSIONS (mm) d L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_mm_d_l: '21.34 16.5' },
@@ -1832,12 +1832,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducer-bush-socket',
-      title: 'REDUCER BUSH/SOCKET',
+      title: 'REDUCER BUSH/SOCKET', titleFr: 'BAGUE DE RÉDUCTION/MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'd', label: 'd' },
-        { key: 'l', label: 'L' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '3/4X1/2"', d_upper: '26.67', d: '21.34', l: '32.6' },
@@ -1883,12 +1883,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'male-threaded-adaptor-socket-nipple-socket',
-      title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET',
+      title: 'MALE THREADED ADAPTOR /SOCKET/NIPPLE SOCKET', titleFr: 'FILETÉ MÂLE ADAPTATEUR /MANCHON/NIPPLE MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', g: '1/2"', l: '16.5' },
@@ -1924,12 +1924,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-adaptor-socket-g',
-      title: 'FEMALE THREADED ADAPTOR/SOCKET G',
+      title: 'FEMALE THREADED ADAPTOR/SOCKET G', titleFr: 'FEFILETÉ MÂLE ADAPTATEUR/MANCHON G',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', d: '21.34', g: '1/2"', l: '16.5' },
@@ -1965,11 +1965,11 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'equal-tee',
-      title: 'EQUAL TEE',
+      title: 'EQUAL TEE', titleFr: 'ÉGAL TÉ',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_d', label: 'DIMENSIONS d' },
-        { key: 'mm_l', label: '(mm) L' },
+        { key: 'dimensions_d', label: 'DIMENSIONS d', labelFr: 'DIMENSIONS d' },
+        { key: 'mm_l', label: '(mm) L', labelFr: '(mm) L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_d: '21.34', mm_l: '16.5' },
@@ -2006,11 +2006,11 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'reducing-tee',
-      title: 'REDUCING TEE',
+      title: 'REDUCING TEE', titleFr: 'TÉ RÉDUIT',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_di', label: 'DIMENSIONS (mm) d di' },
-        { key: 'l', label: 'L' },
+        { key: 'dimensions_mm_d_di', label: 'DIMENSIONS (mm) d di', labelFr: 'DIMENSIONS (mm) d di' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '3/4x1/2x3/4"', dimensions_mm_d_di: '26.67 21.34', l: '19.5' },
@@ -2047,12 +2047,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-reducing-tee',
-      title: 'FEMALE THREADED REDUCING TEE',
+      title: 'FEMALE THREADED REDUCING TEE', titleFr: 'FEFILETÉ MÂLE TÉ RÉDUIT',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '3/4X1/2X3/4"', d: '21.34', g: '1/2"', l: '19.5' },
@@ -2085,12 +2085,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-equal-tee',
-      title: 'FEMALE THREADED EQUAL TEE',
+      title: 'FEMALE THREADED EQUAL TEE', titleFr: 'FEFILETÉ MÂLE ÉGAL TÉ',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd', label: 'd' },
-        { key: 'l_g', label: 'L G' },
-        { key: 'pn', label: 'PN' },
+        { key: 'd', label: 'd', labelFr: 'd' },
+        { key: 'l_g', label: 'L G', labelFr: 'L G' },
+        { key: 'pn', label: 'PN', labelFr: 'PN' },
       ],
       rows: [
         { nominal_size_inch: '1/2X1/2X1/2"', d: '21.34', l_g: '1/7" 16.5', pn: '15' },
@@ -2119,12 +2119,12 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'female-threaded-reducer-bush',
-      title: 'FEMALE THREADED REDUCER BUSH',
+      title: 'FEMALE THREADED REDUCER BUSH', titleFr: 'FEFILETÉ MÂLE BAGUE DE RÉDUCTION',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd_upper', label: 'D' },
-        { key: 'g', label: 'G' },
-        { key: 'l', label: 'L' },
+        { key: 'd_upper', label: 'D', labelFr: 'D' },
+        { key: 'g', label: 'G', labelFr: 'G' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '3/4x1/2"', d_upper: '21.34', g: '1/2"', l: '32.4' },
@@ -2152,10 +2152,10 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'union',
-      title: 'UNION',
+      title: 'UNION', titleFr: 'RACCORD UNION',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L' },
+        { key: 'dimensions_mm_d_l', label: 'DIMENSIONS (mm) d L', labelFr: 'DIMENSIONS (mm) d L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_mm_d_l: '21.34 16.5' },
@@ -2182,11 +2182,11 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'hex-nipple',
-      title: 'HEX NIPPLE',
+      title: 'HEX NIPPLE', titleFr: 'MAMELON HEXAGONAL',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_g', label: 'DIMENSIONS G' },
-        { key: 'mm_l', label: '(mm) L' },
+        { key: 'dimensions_g', label: 'DIMENSIONS G', labelFr: 'DIMENSIONS G' },
+        { key: 'mm_l', label: '(mm) L', labelFr: '(mm) L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_g: '1/2"', mm_l: '16.5' },
@@ -2213,16 +2213,16 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'flanges-with-stub',
-      title: 'FLANGES WITH STUB',
+      title: 'FLANGES WITH STUB', titleFr: 'BRIDES AVEC STUB',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'd2', label: 'D2' },
-        { key: 'd1', label: 'D1' },
-        { key: 'd3', label: 'D3' },
-        { key: 'd4', label: 'D4' },
-        { key: 'h_upper', label: 'H' },
-        { key: 'h', label: 'h' },
-        { key: 'd2_lower', label: 'd2' },
+        { key: 'd2', label: 'D2', labelFr: 'D2' },
+        { key: 'd1', label: 'D1', labelFr: 'D1' },
+        { key: 'd3', label: 'D3', labelFr: 'D3' },
+        { key: 'd4', label: 'D4', labelFr: 'D4' },
+        { key: 'h_upper', label: 'H', labelFr: 'H' },
+        { key: 'h', label: 'h', labelFr: 'h' },
+        { key: 'd2_lower', label: 'd2', labelFr: 'd2' },
       ],
       rows: [
         { nominal_size_inch: '2"', d2: '91.8', d1: '60', d3: '92.5', d4: '120', h_upper: '152.4', h: '77.6', d2_lower: '20.5' },
@@ -2256,11 +2256,11 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'repair-socket-convertable-socket',
-      title: 'REPAIR SOCKET/ CONVERTABLE SOCKET',
+      title: 'REPAIR SOCKET/ CONVERTABLE SOCKET', titleFr: 'REPAIR MANCHON/ CONVERTABLE MANCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_mm_d_d1', label: 'DIMENSIONS (mm) d d1' },
-        { key: 'l', label: 'L' },
+        { key: 'dimensions_mm_d_d1', label: 'DIMENSIONS (mm) d d1', labelFr: 'DIMENSIONS (mm) d d1' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { nominal_size_inch: '1½"X20', dimensions_mm_d_d1: '21.34 20', l: '16.5' },
@@ -2297,11 +2297,11 @@ const astmD2466Fittings: Fitting[] = [
     ],
     table: {
       id: 'end-cap',
-      title: 'END CAP',
+      title: 'END CAP', titleFr: 'BOUCHON',
       columns: [
         { key: 'nominal_size_inch', label: 'NOMINAL SIZE (Inch)', labelFr: 'TAILLE NOMINALE (Inch)' },
-        { key: 'dimensions_d', label: 'DIMENSIONS d' },
-        { key: 'mm_l', label: '(mm) L' },
+        { key: 'dimensions_d', label: 'DIMENSIONS d', labelFr: 'DIMENSIONS d' },
+        { key: 'mm_l', label: '(mm) L', labelFr: '(mm) L' },
       ],
       rows: [
         { nominal_size_inch: '1/2"', dimensions_d: '21.34', mm_l: '16.5' },
@@ -2400,10 +2400,10 @@ export const pvcPressureAstmD2466: ProductDetailConfig = {
   pipesTables: [
     {
       id: 'astm-d2466-pipes-sch40',
-      title: 'PVC Pressure Pipes ASTM D 2466 - Schedule 40',
+      title: 'PVC Pressure Pipes ASTM D 2466 - Schedule 40', titleFr: 'PVC TUYAUX SOUS PRESSION ASTM D 2466 - Schedule 40',
       columns: [
         { key: 'nominalSize', label: 'Nominal Size (in)', labelFr: 'Taille Nominale (in)', align: 'center' },
-        { key: 'od', label: 'OD (in)', align: 'center' },
+        { key: 'od', label: 'OD (in)', labelFr: 'OD (in)', align: 'center' },
         { key: 'wallThickness', label: 'Wall (in)', labelFr: 'Paroi (in)', align: 'center' },
         { key: 'id', label: 'ID (in)', labelFr: 'DI (in)', align: 'center' },
         { key: 'pressureRating', label: 'Pressure (psi)', labelFr: 'Pression (psi)', align: 'center' },

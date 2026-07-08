@@ -20,12 +20,12 @@ export const bsEn1452SpecTables: FittingSpecTable[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'elbow-90',
-    title: 'ELBOW 90°',
+    title: 'ELBOW 90°', titleFr: 'COUDE 90°',
     columns: [
-      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)' },
-      { key: 'd', label: 'd' },
-      { key: 'L', label: 'L' },
-      { key: 'PN', label: 'PN' },
+      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)', labelFr: 'NOMINAL TAILLE (mm)' },
+      { key: 'd', label: 'd', labelFr: 'd' },
+      { key: 'L', label: 'L', labelFr: 'L' },
+      { key: 'PN', label: 'PN', labelFr: 'PN' },
     ],
     rows: [
       { nominalSizeMm: '1/2"', d: '21.34', L: '16.5', PN: '15' },
@@ -45,12 +45,12 @@ export const bsEn1452SpecTables: FittingSpecTable[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'elbow-45',
-    title: 'ELBOW 45°',
+    title: 'ELBOW 45°', titleFr: 'COUDE 45°',
     columns: [
-      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)' },
-      { key: 'd', label: 'd' },
-      { key: 'L', label: 'L' },
-      { key: 'PN', label: 'PN' },
+      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)', labelFr: 'NOMINAL TAILLE (mm)' },
+      { key: 'd', label: 'd', labelFr: 'd' },
+      { key: 'L', label: 'L', labelFr: 'L' },
+      { key: 'PN', label: 'PN', labelFr: 'PN' },
     ],
     rows: [
       { nominalSizeMm: '1/2"', d: '21.34', L: '16.5', PN: '15' },
@@ -70,12 +70,12 @@ export const bsEn1452SpecTables: FittingSpecTable[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'female-elbow-90',
-    title: 'FEMALE ELBOW 90°',
+    title: 'FEMALE ELBOW 90°', titleFr: 'FEMELLE COUDE 90°',
     columns: [
-      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)' },
-      { key: 'd', label: 'd' },
-      { key: 'gL', label: 'G L' },
-      { key: 'PN', label: 'PN' },
+      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)', labelFr: 'NOMINAL TAILLE (mm)' },
+      { key: 'd', label: 'd', labelFr: 'd' },
+      { key: 'gL', label: 'G L', labelFr: 'G L' },
+      { key: 'PN', label: 'PN', labelFr: 'PN' },
     ],
     rows: [
       { nominalSizeMm: '1/2"', d: '21.34', gL: '1/2" 16.5', PN: '15' },
@@ -92,12 +92,12 @@ export const bsEn1452SpecTables: FittingSpecTable[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'socket-coupler',
-    title: 'SOCKET/COUPLER',
+    title: 'SOCKET/COUPLER', titleFr: 'MANCHON/COUPLER',
     columns: [
-      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)' },
-      { key: 'd', label: 'd' },
-      { key: 'L', label: 'L' },
-      { key: 'PN', label: 'PN' },
+      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)', labelFr: 'NOMINAL TAILLE (mm)' },
+      { key: 'd', label: 'd', labelFr: 'd' },
+      { key: 'L', label: 'L', labelFr: 'L' },
+      { key: 'PN', label: 'PN', labelFr: 'PN' },
     ],
     rows: [
       { nominalSizeMm: '1/2"', d: '21.34', L: '16.5', PN: '15' },
@@ -117,13 +117,13 @@ export const bsEn1452SpecTables: FittingSpecTable[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     id: 'reducer-bush-socket',
-    title: 'REDUCER BUSH/SOCKET',
+    title: 'REDUCER BUSH/SOCKET', titleFr: 'BAGUE DE RÉDUCTION/MANCHON',
     columns: [
-      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)' },
-      { key: 'D', label: 'D' },
-      { key: 'd', label: 'd' },
-      { key: 'L', label: 'L' },
-      { key: 'PN', label: 'PN' },
+      { key: 'nominalSizeMm', label: 'NOMINAL SIZE (mm)', labelFr: 'NOMINAL TAILLE (mm)' },
+      { key: 'D', label: 'D', labelFr: 'D' },
+      { key: 'd', label: 'd', labelFr: 'd' },
+      { key: 'L', label: 'L', labelFr: 'L' },
+      { key: 'PN', label: 'PN', labelFr: 'PN' },
     ],
     rows: [
       { nominalSizeMm: '3/4"x1/2"', D: '26.67', d: '21.34', L: '16.5', PN: '15' },

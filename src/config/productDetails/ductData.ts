@@ -18,15 +18,15 @@ const ductPipesTables: PipeTable[] = [
   // Table 1: NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS
   {
     id: 'nema_tc_2_2003_electrical',
-    title: 'NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS:',
+    title: 'NEMA TC 2: 2003 ELECTRICAL PVC-U TUBING & CONDUITS:', titleFr: 'NEMA TC 2: 2003 ELECTRICAL PVC-U TUBES & CONDUITS:',
     columns: [
       { key: 'nominal_size_inch', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
       { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min', labelFr: 'Diam. Ext. Moyen (mm) Min' },
       { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max', labelFr: 'Diam. Ext. Moyen (mm) Max' },
-      { key: 'epc_40_min', label: 'EPC 40 Min' },
-      { key: 'epc_40_max', label: 'EPC 40 Max' },
-      { key: 'epc_80_min', label: 'EPC 80 Min' },
-      { key: 'epc_80_max', label: 'EPC 80 Max' },
+      { key: 'epc_40_min', label: 'EPC 40 Min', labelFr: 'EPC 40 Min' },
+      { key: 'epc_40_max', label: 'EPC 40 Max', labelFr: 'EPC 40 Max' },
+      { key: 'epc_80_min', label: 'EPC 80 Min', labelFr: 'EPC 80 Min' },
+      { key: 'epc_80_max', label: 'EPC 80 Max', labelFr: 'EPC 80 Max' },
     ],
     rows: [
       { nominal_size_inch: '1/2"', mean_od_min: '21.2', mean_od_max: '21.5', epc_40_min: '2.77', epc_40_max: '3.25', epc_80_min: '3.73', epc_80_max: '4.15' },
@@ -44,16 +44,16 @@ const ductPipesTables: PipeTable[] = [
   // Table 2: NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDERGROUND
   {
     id: 'nema_tc_6_8_astm_f512_underground',
-    title: 'NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS',
+    title: 'NEMA TC 6 & 8/ASTM F 512 PVC-U DUCT PIPE FOR UNDER GROUND INSTALLATIONS', titleFr: 'NEMA TC 6 & 8/ASTM F 512 PVC-U TUYAUX DE GAINE POUR SOUTERRAIN INSTALLATIONS',
     columns: [
       { key: 'nominal_size_inch', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
       { key: 'mean_od_min', label: 'Mean Outside Dia. (mm) Min', labelFr: 'Diam. Ext. Moyen (mm) Min' },
       { key: 'mean_od_max', label: 'Mean Outside Dia. (mm) Max', labelFr: 'Diam. Ext. Moyen (mm) Max' },
-      { key: 'eb_20', label: 'EB-20' },
-      { key: 'eb_35', label: 'EB-35' },
-      { key: 'db_60', label: 'DB-60' },
-      { key: 'db_100', label: 'DB-100' },
-      { key: 'db_120', label: 'DB-120' },
+      { key: 'eb_20', label: 'EB-20', labelFr: 'EB-20' },
+      { key: 'eb_35', label: 'EB-35', labelFr: 'EB-35' },
+      { key: 'db_60', label: 'DB-60', labelFr: 'DB-60' },
+      { key: 'db_100', label: 'DB-100', labelFr: 'DB-100' },
+      { key: 'db_120', label: 'DB-120', labelFr: 'DB-120' },
     ],
     rows: [
       { nominal_size_inch: '1"', mean_od_min: '33.4', mean_od_max: '33.7', eb_20: '', eb_35: '', db_60: '', db_100: '', db_120: '1.52' },
@@ -67,19 +67,19 @@ const ductPipesTables: PipeTable[] = [
   // Table 3: Metric size Pressure Pipes: DIN 8062
   {
     id: 'metric_pressure_pipes_din_8062',
-    title: 'Metric size Pressure Pipes: DIN 8062',
+    title: 'Metric size Pressure Pipes: DIN 8062', titleFr: 'Metric taille TUYAUX SOUS PRESSION: DIN 8062',
     columns: [
       { key: 'nominal_size_mm', label: 'Nominal Size mm', labelFr: 'Taille Nominale mm' },
       { key: 'mean_od_min', label: 'Mean Outside Dia. Min', labelFr: 'Diam. Ext. Moyen Min' },
       { key: 'mean_od_max', label: 'Mean Outside Dia. Max', labelFr: 'Diam. Ext. Moyen Max' },
-      { key: 'pn16_min', label: 'PN-16 Min' },
-      { key: 'pn16_max', label: 'PN-16 Max' },
-      { key: 'pn10_min', label: 'PN-10 Min' },
-      { key: 'pn10_max', label: 'PN-10 Max' },
-      { key: 'pn6_min', label: 'PN-6 Min' },
-      { key: 'pn6_max', label: 'PN-6 Max' },
-      { key: 'pn4_min', label: 'PN-4 Min' },
-      { key: 'pn4_max', label: 'PN-4 Max' },
+      { key: 'pn16_min', label: 'PN-16 Min', labelFr: 'PN-16 Min' },
+      { key: 'pn16_max', label: 'PN-16 Max', labelFr: 'PN-16 Max' },
+      { key: 'pn10_min', label: 'PN-10 Min', labelFr: 'PN-10 Min' },
+      { key: 'pn10_max', label: 'PN-10 Max', labelFr: 'PN-10 Max' },
+      { key: 'pn6_min', label: 'PN-6 Min', labelFr: 'PN-6 Min' },
+      { key: 'pn6_max', label: 'PN-6 Max', labelFr: 'PN-6 Max' },
+      { key: 'pn4_min', label: 'PN-4 Min', labelFr: 'PN-4 Min' },
+      { key: 'pn4_max', label: 'PN-4 Max', labelFr: 'PN-4 Max' },
     ],
     rows: [
       { nominal_size_mm: '20 mm', mean_od_min: '20.0', mean_od_max: '20.2', pn16_min: '1.5', pn16_max: '1.9', pn10_min: '', pn10_max: '', pn6_min: '', pn6_max: '', pn4_min: '', pn4_max: '' },
@@ -105,7 +105,7 @@ const ductPipesTables: PipeTable[] = [
   // Table 4: DUCT PIPE FOR ELECTRICAL AND TELEPHONE CABLE (Etisalat & DU)
   {
     id: 'etisalat_du_duct_pipe',
-    title: 'DUCT PIPE FOR ELECTRICAL AND TELEPHONE CABLE Dimensions as per Etisalat & DU specifications',
+    title: 'DUCT PIPE FOR ELECTRICAL AND TELEPHONE CABLE Dimensions as per Etisalat & DU specifications', titleFr: 'TUYAUX DE GAINE POUR ELECTRICAL ET TELEPHONE CABLE Dimensions as per Etisalat & DU specifications',
     columns: [
       { key: 'product', label: 'Product', labelFr: 'Produit' },
       { key: 'od_min', label: 'Outside Diameter Min', labelFr: 'Diametre Exterieur Min' },
@@ -122,7 +122,7 @@ const ductPipesTables: PipeTable[] = [
   // Table 5: Imperial size Pressure Pipes: BS 3505/06
   {
     id: 'imperial_pressure_pipes_bs_3505_06',
-    title: 'Imperial size Pressure Pipes: BS 3505/06',
+    title: 'Imperial size Pressure Pipes: BS 3505/06', titleFr: 'Imperial taille TUYAUX SOUS PRESSION: BS 3505/06',
     columns: [
       { key: 'nominal_size_inch', label: 'Nominal Size inch', labelFr: 'Taille Nominale inch' },
       { key: 'mean_od', label: 'Mean Outside Dia Min Max', labelFr: 'Diam. Ext. Moyen Min Max' },
@@ -150,11 +150,11 @@ const ductPipesTables: PipeTable[] = [
   // Table 6: NON-STANDARD DUCT PIPE
   {
     id: 'non_standard_duct_pipe',
-    title: 'NON-STANDARD DUCT PIPE',
+    title: 'NON-STANDARD DUCT PIPE', titleFr: 'NON-STANDARD TUYAUX DE GAINE',
     columns: [
       { key: 'product', label: 'Product', labelFr: 'Produit' },
       { key: 'od_min', label: 'Outside Min', labelFr: 'Exterieur Min' },
-      { key: 'od_max', label: 'Diameter Max' },
+      { key: 'od_max', label: 'Diameter Max', labelFr: 'Diamètre Max' },
       { key: 'wt', label: 'Min Wall Thickness Max', labelFr: 'Epaisseur de Paroi Min Max' },
     ],
     rows: [
@@ -188,11 +188,11 @@ const ductFittings: Fitting[] = [
     ],
     table: {
       id: 'duct_end_caps',
-      title: 'DUCT END CAPS',
+      title: 'DUCT END CAPS', titleFr: 'GAINE BOUCHONS',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
-        { key: 'id', label: 'ID' },
-        { key: 'h', label: 'H' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
+        { key: 'id', label: 'ID', labelFr: 'ID' },
+        { key: 'h', label: 'H', labelFr: 'H' },
       ],
       rows: [
         { size: '2" C/56', id: '60.5/54', h: '30' },
@@ -220,11 +220,11 @@ const ductFittings: Fitting[] = [
     ],
     table: {
       id: 'duct_sockets',
-      title: 'DUCT SOCKETS',
+      title: 'DUCT SOCKETS', titleFr: 'GAINE SOCKETS',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
-        { key: 'id', label: 'ID' },
-        { key: 'l', label: 'L' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
+        { key: 'id', label: 'ID', labelFr: 'ID' },
+        { key: 'l', label: 'L', labelFr: 'L' },
       ],
       rows: [
         { size: '2" C/56', id: '60.5/54', l: '116.5' },
@@ -252,12 +252,12 @@ const ductFittings: Fitting[] = [
     ],
     table: {
       id: 'duct_bellmouths',
-      title: 'DUCT BELLMOUTHS',
+      title: 'DUCT BELLMOUTHS', titleFr: 'GAINE BELLMOUTHS',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
-        { key: 'id', label: 'ID' },
-        { key: 'od', label: 'OD' },
-        { key: 'wt', label: 'WT' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
+        { key: 'id', label: 'ID', labelFr: 'ID' },
+        { key: 'od', label: 'OD', labelFr: 'OD' },
+        { key: 'wt', label: 'WT', labelFr: 'WT' },
       ],
       rows: [
         { size: '2" C/56', id: '110', od: '117', wt: '3.5/1.63' },
@@ -287,14 +287,14 @@ const ductFittings: Fitting[] = [
     ],
     table: {
       id: 'duct_90_45_lr_bends',
-      title: 'DUCT 90/45° LR BENDS',
+      title: 'DUCT 90/45° LR BENDS', titleFr: 'GAINE 90/45° LR BENDS',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
-        { key: 'l1', label: 'L1' },
-        { key: 'l2', label: 'L2' },
-        { key: 'l3', label: 'L3' },
-        { key: 'l4', label: 'L4' },
-        { key: 'r', label: 'R' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
+        { key: 'l1', label: 'L1', labelFr: 'L1' },
+        { key: 'l2', label: 'L2', labelFr: 'L2' },
+        { key: 'l3', label: 'L3', labelFr: 'L3' },
+        { key: 'l4', label: 'L4', labelFr: 'L4' },
+        { key: 'r', label: 'R', labelFr: 'R' },
       ],
       rows: [
         { size: '1"', l1: '220', l2: '220', l3: '280', l4: '280', r: '200' },
@@ -325,11 +325,11 @@ const ductFittings: Fitting[] = [
       id: 'duct_90_lighting_lr_bends_4',
       title: 'DUCT 90° LIGHTING LR BENDS 4"',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
         { key: 'poles', label: 'POLES', labelFr: 'POLES' },
         { key: 'radius', label: 'RADIUS (mm)', labelFr: 'RAYON (mm)' },
-        { key: 'h', label: 'H(mm)' },
-        { key: 'w', label: 'W(mm)' },
+        { key: 'h', label: 'H(mm)', labelFr: 'H(mm)' },
+        { key: 'w', label: 'W(mm)', labelFr: 'W(mm)' },
       ],
       rows: [
         { size: '4" CLASS C', poles: '12 Mtr.', radius: '600', h: '1050', w: '600' },
@@ -358,11 +358,11 @@ const ductFittings: Fitting[] = [
       id: 'duct_90_street_lighting_lr_bends_3',
       title: 'DUCT 90° STREET LIGHTING L R BENDS 3"',
       columns: [
-        { key: 'size', label: 'Ø/SIZE' },
+        { key: 'size', label: 'Ø/SIZE', labelFr: 'Ø/TAILLE' },
         { key: 'poles', label: 'POLES', labelFr: 'POLES' },
         { key: 'radius', label: 'RADIUS (mm)', labelFr: 'RAYON (mm)' },
-        { key: 'h', label: 'H(mm)' },
-        { key: 'w', label: 'W(mm)' },
+        { key: 'h', label: 'H(mm)', labelFr: 'H(mm)' },
+        { key: 'w', label: 'W(mm)', labelFr: 'W(mm)' },
       ],
       rows: [
         { size: '3" CLASS C', poles: '3.5 Mtr.', radius: '600', h: '700', w: '600' },

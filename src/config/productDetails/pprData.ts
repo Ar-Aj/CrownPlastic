@@ -158,7 +158,7 @@ Le tuyau CROWN PPR SDR11/PN10 est spécifié selon DIN 8077/78. Il convient à d
   pipesTables: [
     {
       id: 'ppr-sdr11-pn10-pipes',
-      title: 'Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78',
+      title: 'Parameters of PPR Pipe SDR11/PN10 in accordance to DIN 8077/78', titleFr: 'Parameters of PPR Tuyau SDR11/PN10 in accordance to DIN 8077/78',
       columns: sharedPprColumns,
       rows: [
         { dimensions: '20', wall_thickness: '1.9', inner_diameter: '16.0', packing_unit: '100 Mtrs', kg_mtr: '0.107' },
@@ -302,7 +302,7 @@ Le tuyau CROWN PPR SDR7.4/PN16 est spécifié selon DIN 8077/78. Il s'agit d'une
   pipesTables: [
     {
       id: 'ppr-sdr7-4-pn16-pipes',
-      title: 'Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78',
+      title: 'Parameters of PPR Pipe SDR7.4/PN16 in accordance to DIN 8077/78', titleFr: 'Parameters of PPR Tuyau SDR7.4/PN16 in accordance to DIN 8077/78',
       columns: sharedPprColumns,
       rows: [
         { dimensions: '20', wall_thickness: '2.8', inner_diameter: '14.4', packing_unit: '100 Mtrs', kg_mtr: '0.147' },
@@ -446,7 +446,7 @@ Le tuyau CROWN PPR SDR6/PN20 est spécifié selon DIN 8077/78. Il s'agit de la c
   pipesTables: [
     {
       id: 'ppr-sdr6-pn20-pipes',
-      title: 'Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78',
+      title: 'Parameters of PPR Pipe SDR6/PN20 in accordance to DIN 8077/78', titleFr: 'Parameters of PPR Tuyau SDR6/PN20 in accordance to DIN 8077/78',
       columns: sharedPprColumns,
       rows: [
         { dimensions: '20', wall_thickness: '3.4', inner_diameter: '13.2', packing_unit: '100 Mtrs', kg_mtr: '0.172' },

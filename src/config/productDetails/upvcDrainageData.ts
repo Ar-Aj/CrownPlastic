@@ -162,13 +162,13 @@ export const upvcDrainagePipesBs5255BsEn1329: ProductDetailConfig = {
     // Table 1: BS 5255 / BS EN 1329-1:2014 (smaller sizes)
     {
       id: 'bs-5255-bs-en-1329-pipes',
-      title: 'Above Ground Soil & Waste Pipes: BS 5255/BS EN 1329-1:2014',
+      title: 'Above Ground Soil & Waste Pipes: BS 5255/BS EN 1329-1:2014', titleFr: 'Above Terre Soil & Waste Tuyaux: BS 5255/BS EN 1329-1:2014',
       columns: [
         { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
+        { key: 'odMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '1 1/4"', odMin: '36.15', odMax: '36.45', wtMin: '1.8', wtMax: '2.2' },
@@ -179,13 +179,13 @@ export const upvcDrainagePipesBs5255BsEn1329: ProductDetailConfig = {
     // Table 2: BS 4514 / BS EN 1329-1:2014 (larger sizes)
     {
       id: 'bs-4514-bs-en-1329-pipes',
-      title: 'Above Ground Soil & Waste Pipes: BS 4514/BS EN 1329-1:2014',
+      title: 'Above Ground Soil & Waste Pipes: BS 4514/BS EN 1329-1:2014', titleFr: 'Above Terre Soil & Waste Tuyaux: BS 4514/BS EN 1329-1:2014',
       columns: [
         { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
+        { key: 'odMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '3"', odMin: '82.00',  odMax: '82.35',  wtMin: '3.2', wtMax: '3.5' },
@@ -291,13 +291,13 @@ export const upvcDrainagePipesBsEn1401: ProductDetailConfig = {
   pipesTables: [
     {
       id: 'bs-en-1401-underground-pipes',
-      title: 'Underground Drainage & Sewerage: BS EN 1401-1 (BS 4660 & BS 5481)',
+      title: 'Underground Drainage & Sewerage: BS EN 1401-1 (BS 4660 & BS 5481)', titleFr: 'Underground Évacuation & Sewerage: BS EN 1401-1 (BS 4660 & BS 5481)',
       columns: [
         { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
+        { key: 'odMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '3"',  odMin: '82.00',  odMax: '82.35',  wtMin: '3.2', wtMax: '3.5' },
@@ -389,13 +389,13 @@ export const upvcDrainagePipesNonStandard: ProductDetailConfig = {
   pipesTables: [
     {
       id: 'non-standard-drainage-pipes',
-      title: 'Non-Standard Pipes for Drainage Applications',
+      title: 'Non-Standard Pipes for Drainage Applications', titleFr: 'Non-Standard Tuyaux pour Évacuation Applications',
       columns: [
         { key: 'size', label: 'Nominal Size (Inch)', labelFr: 'Taille Nominale (Inch)' },
-        { key: 'odMin', label: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
-        { key: 'odMax', label: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
-        { key: 'wtMin', label: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
-        { key: 'wtMax', label: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
+        { key: 'odMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)', colSpan: 2 },
+        { key: 'odMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Outside Dia. (mm)', groupLabelFr: 'Diam. Ext. Moyen (mm)' },
+        { key: 'wtMin', label: 'Min', labelFr: 'Min', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)', colSpan: 2 },
+        { key: 'wtMax', label: 'Max', labelFr: 'Max', groupLabel: 'Mean Wall Thickness (mm)', groupLabelFr: 'Epaisseur Moy. de Paroi (mm)' },
       ],
       rows: [
         { size: '1 1/4"', odMin: '36.15',  odMax: '36.45',  wtMin: '1.5', wtMax: '2.0' },

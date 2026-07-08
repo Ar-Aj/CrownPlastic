@@ -50,6 +50,7 @@ export const en = {
   // Common/Shared UI Elements
   // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   common: {
+    whatsapp_chat: 'Chat with us on WhatsApp',
     loading: 'Loading...',
     contact_us: 'Contact us:',
     get_a_quote: 'Get a Quote',
@@ -1585,7 +1586,7 @@ export const en = {
     need_assistance: 'Need Technical Assistance?',
     assistance_desc: 'Our team is ready to help with product selection and specifications.',
     // Product detail page
-    standards_certifications: 'Standards & Certifications',
+    standards_certifications: 'STANDARDS & CERTIFICATIONS',
     key_features: 'Key Features',
     request_quote: 'Request Quote',
     download_specs: 'Download Specs',
@@ -2299,7 +2300,7 @@ export const en = {
     // Product detail page (/products/[category]/[product])
     detail: {
       breadcrumb_products: 'Products',
-      standards_certifications: 'Standards & Certifications',
+      standards_certifications: 'STANDARDS & CERTIFICATIONS',
       key_features: 'Key Features',
       request_quote: 'Request Quote',
       download_specs: 'Download Specs',
@@ -2558,7 +2559,7 @@ export const en = {
     // ProductDetailLayout component (enhanced product pages)
     detail_layout: {
       breadcrumb_products: 'Products',
-      standards_certifications: 'Standards & Certifications',
+      standards_certifications: 'STANDARDS & CERTIFICATIONS',
       request_quote: 'Request Quote',
       download_catalogue: 'Download Catalogue',
       crown_plastic_pipes: 'Crown Plastic Pipes',
@@ -2642,6 +2643,19 @@ export const en = {
       family_brass_insert: 'Brass Inserts',
       family_solvent_cement: 'Solvent Cement',
       family_other: 'Other Fittings',
+    },
+
+    // Global Modal UI Strings
+    modal: {
+      available_sizes: 'AVAILABLE SIZES',
+      tech_specifications: 'TECHNICAL SPECIFICATIONS',
+      nominal_size_inch: 'NOMINAL SIZE (INCH)',
+      nominal_size_mm: 'NOMINAL SIZE (MM)',
+      nominal_size_mm_x_inch: 'NOMINAL SIZE (MM X INCH)',
+      nominal_size_mm_x_mm: 'NOMINAL SIZE (MM X MM)',
+      dimensions_mm: 'DIMENSIONS (mm)',
+      size_dimensions: 'Size / Dimensions',
+      action: 'Action',
     },
 
     // FittingModal component

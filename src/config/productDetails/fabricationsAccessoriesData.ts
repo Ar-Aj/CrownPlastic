@@ -57,10 +57,10 @@ export const fabricationGreaseTrapTypeA: ProductDetailConfig = {
     pipesTables: [
     {
       id: "fabrication-grease-trap-type-a-specs",
-      title: "Type A",
+      title: "Type A", titleFr: 'Type A',
       columns: [
       { key: "component", label: "Component", labelFr: 'Composant' },
-      { key: "details", label: "Details" }
+      { key: "details", label: "Details", labelFr: 'Details' }
       ],
       rows: [
       { "component": "Unit Dimensions", "details": "450 x 280 x 450 deep" },
@@ -160,10 +160,10 @@ export const fabricationGreaseTrapTypeB: ProductDetailConfig = {
     pipesTables: [
     {
       id: "fabrication-grease-trap-type-b-specs",
-      title: "Type B",
+      title: "Type B", titleFr: 'Type B',
       columns: [
       { key: "component", label: "Component", labelFr: 'Composant' },
-      { key: "details", label: "Details" }
+      { key: "details", label: "Details", labelFr: 'Details' }
       ],
       rows: [
       { "component": "Unit Length", "details": "1100mm" },
@@ -263,10 +263,10 @@ export const fabricationGreaseTrapTypeC: ProductDetailConfig = {
     pipesTables: [
     {
       id: "fabrication-grease-trap-type-c-specs",
-      title: "Type C",
+      title: "Type C", titleFr: 'Type C',
       columns: [
       { key: "component", label: "Component", labelFr: 'Composant' },
-      { key: "details", label: "Details" }
+      { key: "details", label: "Details", labelFr: 'Details' }
       ],
       rows: [
       { "component": "Removable PVC Perforated Bucket", "details": "Equipped with 25 holes in five rows" },
@@ -365,10 +365,10 @@ export const fabricationGreaseTrapTypeD: ProductDetailConfig = {
     pipesTables: [
     {
       id: "fabrication-grease-trap-type-d-specs",
-      title: "Type D",
+      title: "Type D", titleFr: 'Type D',
       columns: [
       { key: "component", label: "Component", labelFr: 'Composant' },
-      { key: "details", label: "Details" }
+      { key: "details", label: "Details", labelFr: 'Details' }
       ],
       rows: [
       { "component": "Inlet", "details": "2 inch PVC waste inlet" },
