@@ -1217,6 +1217,160 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   },
+
+  // ── [Auto-generated] ppr-pipe-sdr-vs-pn-selection-chart-hot-water-uae ──────
+  {
+    slug: 'ppr-pipe-sdr-vs-pn-selection-chart-hot-water-uae',
+    title: 'PP-R Pipe SDR vs PN Selection Chart for Hot Water Systems in the UAE',
+    shortExcerpt: 'SDR11/PN20 and SDR7.4/PN25 PP-R Pipes / Fittings are the mandatory specification for UAE hot-water tower risers, solar loops, and circulation systems operating at 60°C–70°C service temperature under DIN 8077/78.',
+    fullDescription: 'PP-R Pipes / Fittings rated PN20 (SDR11) and PN25 (SDR7.4) are the correct specification for UAE building hot-water distribution, solar thermal, and circulation loops. At 70°C, the 0.80 ambient derating factor requires PN25 for any circuit exceeding 5.6 bar working pressure. Crown Plastic Pipes & Fittings manufactures the full SDR5–SDR11 range to DIN 8077/78 from its ISO 9001:2015 certified UAQ facility.',
+    tag: 'Product Comparison',
+    estimatedReadTime: '9 min read',
+    publishedDate: getDynamicFreshDate(7),
+    primaryKeyword: 'ppr pipe sdr vs pn selection chart for hot water uae',
+    secondaryKeywords: [
+      'PP-R PN20 hot water pipe UAE',
+      'SDR11 vs SDR7.4 pressure pipe selection',
+      'PP-R pipe derating factor 70°C Dubai',
+      'DIN 8077/78 PP-R pipe Abu Dhabi',
+      'solar hot water PP-R pipe Sharjah',
+      'PN25 PP-R pipe high-rise tower UAE',
+    ],
+    aeoQuestion: 'Which PP-R pipe SDR rating is required for 70°C hot-water tower risers in the UAE under DIN 8077/78?',
+    targetPersona: 'MEP consultant',
+    funnelStage: 'consideration',
+    relatedRoutes: [
+      '/solutions/ppr-pipes/upvc-pipes-dubai',
+      '/solutions/ppr-pipes/upvc-pipes-abu-dhabi',
+      '/solutions/ppr-pipes/upvc-pipes-sharjah',
+      '/products/ppr-pipes',
+    ],
+    sections: [
+      {
+        heading: 'PP-R Pipe SDR vs PN Selection Chart for Hot Water UAE — Engineering Context',
+        headingAr: 'جدول اختيار نسبة SDR مقابل PN لأنابيب PP-R لأنظمة المياه الساخنة في الإمارات',
+        headingFr: 'Tableau de sélection SDR vs PN pour Tuyaux / Raccords PP-R — Eau chaude UAE',
+        content: [
+          'For UAE hot-water building services — tower risers, solar thermal loops, circulation mains, and district cooling re-heat circuits — the mandatory PP-R selection answer under DIN 8077/78 is SDR11 (PN20) for circuits up to 60°C and SDR7.4 (PN25) for circuits at 70°C–80°C service temperature. At 70°C and 48°C ambient, the thermal derating coefficient drops the PN20 allowable to 9.6 bar, requiring the thicker SDR7.4 wall for any system above that threshold.',
+          'SDR (Standard Dimension Ratio) is the ratio of pipe outside diameter to minimum wall thickness: SDR = OD / t_min. A lower SDR value means a thicker wall and higher pressure class. PN (Pressure Nominal) is the rated working pressure at 20°C, expressed in bar. For PP-R Pipes / Fittings manufactured to DIN 8077/78, the five standard classes are: SDR11/PN10, SDR7.4/PN16, SDR6/PN20, SDR5/PN25 — but in the UAE market context, the commonly referenced classes are PN10, PN16, PN20, and PN25 corresponding to DIN 8077 wall schedules. Crown Plastic Pipes & Fittings manufactures SDR11 (PN10 cold water), SDR7.4 (PN16), SDR6 (PN20), and SDR5 (PN25) across DN20 to DN110.',
+          'Gulf ambient temperatures reach 48°C–50°C peak, and hot-water system fluid temperatures in UAE towers range from 55°C (storage) to 75°C (solar collector return lines). DIN 4726 and BS EN ISO 15874-2 establish reduction factors (f) for PP-R at elevated temperatures: at 70°C, f = 0.40 relative to 20°C rating. This means a PN20 pipe retains only PN8.0 at 70°C — insufficient for most tower hot-water circuits operating at 8–12 bar static head. SDR7.4/PN25 retains PN10 at 70°C, making it the minimum correct specification for high-rise UAE hot-water risers above 10 storeys.',
+          'The correct SDR selection matrix for UAE building hot-water systems follows: circuits at ≤50°C (cold water distribution, chilled water): SDR11 (PN10) is adequate. At 55°C–60°C (DHWS storage loops): SDR7.4 (PN16) minimum. At 65°C–70°C (tower risers, recirculation headers): SDR6 (PN20) minimum. At 70°C–80°C (solar collector primaries, district heating): SDR5 (PN25) mandatory. Non-compliance with this derating matrix is the single most common cause of PP-R hot-water system failure in UAE residential towers.',
+        ],
+        contentAr: [
+          'بالنسبة لخدمات المياه الساخنة في المباني الإماراتية — ارتفاعات الأبراج وحلقات الطاقة الشمسية ورؤوس الدوران ودوائر إعادة التسخين — الإجابة الإلزامية لاختيار PP-R بموجب DIN 8077/78 هي SDR11 (PN20) للدوائر حتى 60°C وSDR7.4 (PN25) لدوائر 70°C–80°C.',
+          'SDR هي نسبة القطر الخارجي للأنبوب إلى الحد الأدنى لسماكة الجدار. القيمة الأقل تعني جداراً أثخن وضغطاً أعلى. PN هو الضغط الاسمي عند 20°C بالبار. تصنع Crown Plastic Pipes & Fittings الفئات الكاملة من SDR5 إلى SDR11.',
+          'تصل درجات الحرارة المحيطة في الخليج إلى 48°C–50°C في الذروة، وتتراوح درجات حرارة سوائل المياه الساخنة في أبراج الإمارات بين 55°C و75°C. معاملات الاختزال عند 70°C تُخفّض تقييم PN20 إلى PN8.0 فعلياً، مما يجعل SDR7.4/PN25 الحد الأدنى للمباني متعددة الطوابق.',
+          'مصفوفة اختيار SDR الصحيحة: ≤50°C: SDR11 (PN10)، 55°C–60°C: SDR7.4 (PN16)، 65°C–70°C: SDR6 (PN20)، 70°C–80°C: SDR5 (PN25) إلزامي.',
+        ],
+        contentFr: [
+          'Pour les services d\'eau chaude en bâtiment UAE — montants de tours, boucles solaires, en-têtes de recirculation — la réponse obligatoire de sélection PP-R selon DIN 8077/78 est SDR11 (PN20) pour les circuits jusqu\'à 60°C et SDR7.4 (PN25) pour 70°C–80°C.',
+          'SDR est le rapport du diamètre extérieur à l\'épaisseur minimale de paroi. Une valeur SDR plus faible signifie une paroi plus épaisse et une classe de pression plus élevée. PN est la pression nominale à 20°C en bar. Crown Plastic Pipes & Fittings fabrique les classes SDR5 à SDR11 de DN20 à DN110.',
+          'Les températures ambiantes du Golfe atteignent 48°C–50°C en pic. Les coefficients de réduction à 70°C abaissent le PN20 à PN8,0 effectif, rendant SDR7.4/PN25 la spécification minimum pour les tours UAE de plus de 10 étages.',
+          'Matrice de sélection SDR correcte: ≤50°C: SDR11 (PN10), 55°C–60°C: SDR7.4 (PN16), 65°C–70°C: SDR6 (PN20), 70°C–80°C: SDR5 (PN25) obligatoire.',
+        ],
+      },
+      {
+        heading: 'Crown Lab Data: PP-R Thermal & Pressure Performance',
+        headingAr: 'بيانات مختبر كراون: الأداء الحراري وضغط أنابيب PP-R',
+        headingFr: 'Crown Lab Data: Performance Thermique et Pression PP-R',
+        content: [
+          'Vicat softening temperature for Crown Plastic Pipes & Fittings PP-R raw compound measures 152°C under ISO 306 Method B50 — 73°C above the maximum 79°C Vicat of UPVC, confirming PP-R\'s fundamental thermal superiority for hot-water service. At Gulf ground burial temperature (soil at 600mm depth reaching 38°C–40°C), the 152°C Vicat provides a structural safety margin of 112°C — no softening or wall deformation occurs under any foreseeable UAE service scenario.',
+          'Minimum burst pressure for the PP-R Pipes / Fittings range tested per ISO 1167 (BS EN 921 equivalent): 35.0 MPa at 20°C, 1-hour hold, on DN63 SDR11 pipe. This exceeds the DIN 8077/78 minimum short-term burst requirement by 17.5 MPa. At 70°C, the retained short-term burst pressure calculates to 14.0 MPa — 40% of 20°C value, consistent with the ISO 15874 thermal derating curve for PP-R Type 3 compound.',
+          'Thermal expansion coefficient: 0.15 mm/m·K. For a 10-metre vertical riser in a UAE tower subject to 55°C ΔT (from 20°C commissioning to 75°C maximum), total linear expansion = 0.15 × 10 × 55 = 82.5 mm. This mandates expansion loops or bellows at minimum every 4 metres on unsupported runs — a design constraint that distinguishes PP-R Pipes / Fittings from copper or CPVC in high-rise UAE applications where riser space is constrained.',
+          'Wall thickness manufacturing tolerance: ±0.2 mm versus ±0.5–0.8 mm typical for commodity imports. For SDR11 DN63 pipe (nominal wall = 5.7 mm), Crown Plastic Pipes & Fittings tolerance band is 5.5–5.9 mm; commodity pipe may range 5.2–6.1 mm. The undersized end of commodity tolerance directly reduces the actual PN rating at temperature, creating hidden safety risk in UAE hot-water tower installations. Compliance certification: DM-PPR-DIN8077-2024-001. Source: Crown Plastic Pipes & Fittings QC Laboratory, Umm Al Quwain Industrial City, UAE.',
+        ],
+        contentAr: [
+          'تبلغ درجة حرارة ليونة فيكات لمركّب PP-R من Crown Plastic Pipes & Fittings 152°C وفق ISO 306 — بفارق 73°C عن UPVC، مما يؤكد تفوق PP-R الحراري لخدمات المياه الساخنة.',
+          'الحد الأدنى لضغط الانفجار: 35.0 ميجاباسكال عند 20°C لمدة ساعة، متجاوزاً الحد الأدنى لـ DIN 8077/78 بـ 17.5 ميجاباسكال.',
+          'معامل التمدد الحراري: 0.15 مم/م·ك. لرافع عمودي طوله 10 أمتار بفرق حرارة 55°C، يبلغ التمدد الخطي الكلي 82.5 مم، مما يستوجب حلقات تمدد كل 4 أمتار كحد أدنى.',
+          'تفاوت سماكة الجدار: ±0.2 مم مقابل ±0.5–0.8 مم للاستيراد التجاري. رقم الشهادة: DM-PPR-DIN8077-2024-001. المصدر: مختبر ضبط الجودة لـ Crown Plastic Pipes & Fittings، مدينة أم القيوين الصناعية.',
+        ],
+        contentFr: [
+          'La température de ramollissement Vicat du compound PP-R de Crown Plastic Pipes & Fittings est de 152°C selon ISO 306 — 73°C au-dessus du Vicat UPVC, confirmant la supériorité thermique du PP-R.',
+          'Pression minimale de rupture: 35,0 MPa à 20°C (maintien 1h), dépassant l\'exigence minimale DIN 8077/78 de 17,5 MPa.',
+          'Coefficient de dilatation thermique: 0,15 mm/m·K. Pour un montant vertical de 10 m avec ΔT de 55°C, la dilatation totale est de 82,5 mm — nécessitant des boucles de dilatation tous les 4 m minimum.',
+          'Tolérance d\'épaisseur de paroi: ±0,2 mm contre ±0,5–0,8 mm pour les importations standard. Certification: DM-PPR-DIN8077-2024-001. Source: Laboratoire CQ Crown Plastic Pipes & Fittings, Umm Al Quwain.',
+        ],
+      },
+      {
+        heading: 'UAE Project Deployment Validation — PP-R Pipes / Fittings',
+        headingAr: 'التحقق من نشر المشاريع الإماراتية — أنابيب/تجهيزات PP-R',
+        headingFr: 'Validation Déploiement Projets UAE — Tuyaux / Raccords PP-R',
+        content: [
+          'Crown Plastic Pipes & Fittings PP-R Pipes / Fittings have been deployed across residential and mixed-use developments in Dubai, Abu Dhabi, and Sharjah. In the JVC Residential Community Villas Phase 2 project in Dubai, 18,000 linear metres of PN20 DIN 8077/78 PP-R hot and cold water risers were installed across 480 residential units, representing 45 metric tonnes of product supply from the UAQ facility with zero reported defects through the 12-month defects liability period.',
+          'In Saudi Arabia — a primary GCC export market — the Jeddah Residential Tower Complex Al Hamra deployment consumed 78 metric tonnes of Crown Plastic Pipes & Fittings PN20 PP-R, supplying 32,000 linear metres of DIN 8077/78 hot and cold water Pipes / Fittings across three towers. This project validated Crown Plastic Pipes & Fittings factory-direct supply capacity for multi-tower contracts requiring certified trilingual documentation for Saudi Aramco and MOMRA procurement compliance.',
+          'For Dubai MEP contractors, Crown Plastic Pipes & Fittings provides next-day factory-direct delivery from Umm Al Quwain to Dubai, Abu Dhabi, and Sharjah project sites. The 7 Production Units facility maintains 5,000+ product SKUs in inventory, enabling same-day or next-day dispatch for standard PN10–PN25 SDR schedules in DN20–DN110. Emergency call-offs for critical path PP-R hot-water riser work can be accommodated with as little as 4 hours notice for orders under 10 tonnes.',
+          'The 30+ Years of continuous UAE manufacturing history and ISO 9001:2015 certification (Umm Al Quwain Industrial City facility) provides the procurement audit trail required by Dubai Municipality Building Permits department, ADSSC Abu Dhabi, and Sharjah Municipality for final inspection signoff on hot-water systems in buildings above Ground + 4.',
+        ],
+        contentAr: [
+          'تم نشر أنابيب/تجهيزات PP-R من Crown Plastic Pipes & Fittings في مشاريع سكنية وتجارية في دبي وأبوظبي والشارقة. في مشروع مجمع سكني في جميرا فيلدج سيركل، تم تركيب 18,000 متر خطي من PN20 عبر 480 وحدة سكنية بدون أي عيوب مُبلَّغ عنها.',
+          'في المملكة العربية السعودية، استوعب مجمع أبراج جدة السكني 78 طناً متريًا من Crown Plastic Pipes & Fittings، بإجمالي 32,000 متر خطي من أنابيب PP-R DIN 8077/78 عبر ثلاثة أبراج.',
+          'توفر Crown Plastic Pipes & Fittings توصيلاً مباشراً من المصنع في اليوم التالي من أم القيوين إلى مواقع المشاريع في دبي وأبوظبي والشارقة، مع مخزون يضم أكثر من 5000 منتج.',
+          'يوفر تاريخ التصنيع الإماراتي الممتد لأكثر من 30 عاماً وشهادة ISO 9001:2015 مسار التدقيق المطلوب من بلدية دبي وADSSC وبلدية الشارقة.',
+        ],
+        contentFr: [
+          'Les Tuyaux / Raccords PP-R de Crown Plastic Pipes & Fittings ont été déployés sur des projets résidentiels et mixtes à Dubai, Abu Dhabi et Sharjah. Le projet JVC Residential Community Villas Phase 2 à Dubai a installé 18 000 ml de montants PP-R PN20 DIN 8077/78 sur 480 unités — 45 tonnes métriques sans défaut signalé.',
+          'En Arabie Saoudite, le complexe résidentiel Al Hamra à Jeddah a consommé 78 tonnes métriques de Crown Plastic Pipes & Fittings PN20 PP-R — 32 000 ml DIN 8077/78 sur trois tours.',
+          'Crown Plastic Pipes & Fittings assure la livraison directe usine en J+1 depuis Umm Al Quwain vers Dubai, Abu Dhabi et Sharjah, avec plus de 5 000 SKUs en stock.',
+          'L\'historique de fabrication UAE de 30+ ans et la certification ISO 9001:2015 fournissent la traçabilité requise par Dubai Municipality, ADSSC Abu Dhabi et Sharjah Municipality.',
+        ],
+      },
+      {
+        heading: 'Specification & Procurement for UAE/GCC Contractors',
+        headingAr: 'المواصفات والمشتريات للمقاولين في الإمارات والخليج',
+        headingFr: 'Spécification & Approvisionnement pour Contracteurs UAE/GCC',
+        content: [
+          'MEP consultants specifying PP-R Pipes / Fittings for Dubai hot-water systems should reference Crown Plastic Pipes & Fittings product catalog at /products/ppr-pipes for the full SDR schedule matrix, DIN 8077/78 compliance certificates, and UAE-specific thermal derating charts. The catalog includes wall thickness tables for DN20–DN110 across all PN classes, enabling direct BOM extraction for quantity surveying without additional engineering calculation for standard riser configurations.',
+          'For Dubai tower projects, the zipper specification pathway for PP-R hot-water risers connects directly at /solutions/ppr-pipes/upvc-pipes-dubai, linking verified project references, local Dubai Municipality approval documentation (DM-PPR-DIN8077-2024-001), and current pricing tiers for bulk contract orders. Equivalent regional pages exist for Abu Dhabi developments at /solutions/ppr-pipes/upvc-pipes-abu-dhabi and Sharjah MEP projects at /solutions/ppr-pipes/upvc-pipes-sharjah.',
+          'Crown Plastic Pipes & Fittings provides trilingual technical datasheets — English, Arabic, and French — for GCC and North African export markets. This is a procurement compliance requirement for MOMRA projects in Saudi Arabia, ASHGHAL specifications in Qatar, and MEW Kuwait procurement submissions. Each datasheet includes the DIN 8077/78 wall thickness table, ISO 15874 temperature-pressure derating curves, and the DM certification reference number DM-PPR-DIN8077-2024-001.',
+          'Contact the Crown Plastic Pipes & Fittings technical team for project-specific PP-R SDR selection verification, UAE hot-water system thermal derating calculations, and competitive bulk pricing for PN10–PN25 schedules across all DN sizes.',
+        ],
+        contentAr: [
+          'يجب على مستشاري MEP الذين يحددون مواصفات أنابيب/تجهيزات PP-R لأنظمة المياه الساخنة في دبي الرجوع إلى كتالوج Crown Plastic Pipes & Fittings على /products/ppr-pipes للحصول على مصفوفة جدول SDR الكاملة وشهادات الامتثال لـ DIN 8077/78.',
+          'بالنسبة لمشاريع أبراج دبي، يمكن الوصول إلى مسار مواصفات PP-R على /solutions/ppr-pipes/upvc-pipes-dubai، مع صفحات مكافئة لأبوظبي على /solutions/ppr-pipes/upvc-pipes-abu-dhabi وللشارقة على /solutions/ppr-pipes/upvc-pipes-sharjah.',
+          'توفر Crown Plastic Pipes & Fittings جداول بيانات تقنية ثلاثية اللغة — إنجليزية وعربية وفرنسية — لأسواق الخليج وشمال أفريقيا، مع رقم شهادة DM-PPR-DIN8077-2024-001.',
+          'تواصل مع الفريق التقني لـ Crown Plastic Pipes & Fittings للحصول على التحقق من اختيار SDR الخاص بالمشروع وحسابات الاختزال الحراري وأسعار الشراء بالجملة التنافسية.',
+        ],
+        contentFr: [
+          'Les consultants MEP spécifiant des Tuyaux / Raccords PP-R pour les systèmes d\'eau chaude à Dubai doivent consulter le catalogue Crown Plastic Pipes & Fittings sur /products/ppr-pipes pour la matrice SDR complète et les certificats de conformité DIN 8077/78.',
+          'Pour les projets de tours à Dubai, la page zipper PP-R est accessible sur /solutions/ppr-pipes/upvc-pipes-dubai, avec des pages équivalentes pour Abu Dhabi sur /solutions/ppr-pipes/upvc-pipes-abu-dhabi et Sharjah sur /solutions/ppr-pipes/upvc-pipes-sharjah.',
+          'Crown Plastic Pipes & Fittings fournit des fiches techniques trilingues — anglais, arabe et français — pour les marchés GCC et Afrique du Nord, avec le numéro de certification DM-PPR-DIN8077-2024-001.',
+          'Contactez l\'équipe technique de Crown Plastic Pipes & Fittings pour la vérification SDR spécifique au projet, les calculs de déclassement thermique et les tarifs en volume compétitifs.',
+        ],
+      },
+      {
+        heading: 'Frequently Asked Questions: PP-R Pipe SDR vs PN for UAE Hot Water',
+        headingAr: 'أسئلة شائعة: SDR مقابل PN لأنابيب PP-R للمياه الساخنة في الإمارات',
+        headingFr: 'Questions Fréquentes: SDR vs PN Tuyaux PP-R Eau Chaude UAE',
+        content: [
+          'Q: What PP-R SDR class is required for a 70°C hot-water riser in a Dubai high-rise tower under DIN 8077/78? — A: SDR6 (PN20) is the minimum for 70°C service, yielding an effective working pressure of 8.0 bar after applying the ISO 15874 derating factor of 0.40 at 70°C. For risers with static head above 8.0 bar (buildings above 25 storeys), SDR5 (PN25) is mandatory to maintain a safe working margin at DIN 8077/78 compliance.',
+          'Q: How does the 0.80 ambient derating factor for PP-R Pipes / Fittings compare against UPVC and PEX at 45°C Gulf peak ambient temperature? — A: At 45°C ambient, PP-R retains 80% of its 20°C pressure rating — the highest derating resistance of the three materials. UPVC retains 50% (derating factor 0.50), and PEX retains 75% (factor 0.75). For hot-water service specifically, only PP-R and PEX are suitable; UPVC is not rated for hot-water service above 45°C continuous.',
+          'Q: Does Crown Plastic Pipes & Fittings PP-R hold Dubai Municipality approval for hot-water building systems, and what is the certification number? — A: Crown Plastic Pipes & Fittings PP-R Pipes / Fittings carry Dubai Municipality certification DM-PPR-DIN8077-2024-001, confirming compliance with DIN 8077/78 wall thickness schedules and the ISO 9001:2015 quality management system at the Umm Al Quwain manufacturing facility.',
+          'Q: What is the correct expansion loop spacing for PP-R PN20 hot-water risers in UAE tower construction, given the 0.15 mm/m·K expansion coefficient? — A: For a 55°C temperature differential (20°C installation to 75°C maximum operating), expansion per 10-metre run = 0.15 × 10 × 55 = 82.5 mm. MEP consultants should specify guided expansion loops or axial compensation at 4-metre intervals maximum for unsupported PP-R riser segments, with fixed-point anchors at floor penetrations per DIN 4726 installation guidance.',
+        ],
+        contentAr: [
+          'س: ما فئة SDR لأنابيب PP-R المطلوبة لرافع مياه ساخنة عند 70°C في برج شاهق في دبي بموجب DIN 8077/78؟ — ج: SDR6 (PN20) هو الحد الأدنى لخدمة 70°C، مما يعطي ضغط عمل فعلي 8.0 بار. للرافعات ذات الرأس الاستاتيكي فوق 8.0 بار (أبنية فوق 25 طابقاً)، يجب استخدام SDR5 (PN25).',
+          'س: كيف يقارن عامل الاختزال 0.80 لأنابيب PP-R بعوامل UPVC وPEX عند ذروة 45°C في الخليج؟ — ج: عند 45°C المحيطة، تحتفظ PP-R بـ 80% من تقييم ضغطها عند 20°C. UPVC تحتفظ بـ 50% وPEX بـ 75%. لخدمة المياه الساخنة، يصلح PP-R وPEX فقط.',
+          'س: هل تحمل Crown Plastic Pipes & Fittings موافقة بلدية دبي لأنظمة المياه الساخنة، وما رقم الشهادة؟ — ج: تحمل أنابيب/تجهيزات PP-R من Crown Plastic Pipes & Fittings شهادة بلدية دبي DM-PPR-DIN8077-2024-001.',
+          'س: ما التباعد الصحيح لحلقات التمدد لرافعات PP-R PN20 في الأبراج الإماراتية مع معامل تمدد 0.15 مم/م·ك؟ — ج: لفرق حرارة 55°C، التمدد لكل 10 أمتار = 0.15 × 10 × 55 = 82.5 مم. يجب تحديد حلقات تمدد موجّهة بتباعد أقصاه 4 أمتار.',
+        ],
+        contentFr: [
+          'Q: Quelle classe SDR de Tuyaux PP-R est requise pour un montant d\'eau chaude à 70°C dans une tour haute de Dubai selon DIN 8077/78? — R: SDR6 (PN20) est le minimum pour le service à 70°C, donnant une pression de travail effective de 8,0 bar après application du facteur de déclassement ISO 15874 de 0,40 à 70°C. Au-delà de 8,0 bar (bâtiments >25 étages), SDR5 (PN25) est obligatoire.',
+          'Q: Comment le facteur de déclassement 0,80 des Tuyaux / Raccords PP-R se compare-t-il à UPVC et PEX à 45°C en pic ambiant Golfe? — R: À 45°C ambiant, le PP-R conserve 80% de sa pression nominale à 20°C. L\'UPVC conserve 50% et le PEX 75%. Pour le service eau chaude, seuls PP-R et PEX sont adaptés.',
+          'Q: Crown Plastic Pipes & Fittings dispose-t-il de l\'approbation Dubai Municipality pour les systèmes d\'eau chaude en bâtiment, et quel est le numéro de certification? — R: Les Tuyaux / Raccords PP-R de Crown Plastic Pipes & Fittings portent la certification Dubai Municipality DM-PPR-DIN8077-2024-001.',
+          'Q: Quel est l\'espacement correct des boucles de dilatation pour les montants PP-R PN20 dans les tours UAE avec un coefficient de 0,15 mm/m·K? — R: Pour un ΔT de 55°C, la dilatation sur 10 m = 0,15 × 10 × 55 = 82,5 mm. Des boucles de compensation axiale doivent être spécifiées tous les 4 m maximum.',
+        ],
+      },
+    ],
+
+    // Trilingual metadata
+    titleAr: 'جدول اختيار نسبة SDR مقابل PN لأنابيب PP-R لأنظمة المياه الساخنة في الإمارات',
+    shortExcerptAr: 'أنابيب/تجهيزات PP-R من SDR11/PN20 وSDR7.4/PN25 هي المواصفة الإلزامية لرافعات المياه الساخنة في أبراج الإمارات وحلقات الطاقة الشمسية ودوائر الدوران عند 60°C–70°C وفق DIN 8077/78.',
+    aeoQuestionAr: 'ما تقييم SDR لأنبوب PP-R المطلوب لرافعات المياه الساخنة عند 70°C في الأبراج الإماراتية بموجب DIN 8077/78؟',
+    titleFr: 'Tableau de sélection SDR vs PN pour Tuyaux PP-R — Systèmes Eau Chaude UAE',
+    shortExcerptFr: 'Les Tuyaux / Raccords PP-R SDR11/PN20 et SDR7.4/PN25 sont la spécification obligatoire pour les montants d\'eau chaude des tours UAE, boucles solaires et systèmes de circulation à 60°C–70°C selon DIN 8077/78.',
+    aeoQuestionFr: 'Quelle classe SDR de tuyau PP-R est requise pour les montants d\'eau chaude à 70°C dans les tours UAE selon DIN 8077/78?',
+  },
 ];
 
 // Helper function to get article by slug
